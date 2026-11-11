@@ -21,7 +21,7 @@ Benötigt: [Node.js](https://nodejs.org/) ≥ 18, Python 3.11 (Pipeline, Scan-Vi
 node web/server.mjs 5177
 ```
 
-Dann im Browser öffnen: <http://localhost:5177>. Startbildschirm mit Figurenwahl: `node startbildschirm/server.mjs 5175`. Mit Claude Code: Dev-Server aus `.claude/launch.json` (siehe `CLAUDE.md`).
+Dann im Browser öffnen: <http://localhost:5177> – zuerst erscheint der Startbildschirm (Figurenwahl, auch unter `/startbildschirm/`), BEREIT/SPIELEN startet das Spiel mit der gewählten Figur (`/?figur=person1|mohammad|daunenjacke`). Startbildschirm allein: `node startbildschirm/server.mjs 5175`. Mit Claude Code: Dev-Server aus `.claude/launch.json` (siehe `CLAUDE.md`).
 
 > Der kleine Server (`web/server.mjs`) ist nötig, weil das Spiel über `/__exists` prüft, welche Stadt-Dateien vorhanden sind. Ein reiner Static-Host (z. B. GitHub Pages) reicht ohne Anpassung nicht.
 
@@ -44,7 +44,7 @@ Dann im Browser öffnen: <http://localhost:5177>. Startbildschirm mit Figurenwah
 - `blender/` – Blender-/Rhino-Skripte (headless) für Exporte, Vorschauen und die Gesamtszene.
 - `data/` – Quellen und Roh-Exporte (LoD2, DGM, DOP, OSM, Rhino-Exporte).
 - `sources/` – Ausgangsmodelle: eigenes Rhino-Modell Opernplatz/Kiosk (+ Texturen), TIB-Modell, LoD2-Stadtmodell Hannover (CityGML).
-- `startbildschirm/` – Startbildschirm mit Figurenwahl (Carlos, Andis, Luca).
+- `startbildschirm/` – Startbildschirm mit Figurenwahl (Carlos, Andis, Luca, Mohammad, Daunenjacke). Spielbar: Carlos, Mohammad (Splats, Hände in den Taschen), Daunenjacke (texturiertes Mesh ohne Splats, `mesh: true`).
 - `scan_viewer/` – Werkzeug zum Hochladen, Extrahieren, Bereinigen und Vernetzen von PLY-Scans; `uploads/` = Original-Scans, `extracted/` = Ergebnisse. Einrichten: `cd scan_viewer && uv venv --python 3.11 .venv && uv pip install -r requirements.txt`, starten: `.venv/Scripts/python server.py 5176`.
 - `figuren/` – Figuren-Zwischenstände (Punktwolken, Meshes, GLBs, Blender-Datei der Startbildschirm-Figuren).
 - `.claude/` – Claude-Code-Konfiguration: `launch.json`, three.js-Skills, `memory/` (Projektnotizen).

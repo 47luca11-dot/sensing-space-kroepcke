@@ -30,6 +30,12 @@ const CHARACTERS = [
   { id: 'luca', name: 'LUCA', role: 'STRATEGE', x: 0.90, timeOffset: 0.0, lookScale: 0.3,
     stats: { AUSDAUER: 5, GESUNDHEIT: 4, GESCHWINDIGKEIT: 6, WILLE: 8 },
     bio: 'Hat immer Tabak und Papers dabei. Dreht sich in jeder Feuerpause in aller Ruhe eine – und plant dabei schon den nächsten Zug.' },
+  { id: 'mohammad', name: 'MOHAMMAD', role: 'KUNDSCHAFTER', x: 1.70, timeOffset: 0.9,
+    stats: { AUSDAUER: 7, GESUNDHEIT: 6, GESCHWINDIGKEIT: 6, WILLE: 7 },
+    bio: 'Die Hände bleiben in den Taschen, egal was passiert. Läuft die Wege ab, bevor die anderen losgehen – und weiß immer, wo es weitergeht.' },
+  { id: 'daunenjacke', name: 'DAUNENJACKE', role: 'NACHTWACHE', x: 2.50, timeOffset: 0.4, mesh: true,     // Name vorläufig
+    stats: { AUSDAUER: 8, GESUNDHEIT: 8, GESCHWINDIGKEIT: 5, WILLE: 6 },
+    bio: 'Kapuze auf, Jacke zu bis oben. Friert nie, redet wenig – und ist immer da, wenn es dunkel wird.' },
 ];
 const SEGMENTS = 10;
 
@@ -120,10 +126,11 @@ let loadedCount = 0;
 const BASE_TINT = new THREE.Color(1, 1, 1);            // Originalfarben der Scans unverändert
 
 async function loadFigure(c, index) {
+  // c.mesh: Figur ist ein texturiertes Mesh ohne Splats (nur <id>.glb)
   const [gltf, skinBuf, splat] = await Promise.all([
     loader.loadAsync(`assets/${c.id}.glb`),
-    fetch(`assets/${c.id}_skin.bin`).then((r) => r.arrayBuffer()),
-    (async () => { const s = new SplatMesh({ url: `assets/${c.id}_splats.ply` }); await s.initialized; s.maxSh = 1; return s; })(),   // SH Grad 1: Glanz/Blickwinkel; Grad 2-3 rauschen an selten gesehenen Seiten
+    c.mesh ? null : fetch(`assets/${c.id}_skin.bin`).then((r) => r.arrayBuffer()),
+    c.mesh ? null : (async () => { const s = new SplatMesh({ url: `assets/${c.id}_splats.ply` }); await s.initialized; s.maxSh = 1; return s; })(),   // SH Grad 1: Glanz/Blickwinkel; Grad 2-3 rauschen an selten gesehenen Seiten
   ]);
   const root = gltf.scene;
   root.position.x = c.x;
@@ -132,32 +139,37 @@ async function loadFigure(c, index) {
     if (!o.isMesh) return;
     o.castShadow = true; o.receiveShadow = false; o.frustumCulled = false;
     // Füllung wie die Splats: unbeleuchtet, ohne Tonemapping, gleiche Tönung -> keine Farbsprünge in Lücken
-    o.material = new THREE.MeshBasicMaterial({ vertexColors: true, toneMapped: false });
+    o.material = c.mesh
+      ? new THREE.MeshBasicMaterial({ map: o.material.map, toneMapped: false })      // Scan-Textur (Licht ist eingebacken)
+      : new THREE.MeshBasicMaterial({ vertexColors: true, toneMapped: false });
     o.material.color.copy(BASE_TINT);
     if (o.isSkinnedMesh) skinned = o;
   });
   scene.add(root); addBlob(c.x);
 
-  // Splats als Geschwister des SkinnedMesh -> gleicher lokaler Frame wie die Mesh-Vertices
-  skinned.parent.add(splat);
-  splat.position.copy(skinned.position); splat.quaternion.copy(skinned.quaternion); splat.scale.copy(skinned.scale);
-  const n = splat.numSplats, bones = skinned.skeleton.bones;
-  // Dual-Quaternion-Skinning: Spark's LBS braucht Kovarianz-Splats, die sichtbar unschärfer rendern. Die kleine
-  // Abweichung zur LBS-Füllung ist unsichtbar, weil die Füllung ~2 cm unter den Splats liegt und Splats obenauf gezeichnet werden.
-  const skin = new SplatSkinning({ mesh: splat, numSplats: n, numBones: bones.length });
-  const raw = new Uint8Array(skinBuf);
-  if (raw.length !== n * 8) console.warn(c.id, 'skin/splat count mismatch', raw.length / 8, n);
-  for (let i = 0; i < n; i++) {                     // 4 Knochen-Indizes + 4 Gewichte (Summe 255) je Splat
-    const o = i * 8, d = i * 4;
-    for (let k = 0; k < 4; k++) skin.skinData[d + k] = raw[o + 4 + k] + (raw[o + k] << 8);
+  let skin = null;
+  if (!c.mesh) {
+    // Splats als Geschwister des SkinnedMesh -> gleicher lokaler Frame wie die Mesh-Vertices
+    skinned.parent.add(splat);
+    splat.position.copy(skinned.position); splat.quaternion.copy(skinned.quaternion); splat.scale.copy(skinned.scale);
+    const n = splat.numSplats, bones = skinned.skeleton.bones;
+    // Dual-Quaternion-Skinning: Spark's LBS braucht Kovarianz-Splats, die sichtbar unschärfer rendern. Die kleine
+    // Abweichung zur LBS-Füllung ist unsichtbar, weil die Füllung ~2 cm unter den Splats liegt und Splats obenauf gezeichnet werden.
+    skin = new SplatSkinning({ mesh: splat, numSplats: n, numBones: bones.length });
+    const raw = new Uint8Array(skinBuf);
+    if (raw.length !== n * 8) console.warn(c.id, 'skin/splat count mismatch', raw.length / 8, n);
+    for (let i = 0; i < n; i++) {                     // 4 Knochen-Indizes + 4 Gewichte (Summe 255) je Splat
+      const o = i * 8, d = i * 4;
+      for (let k = 0; k < 4; k++) skin.skinData[d + k] = raw[o + 4 + k] + (raw[o + k] << 8);
+    }
+    skin.skinTexture.needsUpdate = true;
+    const I = new THREE.Quaternion(), Z0 = new THREE.Vector3();
+    for (let b = 0; b < bones.length; b++) skin.setRestQuatPos(b, I, Z0);   // Ruhe = Identität, wir liefern Delta-Matrizen
+    splat.skinning = skin;
+    splat.updateGenerator();
+    splat.recolor = BASE_TINT.clone();
+    splat.layers.set(1);                              // Splat-Durchgang (Spark prüft die Layer der SplatMeshes)
   }
-  skin.skinTexture.needsUpdate = true;
-  const I = new THREE.Quaternion(), Z0 = new THREE.Vector3();
-  for (let b = 0; b < bones.length; b++) skin.setRestQuatPos(b, I, Z0);   // Ruhe = Identität, wir liefern Delta-Matrizen
-  splat.skinning = skin;
-  splat.updateGenerator();
-  splat.recolor = BASE_TINT.clone();
-  splat.layers.set(1);                              // Splat-Durchgang (Spark prüft die Layer der SplatMeshes)
 
   // Clips aus Blender: <id>_Idle_Breathing (Loop), bei Andis zusätzlich <id>_LookBack_L / _R (einmalig)
   const mixer = new THREE.AnimationMixer(root);
@@ -182,6 +194,7 @@ CHARACTERS.forEach((c, i) => loadFigure(c, i).catch((e) => { console.error(e); $
 // Knochen-Deltas für die Splats: D_k = M^-1 · Bone_k · BoneInverse_k · BindMatrix (wie three.js-Skinning)
 const _m = new THREE.Matrix4(), _inv = new THREE.Matrix4(), _q = new THREE.Quaternion(), _p = new THREE.Vector3(), _s = new THREE.Vector3();
 function updateSplatSkin(f) {
+  if (!f.skin) return;                                 // Mesh-Figur: three.js skinnt selbst
   const sk = f.skinned.skeleton;
   _inv.copy(f.skinned.matrixWorld).invert();
   for (let b = 0; b < sk.bones.length; b++) {
@@ -198,6 +211,7 @@ const panel = $('panel');
 function renderPanel() {
   const c = CHARACTERS[selected];
   $('c-name').textContent = c.name; $('c-role').textContent = c.role; $('c-bio').textContent = c.bio;
+  $('c-name').classList.toggle('long', c.name.length > 6); $('c-name').classList.toggle('xlong', c.name.length > 9);          // lange Namen (MOHAMMAD) kleiner, damit sie ins Panel passen
   $('c-index').textContent = `${String(selected + 1).padStart(2, '0')} / ${String(CHARACTERS.length).padStart(2, '0')}`;
   $('stats').innerHTML = Object.entries(c.stats).map(([k, v]) =>
     `<li><span class="lbl">${k[0] + k.slice(1).toLowerCase()}</span><span class="bar">${Array.from({ length: SEGMENTS }, (_, i) => `<i class="seg${i < v ? ' on' : ''}"></i>`).join('')}</span></li>`).join('');
@@ -224,8 +238,8 @@ function capturePortraits() {
   // einmal mit voller Helligkeit rendern (die nicht gewählte Figur ist sonst abgedunkelt)
   const saved = [];
   for (const f of Object.values(figures)) {
-    saved.push([f, f.splat.recolor.clone(), f.meshMat.color.clone()]);
-    f.splat.recolor.copy(BASE_TINT).multiplyScalar(1.1); f.meshMat.color.copy(BASE_TINT).multiplyScalar(1.1);
+    saved.push([f, f.splat?.recolor.clone(), f.meshMat.color.clone()]);
+    f.splat?.recolor.copy(BASE_TINT).multiplyScalar(1.1); f.meshMat.color.copy(BASE_TINT).multiplyScalar(1.1);
   }
   renderScene();
   document.querySelectorAll('.card canvas').forEach((cv, i) => {
@@ -239,7 +253,7 @@ function capturePortraits() {
     g.drawImage(glCanvas, px - size / 2, py - size * 0.36, size, size, 0, 0, cv.width, cv.height);   // Gesicht im oberen Drittel, über dem Namensschild
   });
   // Farben zurücksetzen und das normale Bild erneut rendern, damit kein heller Zwischenframe sichtbar wird
-  for (const [f, rc, mc] of saved) { f.splat.recolor.copy(rc); f.meshMat.color.copy(mc); }
+  for (const [f, rc, mc] of saved) { if (f.splat) f.splat.recolor.copy(rc); f.meshMat.color.copy(mc); }
   renderScene();
 }
 
@@ -539,11 +553,21 @@ function showToast(text) { toast.textContent = text; toast.style.opacity = 1; cl
 document.querySelectorAll('[data-nav]').forEach((el) => el.addEventListener('click', () => {
   const nav = el.dataset.nav;
   if (nav !== 'play') return showToast({ locker: 'SPIND', quests: 'AUFTRÄGE', options: 'OPTIONEN' }[nav] || nav.toUpperCase());
-  $('fade').style.opacity = 1;
-  setTimeout(() => showToast(`${CHARACTERS[selected].name} · EINSATZ`), 700);
-  setTimeout(() => ($('fade').style.opacity = 0), 2200);
+  startGame();
 }));
-$('btn-ready').addEventListener('click', () => showToast(`${CHARACTERS[selected].name} BEREIT`));
+$('btn-ready').addEventListener('click', startGame);
+
+// Spiel starten: spielbar sind Figuren mit Geh-/Lauf-Animationen (Carlos, Mohammad, Daunenjacke).
+// Läuft der Startbildschirm über den Spiel-Server (/startbildschirm/), geht es relativ zurück, sonst zum Spiel-Port 5177.
+const PLAYABLE = ['person1', 'mohammad', 'daunenjacke'];
+const GAME_URL = location.pathname.startsWith('/startbildschirm') ? '/' : `${location.protocol}//${location.hostname}:5177/`;
+function startGame() {
+  const c = CHARACTERS[selected];
+  if (!PLAYABLE.includes(c.id)) { showToast(`${c.name} NOCH NICHT SPIELBAR`); return; }
+  $('fade').style.opacity = 1;
+  showToast(`${c.name} · EINSATZ`);
+  setTimeout(() => { location.href = `${GAME_URL}?figur=${c.id}`; }, 900);
+}
 $('btn-custom').addEventListener('click', () => showToast('ANPASSEN'));
 
 // ---------------- Loop ----------------
@@ -599,7 +623,7 @@ function tick(rawDt, scripted = false, render = true) {
     // nicht gewählte Figur abdunkeln; Explosionen färben die Splats kurz warm
     f.dim = damp(f.dim, f.index === selected ? 1 : (f.index > selected ? 0.35 : 0.55), 4, dt);   // rechts = hinter dem Panel
     _c.copy(BASE_TINT).multiplyScalar(f.dim).lerp(WARM, boomLightV * 0.18);
-    f.splat.recolor.copy(_c);
+    if (f.splat) f.splat.recolor.copy(_c);
     f.meshMat.color.copy(_c);
   }
   const p0 = performance.now();

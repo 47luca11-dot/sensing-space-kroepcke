@@ -6,7 +6,12 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { SplatMesh, SplatSkinning } from '@sparkjsdev/spark';
 
-const BASE = 'assets/carlos/', ID = 'person1';
+// Spielfigur aus ?figur= (vom Startbildschirm); Standard Carlos. handsInPockets: Arme bleiben ruhig (keine Balance-Arme).
+// mesh: texturiertes Mesh ohne Splats (nur <id>.glb)
+const FIGS = { person1: { base: 'assets/carlos/' }, mohammad: { base: 'assets/mohammad/', handsInPockets: true }, daunenjacke: { base: 'assets/daunenjacke/', mesh: true } };
+const wanted = new URLSearchParams(location.search).get('figur');
+const ID = FIGS[wanted] ? wanted : 'person1', BASE = FIGS[ID].base;
+export const FIGURE = { id: ID, ...FIGS[ID] };
 export const fillerPush = { value: 0.03 };
 const BASE_TINT = new THREE.Color(1, 1, 1);
 
@@ -32,8 +37,8 @@ export async function loadCarlos(scene) {
   const loader = new GLTFLoader();
   const [gltf, skinBuf, splat] = await Promise.all([
     loader.loadAsync(BASE + ID + '.glb'),
-    fetch(BASE + ID + '_skin.bin').then((r) => { if (!r.ok) throw new Error('skin.bin ' + r.status); return r.arrayBuffer(); }),
-    (async () => { const s = new SplatMesh({ url: BASE + ID + '_splats.ply' }); await s.initialized; s.maxSh = 1; return s; })(),
+    FIGURE.mesh ? null : fetch(BASE + ID + '_skin.bin').then((r) => { if (!r.ok) throw new Error('skin.bin ' + r.status); return r.arrayBuffer(); }),
+    FIGURE.mesh ? null : (async () => { const s = new SplatMesh({ url: BASE + ID + '_splats.ply' }); await s.initialized; s.maxSh = 1; return s; })(),
   ]);
   return new Character(scene, gltf, skinBuf, splat);
 }
@@ -47,31 +52,34 @@ class Character {
     this.model.traverse((o) => {
       if (!o.isMesh) return;
       o.castShadow = true; o.receiveShadow = false; o.frustumCulled = false;
-      o.material = fillerMaterial();
+      o.material = FIGURE.mesh ? new THREE.MeshBasicMaterial({ map: o.material.map, toneMapped: false }) : fillerMaterial();   // Mesh-Figur: Scan-Textur, Licht eingebacken
       if (o.isSkinnedMesh) skinned = o;
     });
     this.skinned = skinned; this.meshMat = skinned.material;
     scene.add(this.root);
 
-    // Splats als Geschwister des SkinnedMesh -> gleicher lokaler Frame wie die Mesh-Vertices
-    skinned.parent.add(splat);
-    splat.position.copy(skinned.position); splat.quaternion.copy(skinned.quaternion); splat.scale.copy(skinned.scale);
-    const n = splat.numSplats, bones = skinned.skeleton.bones;
-    const skin = new SplatSkinning({ mesh: splat, numSplats: n, numBones: bones.length });
-    const raw = new Uint8Array(skinBuf);
-    if (raw.length !== n * 8) console.warn('Carlos: skin/splat count mismatch', raw.length / 8, n);
-    for (let i = 0; i < n; i++) {
-      const o = i * 8, d = i * 4;
-      for (let k = 0; k < 4; k++) skin.skinData[d + k] = raw[o + 4 + k] + (raw[o + k] << 8);
+    this.splat = null; this.skin = null; this.numSplats = 0;
+    if (!FIGURE.mesh) {
+      // Splats als Geschwister des SkinnedMesh -> gleicher lokaler Frame wie die Mesh-Vertices
+      skinned.parent.add(splat);
+      splat.position.copy(skinned.position); splat.quaternion.copy(skinned.quaternion); splat.scale.copy(skinned.scale);
+      const n = splat.numSplats, bones = skinned.skeleton.bones;
+      const skin = new SplatSkinning({ mesh: splat, numSplats: n, numBones: bones.length });
+      const raw = new Uint8Array(skinBuf);
+      if (raw.length !== n * 8) console.warn('Carlos: skin/splat count mismatch', raw.length / 8, n);
+      for (let i = 0; i < n; i++) {
+        const o = i * 8, d = i * 4;
+        for (let k = 0; k < 4; k++) skin.skinData[d + k] = raw[o + 4 + k] + (raw[o + k] << 8);
+      }
+      skin.skinTexture.needsUpdate = true;
+      const I = new THREE.Quaternion(), Z0 = new THREE.Vector3();
+      for (let b = 0; b < bones.length; b++) skin.setRestQuatPos(b, I, Z0);
+      splat.skinning = skin;
+      splat.updateGenerator();
+      splat.recolor = BASE_TINT.clone();
+      splat.layers.set(1);                       // eigener Render-Durchgang (Spark prüft die Layer der SplatMeshes)
+      this.splat = splat; this.skin = skin; this.numSplats = n;
     }
-    skin.skinTexture.needsUpdate = true;
-    const I = new THREE.Quaternion(), Z0 = new THREE.Vector3();
-    for (let b = 0; b < bones.length; b++) skin.setRestQuatPos(b, I, Z0);
-    splat.skinning = skin;
-    splat.updateGenerator();
-    splat.recolor = BASE_TINT.clone();
-    splat.layers.set(1);                       // eigener Render-Durchgang (Spark prüft die Layer der SplatMeshes)
-    this.splat = splat; this.skin = skin; this.numSplats = n;
 
     this.bones = {};
     this.model.traverse((o) => { if (o.isBone) this.bones[o.name.replace(/\./g, '')] = o; });
@@ -234,15 +242,18 @@ class Character {
       this.rotWorld(b[name], left, L.y / 3);                         // + um Links-Achse = nach vorn
     }
     this.rotWorld(b.spine004, fwd, -L.x * 0.55);                     // Kopf hält gegen
-    this.rotWorld(b.upper_armL, fwd, L.arms + Math.max(0, -L.x) * 0.5);
-    this.rotWorld(b.upper_armR, fwd, -(L.arms + Math.max(0, L.x) * 0.5));
-    this.rotWorld(b.forearmL, fwd, L.arms * 0.25);
-    this.rotWorld(b.forearmR, fwd, -L.arms * 0.25);
+    if (!FIGURE.handsInPockets) {                                   // Hände in den Taschen: Arme nicht zum Balancieren rausnehmen
+      this.rotWorld(b.upper_armL, fwd, L.arms + Math.max(0, -L.x) * 0.5);
+      this.rotWorld(b.upper_armR, fwd, -(L.arms + Math.max(0, L.x) * 0.5));
+      this.rotWorld(b.forearmL, fwd, L.arms * 0.25);
+      this.rotWorld(b.forearmR, fwd, -L.arms * 0.25);
+    }
     this.root.updateMatrixWorld(true);
   }
 
   // Knochen-Deltas für die Splats: D_k = M^-1 · Bone_k · BoneInverse_k · BindMatrix (wie three.js-Skinning)
   updateSplatSkin() {
+    if (!this.skin) return;                    // Mesh-Figur: three.js skinnt selbst
     const sk = this.skinned.skeleton;
     this._inv.copy(this.skinned.matrixWorld).invert();
     for (let i = 0; i < sk.bones.length; i++) {

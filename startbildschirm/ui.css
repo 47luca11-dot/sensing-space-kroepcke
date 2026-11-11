@@ -107,6 +107,8 @@ canvas { position: absolute; left: 0; top: 0; width: 1588px; height: 991px; poin
 #loading i::after { content: ''; position: absolute; left: -40%; top: 0; bottom: 0; width: 40%; background: var(--teal); animation: load 1.1s ease-in-out infinite; }
 @keyframes load { to { left: 100%; } }
 /* Panel-Wechsel */
+#c-name.long { font-size: 112px; }
+#c-name.xlong { font-size: 84px; }
 #panel.swap #c-name, #panel.swap #stats, #panel.swap #c-bio, #panel.swap .role { opacity: 0; transform: translateX(18px); }
 #c-name, #stats, #c-bio, .role { transition: opacity .28s, transform .28s; }
 
