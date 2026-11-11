@@ -13,6 +13,8 @@ import { loadScans } from './js/scans.js';
 
 const $ = (id) => document.getElementById(id);
 const params = new URLSearchParams(location.search);
+// Einstieg über Lucas Startbildschirm (Figurenwahl); von dort kommt man mit ?figur=… zurück. Test-Parameter umgehen das.
+if (!location.search) location.replace('startbildschirm/');
 const canvas = $('gl');
 
 // ---------------- Renderer ----------------

@@ -7,6 +7,7 @@ import { extname, join, normalize } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('.', import.meta.url));
+const startRoot = fileURLToPath(new URL('../startbildschirm/', import.meta.url));   // Startbildschirm (Figurenwahl) unter /startbildschirm/
 const port = Number(process.argv[2] || 5177);
 const types = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css',
   '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp', '.svg': 'image/svg+xml', '.glb': 'model/gltf-binary',
@@ -29,10 +30,12 @@ http.createServer(async (req, res) => {
     res.writeHead(200, { 'Content-Type': 'application/json', 'Cache-Control': 'no-cache' }).end(JSON.stringify(out));
     return;
   }
-  const path = safe(url.pathname);
+  if (url.pathname === '/startbildschirm') { res.writeHead(302, { Location: '/startbildschirm/' }).end(); return; }
+  let base = root, path = safe(url.pathname);
   if (path === null) { res.writeHead(403).end(); return; }
+  if (path.startsWith('startbildschirm/') || path.startsWith('startbildschirm\\')) { base = startRoot; path = path.slice('startbildschirm/'.length); }
   try {
-    const file = join(root, path || 'index.html');
+    const file = join(base, path || 'index.html');
     const body = await readFile(file);
     res.writeHead(200, { 'Content-Type': types[extname(file).toLowerCase()] || 'application/octet-stream', 'Cache-Control': 'no-cache' });
     res.end(req.method === 'HEAD' ? undefined : body);
