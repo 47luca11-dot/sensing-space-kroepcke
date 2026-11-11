@@ -1,0 +1,343 @@
+"""Marktkirche -- Geometrie-Bibliothek (numpy, ohne Blender).
+Alles im Kirchen-Lokalframe (u = Kirchenachse West->Ost, v = Nord, h = Hoehe, rechtshaendig).
+Geometrie wird als Dreiecks-'Suppe' je (Material, Gruppe) gesammelt: Dreiecke (k,3,3) + UV in Metern (k,3,2).
+Geschlossene Koerper werden ueber das Vorzeichen des Volumens automatisch nach aussen orientiert.
+"""
+import math
+import numpy as np
+import mapbox_earcut as earcut
+
+UP = np.array([0.0, 0.0, 1.0])
+EPS = 1e-9
+
+
+def nrm(a):
+    a = np.asarray(a, float)
+    n = np.linalg.norm(a, axis=-1, keepdims=True)
+    return a / np.maximum(n, EPS)
+
+
+def newell(P):
+    P = np.asarray(P, float); Q = np.roll(P, -1, axis=0)
+    return np.array([np.sum((P[:, 1] - Q[:, 1]) * (P[:, 2] + Q[:, 2])),
+                     np.sum((P[:, 2] - Q[:, 2]) * (P[:, 0] + Q[:, 0])),
+                     np.sum((P[:, 0] - Q[:, 0]) * (P[:, 1] + Q[:, 1]))])
+
+
+def auto_uv(T):
+    """T (k,3,3) -> UV (k,3,2) in Metern: Waende/steile Flaechen: (horizontal, Hoehe bzw. Fallinie), flache: (u, v)."""
+    n = nrm(np.cross(T[:, 1] - T[:, 0], T[:, 2] - T[:, 0]))
+    steep = np.abs(n[:, 2]) < 0.72
+    t = np.cross(UP[None, :], n)
+    tl = np.linalg.norm(t, axis=1)
+    t = np.where((tl > 1e-6)[:, None], t / np.maximum(tl, 1e-9)[:, None], np.array([1.0, 0, 0]))
+    b = np.cross(n, t)
+    tf = np.tile(np.array([1.0, 0, 0]), (len(T), 1))
+    bf = np.where((n[:, 2] >= 0)[:, None], np.array([0, 1.0, 0]), np.array([0, -1.0, 0]))
+    t = np.where(steep[:, None], t, tf); b = np.where(steep[:, None], b, bf)
+    return np.stack([np.einsum('kij,kj->ki', T, t), np.einsum('kij,kj->ki', T, b)], axis=-1)
+
+
+def tri_poly(P, normal=None):
+    """Planares (ggf. konkaves) Polygon -> Dreiecke (m,3,3), Orientierung wie das Polygon (Newell)."""
+    P = np.asarray(P, float)
+    if len(P) < 3: return np.zeros((0, 3, 3))
+    nn = newell(P) if normal is None else np.asarray(normal, float)
+    if np.linalg.norm(nn) < 1e-12: return np.zeros((0, 3, 3))
+    nn = nrm(nn)
+    if len(P) == 3: return P[None]
+    a = nrm(np.cross(nn, [1, 0, 0] if abs(nn[0]) < 0.9 else [0, 1, 0])); b = np.cross(nn, a)
+    q = np.c_[P @ a, P @ b]
+    idx = earcut.triangulate_float64(q, np.array([len(q)], dtype=np.uint32)).reshape(-1, 3)
+    T = P[idx]
+    return fix_orient(T, nn)
+
+
+def tri_poly_holes(outer, holes, normal):
+    """outer/holes: Listen von 3D-Punkten in einer Ebene; normal = gewuenschte Vorderseite."""
+    nn = nrm(np.asarray(normal, float))
+    a = nrm(np.cross(nn, [1, 0, 0] if abs(nn[0]) < 0.9 else [0, 1, 0])); b = np.cross(nn, a)
+    rings = [np.asarray(outer, float)] + [np.asarray(h, float) for h in holes]
+    allp = np.vstack(rings)
+    q = np.c_[allp @ a, allp @ b]
+    ends = np.cumsum([len(r) for r in rings]).astype(np.uint32)
+    idx = earcut.triangulate_float64(q, ends).reshape(-1, 3)
+    return fix_orient(allp[idx], nn)
+
+
+def fix_orient(T, nn):
+    if len(T) == 0: return T
+    n = np.cross(T[:, 1] - T[:, 0], T[:, 2] - T[:, 0])
+    flip = (n @ nn) < 0
+    T = T.copy(); T[flip] = T[flip][:, ::-1]
+    return T
+
+
+def quads_to_tris(Q):
+    Q = np.asarray(Q, float)
+    return np.concatenate([Q[:, [0, 1, 2]], Q[:, [0, 2, 3]]], axis=0)
+
+
+def drop_degenerate(T, eps=1e-10):
+    if len(T) == 0: return T
+    a = np.linalg.norm(np.cross(T[:, 1] - T[:, 0], T[:, 2] - T[:, 0]), axis=1)
+    return T[a > eps]
+
+
+def signed_volume(T):
+    if len(T) == 0: return 0.0
+    c = T.reshape(-1, 3).mean(axis=0); A = T - c
+    return float(np.sum(np.einsum('ij,ij->i', A[:, 0], np.cross(A[:, 1], A[:, 2]))) / 6.0)
+
+
+class Builder:
+    def __init__(self):
+        self.G = {}          # (mat, grp) -> [list of T arrays, list of UV arrays]
+        self.flip_count = 0
+
+    def add(self, mat, T, grp='main', uv=None, closed=False, expect=None):
+        T = np.asarray(T, float).reshape(-1, 3, 3)
+        if len(T) == 0: return
+        keep = np.linalg.norm(np.cross(T[:, 1] - T[:, 0], T[:, 2] - T[:, 0]), axis=1) > 1e-10
+        if not keep.all():
+            T = T[keep]
+            if uv is not None: uv = np.asarray(uv)[keep]
+            if expect is not None and np.asarray(expect).ndim == 2: expect = np.asarray(expect)[keep]
+        if len(T) == 0: return
+        if closed and signed_volume(T) < 0:
+            T = T[:, ::-1]; self.flip_count += 1
+            if uv is not None: uv = uv[:, ::-1]
+        if expect is not None:          # offene Flaeche: Mehrheit der Normalen soll zu 'expect' zeigen
+            n = np.cross(T[:, 1] - T[:, 0], T[:, 2] - T[:, 0])
+            e = np.asarray(expect, float)
+            d = n @ e if e.ndim == 1 else np.einsum('ij,ij->i', n, e)
+            if np.sum(d < 0) > np.sum(d > 0):
+                T = T[:, ::-1]
+                if uv is not None: uv = uv[:, ::-1]
+        if uv is None: uv = auto_uv(T)
+        else:
+            # Flaechen mit UV-Flaeche ~0 (konstante UV, z.B. Kappen/Seiten) bekommen planare Meter-UVs (QA: Null-UV)
+            uv = np.array(uv, float)
+            ua = np.abs((uv[:, 1, 0] - uv[:, 0, 0]) * (uv[:, 2, 1] - uv[:, 0, 1]) - (uv[:, 2, 0] - uv[:, 0, 0]) * (uv[:, 1, 1] - uv[:, 0, 1]))
+            ga = np.linalg.norm(np.cross(T[:, 1] - T[:, 0], T[:, 2] - T[:, 0]), axis=1)
+            z = (ua < 1e-10) & (ga > 2e-4)
+            if z.any(): uv[z] = auto_uv(T[z])
+        g = self.G.setdefault((mat, grp), [[], []])
+        g[0].append(T); g[1].append(np.asarray(uv, float))
+
+    def solid(self, mat, parts, grp='main'):
+        """parts: Liste von Dreieck-Arrays, die zusammen EINEN geschlossenen Koerper bilden."""
+        T = np.concatenate([np.asarray(p, float).reshape(-1, 3, 3) for p in parts if len(p)], axis=0)
+        self.add(mat, T, grp, closed=True)
+
+    def tri_count(self):
+        return sum(sum(len(t) for t in g[0]) for g in self.G.values())
+
+    def arrays(self):
+        out = {}
+        for k, (Ts, UVs) in self.G.items():
+            out[k] = (np.concatenate(Ts), np.concatenate(UVs))
+        return out
+
+
+# ---------------------------------------------------------------- Ringe / Loft
+def loft(rings, cap0=True, cap1=True, closed_ring=True):
+    """rings: Liste (n,3)-Arrays gleicher Laenge. -> Dreiecke (unorientiert-konsistent)."""
+    R = [np.asarray(r, float) for r in rings]
+    n = len(R[0]); out = []
+    m = n if closed_ring else n - 1
+    for a, b in zip(R[:-1], R[1:]):
+        k = np.arange(m); k1 = (k + 1) % n
+        Q = np.stack([a[k], a[k1], b[k1], b[k]], axis=1)
+        out.append(quads_to_tris(Q))
+    if closed_ring:
+        if cap0: out.append(tri_poly(R[0][::-1]))
+        if cap1: out.append(tri_poly(R[-1]))
+    T = np.concatenate(out) if out else np.zeros((0, 3, 3))
+    return T
+
+
+def circle(c, r, seg, h=None, phase=0.0, ax=None, ay=None):
+    c = np.asarray(c, float)
+    ax = np.array([1.0, 0, 0]) if ax is None else np.asarray(ax, float)
+    ay = np.array([0, 1.0, 0]) if ay is None else np.asarray(ay, float)
+    t = phase + np.arange(seg) * 2 * math.pi / seg
+    P = c[None] + r * (np.cos(t)[:, None] * ax + np.sin(t)[:, None] * ay)
+    if h is not None: P[:, 2] = h
+    return P
+
+
+def lathe(c, prof, seg=16, phase=0.0, cap0=True, cap1=True, ax=None, ay=None, az=None):
+    """prof: [(r, h)] von unten nach oben; c = Achsfusspunkt. Achse = az (default UP)."""
+    c = np.asarray(c, float)
+    az = UP if az is None else nrm(az)
+    if ax is None:
+        ax = nrm(np.cross(az, [0, 1, 0] if abs(az[1]) < 0.9 else [1, 0, 0]))
+    ay = np.cross(az, ax) if ay is None else ay
+    rings = []
+    for r, h in prof:
+        rings.append(circle(c + h * az, max(r, 0.0), seg, None, phase, ax, ay))
+    return loft(rings, cap0, cap1)
+
+
+def rect_ring(cx, cy, hx, hy, h, ang=0.0, ch=0.0):
+    """Rechteck (optional mit gefasten Ecken ch) in der u/v-Ebene auf Hoehe h, CCW."""
+    if ch > 0:
+        pts = [(hx, -hy + ch), (hx, hy - ch), (hx - ch, hy), (-hx + ch, hy), (-hx, hy - ch), (-hx, -hy + ch), (-hx + ch, -hy), (hx - ch, -hy)]
+    else:
+        pts = [(hx, -hy), (hx, hy), (-hx, hy), (-hx, -hy)]
+    c, s = math.cos(ang), math.sin(ang)
+    return np.array([[cx + x * c - y * s, cy + x * s + y * c, h] for x, y in pts])
+
+
+def box(c, ax, ay, az, sx, sy, sz):
+    """Orientierter Quader: Mittelpunkt c, Achsen (normiert), Halbmasse."""
+    c = np.asarray(c, float); ax, ay, az = (np.asarray(a, float) for a in (ax, ay, az))
+    pts = lambda z: np.array([c + x * sx * ax + y * sy * ay + z * sz * az for x, y in ((1, -1), (1, 1), (-1, 1), (-1, -1))])
+    return loft([pts(-1), pts(1)])
+
+
+def box_aa(p0, p1):
+    p0 = np.asarray(p0, float); p1 = np.asarray(p1, float)
+    c = (p0 + p1) / 2; s = np.abs(p1 - p0) / 2
+    return box(c, [1, 0, 0], [0, 1, 0], [0, 0, 1], *s)
+
+
+def chamfer_box(c, ax, ay, az, sx, sy, sz, ch):
+    """Quader mit umlaufender Fase ch (an allen 12 Kanten)."""
+    c = np.asarray(c, float); ax, ay, az = (np.asarray(a, float) for a in (ax, ay, az))
+    ch = min(ch, sx * 0.45, sy * 0.45, sz * 0.45)
+    def ring(z, inset):
+        hx, hy = sx - inset, sy - inset
+        pts = [(hx, -hy + ch), (hx, hy - ch), (hx - ch, hy), (-hx + ch, hy), (-hx, hy - ch), (-hx, -hy + ch), (-hx + ch, -hy), (hx - ch, -hy)]
+        return np.array([c + x * ax + y * ay + z * az for x, y in pts])
+    return loft([ring(-sz, ch), ring(-sz + ch, 0), ring(sz - ch, 0), ring(sz, ch)])
+
+
+def prism(poly2, h0, h1):
+    P = np.asarray(poly2, float)
+    r0 = np.c_[P, np.full(len(P), h0)]; r1 = np.c_[P, np.full(len(P), h1)]
+    return loft([r0, r1])
+
+
+def extrude_profile(prof2, o, ex, ey, ez, d0, d1):
+    """2D-Profil (x,y) in der Ebene (ex,ey) bei o, entlang ez von d0 bis d1 extrudieren (geschlossen)."""
+    P = np.asarray(prof2, float); o = np.asarray(o, float)
+    ring = lambda d: o[None] + P[:, :1] * ex + P[:, 1:2] * ey + d * np.asarray(ez, float)
+    return loft([ring(d0), ring(d1)])
+
+
+# ---------------------------------------------------------------- Sweep
+def sweep(path, prof, nref=UP, closed_path=False, caps=True, scale=None):
+    """Profil (a,b) entlang 3D-Pfad. a = seitlich (T x nref), b = (seite x T).
+    Gehrung an Knicken. scale: optional Liste von Faktoren je Station."""
+    P = np.asarray(path, float); prof = np.asarray(prof, float); nref = nrm(nref)
+    n = len(P)
+    if closed_path:
+        Tin = nrm(P - np.roll(P, 1, axis=0)); Tout = nrm(np.roll(P, -1, axis=0) - P)
+    else:
+        d = nrm(np.diff(P, axis=0))
+        Tin = np.vstack([d[:1], d]); Tout = np.vstack([d, d[-1:]])
+    rings = []
+    for i in range(n):
+        T = nrm(Tin[i] + Tout[i])
+        if np.linalg.norm(Tin[i] + Tout[i]) < 1e-6: T = Tout[i]
+        side = np.cross(T, nref)
+        if np.linalg.norm(side) < 1e-6:
+            side = np.cross(T, [1, 0, 0] if abs(T[0]) < 0.9 else [0, 1, 0])
+        side = nrm(side); up2 = np.cross(side, T)
+        # Gehrung: Profilkoordinate a wird auf 1/cos(phi/2) gestreckt (Knick in der Ebene senkrecht zu nref)
+        cphi = np.clip(np.dot(Tin[i], Tout[i]), -1, 1)
+        m = 1.0 / max(math.cos(math.acos(cphi) / 2), 0.25)
+        sc = 1.0 if scale is None else scale[i]
+        rings.append(P[i][None] + (prof[:, :1] * m * sc) * side + (prof[:, 1:2] * sc) * up2)
+    if closed_path:
+        rings.append(rings[0])
+        return loft(rings, False, False)
+    return loft(rings, caps, caps)
+
+
+def tube(path, r, seg=8, closed_path=False, nref=None, caps=True):
+    t = np.arange(seg) * 2 * math.pi / seg
+    prof = np.c_[r * np.cos(t), r * np.sin(t)]
+    if nref is None:
+        P = np.asarray(path, float); d = nrm(P[-1] - P[0]) if len(P) > 1 else UP
+        nref = UP if abs(d[2]) < 0.9 else np.array([1.0, 0, 0])
+    return sweep(path, prof, nref, closed_path, caps)
+
+
+def rect_prof(w, d, ch=0.0, cx=0.0, cy=0.0):
+    hx, hy = w / 2, d / 2
+    if ch > 0:
+        pts = [(hx, -hy + ch), (hx, hy - ch), (hx - ch, hy), (-hx + ch, hy), (-hx, hy - ch), (-hx, -hy + ch), (-hx + ch, -hy), (hx - ch, -hy)]
+    else:
+        pts = [(hx, -hy), (hx, hy), (-hx, hy), (-hx, -hy)]
+    return np.array([(x + cx, y + cy) for x, y in pts])
+
+
+# ---------------------------------------------------------------- Boegen (2D in Wandebene: x quer, y hoch)
+def pointed_arc(w, hs, R, seg=10):
+    """Spitzbogen ueber Breite w (zentriert x=0), Kaempfer hs, Radius R>=w/2. Punkte von links Kaempfer -> Scheitel -> rechts."""
+    R = max(R, w / 2 + 1e-4)
+    cxl = -w / 2 + R            # Mittelpunkt des linken Bogens (rechts davon)
+    ta = math.acos(min(1.0, (0 - cxl) / R))     # Winkel des Scheitels vom linken Mittelpunkt
+    th = np.linspace(math.pi, ta, seg + 1)
+    left = np.c_[cxl + R * np.cos(th), hs + R * np.sin(th)]
+    right = left[::-1][1:].copy(); right[:, 0] *= -1
+    return np.vstack([left, right])
+
+
+def arch_apex(w, hs, R):
+    R = max(R, w / 2 + 1e-4)
+    return hs + math.sqrt(max(R * R - (R - w / 2) ** 2, 0.0))
+
+
+def round_arc(w, hs, seg=10):
+    th = np.linspace(math.pi, 0, 2 * seg + 1)
+    return np.c_[w / 2 * np.cos(th), hs + w / 2 * np.sin(th)]
+
+
+def opening_outline(w, sill, hs, R, seg=10, kind='pointed'):
+    """Geschlossene Kontur (CCW in x/y): unten links -> unten rechts -> rechts hoch -> Bogen -> links runter."""
+    arc = pointed_arc(w, hs, R, seg) if kind == 'pointed' else round_arc(w, hs, seg)
+    pts = [(-w / 2, sill), (w / 2, sill)] + [tuple(p) for p in arc[::-1]]
+    out = []
+    for p in pts:
+        if not out or np.hypot(p[0] - out[-1][0], p[1] - out[-1][1]) > 1e-6: out.append(p)
+    if np.hypot(out[0][0] - out[-1][0], out[0][1] - out[-1][1]) < 1e-6: out.pop()
+    return np.array(out)
+
+
+def arch_halfwidth_at(w, hs, R, y):
+    """Halbe lichte Weite eines Spitzbogens auf Hoehe y."""
+    if y <= hs: return w / 2
+    cxl = -w / 2 + R
+    dy = y - hs
+    if dy >= R: return 0.0
+    x = cxl - math.sqrt(R * R - dy * dy)
+    return max(-x, 0.0)
+
+
+class WallFrame:
+    """Ebene Wand: Ursprung o (Fusspunkt, h=0), t = Wandrichtung (horizontal), n = aussen. 2D (x,y) -> o + x t + y up."""
+    def __init__(self, o, t, n=None):
+        self.o = np.array([o[0], o[1], 0.0]); self.t = nrm([t[0], t[1], 0.0])
+        self.n = np.cross(self.t, UP) if n is None else nrm([n[0], n[1], 0.0])
+        # Rechtshaendig: x (t), y (up), Normale n muss t x up entsprechen -> sonst t umdrehen? (nein: n frei waehlbar)
+
+    def p(self, x, y, d=0.0):
+        """Punkt bei x entlang Wand, Hoehe y, d nach aussen (+) bzw. innen (-)."""
+        x = np.asarray(x, float); y = np.asarray(y, float); d = np.asarray(d, float)
+        return self.o + x[..., None] * self.t + y[..., None] * UP + d[..., None] * self.n
+
+    def pts(self, xy, d=0.0):
+        xy = np.asarray(xy, float)
+        return self.p(xy[:, 0], xy[:, 1], d)
+
+
+def offset_outline(w, sill, hs, R, off, seg=10, kind='pointed', sill_drop=None):
+    """Konzentrisch versetzte Oeffnungskontur (gleiche Punktzahl fuer Loft)."""
+    sd = off if sill_drop is None else sill_drop
+    if kind == 'pointed':
+        return opening_outline(w + 2 * off, sill - sd, hs, R + off, seg, kind)
+    return opening_outline(w + 2 * off, sill - sd, hs, seg=seg, kind=kind, R=0)

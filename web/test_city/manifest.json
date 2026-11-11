@@ -1,0 +1,120 @@
+{
+ "version": 1,
+ "spawn": [
+  0,
+  0,
+  4
+ ],
+ "spawnYaw": 0,
+ "attribution": "Testdaten · © Sensing Space",
+ "labels": [
+  {
+   "name": "Kröpcke (Test)",
+   "p": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Baumreihe",
+   "p": [
+    -2,
+    8
+   ]
+  }
+ ],
+ "heightfield": {
+  "bin": "ground/heightfield.bin",
+  "json": "ground/heightfield.json"
+ },
+ "files": [
+  {
+   "url": "ground/ground.glb",
+   "kind": "both",
+   "group": "ground",
+   "bounds": [
+    -100,
+    -3,
+    -100,
+    100,
+    3,
+    100
+   ],
+   "tris": 1250
+  },
+  {
+   "url": "buildings/bldg_vis.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -30,
+    -2,
+    -43,
+    26,
+    22,
+    10
+   ],
+   "tris": 200
+  },
+  {
+   "url": "buildings/bldg_col.glb",
+   "kind": "collision",
+   "group": "buildings",
+   "bounds": [
+    -30,
+    -2,
+    -43,
+    26,
+    22,
+    10
+   ],
+   "tris": 100
+  },
+  {
+   "url": "detail/far.glb",
+   "kind": "visual",
+   "group": "detail",
+   "bounds": [
+    -20,
+    0,
+    -920,
+    20,
+    60,
+    -880
+   ],
+   "tris": 12
+  },
+  {
+   "url": "detail/missing.glb",
+   "kind": "visual",
+   "group": "detail",
+   "bounds": [
+    300,
+    0,
+    300,
+    310,
+    10,
+    310
+   ],
+   "tris": 12
+  }
+ ],
+ "scans": [
+  {
+   "url": "../assets/carlos/person1_splats.ply",
+   "position": [
+    3,
+    0,
+    2
+   ],
+   "rotationDeg": [
+    0,
+    90,
+    0
+   ],
+   "scale": 1,
+   "flipY": false,
+   "name": "Test-Scan"
+  }
+ ]
+}

@@ -1,0 +1,4981 @@
+{
+ "version": 1,
+ "frame": "metres, Y-up, origin = Kroepcke-Uhr at street level (EPSG:25832 E 550298.88 N 5802940.71, 56.16 m DHHN92), +X east, -Z north",
+ "spawn": [
+  0.0,
+  0.0,
+  6.0
+ ],
+ "spawnYaw": 0.0,
+ "spawnYawNote": "0 = looking north (-Z)",
+ "files": [
+  {
+   "url": "detail/bldg_base.glb",
+   "kind": "both",
+   "group": "detail",
+   "bounds": [
+    -93.3,
+    -4.14,
+    -46.39,
+    263.35,
+    24.64,
+    363.11
+   ],
+   "tris": 7064
+  },
+  {
+   "url": "detail/bldg_openings.glb",
+   "kind": "both",
+   "group": "detail",
+   "bounds": [
+    -69.57,
+    -3.25,
+    -46.21,
+    243.81,
+    24.9,
+    311.7
+   ],
+   "tris": 683196
+  },
+  {
+   "url": "detail/bldg_roof.glb",
+   "kind": "both",
+   "group": "detail",
+   "bounds": [
+    -93.28,
+    -3.52,
+    -46.41,
+    263.38,
+    29.22,
+    363.09
+   ],
+   "tris": 118546
+  },
+  {
+   "url": "detail/bldg_walls.glb",
+   "kind": "both",
+   "group": "detail",
+   "bounds": [
+    -93.28,
+    -3.64,
+    -46.37,
+    263.33,
+    28.55,
+    363.09
+   ],
+   "tris": 91452
+  },
+  {
+   "url": "detail/d0_windows.glb",
+   "kind": "both",
+   "group": "detail",
+   "bounds": [
+    -92.93,
+    -2.16,
+    -38.46,
+    263.26,
+    25.37,
+    362.95
+   ],
+   "tris": 1322384
+  },
+  {
+   "url": "detail/fix.glb",
+   "kind": "both",
+   "group": "detail",
+   "bounds": [
+    -85.8,
+    -3.55,
+    -10.26,
+    263.33,
+    0.27,
+    363.09
+   ],
+   "tris": 335
+  },
+  {
+   "url": "detail/green.glb",
+   "kind": "both",
+   "group": "detail",
+   "bounds": [
+    -34.79,
+    -1.96,
+    -0.1,
+    233.13,
+    0.06,
+    291.75
+   ],
+   "tris": 18253
+  },
+  {
+   "url": "detail/green_trees.glb",
+   "kind": "visual",
+   "group": "detail",
+   "bounds": [
+    -66.54,
+    -2.26,
+    -7.17,
+    238.51,
+    22.25,
+    299.51
+   ],
+   "tris": 14094
+  },
+  {
+   "url": "detail/ground.glb",
+   "kind": "both",
+   "group": "detail",
+   "bounds": [
+    39.23,
+    -0.85,
+    70.23,
+    147.64,
+    0.65,
+    229.0
+   ],
+   "tris": 9799
+  },
+  {
+   "url": "detail/kiosk.glb",
+   "kind": "both",
+   "group": "detail",
+   "bounds": [
+    58.08,
+    -0.47,
+    90.19,
+    65.31,
+    2.81,
+    98.04
+   ],
+   "tris": 204884
+  },
+  {
+   "url": "detail/landmark_mahnmal.glb",
+   "kind": "both",
+   "group": "detail",
+   "bounds": [
+    137.98,
+    -0.58,
+    213.34,
+    153.26,
+    5.32,
+    228.62
+   ],
+   "tris": 384
+  },
+  {
+   "url": "detail/landmark_opernhaus.glb",
+   "kind": "both",
+   "group": "detail",
+   "bounds": [
+    89.67,
+    -1.79,
+    65.6,
+    185.88,
+    36.84,
+    166.17
+   ],
+   "tris": 223871
+  },
+  {
+   "url": "detail/landmark_tiefgarage_pavillon.glb",
+   "kind": "both",
+   "group": "detail",
+   "bounds": [
+    61.33,
+    -3.37,
+    71.27,
+    71.35,
+    3.08,
+    79.07
+   ],
+   "tris": 1340
+  },
+  {
+   "url": "detail/street.glb",
+   "kind": "both",
+   "group": "detail",
+   "bounds": [
+    -67.38,
+    -6.04,
+    -9.79,
+    235.62,
+    3.05,
+    293.21
+   ],
+   "tris": 76604
+  },
+  {
+   "url": "detail/street_furniture.glb",
+   "kind": "both",
+   "group": "detail",
+   "bounds": [
+    -68.22,
+    -2.34,
+    -9.55,
+    228.87,
+    7.99,
+    288.14
+   ],
+   "tris": 364590
+  },
+  {
+   "url": "landmarks/cafe_kroepcke.glb",
+   "kind": "both",
+   "group": "landmark",
+   "bounds": [
+    9.86,
+    -0.9,
+    4.13,
+    56.3,
+    14.27,
+    46.26
+   ],
+   "tris": 263693
+  },
+  {
+   "url": "landmarks/kroepcke_center.glb",
+   "kind": "both",
+   "group": "landmark",
+   "bounds": [
+    -59.14,
+    -1.0,
+    14.45,
+    18.78,
+    28.64,
+    132.74
+   ],
+   "tris": 209920
+  },
+  {
+   "url": "landmarks/kroepcke_uhr.glb",
+   "kind": "both",
+   "group": "landmark",
+   "bounds": [
+    -4.74,
+    -0.3,
+    -4.81,
+    4.78,
+    6.31,
+    4.83
+   ],
+   "tris": 62028
+  },
+  {
+   "url": "landmarks/lichtwolke.glb",
+   "kind": "visual",
+   "group": "landmark",
+   "bounds": [
+    -46.8,
+    15.44,
+    -28.02,
+    12.75,
+    19.15,
+    18.05
+   ],
+   "tris": 8276
+  },
+  {
+   "url": "buildings/bldg_-1_-1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -112.73,
+    -1.15,
+    -111.77,
+    13.74,
+    28.42,
+    6.58
+   ],
+   "tris": 48427
+  },
+  {
+   "url": "buildings/bldg_-1_-1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -112.73,
+    -1.15,
+    -111.77,
+    13.74,
+    28.42,
+    6.58
+   ],
+   "tris": 4566,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-1_-2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -104.21,
+    -1.69,
+    -207.88,
+    -5.26,
+    23.57,
+    -91.25
+   ],
+   "tris": 33943
+  },
+  {
+   "url": "buildings/bldg_-1_-2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -104.21,
+    -1.69,
+    -207.88,
+    -5.26,
+    23.57,
+    -91.25
+   ],
+   "tris": 7182,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-1_-3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -115.56,
+    -1.82,
+    -275.5,
+    8.64,
+    29.66,
+    -185.14
+   ],
+   "tris": 34834
+  },
+  {
+   "url": "buildings/bldg_-1_-3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -115.56,
+    -1.82,
+    -275.5,
+    8.64,
+    29.66,
+    -185.14
+   ],
+   "tris": 7212,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-1_-4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -183.51,
+    -2.48,
+    -482.45,
+    58.03,
+    25.99,
+    -279.49
+   ],
+   "tris": 33351
+  },
+  {
+   "url": "buildings/bldg_-1_-4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -183.51,
+    -2.48,
+    -482.45,
+    58.03,
+    25.99,
+    -279.49
+   ],
+   "tris": 2202,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-1_-6.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -7.23,
+    2.0,
+    -537.67,
+    -1.07,
+    4.86,
+    -532.3
+   ],
+   "tris": 246
+  },
+  {
+   "url": "buildings/bldg_-1_-6_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -7.23,
+    2.0,
+    -537.67,
+    -1.07,
+    4.86,
+    -532.3
+   ],
+   "tris": 234,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-1_0.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -106.65,
+    -0.31,
+    13.79,
+    -66.24,
+    25.05,
+    96.58
+   ],
+   "tris": 14216
+  },
+  {
+   "url": "buildings/bldg_-1_0_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -106.65,
+    -0.31,
+    13.79,
+    -66.24,
+    25.05,
+    96.58
+   ],
+   "tris": 5570,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-1_1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -117.09,
+    -0.78,
+    90.35,
+    -70.48,
+    23.61,
+    177.23
+   ],
+   "tris": 13863
+  },
+  {
+   "url": "buildings/bldg_-1_1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -117.09,
+    -0.78,
+    90.35,
+    -70.48,
+    23.61,
+    177.23
+   ],
+   "tris": 3892,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-1_2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -95.85,
+    -0.86,
+    259.53,
+    -67.72,
+    19.75,
+    316.42
+   ],
+   "tris": 5996
+  },
+  {
+   "url": "buildings/bldg_-1_2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -95.85,
+    -0.86,
+    259.53,
+    -67.72,
+    19.75,
+    316.42
+   ],
+   "tris": 3284,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-1_3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -108.68,
+    -1.48,
+    309.75,
+    0.26,
+    20.29,
+    400.98
+   ],
+   "tris": 22106
+  },
+  {
+   "url": "buildings/bldg_-1_3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -108.68,
+    -1.48,
+    309.75,
+    0.26,
+    20.29,
+    400.98
+   ],
+   "tris": 6970,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-1_4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -103.08,
+    -0.88,
+    380.59,
+    16.83,
+    20.96,
+    503.58
+   ],
+   "tris": 33409
+  },
+  {
+   "url": "buildings/bldg_-1_4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -103.08,
+    -0.88,
+    380.59,
+    16.83,
+    20.96,
+    503.58
+   ],
+   "tris": 8767,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-2_-1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -199.3,
+    -1.3,
+    -118.54,
+    -94.02,
+    32.38,
+    3.77
+   ],
+   "tris": 39116
+  },
+  {
+   "url": "buildings/bldg_-2_-1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -199.3,
+    -1.3,
+    -118.54,
+    -94.02,
+    32.38,
+    3.77
+   ],
+   "tris": 4352,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-2_-2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -234.1,
+    -1.78,
+    -211.6,
+    -87.72,
+    24.53,
+    -108.91
+   ],
+   "tris": 28227
+  },
+  {
+   "url": "buildings/bldg_-2_-2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -234.1,
+    -1.78,
+    -211.6,
+    -87.72,
+    24.53,
+    -108.91
+   ],
+   "tris": 5614,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-2_-3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -205.86,
+    -3.76,
+    -313.78,
+    -82.51,
+    21.38,
+    -173.05
+   ],
+   "tris": 43291
+  },
+  {
+   "url": "buildings/bldg_-2_-3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -205.86,
+    -3.76,
+    -313.78,
+    -82.51,
+    21.38,
+    -173.05
+   ],
+   "tris": 7620,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-2_-4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -203.39,
+    -3.57,
+    -427.02,
+    -125.13,
+    23.28,
+    -285.26
+   ],
+   "tris": 30338
+  },
+  {
+   "url": "buildings/bldg_-2_-4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -203.39,
+    -3.57,
+    -427.02,
+    -125.13,
+    23.28,
+    -285.26
+   ],
+   "tris": 9198,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-2_-6.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -191.92,
+    2.34,
+    -536.55,
+    -171.4,
+    12.27,
+    -513.53
+   ],
+   "tris": 1879
+  },
+  {
+   "url": "buildings/bldg_-2_-6_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -191.92,
+    2.34,
+    -536.55,
+    -171.4,
+    12.27,
+    -513.53
+   ],
+   "tris": 1426,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-2_0.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -221.46,
+    -3.35,
+    -11.09,
+    -90.76,
+    30.62,
+    114.27
+   ],
+   "tris": 41128
+  },
+  {
+   "url": "buildings/bldg_-2_0_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -221.46,
+    -3.35,
+    -11.09,
+    -90.76,
+    30.62,
+    114.27
+   ],
+   "tris": 4352,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-2_1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -178.55,
+    -0.66,
+    75.44,
+    -95.48,
+    28.45,
+    207.82
+   ],
+   "tris": 30914
+  },
+  {
+   "url": "buildings/bldg_-2_1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -178.55,
+    -0.66,
+    75.44,
+    -95.48,
+    28.45,
+    207.82
+   ],
+   "tris": 7286,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-2_2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -202.08,
+    -0.69,
+    194.36,
+    -101.72,
+    25.31,
+    312.3
+   ],
+   "tris": 48338
+  },
+  {
+   "url": "buildings/bldg_-2_2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -202.08,
+    -0.69,
+    194.36,
+    -101.72,
+    25.31,
+    312.3
+   ],
+   "tris": 8397,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-2_3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -222.55,
+    -1.35,
+    292.84,
+    -90.4,
+    23.16,
+    400.77
+   ],
+   "tris": 33947
+  },
+  {
+   "url": "buildings/bldg_-2_3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -222.55,
+    -1.35,
+    292.84,
+    -90.4,
+    23.16,
+    400.77
+   ],
+   "tris": 4972,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-2_4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -234.56,
+    -0.53,
+    401.88,
+    -117.1,
+    18.38,
+    511.42
+   ],
+   "tris": 15135
+  },
+  {
+   "url": "buildings/bldg_-2_4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -234.56,
+    -0.53,
+    401.88,
+    -117.1,
+    18.38,
+    511.42
+   ],
+   "tris": 2808,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-2_5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -204.7,
+    -1.01,
+    468.07,
+    -85.54,
+    22.94,
+    561.2
+   ],
+   "tris": 18763
+  },
+  {
+   "url": "buildings/bldg_-2_5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -204.7,
+    -1.01,
+    468.07,
+    -85.54,
+    22.94,
+    561.2
+   ],
+   "tris": 6878,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-3_-1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -308.26,
+    -1.06,
+    -78.65,
+    -180.52,
+    29.43,
+    11.91
+   ],
+   "tris": 49621
+  },
+  {
+   "url": "buildings/bldg_-3_-1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -308.26,
+    -1.06,
+    -78.65,
+    -180.52,
+    29.43,
+    11.91
+   ],
+   "tris": 5768,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-3_-2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -301.41,
+    -1.58,
+    -201.65,
+    -196.15,
+    29.7,
+    -93.07
+   ],
+   "tris": 30645
+  },
+  {
+   "url": "buildings/bldg_-3_-2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -301.41,
+    -1.58,
+    -201.65,
+    -196.15,
+    29.7,
+    -93.07
+   ],
+   "tris": 5390,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-3_-3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -308.68,
+    -3.44,
+    -316.28,
+    -194.64,
+    26.38,
+    -199.54
+   ],
+   "tris": 49867
+  },
+  {
+   "url": "buildings/bldg_-3_-3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -308.68,
+    -3.44,
+    -316.28,
+    -194.64,
+    26.38,
+    -199.54
+   ],
+   "tris": 9924,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-3_-4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -310.51,
+    -4.49,
+    -410.09,
+    -195.37,
+    19.72,
+    -296.86
+   ],
+   "tris": 26454
+  },
+  {
+   "url": "buildings/bldg_-3_-4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -310.51,
+    -4.49,
+    -410.09,
+    -195.37,
+    19.72,
+    -296.86
+   ],
+   "tris": 5750,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-3_-5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -308.45,
+    -2.58,
+    -494.51,
+    -191.82,
+    25.4,
+    -391.44
+   ],
+   "tris": 38159
+  },
+  {
+   "url": "buildings/bldg_-3_-5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -308.45,
+    -2.58,
+    -494.51,
+    -191.82,
+    25.4,
+    -391.44
+   ],
+   "tris": 8248,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-3_0.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -299.35,
+    -1.25,
+    10.93,
+    -204.6,
+    21.07,
+    93.53
+   ],
+   "tris": 31470
+  },
+  {
+   "url": "buildings/bldg_-3_0_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -299.35,
+    -1.25,
+    10.93,
+    -204.6,
+    21.07,
+    93.53
+   ],
+   "tris": 4566,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-3_1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -290.88,
+    -0.93,
+    99.37,
+    -137.39,
+    32.69,
+    232.41
+   ],
+   "tris": 45847
+  },
+  {
+   "url": "buildings/bldg_-3_1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -290.88,
+    -0.93,
+    99.37,
+    -137.39,
+    32.69,
+    232.41
+   ],
+   "tris": 5988,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-3_2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -314.1,
+    -0.23,
+    201.55,
+    -189.76,
+    85.24,
+    313.13
+   ],
+   "tris": 48270
+  },
+  {
+   "url": "buildings/bldg_-3_2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -314.1,
+    -0.23,
+    201.55,
+    -189.76,
+    85.24,
+    313.13
+   ],
+   "tris": 15813,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-3_3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -296.37,
+    -0.93,
+    317.16,
+    -192.4,
+    27.18,
+    414.48
+   ],
+   "tris": 35680
+  },
+  {
+   "url": "buildings/bldg_-3_3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -296.37,
+    -0.93,
+    317.16,
+    -192.4,
+    27.18,
+    414.48
+   ],
+   "tris": 9040,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-3_4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -296.73,
+    -1.17,
+    400.51,
+    -207.05,
+    29.33,
+    469.76
+   ],
+   "tris": 32814
+  },
+  {
+   "url": "buildings/bldg_-3_4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -296.73,
+    -1.17,
+    400.51,
+    -207.05,
+    29.33,
+    469.76
+   ],
+   "tris": 8113,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-4_-1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -405.1,
+    -1.31,
+    -103.95,
+    -308.97,
+    23.86,
+    -22.82
+   ],
+   "tris": 42358
+  },
+  {
+   "url": "buildings/bldg_-4_-1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -405.1,
+    -1.31,
+    -103.95,
+    -308.97,
+    23.86,
+    -22.82
+   ],
+   "tris": 8891,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-4_-2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -399.25,
+    -3.21,
+    -203.65,
+    -292.2,
+    22.47,
+    -91.87
+   ],
+   "tris": 29792
+  },
+  {
+   "url": "buildings/bldg_-4_-2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -399.25,
+    -3.21,
+    -203.65,
+    -292.2,
+    22.47,
+    -91.87
+   ],
+   "tris": 6166,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-4_-3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -405.84,
+    -1.3,
+    -302.85,
+    -300.2,
+    21.86,
+    -200.61
+   ],
+   "tris": 33815
+  },
+  {
+   "url": "buildings/bldg_-4_-3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -405.84,
+    -1.3,
+    -302.85,
+    -300.2,
+    21.86,
+    -200.61
+   ],
+   "tris": 9316,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-4_-4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -428.96,
+    -2.3,
+    -418.01,
+    -287.41,
+    21.94,
+    -296.31
+   ],
+   "tris": 52659
+  },
+  {
+   "url": "buildings/bldg_-4_-4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -428.96,
+    -2.3,
+    -418.01,
+    -287.41,
+    21.94,
+    -296.31
+   ],
+   "tris": 10641,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-4_-5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -377.02,
+    -2.2,
+    -456.3,
+    -299.85,
+    19.1,
+    -408.44
+   ],
+   "tris": 11263
+  },
+  {
+   "url": "buildings/bldg_-4_-5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -377.02,
+    -2.2,
+    -456.3,
+    -299.85,
+    19.1,
+    -408.44
+   ],
+   "tris": 8045,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-4_0.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -419.66,
+    -1.26,
+    -19.32,
+    -295.3,
+    20.8,
+    106.58
+   ],
+   "tris": 70362
+  },
+  {
+   "url": "buildings/bldg_-4_0_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -419.66,
+    -1.26,
+    -19.32,
+    -295.3,
+    20.8,
+    106.58
+   ],
+   "tris": 8845,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-4_1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -403.19,
+    -1.26,
+    107.19,
+    -278.23,
+    18.58,
+    201.3
+   ],
+   "tris": 42669
+  },
+  {
+   "url": "buildings/bldg_-4_1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -403.19,
+    -1.26,
+    107.19,
+    -278.23,
+    18.58,
+    201.3
+   ],
+   "tris": 7612,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-4_2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -414.93,
+    -1.2,
+    183.58,
+    -285.98,
+    24.08,
+    307.41
+   ],
+   "tris": 83100
+  },
+  {
+   "url": "buildings/bldg_-4_2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -414.93,
+    -1.2,
+    183.58,
+    -285.98,
+    24.08,
+    307.41
+   ],
+   "tris": 10629,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-4_3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -409.88,
+    -2.07,
+    292.76,
+    -280.13,
+    27.77,
+    409.22
+   ],
+   "tris": 56100
+  },
+  {
+   "url": "buildings/bldg_-4_3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -409.88,
+    -2.07,
+    292.76,
+    -280.13,
+    27.77,
+    409.22
+   ],
+   "tris": 11549,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-5_-1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -508.64,
+    -1.34,
+    -102.1,
+    -399.71,
+    19.93,
+    9.36
+   ],
+   "tris": 54072
+  },
+  {
+   "url": "buildings/bldg_-5_-1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -508.64,
+    -1.34,
+    -102.1,
+    -399.71,
+    19.93,
+    9.36
+   ],
+   "tris": 10203,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-5_-2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -508.95,
+    -1.13,
+    -199.98,
+    -405.24,
+    20.01,
+    -91.15
+   ],
+   "tris": 4386
+  },
+  {
+   "url": "buildings/bldg_-5_-2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -508.95,
+    -1.13,
+    -199.98,
+    -405.24,
+    20.01,
+    -91.15
+   ],
+   "tris": 4476,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-5_-3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -502.91,
+    -1.15,
+    -303.69,
+    -402.25,
+    31.94,
+    -197.39
+   ],
+   "tris": 11386
+  },
+  {
+   "url": "buildings/bldg_-5_-3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -502.91,
+    -1.15,
+    -303.69,
+    -402.25,
+    31.94,
+    -197.39
+   ],
+   "tris": 3288,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-5_-4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -427.77,
+    -1.37,
+    -366.03,
+    -386.38,
+    27.37,
+    -330.15
+   ],
+   "tris": 6828
+  },
+  {
+   "url": "buildings/bldg_-5_-4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -427.77,
+    -1.37,
+    -366.03,
+    -386.38,
+    27.37,
+    -330.15
+   ],
+   "tris": 2198,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-5_0.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -506.92,
+    -0.95,
+    1.41,
+    -399.1,
+    20.85,
+    106.15
+   ],
+   "tris": 30735
+  },
+  {
+   "url": "buildings/bldg_-5_0_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -506.92,
+    -0.95,
+    1.41,
+    -399.1,
+    20.85,
+    106.15
+   ],
+   "tris": 8125,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-5_1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -505.89,
+    -1.75,
+    95.82,
+    -396.59,
+    71.39,
+    208.36
+   ],
+   "tris": 53200
+  },
+  {
+   "url": "buildings/bldg_-5_1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -505.89,
+    -1.75,
+    95.82,
+    -396.59,
+    71.39,
+    208.36
+   ],
+   "tris": 16066,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-5_2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -520.47,
+    -3.86,
+    198.82,
+    -371.01,
+    20.5,
+    309.75
+   ],
+   "tris": 44712
+  },
+  {
+   "url": "buildings/bldg_-5_2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -520.47,
+    -3.86,
+    198.82,
+    -371.01,
+    20.5,
+    309.75
+   ],
+   "tris": 9928,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-5_3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -419.04,
+    -1.59,
+    293.7,
+    -394.55,
+    21.12,
+    349.54
+   ],
+   "tris": 8740
+  },
+  {
+   "url": "buildings/bldg_-5_3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -419.04,
+    -1.59,
+    293.7,
+    -394.55,
+    21.12,
+    349.54
+   ],
+   "tris": 4820,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-6_-1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -560.62,
+    -1.11,
+    -100.54,
+    -491.63,
+    22.84,
+    7.3
+   ],
+   "tris": 28723
+  },
+  {
+   "url": "buildings/bldg_-6_-1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -560.62,
+    -1.11,
+    -100.54,
+    -491.63,
+    22.84,
+    7.3
+   ],
+   "tris": 10309,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-6_-2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -560.73,
+    -0.97,
+    -197.73,
+    -503.55,
+    22.46,
+    -90.85
+   ],
+   "tris": 21638
+  },
+  {
+   "url": "buildings/bldg_-6_-2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -560.73,
+    -0.97,
+    -197.73,
+    -503.55,
+    22.46,
+    -90.85
+   ],
+   "tris": 5082,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-6_0.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -568.94,
+    -0.96,
+    -1.87,
+    -492.17,
+    23.24,
+    102.95
+   ],
+   "tris": 19256
+  },
+  {
+   "url": "buildings/bldg_-6_0_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -568.94,
+    -0.96,
+    -1.87,
+    -492.17,
+    23.24,
+    102.95
+   ],
+   "tris": 9124,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-6_1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -559.65,
+    -1.49,
+    97.47,
+    -491.31,
+    20.63,
+    226.87
+   ],
+   "tris": 27940
+  },
+  {
+   "url": "buildings/bldg_-6_1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -559.65,
+    -1.49,
+    97.47,
+    -491.31,
+    20.63,
+    226.87
+   ],
+   "tris": 10034,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_0_-1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    3.42,
+    -3.39,
+    -105.72,
+    102.76,
+    23.67,
+    -8.91
+   ],
+   "tris": 23133
+  },
+  {
+   "url": "buildings/bldg_0_-1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    3.42,
+    -3.39,
+    -105.72,
+    102.76,
+    23.67,
+    -8.91
+   ],
+   "tris": 3684,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_0_-2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -42.83,
+    -3.77,
+    -190.39,
+    121.27,
+    30.2,
+    -80.1
+   ],
+   "tris": 41448
+  },
+  {
+   "url": "buildings/bldg_0_-2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -42.83,
+    -3.77,
+    -190.39,
+    121.27,
+    30.2,
+    -80.1
+   ],
+   "tris": 3438,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_0_-3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -13.91,
+    -1.89,
+    -270.72,
+    23.91,
+    25.21,
+    -193.7
+   ],
+   "tris": 20346
+  },
+  {
+   "url": "buildings/bldg_0_-3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -13.91,
+    -1.89,
+    -270.72,
+    23.91,
+    25.21,
+    -193.7
+   ],
+   "tris": 4380,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_0_-4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    36.41,
+    -1.94,
+    -419.13,
+    121.58,
+    8.0,
+    -308.03
+   ],
+   "tris": 384
+  },
+  {
+   "url": "buildings/bldg_0_-5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    1.12,
+    2.23,
+    -466.86,
+    27.18,
+    8.04,
+    -400.87
+   ],
+   "tris": 318
+  },
+  {
+   "url": "buildings/bldg_0_-5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    1.12,
+    2.23,
+    -466.86,
+    27.18,
+    8.04,
+    -400.87
+   ],
+   "tris": 278,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_0_-6.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    40.09,
+    -1.48,
+    -596.29,
+    115.49,
+    27.56,
+    -493.95
+   ],
+   "tris": 19103
+  },
+  {
+   "url": "buildings/bldg_0_-6_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    40.09,
+    -1.48,
+    -596.29,
+    115.49,
+    27.56,
+    -493.95
+   ],
+   "tris": 2198,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_0_2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    41.04,
+    -0.47,
+    295.08,
+    51.22,
+    4.45,
+    302.66
+   ],
+   "tris": 479
+  },
+  {
+   "url": "buildings/bldg_0_2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    41.04,
+    -0.47,
+    295.08,
+    51.22,
+    4.45,
+    302.66
+   ],
+   "tris": 234,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_0_3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -1.62,
+    -1.09,
+    297.02,
+    121.78,
+    22.61,
+    419.16
+   ],
+   "tris": 39770
+  },
+  {
+   "url": "buildings/bldg_0_3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -1.62,
+    -1.09,
+    297.02,
+    121.78,
+    22.61,
+    419.16
+   ],
+   "tris": 6358,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_0_4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -10.46,
+    -3.13,
+    413.23,
+    94.06,
+    25.88,
+    517.52
+   ],
+   "tris": 22160
+  },
+  {
+   "url": "buildings/bldg_0_4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -10.46,
+    -3.13,
+    413.23,
+    94.06,
+    25.88,
+    517.52
+   ],
+   "tris": 8238,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_0_5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -14.06,
+    -2.67,
+    492.16,
+    60.42,
+    56.71,
+    568.67
+   ],
+   "tris": 18268
+  },
+  {
+   "url": "buildings/bldg_0_5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -14.06,
+    -2.67,
+    492.16,
+    60.42,
+    56.71,
+    568.67
+   ],
+   "tris": 5177,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_1_-1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    82.05,
+    -2.96,
+    -123.14,
+    233.58,
+    25.37,
+    -8.47
+   ],
+   "tris": 28600
+  },
+  {
+   "url": "buildings/bldg_1_-1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    82.05,
+    -2.96,
+    -123.14,
+    233.58,
+    25.37,
+    -8.47
+   ],
+   "tris": 3684,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_1_-2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    111.06,
+    -1.9,
+    -121.89,
+    146.66,
+    26.23,
+    -84.88
+   ],
+   "tris": 8648
+  },
+  {
+   "url": "buildings/bldg_1_-2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    111.06,
+    -1.9,
+    -121.89,
+    146.66,
+    26.23,
+    -84.88
+   ],
+   "tris": 4402,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_1_-3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    69.53,
+    -2.47,
+    -354.94,
+    261.19,
+    25.45,
+    -171.23
+   ],
+   "tris": 42363
+  },
+  {
+   "url": "buildings/bldg_1_-3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    69.53,
+    -2.47,
+    -354.94,
+    261.19,
+    25.45,
+    -171.23
+   ],
+   "tris": 2398,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_1_-4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    96.07,
+    -2.12,
+    -405.56,
+    152.23,
+    8.0,
+    -343.41
+   ],
+   "tris": 84
+  },
+  {
+   "url": "buildings/bldg_1_-5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    87.86,
+    -2.25,
+    -515.96,
+    170.24,
+    8.0,
+    -395.87
+   ],
+   "tris": 2542
+  },
+  {
+   "url": "buildings/bldg_1_-5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    87.86,
+    -2.25,
+    -515.96,
+    170.24,
+    8.0,
+    -395.87
+   ],
+   "tris": 2380,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_1_-6.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    90.46,
+    -0.97,
+    -551.45,
+    122.18,
+    23.64,
+    -523.47
+   ],
+   "tris": 6921
+  },
+  {
+   "url": "buildings/bldg_1_-6_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    90.46,
+    -0.97,
+    -551.45,
+    122.18,
+    23.64,
+    -523.47
+   ],
+   "tris": 2444,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_1_3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    82.2,
+    -1.21,
+    295.49,
+    164.57,
+    29.8,
+    399.88
+   ],
+   "tris": 34963
+  },
+  {
+   "url": "buildings/bldg_1_3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    82.2,
+    -1.21,
+    295.49,
+    164.57,
+    29.8,
+    399.88
+   ],
+   "tris": 5462,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_1_4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    86.59,
+    -1.91,
+    380.76,
+    163.94,
+    27.93,
+    497.44
+   ],
+   "tris": 33560
+  },
+  {
+   "url": "buildings/bldg_1_4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    86.59,
+    -1.91,
+    380.76,
+    163.94,
+    27.93,
+    497.44
+   ],
+   "tris": 2594,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_1_5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    95.7,
+    -2.22,
+    504.52,
+    192.94,
+    23.05,
+    560.79
+   ],
+   "tris": 18994
+  },
+  {
+   "url": "buildings/bldg_1_5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    95.7,
+    -2.22,
+    504.52,
+    192.94,
+    23.05,
+    560.79
+   ],
+   "tris": 4428,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_2_-1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    142.54,
+    -2.14,
+    -101.95,
+    318.46,
+    27.0,
+    12.44
+   ],
+   "tris": 46957
+  },
+  {
+   "url": "buildings/bldg_2_-1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    142.54,
+    -2.14,
+    -101.95,
+    318.46,
+    27.0,
+    12.44
+   ],
+   "tris": 2808,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_2_-2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    216.24,
+    -2.71,
+    -177.4,
+    294.12,
+    18.42,
+    -97.78
+   ],
+   "tris": 19992
+  },
+  {
+   "url": "buildings/bldg_2_-2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    216.24,
+    -2.71,
+    -177.4,
+    294.12,
+    18.42,
+    -97.78
+   ],
+   "tris": 3330,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_2_-3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    272.15,
+    -2.08,
+    -267.95,
+    303.4,
+    6.9,
+    -242.54
+   ],
+   "tris": 728
+  },
+  {
+   "url": "buildings/bldg_2_-4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    131.26,
+    -2.56,
+    -429.76,
+    344.19,
+    22.79,
+    -260.07
+   ],
+   "tris": 15258
+  },
+  {
+   "url": "buildings/bldg_2_-4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    131.26,
+    -2.56,
+    -429.76,
+    344.19,
+    22.79,
+    -260.07
+   ],
+   "tris": 2838,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_2_-5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    251.13,
+    -6.99,
+    -428.18,
+    289.89,
+    4.71,
+    -392.64
+   ],
+   "tris": 68
+  },
+  {
+   "url": "buildings/bldg_2_0.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    233.95,
+    -2.33,
+    -19.82,
+    300.13,
+    25.5,
+    122.03
+   ],
+   "tris": 29770
+  },
+  {
+   "url": "buildings/bldg_2_0_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    233.95,
+    -2.33,
+    -19.82,
+    300.13,
+    25.5,
+    122.03
+   ],
+   "tris": 4730,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_2_1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    234.02,
+    -3.95,
+    123.4,
+    324.84,
+    25.07,
+    190.28
+   ],
+   "tris": 31953
+  },
+  {
+   "url": "buildings/bldg_2_1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    234.02,
+    -3.95,
+    123.4,
+    324.84,
+    25.07,
+    190.28
+   ],
+   "tris": 6828,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_2_2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    238.29,
+    -4.64,
+    201.8,
+    314.14,
+    25.05,
+    297.26
+   ],
+   "tris": 28189
+  },
+  {
+   "url": "buildings/bldg_2_2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    238.29,
+    -4.64,
+    201.8,
+    314.14,
+    25.05,
+    297.26
+   ],
+   "tris": 6424,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_2_3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    199.0,
+    -2.66,
+    295.83,
+    308.18,
+    32.23,
+    354.6
+   ],
+   "tris": 28786
+  },
+  {
+   "url": "buildings/bldg_2_3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    199.0,
+    -2.66,
+    295.83,
+    308.18,
+    32.23,
+    354.6
+   ],
+   "tris": 2808,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_2_5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    191.97,
+    -2.24,
+    506.2,
+    228.47,
+    23.88,
+    535.14
+   ],
+   "tris": 5825
+  },
+  {
+   "url": "buildings/bldg_2_5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    191.97,
+    -2.24,
+    506.2,
+    228.47,
+    23.88,
+    535.14
+   ],
+   "tris": 3724,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_3_-1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    285.01,
+    -3.19,
+    -128.43,
+    404.72,
+    31.1,
+    -2.92
+   ],
+   "tris": 26414
+  },
+  {
+   "url": "buildings/bldg_3_-1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    285.01,
+    -3.19,
+    -128.43,
+    404.72,
+    31.1,
+    -2.92
+   ],
+   "tris": 4582,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_3_-3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    338.55,
+    -2.48,
+    -301.4,
+    416.12,
+    18.88,
+    -217.19
+   ],
+   "tris": 17973
+  },
+  {
+   "url": "buildings/bldg_3_-3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    338.55,
+    -2.48,
+    -301.4,
+    416.12,
+    18.88,
+    -217.19
+   ],
+   "tris": 4011,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_3_-4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    323.67,
+    -2.48,
+    -342.16,
+    368.06,
+    15.78,
+    -300.34
+   ],
+   "tris": 4183
+  },
+  {
+   "url": "buildings/bldg_3_-4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    323.67,
+    -2.48,
+    -342.16,
+    368.06,
+    15.78,
+    -300.34
+   ],
+   "tris": 224,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_3_-5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    292.85,
+    -6.8,
+    -444.84,
+    379.5,
+    72.58,
+    -363.16
+   ],
+   "tris": 23839
+  },
+  {
+   "url": "buildings/bldg_3_-5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    292.85,
+    -6.8,
+    -444.84,
+    379.5,
+    72.58,
+    -363.16
+   ],
+   "tris": 174,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_3_0.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    284.52,
+    -4.75,
+    13.4,
+    415.95,
+    27.34,
+    110.85
+   ],
+   "tris": 50183
+  },
+  {
+   "url": "buildings/bldg_3_0_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    284.52,
+    -4.75,
+    13.4,
+    415.95,
+    27.34,
+    110.85
+   ],
+   "tris": 10203,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_3_1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    287.6,
+    -2.26,
+    81.0,
+    413.89,
+    34.67,
+    196.43
+   ],
+   "tris": 47724
+  },
+  {
+   "url": "buildings/bldg_3_1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    287.6,
+    -2.26,
+    81.0,
+    413.89,
+    34.67,
+    196.43
+   ],
+   "tris": 9400,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_3_2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    282.64,
+    -2.89,
+    207.51,
+    391.77,
+    26.35,
+    298.96
+   ],
+   "tris": 32344
+  },
+  {
+   "url": "buildings/bldg_3_2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    282.64,
+    -2.89,
+    207.51,
+    391.77,
+    26.35,
+    298.96
+   ],
+   "tris": 8708,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_3_3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    303.58,
+    -2.96,
+    297.77,
+    343.45,
+    23.52,
+    357.95
+   ],
+   "tris": 13832
+  },
+  {
+   "url": "buildings/bldg_3_3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    303.58,
+    -2.96,
+    297.77,
+    343.45,
+    23.52,
+    357.95
+   ],
+   "tris": 2676,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_3_4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    258.25,
+    -3.33,
+    374.93,
+    336.72,
+    37.07,
+    531.58
+   ],
+   "tris": 46740
+  },
+  {
+   "url": "buildings/bldg_3_4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    258.25,
+    -3.33,
+    374.93,
+    336.72,
+    37.07,
+    531.58
+   ],
+   "tris": 1620,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_4_-1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    406.89,
+    -2.09,
+    -36.85,
+    486.04,
+    21.18,
+    9.09
+   ],
+   "tris": 11418
+  },
+  {
+   "url": "buildings/bldg_4_-1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    406.89,
+    -2.09,
+    -36.85,
+    486.04,
+    21.18,
+    9.09
+   ],
+   "tris": 6708,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_4_-2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    448.84,
+    -2.06,
+    -205.88,
+    509.66,
+    20.5,
+    -121.44
+   ],
+   "tris": 20220
+  },
+  {
+   "url": "buildings/bldg_4_-2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    448.84,
+    -2.06,
+    -205.88,
+    509.66,
+    20.5,
+    -121.44
+   ],
+   "tris": 9220,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_4_-3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    388.01,
+    -4.14,
+    -349.19,
+    552.56,
+    33.29,
+    -183.89
+   ],
+   "tris": 76045
+  },
+  {
+   "url": "buildings/bldg_4_-3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    388.01,
+    -4.14,
+    -349.19,
+    552.56,
+    33.29,
+    -183.89
+   ],
+   "tris": 6168,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_4_0.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    398.16,
+    -4.73,
+    -9.72,
+    513.28,
+    24.13,
+    115.82
+   ],
+   "tris": 69900
+  },
+  {
+   "url": "buildings/bldg_4_0_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    398.16,
+    -4.73,
+    -9.72,
+    513.28,
+    24.13,
+    115.82
+   ],
+   "tris": 10827,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_4_1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    405.11,
+    -3.95,
+    96.34,
+    514.9,
+    19.24,
+    205.78
+   ],
+   "tris": 33306
+  },
+  {
+   "url": "buildings/bldg_4_1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    405.11,
+    -3.95,
+    96.34,
+    514.9,
+    19.24,
+    205.78
+   ],
+   "tris": 7974,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_4_2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    416.14,
+    -3.72,
+    198.1,
+    506.37,
+    20.59,
+    318.01
+   ],
+   "tris": 26032
+  },
+  {
+   "url": "buildings/bldg_4_2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    416.14,
+    -3.72,
+    198.1,
+    506.37,
+    20.59,
+    318.01
+   ],
+   "tris": 3896,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_4_3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    382.16,
+    -2.92,
+    256.1,
+    449.73,
+    24.94,
+    386.58
+   ],
+   "tris": 28253
+  },
+  {
+   "url": "buildings/bldg_4_3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    382.16,
+    -2.92,
+    256.1,
+    449.73,
+    24.94,
+    386.58
+   ],
+   "tris": 2218,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_5_-1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    509.55,
+    -1.9,
+    -92.86,
+    563.69,
+    18.48,
+    -46.2
+   ],
+   "tris": 8833
+  },
+  {
+   "url": "buildings/bldg_5_-1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    509.55,
+    -1.9,
+    -92.86,
+    563.69,
+    18.48,
+    -46.2
+   ],
+   "tris": 4202,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_5_-2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    493.17,
+    -2.08,
+    -190.24,
+    553.26,
+    22.72,
+    -105.87
+   ],
+   "tris": 29596
+  },
+  {
+   "url": "buildings/bldg_5_-2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    493.17,
+    -2.08,
+    -190.24,
+    553.26,
+    22.72,
+    -105.87
+   ],
+   "tris": 6766,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_5_0.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    477.31,
+    -2.39,
+    3.19,
+    563.59,
+    21.84,
+    100.97
+   ],
+   "tris": 27596
+  },
+  {
+   "url": "buildings/bldg_5_0_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    477.31,
+    -2.39,
+    3.19,
+    563.59,
+    21.84,
+    100.97
+   ],
+   "tris": 4994,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_5_1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    505.08,
+    -2.41,
+    120.66,
+    544.3,
+    16.05,
+    182.4
+   ],
+   "tris": 4747
+  },
+  {
+   "url": "buildings/bldg_5_1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    505.08,
+    -2.41,
+    120.66,
+    544.3,
+    16.05,
+    182.4
+   ],
+   "tris": 1252,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_5_2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    505.73,
+    -2.3,
+    196.4,
+    527.86,
+    11.76,
+    218.75
+   ],
+   "tris": 1871
+  },
+  {
+   "url": "buildings/bldg_5_2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    505.73,
+    -2.3,
+    196.4,
+    527.86,
+    11.76,
+    218.75
+   ],
+   "tris": 1252,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/collision_buildings.glb",
+   "kind": "collision",
+   "group": "buildings",
+   "bounds": null,
+   "tris": 92145
+  },
+  {
+   "url": "ground/ground_-6_-3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -522.78,
+    -2.44,
+    -252.35,
+    -498.46,
+    -0.53,
+    -198.95
+   ],
+   "tris": 467
+  },
+  {
+   "url": "ground/ground_-6_-2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -568.04,
+    -5.0,
+    -201.28,
+    -495.35,
+    2.56,
+    -94.49
+   ],
+   "tris": 5999
+  },
+  {
+   "url": "ground/ground_-6_-1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -568.82,
+    -2.86,
+    -104.17,
+    -497.27,
+    -0.28,
+    1.24
+   ],
+   "tris": 8008
+  },
+  {
+   "url": "ground/ground_-6_0.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -576.67,
+    -2.58,
+    -1.08,
+    -497.67,
+    -0.16,
+    101.13
+   ],
+   "tris": 5471
+  },
+  {
+   "url": "ground/ground_-6_1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -567.15,
+    -2.71,
+    98.94,
+    -498.51,
+    0.95,
+    202.33
+   ],
+   "tris": 3724
+  },
+  {
+   "url": "ground/ground_-6_2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -559.19,
+    -2.94,
+    197.94,
+    -496.66,
+    0.08,
+    301.51
+   ],
+   "tris": 1657
+  },
+  {
+   "url": "ground/ground_-6_3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -516.95,
+    -2.77,
+    298.92,
+    -499.51,
+    -0.65,
+    310.9
+   ],
+   "tris": 81
+  },
+  {
+   "url": "ground/ground_-5_-4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -481.36,
+    -3.18,
+    -399.56,
+    -397.77,
+    -0.65,
+    -298.72
+   ],
+   "tris": 3220
+  },
+  {
+   "url": "ground/ground_-5_-3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -501.51,
+    -2.79,
+    -301.06,
+    -396.17,
+    -0.12,
+    -197.89
+   ],
+   "tris": 13263
+  },
+  {
+   "url": "ground/ground_-5_-2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -506.99,
+    -5.15,
+    -203.49,
+    -398.37,
+    0.42,
+    -98.5
+   ],
+   "tris": 17998
+  },
+  {
+   "url": "ground/ground_-5_-1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -501.82,
+    -1.45,
+    -101.27,
+    -397.75,
+    0.66,
+    3.05
+   ],
+   "tris": 8912
+  },
+  {
+   "url": "ground/ground_-5_0.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -502.23,
+    -1.27,
+    -4.29,
+    -398.72,
+    0.79,
+    102.63
+   ],
+   "tris": 9047
+  },
+  {
+   "url": "ground/ground_-5_1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -501.29,
+    -1.54,
+    97.59,
+    -397.63,
+    -0.24,
+    204.02
+   ],
+   "tris": 10203
+  },
+  {
+   "url": "ground/ground_-5_2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -502.19,
+    -1.62,
+    196.53,
+    -398.05,
+    -0.06,
+    305.01
+   ],
+   "tris": 6520
+  },
+  {
+   "url": "ground/ground_-5_3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -500.91,
+    -3.72,
+    296.84,
+    -396.84,
+    -0.73,
+    391.96
+   ],
+   "tris": 4438
+  },
+  {
+   "url": "ground/ground_-4_-5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -397.03,
+    -4.03,
+    -472.43,
+    -298.64,
+    -1.36,
+    -398.76
+   ],
+   "tris": 3322
+  },
+  {
+   "url": "ground/ground_-4_-4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -402.07,
+    -3.03,
+    -401.92,
+    -296.72,
+    -0.03,
+    -297.62
+   ],
+   "tris": 5637
+  },
+  {
+   "url": "ground/ground_-4_-3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -404.32,
+    -1.68,
+    -302.51,
+    -294.44,
+    0.15,
+    -198.46
+   ],
+   "tris": 11658
+  },
+  {
+   "url": "ground/ground_-4_-2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -401.54,
+    -5.16,
+    -201.3,
+    -294.45,
+    2.37,
+    -94.84
+   ],
+   "tris": 8524
+  },
+  {
+   "url": "ground/ground_-4_-1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -402.6,
+    -1.55,
+    -104.99,
+    -294.69,
+    0.14,
+    2.87
+   ],
+   "tris": 7746
+  },
+  {
+   "url": "ground/ground_-4_0.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -401.32,
+    -1.56,
+    -2.2,
+    -298.14,
+    -0.54,
+    102.17
+   ],
+   "tris": 10255
+  },
+  {
+   "url": "ground/ground_-4_1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -402.66,
+    -1.37,
+    98.26,
+    -297.71,
+    -0.01,
+    201.91
+   ],
+   "tris": 10211
+  },
+  {
+   "url": "ground/ground_-4_2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -401.81,
+    -1.18,
+    197.23,
+    -297.24,
+    0.08,
+    302.64
+   ],
+   "tris": 8379
+  },
+  {
+   "url": "ground/ground_-4_3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -403.11,
+    -3.69,
+    297.09,
+    -298.49,
+    1.97,
+    401.36
+   ],
+   "tris": 8144
+  },
+  {
+   "url": "ground/ground_-4_4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -391.08,
+    -3.45,
+    398.53,
+    -298.5,
+    -0.59,
+    472.3
+   ],
+   "tris": 3768
+  },
+  {
+   "url": "ground/ground_-3_-6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -261.04,
+    -4.02,
+    -561.89,
+    -199.17,
+    1.5,
+    -498.46
+   ],
+   "tris": 1000
+  },
+  {
+   "url": "ground/ground_-3_-5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -301.37,
+    -4.05,
+    -501.16,
+    -197.23,
+    -1.11,
+    -394.92
+   ],
+   "tris": 6500
+  },
+  {
+   "url": "ground/ground_-3_-4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -302.9,
+    -2.5,
+    -405.46,
+    -195.96,
+    -0.65,
+    -296.84
+   ],
+   "tris": 6012
+  },
+  {
+   "url": "ground/ground_-3_-3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -304.77,
+    -2.03,
+    -304.34,
+    -196.65,
+    -0.9,
+    -197.98
+   ],
+   "tris": 8321
+  },
+  {
+   "url": "ground/ground_-3_-2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -304.77,
+    -1.8,
+    -201.72,
+    -193.92,
+    -0.6,
+    -96.69
+   ],
+   "tris": 6298
+  },
+  {
+   "url": "ground/ground_-3_-1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -306.45,
+    -1.13,
+    -103.84,
+    -197.38,
+    -0.26,
+    2.35
+   ],
+   "tris": 3813
+  },
+  {
+   "url": "ground/ground_-3_0.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -301.81,
+    -1.53,
+    -2.21,
+    -194.71,
+    -0.43,
+    101.38
+   ],
+   "tris": 5406
+  },
+  {
+   "url": "ground/ground_-3_1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -303.32,
+    -1.06,
+    98.3,
+    -194.07,
+    -0.12,
+    204.12
+   ],
+   "tris": 8490
+  },
+  {
+   "url": "ground/ground_-3_2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -302.49,
+    -0.49,
+    195.36,
+    -198.14,
+    1.66,
+    305.11
+   ],
+   "tris": 9702
+  },
+  {
+   "url": "ground/ground_-3_3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -301.77,
+    -4.1,
+    292.82,
+    -194.79,
+    3.38,
+    403.5
+   ],
+   "tris": 8285
+  },
+  {
+   "url": "ground/ground_-3_4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -301.14,
+    -4.82,
+    396.29,
+    -195.43,
+    2.72,
+    501.37
+   ],
+   "tris": 10432
+  },
+  {
+   "url": "ground/ground_-3_5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -300.22,
+    -2.36,
+    496.91,
+    -198.75,
+    0.01,
+    534.26
+   ],
+   "tris": 813
+  },
+  {
+   "url": "ground/ground_-2_-6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -200.56,
+    -2.5,
+    -550.83,
+    -98.55,
+    2.66,
+    -497.44
+   ],
+   "tris": 3079
+  },
+  {
+   "url": "ground/ground_-2_-5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -205.08,
+    -2.67,
+    -502.01,
+    -97.66,
+    2.62,
+    -396.98
+   ],
+   "tris": 6654
+  },
+  {
+   "url": "ground/ground_-2_-4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -202.41,
+    -2.4,
+    -403.03,
+    -96.33,
+    0.26,
+    -297.26
+   ],
+   "tris": 6305
+  },
+  {
+   "url": "ground/ground_-2_-3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -202.01,
+    -2.16,
+    -302.76,
+    -94.88,
+    -0.72,
+    -197.15
+   ],
+   "tris": 12231
+  },
+  {
+   "url": "ground/ground_-2_-2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -204.7,
+    -1.96,
+    -205.35,
+    -96.12,
+    -0.86,
+    -95.26
+   ],
+   "tris": 6816
+  },
+  {
+   "url": "ground/ground_-2_-1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -202.48,
+    -1.19,
+    -102.81,
+    -95.41,
+    0.18,
+    2.68
+   ],
+   "tris": 4490
+  },
+  {
+   "url": "ground/ground_-2_0.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -204.95,
+    -0.76,
+    -4.61,
+    -94.09,
+    0.17,
+    104.5
+   ],
+   "tris": 2994
+  },
+  {
+   "url": "ground/ground_-2_1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -204.33,
+    -0.86,
+    95.22,
+    -98.26,
+    -0.17,
+    202.88
+   ],
+   "tris": 2736
+  },
+  {
+   "url": "ground/ground_-2_2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -202.88,
+    -0.99,
+    196.51,
+    -98.54,
+    3.02,
+    301.96
+   ],
+   "tris": 8653
+  },
+  {
+   "url": "ground/ground_-2_3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -204.39,
+    -4.1,
+    298.66,
+    -98.26,
+    1.17,
+    402.28
+   ],
+   "tris": 9574
+  },
+  {
+   "url": "ground/ground_-2_4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -204.39,
+    -0.92,
+    397.14,
+    -98.22,
+    1.2,
+    502.19
+   ],
+   "tris": 8231
+  },
+  {
+   "url": "ground/ground_-2_5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -202.87,
+    -2.72,
+    496.91,
+    -94.17,
+    0.1,
+    567.91
+   ],
+   "tris": 2943
+  },
+  {
+   "url": "ground/ground_-1_-6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -101.87,
+    -2.11,
+    -560.0,
+    1.49,
+    3.26,
+    -497.59
+   ],
+   "tris": 3066
+  },
+  {
+   "url": "ground/ground_-1_-5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -103.33,
+    0.5,
+    -502.45,
+    1.97,
+    3.32,
+    -394.95
+   ],
+   "tris": 2939
+  },
+  {
+   "url": "ground/ground_-1_-4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -104.43,
+    -2.19,
+    -406.69,
+    2.17,
+    2.55,
+    -297.41
+   ],
+   "tris": 1216
+  },
+  {
+   "url": "ground/ground_-1_-3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -104.08,
+    -2.4,
+    -301.67,
+    5.2,
+    -1.0,
+    -197.29
+   ],
+   "tris": 10456
+  },
+  {
+   "url": "ground/ground_-1_-2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -102.25,
+    -1.97,
+    -203.37,
+    3.46,
+    -0.76,
+    -98.03
+   ],
+   "tris": 6228
+  },
+  {
+   "url": "ground/ground_-1_-1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -103.53,
+    -4.93,
+    -102.52,
+    8.13,
+    3.59,
+    3.31
+   ],
+   "tris": 9391
+  },
+  {
+   "url": "ground/ground_-1_0.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -103.36,
+    -0.99,
+    -1.12,
+    -64.38,
+    0.32,
+    103.73
+   ],
+   "tris": 2890
+  },
+  {
+   "url": "ground/ground_-1_1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -103.36,
+    -4.67,
+    94.03,
+    -64.23,
+    2.88,
+    200.96
+   ],
+   "tris": 4570
+  },
+  {
+   "url": "ground/ground_-1_2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -101.68,
+    -1.8,
+    198.95,
+    1.62,
+    -0.2,
+    301.6
+   ],
+   "tris": 6920
+  },
+  {
+   "url": "ground/ground_-1_3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -101.38,
+    -1.59,
+    297.49,
+    1.8,
+    -0.04,
+    406.86
+   ],
+   "tris": 5803
+  },
+  {
+   "url": "ground/ground_-1_4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -101.59,
+    -1.2,
+    395.88,
+    2.7,
+    0.3,
+    503.05
+   ],
+   "tris": 6203
+  },
+  {
+   "url": "ground/ground_-1_5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -103.21,
+    -2.77,
+    498.36,
+    2.18,
+    0.39,
+    559.93
+   ],
+   "tris": 7000
+  },
+  {
+   "url": "ground/ground_0_-7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    87.98,
+    -2.76,
+    -604.48,
+    98.67,
+    -1.14,
+    -599.17
+   ],
+   "tris": 25
+  },
+  {
+   "url": "ground/ground_0_-6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -12.93,
+    -2.67,
+    -601.03,
+    103.91,
+    3.17,
+    -498.62
+   ],
+   "tris": 6447
+  },
+  {
+   "url": "ground/ground_0_-5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -1.84,
+    -1.57,
+    -501.57,
+    101.28,
+    3.38,
+    -397.8
+   ],
+   "tris": 8092
+  },
+  {
+   "url": "ground/ground_0_-4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -2.32,
+    -2.91,
+    -402.01,
+    101.36,
+    3.35,
+    -298.08
+   ],
+   "tris": 7205
+  },
+  {
+   "url": "ground/ground_0_-3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -4.32,
+    -2.91,
+    -302.19,
+    101.46,
+    3.1,
+    -198.06
+   ],
+   "tris": 12062
+  },
+  {
+   "url": "ground/ground_0_-2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -3.99,
+    -5.83,
+    -201.23,
+    105.1,
+    -0.08,
+    -85.89
+   ],
+   "tris": 10792
+  },
+  {
+   "url": "ground/ground_0_-1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -10.61,
+    -5.08,
+    -119.88,
+    102.02,
+    0.94,
+    -6.79
+   ],
+   "tris": 12493
+  },
+  {
+   "url": "ground/ground_0_2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -2.15,
+    -1.42,
+    290.21,
+    100.46,
+    0.68,
+    302.62
+   ],
+   "tris": 2404
+  },
+  {
+   "url": "ground/ground_0_3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -1.62,
+    -1.31,
+    298.58,
+    104.43,
+    0.66,
+    404.23
+   ],
+   "tris": 3739
+  },
+  {
+   "url": "ground/ground_0_4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -2.1,
+    -1.34,
+    392.39,
+    103.54,
+    0.55,
+    501.73
+   ],
+   "tris": 7253
+  },
+  {
+   "url": "ground/ground_0_5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -2.32,
+    -3.22,
+    497.41,
+    101.7,
+    0.6,
+    576.68
+   ],
+   "tris": 5573
+  },
+  {
+   "url": "ground/ground_1_-6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    95.86,
+    -4.0,
+    -598.65,
+    201.18,
+    -0.74,
+    -498.18
+   ],
+   "tris": 3416
+  },
+  {
+   "url": "ground/ground_1_-5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    98.75,
+    -2.97,
+    -502.16,
+    201.31,
+    3.24,
+    -398.79
+   ],
+   "tris": 15659
+  },
+  {
+   "url": "ground/ground_1_-4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    98.49,
+    -2.67,
+    -401.56,
+    202.84,
+    3.17,
+    -297.45
+   ],
+   "tris": 6545
+  },
+  {
+   "url": "ground/ground_1_-3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    98.73,
+    -5.98,
+    -301.82,
+    203.17,
+    3.18,
+    -196.46
+   ],
+   "tris": 6174
+  },
+  {
+   "url": "ground/ground_1_-2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    95.41,
+    -6.12,
+    -203.42,
+    202.44,
+    1.03,
+    -96.49
+   ],
+   "tris": 12595
+  },
+  {
+   "url": "ground/ground_1_-1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    97.68,
+    -2.15,
+    -105.41,
+    205.59,
+    -0.63,
+    -6.79
+   ],
+   "tris": 5981
+  },
+  {
+   "url": "ground/ground_1_0.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    151.88,
+    -1.3,
+    53.23,
+    171.6,
+    -1.21,
+    60.65
+   ],
+   "tris": 27
+  },
+  {
+   "url": "ground/ground_1_2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    99.7,
+    -2.29,
+    289.82,
+    200.92,
+    0.39,
+    301.48
+   ],
+   "tris": 4402
+  },
+  {
+   "url": "ground/ground_1_3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    95.99,
+    -1.92,
+    297.83,
+    201.44,
+    0.26,
+    401.81
+   ],
+   "tris": 14690
+  },
+  {
+   "url": "ground/ground_1_4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    97.69,
+    -2.19,
+    396.4,
+    215.97,
+    0.07,
+    501.6
+   ],
+   "tris": 6596
+  },
+  {
+   "url": "ground/ground_1_5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    98.11,
+    -4.05,
+    498.56,
+    201.33,
+    1.9,
+    568.23
+   ],
+   "tris": 4435
+  },
+  {
+   "url": "ground/ground_2_-6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    198.83,
+    -4.28,
+    -530.64,
+    253.35,
+    -2.41,
+    -498.5
+   ],
+   "tris": 884
+  },
+  {
+   "url": "ground/ground_2_-5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    198.3,
+    -7.12,
+    -501.3,
+    301.36,
+    -2.17,
+    -394.36
+   ],
+   "tris": 10517
+  },
+  {
+   "url": "ground/ground_2_-4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    197.78,
+    -2.71,
+    -403.04,
+    303.48,
+    3.29,
+    -297.08
+   ],
+   "tris": 8736
+  },
+  {
+   "url": "ground/ground_2_-3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    196.59,
+    1.03,
+    -301.46,
+    302.48,
+    3.32,
+    -198.56
+   ],
+   "tris": 6542
+  },
+  {
+   "url": "ground/ground_2_-2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    198.49,
+    -2.91,
+    -202.38,
+    302.49,
+    3.17,
+    -96.95
+   ],
+   "tris": 9591
+  },
+  {
+   "url": "ground/ground_2_-1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    196.94,
+    -2.32,
+    -103.99,
+    302.76,
+    -0.87,
+    3.6
+   ],
+   "tris": 4566
+  },
+  {
+   "url": "ground/ground_2_0.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    210.61,
+    -3.38,
+    -2.47,
+    303.16,
+    -1.23,
+    104.0
+   ],
+   "tris": 5548
+  },
+  {
+   "url": "ground/ground_2_1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    232.62,
+    -4.57,
+    97.46,
+    303.16,
+    -1.38,
+    201.75
+   ],
+   "tris": 5810
+  },
+  {
+   "url": "ground/ground_2_2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    198.87,
+    -2.29,
+    197.88,
+    302.67,
+    -1.15,
+    304.93
+   ],
+   "tris": 5901
+  },
+  {
+   "url": "ground/ground_2_3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    198.64,
+    -2.55,
+    295.8,
+    305.22,
+    0.13,
+    402.25
+   ],
+   "tris": 8634
+  },
+  {
+   "url": "ground/ground_2_4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    184.95,
+    -3.67,
+    397.51,
+    305.28,
+    -0.76,
+    501.44
+   ],
+   "tris": 7091
+  },
+  {
+   "url": "ground/ground_2_5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    197.95,
+    -3.59,
+    498.9,
+    300.9,
+    -1.36,
+    574.62
+   ],
+   "tris": 1434
+  },
+  {
+   "url": "ground/ground_3_-5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    298.52,
+    -7.12,
+    -472.83,
+    397.11,
+    -2.08,
+    -394.99
+   ],
+   "tris": 2156
+  },
+  {
+   "url": "ground/ground_3_-4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    294.63,
+    -3.97,
+    -405.99,
+    401.55,
+    2.4,
+    -297.12
+   ],
+   "tris": 11867
+  },
+  {
+   "url": "ground/ground_3_-3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    297.94,
+    -2.72,
+    -301.68,
+    404.46,
+    3.32,
+    -198.2
+   ],
+   "tris": 7840
+  },
+  {
+   "url": "ground/ground_3_-2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    297.18,
+    -1.96,
+    -201.7,
+    402.23,
+    3.53,
+    -94.97
+   ],
+   "tris": 5763
+  },
+  {
+   "url": "ground/ground_3_-1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    294.6,
+    -2.37,
+    -105.84,
+    401.93,
+    2.76,
+    3.57
+   ],
+   "tris": 5791
+  },
+  {
+   "url": "ground/ground_3_0.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    294.6,
+    -4.02,
+    -2.47,
+    401.24,
+    -1.65,
+    104.83
+   ],
+   "tris": 5824
+  },
+  {
+   "url": "ground/ground_3_1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    296.79,
+    -2.49,
+    93.75,
+    402.61,
+    -1.48,
+    201.73
+   ],
+   "tris": 5908
+  },
+  {
+   "url": "ground/ground_3_2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    297.23,
+    -2.63,
+    198.51,
+    404.59,
+    -1.16,
+    301.51
+   ],
+   "tris": 8860
+  },
+  {
+   "url": "ground/ground_3_3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    297.19,
+    -3.31,
+    298.13,
+    402.58,
+    -0.07,
+    402.42
+   ],
+   "tris": 8757
+  },
+  {
+   "url": "ground/ground_3_4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    294.93,
+    -3.84,
+    396.82,
+    391.61,
+    -1.51,
+    506.5
+   ],
+   "tris": 3233
+  },
+  {
+   "url": "ground/ground_3_5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    298.62,
+    -3.41,
+    495.68,
+    360.43,
+    -1.5,
+    582.35
+   ],
+   "tris": 593
+  },
+  {
+   "url": "ground/ground_4_-5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    400.38,
+    -2.27,
+    -421.59,
+    402.16,
+    -2.26,
+    -419.04
+   ],
+   "tris": 8
+  },
+  {
+   "url": "ground/ground_4_-4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    398.44,
+    -4.46,
+    -392.16,
+    502.05,
+    -1.54,
+    -295.29
+   ],
+   "tris": 3527
+  },
+  {
+   "url": "ground/ground_4_-3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    395.85,
+    -3.93,
+    -303.26,
+    504.38,
+    -0.64,
+    -198.22
+   ],
+   "tris": 7349
+  },
+  {
+   "url": "ground/ground_4_-2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    397.72,
+    -2.34,
+    -201.66,
+    502.0,
+    2.67,
+    -98.12
+   ],
+   "tris": 8476
+  },
+  {
+   "url": "ground/ground_4_-1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    398.06,
+    -2.63,
+    -101.57,
+    501.85,
+    3.12,
+    2.35
+   ],
+   "tris": 8200
+  },
+  {
+   "url": "ground/ground_4_0.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    398.56,
+    -4.02,
+    -1.72,
+    502.63,
+    2.82,
+    103.68
+   ],
+   "tris": 6882
+  },
+  {
+   "url": "ground/ground_4_1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    397.44,
+    -2.59,
+    95.93,
+    505.11,
+    -1.45,
+    201.17
+   ],
+   "tris": 6702
+  },
+  {
+   "url": "ground/ground_4_2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    394.79,
+    -3.83,
+    198.62,
+    504.26,
+    -0.05,
+    301.55
+   ],
+   "tris": 9397
+  },
+  {
+   "url": "ground/ground_4_3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    397.85,
+    -4.26,
+    297.82,
+    472.43,
+    0.01,
+    392.65
+   ],
+   "tris": 4541
+  },
+  {
+   "url": "ground/ground_5_-4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    499.38,
+    -3.92,
+    -326.86,
+    512.16,
+    -1.9,
+    -297.75
+   ],
+   "tris": 272
+  },
+  {
+   "url": "ground/ground_5_-3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    496.51,
+    -4.02,
+    -301.57,
+    560.16,
+    -1.69,
+    -197.46
+   ],
+   "tris": 2214
+  },
+  {
+   "url": "ground/ground_5_-2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    497.9,
+    -3.95,
+    -201.66,
+    589.83,
+    -1.36,
+    -98.85
+   ],
+   "tris": 2778
+  },
+  {
+   "url": "ground/ground_5_-1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    498.11,
+    -3.4,
+    -101.56,
+    571.55,
+    2.89,
+    1.19
+   ],
+   "tris": 3564
+  },
+  {
+   "url": "ground/ground_5_0.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    496.01,
+    -4.21,
+    -1.22,
+    571.85,
+    2.89,
+    102.23
+   ],
+   "tris": 6508
+  },
+  {
+   "url": "ground/ground_5_1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    495.11,
+    -4.15,
+    97.53,
+    550.85,
+    -1.82,
+    201.48
+   ],
+   "tris": 3264
+  },
+  {
+   "url": "ground/ground_5_2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    495.52,
+    -4.12,
+    198.73,
+    535.89,
+    -2.15,
+    272.67
+   ],
+   "tris": 1035
+  },
+  {
+   "url": "ground/furniture.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": null,
+   "tris": null
+  },
+  {
+   "url": "ground/collision_ground.glb",
+   "kind": "collision",
+   "group": "ground",
+   "bounds": null,
+   "tris": 310378
+  }
+ ],
+ "labels": [
+  {
+   "name": "Kröpcke",
+   "p": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bahnhofstraße",
+   "p": [
+    40,
+    -60
+   ]
+  },
+  {
+   "name": "Georgstraße",
+   "p": [
+    -80,
+    10
+   ]
+  },
+  {
+   "name": "Opernplatz",
+   "p": [
+    110,
+    120
+   ]
+  },
+  {
+   "name": "Opernhaus",
+   "p": [
+    142,
+    114
+   ]
+  },
+  {
+   "name": "Karmarschstraße",
+   "p": [
+    -40,
+    120
+   ]
+  },
+  {
+   "name": "Rathenaustraße",
+   "p": [
+    70,
+    20
+   ]
+  },
+  {
+   "name": "Café Kröpcke",
+   "p": [
+    29,
+    20
+   ]
+  },
+  {
+   "name": "Kröpcke-Center",
+   "p": [
+    -20,
+    70
+   ]
+  }
+ ],
+ "clock": {
+  "url": "landmarks/kroepcke_uhr.glb",
+  "hands": "nodes named Zeiger_hour_<k> / Zeiger_minute_<k>; extras.face_normal_game = axis; rotate by -angle about it (clockwise seen from front); rest pose = 12:00"
+ },
+ "attribution": "Gebäude/Gelände: © GeoBasis-DE/LGLN 2026, CC BY 4.0 (verändert); 3D-Stadtmodell © Landeshauptstadt Hannover, CC BY 4.0; Kartendaten © OpenStreetMap-Mitwirkende (ODbL)",
+ "scans": [],
+ "heightfield": {
+  "bin": "ground/heightfield.bin",
+  "json": "ground/heightfield.json"
+ }
+}

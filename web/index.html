@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hannover – Spaziergang</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Ccircle cx=%228%22 cy=%228%22 r=%226%22 fill=%22%239fe0ff%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="gl"></canvas>
+
+<div id="hud" class="off">
+  <div id="compass" aria-hidden="true"><div id="compass-strip"></div><i class="needle"></i></div>
+  <div id="place"><small>ORT</small><span></span></div>
+
+  <div id="meters">
+    <div id="balance-wrap">
+      <kbd id="kQ">Q</kbd>
+      <svg id="balance" viewBox="0 0 240 92" aria-label="Gleichgewicht">
+        <path id="bal-track" d="" />
+        <path id="bal-warnL" d="" />
+        <path id="bal-warnR" d="" />
+        <line id="bal-center" x1="120" y1="64" x2="120" y2="80" />
+        <g id="bal-marker"><circle r="6.5" /><circle class="core" r="2.6" /></g>
+      </svg>
+      <kbd id="kE">E</kbd>
+    </div>
+    <div id="stamina"><i></i><span>AUSDAUER</span></div>
+    <div id="admin">ADMIN-MODUS</div>
+    <div id="mode"></div>
+  </div>
+
+  <div id="hint">
+    <h3>STEUERUNG</h3>
+    <ul>
+      <li><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> gehen</li>
+      <li><kbd>Umschalt</kbd> laufen</li>
+      <li><kbd>C</kbd> vorsichtig gehen (an/aus)</li>
+      <li><kbd>Q</kbd> / <kbd>E</kbd> oder linke / rechte Maustaste: Gleichgewicht links / rechts halten</li>
+      <li><kbd>Q</kbd>+<kbd>E</kbd> stabilisieren</li>
+      <li><kbd>Leertaste</kbd> kleiner Sprung</li>
+      <li><kbd>F</kbd> Gelände scannen</li>
+      <li><kbd>M</kbd> Admin-Modus an/aus: keine Ausdauer, kein Stolpern, laufen mit bis zu 50 km/h</li>
+      <li>Maus: Kamera drehen (ohne Mausfang: Maus an den Bildrand) · <kbd>←</kbd> / <kbd>→</kbd> Kamera drehen · <kbd>Bild↑</kbd> / <kbd>Bild↓</kbd> neigen · Mausrad: Zoom · <kbd>V</kbd> Schulter wechseln</li>
+      <li><kbd>H</kbd> Hilfe · <kbd>Esc</kbd> Maus freigeben</li>
+    </ul>
+  </div>
+
+  <div id="toast"></div>
+  <div id="scanflash"></div>
+  <div id="fps"></div>
+  <div id="stream"></div>
+  <div id="attrib"></div>
+</div>
+
+<div id="start">
+  <div class="panel">
+    <div class="kicker">SENSING SPACE</div>
+    <h1>HANNOVER</h1>
+    <div class="sub">Ein Spaziergang ab dem Kröpcke</div>
+    <div id="status"><i></i><span>Lade …</span></div>
+    <button id="go" disabled>KLICKEN ZUM STARTEN</button>
+    <div class="keys">
+      <span><kbd>WASD</kbd> gehen</span><span><kbd>Umschalt</kbd> laufen</span><span><kbd>C</kbd> vorsichtig</span>
+      <span><kbd>Q</kbd>/<kbd>E</kbd> Gleichgewicht</span><span><kbd>Maus</kbd>/<kbd>←</kbd><kbd>→</kbd> Kamera drehen</span><span><kbd>F</kbd> Scan</span><span><kbd>M</kbd> Admin-Modus</span><span><kbd>Esc</kbd> Pause</span>
+    </div>
+    <div id="source"></div>
+  </div>
+</div>
+
+<div id="pause" class="off">
+  <div class="panel">
+    <h2>PAUSE</h2>
+    <div class="sub">Klicken zum Fortsetzen</div>
+  </div>
+</div>
+
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/",
+  "three-mesh-bvh": "https://cdn.jsdelivr.net/npm/three-mesh-bvh@0.9.1/build/index.module.js",
+  "@sparkjsdev/spark": "./vendor/spark/spark.module.js"
+} }
+</script>
+<script type="module" src="main.js"></script>
+</body>
+</html>

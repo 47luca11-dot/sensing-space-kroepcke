@@ -1,0 +1,55 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Fassaden-Testansicht</title>
+<style>html,body{margin:0;height:100%;background:#cfd8e2;overflow:hidden}#i{position:fixed;left:6px;top:4px;font:12px sans-serif;color:#222;background:#fff8;padding:2px 5px}</style>
+<script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+ "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/" } }</script>
+</head><body><div id="i">lade…</div>
+<script type="module">
+// Entwickler-Ansicht der Fassaden-Pipeline (nicht Teil des Spiels): laedt Kacheln wie das Spiel (FrontSide, Meshopt,
+// Instanzen), Kamera ueber ?cam=x,y,z&tgt=x,y,z&fov=..&tiles=dir/a.glb,dir/a_win.glb
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+const q = new URLSearchParams(location.search);
+const v3 = (s, d) => (s ? s.split(',').map(Number) : d);
+const W = +(q.get('w') || 1280), H = +(q.get('h') || 720);
+const r = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+r.setSize(W, H); r.setPixelRatio(1); r.outputColorSpace = THREE.SRGBColorSpace; r.toneMapping = THREE.ACESFilmicToneMapping;
+r.shadowMap.enabled = true; document.body.appendChild(r.domElement);
+const sc = new THREE.Scene(); sc.background = new THREE.Color(0xc9d6e3);
+sc.add(new THREE.HemisphereLight(0xdfe6ee, 0x5d574f, 1.25));
+const sun = new THREE.DirectionalLight(0xfff3e6, 1.9); sun.position.set(-60, 90, 50); sc.add(sun);
+const pm = new THREE.PMREMGenerator(r); const env = pm.fromScene(new RoomEnvironment(), 0.04).texture;
+const cam = new THREE.PerspectiveCamera(+(q.get('fov') || 62), W / H, 0.1, 3000);
+const c = v3(q.get('cam'), [0, 2, 10]), t = v3(q.get('tgt'), [0, 2, 0]);
+cam.position.set(...c); cam.lookAt(...t);
+sun.position.set(c[0] - 60, c[1] + 90, c[2] + 50); sun.target.position.set(...t); sc.add(sun.target);
+const gy = +(q.get('gy') ?? (c[1] - 1.75));
+const g = new THREE.Mesh(new THREE.PlaneGeometry(4000, 4000), new THREE.MeshStandardMaterial({ color: 0x77736c, roughness: 0.95 }));
+g.rotation.x = -Math.PI / 2; g.position.y = gy - 0.03; sc.add(g);
+const L = new GLTFLoader(); L.setMeshoptDecoder(MeshoptDecoder);
+const cache = new Map();
+function fix(m) {
+  if (cache.has(m)) return cache.get(m);
+  let o = m;
+  if (/glass/i.test(m.name) && (m.transparent || m.opacity < 1)) {
+    o = new THREE.MeshStandardMaterial({ name: m.name, color: m.color.clone().multiplyScalar(0.6), transparent: true, opacity: 0.35,
+      metalness: 0.1, roughness: 0.05, envMap: env, envMapIntensity: 0.9, depthWrite: false });
+  }
+  cache.set(m, o); return o;
+}
+const files = (q.get('tiles') || '').split(',').filter(Boolean);
+let n = 0;
+for (const f of files) {
+  try {
+    const gl = await L.loadAsync(f);
+    gl.scene.traverse((o) => { if (o.isMesh) o.material = Array.isArray(o.material) ? o.material.map(fix) : fix(o.material); });
+    sc.add(gl.scene); n++;
+  } catch (e) { console.warn(f, e); }
+  document.getElementById('i').textContent = `${n}/${files.length}`;
+}
+r.render(sc, cam);
+document.getElementById('i').textContent = q.get('label') || '';
+window.ready = true;
+</script></body></html>

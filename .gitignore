@@ -1,0 +1,19 @@
+# Nur Spiel + Quellcode versionieren; Rohdaten, Renders, .blend und Caches bleiben lokal.
+/data/
+/pipeline/**
+/blender/**
+!/pipeline/**/
+!/blender/**/
+!/pipeline/**/*.py
+!/pipeline/**/*.sh
+!/pipeline/**/*.md
+!/blender/**/*.py
+!/blender/**/*.sh
+!/blender/**/*.md
+!/pipeline/detail_signage/sign_overrides.json
+**/cache/
+**/qa/
+__pycache__/
+*.pyc
+*.blend
+*.blend1

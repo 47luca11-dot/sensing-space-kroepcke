@@ -1,0 +1,571 @@
+{
+ "version": 1,
+ "frame": "game (x=dE, y=Z-56.16, z=-dN; Y up, m; origin Kroepcke clock)",
+ "tile_size": 100.0,
+ "compression": "EXT_meshopt_compression + KHR_mesh_quantization",
+ "notes": [
+  "Each tile: <name>.glb (shell + facade details, node *_shell_nocol / *_detail_nocol) and <name>_win.glb (instanced window/door/shopfront assemblies, EXT_mesh_gpu_instancing with _COLOR_0 instance colours).",
+  "Load *_win.glb only for tiles within ~150-200 m of the camera; the shell already closes every opening (reveal + dark back plane), so far tiles look right without it.",
+  "No normals are stored: three.js uses flatShading automatically.",
+  "Materials are shared by name (bldg_*); dedupe them across tiles after loading to share textures (textures/*.jpg are referenced externally).",
+  "Collision: collision_buildings.glb (LoD2 solids; canopies as slab + posts).",
+  "Quality gates (check_rays.py): every exposed facade is hit by rays from 3 m at every storey/axis; every window glass instance sits in a shell opening with a back plane; shell bounding spheres valid."
+ ],
+ "materials": {
+  "plaster": {
+   "tex": "plaster",
+   "period": [
+    3.0,
+    3.0
+   ],
+   "rough": 0.92,
+   "metal": 0.0
+  },
+  "stone": {
+   "tex": "stone",
+   "period": [
+    2.4,
+    2.4
+   ],
+   "rough": 0.85,
+   "metal": 0.0
+  },
+  "brick": {
+   "tex": "brick",
+   "period": [
+    1.56,
+    1.54
+   ],
+   "rough": 0.9,
+   "metal": 0.0
+  },
+  "panel": {
+   "tex": "panel",
+   "period": [
+    2.4,
+    2.4
+   ],
+   "rough": 0.7,
+   "metal": 0.0
+  },
+  "trim": {
+   "rough": 0.5,
+   "metal": 0.0
+  },
+  "metal": {
+   "rough": 0.38,
+   "metal": 0.7
+  },
+  "spandrel": {
+   "rough": 0.12,
+   "metal": 0.35
+  },
+  "interior": {
+   "rough": 0.9,
+   "metal": 0.0
+  },
+  "glass": {
+   "rough": 0.04,
+   "metal": 0.0,
+   "alpha": 0.58,
+   "base": [
+    0.05,
+    0.065,
+    0.075
+   ]
+  },
+  "roof_tile": {
+   "tex": "tiles",
+   "period": [
+    2.4,
+    2.8
+   ],
+   "rough": 0.8,
+   "metal": 0.0
+  },
+  "roof_slate": {
+   "tex": "slate",
+   "period": [
+    2.5,
+    2.0
+   ],
+   "rough": 0.6,
+   "metal": 0.0
+  },
+  "roof_metal": {
+   "tex": "seam",
+   "period": [
+    2.0,
+    2.0
+   ],
+   "rough": 0.42,
+   "metal": 0.55
+  },
+  "roof_gravel": {
+   "tex": "gravel",
+   "period": [
+    2.0,
+    2.0
+   ],
+   "rough": 1.0,
+   "metal": 0.0
+  },
+  "roof_membrane": {
+   "tex": "membrane",
+   "period": [
+    4.0,
+    4.0
+   ],
+   "rough": 0.85,
+   "metal": 0.0
+  },
+  "roof_green": {
+   "tex": "green",
+   "period": [
+    3.0,
+    3.0
+   ],
+   "rough": 1.0,
+   "metal": 0.0
+  },
+  "glow": {
+   "rough": 0.6,
+   "metal": 0.0,
+   "base": [
+    0.8,
+    0.8,
+    0.78
+   ],
+   "emissive": [
+    0.95,
+    0.93,
+    0.86
+   ]
+  },
+  "glow_warm": {
+   "rough": 0.6,
+   "metal": 0.0,
+   "base": [
+    0.8,
+    0.7,
+    0.55
+   ],
+   "emissive": [
+    1.0,
+    0.78,
+    0.48
+   ]
+  },
+  "glow_33CC66": {
+   "rough": 0.45,
+   "metal": 0.0,
+   "base": [
+    0.014897144956898275,
+    0.27172230248490203,
+    0.05979074469921809
+   ],
+   "emissive": [
+    0.028139051585252296,
+    0.5132532380270372,
+    0.11293807332074528
+   ]
+  },
+  "glow_CC1133": {
+   "rough": 0.45,
+   "metal": 0.0,
+   "base": [
+    0.27172230248490203,
+    0.0025224262308912253,
+    0.014897144956898275
+   ],
+   "emissive": [
+    0.42267913719873645,
+    0.003923774136941905,
+    0.023173336599619537
+   ]
+  },
+  "glow_FFFFFF": {
+   "rough": 0.45,
+   "metal": 0.0,
+   "base": [
+    0.45,
+    0.45,
+    0.45
+   ],
+   "emissive": [
+    0.6,
+    0.6,
+    0.6
+   ]
+  },
+  "glow_222222": {
+   "rough": 0.45,
+   "metal": 0.0,
+   "base": [
+    0.007198332014479334,
+    0.007198332014479334,
+    0.007198332014479334
+   ],
+   "emissive": [
+    0.013596849360683186,
+    0.013596849360683186,
+    0.013596849360683186
+   ]
+  },
+  "glow_EEEEFF": {
+   "rough": 0.45,
+   "metal": 0.0,
+   "base": [
+    0.38474667365590526,
+    0.38474667365590526,
+    0.45
+   ],
+   "emissive": [
+    0.5984948256869637,
+    0.5984948256869637,
+    0.7
+   ]
+  }
+ },
+ "tiles": [
+  {
+   "name": "bldg_-4_-2",
+   "tile": [
+    -4,
+    -2
+   ],
+   "file": "bldg_-4_-2.glb",
+   "windows": "bldg_-4_-2_win.glb",
+   "bounds": {
+    "min": [
+     -395.2,
+     -1.33,
+     -189.63
+    ],
+    "max": [
+     -380.89,
+     7.23,
+     -173.46
+    ]
+   },
+   "triangles": 1827,
+   "triangles_shell": 394,
+   "triangles_detail": 1433,
+   "instances": 87,
+   "instanced_triangles": 11698,
+   "prototype_triangles": 6104,
+   "bytes": 24300,
+   "windows_bytes": 123688,
+   "raw_bytes": 204616,
+   "buildings": [
+    "ID_2242b707-1d63-35b0-a763-6d58d60f4b3e"
+   ]
+  },
+  {
+   "name": "bldg_-4_2",
+   "tile": [
+    -4,
+    2
+   ],
+   "file": "bldg_-4_2.glb",
+   "windows": "bldg_-4_2_win.glb",
+   "bounds": {
+    "min": [
+     -387.42,
+     -0.92,
+     287.81
+    ],
+    "max": [
+     -377.56,
+     23.0,
+     307.25
+    ]
+   },
+   "triangles": 6450,
+   "triangles_shell": 1166,
+   "triangles_detail": 5284,
+   "instances": 115,
+   "instanced_triangles": 22674,
+   "prototype_triangles": 2906,
+   "bytes": 58152,
+   "windows_bytes": 70432,
+   "raw_bytes": 219560,
+   "buildings": [
+    "ID_c1473837-2050-3f41-a39a-be97ca61e551"
+   ]
+  },
+  {
+   "name": "bldg_-4_3",
+   "tile": [
+    -4,
+    3
+   ],
+   "file": "bldg_-4_3.glb",
+   "windows": "bldg_-4_3_win.glb",
+   "bounds": {
+    "min": [
+     -392.09,
+     -0.92,
+     305.26
+    ],
+    "max": [
+     -347.49,
+     18.58,
+     328.83
+    ]
+   },
+   "triangles": 8393,
+   "triangles_shell": 1260,
+   "triangles_detail": 7133,
+   "instances": 117,
+   "instanced_triangles": 24366,
+   "prototype_triangles": 5266,
+   "bytes": 73856,
+   "windows_bytes": 103612,
+   "raw_bytes": 314512,
+   "buildings": [
+    "ID_ce368573-8155-39e4-9b5b-b44caea88b22",
+    "ID_5a28005b-0edf-3c30-b758-d42752b753db"
+   ]
+  },
+  {
+   "name": "bldg_-5_-4",
+   "tile": [
+    -5,
+    -4
+   ],
+   "file": "bldg_-5_-4.glb",
+   "windows": null,
+   "bounds": {
+    "min": [
+     -469.01,
+     -1.66,
+     -390.61
+    ],
+    "max": [
+     -454.25,
+     3.35,
+     -380.32
+    ]
+   },
+   "triangles": 1106,
+   "triangles_shell": 358,
+   "triangles_detail": 748,
+   "instances": 0,
+   "instanced_triangles": 0,
+   "prototype_triangles": 0,
+   "bytes": 24264,
+   "windows_bytes": 0,
+   "raw_bytes": 41752,
+   "buildings": [
+    "ID_ef6f828b-2ad8-316a-a4a1-f756d10168b1"
+   ]
+  },
+  {
+   "name": "bldg_-5_1",
+   "tile": [
+    -5,
+    1
+   ],
+   "file": "bldg_-5_1.glb",
+   "windows": "bldg_-5_1_win.glb",
+   "bounds": {
+    "min": [
+     -449.38,
+     -0.71,
+     102.8
+    ],
+    "max": [
+     -401.37,
+     71.39,
+     129.07
+    ]
+   },
+   "triangles": 6423,
+   "triangles_shell": 2812,
+   "triangles_detail": 3611,
+   "instances": 14,
+   "instanced_triangles": 9940,
+   "prototype_triangles": 5362,
+   "bytes": 120308,
+   "windows_bytes": 75284,
+   "raw_bytes": 356828,
+   "buildings": [
+    "ID_9850fd33-58c8-3cc6-bffc-a396527794b2"
+   ]
+  },
+  {
+   "name": "bldg_-5_2",
+   "tile": [
+    -5,
+    2
+   ],
+   "file": "bldg_-5_2.glb",
+   "windows": "bldg_-5_2_win.glb",
+   "bounds": {
+    "min": [
+     -429.07,
+     -1.44,
+     270.71
+    ],
+    "max": [
+     -410.02,
+     19.23,
+     299.16
+    ]
+   },
+   "triangles": 6240,
+   "triangles_shell": 1189,
+   "triangles_detail": 5051,
+   "instances": 145,
+   "instanced_triangles": 19388,
+   "prototype_triangles": 5394,
+   "bytes": 67532,
+   "windows_bytes": 118840,
+   "raw_bytes": 286504,
+   "buildings": [
+    "ID_9bc17b19-56c4-3270-9fda-a0f254195867",
+    "ID_4c631123-cbc3-3f6d-9fea-6a77059e9a7d"
+   ]
+  },
+  {
+   "name": "bldg_-5_3",
+   "tile": [
+    -5,
+    3
+   ],
+   "file": "bldg_-5_3.glb",
+   "windows": "bldg_-5_3_win.glb",
+   "bounds": {
+    "min": [
+     -419.42,
+     -1.59,
+     297.72
+    ],
+    "max": [
+     -394.55,
+     20.96,
+     333.39
+    ]
+   },
+   "triangles": 15658,
+   "triangles_shell": 2607,
+   "triangles_detail": 13051,
+   "instances": 228,
+   "instanced_triangles": 45396,
+   "prototype_triangles": 6882,
+   "bytes": 121088,
+   "windows_bytes": 158044,
+   "raw_bytes": 506976,
+   "buildings": [
+    "ID_d8ed0750-eb0f-34d8-a2e2-db5633214512",
+    "ID_60cbc5d9-c564-3bf4-b251-2e89d4d44626",
+    "ID_6d256eb6-7861-3dbc-9b9f-0071be225ad6"
+   ]
+  },
+  {
+   "name": "bldg_-7_5",
+   "tile": [
+    -7,
+    5
+   ],
+   "file": "bldg_-7_5.glb",
+   "windows": "bldg_-7_5_win.glb",
+   "bounds": {
+    "min": [
+     -647.45,
+     -4.79,
+     559.61
+    ],
+    "max": [
+     -617.18,
+     24.98,
+     585.57
+    ]
+   },
+   "triangles": 4897,
+   "triangles_shell": 1424,
+   "triangles_detail": 3473,
+   "instances": 5,
+   "instanced_triangles": 4795,
+   "prototype_triangles": 4795,
+   "bytes": 96340,
+   "windows_bytes": 54836,
+   "raw_bytes": 281688,
+   "buildings": [
+    "ID_b7ac087a-f909-3fb6-b033-9ff58b795145"
+   ]
+  },
+  {
+   "name": "bldg_0_-1",
+   "tile": [
+    0,
+    -1
+   ],
+   "file": "bldg_0_-1.glb",
+   "windows": "bldg_0_-1_win.glb",
+   "bounds": {
+    "min": [
+     3.42,
+     -1.28,
+     -83.89
+    ],
+    "max": [
+     84.24,
+     23.67,
+     -8.91
+    ]
+   },
+   "triangles": 18337,
+   "triangles_shell": 8400,
+   "triangles_detail": 9937,
+   "instances": 1527,
+   "instanced_triangles": 166668,
+   "prototype_triangles": 14798,
+   "bytes": 231164,
+   "windows_bytes": 328580,
+   "raw_bytes": 971928,
+   "buildings": [
+    "ID_03ad88be-3ecf-3892-ad83-5b72993ca474",
+    "ID_23851694-ebf7-3904-8e1e-22129cbad129",
+    "ID_a44b2f58-d97b-37d3-9df6-09d85d7b03cd",
+    "ID_3cc4d720-7c30-3ce2-8c25-8cde108fe292",
+    "ID_0cd6bac8-ebc5-3916-af64-cc6a687fbe51"
+   ]
+  }
+ ],
+ "collision": {
+  "file": "collision_buildings.glb",
+  "triangles": 1983,
+  "bytes": 41560
+ },
+ "totals": {
+  "triangles": 69331,
+  "triangles_shell": 19610,
+  "triangles_detail": 49721,
+  "instances": 2238,
+  "instanced_triangles": 304925,
+  "prototype_triangles": 51507,
+  "bytes": 817004,
+  "windows_bytes": 1033316,
+  "raw_bytes": 3184364,
+  "collision_triangles": 1983,
+  "collision_bytes": 41560
+ },
+ "styles": {
+  "gothic": 3,
+  "nachkrieg": 5,
+  "fachwerk": 7,
+  "modern": 2
+ },
+ "buildings": 17,
+ "replaced_by_landmarks": {
+  "ID_6388af31-4867-3e8b-b3dd-1f30ff2b3d7c": "anzeiger",
+  "ID_5ea871fc-25a3-3730-b301-1be715d487a0": "anzeiger",
+  "ID_0a25725c-24e1-3239-8d49-0b0bb20eb212": "kroepcke_center",
+  "ID_eac4b0e4-bb4e-3389-a0e4-73efb1359670": "marktkirche",
+  "ID_f11763d1-f306-3636-91b8-8805e57702b9": "cafe_kroepcke",
+  "ID_dedae90c-48f4-3b9e-9176-f04541ffbcb2": "altes_rathaus"
+ },
+ "shops_placed": 24
+}
