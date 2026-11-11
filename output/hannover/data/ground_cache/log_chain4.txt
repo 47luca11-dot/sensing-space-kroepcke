@@ -1,0 +1,40 @@
+=== ubahn 15:56:31
+[ubahn   33.0s] detail meshes 42
+[ubahn   33.1s] kroepcke_A patch tris 61 rim edges 5 removed {'street': 918}
+[ubahn   33.3s] built kroepcke_A Kröpcke tris 6517
+[ubahn   33.4s] kroepcke_B patch tris 20 rim edges 2 removed {'street': 2}
+[ubahn   33.6s] built kroepcke_B Kröpcke tris 4712
+[ubahn   33.7s] built kroepcke_C Kröpcke tris 6374
+[ubahn   33.8s] kroepcke_D patch tris 109 rim edges 4 removed {'street': 976}
+[ubahn   34.1s] built kroepcke_D Kröpcke tris 7345
+[ubahn   45.8s] kroepcke_E patch tris 138291 rim edges 4 removed {'street': 1062, 'ground': 44}
+[ubahn   46.1s] built kroepcke_E Kröpcke tris 142647
+[ubahn   46.3s] kroepcke_F patch tris 387 rim edges 4 removed {'street': 1057}
+[ubahn   46.5s] built kroepcke_F Kröpcke tris 5283
+[ubahn   46.6s] kroepcke_G patch tris 118 rim edges 4 removed {'street': 33}
+[ubahn   46.7s] built kroepcke_G Kröpcke tris 3246
+[ubahn   46.9s] built kroepcke_H Kröpcke tris 4636
+[ubahn   46.9s] kroepcke_I patch tris 15 rim edges 2 removed {'street': 2}
+[ubahn   47.0s] built kroepcke_I Kröpcke tris 4233
+[ubahn   47.1s] built ub_299064939 Waterlooplatz tris 3228
+[ubahn   47.2s] built ub_324517470 Aegidientorplatz tris 3228
+[ubahn   47.3s] built ub_1274066800 Steintor tris 3228
+[ubahn   47.5s] built ub_1274066802 Steintor tris 3236
+[ubahn   47.6s] built ub_1396666085 Steintor tris 3220
+[ubahn   47.7s] built ub_1396666113 Steintor tris 3244
+[ubahn   47.8s] built ub_2747495414 Hauptbahnhof tris 3216
+[ubahn   47.9s] built ub_4048984722 Hauptbahnhof tris 2676
+[ubahn   48.0s] built ub_4048984735 Hauptbahnhof tris 2448
+[ubahn   48.1s] built ub_4373301942 Markthalle tris 3244
+[ubahn   48.2s] built ub_4373301943 Markthalle tris 3220
+[ubahn   48.4s] done: entrances 20 tris 219405 collision 152825 detail materials ['d_ground_slabs_f833e41b', 'd_ground_slabs_3b6841b3', 'd_ground_asphalt_5cceef0e', 'd_ground_setts_84d7cf54', 'd_ground_slabs_b23c554f', 'd_ground_colour_3c3d3f', 'd_ground_asphalt_61feabfb']
+=== export 15:57:34
+[export    0.6s] module ubahn parts 5886 tris 219405
+[export    0.7s] module promenade parts 4205 tris 50072
+[export    0.7s] module transit parts 769 tris 39341
+[export    0.7s] module altstadt parts 884 tris 26498
+[export   71.7s] terrain tiles 266
+[export   74.5s] tiles written 280 triangles 2213010 MB 92.4
+[export   92.9s] collision triangles 758497 MB 13.9
+[export  102.3s] heightfield (1801, 1801) fallback cells 942507
+[export  106.1s] published 284 files; raw copies in C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/data/ground_raw/

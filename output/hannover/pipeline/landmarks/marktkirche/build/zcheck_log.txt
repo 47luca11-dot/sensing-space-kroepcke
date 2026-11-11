@@ -1,0 +1,21 @@
+rays 300000 thr 0.012 z-fight candidates 16
+  10 ('MK_roof_Kupfer', 'MK_fine_Kupfer')
+  3 ('MK_fine_Sandstein', 'MK_det_Sandstein')
+  2 ('MK_wall_Backstein', 'MK_roof_Kupfer')
+  1 ('MK_fine_Sandstein_dunkel', 'MK_det_Sandstein_dunkel')
+  at [-254.8, 17.7, 284.6]
+  at [-260.0, 75.0, 300.1]
+  at [-264.6, 77.4, 299.2]
+  at [-264.6, 78.5, 299.7]
+  at [-262.4, 76.5, 297.0]
+  at [-264.5, 75.1, 300.1]
+  at [-241.8, 17.7, 309.2]
+  at [-262.9, 76.8, 297.1]
+  at [-260.2, 77.4, 298.8]
+  at [-260.2, 75.5, 298.8]
+  at [-227.5, 17.7, 306.6]
+  at [-261.1, 74.9, 296.8]
+  at [-252.6, 21.5, 311.9]
+  at [-252.9, 21.4, 311.9]
+  at [-262.0, 76.0, 296.9]
+  at [-272.6, 7.9, 297.5]

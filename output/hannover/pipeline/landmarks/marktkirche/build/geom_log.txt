@@ -1,0 +1,46 @@
+walls+windows 3.9s tris 136852
+plinth/cornice ok tris 144424
+roof tris 152921
+tower shaft tris 215040
+gables tris 219424
+cross roof tris 220728
+spire tris 228504
+west portal tris 263118
+epitaphs/reliefs tris 355170
+bronze AO verts 8135 mean 0.70 min 0.22
+TOTAL TRIS 356450 flipped solids 1459 time 16.8s
+  Backstein          det      14896
+  Backstein          roof        26
+  Backstein          wall      8292
+  Bleiglas           det        550
+  Bronze             det      16166
+  Dachziegel         roof      8229
+  Dunkel             det       2887
+  Dunkel             fine        24
+  Dunkel             roof       192
+  Eisen              fine      5544
+  Fliesen            wall       134
+  Glasurstein        det      15472
+  Glasurstein        wall      4690
+  Gold               fine       764
+  Granit             wall       408
+  Kupfer             det        184
+  Kupfer             fine      4232
+  Kupfer             roof      1394
+  Kupfer_Patina      det       2124
+  Lamellen           fine      5556
+  Sandstein          det     101970
+  Sandstein          fine     35056
+  Sandstein          wall      1144
+  Sandstein_Quader   wall       932
+  Sandstein_dunkel   det      29914
+  Sandstein_dunkel   fine     27604
+  Sandstein_dunkel   wall     48715
+  Schaukasten        det         14
+  Sockelstein        wall       120
+  Stahl              det         24
+  Stahl              fine     17632
+  Stahl              wall        58
+  Tuerbronze         fine      1336
+  Tuerbronze         wall        29
+  Zifferblatt        det        138

@@ -1,0 +1,5007 @@
+{
+ "stats": {
+  "kinds": {
+   "restaurant": 41,
+   "cafe": 24,
+   "shallow": 15,
+   "fashion": 77,
+   "doorway": 23,
+   "shoes": 58,
+   "office": 87,
+   "cosmetics": 48,
+   "houseware": 91,
+   "estate": 7,
+   "hair": 5,
+   "travel": 7,
+   "kiosk": 6,
+   "jewellery": 20,
+   "supermarket": 51,
+   "None": 4,
+   "fast_food": 9,
+   "bank": 5,
+   "bakery": 14,
+   "hallway": 11,
+   "pharmacy": 11,
+   "optician": 12,
+   "furniture": 7,
+   "vacant": 16,
+   "hotel": 6,
+   "film": 5,
+   "sports": 5,
+   "department_store": 3,
+   "phone": 8,
+   "pocket": 10
+  },
+  "signs": {
+   "fascia_panel": 61,
+   "channel_letters": 25,
+   "light_box": 5,
+   "logo_only": 1,
+   "window_lettering": 2
+  },
+  "blades": 18,
+  "numbers": 27,
+  "bells": 11,
+  "door_details": 32,
+  "sign_fail": [],
+  "partitions": 3,
+  "shared_fronts": {
+   "d0:580": [
+    "Stichnoth",
+    "Miss Lashes",
+    "Lia's",
+    "Wömpner"
+   ]
+  },
+  "wall_only_pos": {
+   "Wirtshaus Hannover": [
+    111.19,
+    2.74,
+    276.94,
+    -0.478,
+    0.0,
+    -0.878
+   ],
+   "Vodafone": [
+    -43.68,
+    2.44,
+    218.71,
+    -0.724,
+    0.0,
+    0.689
+   ],
+   "HUSSEL Confiserie": [
+    -84.08,
+    3.16,
+    9.22,
+    -0.94,
+    0.0,
+    -0.341
+   ]
+  },
+  "wall_only": [
+   "Wirtshaus Hannover",
+   "Vodafone",
+   "HUSSEL Confiserie"
+  ],
+  "triangles": 586984,
+  "palette_colours": 346,
+  "dropped_items": 10,
+  "items": 28827
+ },
+ "signs": [
+  {
+   "shop": "Ernst-August-Apotheke",
+   "type": "fascia_panel+projecting_blade",
+   "placed": 2,
+   "openings": 3,
+   "kinds": [
+    "fascia_panel",
+    "blade"
+   ]
+  },
+  {
+   "shop": "Emma & Paul",
+   "type": "channel_letters",
+   "placed": 1,
+   "openings": 3,
+   "kinds": [
+    "channel_letters"
+   ]
+  },
+  {
+   "shop": "Earth & Sky",
+   "type": "channel_letters",
+   "placed": 1,
+   "openings": 1,
+   "kinds": [
+    "channel_letters"
+   ]
+  },
+  {
+   "shop": "Stadtmauer",
+   "type": "fascia_panel",
+   "placed": 2,
+   "openings": 2,
+   "kinds": [
+    "fascia_panel",
+    "blade"
+   ]
+  },
+  {
+   "shop": "Bestia Vera Pizza Napoletana",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 2,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Seydlitz",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 4,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Bär",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 3,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "tondemus",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 5,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Das Brötchen",
+   "type": "fascia_panel",
+   "placed": 3,
+   "openings": 5,
+   "kinds": [
+    "fascia_panel",
+    "blade",
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Gondel",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 8,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Schuh-stock",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 1,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Stichnoth",
+   "type": "channel_letters",
+   "placed": 1,
+   "openings": 1,
+   "kinds": [
+    "channel_letters"
+   ]
+  },
+  {
+   "shop": "Leibniz-Apotheke",
+   "type": "fascia_panel+projecting_blade",
+   "placed": 2,
+   "openings": 5,
+   "kinds": [
+    "fascia_panel",
+    "blade"
+   ]
+  },
+  {
+   "shop": "Continentale Czwikla & Team",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 1,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "John + Bamberg",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 1,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Paper & Tea",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 5,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Mäntelhaus Kaiser",
+   "type": "channel_letters",
+   "placed": 1,
+   "openings": 6,
+   "kinds": [
+    "channel_letters"
+   ]
+  },
+  {
+   "shop": "PETER PANE",
+   "type": "channel_letters",
+   "placed": 1,
+   "openings": 5,
+   "kinds": [
+    "channel_letters"
+   ]
+  },
+  {
+   "shop": "Dille & Kamille",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 4,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "60 seconds to napoli",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 1,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Kreipe City",
+   "type": "fascia_panel",
+   "placed": 2,
+   "openings": 2,
+   "kinds": [
+    "fascia_panel",
+    "blade"
+   ]
+  },
+  {
+   "shop": "SIXT",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 2,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Jack the Ripper's",
+   "type": "fascia_panel",
+   "placed": 2,
+   "openings": 1,
+   "kinds": [
+    "fascia_panel",
+    "blade"
+   ]
+  },
+  {
+   "shop": "JD Sports",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 5,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Holländische Kakao-Stube",
+   "type": "fascia_panel",
+   "placed": 2,
+   "openings": 3,
+   "kinds": [
+    "fascia_panel",
+    "blade"
+   ]
+  },
+  {
+   "shop": "Frittenwerk",
+   "type": "fascia_panel",
+   "placed": 2,
+   "openings": 3,
+   "kinds": [
+    "fascia_panel",
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Miles",
+   "type": "fascia_panel",
+   "placed": 2,
+   "openings": 1,
+   "kinds": [
+    "fascia_panel",
+    "blade"
+   ]
+  },
+  {
+   "shop": "Kastens Hotel Luisenhof",
+   "type": "channel_letters",
+   "placed": 2,
+   "openings": 6,
+   "kinds": [
+    "channel_letters",
+    "blade"
+   ]
+  },
+  {
+   "shop": "Liebe",
+   "type": "channel_letters",
+   "placed": 1,
+   "openings": 6,
+   "kinds": [
+    "channel_letters"
+   ]
+  },
+  {
+   "shop": "BLOCK HOUSE",
+   "type": "channel_letters",
+   "placed": 2,
+   "openings": 4,
+   "kinds": [
+    "channel_letters",
+    "blade"
+   ]
+  },
+  {
+   "shop": "Sushi Berlin",
+   "type": "fascia_panel",
+   "placed": 3,
+   "openings": 4,
+   "kinds": [
+    "fascia_panel",
+    "blade",
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "enercity expo Café",
+   "type": "fascia_panel",
+   "placed": 2,
+   "openings": 8,
+   "kinds": [
+    "fascia_panel",
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Kasten's Optik",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 7,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Blue House",
+   "type": "light_box",
+   "placed": 1,
+   "openings": 3,
+   "kinds": [
+    "light_box"
+   ]
+  },
+  {
+   "shop": "Café-Bar Bernini",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 3,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Heide-Bäckerei Meyer",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 1,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "BBBank",
+   "type": "channel_letters",
+   "placed": 2,
+   "openings": 6,
+   "kinds": [
+    "channel_letters",
+    "channel_letters"
+   ]
+  },
+  {
+   "shop": "Frittzchen",
+   "type": "light_box",
+   "placed": 2,
+   "openings": 1,
+   "kinds": [
+    "light_box",
+    "blade"
+   ]
+  },
+  {
+   "shop": "Weitz",
+   "type": "channel_letters+projecting_blade",
+   "placed": 3,
+   "openings": 4,
+   "kinds": [
+    "channel_letters",
+    "blade",
+    "channel_letters"
+   ]
+  },
+  {
+   "shop": "von Wülfing Immobilien",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 7,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Mary's",
+   "type": "fascia_panel",
+   "placed": 2,
+   "openings": 3,
+   "kinds": [
+    "fascia_panel",
+    "blade"
+   ]
+  },
+  {
+   "shop": "Brandes & Diesing",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 4,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Optiker Staude",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 4,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Manufactum",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 11,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Francesca & Fratelli",
+   "type": "fascia_panel",
+   "placed": 2,
+   "openings": 3,
+   "kinds": [
+    "fascia_panel",
+    "blade"
+   ]
+  },
+  {
+   "shop": "Reiseland",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 6,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Goldschmiede Stichnoth",
+   "type": "channel_letters",
+   "placed": 1,
+   "openings": 8,
+   "kinds": [
+    "channel_letters"
+   ]
+  },
+  {
+   "shop": "\"1001\" Creationen",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 1,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Lutz Hutz",
+   "type": "channel_letters",
+   "placed": 1,
+   "openings": 1,
+   "kinds": [
+    "channel_letters"
+   ]
+  },
+  {
+   "shop": "i:belle",
+   "type": "channel_letters",
+   "placed": 1,
+   "openings": 6,
+   "kinds": [
+    "channel_letters"
+   ]
+  },
+  {
+   "shop": "Adenauer & Co",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 2,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "BUTLERS",
+   "type": "channel_letters",
+   "placed": 1,
+   "openings": 1,
+   "kinds": [
+    "channel_letters"
+   ]
+  },
+  {
+   "shop": "TUI",
+   "type": "fascia_panel",
+   "placed": 2,
+   "openings": 2,
+   "kinds": [
+    "fascia_panel",
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Robbe & Berling",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 5,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "HEMA",
+   "type": "logo_only",
+   "placed": 1,
+   "openings": 3,
+   "kinds": [
+    "logo_only"
+   ]
+  },
+  {
+   "shop": "Schlösser",
+   "type": "channel_letters",
+   "placed": 1,
+   "openings": 1,
+   "kinds": [
+    "channel_letters"
+   ]
+  },
+  {
+   "shop": "Liebe",
+   "type": "fascia_panel",
+   "placed": 2,
+   "openings": 7,
+   "kinds": [
+    "fascia_panel",
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Juwelier Delius",
+   "type": "channel_letters",
+   "placed": 1,
+   "openings": 3,
+   "kinds": [
+    "channel_letters"
+   ]
+  },
+  {
+   "shop": "Mont Blanc",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 7,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "PANAMAKAFFEE",
+   "type": "fascia_panel",
+   "placed": 2,
+   "openings": 8,
+   "kinds": [
+    "fascia_panel",
+    "blade"
+   ]
+  },
+  {
+   "shop": "Trüffel Güse",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 12,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Pfeiffenstudio Mühlhausen",
+   "type": "light_box",
+   "placed": 1,
+   "openings": 3,
+   "kinds": [
+    "light_box"
+   ]
+  },
+  {
+   "shop": "Bockhorst",
+   "type": "fascia_panel",
+   "placed": 2,
+   "openings": 9,
+   "kinds": [
+    "fascia_panel",
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Ulla Popken",
+   "type": "channel_letters",
+   "placed": 1,
+   "openings": 3,
+   "kinds": [
+    "channel_letters"
+   ]
+  },
+  {
+   "shop": "zero",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 3,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Wömpner",
+   "type": "channel_letters",
+   "placed": 1,
+   "openings": 1,
+   "kinds": [
+    "channel_letters"
+   ]
+  },
+  {
+   "shop": "Riccardo",
+   "type": "light_box",
+   "placed": 1,
+   "openings": 2,
+   "kinds": [
+    "light_box"
+   ]
+  },
+  {
+   "shop": "Miss Lashes",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 1,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "City Kiosk",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 1,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Lia's",
+   "type": "channel_letters",
+   "placed": 1,
+   "openings": 1,
+   "kinds": [
+    "channel_letters"
+   ]
+  },
+  {
+   "shop": "htp",
+   "type": "light_box",
+   "placed": 1,
+   "openings": 8,
+   "kinds": [
+    "light_box"
+   ]
+  },
+  {
+   "shop": "Maremonte",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 6,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "SØR",
+   "type": "channel_letters",
+   "placed": 1,
+   "openings": 3,
+   "kinds": [
+    "channel_letters"
+   ]
+  },
+  {
+   "shop": "BoConcept",
+   "type": "channel_letters",
+   "placed": 1,
+   "openings": 3,
+   "kinds": [
+    "channel_letters"
+   ]
+  },
+  {
+   "shop": "Viu",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 2,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Nespresso",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 8,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Petit Bateau",
+   "type": "channel_letters",
+   "placed": 1,
+   "openings": 1,
+   "kinds": [
+    "channel_letters"
+   ]
+  },
+  {
+   "shop": "dean&david",
+   "type": "fascia_panel",
+   "placed": 2,
+   "openings": 5,
+   "kinds": [
+    "fascia_panel",
+    "blade"
+   ]
+  },
+  {
+   "shop": "CALIDA",
+   "type": "channel_letters",
+   "placed": 1,
+   "openings": 1,
+   "kinds": [
+    "window_lettering"
+   ]
+  },
+  {
+   "shop": "Reformhaus Bacher",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 1,
+   "kinds": [
+    "window_lettering"
+   ]
+  },
+  {
+   "shop": "PANDORA",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 1,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Kouro",
+   "type": "fascia_panel",
+   "placed": 2,
+   "openings": 1,
+   "kinds": [
+    "fascia_panel",
+    "blade"
+   ]
+  },
+  {
+   "shop": "Wirtshaus Hannover",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 0,
+   "wall_only": true,
+   "kinds": [
+    "fascia_panel"
+   ]
+  },
+  {
+   "shop": "Vodafone",
+   "type": "channel_letters",
+   "placed": 1,
+   "openings": 0,
+   "wall_only": true,
+   "kinds": [
+    "channel_letters"
+   ]
+  },
+  {
+   "shop": "HUSSEL Confiserie",
+   "type": "fascia_panel",
+   "placed": 1,
+   "openings": 0,
+   "wall_only": true,
+   "kinds": [
+    "fascia_panel"
+   ]
+  }
+ ],
+ "openings": [
+  {
+   "id": "blk:d3ca9b0b-702c-4af9-bf76-3a6282ce8730",
+   "shop": "Francesca & Fratelli",
+   "display": "restaurant",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:8c4f64ff-2a5f-4a08-9da0-52ed4fff0cc8",
+   "shop": "Francesca & Fratelli",
+   "display": "restaurant",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:f249ea63-b187-4569-98f5-1310357faa4b",
+   "shop": "Francesca & Fratelli",
+   "display": "restaurant",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:088b89c4-f3e1-42d8-9e65-38eca3e49fa9",
+   "shop": "Holländische Kakao-Stube",
+   "display": "cafe",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:5918c646-6e45-4b44-bbfc-307bcf7d7d55",
+   "shop": "Holländische Kakao-Stube",
+   "display": "cafe",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:08e5b88c-0f52-4b80-b613-4122853d58ea",
+   "shop": "Holländische Kakao-Stube",
+   "display": "cafe",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:d6bcc802-f5e4-4bec-a5c0-9866a5fcf96e",
+   "shop": null,
+   "display": "shallow",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:5cbf3a87-a0b3-458a-bc28-6905f9471b17",
+   "shop": "Ulla Popken",
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:4a995e0e-9147-4dfa-9a51-acd93f5f7860",
+   "shop": "Ulla Popken",
+   "display": "doorway",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:209e1375-c870-44be-91ea-2a4d62e755e1",
+   "shop": "Ulla Popken",
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:3c4760f4-5eb5-4a47-94c9-469acc558fc9",
+   "shop": "Gondel",
+   "display": "restaurant",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:98bfb144-9d74-4d9c-8f95-229582a47bb7",
+   "shop": "Gondel",
+   "display": "restaurant",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:fa81d239-0667-4d57-a5ea-e3df76c52805",
+   "shop": "Gondel",
+   "display": "restaurant",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:58fe5f78-5c15-4d14-a2e8-44a4e705500e",
+   "shop": "Gondel",
+   "display": "restaurant",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:a8a0cd77-a65d-4e03-88a1-0435003d294c",
+   "shop": "Gondel",
+   "display": "restaurant",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:4db0f711-6a6d-4e07-a8a1-4c964a05d094",
+   "shop": "Gondel",
+   "display": "restaurant",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:e1e8b972-5488-42db-b31a-1d1574aeceb8",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:6d7bcfc0-321f-41ef-82f9-4f2592b6973f",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:ca843a6f-04f3-448a-b8c4-e978c6f2d59c",
+   "shop": null,
+   "display": "office",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:3fc45926-1988-4e27-8502-cff6997df7cf",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:f16efdea-a56d-43be-b670-edb4f0e49768",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:8ed20417-b703-4dce-bbaa-de5e9eb7baee",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:feef44a0-1d7f-408d-b5a7-d525259d8e2e",
+   "shop": null,
+   "display": "office",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:208b25ff-05c5-4692-ba99-8f6f4d2f1260",
+   "shop": "Gondel",
+   "display": "restaurant",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:25d426d6-217e-45e7-9bd1-a3571e1533bc",
+   "shop": "Gondel",
+   "display": "restaurant",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:b387fb22-d455-4833-b256-87a6522b1068",
+   "shop": "Paper & Tea",
+   "display": "doorway",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:ea489bbb-8b7c-40f7-8bc6-48585254df75",
+   "shop": "Paper & Tea",
+   "display": "houseware",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:feb97dc3-7631-48e7-a663-010cce06a0b0",
+   "shop": "Paper & Tea",
+   "display": "houseware",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:11a14cab-d757-47de-8681-62dab6230e87",
+   "shop": "Paper & Tea",
+   "display": "houseware",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:509f8fc3-3706-4223-9c2e-9209ee90886a",
+   "shop": "von Wülfing Immobilien",
+   "display": "estate",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:bb63c161-4157-4891-ab53-73d50b2babbe",
+   "shop": "von Wülfing Immobilien",
+   "display": "estate",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:4d6387dd-012b-4ba2-8330-9d69da1e07f9",
+   "shop": "von Wülfing Immobilien",
+   "display": "estate",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:726bce5a-52f3-4408-a8f4-bfa9027e1e2c",
+   "shop": "von Wülfing Immobilien",
+   "display": "estate",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:956dad3c-93a6-45eb-86a3-4648fdfcae8e",
+   "shop": "von Wülfing Immobilien",
+   "display": "estate",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:d40d5938-214b-4aeb-b175-3743bba55dc4",
+   "shop": "von Wülfing Immobilien",
+   "display": "estate",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:1819f9fd-f473-4b4a-975e-14a08825e325",
+   "shop": "von Wülfing Immobilien",
+   "display": "estate",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:47879e7c-a625-410e-a171-86e86522964e",
+   "shop": "tondemus",
+   "display": "hair",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:2a5c6a1f-a9c4-45bd-986e-d47844745481",
+   "shop": "tondemus",
+   "display": "hair",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:b1edc340-575a-4bc8-a4ad-bf96fb52657f",
+   "shop": "tondemus",
+   "display": "hair",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:10fa33d7-6618-4128-9255-a7b305f51825",
+   "shop": "tondemus",
+   "display": "hair",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:854e9a1f-3a74-4b07-a582-8b81263c14f5",
+   "shop": "tondemus",
+   "display": "hair",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:64e4ad7a-569c-4738-89d9-64aa9c49e2b0",
+   "shop": "Reiseland",
+   "display": "travel",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:cd836f2d-3734-42e6-b7f8-9e7352e27e54",
+   "shop": "Reiseland",
+   "display": "travel",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:281ebac5-ff06-4af2-bbff-fbe8306a1954",
+   "shop": "Reiseland",
+   "display": "doorway",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:dbd5adff-c82c-45ef-bef5-c89e2749900a",
+   "shop": "Reiseland",
+   "display": "travel",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:bc3d1be8-47ba-434e-b395-632e04e1ec4d",
+   "shop": "Reiseland",
+   "display": "travel",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:17a80750-71ae-4ef2-8b87-15371a0f343f",
+   "shop": "Reiseland",
+   "display": "travel",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:ff619f94-fb9e-4c9c-a077-947121150078",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:2c70696b-b386-4809-9733-529c9eeaacf0",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:55ccc3d4-d5d6-4f3c-97bc-762c6c6e175a",
+   "shop": "Robbe & Berling",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:818b15ef-7d24-49e6-b826-1969257b3501",
+   "shop": "Robbe & Berling",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:14ede427-9ae7-4056-a166-16c0227091d1",
+   "shop": "Robbe & Berling",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:13f26e9c-b20e-40ca-8bf4-102f7c2f0c46",
+   "shop": "Robbe & Berling",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:e11d328a-3906-404d-8486-ff88ab562749",
+   "shop": "Robbe & Berling",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:9cd2d9a9-dbc1-47c7-88a5-d92a6e7df936",
+   "shop": "Pfeiffenstudio Mühlhausen",
+   "display": "kiosk",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:164cc215-4173-4a4d-af6e-53b8c0f40e1a",
+   "shop": "Pfeiffenstudio Mühlhausen",
+   "display": "kiosk",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:72134667-2e65-47ae-874d-f412faf5f4ac",
+   "shop": "Pfeiffenstudio Mühlhausen",
+   "display": "kiosk",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:7fd4885d-6312-4ad7-b939-a9ef02f83615",
+   "shop": "Mont Blanc",
+   "display": "doorway",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:33895abb-d04c-49f9-be14-7f48185d2179",
+   "shop": "Mont Blanc",
+   "display": "jewellery",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:e05dd6d9-d630-448b-b454-073371bc9ece",
+   "shop": "Mont Blanc",
+   "display": "jewellery",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:908310b8-b62f-45e5-b3ce-bbb0a78e4738",
+   "shop": "Mont Blanc",
+   "display": "jewellery",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:95f3cb33-47aa-4f65-89ab-91605714d9a1",
+   "shop": "Mont Blanc",
+   "display": "jewellery",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:bde9721f-3f60-409f-b155-20a66d7c01aa",
+   "shop": "Mont Blanc",
+   "display": "jewellery",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:9efce972-8db4-4095-96f8-d7fa580b46dd",
+   "shop": "Mont Blanc",
+   "display": "jewellery",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:c60f7509-7265-43c5-8937-d713171cecb2",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:f6bf1d83-5038-4c81-920c-5bbc5c12660e",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:12c061ab-43e7-4b9c-8cad-600c438f34a2",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:603f0472-0fd5-4ff7-8e4f-e14c8833ed0b",
+   "shop": "Schlösser",
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:d50fff4c-f95f-4836-8859-b5c5b73292c9",
+   "shop": "PANAMAKAFFEE",
+   "display": "shallow",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:668a4d2b-ae30-4183-86e8-43807bd789fd",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:d083714a-41f2-4f3f-9302-9494b7e82515",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:7fc6160a-e227-495e-b354-b4166a34c284",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:48378117-f93f-403d-bd7b-2fccd69a38fd",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:27adbbfe-c889-4e2a-b24c-9e35c90d3ba0",
+   "shop": "BBBank",
+   "display": null,
+   "depth": 0.0
+  },
+  {
+   "id": "blk:91beeda9-209e-4043-85da-0b82c128bed0",
+   "shop": null,
+   "display": "shallow",
+   "depth": 0.249
+  },
+  {
+   "id": "blk:cc301560-33f5-4b7a-a3e8-e9d7e8a95c5a",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:97fb13eb-bcfe-4139-8fd7-4d0dad785d1d",
+   "shop": null,
+   "display": "doorway",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:e404d785-5ce1-4ea9-9a9b-f942d8d07b26",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:1a924aeb-042c-4254-b9fb-65a059838ae8",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:b3661f4f-72a7-4366-b6e0-3e49f270e7a7",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:1397cf23-9f64-4c3f-bc01-e239f6f78c79",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:6c5528ae-255b-41a5-8b16-bdc5e9914b05",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:0b6cdf3e-b44b-4ee9-9484-f942910c977b",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.312
+  },
+  {
+   "id": "blk:a68d6cdf-75f1-4081-8dba-bfd5b7c1876d",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:cc01245b-a01b-4433-a226-aef6498e4367",
+   "shop": "dean&david",
+   "display": "fast_food",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:7e800dcd-4ecb-43c6-9b0a-d2242baecbd4",
+   "shop": "dean&david",
+   "display": "fast_food",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:764a78ee-f379-47da-8a94-fb4f6c93c187",
+   "shop": "dean&david",
+   "display": "fast_food",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:93f25f0b-25e9-45db-b564-4f99e0fafe76",
+   "shop": "dean&david",
+   "display": "fast_food",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:31fb4448-f465-4407-8a74-b541c7de4351",
+   "shop": "dean&david",
+   "display": "fast_food",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:9754811f-fba5-40da-b74a-df864f7f5598",
+   "shop": "BBBank",
+   "display": "bank",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:4485df79-f1ff-422f-9ab8-e792567c4196",
+   "shop": "BBBank",
+   "display": "bank",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:08360d92-019b-42de-9979-ca6b341883f8",
+   "shop": "BBBank",
+   "display": "bank",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:684c79cd-daa1-4618-b8b8-51ff897d7306",
+   "shop": "BBBank",
+   "display": "bank",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:bdb54147-3cc4-4f22-8eea-ac978a4a7472",
+   "shop": "BBBank",
+   "display": "bank",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:dda8cd47-4668-418a-a4b8-2b29325c2eea",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:3a5d79ca-4ffa-4c81-8bca-6ebe6cdca696",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:4b7837cb-764f-41c3-9f9d-680b1a5ad5a3",
+   "shop": "CALIDA",
+   "display": "shallow",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:e751dd34-f459-4d3f-a0e7-8dd24e1f0151",
+   "shop": "Reformhaus Bacher",
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:3d98e93c-86d9-404d-9e48-87d3c3b02d4f",
+   "shop": "Heide-Bäckerei Meyer",
+   "display": "bakery",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:4c832213-fad1-47c7-9467-3d34f1ccd4ed",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:3bdec091-b210-427b-ada8-0d4eda1955b3",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:ca528cff-dee1-4187-9473-159495446a57",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:f998db23-c89c-4fe4-a232-a5059ad449fd",
+   "shop": null,
+   "display": "hallway",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:362a5ada-651a-4e47-800a-19efd39c1954",
+   "shop": "Brandes & Diesing",
+   "display": "pharmacy",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:6b645684-d3a8-4172-9b8d-3b77fab546b7",
+   "shop": "Brandes & Diesing",
+   "display": "doorway",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:003595c7-c695-4f90-a5dc-df113cad69d8",
+   "shop": "Brandes & Diesing",
+   "display": "pharmacy",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:0abae3dd-f4ea-4c6a-8314-238549eaa6eb",
+   "shop": "Brandes & Diesing",
+   "display": "pharmacy",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:c965baa0-81e4-43e3-9189-6ca26a6795c6",
+   "shop": null,
+   "display": "hallway",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:a903b485-ad6c-49a6-9a7d-e40a3c046a81",
+   "shop": null,
+   "display": "hallway",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:80945311-d5ee-46c9-b39d-b4d8237f96ec",
+   "shop": null,
+   "display": "hallway",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:0249fe8b-167b-4775-a3eb-3037533c661a",
+   "shop": null,
+   "display": "hallway",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:dd8a1d5f-fdd5-40f9-b10b-d72c724050bd",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:17bc85b8-6382-43d6-bb17-27179f62fe45",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:dc0c97fc-3cc2-4aa4-bd35-e34dac970d9d",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:291275d5-8056-4027-bcb5-b0f035a3866a",
+   "shop": "Weitz",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:4f237a70-8c6d-4b0c-a9e2-c721a84746c2",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:1db75815-b8ac-4fa9-ae0d-af0ffd41922c",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:7c743d93-472d-4ef0-91f4-4b157bfd1bbe",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:b8949ea1-4e48-4c30-b9e4-4fab9214d87f",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:493f6d54-d294-400d-ba45-ef81343becd0",
+   "shop": "Maremonte",
+   "display": "restaurant",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:ad081b74-7464-4a0d-a415-683c7fbe2059",
+   "shop": "Maremonte",
+   "display": "restaurant",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:6891a088-9466-4a39-8d3e-5be924c32c3a",
+   "shop": "Maremonte",
+   "display": "restaurant",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:0f393300-d712-45f5-b398-035161fe0ffc",
+   "shop": "Maremonte",
+   "display": "restaurant",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:4f148b99-959a-4ca6-be44-f47c2f66f857",
+   "shop": "Maremonte",
+   "display": "restaurant",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:890ea360-be15-473a-8b7d-288b20c92b25",
+   "shop": "Maremonte",
+   "display": "restaurant",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:c3e7cc74-073a-4b00-8fba-55346bbb4318",
+   "shop": "Café-Bar Bernini",
+   "display": "cafe",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:777cbd08-d014-4085-a113-a61fd59513e8",
+   "shop": "Café-Bar Bernini",
+   "display": "cafe",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:9512c034-8dd7-4518-9cb5-4e167c27bb34",
+   "shop": "Café-Bar Bernini",
+   "display": "cafe",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:d67e2b6f-d2de-465a-9bca-d019c089f3b0",
+   "shop": "Leibniz-Apotheke",
+   "display": "pharmacy",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:f0317072-e4d6-4225-bf3b-94021bfefbfd",
+   "shop": "Leibniz-Apotheke",
+   "display": "doorway",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:9631c309-16cf-41bc-8fb2-d1aa7ffdd762",
+   "shop": "Leibniz-Apotheke",
+   "display": "pharmacy",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:ea6521bb-b80f-4a85-b05f-2beadb4b05aa",
+   "shop": "Leibniz-Apotheke",
+   "display": "pharmacy",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:c3cd7290-e814-42cf-b652-b410a57930ac",
+   "shop": "Leibniz-Apotheke",
+   "display": "pharmacy",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:bc7c1f61-2133-480f-bc92-f13182e497f9",
+   "shop": "Weitz",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:e3366e2f-d5f7-4a30-b3b6-01b8fcedb811",
+   "shop": "Weitz",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:226e1f06-0aa3-422c-80a6-6353d697c906",
+   "shop": "Weitz",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:9fca3437-4235-49cb-82f2-9f05bb881906",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:5d938b44-ac9f-49dc-b52e-796d824a6683",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:4d78d914-92f9-4b87-82b2-6f84f0257051",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:edd33161-f062-4a5c-a3db-b6a20540b71d",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:a67ce071-2697-4c0d-bf52-46875a8b8111",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:2c854394-bb36-4f25-b541-df8772b64df2",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:2441096d-1508-48c5-81fa-8b92508bcbd8",
+   "shop": "Nespresso",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:f1ada464-8687-4806-a928-63a03ea267b2",
+   "shop": "Nespresso",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:975a2bd6-1c71-46eb-8d48-a1dabc7d9a85",
+   "shop": "Nespresso",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:0f53ae4d-e541-405f-9967-059074425307",
+   "shop": "Nespresso",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:441b9594-3158-4e61-a676-b36aa84519c9",
+   "shop": "Nespresso",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:938e73ec-f9b8-4eba-9b31-4c504441680c",
+   "shop": "Nespresso",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:d3f44e73-7e6b-4f15-b48c-fceb3aba5bce",
+   "shop": "Nespresso",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:2d5c8883-f9f9-43ee-9be6-bfd6ea7fab89",
+   "shop": "Nespresso",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:272b5e5a-fe93-493d-8fb7-0c5754a6a3da",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:e1c52d7d-c93d-4ead-bca5-d35be944e08b",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:69bc07f9-61c3-44ba-b2cc-853f601f545c",
+   "shop": "SØR",
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:023b731f-78a9-422e-97dd-55929eca9d58",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:524ad56e-9b3c-4b1b-8dd2-eacf444387af",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:bab70292-67b8-4962-b297-840624970140",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:3c864436-9847-4b53-b55b-cfe4590e6789",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:c36d7b09-c1e8-4108-9c1e-532dbe702b02",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:538c735a-cc18-48d7-9099-61ef71f96426",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:539c7369-6e45-473d-9ad6-bbea3e9a3fc6",
+   "shop": null,
+   "display": "doorway",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:431b77d0-8b68-4135-80d7-3868c0d535bd",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:8a343232-1863-4069-8249-bdfa8b679cf4",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:dbdc21a6-b79a-45bc-8651-79210a41ba6d",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:890cbda7-aee5-4888-aec6-7c987eee356f",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:de5d7046-6584-44a4-ab44-27a87a39c680",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:f1c3a613-e81e-48f6-a36e-8c84eb36851a",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:687031e7-7575-4739-abfd-5927ce5eef4d",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:6d0b9b59-92b5-453c-8321-469cef3d7aed",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:f230451e-5c30-48d6-978a-f93a78877eb7",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:f03a2d20-48ac-4d77-9d9a-c82b47b2fbfc",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:e2c795e7-8706-4da4-818c-446dcd04ba66",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:d5c3bde1-f8b8-47d6-8cc6-7493c4e22e40",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:8fa93b7b-a6f0-43ec-bebb-de3fb2a595aa",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:ed19516c-01cb-441e-8c0c-0ffb3998ecd3",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:8a77f064-b883-466a-85db-fddb6b0ee963",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:aebecbcf-ea30-41d6-8b8b-45a9da004bfb",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:a5da38c5-f601-460f-9f33-439eace2b526",
+   "shop": "i:belle",
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:98a8986d-352c-4032-8f0b-6db0dea99a12",
+   "shop": "i:belle",
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:561839a6-c692-4554-9114-947eba109ec9",
+   "shop": "i:belle",
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:fd9c4f1e-9705-4801-88d7-45c35ec4d6bd",
+   "shop": "i:belle",
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:a3854e4f-e521-440e-9230-404c54839696",
+   "shop": "i:belle",
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:29f96057-c811-4fec-b4ca-555a24ef0ac7",
+   "shop": "i:belle",
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:b42d8c7b-bd1b-4a04-8c7a-8acad78b5d9c",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:e347c542-1bca-4445-85c0-c9151e2e4b63",
+   "shop": null,
+   "display": "doorway",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:41c15dc2-5de8-4f28-abad-68a4974f45f5",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:1a93517d-12a6-479a-b44c-59bfccf23d9d",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:28bb1601-46e2-4cfd-ad35-59f07bf71ed6",
+   "shop": "\"1001\" Creationen",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:a903b5f4-dcf6-4295-b814-9996c41aae76",
+   "shop": "Lutz Hutz",
+   "display": "jewellery",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:02393140-9e84-457e-bfa0-e97a03c1b1ec",
+   "shop": "Juwelier Delius",
+   "display": "jewellery",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:0c01cdb0-1134-42cf-bce8-8ac932af8230",
+   "shop": "Juwelier Delius",
+   "display": "jewellery",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:243a8502-4d99-428a-b053-d65ce2093e0b",
+   "shop": "Juwelier Delius",
+   "display": "jewellery",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:07615b17-b65e-45fa-af02-9e7b58428e7c",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:6f8ae60a-0f66-42ed-af86-1d6dd1a7fee8",
+   "shop": null,
+   "display": "doorway",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:ca5211ce-c7d3-47d1-952c-a997632e3b17",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:1008a520-27b2-4157-a4c0-746d3bfd1ba0",
+   "shop": null,
+   "display": "doorway",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:1e6b4dfc-f9cf-4dae-b5e1-3a1f1218ff75",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:876291ce-f76b-4a54-8482-d56d372a585f",
+   "shop": "Mäntelhaus Kaiser",
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:9788a7cc-afd0-4f7d-90ac-2549e4fcfc2d",
+   "shop": "Mäntelhaus Kaiser",
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:4b744528-3a67-4607-b12c-c2f4198efb63",
+   "shop": "Mäntelhaus Kaiser",
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:b2835de0-763d-4925-9756-33932304f6ab",
+   "shop": "Mäntelhaus Kaiser",
+   "display": "doorway",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:9cc8a4e5-0eaa-4cc8-afde-19551512a805",
+   "shop": "Mäntelhaus Kaiser",
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:0cd7089a-b3ab-4d03-9db7-e2fca093ff2c",
+   "shop": "Mäntelhaus Kaiser",
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:1d432e40-4450-422c-8bf3-73336b007858",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:e45da24a-5aeb-4647-a4ca-f92c185b0ad9",
+   "shop": "Liebe",
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:5f8e94af-99e6-4efc-9174-b897c3d0100a",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:69cead10-de45-4eea-97bf-f5c63849fcdc",
+   "shop": "Liebe",
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:508efcb8-2744-4787-b09c-fe46564bac9a",
+   "shop": "Liebe",
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:99366d71-d121-485f-aa24-0673d2f33c1a",
+   "shop": null,
+   "display": "hallway",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:c6c6c2b7-74c9-4bf3-8363-ac2b33a8ac51",
+   "shop": "Liebe",
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:3dfdb79b-60e9-471d-b890-d801b43a7b71",
+   "shop": "Liebe",
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:c4ee1498-aa94-4867-8430-dbc195189880",
+   "shop": "Liebe",
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:eef0e371-2475-4cc4-b6ab-942a39753101",
+   "shop": null,
+   "display": "hallway",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:d498506b-d4c6-453d-a82c-f8baa129ac7d",
+   "shop": null,
+   "display": "hallway",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:bd90f082-14b2-41d5-bc3d-9fcde3208330",
+   "shop": null,
+   "display": "hallway",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:3ab65f5a-ae3f-46db-87a5-473381c71874",
+   "shop": null,
+   "display": "hallway",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:b919e810-8b7f-4f1f-8e3d-fcc41ed6ef34",
+   "shop": null,
+   "display": "hallway",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:0542d272-ade2-4c8a-b7df-1c4d447cf85a",
+   "shop": null,
+   "display": "doorway",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:7e075b9f-2cd3-435d-b1ca-a61b8de66a5d",
+   "shop": "SØR",
+   "display": "doorway",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:b1395e0a-29c1-4cbe-b4ce-2a572700d437",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:7526fecd-48d9-4f3e-bc61-9eb69857554d",
+   "shop": "BLOCK HOUSE",
+   "display": "restaurant",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:a63aaaa3-d079-4ae3-8a12-21e76b9b7956",
+   "shop": "BLOCK HOUSE",
+   "display": "restaurant",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:1d2d5fb0-78d5-4b4a-9249-c6f75dec0429",
+   "shop": "BLOCK HOUSE",
+   "display": "restaurant",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:5a803c6c-b831-422d-9718-009908c8063f",
+   "shop": "BLOCK HOUSE",
+   "display": "restaurant",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:ef69a136-7eff-458b-bee8-78b9a7cd4731",
+   "shop": "Optiker Staude",
+   "display": "optician",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:e0a13790-6403-4357-895b-076c765f2b1f",
+   "shop": "Optiker Staude",
+   "display": "doorway",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:f980a79d-b84f-447a-91cf-60280c228c8c",
+   "shop": "Optiker Staude",
+   "display": "optician",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:e49bab1e-dc6c-4f3e-8d1c-283e08e60f40",
+   "shop": "Optiker Staude",
+   "display": "optician",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:b000884c-7cab-47a5-994c-2d9262df17fb",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:0b2f57b5-b03c-4a9b-849f-44b5bcdfc473",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:8feb426f-9745-4e28-ac14-1ccfe3a68118",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:39bf8321-fff8-4605-8586-18593d195338",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:0c92e1f0-53af-4de6-8931-fa314ad862b5",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:a23ac6a9-e15e-48af-ae5f-fd497944e58c",
+   "shop": null,
+   "display": "doorway",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:ea1f58bb-b83d-431d-b0b5-9b479556d9fa",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:ce168c32-b746-4595-9468-9038e053668e",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:60a4fa67-e26d-4e04-846e-795b8d3dca81",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:1a73ddb8-cd2f-49d3-829c-9324b77cedd4",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:c54ccaca-d254-489f-941b-4dcca1c9ccee",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:edda5e4a-f250-438b-bbce-e37cab19e1fc",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:f5ad2263-feaa-48fe-aa3f-abe4cedc541c",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:793ae975-f993-456b-bed1-3bb7e22aa603",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:ed0e4081-4d84-4798-a9c5-4b25fe2dc191",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:6b4f9921-1463-4d17-8a96-d2086fb39bc2",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:278e3b0c-18b4-47a3-af9c-7f9d1660a598",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:1dbcba39-9c32-4db6-a37b-45fb87c3b264",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:a88cb8d1-ff62-43ed-a6a9-9b0ae0c125ea",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:b216879a-16f3-4d7b-80b9-c9ab4a7cc751",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:126ca512-056b-4e64-8702-061f8742b02d",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:8fea67c0-9fc7-421b-b109-eb746c4525d9",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:e03775a0-07ab-4288-8799-2effcaa7ed1e",
+   "shop": null,
+   "display": "doorway",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:0604278b-7dfc-42cc-90d8-3d90a9047950",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:75793d3b-06cc-4297-aad1-fdb2e8033aa9",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:2dca5f53-426a-4509-97a2-ac4ab5f80201",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:81514a81-b307-4e83-98e4-c9fab28eba60",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:56627d27-28e6-41cc-8691-5d6717177ea0",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:9442c68a-2308-4f31-8738-47a54d3ea132",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:7ca3a4fc-e8c1-4778-93d0-36441a100213",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:48148516-bd79-4339-bc26-06ab7b34d143",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:8c52c297-e655-4a3e-bfbc-423800714d60",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:1638461f-4c94-454b-bb2c-8735ab8f6840",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:2f1dc8cb-b6a4-48ce-ae45-890a34db414f",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:1669541a-6dc0-40cb-96aa-268685427eca",
+   "shop": "Sushi Berlin",
+   "display": "restaurant",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:7f0e1867-2955-40f7-ae96-98e9f5a6b396",
+   "shop": "Sushi Berlin",
+   "display": "restaurant",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:bedddcc6-c551-43d7-b908-b559b4dcc88f",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:3fb88a98-bad9-48f0-b274-327af78cc40e",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:484da0ba-bf73-4c43-b2f7-7323f16812d1",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:bf1bb481-8aa9-497a-a4a7-962e368479d8",
+   "shop": "BoConcept",
+   "display": "furniture",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:2e3ac8e8-83b7-4b76-95ae-544da8ff40ad",
+   "shop": "BoConcept",
+   "display": "furniture",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:45b1c295-bb3a-450a-9d2a-2b16cf302ee8",
+   "shop": "BoConcept",
+   "display": "furniture",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:f938e899-6cd8-4a51-96eb-e553eb085ca6",
+   "shop": "Emma & Paul",
+   "display": "doorway",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:dc9b4a02-75f3-409e-a873-3f51eb7e51f8",
+   "shop": "Emma & Paul",
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:2a96ea67-e04a-49d3-b62b-62203c4357f7",
+   "shop": "Emma & Paul",
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:01382a5e-ee76-4b26-b352-2e92e18a00f6",
+   "shop": "Sushi Berlin",
+   "display": "restaurant",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:68085fe3-85d0-4c6b-aaf3-5acaa2b650ae",
+   "shop": "Sushi Berlin",
+   "display": "restaurant",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:a7855315-201e-4c55-a3fc-797e2703ac7c",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:2ec04e0f-be2a-4e7f-b97e-767363f8cc5e",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:85a2aebe-188a-44e1-8bdd-f35fbd38f9c6",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:b7849452-3a09-453c-a9c7-51aeac2dec63",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:535cfcf0-2442-46e2-a11a-b2d0a9700e61",
+   "shop": "Schuh-stock",
+   "display": "doorway",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:5f9b2a47-7afe-4d62-bace-f8de3c1afd74",
+   "shop": "Continentale Czwikla & Team",
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:8f3e3f5e-097a-43aa-af05-be5d3cc41a14",
+   "shop": "Bär",
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:13c1e7c8-3b67-4206-a89a-63cbb02848d9",
+   "shop": "Bär",
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:72a28686-5b13-481b-bb47-3bff03a3c4ff",
+   "shop": "Bär",
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:a283c3e1-fd16-4371-a059-868496525f91",
+   "shop": "Kreipe City",
+   "display": "doorway",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:41fb2fc1-8fbf-41f6-8f20-df9749168c05",
+   "shop": "Kreipe City",
+   "display": "bakery",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:1a888c7a-57ae-4cb2-950c-2e9850bd749c",
+   "shop": null,
+   "display": "vacant",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:591d8ca5-373c-47ac-a544-1184409419ea",
+   "shop": "60 seconds to napoli",
+   "display": "restaurant",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:38d6b208-11d1-4488-9a0e-af034d1601f6",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:73f5bdbe-44d1-44c7-a046-1b0d4af30087",
+   "shop": "Kastens Hotel Luisenhof",
+   "display": "hotel",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:8eb17da4-f0e2-41bb-a32a-db81f33ec48f",
+   "shop": "Kastens Hotel Luisenhof",
+   "display": "hotel",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:6f63cba0-018f-4586-b95b-a0da6951ac56",
+   "shop": "Kastens Hotel Luisenhof",
+   "display": "hotel",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:59bc1242-7b29-4dd7-9248-ed074cf72151",
+   "shop": "Kastens Hotel Luisenhof",
+   "display": "hotel",
+   "depth": 0.554
+  },
+  {
+   "id": "blk:28d07075-064d-47d3-adc7-07b977dff193",
+   "shop": "Kastens Hotel Luisenhof",
+   "display": "hotel",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:82fc7a6d-9838-4a41-814b-5f232cb07787",
+   "shop": "Kastens Hotel Luisenhof",
+   "display": "hotel",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:35c40dc6-b7cc-4bc2-a54a-c459e80b0ba8",
+   "shop": "Mary's",
+   "display": "restaurant",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:787589f2-9e66-4e0a-97bf-8683fbf2442c",
+   "shop": "Mary's",
+   "display": "restaurant",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:ebde01fb-eacb-4beb-bb67-816ea8d0e5f5",
+   "shop": "Mary's",
+   "display": "restaurant",
+   "depth": 0.56
+  },
+  {
+   "id": "blk:02dafe9e-2d1a-4baa-87d2-6599691e98df",
+   "shop": null,
+   "display": "shallow",
+   "depth": 0.134
+  },
+  {
+   "id": "d0:4",
+   "shop": null,
+   "display": "vacant",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:5",
+   "shop": null,
+   "display": "vacant",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:33",
+   "shop": "Ernst-August-Apotheke",
+   "display": "pharmacy",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:34",
+   "shop": "Ernst-August-Apotheke",
+   "display": "pharmacy",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:35",
+   "shop": "Ernst-August-Apotheke",
+   "display": "pharmacy",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:60",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:61",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:62",
+   "shop": null,
+   "display": "office",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:63",
+   "shop": null,
+   "display": "office",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:174",
+   "shop": "SIXT",
+   "display": "office",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:175",
+   "shop": "SIXT",
+   "display": "office",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:176",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:315",
+   "shop": "TUI",
+   "display": "travel",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:316",
+   "shop": "BUTLERS",
+   "display": "houseware",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:317",
+   "shop": "TUI",
+   "display": "travel",
+   "depth": 0.328
+  },
+  {
+   "id": "d0:318",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:319",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.504
+  },
+  {
+   "id": "d0:369",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:370",
+   "shop": "Bestia Vera Pizza Napoletana",
+   "display": "restaurant",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:444",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:445",
+   "shop": null,
+   "display": "office",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:451",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:457",
+   "shop": null,
+   "display": "doorway",
+   "depth": 1.074
+  },
+  {
+   "id": "d0:463",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:469",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:475",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:489",
+   "shop": "Earth & Sky",
+   "display": "film",
+   "depth": 0.068
+  },
+  {
+   "id": "d0:495",
+   "shop": null,
+   "display": "shallow",
+   "depth": 0.092
+  },
+  {
+   "id": "d0:501",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:507",
+   "shop": null,
+   "display": null,
+   "depth": 0.068
+  },
+  {
+   "id": "d0:513",
+   "shop": null,
+   "display": "shallow",
+   "depth": 0.092
+  },
+  {
+   "id": "d0:519",
+   "shop": null,
+   "display": "shallow",
+   "depth": 0.092
+  },
+  {
+   "id": "d0:525",
+   "shop": null,
+   "display": "film",
+   "depth": 0.068
+  },
+  {
+   "id": "d0:531",
+   "shop": null,
+   "display": "film",
+   "depth": 0.068
+  },
+  {
+   "id": "d0:537",
+   "shop": null,
+   "display": "shallow",
+   "depth": 0.092
+  },
+  {
+   "id": "d0:543",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:549",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:555",
+   "shop": null,
+   "display": null,
+   "depth": 0.0
+  },
+  {
+   "id": "d0:561",
+   "shop": null,
+   "display": null,
+   "depth": 0.0
+  },
+  {
+   "id": "d0:567",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:573",
+   "shop": "John + Bamberg",
+   "display": "pharmacy",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:579",
+   "shop": "Petit Bateau",
+   "display": "fashion",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:580#p0",
+   "shop": "Stichnoth",
+   "display": "jewellery",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:580#p1",
+   "shop": "Miss Lashes",
+   "display": "cosmetics",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:580#p2",
+   "shop": "Lia's",
+   "display": "fashion",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:580#p3",
+   "shop": "Wömpner",
+   "display": "fashion",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:594",
+   "shop": null,
+   "display": "office",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:600",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:606",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:611",
+   "shop": null,
+   "display": "doorway",
+   "depth": 1.074
+  },
+  {
+   "id": "d0:616",
+   "shop": null,
+   "display": "office",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:621",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.294
+  },
+  {
+   "id": "d0:622",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:752",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:762",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:767",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:777",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:782",
+   "shop": null,
+   "display": "office",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:787",
+   "shop": null,
+   "display": "doorway",
+   "depth": 1.074
+  },
+  {
+   "id": "d0:792",
+   "shop": "Bestia Vera Pizza Napoletana",
+   "display": "restaurant",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:793",
+   "shop": "Adenauer & Co",
+   "display": "houseware",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:794",
+   "shop": "Adenauer & Co",
+   "display": "houseware",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:832",
+   "shop": "Kouro",
+   "display": "restaurant",
+   "depth": 0.504
+  },
+  {
+   "id": "d0:833",
+   "shop": "Seydlitz",
+   "display": "furniture",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:834",
+   "shop": "Seydlitz",
+   "display": "furniture",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:835",
+   "shop": "Seydlitz",
+   "display": "furniture",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:836",
+   "shop": "Seydlitz",
+   "display": "furniture",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:837",
+   "shop": null,
+   "display": "office",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:838",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:839",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:840",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:841",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1202",
+   "shop": "zero",
+   "display": "fashion",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1203",
+   "shop": "zero",
+   "display": "fashion",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1204",
+   "shop": "zero",
+   "display": "fashion",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1237",
+   "shop": null,
+   "display": "vacant",
+   "depth": 0.328
+  },
+  {
+   "id": "d0:1238",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1239",
+   "shop": "Frittenwerk",
+   "display": "fast_food",
+   "depth": 0.328
+  },
+  {
+   "id": "d0:1240",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.504
+  },
+  {
+   "id": "d0:1241",
+   "shop": "Frittenwerk",
+   "display": "fast_food",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1242",
+   "shop": "Frittenwerk",
+   "display": "fast_food",
+   "depth": 0.504
+  },
+  {
+   "id": "d0:1269",
+   "shop": "Das Brötchen",
+   "display": "cafe",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1270",
+   "shop": "Miles",
+   "display": "restaurant",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1271",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1272",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1273",
+   "shop": "Stadtmauer",
+   "display": "restaurant",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1274",
+   "shop": "Stadtmauer",
+   "display": "restaurant",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1275",
+   "shop": null,
+   "display": "vacant",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1276",
+   "shop": "Das Brötchen",
+   "display": "cafe",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1277",
+   "shop": "Das Brötchen",
+   "display": "cafe",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1278",
+   "shop": "Das Brötchen",
+   "display": "cafe",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1279",
+   "shop": "Das Brötchen",
+   "display": "cafe",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1506",
+   "shop": "City Kiosk",
+   "display": "kiosk",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1507",
+   "shop": "Riccardo",
+   "display": "kiosk",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1508",
+   "shop": "Riccardo",
+   "display": "kiosk",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1731",
+   "shop": "Blue House",
+   "display": "fashion",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1732",
+   "shop": "Blue House",
+   "display": "fashion",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1733",
+   "shop": "Blue House",
+   "display": "fashion",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1776",
+   "shop": "PANDORA",
+   "display": "jewellery",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1777",
+   "shop": "JD Sports",
+   "display": "sports",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1778",
+   "shop": "JD Sports",
+   "display": "sports",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1779",
+   "shop": "JD Sports",
+   "display": "sports",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1780",
+   "shop": "JD Sports",
+   "display": "sports",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1781",
+   "shop": "JD Sports",
+   "display": "sports",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1895",
+   "shop": "HEMA",
+   "display": "department_store",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1896",
+   "shop": "HEMA",
+   "display": "department_store",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:1897",
+   "shop": "HEMA",
+   "display": "department_store",
+   "depth": 0.504
+  },
+  {
+   "id": "d0:2019",
+   "shop": null,
+   "display": "vacant",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:2024",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:2025",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:2030",
+   "shop": null,
+   "display": "shallow",
+   "depth": 0.205
+  },
+  {
+   "id": "d0:2035",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.262
+  },
+  {
+   "id": "d0:2041",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:2059",
+   "shop": null,
+   "display": "office",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:2060",
+   "shop": null,
+   "display": "office",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:2066",
+   "shop": null,
+   "display": "office",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:2067",
+   "shop": null,
+   "display": "office",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:2068",
+   "shop": null,
+   "display": "vacant",
+   "depth": 0.504
+  },
+  {
+   "id": "d0:2069",
+   "shop": "Frittzchen",
+   "display": "fast_food",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:2070",
+   "shop": "Jack the Ripper's",
+   "display": "restaurant",
+   "depth": 0.305
+  },
+  {
+   "id": "d0:2072",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:2073",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:2494",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:2495",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.466
+  },
+  {
+   "id": "d0:2500",
+   "shop": null,
+   "display": "office",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:2505",
+   "shop": null,
+   "display": "shallow",
+   "depth": 0.146
+  },
+  {
+   "id": "d0:2506",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:2511",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.359
+  },
+  {
+   "id": "d0:2517",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.359
+  },
+  {
+   "id": "loose:0181e041-4ddb-48b2-b49e-b5c3f05ef534:4:-1",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.805
+  },
+  {
+   "id": "gl:-57.07,-0.51,205.25",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:-55.48,-0.51,206.80",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:-52.20,-0.51,209.98",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:-50.60,-0.51,211.52",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:-48.99,-0.51,213.09",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:-43.77,-0.36,196.54",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:-42.92,-0.36,195.64",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:-37.20,-0.36,204.54",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:-36.31,-0.36,203.60",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:-3.85,-0.23,179.91",
+   "shop": null,
+   "display": "film",
+   "depth": 0.063
+  },
+  {
+   "id": "gl:-3.22,-0.23,181.03",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:-2.73,-0.33,178.96",
+   "shop": null,
+   "display": "film",
+   "depth": 0.049
+  },
+  {
+   "id": "gl:-2.58,-0.23,182.18",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:-1.94,-0.23,183.33",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:-1.69,-0.33,178.38",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:-1.30,-0.23,184.48",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:-1.07,-0.23,175.21",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:-0.66,-0.23,185.62",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:-0.58,-0.23,176.05",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:-0.02,-0.23,186.77",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:0.52,-0.34,211.51",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:1.00,-0.33,188.59",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:1.64,-0.33,189.75",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:2.13,-0.34,214.16",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:2.20,0.09,117.47",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:2.30,-0.33,190.93",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:2.76,-0.34,215.55",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:2.95,-0.33,192.11",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:3.40,-0.34,216.96",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:3.54,0.09,116.72",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:3.61,-0.33,193.28",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:4.05,-0.34,218.38",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:4.27,-0.33,194.46",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:4.69,-0.34,219.79",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:4.88,0.09,115.97",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:4.93,-0.33,195.64",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:5.34,-0.34,221.21",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:5.58,-0.33,196.82",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:5.98,-0.34,222.63",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:6.21,0.09,115.22",
+   "shop": "Manufactum",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:6.24,-0.33,198.00",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:6.62,-0.34,224.04",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:6.90,-0.33,199.18",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:7.27,-0.34,225.46",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:7.55,0.09,114.47",
+   "shop": "Manufactum",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:7.56,-0.33,200.36",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:8.21,-0.33,201.54",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:8.88,0.09,113.72",
+   "shop": "Manufactum",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:9.64,-0.23,179.84",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:10.22,0.09,112.97",
+   "shop": "Manufactum",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:10.29,-0.23,180.97",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:10.92,-0.23,182.07",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:11.56,0.09,112.22",
+   "shop": "Manufactum",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:12.89,0.09,111.47",
+   "shop": "Manufactum",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:13.58,-0.23,181.26",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:14.23,0.09,110.72",
+   "shop": "Manufactum",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:14.71,-0.23,180.63",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:15.56,0.09,109.96",
+   "shop": "Manufactum",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:15.70,-0.33,176.08",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:15.85,-0.23,180.00",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:16.34,-0.33,177.17",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:16.90,0.09,109.21",
+   "shop": "Manufactum",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:16.96,-0.23,179.38",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:18.23,0.09,108.46",
+   "shop": "Manufactum",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:19.54,0.09,107.73",
+   "shop": "Manufactum",
+   "display": "shallow",
+   "depth": 0.189
+  },
+  {
+   "id": "gl:20.83,0.09,109.18",
+   "shop": null,
+   "display": "shallow",
+   "depth": 0.173
+  },
+  {
+   "id": "gl:20.85,-0.34,252.91",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:21.60,0.09,110.54",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:22.37,0.09,111.90",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:23.12,0.09,113.24",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:23.48,-0.34,252.55",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:24.71,0.09,116.04",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:24.92,-0.34,252.14",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:25.47,0.09,117.40",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:26.24,0.09,118.76",
+   "shop": "Paper & Tea",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:26.39,-0.34,251.72",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:27.85,-0.34,251.30",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:28.47,-0.33,187.46",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:29.12,-0.23,54.71",
+   "shop": "htp",
+   "display": "phone",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:29.32,-0.34,250.88",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:30.53,-0.23,53.94",
+   "shop": "htp",
+   "display": "phone",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:30.79,-0.34,250.47",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:31.94,-0.23,53.17",
+   "shop": "htp",
+   "display": "phone",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:33.30,-0.34,249.76",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:33.35,-0.23,52.41",
+   "shop": "htp",
+   "display": "phone",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:34.66,-0.23,67.94",
+   "shop": null,
+   "display": "vacant",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:34.74,-0.34,249.37",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:34.76,-0.23,51.64",
+   "shop": "htp",
+   "display": "phone",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:35.96,-0.23,67.24",
+   "shop": "Kasten's Optik",
+   "display": "optician",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:36.17,-0.23,50.87",
+   "shop": "htp",
+   "display": "phone",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:36.22,-0.34,248.98",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:37.29,-0.23,66.52",
+   "shop": "Kasten's Optik",
+   "display": "optician",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:37.58,-0.23,50.11",
+   "shop": "htp",
+   "display": "phone",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:37.69,-0.34,248.59",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:38.22,-0.50,9.71",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:38.63,-0.23,65.80",
+   "shop": "Kasten's Optik",
+   "display": "optician",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:38.97,-0.23,49.35",
+   "shop": "htp",
+   "display": "phone",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:39.16,-0.34,248.19",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:39.96,-0.23,65.08",
+   "shop": "Kasten's Optik",
+   "display": "optician",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:40.64,-0.34,247.80",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:41.29,-0.23,64.36",
+   "shop": "Kasten's Optik",
+   "display": "optician",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:41.83,-0.50,11.06",
+   "shop": "Goldschmiede Stichnoth",
+   "display": "jewellery",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:42.11,-0.34,247.41",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:42.62,-0.23,63.64",
+   "shop": "Kasten's Optik",
+   "display": "optician",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:43.24,-0.50,11.57",
+   "shop": "Goldschmiede Stichnoth",
+   "display": "jewellery",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:43.59,-0.34,247.01",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:44.44,-0.23,62.63",
+   "shop": "Kasten's Optik",
+   "display": "optician",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:44.64,-0.50,12.08",
+   "shop": "Goldschmiede Stichnoth",
+   "display": "jewellery",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:45.06,-0.34,246.62",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:46.05,-0.50,12.59",
+   "shop": "Goldschmiede Stichnoth",
+   "display": "jewellery",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:46.09,0.01,155.68",
+   "shop": "Dille & Kamille",
+   "display": "houseware",
+   "depth": 0.554
+  },
+  {
+   "id": "gl:46.53,-0.34,246.22",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:47.21,0.01,157.63",
+   "shop": "Dille & Kamille",
+   "display": "houseware",
+   "depth": 0.554
+  },
+  {
+   "id": "gl:47.45,-0.50,13.09",
+   "shop": "Goldschmiede Stichnoth",
+   "display": "jewellery",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:48.01,-0.34,245.83",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:48.30,-0.34,242.18",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:48.39,0.01,160.23",
+   "shop": "Dille & Kamille",
+   "display": "houseware",
+   "depth": 0.554
+  },
+  {
+   "id": "gl:48.60,-0.34,243.34",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:48.86,-0.50,13.60",
+   "shop": "Goldschmiede Stichnoth",
+   "display": "jewellery",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:49.48,-0.34,245.44",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:49.54,0.01,162.28",
+   "shop": "Dille & Kamille",
+   "display": "houseware",
+   "depth": 0.554
+  },
+  {
+   "id": "gl:50.26,-0.50,14.11",
+   "shop": "Goldschmiede Stichnoth",
+   "display": "jewellery",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:50.65,-0.34,243.55",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:50.69,0.01,164.34",
+   "shop": "PETER PANE",
+   "display": "restaurant",
+   "depth": 0.554
+  },
+  {
+   "id": "gl:51.64,-0.50,14.61",
+   "shop": "Goldschmiede Stichnoth",
+   "display": "jewellery",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:51.78,0.01,166.71",
+   "shop": "PETER PANE",
+   "display": "restaurant",
+   "depth": 0.554
+  },
+  {
+   "id": "gl:52.83,0.01,168.59",
+   "shop": "PETER PANE",
+   "display": "restaurant",
+   "depth": 0.554
+  },
+  {
+   "id": "gl:52.96,-0.52,192.68",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:53.56,-0.52,193.76",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:53.85,0.01,170.73",
+   "shop": "PETER PANE",
+   "display": "restaurant",
+   "depth": 0.554
+  },
+  {
+   "id": "gl:54.17,-0.52,194.87",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:54.53,-0.50,15.65",
+   "shop": null,
+   "display": "vacant",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:54.76,0.01,172.46",
+   "shop": "PETER PANE",
+   "display": "restaurant",
+   "depth": 0.554
+  },
+  {
+   "id": "gl:55.94,-0.50,16.16",
+   "shop": null,
+   "display": "vacant",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:56.19,-0.35,35.56",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:57.34,-0.50,16.67",
+   "shop": null,
+   "display": "vacant",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:58.64,-0.50,35.03",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:58.75,-0.50,17.18",
+   "shop": null,
+   "display": "vacant",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:59.37,-0.50,36.34",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:60.11,-0.50,37.66",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:60.15,-0.50,17.68",
+   "shop": null,
+   "display": "vacant",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:60.85,-0.50,38.99",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:61.55,-0.50,18.19",
+   "shop": null,
+   "display": "vacant",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:61.59,-0.50,40.32",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:62.33,-0.50,41.65",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:62.96,-0.50,18.70",
+   "shop": null,
+   "display": "vacant",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:63.07,-0.50,42.98",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:63.31,-0.52,184.92",
+   "shop": "Viu",
+   "display": "optician",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:63.81,-0.50,44.31",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:64.34,-0.50,19.20",
+   "shop": null,
+   "display": "vacant",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:64.55,-0.50,45.63",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:65.29,-0.50,46.96",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:65.63,-0.52,189.06",
+   "shop": "Viu",
+   "display": "optician",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:66.03,-0.50,48.29",
+   "shop": "enercity expo Café",
+   "display": "cafe",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:66.28,-0.50,19.86",
+   "shop": "Trüffel Güse",
+   "display": "bakery",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:66.77,-0.50,49.62#s0",
+   "shop": "enercity expo Café",
+   "display": "cafe",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:66.77,-0.50,49.62#s1",
+   "shop": "enercity expo Café",
+   "display": "pocket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:67.68,-0.50,20.33",
+   "shop": "Trüffel Güse",
+   "display": "bakery",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:67.73,-0.50,50.95#s0",
+   "shop": "enercity expo Café",
+   "display": "pocket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:67.73,-0.50,50.95#s1",
+   "shop": "enercity expo Café",
+   "display": "cafe",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:68.79,-0.50,50.34",
+   "shop": "enercity expo Café",
+   "display": "cafe",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:69.08,-0.50,20.79",
+   "shop": "Trüffel Güse",
+   "display": "bakery",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:70.32,-0.52,197.42",
+   "shop": "SØR",
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:70.48,-0.50,21.26",
+   "shop": "Trüffel Güse",
+   "display": "bakery",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:71.58,-0.43,275.14",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:71.87,-0.50,21.73",
+   "shop": "Trüffel Güse",
+   "display": "bakery",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:72.08,-0.50,48.45",
+   "shop": "enercity expo Café",
+   "display": "cafe",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:72.82,-0.43,277.39",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:73.27,-0.50,22.19",
+   "shop": "Trüffel Güse",
+   "display": "bakery",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:73.45,-0.43,278.52",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:74.09,-0.43,279.68",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:74.51,-0.50,47.26",
+   "shop": "enercity expo Café",
+   "display": "cafe",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:74.67,-0.50,22.66",
+   "shop": "Trüffel Güse",
+   "display": "bakery",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:74.73,-0.43,280.84",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:75.37,-0.43,282.00",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:76.01,-0.43,283.16",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:76.06,-0.50,23.13",
+   "shop": "Trüffel Güse",
+   "display": "bakery",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:76.35,-0.50,46.79",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:76.95,-0.50,47.95",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:77.46,-0.50,23.60",
+   "shop": "Trüffel Güse",
+   "display": "bakery",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:77.56,-0.50,49.14",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:78.17,-0.50,50.32#s0",
+   "shop": null,
+   "display": "office",
+   "depth": 0.517
+  },
+  {
+   "id": "gl:78.17,-0.50,50.32#s1",
+   "shop": null,
+   "display": "pocket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:78.86,-0.50,24.06",
+   "shop": "Trüffel Güse",
+   "display": "bakery",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:79.01,-0.50,51.50#s0",
+   "shop": null,
+   "display": "pocket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:79.01,-0.50,51.50#s1",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.383
+  },
+  {
+   "id": "gl:80.05,-0.33,289.89",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:80.25,-0.50,24.53",
+   "shop": "Trüffel Güse",
+   "display": "bakery",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:80.31,-0.50,50.77",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:81.20,-0.33,289.26",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:81.33,-0.50,31.25",
+   "shop": "Bockhorst",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:81.63,-0.50,50.03",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:81.65,-0.50,25.00",
+   "shop": "Trüffel Güse",
+   "display": "bakery",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:81.79,-0.50,29.86",
+   "shop": "Bockhorst",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:82.25,-0.50,28.45",
+   "shop": "Bockhorst",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:82.38,-0.33,288.62",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:82.71,-0.50,27.04#s0",
+   "shop": "Bockhorst",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:82.71,-0.50,27.04#s1",
+   "shop": "Bockhorst",
+   "display": "pocket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:82.91,-0.50,32.29",
+   "shop": "Bockhorst",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:82.95,-0.50,49.29",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:83.02,-0.50,25.46#s0",
+   "shop": "Bockhorst",
+   "display": "pocket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:83.02,-0.50,25.46#s1",
+   "shop": "Bockhorst",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:83.57,-0.33,287.98",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:84.27,-0.50,48.55",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:84.28,-0.50,32.77",
+   "shop": "Bockhorst",
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:84.75,-0.33,287.34",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:85.60,-0.50,47.81",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:85.65,-0.50,33.24",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:85.93,-0.33,286.70",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:86.92,-0.50,47.06",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:87.01,-0.50,33.72",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:87.11,-0.33,286.06",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:88.24,-0.50,46.32",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:88.29,-0.33,285.41",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:88.38,-0.50,34.19",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:88.84,-0.68,20.87",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:89.07,-0.50,40.22",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:89.47,-0.33,284.77",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:89.54,-0.50,42.07",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:89.56,-0.50,45.58#s0",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:89.56,-0.50,45.58#s1",
+   "shop": null,
+   "display": "pocket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:89.75,-0.50,34.67",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:90.22,-0.50,43.35",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:90.30,-0.50,39.50",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:90.65,-0.33,284.13",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:90.89,-0.50,44.60#s0",
+   "shop": null,
+   "display": "pocket",
+   "depth": 0.393
+  },
+  {
+   "id": "gl:90.89,-0.50,44.60#s1",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:91.01,-0.68,21.64",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:91.12,-0.50,35.14",
+   "shop": null,
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:91.54,-0.50,38.76",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:91.83,-0.33,283.49",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:92.49,-0.50,35.62",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:92.79,-0.50,38.02",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:93.01,-0.33,282.85",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:93.08,-0.68,22.38",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:93.86,-0.50,36.10",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:94.19,-0.33,282.20",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:95.18,-0.68,23.12",
+   "shop": null,
+   "display": "supermarket",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:95.20,-0.50,36.56#s0",
+   "shop": null,
+   "display": "pocket",
+   "depth": 0.298
+  },
+  {
+   "id": "gl:95.20,-0.50,36.56#s1",
+   "shop": null,
+   "display": "pocket",
+   "depth": 0.263
+  },
+  {
+   "id": "gl:95.37,-0.33,281.56",
+   "shop": null,
+   "display": "office",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:96.55,-0.33,280.92",
+   "shop": null,
+   "display": "shoes",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:97.28,-0.68,23.86",
+   "shop": "Liebe",
+   "display": "shallow",
+   "depth": 0.173
+  },
+  {
+   "id": "gl:99.82,-0.68,24.32",
+   "shop": "Liebe",
+   "display": "shallow",
+   "depth": 0.181
+  },
+  {
+   "id": "gl:100.26,-0.68,23.04",
+   "shop": "Liebe",
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:100.72,-0.68,21.72",
+   "shop": "Liebe",
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:101.17,-0.68,20.40",
+   "shop": "Liebe",
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:101.62,-0.68,19.08",
+   "shop": "Liebe",
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:102.07,-0.68,17.77",
+   "shop": "Liebe",
+   "display": "cosmetics",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:102.53,-0.68,16.45",
+   "shop": "PANAMAKAFFEE",
+   "display": "cafe",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:103.45,-0.68,13.74",
+   "shop": "PANAMAKAFFEE",
+   "display": "cafe",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:103.90,-0.68,12.45",
+   "shop": "PANAMAKAFFEE",
+   "display": "cafe",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:104.35,-0.68,11.13",
+   "shop": "PANAMAKAFFEE",
+   "display": "cafe",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:104.80,-0.68,9.82",
+   "shop": "PANAMAKAFFEE",
+   "display": "cafe",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:105.25,-0.68,8.50",
+   "shop": "PANAMAKAFFEE",
+   "display": "cafe",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:105.71,-0.68,7.18",
+   "shop": "PANAMAKAFFEE",
+   "display": "cafe",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:106.16,-0.68,5.86",
+   "shop": null,
+   "display": "houseware",
+   "depth": 0.56
+  },
+  {
+   "id": "gl:106.61,-0.68,4.54",
+   "shop": null,
+   "display": "fashion",
+   "depth": 0.56
+  }
+ ]
+}

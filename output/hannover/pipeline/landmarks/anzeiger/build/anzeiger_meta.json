@@ -1,0 +1,304 @@
+{
+ "objects": {
+  "anz_detail_nocol": {
+   "materials": [
+    "glass_dark",
+    "glass_shop",
+    "klinker",
+    "lamp_glass",
+    "metal_dark",
+    "sign_panel",
+    "steel",
+    "stone_dark"
+   ],
+   "tris": 122062
+  },
+  "anz_dome": {
+   "materials": [
+    "copper"
+   ],
+   "tris": 6432
+  },
+  "anz_dome_detail_nocol": {
+   "materials": [
+    "copper",
+    "copper_dark",
+    "metal_dark"
+   ],
+   "tris": 10216
+  },
+  "anz_letters_nocol": {
+   "materials": [
+    "gold",
+    "metal_dark"
+   ],
+   "tris": 7455
+  },
+  "anz_shell": {
+   "materials": [
+    "chevron",
+    "concrete",
+    "copper_dark",
+    "klinker",
+    "roof_flat",
+    "stone_dark"
+   ],
+   "tris": 8391
+  },
+  "anz_windows_nocol": {
+   "materials": [
+    "glass",
+    "paint_white"
+   ],
+   "tris": 36496
+  },
+  "bad_detail_nocol": {
+   "materials": [
+    "alu",
+    "bronze",
+    "copper_dark",
+    "metal_dark",
+    "print_band",
+    "steel",
+    "stone"
+   ],
+   "tris": 19183
+  },
+  "bad_letters_nocol": {
+   "materials": [
+    "paint_white",
+    "steel",
+    "stone_dark"
+   ],
+   "tris": 4532
+  },
+  "bad_roof": {
+   "materials": [
+    "copper_dark",
+    "slate",
+    "stone",
+    "tiles"
+   ],
+   "tris": 18975
+  },
+  "bad_roof_detail_nocol": {
+   "materials": [
+    "copper_dark",
+    "glass",
+    "gold",
+    "metal_dark",
+    "paint_white",
+    "stone",
+    "tiles"
+   ],
+   "tris": 2988
+  },
+  "bad_shell": {
+   "materials": [
+    "alu",
+    "ashlar",
+    "copper_dark",
+    "glass",
+    "glass_dark",
+    "glass_green",
+    "metal_dark",
+    "plaster",
+    "roof_flat",
+    "stone"
+   ],
+   "tris": 5216
+  },
+  "bad_windows_nocol": {
+   "materials": [
+    "glass",
+    "metal_dark",
+    "paint_white"
+   ],
+   "tris": 7957
+  }
+ },
+ "materials": {
+  "klinker": {
+   "tex": "klinker"
+  },
+  "chevron": {
+   "tex": "chevron"
+  },
+  "concrete": {
+   "tex": "concrete"
+  },
+  "stone_dark": {
+   "tex": "stone_dark"
+  },
+  "roof_flat": {
+   "tex": "roof_flat"
+  },
+  "copper": {
+   "tex": "copper",
+   "metal": 0.15
+  },
+  "copper_dark": {
+   "tex": "copper_dark",
+   "metal": 0.15
+  },
+  "ashlar": {
+   "tex": "ashlar"
+  },
+  "stone": {
+   "tex": "stone"
+  },
+  "tiles": {
+   "tex": "tiles"
+  },
+  "slate": {
+   "tex": "slate"
+  },
+  "plaster": {
+   "tex": "plaster"
+  },
+  "paint_white": {
+   "color": [
+    0.86,
+    0.86,
+    0.83
+   ],
+   "rough": 0.45
+  },
+  "glass": {
+   "color": [
+    0.11,
+    0.13,
+    0.145
+   ],
+   "rough": 0.06,
+   "metal": 0.0
+  },
+  "glass_shop": {
+   "color": [
+    0.42,
+    0.42,
+    0.4
+   ],
+   "rough": 0.12
+  },
+  "glass_dark": {
+   "color": [
+    0.022,
+    0.025,
+    0.028
+   ],
+   "rough": 0.3,
+   "metal": 0.0
+  },
+  "glass_green": {
+   "color": [
+    0.09,
+    0.25,
+    0.17
+   ],
+   "rough": 0.12,
+   "metal": 0.0
+  },
+  "gold": {
+   "color": [
+    0.95,
+    0.64,
+    0.07
+   ],
+   "metal": 0.55,
+   "rough": 0.38
+  },
+  "letter_side": {
+   "color": [
+    0.38,
+    0.08,
+    0.06
+   ],
+   "rough": 0.55
+  },
+  "metal_dark": {
+   "color": [
+    0.055,
+    0.055,
+    0.06
+   ],
+   "metal": 0.5,
+   "rough": 0.45
+  },
+  "steel": {
+   "color": [
+    0.62,
+    0.62,
+    0.63
+   ],
+   "metal": 1.0,
+   "rough": 0.3
+  },
+  "alu": {
+   "color": [
+    0.24,
+    0.25,
+    0.25
+   ],
+   "metal": 0.6,
+   "rough": 0.4
+  },
+  "lamp_glass": {
+   "color": [
+    0.16,
+    0.15,
+    0.12
+   ],
+   "rough": 0.1,
+   "emit": [
+    1.0,
+    0.78,
+    0.45
+   ],
+   "emit_strength": 0.12
+  },
+  "bronze": {
+   "color": [
+    0.16,
+    0.11,
+    0.07
+   ],
+   "metal": 0.8,
+   "rough": 0.38
+  },
+  "sign_panel": {
+   "color": [
+    0.76,
+    0.75,
+    0.72
+   ],
+   "rough": 0.7
+  },
+  "print_band": {
+   "color": [
+    0.5,
+    0.52,
+    0.52
+   ],
+   "rough": 0.3,
+   "metal": 0.2
+  }
+ },
+ "smooth": [
+  "anz_dome"
+ ],
+ "total_tris": 249903,
+ "anzeiger_tris": 191055,
+ "bounds": [
+  [
+   -547.3787231445312,
+   -2.0,
+   -365.4128112792969
+  ],
+  [
+   -485.9297180175781,
+   50.489498138427734,
+   -266.2156677246094
+  ]
+ ]
+}

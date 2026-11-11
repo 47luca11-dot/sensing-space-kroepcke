@@ -1,0 +1,61 @@
+C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\pipeline\landmarks\anzeiger\assemble.py:26: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m.use_nodes = True
+ASSEMBLE anz_detail_nocol 122062 tris 114613 verts
+ASSEMBLE anz_dome 6432 tris 3265 verts
+ASSEMBLE anz_dome_detail_nocol 10216 tris 7840 verts
+ASSEMBLE anz_letters_nocol 7455 tris 5132 verts
+ASSEMBLE anz_shell 8391 tris 7611 verts
+ASSEMBLE anz_windows_nocol 36496 tris 38768 verts
+ASSEMBLE bad_detail_nocol 19183 tris 13395 verts
+ASSEMBLE bad_letters_nocol 4532 tris 3104 verts
+ASSEMBLE bad_roof 18975 tris 12024 verts
+ASSEMBLE bad_roof_detail_nocol 2988 tris 2031 verts
+ASSEMBLE bad_shell 5216 tris 3941 verts
+ASSEMBLE bad_windows_nocol 7957 tris 8005 verts
+ASSEMBLE total tris 249903
+INFO Draco mesh compression is available, use library at C:\Program Files\Blender Foundation\Blender 5.0\5.0\scripts\addons_core\io_scene_gltf2\extern_draco.dll
+20:51:53 | INFO: Starting glTF 2.0 export
+20:51:53 | INFO: Extracting primitive: anz_detail_nocol
+20:51:53 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+20:51:53 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+20:51:53 | INFO: Primitives created: 8
+20:51:53 | INFO: Extracting primitive: anz_dome
+20:51:53 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+20:51:53 | INFO: Primitives created: 1
+20:51:53 | INFO: Extracting primitive: anz_dome_detail_nocol
+20:51:54 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+20:51:54 | INFO: Primitives created: 3
+20:51:54 | INFO: Extracting primitive: anz_letters_nocol
+20:51:54 | INFO: Primitives created: 2
+20:51:54 | INFO: Extracting primitive: anz_shell
+20:51:54 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+20:51:54 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+20:51:54 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+20:51:54 | INFO: Primitives created: 6
+20:51:54 | INFO: Extracting primitive: anz_windows_nocol
+20:51:54 | INFO: Primitives created: 2
+20:51:54 | INFO: Extracting primitive: bad_detail_nocol
+20:51:54 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+20:51:54 | INFO: Primitives created: 7
+20:51:54 | INFO: Extracting primitive: bad_letters_nocol
+20:51:54 | INFO: Primitives created: 3
+20:51:54 | INFO: Extracting primitive: bad_roof
+20:51:54 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+20:51:54 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+20:51:54 | INFO: Primitives created: 4
+20:51:54 | INFO: Extracting primitive: bad_roof_detail_nocol
+20:51:54 | INFO: Primitives created: 7
+20:51:54 | INFO: Extracting primitive: bad_shell
+20:51:55 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+20:51:55 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+20:51:55 | INFO: Primitives created: 10
+20:51:55 | INFO: Extracting primitive: bad_windows_nocol
+20:51:55 | INFO: Primitives created: 3
+20:51:55 | INFO: Finished glTF 2.0 export in 2.35073184967041 s
+
+ASSEMBLE wrote C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/data/landmarks_raw/anzeiger.glb 58301804
+Info: Saved as "anzeiger.blend"
+ASSEMBLE saved C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/landmarks/anzeiger.blend
+Blender 5.0.1 (hash a3db93c5b259 built 2025-12-16 01:32:30)
+
+Blender quit

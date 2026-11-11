@@ -1,0 +1,37 @@
+terrain vertex normals pointing up: 100.0 %
+terrain only: tris 1616618, verts 910934, open edges 204952 (total length 233591.4 m), non-manifold edges 0
+terrain + walls + skirts: tris 1825851, verts 915465, open edges 5435 (total length 8563.3 m), non-manifold edges 13
+terrain + walls + skirts + structure collision solids: tris 1832479, verts 920576, open edges 9166 (total length 22430.4 m), non-manifold edges 196
+open edges by y: below -1.0 m (skirt bottoms / pit floors): 7160  others: 2006
+terrain + walls + skirts (again): tris 1825851, verts 915465, open edges 5435 (total length 8563.3 m), non-manifold edges 13
+  boundary top?: 37 edges, 40.4 m
+  hole rim (structure attaches): 503 edges, 816.3 m
+  interior: 462 edges, 382.2 m
+  skirt bottom: 4433 edges, 7324.3 m
+  interior open edge samples (x,y,z, len, y-B): [(np.float64(-814.41), np.float64(-3.32), np.float64(95.06), np.float64(0.114), np.float64(-0.083)), (np.float64(-814.41), np.float64(-3.32), np.float64(95.06), np.float64(0.115), np.float64(-0.082)), (np.float64(-814.41), np.float64(-3.25), np.float64(95.06), np.float64(0.026), np.float64(-0.013)), (np.float64(-814.41), np.float64(-3.25), np.float64(95.06), np.float64(0.025), np.float64(-0.012)), (np.float64(-766.4), np.float64(-5.08), np.float64(-29.46), np.float64(5.083), np.float64(-2.682)), (np.float64(-766.4), np.float64(-5.08), np.float64(-29.46), np.float64(5.084), np.float64(-2.681)), (np.float64(-766.4), np.float64(-2.48), np.float64(-29.46), np.float64(0.115), np.float64(-0.083)), (np.float64(-766.4), np.float64(-2.48), np.float64(-29.46), np.float64(0.114), np.float64(-0.082)), (np.float64(-671.56), np.float64(-0.59), np.float64(-223.31), np.float64(0.114), np.float64(-0.083)), (np.float64(-671.56), np.float64(-0.59), np.float64(-223.31), np.float64(0.115), np.float64(-0.082)), (np.float64(-671.56), np.float64(-0.52), np.float64(-223.31), np.float64(0.026), np.float64(-0.013)), (np.float64(-671.56), np.float64(-0.52), np.float64(-223.31), np.float64(0.025), np.float64(-0.012))]
+  interior open edges by 10-m cell (x,z, edges, length m, max |y-B|):
+    [-70, 210] 18 15.7 0.15 dy-span 0.34
+    [170, 290] 18 15.46 0.04 dy-span 0.38
+    [-30, 290] 12 15.22 0.16 dy-span 0.36
+    [-60, -10] 10 14.89 0.01 dy-span 0.02
+    [140, 290] 20 14.51 0.14 dy-span 0.18
+    [30, 290] 12 13.89 0.08 dy-span 0.2
+    [130, 290] 18 12.92 0.14 dy-span 0.57
+    [-70, 250] 12 11.75 0.08 dy-span 0.29
+    [-70, -10] 10 11.67 0.0 dy-span 0.01
+    [230, 0] 12 11.38 0.16 dy-span 0.52
+    [-770, -30] 4 10.4 2.68 dy-span 5.2
+    [-20, 290] 10 10.04 0.14 dy-span 0.34
+    [230, 110] 8 9.57 0.87 dy-span 1.82
+    [0, -10] 6 7.99 0.02 dy-span 0.09
+    [-30, -10] 6 7.98 0.0 dy-span 0.01
+    [-350, 520] 6 7.81 0.14 dy-span 0.67
+    [-70, 240] 6 7.8 0.01 dy-span 0.05
+    [-70, 140] 4 7.73 0.01 dy-span 0.11
+    [230, 270] 6 7.66 0.15 dy-span 0.03
+    [80, -10] 6 7.66 0.01 dy-span 0.02
+    [-70, 80] 12 7.65 0.04 dy-span 0.09
+    [-70, 200] 6 7.59 0.0 dy-span 0.05
+    [-370, 540] 6 7.44 0.17 dy-span 0.58
+    [-70, 20] 6 7.41 0.08 dy-span 0.17
+    [120, 290] 11 7.33 0.07 dy-span 0.05

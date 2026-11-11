@@ -1,0 +1,61 @@
+C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\pipeline\landmarks\leineschloss\ls_blender.py:59: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new(name); m.use_nodes = True
+LS objects 15 tris 199673
+INFO Draco mesh compression is available, use library at C:\Program Files\Blender Foundation\Blender 5.0\5.0\scripts\addons_core\io_scene_gltf2\extern_draco.dll
+20:59:48 | INFO: Starting glTF 2.0 export
+20:59:48 | INFO: Extracting primitive: LS_det_LS_Edelstahl
+20:59:48 | INFO: Primitives created: 1
+20:59:48 | INFO: Extracting primitive: LS_det_LS_Granit
+20:59:48 | INFO: Primitives created: 1
+20:59:48 | INFO: Extracting primitive: LS_det_LS_Putz_weiss
+20:59:48 | INFO: Primitives created: 1
+20:59:48 | INFO: Extracting primitive: LS_det_LS_Rahmen_dunkel
+20:59:48 | INFO: Primitives created: 1
+20:59:48 | INFO: Extracting primitive: LS_det_LS_Rahmen
+20:59:48 | INFO: Primitives created: 1
+20:59:48 | INFO: Extracting primitive: LS_det_LS_Sandstein
+20:59:48 | INFO: Primitives created: 1
+20:59:48 | INFO: Extracting primitive: LS_det_LS_Zink
+20:59:48 | INFO: Primitives created: 1
+20:59:48 | INFO: Extracting primitive: LS_fine_LS_Bronze
+20:59:48 | INFO: Primitives created: 1
+20:59:48 | INFO: Extracting primitive: Inschrift
+20:59:48 | INFO: Primitives created: 1
+20:59:48 | INFO: Extracting primitive: Inschrift.001
+20:59:48 | INFO: Primitives created: 1
+20:59:48 | INFO: Extracting primitive: Inschrift.002
+20:59:48 | INFO: Primitives created: 1
+20:59:48 | INFO: Extracting primitive: Inschrift.003
+20:59:48 | INFO: Primitives created: 1
+20:59:48 | INFO: Extracting primitive: LS_main_LS_Fensterglas
+20:59:48 | INFO: Primitives created: 1
+20:59:48 | INFO: Extracting primitive: LS_main_LS_Flachdach
+20:59:48 | INFO: Primitives created: 1
+20:59:48 | INFO: Extracting primitive: LS_main_LS_Granit
+20:59:48 | INFO: Primitives created: 1
+20:59:48 | INFO: Extracting primitive: LS_main_LS_Rustika
+20:59:49 | INFO: Primitives created: 1
+20:59:49 | INFO: Extracting primitive: LS_main_LS_Sandstein
+20:59:49 | INFO: Primitives created: 1
+20:59:49 | INFO: Extracting primitive: LS_main_LS_Sandstein_Quader
+20:59:49 | INFO: Primitives created: 1
+20:59:49 | INFO: Extracting primitive: LS_main_LS_Zink
+20:59:49 | INFO: Primitives created: 1
+20:59:49 | INFO: Extracting primitive: LSI_Halbsaeule_Basis_LS_Sandstein
+20:59:49 | INFO: Primitives created: 1
+20:59:49 | INFO: Extracting primitive: LSI_Halbsaeule_Kapitell_LS_Sandstein
+20:59:49 | INFO: Primitives created: 1
+20:59:49 | INFO: Extracting primitive: LSI_Halbsaeule_Schaft_LS_Sandstein
+20:59:49 | INFO: Primitives created: 1
+20:59:49 | INFO: Extracting primitive: LSI_Saeule_Basis_LS_Sandstein
+20:59:49 | INFO: Primitives created: 1
+20:59:49 | INFO: Extracting primitive: LSI_Saeule_Kapitell_LS_Sandstein
+20:59:49 | INFO: Primitives created: 1
+20:59:49 | INFO: Extracting primitive: LSI_Saeule_Schaft_LS_Sandstein
+20:59:49 | INFO: Primitives created: 1
+20:59:49 | INFO: Finished glTF 2.0 export in 0.6275267601013184 s
+
+LS wrote C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/pipeline/landmarks/leineschloss/build/tmp/test.glb 18392000
+Blender 5.0.1 (hash a3db93c5b259 built 2025-12-16 01:32:30)
+
+Blender quit

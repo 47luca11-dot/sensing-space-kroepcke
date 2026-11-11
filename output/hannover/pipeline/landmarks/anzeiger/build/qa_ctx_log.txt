@@ -1,0 +1,66 @@
+20:59:24 | INFO: Data are loaded, start creating Blender stuff
+20:59:24 | INFO: Blender create Mesh node ground_-7_-5
+20:59:24 | INFO: glTF import finished in 0.03s
+20:59:24 | INFO: Data are loaded, start creating Blender stuff
+20:59:24 | INFO: Blender create Mesh node ground_-7_-4
+20:59:24 | INFO: glTF import finished in 0.02s
+20:59:24 | INFO: Data are loaded, start creating Blender stuff
+20:59:24 | INFO: Blender create Mesh node ground_-7_-3
+20:59:24 | INFO: glTF import finished in 0.03s
+20:59:24 | INFO: Data are loaded, start creating Blender stuff
+20:59:24 | INFO: Blender create Mesh node ground_-7_-2
+20:59:24 | INFO: glTF import finished in 0.03s
+20:59:24 | INFO: Data are loaded, start creating Blender stuff
+20:59:24 | INFO: Blender create Mesh node ground_-6_-5
+20:59:24 | INFO: glTF import finished in 0.03s
+20:59:24 | INFO: Data are loaded, start creating Blender stuff
+20:59:24 | INFO: Blender create Mesh node ground_-6_-4
+20:59:24 | INFO: glTF import finished in 0.05s
+20:59:24 | INFO: Data are loaded, start creating Blender stuff
+20:59:24 | INFO: Blender create Mesh node ground_-6_-3
+20:59:24 | INFO: glTF import finished in 0.03s
+20:59:24 | INFO: Data are loaded, start creating Blender stuff
+20:59:24 | INFO: Blender create Mesh node ground_-6_-2
+20:59:24 | INFO: glTF import finished in 0.05s
+20:59:24 | INFO: Data are loaded, start creating Blender stuff
+20:59:24 | INFO: Blender create Mesh node ground_-5_-5
+20:59:24 | INFO: glTF import finished in 0.03s
+20:59:24 | INFO: Data are loaded, start creating Blender stuff
+20:59:24 | INFO: Blender create Mesh node ground_-5_-4
+20:59:24 | INFO: glTF import finished in 0.03s
+20:59:24 | INFO: Data are loaded, start creating Blender stuff
+20:59:24 | INFO: Blender create Mesh node ground_-5_-3
+20:59:24 | INFO: glTF import finished in 0.06s
+20:59:24 | INFO: Data are loaded, start creating Blender stuff
+20:59:24 | INFO: Blender create Mesh node ground_-5_-2
+20:59:24 | INFO: glTF import finished in 0.13s
+20:59:24 | INFO: Data are loaded, start creating Blender stuff
+20:59:24 | INFO: Blender create Mesh node ground_-4_-5
+20:59:24 | INFO: glTF import finished in 0.03s
+20:59:24 | INFO: Data are loaded, start creating Blender stuff
+20:59:24 | INFO: Blender create Mesh node ground_-4_-4
+20:59:24 | INFO: glTF import finished in 0.03s
+20:59:24 | INFO: Data are loaded, start creating Blender stuff
+20:59:24 | INFO: Blender create Mesh node ground_-4_-3
+20:59:24 | INFO: glTF import finished in 0.06s
+20:59:24 | INFO: Data are loaded, start creating Blender stuff
+20:59:24 | INFO: Blender create Mesh node ground_-4_-2
+20:59:24 | INFO: glTF import finished in 0.08s
+C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\pipeline\landmarks\anzeiger\qa\qa_render.py:35: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new(mn); m.use_nodes = True
+20:59:25 | INFO: Data are loaded, start creating Blender stuff
+20:59:25 | INFO: Blender create Mesh node anz_detail_nocol
+20:59:25 | INFO: Blender create Mesh node anz_dome
+20:59:25 | INFO: Blender create Mesh node anz_dome_detail_nocol
+20:59:25 | INFO: Blender create Mesh node anz_letters_nocol
+20:59:25 | INFO: Blender create Mesh node anz_shell
+20:59:25 | INFO: Blender create Mesh node anz_windows_nocol
+20:59:25 | INFO: Blender create Mesh node bad_detail_nocol
+20:59:25 | INFO: Blender create Mesh node bad_letters_nocol
+20:59:25 | INFO: Blender create Mesh node bad_roof
+20:59:25 | INFO: Blender create Mesh node bad_roof_detail_nocol
+20:59:25 | INFO: Blender create Mesh node bad_shell
+20:59:25 | INFO: Blender create Mesh node bad_windows_nocol
+20:59:25 | INFO: glTF import finished in 0.78s
+C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\pipeline\landmarks\anzeiger\qa\qa_render.py:55: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  w = bpy.data.worlds.new('w'); sc.world = w; w.use_nodes = True

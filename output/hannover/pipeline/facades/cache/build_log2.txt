@@ -1,0 +1,2 @@
+durch Wahrzeichen ersetzt: 6 {'anzeiger': 2, 'kroepcke_center': 1, 'marktkirche': 1, 'cafe_kroepcke': 1, 'altes_rathaus': 1}
+Vorbereitung geladen 9.0 s

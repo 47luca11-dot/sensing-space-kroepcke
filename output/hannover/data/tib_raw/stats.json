@@ -1,0 +1,74 @@
+{
+ "tib_anbau": {
+  "materials": 7,
+  "tris": 6264
+ },
+ "tib_dach": {
+  "materials": 15,
+  "tris": 70822
+ },
+ "tib_eg": {
+  "materials": 37,
+  "tris": 93008
+ },
+ "tib_fassade": {
+  "materials": 4,
+  "tris": 21264
+ },
+ "tib_jalousien": {
+  "materials": 2,
+  "tris": 141032
+ },
+ "tib_og1": {
+  "materials": 33,
+  "tris": 58672
+ },
+ "tib_og2": {
+  "materials": 25,
+  "tris": 34148
+ },
+ "tib_ug1": {
+  "materials": 17,
+  "tris": 31011
+ },
+ "tib_ug2": {
+  "materials": 12,
+  "tris": 20283
+ },
+ "umgebung_baeume": {
+  "materials": 1,
+  "tris": 17970
+ },
+ "umgebung_baumstaemme": {
+  "materials": 1,
+  "tris": 496
+ },
+ "umgebung_gelaende": {
+  "materials": 1,
+  "tris": 428
+ },
+ "umgebung_gelaender": {
+  "materials": 1,
+  "tris": 204
+ },
+ "umgebung_gelaender_lichtschacht": {
+  "materials": 1,
+  "tris": 5220
+ },
+ "umgebung_gitterrost": {
+  "materials": 1,
+  "tris": 2112
+ },
+ "umgebung_kies": {
+  "materials": 1,
+  "tris": 64
+ },
+ "umgebung_nachbarbauten": {
+  "materials": 1,
+  "tris": 25688
+ },
+ "umgebung_pflanzbeet": {
+  "materials": 1,
+  "tris": 60
+ }
+}

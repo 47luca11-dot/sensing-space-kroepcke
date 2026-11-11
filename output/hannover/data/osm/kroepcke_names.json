@@ -1,0 +1,1173 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-08T19:38:12Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 59952787,
+  "lat": 52.3738655,
+  "lon": 9.7383552,
+  "tags": {
+    "name": "Kröpcke",
+    "network": "Großraum-Verkehr Hannover",
+    "operator": "infra Infrastrukturgesellschaft Region Hannover",
+    "operator:wikidata": "Q1122564",
+    "public_transport": "stop_position",
+    "railway": "stop",
+    "ref:IFOPT": "de:03241:11:1:12",
+    "ref_name": "Kröpcke (U), Hannover",
+    "subway": "yes",
+    "surveillance": "indoor",
+    "tactile_paving": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 247468369,
+  "lat": 52.3737293,
+  "lon": 9.7399823,
+  "tags": {
+    "amenity": "parking_entrance",
+    "maxheight": "2",
+    "name": "Tiefgarage Oper / Kröpcke",
+    "parking": "underground"
+  }
+},
+{
+  "type": "node",
+  "id": 265546901,
+  "lat": 52.3737757,
+  "lon": 9.7424169,
+  "tags": {
+    "bench": "yes",
+    "bin": "yes",
+    "bus": "yes",
+    "check_date:bench": "2026-03-11",
+    "covered": "no",
+    "highway": "bus_stop",
+    "lit": "yes",
+    "name": "Kröpcke / Theaterstraße",
+    "network": "Großraum-Verkehr Hannover",
+    "passenger_information_display": "no",
+    "public_transport": "platform",
+    "ref:IFOPT": "de:03241:1:1:1",
+    "shelter": "yes",
+    "tactile_paving": "no",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 290644157,
+  "lat": 52.3737821,
+  "lon": 9.7396229,
+  "tags": {
+    "amenity": "taxi",
+    "name": "Kröpcke",
+    "ref": "143",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 300811066,
+  "lat": 52.3744786,
+  "lon": 9.7391669,
+  "tags": {
+    "camera:features": "recording;zoom;panning",
+    "camera:mount": "wall",
+    "camera:recording": "yes",
+    "camera:type": "panning",
+    "image": "https://www.pd-h.polizei-nds.de/assets/image/131468",
+    "man_made": "surveillance",
+    "name": "Kröpcke",
+    "surveillance": "public",
+    "surveillance:type": "camera",
+    "surveillance:zone": "police"
+  }
+},
+{
+  "type": "node",
+  "id": 348155428,
+  "lat": 52.3744221,
+  "lon": 9.7388654,
+  "tags": {
+    "amenity": "clock",
+    "display": "analog",
+    "name": "Kröpcke-Uhr",
+    "name:de": "Kröpcke-Uhr",
+    "name:en": "Kröpcke Clock",
+    "name:etymology:wikidata": "Q884221",
+    "name:etymology:wikipedia": "de:Kröpcke",
+    "support": "pole",
+    "tourism": "attraction",
+    "visibility": "street",
+    "wheelchair": "yes",
+    "wikidata": "Q20020010",
+    "wikimedia_commons": "Category:Kröpcke-Uhr",
+    "wikipedia": "de:Kröpcke-Uhr"
+  }
+},
+{
+  "type": "node",
+  "id": 348466690,
+  "lat": 52.3739678,
+  "lon": 9.7406086,
+  "tags": {
+    "man_made": "surveillance",
+    "name": "Einfahrt Tiefgarage Oper-Kröpcke",
+    "surveillance": "outdoor"
+  }
+},
+{
+  "type": "node",
+  "id": 353115733,
+  "lat": 52.3745480,
+  "lon": 9.7380713,
+  "tags": {
+    "entrance_marker:subway": "yes",
+    "level": "0",
+    "name": "Kröpcke",
+    "public_transport": "yes",
+    "railway": "subway_entrance",
+    "ref": "B",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 353115737,
+  "lat": 52.3746831,
+  "lon": 9.7381434,
+  "tags": {
+    "entrance_marker:subway": "yes",
+    "level": "0",
+    "name": "Kröpcke",
+    "public_transport": "yes",
+    "railway": "subway_entrance",
+    "ref": "C",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 353117837,
+  "lat": 52.3740000,
+  "lon": 9.7391248,
+  "tags": {
+    "description": "Kröpcke/ Georgstraße",
+    "name": "Kröpcke",
+    "railway": "subway_entrance",
+    "ref": "D",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 353119007,
+  "lat": 52.3730008,
+  "lon": 9.7377002,
+  "tags": {
+    "description": "Kröpcke/ Platz der Weltausstellung",
+    "entrance_marker:subway": "yes",
+    "level": "0",
+    "name": "Kröpcke",
+    "public_transport": "yes",
+    "railway": "subway_entrance",
+    "ref": "H",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 353119008,
+  "lat": 52.3733690,
+  "lon": 9.7378543,
+  "tags": {
+    "description": "Kröpcke/ Karmarschstraße",
+    "level": "0",
+    "name": "Kröpcke",
+    "railway": "subway_entrance",
+    "ref": "I",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 356295402,
+  "lat": 52.3733607,
+  "lon": 9.7393597,
+  "tags": {
+    "bench": "yes",
+    "bin": "yes",
+    "bus": "yes",
+    "description": "Linie 100 fährt regelmäßig, Linie 200 unregelmäßig und Linie 267 nur bei Veranstaltungen am Maschsee.",
+    "highway": "bus_stop",
+    "kerb": "raised",
+    "kerb:approach_aid": "yes",
+    "lit": "yes",
+    "name": "Kröpcke",
+    "network": "Großraum-Verkehr Hannover",
+    "network:short": "GVH",
+    "network:wikidata": "Q1549516",
+    "network:wikipedia": "de:Großraum-Verkehr Hannover",
+    "passenger_information_display": "no",
+    "public_transport": "platform",
+    "route_ref": "100;200;267",
+    "shelter": "yes",
+    "tactile_paving": "no",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 369115138,
+  "lat": 52.3740362,
+  "lon": 9.7409270,
+  "tags": {
+    "amenity": "taxi",
+    "name": "Kröpcke",
+    "ref": "143"
+  }
+},
+{
+  "type": "node",
+  "id": 369117794,
+  "lat": 52.3725076,
+  "lon": 9.7403235,
+  "tags": {
+    "description": "Kröpcke/ Opernplatz",
+    "entrance_marker:subway": "yes",
+    "name": "Kröpcke",
+    "railway": "subway_entrance",
+    "ref": "E",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 369120348,
+  "lat": 52.3742982,
+  "lon": 9.7391475,
+  "tags": {
+    "addr:city": "Hannover",
+    "addr:country": "DE",
+    "addr:housenumber": "35",
+    "addr:postcode": "30159",
+    "addr:street": "Georgstraße",
+    "amenity": "cafe",
+    "indoor_seating": "yes",
+    "name": "Café Kröpcke",
+    "name:etymology:wikidata": "Q1616848",
+    "name:etymology:wikipedia": "de:Wilhelm Kröpcke",
+    "outdoor_seating": "yes",
+    "phone": "+49 511 32628445",
+    "toilets:wheelchair": "yes",
+    "website": "https://www.moevenpick-restaurants.com/hannover-kroepcke",
+    "wheelchair": "yes",
+    "wikidata": "Q108330656",
+    "wikimedia_commons": "Category:Café Kröpcke (Hannover)",
+    "wikipedia": "de:Café Kröpcke"
+  }
+},
+{
+  "type": "node",
+  "id": 369123005,
+  "lat": 52.3729683,
+  "lon": 9.7378934,
+  "tags": {
+    "description": "Kröpcke/ Platz der Weltausstellung",
+    "entrance_marker:subway": "yes",
+    "level": "0",
+    "name": "Kröpcke",
+    "public_transport": "yes",
+    "railway": "subway_entrance",
+    "ref": "G",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 631190812,
+  "lat": 52.3738455,
+  "lon": 9.7423698,
+  "tags": {
+    "bus": "yes",
+    "name": "Kröpcke / Theaterstraße",
+    "network": "Großraum-Verkehr Hannover",
+    "public_transport": "stop_position",
+    "ref:IFOPT": "de:03241:1:1:1"
+  }
+},
+{
+  "type": "node",
+  "id": 1402722597,
+  "lat": 52.3736833,
+  "lon": 9.7382218,
+  "tags": {
+    "check_date:wheelchair": "2026-07-03",
+    "name": "Kröpcke",
+    "railway": "subway_entrance",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1402722616,
+  "lat": 52.3730033,
+  "lon": 9.7376851,
+  "tags": {
+    "description": "Kröpcke/ Platz der Weltausstellung",
+    "entrance_marker:subway": "yes",
+    "level": "0",
+    "name": "Kröpcke",
+    "public_transport": "yes",
+    "railway": "subway_entrance",
+    "ref": "H",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 2146194917,
+  "lat": 52.3751644,
+  "lon": 9.7346317,
+  "tags": {
+    "amenity": "clock",
+    "check_date": "2024-02-17",
+    "date": "no",
+    "display": "analog",
+    "faces": "4",
+    "heritage": "4",
+    "heritage:operator": "nld",
+    "ref:nld": "30734715",
+    "support": "ground",
+    "visibility": "street",
+    "wikidata": "Q114903618",
+    "wikimedia_commons": "File:Falke-Uhr Georgstrasse Schmiedestrasse Mitte Hannover Germany 02.jpg"
+  }
+},
+{
+  "type": "node",
+  "id": 2777045612,
+  "lat": 52.3739546,
+  "lon": 9.7381725,
+  "tags": {
+    "description": "Kröpcke/ Karmarschstraße",
+    "level": "0",
+    "name": "Kröpcke",
+    "railway": "subway_entrance",
+    "ref": "A",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 2777045613,
+  "lat": 52.3739582,
+  "lon": 9.7381518,
+  "tags": {
+    "description": "Kröpcke/ Karmarschstraße",
+    "level": "0",
+    "name": "Kröpcke",
+    "railway": "subway_entrance",
+    "ref": "A",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 2884014577,
+  "lat": 52.3743772,
+  "lon": 9.7399117,
+  "tags": {
+    "addr:city": "Hannover",
+    "addr:housenumber": "13/14",
+    "addr:postcode": "30159",
+    "addr:street": "Rathenaustraße",
+    "amenity": "doctors",
+    "email": "info.augenaerzte-kroepcke@osg.de",
+    "health_facility:type": "office",
+    "healthcare": "doctor",
+    "healthcare:speciality": "ophthalmology",
+    "name": "Augenärzte am Kröpcke",
+    "opening_hours": "Mo-Th 08:00-12:00, 15:00-18:00; Fr 08:00-14:00",
+    "operator": "Augenärzte am Kröpcke GmbH",
+    "phone": "+49 511 320569",
+    "website": "https://augenaerzte-kroepcke.de/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3386016848,
+  "lat": 52.3734330,
+  "lon": 9.7395039,
+  "tags": {
+    "name": "Kröpcke",
+    "network": "Großraum-Verkehr Hannover",
+    "operator": "infra Infrastrukturgesellschaft Region Hannover",
+    "operator:wikidata": "Q1122564",
+    "public_transport": "stop_position",
+    "railway": "stop",
+    "ref:IFOPT": "de:03241:11:2:14",
+    "ref_name": "Kröpcke (U), Hannover",
+    "subway": "yes",
+    "surveillance": "indoor",
+    "tactile_paving": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3390878886,
+  "lat": 52.3724307,
+  "lon": 9.7402030,
+  "tags": {
+    "description": "Kröpcke/ Windmühlenstraße",
+    "entrance_marker:subway": "yes",
+    "name": "Kröpcke",
+    "railway": "subway_entrance",
+    "ref": "F",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 3390878888,
+  "lat": 52.3734070,
+  "lon": 9.7394170,
+  "tags": {
+    "name": "Kröpcke",
+    "network": "Großraum-Verkehr Hannover",
+    "operator": "infra Infrastrukturgesellschaft Region Hannover",
+    "operator:wikidata": "Q1122564",
+    "public_transport": "stop_position",
+    "railway": "stop",
+    "ref:IFOPT": "de:03241:11:3:15",
+    "subway": "yes",
+    "surveillance": "indoor",
+    "tactile_paving": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3390878889,
+  "lat": 52.3734085,
+  "lon": 9.7394222,
+  "tags": {
+    "name": "Kröpcke",
+    "network": "Großraum-Verkehr Hannover",
+    "operator": "infra Infrastrukturgesellschaft Region Hannover",
+    "operator:wikidata": "Q1122564",
+    "public_transport": "stop_position",
+    "railway": "stop",
+    "ref:IFOPT": "de:03241:11:2:13",
+    "ref_name": "Kröpcke (U), Hannover",
+    "subway": "yes",
+    "surveillance": "indoor",
+    "tactile_paving": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3392443085,
+  "lat": 52.3738752,
+  "lon": 9.7382843,
+  "tags": {
+    "level": "-2",
+    "name": "Kröpcke",
+    "network": "Großraum-Verkehr Hannover",
+    "network:short": "GVH",
+    "operator": "infra Infrastrukturgesellschaft Region Hannover",
+    "operator:wikidata": "Q1122564",
+    "public_transport": "stop_position",
+    "railway": "stop",
+    "ref:IFOPT": "de:03241:11:1:11",
+    "ref_name": "Kröpcke (U), Hannover",
+    "subway": "yes",
+    "surveillance": "indoor",
+    "tactile_paving": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3392443086,
+  "lat": 52.3734343,
+  "lon": 9.7395083,
+  "tags": {
+    "name": "Kröpcke",
+    "network": "Großraum-Verkehr Hannover",
+    "operator": "infra Infrastrukturgesellschaft Region Hannover",
+    "operator:wikidata": "Q1122564",
+    "public_transport": "stop_position",
+    "railway": "stop",
+    "ref:IFOPT": "de:03241:11:3:16",
+    "ref_name": "Kröpcke (U), Hannover",
+    "subway": "yes",
+    "surveillance": "indoor",
+    "tactile_paving": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3392490912,
+  "lat": 52.3741403,
+  "lon": 9.7382482,
+  "tags": {
+    "check_date:wheelchair": "2026-07-03",
+    "entrance_marker:subway": "yes",
+    "highway": "elevator",
+    "indoor": "yes",
+    "level": "-2;-1;0",
+    "name": "Kröpcke",
+    "railway": "subway_entrance",
+    "ref": "Kr.80A",
+    "subway_entrance": "subway",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4357261216,
+  "lat": 52.3741963,
+  "lon": 9.7385645,
+  "tags": {
+    "name": "Kröpcke",
+    "platforms": "2",
+    "public_transport": "station",
+    "railway": "station",
+    "station": "subway",
+    "subway": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q14912329",
+    "wikimedia_commons": "Category:Underground_light_rail_station_Kröpcke",
+    "wikipedia": "de:U-Bahn-Station Kröpcke"
+  }
+},
+{
+  "type": "node",
+  "id": 5914618675,
+  "lat": 52.3733777,
+  "lon": 9.7394632,
+  "tags": {
+    "bus": "yes",
+    "highway": "bus_stop",
+    "name": "Kröpcke",
+    "network": "Großraum-Verkehr Hannover",
+    "network:short": "GVH",
+    "network:wikidata": "Q1549516",
+    "network:wikipedia": "de:Großraum-Verkehr Hannover",
+    "operator": "infra Infrastrukturgesellschaft Region Hannover",
+    "operator:wikidata": "Q1122564",
+    "public_transport": "stop_position",
+    "ref:IFOPT": "de:03241:11:4:18"
+  }
+},
+{
+  "type": "node",
+  "id": 6349524792,
+  "lat": 52.3763173,
+  "lon": 9.7410780,
+  "tags": {
+    "amenity": "clock",
+    "check_date": "2023-03-23",
+    "direction": "220",
+    "display": "analog",
+    "faces": "1",
+    "indoor": "no",
+    "support": "wall_mounted",
+    "visibility": "area"
+  }
+},
+{
+  "type": "node",
+  "id": 6349524793,
+  "lat": 52.3764852,
+  "lon": 9.7407249,
+  "tags": {
+    "amenity": "clock",
+    "check_date": "2023-03-23",
+    "direction": "220",
+    "display": "analog",
+    "faces": "1",
+    "indoor": "yes",
+    "support": "wall_mounted",
+    "visibility": "area"
+  }
+},
+{
+  "type": "node",
+  "id": 7471212816,
+  "lat": 52.3747171,
+  "lon": 9.7391103,
+  "tags": {
+    "addr:city": "Hannover",
+    "addr:country": "DE",
+    "addr:housenumber": "2",
+    "addr:postcode": "30159",
+    "addr:street": "Bahnhofstraße",
+    "amenity": "doctors",
+    "check_date:opening_hours": "2022-08-17",
+    "email": "info@allmak.de",
+    "fax": "+49 511 321536",
+    "healthcare": "doctor",
+    "healthcare:speciality": "general",
+    "name": "Allgemeinmedizin am Kröpcke",
+    "opening_hours": "Mo 08:00-13:00,15:00-18:00; Tu 08:00-13:00,14:00-16:00; We 08:00-13:00; Th 08:00-13:00,15:00-19:00; Fr 08:00-14:00",
+    "operator": "Dr. med. Christian Wichers",
+    "phone": "+49 511 306006",
+    "website": "https://allmak.de",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11524680566,
+  "lat": 52.3739684,
+  "lon": 9.7409731,
+  "tags": {
+    "amenity": "clock",
+    "display": "analog",
+    "faces": "4",
+    "support": "pole",
+    "visibility": "street"
+  }
+},
+{
+  "type": "node",
+  "id": 11626335099,
+  "lat": 52.3758709,
+  "lon": 9.7384778,
+  "tags": {
+    "amenity": "clock",
+    "display": "analog",
+    "faces": "4",
+    "support": "pole",
+    "visibility": "street"
+  }
+},
+{
+  "type": "node",
+  "id": 13723649107,
+  "lat": 52.3764453,
+  "lon": 9.7418400,
+  "tags": {
+    "amenity": "clock",
+    "check_date": "2026-04-11",
+    "level": "1"
+  }
+},
+{
+  "type": "node",
+  "id": 13990437530,
+  "lat": 52.3765951,
+  "lon": 9.7420251,
+  "tags": {
+    "amenity": "clock"
+  }
+},
+{
+  "type": "node",
+  "id": 14016075187,
+  "lat": 52.3763204,
+  "lon": 9.7411157,
+  "tags": {
+    "amenity": "clock",
+    "check_date": "2023-03-23",
+    "direction": "130",
+    "display": "analog",
+    "faces": "1",
+    "indoor": "no",
+    "support": "wall_mounted",
+    "visibility": "area"
+  }
+},
+{
+  "type": "way",
+  "id": 4712898,
+  "center": {
+    "lat": 52.3743775,
+    "lon": 9.7387657
+  },
+  "tags": {
+    "area": "yes",
+    "bicycle:conditional": "yes @ (19:00-11:00)",
+    "highway": "pedestrian",
+    "lit": "yes",
+    "name": "Kröpcke",
+    "name:ar": "كروبكه",
+    "name:arz": "كروبكه",
+    "name:de": "Kröpcke",
+    "name:etymology:wikidata": "Q108330656",
+    "name:etymology:wikipedia": "de:Café Kröpcke",
+    "name:ko": "크뢰프케",
+    "name:ru": "Крёпке",
+    "smoothness": "excellent",
+    "start_date": "1843",
+    "surface": "paving_stones",
+    "wikidata": "Q884221",
+    "wikimedia_commons": "Category:Kröpcke (Hannover)",
+    "wikipedia": "de:Kröpcke"
+  }
+},
+{
+  "type": "way",
+  "id": 31285980,
+  "center": {
+    "lat": 52.3742614,
+    "lon": 9.7400315
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "footway",
+    "lit": "yes",
+    "name": "Kröpckepassage",
+    "name:etymology:wikidata": "Q884221",
+    "surface": "paving_stones",
+    "vehicle": "no",
+    "wheelchair": "yes",
+    "width": "5.4",
+    "wikidata": "Q104092422"
+  }
+},
+{
+  "type": "way",
+  "id": 68830787,
+  "center": {
+    "lat": 52.3744937,
+    "lon": 9.7385316
+  },
+  "tags": {
+    "bicycle": "no",
+    "bicycle:conditional": "yes @ (19:00-11:00)",
+    "highway": "pedestrian",
+    "level": "0",
+    "lit": "yes",
+    "name": "Kröpcke",
+    "name:etymology:wikidata": "Q108330656",
+    "name:etymology:wikipedia": "de:Café Kröpcke",
+    "smoothness": "excellent",
+    "surface": "paving_stones",
+    "vehicle": "no",
+    "vehicle:conditional": "delivery @ (Mo-Fr 06:00-11:00,19:00-21:00; Sa 06:00-09:30)",
+    "wheelchair": "yes",
+    "wikidata": "Q884221",
+    "wikimedia_commons": "Category:Kröpcke (Hannover)",
+    "wikipedia": "de:Kröpcke"
+  }
+},
+{
+  "type": "way",
+  "id": 126562329,
+  "center": {
+    "lat": 52.3737639,
+    "lon": 9.7385510
+  },
+  "tags": {
+    "building": "retail",
+    "name": "Kröpcke-Center",
+    "operator": "Union Investment",
+    "wikipedia": "de:Kröpcke#Kröpcke-Center"
+  }
+},
+{
+  "type": "way",
+  "id": 186296481,
+  "center": {
+    "lat": 52.3745367,
+    "lon": 9.7403522
+  },
+  "tags": {
+    "highway": "corridor",
+    "indoor": "yes",
+    "level": "0",
+    "name": "Kröpckepassage",
+    "name:etymology:wikidata": "Q884221",
+    "surface": "asphalt",
+    "wheelchair": "yes",
+    "width": "5.4",
+    "wikidata": "Q104092422"
+  }
+},
+{
+  "type": "way",
+  "id": 221845350,
+  "center": {
+    "lat": 52.3731027,
+    "lon": 9.7402584
+  },
+  "tags": {
+    "access": "yes",
+    "amenity": "parking",
+    "capacity": "505",
+    "contact:phone": "+49 511 367090",
+    "fee": "yes",
+    "layer": "-1",
+    "maxheight": "2",
+    "name": "Tiefgarage Oper / Kröpcke",
+    "opening_hours": "24/7",
+    "parking": "underground",
+    "wheelchair": "yes",
+    "wheelchair:description": "automatische Türen, Fahrstuhl"
+  }
+},
+{
+  "type": "way",
+  "id": 253969513,
+  "center": {
+    "lat": 52.3746403,
+    "lon": 9.7406610
+  },
+  "tags": {
+    "foot": "yes",
+    "highway": "footway",
+    "lit": "yes",
+    "name": "Kröpckepassage",
+    "name:etymology:wikidata": "Q884221",
+    "smoothness": "excellent",
+    "surface": "paving_stones",
+    "vehicle": "no",
+    "wheelchair": "yes",
+    "width": "5.4",
+    "wikidata": "Q104092422"
+  }
+},
+{
+  "type": "way",
+  "id": 331531683,
+  "center": {
+    "lat": 52.3734256,
+    "lon": 9.7396263
+  },
+  "tags": {
+    "area": "yes",
+    "indoor": "yes",
+    "level": "-2",
+    "name": "Kröpcke",
+    "network": "Großraum-Verkehr Hannover",
+    "operator": "infra Infrastrukturgesellschaft Region Hannover",
+    "operator:wikidata": "Q1122564",
+    "public_transport": "platform",
+    "railway": "platform",
+    "ref_name": "Kröpcke (U), Hannover",
+    "start_date": "1975-09-26",
+    "wheelchair": "yes",
+    "wikidata": "Q14912329",
+    "wikimedia_commons": "Category:U-Bahn-Station Kröpcke",
+    "wikipedia": "de:U-Bahn-Station Kröpcke"
+  }
+},
+{
+  "type": "way",
+  "id": 331531684,
+  "center": {
+    "lat": 52.3733963,
+    "lon": 9.7392577
+  },
+  "tags": {
+    "area": "yes",
+    "bench": "yes",
+    "bin": "yes",
+    "indoor": "yes",
+    "level": "-4",
+    "name": "Kröpcke",
+    "network": "Großraum-Verkehr Hannover",
+    "operator": "infra Infrastrukturgesellschaft Region Hannover",
+    "operator:wikidata": "Q1122564",
+    "public_transport": "platform",
+    "railway": "platform",
+    "ref_name": "Kröpcke (U), Hannover",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 331531685,
+  "center": {
+    "lat": 52.3735522,
+    "lon": 9.7390751
+  },
+  "tags": {
+    "area": "yes",
+    "bench": "yes",
+    "bin": "yes",
+    "bus": "yes",
+    "indoor": "yes",
+    "level": "-2",
+    "name": "Kröpcke",
+    "network": "Großraum-Verkehr Hannover",
+    "operator": "infra Infrastrukturgesellschaft Region Hannover",
+    "operator:wikidata": "Q1122564",
+    "public_transport": "platform",
+    "railway": "platform",
+    "ref_name": "Kröpcke (U), Hannover",
+    "tactile_paving": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 331531688,
+  "center": {
+    "lat": 52.3738701,
+    "lon": 9.7382179
+  },
+  "tags": {
+    "area": "yes",
+    "bench": "yes",
+    "bin": "yes",
+    "indoor": "yes",
+    "level": "-2",
+    "name": "Kröpcke",
+    "network": "Großraum-Verkehr Hannover",
+    "network:short": "GVH",
+    "operator": "infra Infrastrukturgesellschaft Region Hannover",
+    "operator:wikidata": "Q1122564",
+    "public_transport": "platform",
+    "railway": "platform",
+    "ref_name": "Kröpcke (U), Hannover",
+    "tactile_paving": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 331531689,
+  "center": {
+    "lat": 52.3734976,
+    "lon": 9.7395489
+  },
+  "tags": {
+    "area": "yes",
+    "indoor": "yes",
+    "level": "-4",
+    "name": "Kröpcke",
+    "network": "Großraum-Verkehr Hannover",
+    "operator": "infra Infrastrukturgesellschaft Region Hannover",
+    "operator:wikidata": "Q1122564",
+    "public_transport": "platform",
+    "railway": "platform",
+    "ref_name": "Kröpcke (U), Hannover",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 358971594,
+  "center": {
+    "lat": 52.3744940,
+    "lon": 9.7384478
+  },
+  "tags": {
+    "bicycle": "no",
+    "bicycle:conditional": "yes @ (19:00-11:00)",
+    "highway": "pedestrian",
+    "level": "0",
+    "lit": "yes",
+    "name": "Kröpcke",
+    "name:etymology:wikidata": "Q108330656",
+    "name:etymology:wikipedia": "de:Café Kröpcke",
+    "smoothness": "excellent",
+    "surface": "paving_stones",
+    "vehicle": "no",
+    "vehicle:conditional": "delivery @ (Mo-Fr 06:00-11:00,19:00-21:00; Sa 06:00-09:30)",
+    "wheelchair": "yes",
+    "wikidata": "Q884221",
+    "wikimedia_commons": "Category:Kröpcke (Hannover)",
+    "wikipedia": "de:Kröpcke"
+  }
+},
+{
+  "type": "way",
+  "id": 362627912,
+  "center": {
+    "lat": 52.3744389,
+    "lon": 9.7385323
+  },
+  "tags": {
+    "highway": "pedestrian",
+    "indoor": "yes",
+    "level": "-1",
+    "lit": "yes",
+    "name": "Kröpcke",
+    "smoothness": "excellent",
+    "surface": "paving_stones",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 362628008,
+  "center": {
+    "lat": 52.3741818,
+    "lon": 9.7384012
+  },
+  "tags": {
+    "highway": "pedestrian",
+    "indoor": "yes",
+    "level": "-1",
+    "name": "Kröpcke",
+    "surface": "paving_stones",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 916814564,
+  "center": {
+    "lat": 52.3743353,
+    "lon": 9.7400769
+  },
+  "tags": {
+    "highway": "corridor",
+    "indoor": "yes",
+    "level": "0",
+    "lit": "yes",
+    "name": "Kröpckepassage",
+    "name:etymology:wikidata": "Q884221",
+    "surface": "paving_stones",
+    "wheelchair": "yes",
+    "width": "5.4",
+    "wikidata": "Q104092422"
+  }
+},
+{
+  "type": "relation",
+  "id": 88720,
+  "center": {
+    "lat": 52.3583342,
+    "lon": 9.7469583
+  },
+  "tags": {
+    "colour": "#54b16f",
+    "description": "Diese Linie fährt nur bei Veranstaltungen.",
+    "from": "Kröpcke",
+    "name": "Bus 267: Kröpcke → Maschsee",
+    "operator": "Üstra Hannoversche Verkehrsbetriebe AG",
+    "public_transport:version": "2",
+    "ref": "267",
+    "route": "bus",
+    "to": "Maschsee / Strandbad",
+    "type": "route",
+    "via": "Aegidientorplatz"
+  }
+},
+{
+  "type": "relation",
+  "id": 88771,
+  "center": {
+    "lat": 52.3735569,
+    "lon": 9.7400510
+  },
+  "tags": {
+    "name": "Kröpcke",
+    "name:etymology:wikidata": "Q884221",
+    "name:etymology:wikipedia": "de:Kröpcke",
+    "network": "Großraum-Verkehr Hannover",
+    "public_transport": "stop_area",
+    "type": "public_transport"
+  }
+},
+{
+  "type": "relation",
+  "id": 9373259,
+  "center": {
+    "lat": 52.3583280,
+    "lon": 9.7475449
+  },
+  "tags": {
+    "colour": "#54b16f",
+    "description": "Diese Linie fährt nur bei Veranstaltungen.",
+    "from": "Maschsee / Strandbad",
+    "name": "Bus 267: Maschsee → Kröpcke",
+    "operator": "Üstra Hannoversche Verkehrsbetriebe AG",
+    "public_transport:version": "2",
+    "ref": "267",
+    "route": "bus",
+    "to": "Kröpcke",
+    "type": "route",
+    "via": "Aegidientorplatz"
+  }
+},
+{
+  "type": "relation",
+  "id": 9865927,
+  "center": {
+    "lat": 52.3709027,
+    "lon": 9.7021501
+  },
+  "tags": {
+    "colour": "#ec9938",
+    "from": "Kröpcke",
+    "name": "Bus 120: Kröpcke → Ahlem",
+    "network": "Großraum-Verkehr Hannover",
+    "network:short": "GVH",
+    "network:wikidata": "Q1549516",
+    "network:wikipedia": "de:Großraum-Verkehr Hannover",
+    "operator": "ÜSTRA Hannoversche Verkehrsbetriebe AG",
+    "public_transport:version": "2",
+    "ref": "120",
+    "route": "bus",
+    "to": "Ahlem",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 10372747,
+  "center": {
+    "lat": 52.3386041,
+    "lon": 9.9152866
+  },
+  "tags": {
+    "colour": "#CDAD00",
+    "from": "Kröpcke",
+    "name": "Linie 800: Kröpcke → Mehrum",
+    "network": "Großraum-Verkehr Hannover",
+    "network:short": "GVH",
+    "network:wikidata": "Q1549516",
+    "network:wikipedia": "de:Großraum-Verkehr Hannover",
+    "operator": "ÜSTRA Hannoversche Verkehrsbetriebe AG",
+    "public_transport:version": "2",
+    "ref": "800",
+    "route": "bus",
+    "to": "Mehrum/Ortsmitte",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 12008366,
+  "center": {
+    "lat": 52.3389450,
+    "lon": 9.9152123
+  },
+  "tags": {
+    "colour": "#35CCF6FF",
+    "from": "Mehrum/Ortsmitte",
+    "name": "Linie 800: Mehrum → Kröpcke",
+    "network": "Großraum-Verkehr Hannover",
+    "network:short": "GVH",
+    "network:wikidata": "Q1549516",
+    "network:wikipedia": "de:Großraum-Verkehr Hannover",
+    "operator": "ÜSTRA Hannoversche Verkehrsbetriebe AG",
+    "public_transport:version": "2",
+    "ref": "800",
+    "route": "bus",
+    "to": "Kröpcke",
+    "type": "route"
+  }
+}
+
+  ]
+}

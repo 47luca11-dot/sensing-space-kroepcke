@@ -1,0 +1,220 @@
+{
+ "Schwelle Suedportal": {
+  "hits": 9963,
+  "backface": 1,
+  "backface_by": {
+   "MK_wall_Backstein": 1
+  },
+  "stacked": 0,
+  "stacked_by": {},
+  "stacked_at": [],
+  "back_at": [
+   [
+    -211.47,
+    3.08,
+    302.26
+   ]
+  ]
+ },
+ "Schwelle Nordportal": {
+  "hits": 11298,
+  "backface": 0,
+  "backface_by": {},
+  "stacked": 0,
+  "stacked_by": {},
+  "stacked_at": [],
+  "back_at": []
+ },
+ "Suedportal Bogen": {
+  "hits": 18189,
+  "backface": 1,
+  "backface_by": {
+   "MK_wall_Backstein": 1
+  },
+  "stacked": 0,
+  "stacked_by": {},
+  "stacked_at": [],
+  "back_at": [
+   [
+    -211.23,
+    3.85,
+    302.3
+   ]
+  ]
+ },
+ "Westportal Vorhalle": {
+  "hits": 18996,
+  "backface": 4,
+  "backface_by": {
+   "MK_det_Sandstein_nocol": 1,
+   "MK_det_Bronze_nocol": 2,
+   "MK_det_Sandstein_dunkel_nocol": 1
+  },
+  "stacked": 0,
+  "stacked_by": {},
+  "stacked_at": [],
+  "back_at": [
+   [
+    -272.67,
+    6.14,
+    297.96
+   ],
+   [
+    -257.96,
+    4.36,
+    311.13
+   ],
+   [
+    -258.65,
+    3.45,
+    310.93
+   ],
+   [
+    -271.93,
+    8.07,
+    297.73
+   ]
+  ]
+ },
+ "Westportal Figuren": {
+  "hits": 18858,
+  "backface": 1,
+  "backface_by": {
+   "MK_det_Sandstein_dunkel_nocol": 1
+  },
+  "stacked": 0,
+  "stacked_by": {},
+  "stacked_at": [],
+  "back_at": [
+   [
+    -272.05,
+    4.88,
+    297.62
+   ]
+  ]
+ },
+ "Laterne": {
+  "hits": 10936,
+  "backface": 0,
+  "backface_by": {},
+  "stacked": 0,
+  "stacked_by": {},
+  "stacked_at": [],
+  "back_at": []
+ },
+ "Turmecke SW Gurt": {
+  "hits": 12735,
+  "backface": 0,
+  "backface_by": {},
+  "stacked": 0,
+  "stacked_by": {},
+  "stacked_at": [],
+  "back_at": []
+ },
+ "Turmecke NO Gurt": {
+  "hits": 9241,
+  "backface": 0,
+  "backface_by": {},
+  "stacked": 0,
+  "stacked_by": {},
+  "stacked_at": [],
+  "back_at": []
+ },
+ "Turmecke NW Gurt": {
+  "hits": 20631,
+  "backface": 0,
+  "backface_by": {},
+  "stacked": 0,
+  "stacked_by": {},
+  "stacked_at": [],
+  "back_at": []
+ },
+ "Sohlbank Nordfenster": {
+  "hits": 11206,
+  "backface": 0,
+  "backface_by": {},
+  "stacked": 0,
+  "stacked_by": {},
+  "stacked_at": [],
+  "back_at": []
+ },
+ "Sohlbank Suedfenster": {
+  "hits": 15328,
+  "backface": 0,
+  "backface_by": {},
+  "stacked": 0,
+  "stacked_by": {},
+  "stacked_at": [],
+  "back_at": []
+ },
+ "Lueftungsziegel": {
+  "hits": 11974,
+  "backface": 0,
+  "backface_by": {},
+  "stacked": 0,
+  "stacked_by": {},
+  "stacked_at": [],
+  "back_at": []
+ },
+ "Uhr Sued": {
+  "hits": 16690,
+  "backface": 0,
+  "backface_by": {},
+  "stacked": 0,
+  "stacked_by": {},
+  "stacked_at": [],
+  "back_at": []
+ },
+ "Lutherdenkmal": {
+  "hits": 16435,
+  "backface": 0,
+  "backface_by": {},
+  "stacked": 0,
+  "stacked_by": {},
+  "stacked_at": [],
+  "back_at": []
+ },
+ "Reliefs Nord": {
+  "hits": 11060,
+  "backface": 0,
+  "backface_by": {},
+  "stacked": 0,
+  "stacked_by": {},
+  "stacked_at": [],
+  "back_at": []
+ },
+ "Barock-Epitaph": {
+  "hits": 22862,
+  "backface": 4,
+  "backface_by": {
+   "MK_det_Sandstein_dunkel_nocol": 2,
+   "MK_det_Bronze_nocol": 1,
+   "MK_fine_Sandstein_dunkel_nocol_noshadow": 1
+  },
+  "stacked": 0,
+  "stacked_by": {},
+  "stacked_at": [],
+  "back_at": [
+   [
+    -271.39,
+    7.81,
+    303.98
+   ],
+   [
+    -271.05,
+    8.05,
+    303.88
+   ],
+   [
+    -258.64,
+    4.31,
+    310.85
+   ],
+   [
+    -272.47,
+    7.91,
+    297.84
+   ]
+  ]
+ }
+}

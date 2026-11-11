@@ -1,0 +1,29 @@
+CAFE pavement at portal -0.292
+CAFE tris total 263485
+CAFE vault shells: verts 10588 faces 20504 non-manifold edges 0
+CAFE export nodes 38 tris 263565
+wrote C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/data/landmarks_replace/cafe_kroepcke.json 21 pts
+info: prune: Removed types... Accessor (117)
+info: prune: Removed types... Accessor (41)
+info: cafe_kroepcke.glb (10.22 MB) → cafe_kroepcke.glb (1.95 MB)
+-rw-r--r-- 1 luca 197609 10221460 Nov  9 00:00 C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/data/landmarks_raw/cafe_kroepcke.glb
+-rw-r--r-- 1 luca 197609  1951456 Nov  9 00:00 C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/web/assets/city/landmarks/cafe_kroepcke.glb
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_cafe_ref.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_cafe_ref_day.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_cafe_foto2016.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_cafe_platz.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_cafe_clock.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_cafe_aerial.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_cafe_aerial_s.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_cafe_top.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_cafe_entrance.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_cafe_south.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_cafe_north.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_cafe_roof_detail.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_cafe_roof_junction.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_cafe_smallarches.png
+wrote C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_cafe_vergleich_2021.png (2412, 944)
+wrote C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_cafe_vergleich_2016.png (2412, 944)
+wrote C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_cafe_vergleich_2022.png (3212, 944)
+wrote C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_cafe_vergleich_opernplatz.png (3106, 944)
+done

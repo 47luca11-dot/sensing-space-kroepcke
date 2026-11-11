@@ -1,0 +1,30 @@
+BUILD tris 249903 (anzeiger 191055, goseriedebad 58848), removed degenerate 6, bounds [-547.38   -2.   -365.41] .. [-485.93   50.49 -266.22], 9.4s
+   anz_detail_nocol 122062 ['glass_dark', 'glass_shop', 'klinker', 'lamp_glass', 'metal_dark', 'sign_panel', 'steel', 'stone_dark']
+   anz_dome 6432 ['copper']
+rays hit 352538, back-face first hits 53 (0.015%), real see-through (no front face within 12 cm behind) 32
+letters: 4497 front faces tested, 0 buried (inside a wall) []
+PERIMETER rays 13296, failing 0 (misses 0, back-face first 0)
+GROUND upward faces too close to / partly under the ground: 0 (0.00 m2)
+z-fight pairs 20, total overlap m2 0.008
+ASSEMBLE total tris 249903
+ASSEMBLE wrote C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/data/landmarks_raw/anzeiger.glb 58301804
+wrote C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/data/landmarks_replace/anzeiger.json [47, 48] ['ID_6388af31-4867-3e8b-b3dd-1f30ff2b3d7c', 'ID_5ea871fc-25a3-3730-b301-1be715d487a0'] ymax 55.49
+-rw-r--r-- 1 luca 197609 58301804 Nov 10 20:51 C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/data/landmarks_raw/anzeiger.glb
+-rw-r--r-- 1 luca 197609  6478864 Nov 10 20:56 C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/web/assets/city/landmarks/anzeiger.glb
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_front.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_gose.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_square_ne.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_dome_e.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_aerial_se.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_aerial_nw.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_portals.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_crown.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_lookup.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_bay_close.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_kestner.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_west.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_portal_eye.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_lightwell.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_north_ne.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_roofs_top.png
+done

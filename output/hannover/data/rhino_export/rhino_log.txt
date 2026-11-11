@@ -1,0 +1,18 @@
+doc C:\Users\luca\Downloads\Opernplatz_Kiosk+Umgebung-Detail_3D_v1.3dm objects 52070
+meshes ensured 33639 1.7 s
+groups {'kiosk': 31795, 'bldg_roof': 480, 'bldg_base': 146, 'bldg_walls': 150, 'bldg_openings': 420, 'landmark_opernhaus': 21, 'green_trees': 101, 'street_furniture': 199, 'street': 58, 'landmark_tiefgarage_pavillon': 62, 'landmark_mahnmal': 35, 'ground': 57, 'green': 44, 'fix': 56}
+export kiosk 31795 True 14309600 4.3 s
+export bldg_roof 480 True 7833504 1.0 s
+export bldg_base 146 True 671436 0.4 s
+export bldg_walls 150 True 3292984 0.4 s
+export bldg_openings 420 True 60840000 1.2 s
+export landmark_opernhaus 21 True 8566988 0.5 s
+export green_trees 101 True 7124792 7.5 s
+export street_furniture 199 True 11865716 0.8 s
+export street 58 True 3481624 2.8 s
+export landmark_tiefgarage_pavillon 62 True 378784 0.4 s
+export landmark_mahnmal 35 True 195300 0.4 s
+export ground 57 True 750016 2.3 s
+export green 44 True 888764 0.5 s
+export fix 56 True 69820 0.4 s
+DONE

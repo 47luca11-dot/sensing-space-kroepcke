@@ -1,0 +1,17 @@
+{
+ "bldg_base": 1265,
+ "bldg_openings": 106920,
+ "bldg_roof": 15705,
+ "bldg_walls": 8896,
+ "d0_windows": 0,
+ "fix": 124,
+ "green": 0,
+ "green_trees": 0,
+ "ground": 0,
+ "kiosk": 0,
+ "landmark_mahnmal": 0,
+ "landmark_opernhaus": 0,
+ "landmark_tiefgarage_pavillon": 0,
+ "street": 0,
+ "street_furniture": 0
+}

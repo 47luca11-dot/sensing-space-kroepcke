@@ -1,0 +1,232 @@
+{
+ "walls_checked": 26496,
+ "wall_rays": 734941,
+ "wall_fail": 11,
+ "windows": 137176,
+ "window_fail": 5,
+ "fail_examples": [
+  {
+   "type": "wall",
+   "bldg": "ID_25f8a0da-8323-3c10-ad45-95d51597231d",
+   "wall": 387,
+   "p": [
+    -34.79,
+    10.22,
+    -344.0
+   ],
+   "dist": 78.53,
+   "front": true
+  },
+  {
+   "type": "wall",
+   "bldg": "ID_9105404d-654c-3b29-9e3c-eb154e206077",
+   "wall": 24,
+   "p": [
+    -230.77,
+    8.72,
+    754.11
+   ],
+   "dist": 15.97,
+   "front": true
+  },
+  {
+   "type": "wall",
+   "bldg": "ID_79d75fb8-2b75-3928-ad1d-1e419ea70885",
+   "wall": 7,
+   "p": [
+    -342.81,
+    11.69,
+    -360.12
+   ],
+   "dist": 31.31,
+   "front": true
+  },
+  {
+   "type": "wall",
+   "bldg": "ID_79d75fb8-2b75-3928-ad1d-1e419ea70885",
+   "wall": 7,
+   "p": [
+    -342.32,
+    11.69,
+    -358.97
+   ],
+   "dist": 30.65,
+   "front": true
+  },
+  {
+   "type": "wall",
+   "bldg": "ID_9850fd33-58c8-3cc6-bffc-a396527794b2",
+   "wall": 36,
+   "p": [
+    -422.04,
+    6.09,
+    108.5
+   ],
+   "dist": 41.88,
+   "front": true
+  },
+  {
+   "type": "wall",
+   "bldg": "ID_b150f6c8-2886-3ae9-b09f-044416be3d53",
+   "wall": 3,
+   "p": [
+    -446.37,
+    0.71,
+    243.39
+   ],
+   "dist": 7.14,
+   "front": true
+  },
+  {
+   "type": "wall",
+   "bldg": "ID_60cbc5d9-c564-3bf4-b251-2e89d4d44626",
+   "wall": 3,
+   "p": [
+    -409.42,
+    13.29,
+    328.88
+   ],
+   "dist": 33.12,
+   "front": true
+  },
+  {
+   "type": "wall",
+   "bldg": "ID_60cbc5d9-c564-3bf4-b251-2e89d4d44626",
+   "wall": 3,
+   "p": [
+    -409.42,
+    14.89,
+    328.88
+   ],
+   "dist": 33.12,
+   "front": true
+  },
+  {
+   "type": "wall",
+   "bldg": "ID_1ec0f537-9410-37c9-bc10-fbc69a7391fd",
+   "wall": 22,
+   "p": [
+    -746.99,
+    13.52,
+    -177.84
+   ],
+   "dist": null,
+   "front": false
+  },
+  {
+   "type": "wall",
+   "bldg": "ID_428adb92-05c6-3746-9c0f-a6c3be475c32",
+   "wall": 48,
+   "p": [
+    -686.24,
+    9.75,
+    330.48
+   ],
+   "dist": 45.87,
+   "front": true
+  },
+  {
+   "type": "wall",
+   "bldg": "ID_0ad7e291-38b8-36cc-9cdf-50183f2eb36f",
+   "wall": 4,
+   "p": [
+    653.44,
+    10.78,
+    271.79
+   ],
+   "dist": null,
+   "front": false
+  },
+  {
+   "type": "window_center",
+   "p": [
+    -316.75,
+    -4.6,
+    458.03
+   ],
+   "dist": 9.31,
+   "front": true
+  },
+  {
+   "type": "window_top",
+   "p": [
+    -684.63,
+    10.83,
+    -481.99
+   ],
+   "dist": 14.19,
+   "front": true
+  },
+  {
+   "type": "window_top",
+   "p": [
+    -682.31,
+    10.83,
+    -483.96
+   ],
+   "dist": 14.17,
+   "front": true
+  },
+  {
+   "type": "window_top",
+   "p": [
+    -679.98,
+    10.83,
+    -485.93
+   ],
+   "dist": 14.15,
+   "front": true
+  },
+  {
+   "type": "window_center",
+   "p": [
+    592.67,
+    0.33,
+    356.17
+   ],
+   "dist": 2.88,
+   "front": true
+  }
+ ],
+ "bs_errors": [],
+ "wall_rays_into_shops": 16213,
+ "wall_rays_occluded": 531,
+ "worst_buildings": [
+  [
+   "ID_79d75fb8-2b75-3928-ad1d-1e419ea70885",
+   2
+  ],
+  [
+   "ID_60cbc5d9-c564-3bf4-b251-2e89d4d44626",
+   2
+  ],
+  [
+   "ID_25f8a0da-8323-3c10-ad45-95d51597231d",
+   1
+  ],
+  [
+   "ID_9105404d-654c-3b29-9e3c-eb154e206077",
+   1
+  ],
+  [
+   "ID_9850fd33-58c8-3cc6-bffc-a396527794b2",
+   1
+  ],
+  [
+   "ID_b150f6c8-2886-3ae9-b09f-044416be3d53",
+   1
+  ],
+  [
+   "ID_1ec0f537-9410-37c9-bc10-fbc69a7391fd",
+   1
+  ],
+  [
+   "ID_428adb92-05c6-3746-9c0f-a6c3be475c32",
+   1
+  ],
+  [
+   "ID_0ad7e291-38b8-36cc-9cdf-50183f2eb36f",
+   1
+  ]
+ ]
+}

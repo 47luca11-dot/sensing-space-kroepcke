@@ -1,0 +1,31 @@
+15:49:42 | INFO: Data are loaded, start creating Blender stuff
+15:49:42 | INFO: Blender create Mesh node anz_detail_nocol
+15:49:42 | INFO: Blender create Mesh node anz_dome
+15:49:42 | INFO: Blender create Mesh node anz_dome_detail_nocol
+15:49:42 | INFO: Blender create Mesh node anz_letters_nocol
+15:49:42 | INFO: Blender create Mesh node anz_shell
+15:49:42 | INFO: Blender create Mesh node anz_windows_nocol
+15:49:42 | INFO: Blender create Mesh node bad_detail_nocol
+15:49:42 | INFO: Blender create Mesh node bad_letters_nocol
+15:49:42 | INFO: Blender create Mesh node bad_roof
+15:49:42 | INFO: Blender create Mesh node bad_roof_detail_nocol
+15:49:42 | INFO: Blender create Mesh node bad_shell
+15:49:42 | INFO: Blender create Mesh node bad_windows_nocol
+15:49:42 | INFO: glTF import finished in 0.42s
+C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\pipeline\landmarks\anzeiger\debug_view.py:16: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  w.use_nodes = True
+00:05.032  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\pipeline\landmarks\anzeiger\build\dbg\bad_ne.png'
+00:05.594  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\pipeline\landmarks\anzeiger\build\dbg\bad_west.png'
+00:06.125  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\pipeline\landmarks\anzeiger\build\dbg\anz_ne_low.png'
+00:06.657  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\pipeline\landmarks\anzeiger\build\dbg\anz_se_high.png'
+00:07.219  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\pipeline\landmarks\anzeiger\build\dbg\roofs_top.png'
+00:07.797  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\pipeline\landmarks\anzeiger\build\dbg\portal_in.png'
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/pipeline/landmarks/anzeiger/build/dbg/bad_ne.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/pipeline/landmarks/anzeiger/build/dbg/bad_west.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/pipeline/landmarks/anzeiger/build/dbg/anz_ne_low.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/pipeline/landmarks/anzeiger/build/dbg/anz_se_high.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/pipeline/landmarks/anzeiger/build/dbg/roofs_top.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/pipeline/landmarks/anzeiger/build/dbg/portal_in.png
+Blender 5.0.1 (hash a3db93c5b259 built 2025-12-16 01:32:30)
+
+Blender quit

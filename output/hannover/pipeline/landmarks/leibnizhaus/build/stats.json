@@ -1,0 +1,34 @@
+{
+ "triangles": 252587,
+ "parts": {
+  "leibnizhaus": 252587
+ },
+ "materials": [
+  "ashlar",
+  "glass",
+  "gold",
+  "iron",
+  "leaded",
+  "plaster",
+  "roof_membrane",
+  "sand_fine",
+  "sand_plinth",
+  "sand_relief",
+  "tile_dark",
+  "wood_dark",
+  "wood_door",
+  "zinc"
+ ],
+ "bounds": [
+  [
+   -459.6915001189244,
+   -2.2,
+   329.5357335597816
+  ],
+  [
+   -438.101111621805,
+   26.455871348091893,
+   349.2643043897355
+  ]
+ ]
+}

@@ -1,0 +1,12 @@
+TOTAL TRIS 356450 flipped solids 1459 time 10.5s
+MK objects 35 tris 357328
+MK wrote C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/data/landmarks_raw/marktkirche.glb 48863704
+MK saved C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/landmarks/marktkirche.blend
+wrote C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/data/landmarks_replace/marktkirche.json [118] area 1616.8 ymax 102.5
+rays 400000 hits 266836 backface hits 1 (0.000%)
+by object: [('MK_roof_Kupfer', 1)]
+rays 300000 thr 0.012 z-fight candidates 3
+  3 ('MK_fine_Sandstein', 'MK_det_Sandstein')
+TOTAL backface 11 stacked 0
+-rw-r--r-- 1 luca 197609 12488960 Nov  9 19:10 C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/web/assets/city/landmarks/marktkirche.glb
+done

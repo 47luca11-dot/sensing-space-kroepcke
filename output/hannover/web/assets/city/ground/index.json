@@ -1,0 +1,10442 @@
+{
+ "origin": {
+  "osm_node": 348155428,
+  "epsg25832": [
+   550298.88274216,
+   5802940.705715501
+  ],
+  "height_DHHN": 56.16
+ },
+ "frame": "metres, Y up, x=east, y=height-56.16, z=-north",
+ "tile_size": 100.0,
+ "tiles": [
+  {
+   "file": "ground_-10_-3.glb",
+   "tx": -10,
+   "tz": -3,
+   "bounds": {
+    "min": [
+     -943.203,
+     -1.615,
+     -242.101
+    ],
+    "max": [
+     -903.41,
+     -1.374,
+     -198.855
+    ]
+   },
+   "triangles": 100,
+   "bytes": 5820,
+   "materials": [
+    "marking"
+   ]
+  },
+  {
+   "file": "ground_-10_-2.glb",
+   "tx": -10,
+   "tz": -2,
+   "bounds": {
+    "min": [
+     -908.025,
+     -1.645,
+     -201.053
+    ],
+    "max": [
+     -900.116,
+     -1.606,
+     -189.978
+    ]
+   },
+   "triangles": 20,
+   "bytes": 2132,
+   "materials": [
+    "marking"
+   ]
+  },
+  {
+   "file": "ground_-9_-4.glb",
+   "tx": -9,
+   "tz": -4,
+   "bounds": {
+    "min": [
+     -856.866,
+     -2.463,
+     -328.896
+    ],
+    "max": [
+     -798.882,
+     -0.639,
+     -299.357
+    ]
+   },
+   "triangles": 427,
+   "bytes": 33816,
+   "materials": [
+    "asphalt",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-9_-3.glb",
+   "tx": -9,
+   "tz": -3,
+   "bounds": {
+    "min": [
+     -836.398,
+     -2.422,
+     -300.597
+    ],
+    "max": [
+     -797.592,
+     -0.38,
+     -198.904
+    ]
+   },
+   "triangles": 2867,
+   "bytes": 157208,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-9_-2.glb",
+   "tx": -9,
+   "tz": -2,
+   "bounds": {
+    "min": [
+     -899.593,
+     -3.697,
+     -201.225
+    ],
+    "max": [
+     -798.628,
+     -0.82,
+     -98.733
+    ]
+   },
+   "triangles": 5858,
+   "bytes": 290068,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "asphalt_red",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-9_-1.glb",
+   "tx": -9,
+   "tz": -1,
+   "bounds": {
+    "min": [
+     -859.884,
+     -9.122,
+     -100.923
+    ],
+    "max": [
+     -798.984,
+     -1.5,
+     1.535
+    ]
+   },
+   "triangles": 5341,
+   "bytes": 204980,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "river",
+    "sandstone",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-9_0.glb",
+   "tx": -9,
+   "tz": 0,
+   "bounds": {
+    "min": [
+     -868.322,
+     -9.122,
+     -1.645
+    ],
+    "max": [
+     -797.883,
+     4.279,
+     104.499
+    ]
+   },
+   "triangles": 8566,
+   "bytes": 394608,
+   "materials": [
+    "asphalt",
+    "ballast",
+    "granite",
+    "grass",
+    "grate",
+    "groove",
+    "kerb",
+    "marking",
+    "paint_grey",
+    "pavers",
+    "rail",
+    "river",
+    "sandstone",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil",
+    "steel_dark",
+    "wire"
+   ]
+  },
+  {
+   "file": "ground_-9_1.glb",
+   "tx": -9,
+   "tz": 1,
+   "bounds": {
+    "min": [
+     -882.157,
+     -5.791,
+     94.416
+    ],
+    "max": [
+     -798.24,
+     3.703,
+     200.759
+    ]
+   },
+   "triangles": 5711,
+   "bytes": 293228,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "ballast",
+    "granite",
+    "grate",
+    "groove",
+    "kerb",
+    "paint_grey",
+    "pavers",
+    "rail",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil",
+    "steel_dark",
+    "wire"
+   ]
+  },
+  {
+   "file": "ground_-9_2.glb",
+   "tx": -9,
+   "tz": 2,
+   "bounds": {
+    "min": [
+     -842.958,
+     -6.003,
+     198.992
+    ],
+    "max": [
+     -798.928,
+     -2.272,
+     301.007
+    ]
+   },
+   "triangles": 3218,
+   "bytes": 141344,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-9_3.glb",
+   "tx": -9,
+   "tz": 3,
+   "bounds": {
+    "min": [
+     -809.208,
+     -6.208,
+     298.822
+    ],
+    "max": [
+     -799.176,
+     -4.365,
+     327.634
+    ]
+   },
+   "triangles": 511,
+   "bytes": 38848,
+   "materials": [
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-8_-5.glb",
+   "tx": -8,
+   "tz": -5,
+   "bounds": {
+    "min": [
+     -768.93,
+     -3.118,
+     -498.284
+    ],
+    "max": [
+     -697.59,
+     -1.031,
+     -399.046
+    ]
+   },
+   "triangles": 3676,
+   "bytes": 168144,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-8_-4.glb",
+   "tx": -8,
+   "tz": -4,
+   "bounds": {
+    "min": [
+     -801.26,
+     -3.071,
+     -401.1
+    ],
+    "max": [
+     -694.63,
+     0.675,
+     -298.564
+    ]
+   },
+   "triangles": 9898,
+   "bytes": 469400,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-8_-3.glb",
+   "tx": -8,
+   "tz": -3,
+   "bounds": {
+    "min": [
+     -804.2,
+     -1.307,
+     -301.388
+    ],
+    "max": [
+     -695.592,
+     -0.226,
+     -198.689
+    ]
+   },
+   "triangles": 9360,
+   "bytes": 438492,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small"
+   ]
+  },
+  {
+   "file": "ground_-8_-2.glb",
+   "tx": -8,
+   "tz": -2,
+   "bounds": {
+    "min": [
+     -801.433,
+     -2.42,
+     -201.93
+    ],
+    "max": [
+     -698.213,
+     -0.467,
+     -95.615
+    ]
+   },
+   "triangles": 7736,
+   "bytes": 365988,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-8_-1.glb",
+   "tx": -8,
+   "tz": -1,
+   "bounds": {
+    "min": [
+     -801.544,
+     -7.656,
+     -104.446
+    ],
+    "max": [
+     -695.782,
+     -1.056,
+     4.049
+    ]
+   },
+   "triangles": 21923,
+   "bytes": 837256,
+   "materials": [
+    "asphalt",
+    "concrete",
+    "granite",
+    "grass",
+    "grate",
+    "iron_dark",
+    "kerb",
+    "marking",
+    "pavers",
+    "river",
+    "sandstone",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-8_0.glb",
+   "tx": -8,
+   "tz": 0,
+   "bounds": {
+    "min": [
+     -803.674,
+     -7.652,
+     -1.863
+    ],
+    "max": [
+     -698.139,
+     5.034,
+     103.3
+    ]
+   },
+   "triangles": 16655,
+   "bytes": 769956,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "asphalt_red",
+    "ballast",
+    "concrete",
+    "granite",
+    "grass",
+    "grate",
+    "groove",
+    "iron_dark",
+    "kerb",
+    "marking",
+    "paint_grey",
+    "pavers",
+    "rail",
+    "river",
+    "sandstone",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "steel_dark",
+    "wallstone",
+    "wire"
+   ]
+  },
+  {
+   "file": "ground_-8_1.glb",
+   "tx": -8,
+   "tz": 1,
+   "bounds": {
+    "min": [
+     -801.768,
+     -4.291,
+     96.898
+    ],
+    "max": [
+     -698.486,
+     -1.08,
+     201.263
+    ]
+   },
+   "triangles": 10973,
+   "bytes": 496308,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-8_2.glb",
+   "tx": -8,
+   "tz": 2,
+   "bounds": {
+    "min": [
+     -801.138,
+     -5.041,
+     198.668
+    ],
+    "max": [
+     -697.408,
+     -2.195,
+     304.518
+    ]
+   },
+   "triangles": 12644,
+   "bytes": 491172,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-8_3.glb",
+   "tx": -8,
+   "tz": 3,
+   "bounds": {
+    "min": [
+     -801.043,
+     -6.169,
+     295.886
+    ],
+    "max": [
+     -698.697,
+     -2.869,
+     401.936
+    ]
+   },
+   "triangles": 7211,
+   "bytes": 288828,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-8_4.glb",
+   "tx": -8,
+   "tz": 4,
+   "bounds": {
+    "min": [
+     -761.407,
+     -6.463,
+     394.887
+    ],
+    "max": [
+     -697.128,
+     -2.934,
+     499.987
+    ]
+   },
+   "triangles": 2830,
+   "bytes": 131108,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "soil",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-8_5.glb",
+   "tx": -8,
+   "tz": 5,
+   "bounds": {
+    "min": [
+     -738.906,
+     -6.996,
+     499.316
+    ],
+    "max": [
+     -697.897,
+     -4.516,
+     551.528
+    ]
+   },
+   "triangles": 1915,
+   "bytes": 110348,
+   "materials": [
+    "asphalt",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-8_7.glb",
+   "tx": -8,
+   "tz": 7,
+   "bounds": {
+    "min": [
+     -748.628,
+     -5.204,
+     717.406
+    ],
+    "max": [
+     -699.98,
+     -4.701,
+     798.628
+    ]
+   },
+   "triangles": 279,
+   "bytes": 13928,
+   "materials": [
+    "marking"
+   ]
+  },
+  {
+   "file": "ground_-8_8.glb",
+   "tx": -8,
+   "tz": 8,
+   "bounds": {
+    "min": [
+     -784.929,
+     -5.115,
+     801.637
+    ],
+    "max": [
+     -745.202,
+     -4.772,
+     858.144
+    ]
+   },
+   "triangles": 128,
+   "bytes": 7036,
+   "materials": [
+    "marking"
+   ]
+  },
+  {
+   "file": "ground_-7_-7.glb",
+   "tx": -7,
+   "tz": -7,
+   "bounds": {
+    "min": [
+     -616.232,
+     -2.77,
+     -615.872
+    ],
+    "max": [
+     -599.267,
+     -1.177,
+     -598.956
+    ]
+   },
+   "triangles": 66,
+   "bytes": 5928,
+   "materials": [
+    "grass",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-7_-6.glb",
+   "tx": -7,
+   "tz": -6,
+   "bounds": {
+    "min": [
+     -699.226,
+     -3.281,
+     -601.221
+    ],
+    "max": [
+     -596.204,
+     -0.081,
+     -494.946
+    ]
+   },
+   "triangles": 5557,
+   "bytes": 261984,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "fence",
+    "granite",
+    "grass",
+    "grate",
+    "gravel",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-7_-5.glb",
+   "tx": -7,
+   "tz": -5,
+   "bounds": {
+    "min": [
+     -702.04,
+     -2.987,
+     -503.448
+    ],
+    "max": [
+     -598.185,
+     -0.081,
+     -393.48
+    ]
+   },
+   "triangles": 9551,
+   "bytes": 446412,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-7_-4.glb",
+   "tx": -7,
+   "tz": -4,
+   "bounds": {
+    "min": [
+     -705.048,
+     -1.508,
+     -405.672
+    ],
+    "max": [
+     -597.619,
+     0.553,
+     -291.872
+    ]
+   },
+   "triangles": 6235,
+   "bytes": 238008,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-7_-3.glb",
+   "tx": -7,
+   "tz": -3,
+   "bounds": {
+    "min": [
+     -706.256,
+     -0.969,
+     -306.737
+    ],
+    "max": [
+     -595.518,
+     0.207,
+     -198.133
+    ]
+   },
+   "triangles": 6806,
+   "bytes": 293836,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_small"
+   ]
+  },
+  {
+   "file": "ground_-7_-2.glb",
+   "tx": -7,
+   "tz": -2,
+   "bounds": {
+    "min": [
+     -701.59,
+     -1.994,
+     -201.727
+    ],
+    "max": [
+     -598.0,
+     -0.299,
+     -96.273
+    ]
+   },
+   "triangles": 7868,
+   "bytes": 340724,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-7_-1.glb",
+   "tx": -7,
+   "tz": -1,
+   "bounds": {
+    "min": [
+     -702.892,
+     -7.652,
+     -103.432
+    ],
+    "max": [
+     -597.364,
+     5.895,
+     23.11
+    ]
+   },
+   "triangles": 11369,
+   "bytes": 447916,
+   "materials": [
+    "asphalt",
+    "concrete",
+    "granite",
+    "grate",
+    "groove",
+    "iron_dark",
+    "kerb",
+    "paint_grey",
+    "pavers",
+    "rail",
+    "river",
+    "sandstone",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "steel_dark",
+    "wallstone",
+    "wire"
+   ]
+  },
+  {
+   "file": "ground_-7_0.glb",
+   "tx": -7,
+   "tz": 0,
+   "bounds": {
+    "min": [
+     -701.433,
+     -7.639,
+     -4.537
+    ],
+    "max": [
+     -598.26,
+     5.286,
+     142.692
+    ]
+   },
+   "triangles": 22200,
+   "bytes": 957652,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "concrete",
+    "granite",
+    "grass",
+    "grate",
+    "groove",
+    "iron_dark",
+    "kerb",
+    "marking",
+    "paint_grey",
+    "pavers",
+    "rail",
+    "river",
+    "sandstone",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "steel_dark",
+    "wallstone",
+    "wire"
+   ]
+  },
+  {
+   "file": "ground_-7_1.glb",
+   "tx": -7,
+   "tz": 1,
+   "bounds": {
+    "min": [
+     -701.695,
+     -7.602,
+     22.97
+    ],
+    "max": [
+     -595.667,
+     -0.924,
+     201.537
+    ]
+   },
+   "triangles": 14644,
+   "bytes": 651516,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "asphalt_red",
+    "concrete",
+    "granite",
+    "grass",
+    "grate",
+    "iron_dark",
+    "kerb",
+    "marking",
+    "pavers",
+    "river",
+    "sandstone",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-7_2.glb",
+   "tx": -7,
+   "tz": 2,
+   "bounds": {
+    "min": [
+     -703.944,
+     -7.456,
+     198.476
+    ],
+    "max": [
+     -598.502,
+     -2.048,
+     301.194
+    ]
+   },
+   "triangles": 9732,
+   "bytes": 376308,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "river",
+    "sandstone",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-7_3.glb",
+   "tx": -7,
+   "tz": 3,
+   "bounds": {
+    "min": [
+     -701.324,
+     -4.834,
+     298.74
+    ],
+    "max": [
+     -598.494,
+     -2.52,
+     403.494
+    ]
+   },
+   "triangles": 9067,
+   "bytes": 371292,
+   "materials": [
+    "asphalt",
+    "fence",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "water"
+   ]
+  },
+  {
+   "file": "ground_-7_4.glb",
+   "tx": -7,
+   "tz": 4,
+   "bounds": {
+    "min": [
+     -702.389,
+     -5.484,
+     396.806
+    ],
+    "max": [
+     -598.648,
+     -3.017,
+     501.929
+    ]
+   },
+   "triangles": 6768,
+   "bytes": 268540,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "water"
+   ]
+  },
+  {
+   "file": "ground_-7_5.glb",
+   "tx": -7,
+   "tz": 5,
+   "bounds": {
+    "min": [
+     -702.114,
+     -6.993,
+     497.978
+    ],
+    "max": [
+     -597.972,
+     -2.893,
+     601.424
+    ]
+   },
+   "triangles": 6916,
+   "bytes": 334480,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-7_6.glb",
+   "tx": -7,
+   "tz": 6,
+   "bounds": {
+    "min": [
+     -685.002,
+     -5.725,
+     598.726
+    ],
+    "max": [
+     -599.33,
+     -4.013,
+     700.475
+    ]
+   },
+   "triangles": 460,
+   "bytes": 29076,
+   "materials": [
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-7_7.glb",
+   "tx": -7,
+   "tz": 7,
+   "bounds": {
+    "min": [
+     -700.07,
+     -5.114,
+     699.447
+    ],
+    "max": [
+     -657.749,
+     -4.629,
+     742.791
+    ]
+   },
+   "triangles": 168,
+   "bytes": 8808,
+   "materials": [
+    "marking"
+   ]
+  },
+  {
+   "file": "ground_-6_-8.glb",
+   "tx": -6,
+   "tz": -8,
+   "bounds": {
+    "min": [
+     -515.152,
+     -3.578,
+     -726.552
+    ],
+    "max": [
+     -496.331,
+     -1.71,
+     -698.95
+    ]
+   },
+   "triangles": 322,
+   "bytes": 20616,
+   "materials": [
+    "asphalt2",
+    "kerb",
+    "pavers",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-6_-7.glb",
+   "tx": -6,
+   "tz": -7,
+   "bounds": {
+    "min": [
+     -600.317,
+     -3.358,
+     -701.666
+    ],
+    "max": [
+     -498.64,
+     -0.162,
+     -598.1
+    ]
+   },
+   "triangles": 7321,
+   "bytes": 367816,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grass",
+    "grate",
+    "gravel",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "soil",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-6_-6.glb",
+   "tx": -6,
+   "tz": -6,
+   "bounds": {
+    "min": [
+     -604.254,
+     -2.062,
+     -601.854
+    ],
+    "max": [
+     -498.659,
+     -0.3,
+     -495.494
+    ]
+   },
+   "triangles": 4674,
+   "bytes": 201904,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "granite",
+    "grass",
+    "grate",
+    "gravel",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-6_-5.glb",
+   "tx": -6,
+   "tz": -5,
+   "bounds": {
+    "min": [
+     -601.71,
+     -1.819,
+     -504.579
+    ],
+    "max": [
+     -498.703,
+     -0.095,
+     -396.73
+    ]
+   },
+   "triangles": 9325,
+   "bytes": 408804,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "granite",
+    "grass",
+    "grate",
+    "gravel",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-6_-4.glb",
+   "tx": -6,
+   "tz": -4,
+   "bounds": {
+    "min": [
+     -603.57,
+     -1.421,
+     -405.754
+    ],
+    "max": [
+     -496.408,
+     0.553,
+     -296.746
+    ]
+   },
+   "triangles": 8002,
+   "bytes": 370004,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "fence",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-6_-3.glb",
+   "tx": -6,
+   "tz": -3,
+   "bounds": {
+    "min": [
+     -605.774,
+     -0.94,
+     -303.14
+    ],
+    "max": [
+     -494.357,
+     -0.177,
+     -196.375
+    ]
+   },
+   "triangles": 6726,
+   "bytes": 310816,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-6_-2.glb",
+   "tx": -6,
+   "tz": -2,
+   "bounds": {
+    "min": [
+     -602.647,
+     -5.841,
+     -205.664
+    ],
+    "max": [
+     -495.346,
+     6.278,
+     -62.533
+    ]
+   },
+   "triangles": 10160,
+   "bytes": 444748,
+   "materials": [
+    "alu",
+    "asphalt",
+    "downlight",
+    "granite",
+    "granite_polished",
+    "granite_step",
+    "granite_wall",
+    "grass",
+    "grate",
+    "groove",
+    "kerb",
+    "marking",
+    "nosing",
+    "paint_dark",
+    "paint_grey",
+    "pavers",
+    "rail",
+    "setts_road",
+    "setts_small",
+    "sign_steintor",
+    "sign_u2",
+    "slabs_ped",
+    "stainless",
+    "steel_dark",
+    "stone_light",
+    "tactile",
+    "wallstone",
+    "wire"
+   ]
+  },
+  {
+   "file": "ground_-6_-1.glb",
+   "tx": -6,
+   "tz": -1,
+   "bounds": {
+    "min": [
+     -603.479,
+     -1.629,
+     -128.139
+    ],
+    "max": [
+     -498.426,
+     6.243,
+     2.492
+    ]
+   },
+   "triangles": 13305,
+   "bytes": 609568,
+   "materials": [
+    "asphalt",
+    "concrete",
+    "granite",
+    "grass",
+    "grate",
+    "groove",
+    "kerb",
+    "marking",
+    "paint_grey",
+    "pavers",
+    "rail",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "stainless",
+    "steel_dark",
+    "stone_light",
+    "tactile",
+    "wire"
+   ]
+  },
+  {
+   "file": "ground_-6_0.glb",
+   "tx": -6,
+   "tz": 0,
+   "bounds": {
+    "min": [
+     -601.819,
+     -1.457,
+     -2.201
+    ],
+    "max": [
+     -498.032,
+     -0.158,
+     106.362
+    ]
+   },
+   "triangles": 11606,
+   "bytes": 583768,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_arc",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-6_1.glb",
+   "tx": -6,
+   "tz": 1,
+   "bounds": {
+    "min": [
+     -605.337,
+     -7.556,
+     95.59
+    ],
+    "max": [
+     -498.308,
+     0.946,
+     214.288
+    ]
+   },
+   "triangles": 7883,
+   "bytes": 282520,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grass",
+    "grate",
+    "iron_dark",
+    "kerb",
+    "pavers",
+    "river",
+    "sandstone",
+    "setts_arc",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-6_2.glb",
+   "tx": -6,
+   "tz": 2,
+   "bounds": {
+    "min": [
+     -601.318,
+     -7.556,
+     175.996
+    ],
+    "max": [
+     -497.492,
+     0.069,
+     305.501
+    ]
+   },
+   "triangles": 11866,
+   "bytes": 404240,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "granite",
+    "grass",
+    "grate",
+    "gravel",
+    "iron_dark",
+    "kerb",
+    "marking",
+    "pavers",
+    "river",
+    "sandstone",
+    "setts_arc",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-6_3.glb",
+   "tx": -6,
+   "tz": 3,
+   "bounds": {
+    "min": [
+     -601.766,
+     -7.556,
+     298.287
+    ],
+    "max": [
+     -488.939,
+     -0.49,
+     401.762
+    ]
+   },
+   "triangles": 16881,
+   "bytes": 723448,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "asphalt_red",
+    "granite",
+    "grass",
+    "grate",
+    "gravel",
+    "iron_dark",
+    "kerb",
+    "marking",
+    "pavers",
+    "river",
+    "sandstone",
+    "setts_arc",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-6_4.glb",
+   "tx": -6,
+   "tz": 4,
+   "bounds": {
+    "min": [
+     -601.375,
+     -4.751,
+     398.59
+    ],
+    "max": [
+     -497.589,
+     -3.002,
+     504.396
+    ]
+   },
+   "triangles": 12051,
+   "bytes": 587200,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "asphalt_red",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_arc",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "water"
+   ]
+  },
+  {
+   "file": "ground_-6_5.glb",
+   "tx": -6,
+   "tz": 5,
+   "bounds": {
+    "min": [
+     -603.384,
+     -5.155,
+     496.152
+    ],
+    "max": [
+     -498.8,
+     -3.185,
+     601.7
+    ]
+   },
+   "triangles": 8716,
+   "bytes": 369780,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-6_6.glb",
+   "tx": -6,
+   "tz": 6,
+   "bounds": {
+    "min": [
+     -600.722,
+     -8.888,
+     597.94
+    ],
+    "max": [
+     -498.004,
+     -0.706,
+     699.62
+    ]
+   },
+   "triangles": 10724,
+   "bytes": 534292,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "asphalt_red",
+    "citylight",
+    "concrete",
+    "downlight",
+    "granite",
+    "granite_dark",
+    "granite_polished",
+    "granite_step",
+    "granite_wall",
+    "grass",
+    "grate",
+    "guidance",
+    "kerb",
+    "lightline",
+    "marking",
+    "netmap",
+    "nosing",
+    "paint_dark",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "shutter_steel",
+    "sign_guide",
+    "sign_u2",
+    "sign_waterloo",
+    "slabs_ped",
+    "slats",
+    "soil",
+    "stainless",
+    "tactile",
+    "tile_white",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-5_-8.glb",
+   "tx": -5,
+   "tz": -8,
+   "bounds": {
+    "min": [
+     -500.859,
+     -4.048,
+     -761.63
+    ],
+    "max": [
+     -398.93,
+     -0.704,
+     -697.777
+    ]
+   },
+   "triangles": 2617,
+   "bytes": 115720,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "fence",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-5_-7.glb",
+   "tx": -5,
+   "tz": -7,
+   "bounds": {
+    "min": [
+     -502.054,
+     -2.461,
+     -702.069
+    ],
+    "max": [
+     -395.441,
+     -0.531,
+     -598.669
+    ]
+   },
+   "triangles": 6235,
+   "bytes": 260712,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "fence",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-5_-6.glb",
+   "tx": -5,
+   "tz": -6,
+   "bounds": {
+    "min": [
+     -501.557,
+     -2.315,
+     -601.849
+    ],
+    "max": [
+     -398.149,
+     -0.158,
+     -498.354
+    ]
+   },
+   "triangles": 9977,
+   "bytes": 494076,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grass",
+    "grate",
+    "gravel",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-5_-5.glb",
+   "tx": -5,
+   "tz": -5,
+   "bounds": {
+    "min": [
+     -501.066,
+     -2.094,
+     -502.643
+    ],
+    "max": [
+     -398.518,
+     -0.196,
+     -390.436
+    ]
+   },
+   "triangles": 7993,
+   "bytes": 352916,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grass",
+    "grate",
+    "gravel",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-5_-4.glb",
+   "tx": -5,
+   "tz": -4,
+   "bounds": {
+    "min": [
+     -505.064,
+     -1.703,
+     -402.096
+    ],
+    "max": [
+     -395.182,
+     0.354,
+     -298.324
+    ]
+   },
+   "triangles": 8423,
+   "bytes": 360384,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-5_-3.glb",
+   "tx": -5,
+   "tz": -3,
+   "bounds": {
+    "min": [
+     -504.153,
+     -1.305,
+     -301.896
+    ],
+    "max": [
+     -390.699,
+     6.279,
+     -193.733
+    ]
+   },
+   "triangles": 14294,
+   "bytes": 691384,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "black_glass",
+    "checker_yb",
+    "glass",
+    "gold",
+    "granite",
+    "grass",
+    "grate",
+    "groove",
+    "kerb",
+    "marking",
+    "paint_dark",
+    "paint_grey",
+    "pavers",
+    "rail",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "steel_dark",
+    "wallstone",
+    "wire",
+    "wood"
+   ]
+  },
+  {
+   "file": "ground_-5_-2.glb",
+   "tx": -5,
+   "tz": -2,
+   "bounds": {
+    "min": [
+     -506.993,
+     -5.938,
+     -209.677
+    ],
+    "max": [
+     -398.581,
+     6.414,
+     -98.437
+    ]
+   },
+   "triangles": 29162,
+   "bytes": 1385752,
+   "materials": [
+    "alu",
+    "asphalt",
+    "asphalt_red",
+    "bin_grey",
+    "citylight",
+    "concrete",
+    "display_tram",
+    "downlight",
+    "fence",
+    "glass",
+    "granite",
+    "granite_dark",
+    "granite_polished",
+    "granite_step",
+    "granite_wall",
+    "grass",
+    "grate",
+    "groove",
+    "guidance",
+    "hst_h",
+    "hst_steintor",
+    "kerb",
+    "lightline",
+    "marking",
+    "netmap",
+    "nosing",
+    "paint_dark",
+    "paint_grey",
+    "pavers",
+    "rail",
+    "setts_road",
+    "setts_small",
+    "shutter_steel",
+    "sign_guide",
+    "sign_steintor",
+    "slabs_ped",
+    "stainless",
+    "steel_dark",
+    "stone_light",
+    "tactile",
+    "ticket_machine",
+    "tile_beige",
+    "tile_white",
+    "wallstone",
+    "water",
+    "wire",
+    "wood"
+   ]
+  },
+  {
+   "file": "ground_-5_-1.glb",
+   "tx": -5,
+   "tz": -1,
+   "bounds": {
+    "min": [
+     -502.407,
+     -1.45,
+     -101.389
+    ],
+    "max": [
+     -397.13,
+     0.66,
+     5.346
+    ]
+   },
+   "triangles": 9232,
+   "bytes": 454332,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "fence",
+    "granite",
+    "grass",
+    "grate",
+    "groove",
+    "kerb",
+    "marking",
+    "pavers",
+    "rail",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "stainless",
+    "stone_light",
+    "tactile",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-5_0.glb",
+   "tx": -5,
+   "tz": 0,
+   "bounds": {
+    "min": [
+     -502.234,
+     -1.275,
+     -7.876
+    ],
+    "max": [
+     -398.744,
+     0.795,
+     102.63
+    ]
+   },
+   "triangles": 8994,
+   "bytes": 420576,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_arc",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-5_1.glb",
+   "tx": -5,
+   "tz": 1,
+   "bounds": {
+    "min": [
+     -501.758,
+     -1.539,
+     97.725
+    ],
+    "max": [
+     -398.601,
+     -0.213,
+     204.016
+    ]
+   },
+   "triangles": 10087,
+   "bytes": 495688,
+   "materials": [
+    "asphalt",
+    "clinker",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "setts_arc",
+    "setts_road",
+    "setts_small"
+   ]
+  },
+  {
+   "file": "ground_-5_2.glb",
+   "tx": -5,
+   "tz": 2,
+   "bounds": {
+    "min": [
+     -502.147,
+     -1.616,
+     195.695
+    ],
+    "max": [
+     -397.727,
+     1.993,
+     305.008
+    ]
+   },
+   "triangles": 6817,
+   "bytes": 285720,
+   "materials": [
+    "asphalt",
+    "bronze",
+    "clinker",
+    "concrete",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "setts_arc",
+    "setts_small",
+    "water",
+    "water_basin"
+   ]
+  },
+  {
+   "file": "ground_-5_3.glb",
+   "tx": -5,
+   "tz": 3,
+   "bounds": {
+    "min": [
+     -508.011,
+     -7.556,
+     296.841
+    ],
+    "max": [
+     -396.782,
+     7.614,
+     401.466
+    ]
+   },
+   "triangles": 19300,
+   "bytes": 868308,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "bronze",
+    "concrete",
+    "fence",
+    "gold",
+    "granite",
+    "grate",
+    "iron_dark",
+    "kerb",
+    "river",
+    "sandstone",
+    "setts_arc",
+    "setts_road",
+    "setts_small",
+    "stone_grey",
+    "wallstone",
+    "water",
+    "water_basin"
+   ]
+  },
+  {
+   "file": "ground_-5_4.glb",
+   "tx": -5,
+   "tz": 4,
+   "bounds": {
+    "min": [
+     -501.792,
+     -7.274,
+     398.169
+    ],
+    "max": [
+     -392.675,
+     -2.071,
+     521.836
+    ]
+   },
+   "triangles": 11549,
+   "bytes": 484596,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "asphalt_red",
+    "concrete",
+    "granite",
+    "grass",
+    "grate",
+    "gravel",
+    "iron_dark",
+    "kerb",
+    "marking",
+    "pavers",
+    "river",
+    "sandstone",
+    "setts_arc",
+    "setts_road",
+    "setts_small",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-5_5.glb",
+   "tx": -5,
+   "tz": 5,
+   "bounds": {
+    "min": [
+     -501.582,
+     -7.274,
+     479.397
+    ],
+    "max": [
+     -392.675,
+     -2.32,
+     601.388
+    ]
+   },
+   "triangles": 15567,
+   "bytes": 806316,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "granite",
+    "grass",
+    "iron_dark",
+    "kerb",
+    "marking",
+    "pavers",
+    "river",
+    "sandstone",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-5_6.glb",
+   "tx": -5,
+   "tz": 6,
+   "bounds": {
+    "min": [
+     -501.36,
+     -5.586,
+     598.731
+    ],
+    "max": [
+     -398.228,
+     -1.897,
+     702.739
+    ]
+   },
+   "triangles": 7114,
+   "bytes": 267836,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "fence",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "soil",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-5_7.glb",
+   "tx": -5,
+   "tz": 7,
+   "bounds": {
+    "min": [
+     -500.08,
+     -5.528,
+     698.32
+    ],
+    "max": [
+     -398.454,
+     -2.191,
+     761.726
+    ]
+   },
+   "triangles": 2143,
+   "bytes": 87292,
+   "materials": [
+    "fence",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "pavers",
+    "slabs_ped",
+    "soil",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-4_-9.glb",
+   "tx": -4,
+   "tz": -9,
+   "bounds": {
+    "min": [
+     -316.064,
+     0.661,
+     -805.698
+    ],
+    "max": [
+     -299.213,
+     2.222,
+     -798.239
+    ]
+   },
+   "triangles": 28,
+   "bytes": 4540,
+   "materials": [
+    "ballast",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-4_-8.glb",
+   "tx": -4,
+   "tz": -8,
+   "bounds": {
+    "min": [
+     -401.309,
+     -3.61,
+     -801.776
+    ],
+    "max": [
+     -279.226,
+     2.454,
+     -681.111
+    ]
+   },
+   "triangles": 6394,
+   "bytes": 257340,
+   "materials": [
+    "asphalt",
+    "ballast",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "soil",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-4_-7.glb",
+   "tx": -4,
+   "tz": -7,
+   "bounds": {
+    "min": [
+     -405.118,
+     -3.428,
+     -705.843
+    ],
+    "max": [
+     -298.123,
+     -0.478,
+     -598.332
+    ]
+   },
+   "triangles": 9430,
+   "bytes": 428684,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "fence",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-4_-6.glb",
+   "tx": -4,
+   "tz": -6,
+   "bounds": {
+    "min": [
+     -401.486,
+     -2.795,
+     -601.322
+    ],
+    "max": [
+     -298.619,
+     -1.263,
+     -498.523
+    ]
+   },
+   "triangles": 8792,
+   "bytes": 325684,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grass",
+    "grate",
+    "gravel",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-4_-5.glb",
+   "tx": -4,
+   "tz": -5,
+   "bounds": {
+    "min": [
+     -401.309,
+     -2.533,
+     -501.378
+    ],
+    "max": [
+     -279.572,
+     -0.977,
+     -398.547
+    ]
+   },
+   "triangles": 8032,
+   "bytes": 327704,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-4_-4.glb",
+   "tx": -4,
+   "tz": -4,
+   "bounds": {
+    "min": [
+     -403.11,
+     -2.085,
+     -401.918
+    ],
+    "max": [
+     -296.719,
+     -0.028,
+     -297.618
+    ]
+   },
+   "triangles": 5610,
+   "bytes": 244492,
+   "materials": [
+    "asphalt",
+    "fence",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-4_-3.glb",
+   "tx": -4,
+   "tz": -3,
+   "bounds": {
+    "min": [
+     -415.548,
+     -1.681,
+     -302.51
+    ],
+    "max": [
+     -294.439,
+     6.206,
+     -198.464
+    ]
+   },
+   "triangles": 12519,
+   "bytes": 594608,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "checker_yb",
+    "glass",
+    "gold",
+    "granite",
+    "grate",
+    "groove",
+    "hst_h",
+    "hst_steintor",
+    "kerb",
+    "marking",
+    "netmap",
+    "paint_dark",
+    "paint_grey",
+    "pavers",
+    "rail",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "steel_dark",
+    "wallstone",
+    "wire"
+   ]
+  },
+  {
+   "file": "ground_-4_-2.glb",
+   "tx": -4,
+   "tz": -2,
+   "bounds": {
+    "min": [
+     -401.016,
+     -5.977,
+     -201.3
+    ],
+    "max": [
+     -294.648,
+     2.36,
+     -94.835
+    ]
+   },
+   "triangles": 15074,
+   "bytes": 633428,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "citylight",
+    "concrete",
+    "downlight",
+    "fence",
+    "granite",
+    "granite_dark",
+    "granite_polished",
+    "granite_step",
+    "granite_wall",
+    "grate",
+    "guidance",
+    "kerb",
+    "lightline",
+    "netmap",
+    "nosing",
+    "paint_dark",
+    "pavers",
+    "setts_small",
+    "shutter_steel",
+    "sign_guide",
+    "sign_steintor",
+    "sign_u2",
+    "slabs_ped",
+    "stainless",
+    "tactile",
+    "tile_beige",
+    "tile_white",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-4_-1.glb",
+   "tx": -4,
+   "tz": -1,
+   "bounds": {
+    "min": [
+     -402.598,
+     -1.547,
+     -104.986
+    ],
+    "max": [
+     -294.694,
+     0.141,
+     3.732
+    ]
+   },
+   "triangles": 7699,
+   "bytes": 335496,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "fence",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "water"
+   ]
+  },
+  {
+   "file": "ground_-4_0.glb",
+   "tx": -4,
+   "tz": 0,
+   "bounds": {
+    "min": [
+     -401.439,
+     -1.56,
+     -3.878
+    ],
+    "max": [
+     -298.028,
+     -0.533,
+     104.303
+    ]
+   },
+   "triangles": 10352,
+   "bytes": 501416,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_arc",
+    "setts_road",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-4_1.glb",
+   "tx": -4,
+   "tz": 1,
+   "bounds": {
+    "min": [
+     -401.986,
+     -1.374,
+     95.692
+    ],
+    "max": [
+     -298.028,
+     -0.014,
+     201.908
+    ]
+   },
+   "triangles": 9832,
+   "bytes": 478620,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "setts_arc",
+    "setts_road",
+    "setts_small"
+   ]
+  },
+  {
+   "file": "ground_-4_2.glb",
+   "tx": -4,
+   "tz": 2,
+   "bounds": {
+    "min": [
+     -402.255,
+     -1.184,
+     197.229
+    ],
+    "max": [
+     -297.34,
+     0.246,
+     302.636
+    ]
+   },
+   "triangles": 7960,
+   "bytes": 350260,
+   "materials": [
+    "asphalt",
+    "clinker",
+    "granite",
+    "grate",
+    "kerb",
+    "setts_arc",
+    "setts_small"
+   ]
+  },
+  {
+   "file": "ground_-4_3.glb",
+   "tx": -4,
+   "tz": 3,
+   "bounds": {
+    "min": [
+     -403.114,
+     -2.22,
+     297.089
+    ],
+    "max": [
+     -296.546,
+     1.966,
+     403.493
+    ]
+   },
+   "triangles": 7917,
+   "bytes": 325544,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "fence",
+    "granite",
+    "grate",
+    "kerb",
+    "setts_arc",
+    "setts_road",
+    "setts_small"
+   ]
+  },
+  {
+   "file": "ground_-4_4.glb",
+   "tx": -4,
+   "tz": 4,
+   "bounds": {
+    "min": [
+     -403.247,
+     -7.174,
+     395.402
+    ],
+    "max": [
+     -298.503,
+     -0.597,
+     501.584
+    ]
+   },
+   "triangles": 7180,
+   "bytes": 288376,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grate",
+    "iron_dark",
+    "kerb",
+    "river",
+    "sandstone",
+    "setts_arc",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "water"
+   ]
+  },
+  {
+   "file": "ground_-4_5.glb",
+   "tx": -4,
+   "tz": 5,
+   "bounds": {
+    "min": [
+     -401.652,
+     -8.222,
+     499.165
+    ],
+    "max": [
+     -298.242,
+     -0.174,
+     601.443
+    ]
+   },
+   "triangles": 18585,
+   "bytes": 762164,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "fence",
+    "granite",
+    "grass",
+    "grate",
+    "interior_dark",
+    "iron_dark",
+    "kerb",
+    "marking",
+    "pavers",
+    "river",
+    "sandstone",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-4_6.glb",
+   "tx": -4,
+   "tz": 6,
+   "bounds": {
+    "min": [
+     -401.593,
+     -7.076,
+     598.797
+    ],
+    "max": [
+     -298.083,
+     -0.451,
+     701.771
+    ]
+   },
+   "triangles": 13092,
+   "bytes": 633752,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "granite",
+    "grass",
+    "gravel",
+    "interior_dark",
+    "iron_dark",
+    "kerb",
+    "marking",
+    "pavers",
+    "river",
+    "sandstone",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-4_7.glb",
+   "tx": -4,
+   "tz": 7,
+   "bounds": {
+    "min": [
+     -401.865,
+     -8.576,
+     698.392
+    ],
+    "max": [
+     -298.726,
+     -1.429,
+     800.783
+    ]
+   },
+   "triangles": 7281,
+   "bytes": 296608,
+   "materials": [
+    "concrete",
+    "fence",
+    "granite",
+    "grass",
+    "grate",
+    "gravel",
+    "iron_dark",
+    "kerb",
+    "pavers",
+    "river",
+    "sandstone",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-4_8.glb",
+   "tx": -4,
+   "tz": 8,
+   "bounds": {
+    "min": [
+     -317.363,
+     -8.576,
+     798.92
+    ],
+    "max": [
+     -299.365,
+     -1.86,
+     811.023
+    ]
+   },
+   "triangles": 1365,
+   "bytes": 56996,
+   "materials": [
+    "concrete",
+    "iron_dark",
+    "pavers",
+    "river",
+    "sandstone",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-3_-9.glb",
+   "tx": -3,
+   "tz": -9,
+   "bounds": {
+    "min": [
+     -301.11,
+     -4.177,
+     -849.792
+    ],
+    "max": [
+     -198.6,
+     2.267,
+     -798.692
+    ]
+   },
+   "triangles": 1420,
+   "bytes": 49392,
+   "materials": [
+    "ballast",
+    "pavers",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-3_-8.glb",
+   "tx": -3,
+   "tz": -8,
+   "bounds": {
+    "min": [
+     -316.005,
+     -3.854,
+     -801.474
+    ],
+    "max": [
+     -172.527,
+     2.751,
+     -681.111
+    ]
+   },
+   "triangles": 6433,
+   "bytes": 188420,
+   "materials": [
+    "asphalt",
+    "ballast",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-3_-7.glb",
+   "tx": -3,
+   "tz": -7,
+   "bounds": {
+    "min": [
+     -301.567,
+     -3.899,
+     -701.716
+    ],
+    "max": [
+     -198.181,
+     2.638,
+     -542.964
+    ]
+   },
+   "triangles": 13315,
+   "bytes": 571288,
+   "materials": [
+    "asphalt",
+    "ballast",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-3_-6.glb",
+   "tx": -3,
+   "tz": -6,
+   "bounds": {
+    "min": [
+     -301.364,
+     -3.569,
+     -629.423
+    ],
+    "max": [
+     -197.744,
+     2.718,
+     -498.202
+    ]
+   },
+   "triangles": 8782,
+   "bytes": 305624,
+   "materials": [
+    "asphalt",
+    "ballast",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-3_-5.glb",
+   "tx": -3,
+   "tz": -5,
+   "bounds": {
+    "min": [
+     -326.438,
+     -2.763,
+     -501.388
+    ],
+    "max": [
+     -197.226,
+     -0.977,
+     -394.33
+    ]
+   },
+   "triangles": 6716,
+   "bytes": 300216,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-3_-4.glb",
+   "tx": -3,
+   "tz": -4,
+   "bounds": {
+    "min": [
+     -302.898,
+     -2.499,
+     -405.464
+    ],
+    "max": [
+     -195.964,
+     -0.645,
+     -296.843
+    ]
+   },
+   "triangles": 5997,
+   "bytes": 251436,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-3_-3.glb",
+   "tx": -3,
+   "tz": -3,
+   "bounds": {
+    "min": [
+     -304.774,
+     -2.03,
+     -304.338
+    ],
+    "max": [
+     -195.095,
+     6.067,
+     -198.314
+    ]
+   },
+   "triangles": 9143,
+   "bytes": 386572,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grate",
+    "groove",
+    "kerb",
+    "marking",
+    "paint_grey",
+    "pavers",
+    "rail",
+    "setts_small",
+    "steel_dark",
+    "wire"
+   ]
+  },
+  {
+   "file": "ground_-3_-2.glb",
+   "tx": -3,
+   "tz": -2,
+   "bounds": {
+    "min": [
+     -304.77,
+     -1.809,
+     -202.213
+    ],
+    "max": [
+     -193.958,
+     -0.597,
+     -96.695
+    ]
+   },
+   "triangles": 6239,
+   "bytes": 289580,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-3_-1.glb",
+   "tx": -3,
+   "tz": -1,
+   "bounds": {
+    "min": [
+     -306.452,
+     -1.134,
+     -103.78
+    ],
+    "max": [
+     -197.382,
+     -0.261,
+     2.35
+    ]
+   },
+   "triangles": 3808,
+   "bytes": 122232,
+   "materials": [
+    "asphalt_red",
+    "granite",
+    "grate",
+    "kerb",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-3_0.glb",
+   "tx": -3,
+   "tz": 0,
+   "bounds": {
+    "min": [
+     -302.124,
+     -1.527,
+     -2.207
+    ],
+    "max": [
+     -194.71,
+     -0.431,
+     101.462
+    ]
+   },
+   "triangles": 5376,
+   "bytes": 200424,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_arc",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-3_1.glb",
+   "tx": -3,
+   "tz": 1,
+   "bounds": {
+    "min": [
+     -302.759,
+     -1.06,
+     98.481
+    ],
+    "max": [
+     -196.012,
+     -0.105,
+     204.213
+    ]
+   },
+   "triangles": 8565,
+   "bytes": 425292,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_arc",
+    "setts_road",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-3_2.glb",
+   "tx": -3,
+   "tz": 2,
+   "bounds": {
+    "min": [
+     -302.784,
+     -0.494,
+     194.784
+    ],
+    "max": [
+     -196.593,
+     1.66,
+     305.105
+    ]
+   },
+   "triangles": 9407,
+   "bytes": 445584,
+   "materials": [
+    "asphalt",
+    "clinker",
+    "fence",
+    "granite",
+    "grate",
+    "kerb",
+    "setts_arc",
+    "setts_road",
+    "setts_small"
+   ]
+  },
+  {
+   "file": "ground_-3_3.glb",
+   "tx": -3,
+   "tz": 3,
+   "bounds": {
+    "min": [
+     -305.053,
+     -1.087,
+     292.821
+    ],
+    "max": [
+     -194.816,
+     1.893,
+     403.498
+    ]
+   },
+   "triangles": 7729,
+   "bytes": 317464,
+   "materials": [
+    "asphalt",
+    "clinker",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "setts_arc",
+    "setts_road",
+    "setts_small",
+    "wallstone",
+    "water"
+   ]
+  },
+  {
+   "file": "ground_-3_4.glb",
+   "tx": -3,
+   "tz": 4,
+   "bounds": {
+    "min": [
+     -301.378,
+     -5.622,
+     396.292
+    ],
+    "max": [
+     -195.104,
+     2.727,
+     505.694
+    ]
+   },
+   "triangles": 14857,
+   "bytes": 669844,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "citylight",
+    "concrete",
+    "downlight",
+    "fence",
+    "granite",
+    "granite_dark",
+    "granite_polished",
+    "granite_step",
+    "granite_wall",
+    "grate",
+    "guidance",
+    "kerb",
+    "lightline",
+    "marking",
+    "netmap",
+    "nosing",
+    "paint_dark",
+    "pavers",
+    "setts_arc",
+    "setts_road",
+    "setts_small",
+    "shutter_steel",
+    "sign_guide",
+    "sign_markthalle",
+    "sign_u2",
+    "slabs_ped",
+    "slats",
+    "stainless",
+    "tactile",
+    "tile_white"
+   ]
+  },
+  {
+   "file": "ground_-3_5.glb",
+   "tx": -3,
+   "tz": 5,
+   "bounds": {
+    "min": [
+     -301.424,
+     -2.355,
+     496.559
+    ],
+    "max": [
+     -198.741,
+     0.01,
+     601.865
+    ]
+   },
+   "triangles": 7067,
+   "bytes": 287420,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-3_6.glb",
+   "tx": -3,
+   "tz": 6,
+   "bounds": {
+    "min": [
+     -301.534,
+     -2.993,
+     598.558
+    ],
+    "max": [
+     -198.125,
+     -1.331,
+     701.526
+    ]
+   },
+   "triangles": 8253,
+   "bytes": 349064,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grass",
+    "gravel",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-3_7.glb",
+   "tx": -3,
+   "tz": 7,
+   "bounds": {
+    "min": [
+     -301.558,
+     -7.076,
+     698.456
+    ],
+    "max": [
+     -197.493,
+     -1.791,
+     801.42
+    ]
+   },
+   "triangles": 7297,
+   "bytes": 352856,
+   "materials": [
+    "asphalt",
+    "concrete",
+    "grass",
+    "gravel",
+    "iron_dark",
+    "kerb",
+    "pavers",
+    "river",
+    "sandstone",
+    "setts_small"
+   ]
+  },
+  {
+   "file": "ground_-3_8.glb",
+   "tx": -3,
+   "tz": 8,
+   "bounds": {
+    "min": [
+     -300.632,
+     -8.576,
+     798.312
+    ],
+    "max": [
+     -198.637,
+     -1.903,
+     836.357
+    ]
+   },
+   "triangles": 2025,
+   "bytes": 120072,
+   "materials": [
+    "concrete",
+    "grass",
+    "gravel",
+    "iron_dark",
+    "kerb",
+    "pavers",
+    "river",
+    "sandstone",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-2_-9.glb",
+   "tx": -2,
+   "tz": -9,
+   "bounds": {
+    "min": [
+     -202.189,
+     -4.069,
+     -872.778
+    ],
+    "max": [
+     -98.915,
+     -1.747,
+     -796.648
+    ]
+   },
+   "triangles": 2764,
+   "bytes": 84412,
+   "materials": [
+    "pavers",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-2_-8.glb",
+   "tx": -2,
+   "tz": -8,
+   "bounds": {
+    "min": [
+     -214.403,
+     -3.34,
+     -804.604
+    ],
+    "max": [
+     -97.72,
+     -1.568,
+     -688.051
+    ]
+   },
+   "triangles": 7123,
+   "bytes": 257276,
+   "materials": [
+    "asphalt",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-2_-7.glb",
+   "tx": -2,
+   "tz": -7,
+   "bounds": {
+    "min": [
+     -203.053,
+     -2.539,
+     -703.872
+    ],
+    "max": [
+     -96.187,
+     2.584,
+     -598.17
+    ]
+   },
+   "triangles": 7373,
+   "bytes": 286624,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "ballast",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-2_-6.glb",
+   "tx": -2,
+   "tz": -6,
+   "bounds": {
+    "min": [
+     -201.594,
+     -2.504,
+     -602.546
+    ],
+    "max": [
+     -97.717,
+     2.653,
+     -498.075
+    ]
+   },
+   "triangles": 4388,
+   "bytes": 142436,
+   "materials": [
+    "asphalt",
+    "ballast",
+    "granite",
+    "grass",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-2_-5.glb",
+   "tx": -2,
+   "tz": -5,
+   "bounds": {
+    "min": [
+     -205.082,
+     -2.671,
+     -502.519
+    ],
+    "max": [
+     -98.1,
+     2.617,
+     -396.569
+    ]
+   },
+   "triangles": 6641,
+   "bytes": 269316,
+   "materials": [
+    "asphalt",
+    "ballast",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small"
+   ]
+  },
+  {
+   "file": "ground_-2_-4.glb",
+   "tx": -2,
+   "tz": -4,
+   "bounds": {
+    "min": [
+     -202.406,
+     -2.395,
+     -404.677
+    ],
+    "max": [
+     -95.41,
+     0.424,
+     -297.354
+    ]
+   },
+   "triangles": 6320,
+   "bytes": 293940,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-2_-3.glb",
+   "tx": -2,
+   "tz": -3,
+   "bounds": {
+    "min": [
+     -201.922,
+     -2.156,
+     -302.505
+    ],
+    "max": [
+     -91.036,
+     5.549,
+     -196.032
+    ]
+   },
+   "triangles": 12837,
+   "bytes": 617624,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grate",
+    "groove",
+    "kerb",
+    "marking",
+    "paint_grey",
+    "pavers",
+    "rail",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "steel_dark",
+    "wire"
+   ]
+  },
+  {
+   "file": "ground_-2_-2.glb",
+   "tx": -2,
+   "tz": -2,
+   "bounds": {
+    "min": [
+     -204.718,
+     -1.959,
+     -204.888
+    ],
+    "max": [
+     -98.699,
+     -0.879,
+     -95.261
+    ]
+   },
+   "triangles": 6798,
+   "bytes": 301720,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-2_-1.glb",
+   "tx": -2,
+   "tz": -1,
+   "bounds": {
+    "min": [
+     -202.482,
+     -1.186,
+     -102.814
+    ],
+    "max": [
+     -95.414,
+     0.18,
+     2.676
+    ]
+   },
+   "triangles": 4483,
+   "bytes": 167764,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-2_0.glb",
+   "tx": -2,
+   "tz": 0,
+   "bounds": {
+    "min": [
+     -204.954,
+     -0.765,
+     -4.613
+    ],
+    "max": [
+     -98.127,
+     0.18,
+     104.503
+    ]
+   },
+   "triangles": 3024,
+   "bytes": 107984,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-2_1.glb",
+   "tx": -2,
+   "tz": 1,
+   "bounds": {
+    "min": [
+     -205.568,
+     -0.856,
+     95.22
+    ],
+    "max": [
+     -98.257,
+     -0.169,
+     202.88
+    ]
+   },
+   "triangles": 2722,
+   "bytes": 77512,
+   "materials": [
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_arc",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-2_2.glb",
+   "tx": -2,
+   "tz": 2,
+   "bounds": {
+    "min": [
+     -205.358,
+     -1.0,
+     196.514
+    ],
+    "max": [
+     -98.676,
+     3.016,
+     302.961
+    ]
+   },
+   "triangles": 8540,
+   "bytes": 403304,
+   "materials": [
+    "asphalt",
+    "clinker",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_arc",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "wallstone",
+    "water"
+   ]
+  },
+  {
+   "file": "ground_-2_3.glb",
+   "tx": -2,
+   "tz": 3,
+   "bounds": {
+    "min": [
+     -204.39,
+     -1.496,
+     298.658
+    ],
+    "max": [
+     -98.459,
+     1.168,
+     402.277
+    ]
+   },
+   "triangles": 8636,
+   "bytes": 400344,
+   "materials": [
+    "asphalt",
+    "clinker",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_arc",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-2_4.glb",
+   "tx": -2,
+   "tz": 4,
+   "bounds": {
+    "min": [
+     -204.39,
+     -0.918,
+     397.14
+    ],
+    "max": [
+     -98.102,
+     1.191,
+     502.193
+    ]
+   },
+   "triangles": 8156,
+   "bytes": 391680,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_arc",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-2_5.glb",
+   "tx": -2,
+   "tz": 5,
+   "bounds": {
+    "min": [
+     -202.827,
+     -1.94,
+     497.022
+    ],
+    "max": [
+     -94.169,
+     0.103,
+     605.267
+    ]
+   },
+   "triangles": 10027,
+   "bytes": 466704,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-2_6.glb",
+   "tx": -2,
+   "tz": 6,
+   "bounds": {
+    "min": [
+     -201.586,
+     -2.709,
+     595.526
+    ],
+    "max": [
+     -95.988,
+     -0.777,
+     702.952
+    ]
+   },
+   "triangles": 10770,
+   "bytes": 499360,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-2_7.glb",
+   "tx": -2,
+   "tz": 7,
+   "bounds": {
+    "min": [
+     -201.965,
+     -2.875,
+     696.492
+    ],
+    "max": [
+     -96.483,
+     -1.226,
+     802.535
+    ]
+   },
+   "triangles": 4598,
+   "bytes": 190824,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "grass",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-2_8.glb",
+   "tx": -2,
+   "tz": 8,
+   "bounds": {
+    "min": [
+     -201.162,
+     -4.621,
+     796.266
+    ],
+    "max": [
+     -95.074,
+     -1.125,
+     854.068
+    ]
+   },
+   "triangles": 2825,
+   "bytes": 143156,
+   "materials": [
+    "grass",
+    "kerb",
+    "pavers",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-1_-9.glb",
+   "tx": -1,
+   "tz": -9,
+   "bounds": {
+    "min": [
+     -101.176,
+     -3.807,
+     -875.66
+    ],
+    "max": [
+     5.916,
+     -1.737,
+     -798.862
+    ]
+   },
+   "triangles": 3043,
+   "bytes": 85120,
+   "materials": [
+    "pavers",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-1_-8.glb",
+   "tx": -1,
+   "tz": -8,
+   "bounds": {
+    "min": [
+     -102.042,
+     -2.639,
+     -801.112
+    ],
+    "max": [
+     1.351,
+     -0.701,
+     -696.642
+    ]
+   },
+   "triangles": 8294,
+   "bytes": 312796,
+   "materials": [
+    "asphalt",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-1_-7.glb",
+   "tx": -1,
+   "tz": -7,
+   "bounds": {
+    "min": [
+     -105.335,
+     -2.078,
+     -703.191
+    ],
+    "max": [
+     1.537,
+     0.465,
+     -595.205
+    ]
+   },
+   "triangles": 10819,
+   "bytes": 519148,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "fence",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-1_-6.glb",
+   "tx": -1,
+   "tz": -6,
+   "bounds": {
+    "min": [
+     -102.168,
+     -1.729,
+     -606.59
+    ],
+    "max": [
+     2.854,
+     3.248,
+     -498.358
+    ]
+   },
+   "triangles": 4902,
+   "bytes": 136756,
+   "materials": [
+    "asphalt",
+    "ballast",
+    "concrete",
+    "fence",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-1_-5.glb",
+   "tx": -1,
+   "tz": -5,
+   "bounds": {
+    "min": [
+     -102.019,
+     0.198,
+     -502.2
+    ],
+    "max": [
+     2.088,
+     3.336,
+     -395.216
+    ]
+   },
+   "triangles": 2966,
+   "bytes": 74652,
+   "materials": [
+    "ballast",
+    "concrete",
+    "pavers"
+   ]
+  },
+  {
+   "file": "ground_-1_-4.glb",
+   "tx": -1,
+   "tz": -4,
+   "bounds": {
+    "min": [
+     -104.977,
+     -2.187,
+     -403.718
+    ],
+    "max": [
+     2.061,
+     2.557,
+     -297.874
+    ]
+   },
+   "triangles": 1298,
+   "bytes": 38384,
+   "materials": [
+    "ballast",
+    "pavers",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_-1_-3.glb",
+   "tx": -1,
+   "tz": -3,
+   "bounds": {
+    "min": [
+     -105.904,
+     -2.4,
+     -301.709
+    ],
+    "max": [
+     5.202,
+     5.433,
+     -197.347
+    ]
+   },
+   "triangles": 10944,
+   "bytes": 476812,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grate",
+    "groove",
+    "kerb",
+    "paint_grey",
+    "pavers",
+    "rail",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "steel_dark",
+    "wire"
+   ]
+  },
+  {
+   "file": "ground_-1_-2.glb",
+   "tx": -1,
+   "tz": -2,
+   "bounds": {
+    "min": [
+     -102.246,
+     -1.967,
+     -203.106
+    ],
+    "max": [
+     3.245,
+     -0.756,
+     -97.557
+    ]
+   },
+   "triangles": 6261,
+   "bytes": 277032,
+   "materials": [
+    "asphalt",
+    "granite",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "water"
+   ]
+  },
+  {
+   "file": "ground_-1_-1.glb",
+   "tx": -1,
+   "tz": -1,
+   "bounds": {
+    "min": [
+     -103.525,
+     -5.15,
+     -102.5
+    ],
+    "max": [
+     3.284,
+     5.793,
+     3.308
+    ]
+   },
+   "triangles": 25196,
+   "bytes": 1051496,
+   "materials": [
+    "black_glass",
+    "citylight",
+    "cloth_a",
+    "cloth_c",
+    "cloth_d",
+    "cloth_e",
+    "cloth_f",
+    "concrete",
+    "concrete_panel",
+    "d_ground_slabs_3b6841b3",
+    "downlight",
+    "esc_plate",
+    "esc_step",
+    "glass",
+    "granite",
+    "granite_dark",
+    "granite_polished",
+    "granite_step",
+    "granite_wall",
+    "grate",
+    "guidance",
+    "hedge",
+    "kerb",
+    "lamp_glow",
+    "lightcove",
+    "lightline",
+    "mosaic_teal",
+    "mosaic_yg",
+    "netmap",
+    "nosing",
+    "paint_dark",
+    "paint_grey",
+    "pavers",
+    "prom_signs_1",
+    "prom_signs_2",
+    "rubber",
+    "shopglass",
+    "shopint_beauty",
+    "shopint_chemist",
+    "shopint_fast_food",
+    "shopint_generic",
+    "shopint_mobile_phone",
+    "shopint_vacant",
+    "shutter_steel",
+    "sign_guide",
+    "sign_kroepcke",
+    "sign_u2",
+    "slabs_ped",
+    "slats",
+    "slats_dark",
+    "soil",
+    "stainless",
+    "steel",
+    "steel_dark",
+    "stone_light",
+    "tactile",
+    "tile_beige",
+    "tile_white",
+    "wallstone",
+    "wood"
+   ]
+  },
+  {
+   "file": "ground_-1_0.glb",
+   "tx": -1,
+   "tz": 0,
+   "bounds": {
+    "min": [
+     -103.363,
+     -4.962,
+     -1.108
+    ],
+    "max": [
+     -36.155,
+     3.391,
+     103.732
+    ]
+   },
+   "triangles": 9597,
+   "bytes": 388532,
+   "materials": [
+    "asphalt",
+    "citylight",
+    "d_ground_slabs_f833e41b",
+    "downlight",
+    "esc_plate",
+    "esc_step",
+    "glass",
+    "granite_dark",
+    "granite_polished",
+    "granite_step",
+    "granite_wall",
+    "guidance",
+    "kerb",
+    "lightcove",
+    "lightline",
+    "mosaic_teal",
+    "mosaic_yg",
+    "netmap",
+    "nosing",
+    "paint_dark",
+    "rubber",
+    "shutter_steel",
+    "sign_guide",
+    "sign_kroepcke",
+    "sign_u2",
+    "slabs_ped",
+    "slats",
+    "soil",
+    "stainless",
+    "steel_dark",
+    "tactile",
+    "tile_beige"
+   ]
+  },
+  {
+   "file": "ground_-1_1.glb",
+   "tx": -1,
+   "tz": 1,
+   "bounds": {
+    "min": [
+     -103.363,
+     -5.218,
+     94.03
+    ],
+    "max": [
+     -54.772,
+     3.186,
+     201.331
+    ]
+   },
+   "triangles": 15210,
+   "bytes": 617164,
+   "materials": [
+    "asphalt",
+    "citylight",
+    "d_ground_slabs_f833e41b",
+    "downlight",
+    "esc_plate",
+    "esc_step",
+    "glass",
+    "granite",
+    "granite_dark",
+    "granite_polished",
+    "granite_step",
+    "granite_wall",
+    "grate",
+    "guidance",
+    "kerb",
+    "lightcove",
+    "lightline",
+    "mosaic_teal",
+    "mosaic_yg",
+    "netmap",
+    "nosing",
+    "paint_dark",
+    "pavers",
+    "rubber",
+    "shutter_steel",
+    "sign_guide",
+    "sign_kroepcke",
+    "sign_u2",
+    "slabs_ped",
+    "slats",
+    "soil",
+    "stainless",
+    "steel_dark",
+    "tactile",
+    "tile_beige",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-1_2.glb",
+   "tx": -1,
+   "tz": 2,
+   "bounds": {
+    "min": [
+     -101.612,
+     -1.801,
+     199.027
+    ],
+    "max": [
+     1.62,
+     -0.204,
+     301.6
+    ]
+   },
+   "triangles": 6943,
+   "bytes": 306028,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-1_3.glb",
+   "tx": -1,
+   "tz": 3,
+   "bounds": {
+    "min": [
+     -102.47,
+     -1.59,
+     297.486
+    ],
+    "max": [
+     1.799,
+     -0.037,
+     406.855
+    ]
+   },
+   "triangles": 5807,
+   "bytes": 241472,
+   "materials": [
+    "asphalt",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small"
+   ]
+  },
+  {
+   "file": "ground_-1_4.glb",
+   "tx": -1,
+   "tz": 4,
+   "bounds": {
+    "min": [
+     -101.764,
+     -1.197,
+     395.884
+    ],
+    "max": [
+     2.696,
+     0.301,
+     501.616
+    ]
+   },
+   "triangles": 6191,
+   "bytes": 269896,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "fence",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-1_5.glb",
+   "tx": -1,
+   "tz": 5,
+   "bounds": {
+    "min": [
+     -103.786,
+     -1.466,
+     498.508
+    ],
+    "max": [
+     1.667,
+     0.393,
+     601.794
+    ]
+   },
+   "triangles": 11019,
+   "bytes": 515988,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "fence",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_-1_6.glb",
+   "tx": -1,
+   "tz": 6,
+   "bounds": {
+    "min": [
+     -105.458,
+     -2.64,
+     597.559
+    ],
+    "max": [
+     2.388,
+     1.69,
+     701.385
+    ]
+   },
+   "triangles": 10200,
+   "bytes": 452648,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_-1_7.glb",
+   "tx": -1,
+   "tz": 7,
+   "bounds": {
+    "min": [
+     -102.947,
+     -2.963,
+     698.404
+    ],
+    "max": [
+     1.623,
+     -0.713,
+     805.042
+    ]
+   },
+   "triangles": 7936,
+   "bytes": 368720,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grass",
+    "gravel",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "wallstone",
+    "water"
+   ]
+  },
+  {
+   "file": "ground_-1_8.glb",
+   "tx": -1,
+   "tz": 8,
+   "bounds": {
+    "min": [
+     -103.622,
+     -5.082,
+     796.534
+    ],
+    "max": [
+     1.668,
+     -1.104,
+     859.884
+    ]
+   },
+   "triangles": 2241,
+   "bytes": 82448,
+   "materials": [
+    "grass",
+    "gravel",
+    "kerb",
+    "pavers",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_0_-9.glb",
+   "tx": 0,
+   "tz": -9,
+   "bounds": {
+    "min": [
+     -4.523,
+     -4.143,
+     -867.122
+    ],
+    "max": [
+     101.442,
+     -1.888,
+     -796.321
+    ]
+   },
+   "triangles": 2755,
+   "bytes": 77504,
+   "materials": [
+    "pavers",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_0_-8.glb",
+   "tx": 0,
+   "tz": -8,
+   "bounds": {
+    "min": [
+     -2.195,
+     -2.71,
+     -801.9
+    ],
+    "max": [
+     104.192,
+     -0.921,
+     -698.748
+    ]
+   },
+   "triangles": 7409,
+   "bytes": 280060,
+   "materials": [
+    "asphalt",
+    "fence",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_0_-7.glb",
+   "tx": 0,
+   "tz": -7,
+   "bounds": {
+    "min": [
+     -1.645,
+     -2.624,
+     -701.233
+    ],
+    "max": [
+     104.483,
+     0.4,
+     -595.814
+    ]
+   },
+   "triangles": 5159,
+   "bytes": 208652,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "fence",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_0_-6.glb",
+   "tx": 0,
+   "tz": -6,
+   "bounds": {
+    "min": [
+     -12.929,
+     -1.417,
+     -605.398
+    ],
+    "max": [
+     105.588,
+     3.163,
+     -498.586
+    ]
+   },
+   "triangles": 8313,
+   "bytes": 378544,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "ballast",
+    "concrete",
+    "fence",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_0_-5.glb",
+   "tx": 0,
+   "tz": -5,
+   "bounds": {
+    "min": [
+     -1.86,
+     -1.589,
+     -502.293
+    ],
+    "max": [
+     101.212,
+     3.382,
+     -397.685
+    ]
+   },
+   "triangles": 8037,
+   "bytes": 217748,
+   "materials": [
+    "asphalt",
+    "ballast",
+    "concrete",
+    "kerb",
+    "pavers",
+    "setts_small"
+   ]
+  },
+  {
+   "file": "ground_0_-4.glb",
+   "tx": 0,
+   "tz": -4,
+   "bounds": {
+    "min": [
+     -2.436,
+     -2.914,
+     -401.934
+    ],
+    "max": [
+     101.68,
+     4.545,
+     -295.348
+    ]
+   },
+   "triangles": 7260,
+   "bytes": 220892,
+   "materials": [
+    "asphalt",
+    "ballast",
+    "concrete",
+    "groove",
+    "kerb",
+    "paint_grey",
+    "pavers",
+    "rail",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "steel_dark",
+    "wire"
+   ]
+  },
+  {
+   "file": "ground_0_-3.glb",
+   "tx": 0,
+   "tz": -3,
+   "bounds": {
+    "min": [
+     -4.32,
+     -2.914,
+     -303.929
+    ],
+    "max": [
+     104.586,
+     5.39,
+     -198.116
+    ]
+   },
+   "triangles": 12755,
+   "bytes": 585164,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "ballast",
+    "concrete",
+    "granite",
+    "grate",
+    "groove",
+    "kerb",
+    "marking",
+    "paint_grey",
+    "pavers",
+    "rail",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "steel_dark",
+    "water",
+    "wire"
+   ]
+  },
+  {
+   "file": "ground_0_-2.glb",
+   "tx": 0,
+   "tz": -2,
+   "bounds": {
+    "min": [
+     -4.219,
+     -5.887,
+     -201.167
+    ],
+    "max": [
+     105.032,
+     4.786,
+     -89.929
+    ]
+   },
+   "triangles": 28113,
+   "bytes": 1412016,
+   "materials": [
+    "asphalt",
+    "black_glass",
+    "cloth_a",
+    "cloth_b",
+    "cloth_c",
+    "cloth_d",
+    "cloth_e",
+    "cloth_f",
+    "concrete",
+    "concrete_panel",
+    "downlight",
+    "glass",
+    "granite",
+    "granite_dark",
+    "granite_polished",
+    "granite_step",
+    "grate",
+    "hedge",
+    "kerb",
+    "lamp_glow",
+    "lightline",
+    "mannequin",
+    "mosaic_green",
+    "nosing",
+    "paint_dark",
+    "paint_grey",
+    "pavers",
+    "prom_signs_0",
+    "prom_signs_1",
+    "prom_signs_2",
+    "setts_road",
+    "setts_small",
+    "shopglass",
+    "shopint_beauty",
+    "shopint_cafe",
+    "shopint_chemist",
+    "shopint_clothes",
+    "shopint_fast_food",
+    "shopint_generic",
+    "shopint_hairdresser",
+    "shopint_kiosk",
+    "shopint_mobile_phone",
+    "shopint_vacant",
+    "slabs_ped",
+    "slats_dark",
+    "soil",
+    "stainless",
+    "steel",
+    "stone_light",
+    "tactile",
+    "tile_white",
+    "wallstone",
+    "wood"
+   ]
+  },
+  {
+   "file": "ground_0_-1.glb",
+   "tx": 0,
+   "tz": -1,
+   "bounds": {
+    "min": [
+     -3.177,
+     -5.352,
+     -110.741
+    ],
+    "max": [
+     106.618,
+     5.408,
+     -6.79
+    ]
+   },
+   "triangles": 27430,
+   "bytes": 1237660,
+   "materials": [
+    "asphalt",
+    "cloth_a",
+    "cloth_b",
+    "cloth_c",
+    "cloth_d",
+    "cloth_e",
+    "cloth_f",
+    "concrete",
+    "concrete_panel",
+    "downlight",
+    "glass",
+    "granite",
+    "granite_dark",
+    "granite_polished",
+    "granite_step",
+    "grate",
+    "hedge",
+    "kerb",
+    "lamp_glow",
+    "lightline",
+    "nosing",
+    "paint_dark",
+    "paint_grey",
+    "pavers",
+    "prom_signs_0",
+    "prom_signs_1",
+    "prom_signs_2",
+    "setts_small",
+    "shopglass",
+    "shopint_cafe",
+    "shopint_chemist",
+    "shopint_fast_food",
+    "shopint_generic",
+    "shopint_kiosk",
+    "shopint_vacant",
+    "slabs_ped",
+    "soil",
+    "stainless",
+    "steel",
+    "stone_light",
+    "tactile",
+    "tile_white",
+    "wallstone",
+    "wood"
+   ]
+  },
+  {
+   "file": "ground_0_0.glb",
+   "tx": 0,
+   "tz": 0,
+   "bounds": {
+    "min": [
+     2.586,
+     -5.066,
+     21.978
+    ],
+    "max": [
+     22.154,
+     3.126,
+     47.706
+    ]
+   },
+   "triangles": 7330,
+   "bytes": 297048,
+   "materials": [
+    "citylight",
+    "d_ground_slabs_f833e41b",
+    "esc_plate",
+    "esc_step",
+    "glass",
+    "granite_dark",
+    "granite_polished",
+    "granite_step",
+    "granite_wall",
+    "guidance",
+    "lightcove",
+    "lightline",
+    "mosaic_teal",
+    "mosaic_yg",
+    "netmap",
+    "nosing",
+    "paint_dark",
+    "rubber",
+    "shutter_steel",
+    "sign_guide",
+    "sign_kroepcke",
+    "sign_u2",
+    "slats",
+    "stainless",
+    "steel_dark",
+    "tactile",
+    "tile_beige"
+   ]
+  },
+  {
+   "file": "ground_0_1.glb",
+   "tx": 0,
+   "tz": 1,
+   "bounds": {
+    "min": [
+     78.334,
+     -5.647,
+     189.324
+    ],
+    "max": [
+     97.69,
+     -2.227,
+     205.388
+    ]
+   },
+   "triangles": 407,
+   "bytes": 37240,
+   "materials": [
+    "citylight",
+    "granite_dark",
+    "guidance",
+    "lightcove",
+    "lightline",
+    "mosaic_teal",
+    "mosaic_yg",
+    "netmap",
+    "paint_dark",
+    "shutter_steel",
+    "sign_guide",
+    "sign_kroepcke",
+    "slats",
+    "stainless",
+    "tile_beige"
+   ]
+  },
+  {
+   "file": "ground_0_2.glb",
+   "tx": 0,
+   "tz": 2,
+   "bounds": {
+    "min": [
+     -2.154,
+     -5.718,
+     195.702
+    ],
+    "max": [
+     103.234,
+     2.552,
+     302.621
+    ]
+   },
+   "triangles": 10252,
+   "bytes": 434028,
+   "materials": [
+    "asphalt",
+    "citylight",
+    "d_ground_asphalt_5cceef0e",
+    "d_ground_setts_84d7cf54",
+    "d_ground_slabs_3b6841b3",
+    "d_ground_slabs_b23c554f",
+    "downlight",
+    "esc_plate",
+    "esc_step",
+    "fence",
+    "glass",
+    "granite_dark",
+    "granite_polished",
+    "granite_step",
+    "granite_wall",
+    "guidance",
+    "kerb",
+    "lightcove",
+    "lightline",
+    "mosaic_teal",
+    "mosaic_yg",
+    "nosing",
+    "paint_dark",
+    "pavers",
+    "rubber",
+    "setts_small",
+    "sign_guide",
+    "sign_kroepcke",
+    "sign_u2",
+    "slabs_ped",
+    "slats",
+    "soil",
+    "stainless",
+    "steel_dark",
+    "tactile",
+    "tile_beige"
+   ]
+  },
+  {
+   "file": "ground_0_3.glb",
+   "tx": 0,
+   "tz": 3,
+   "bounds": {
+    "min": [
+     -1.574,
+     -1.309,
+     298.859
+    ],
+    "max": [
+     104.434,
+     0.667,
+     404.229
+    ]
+   },
+   "triangles": 3747,
+   "bytes": 123128,
+   "materials": [
+    "asphalt",
+    "fence",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_0_4.glb",
+   "tx": 0,
+   "tz": 4,
+   "bounds": {
+    "min": [
+     -2.102,
+     -1.334,
+     392.394
+    ],
+    "max": [
+     103.539,
+     0.547,
+     501.818
+    ]
+   },
+   "triangles": 7288,
+   "bytes": 313192,
+   "materials": [
+    "asphalt",
+    "fence",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "wallstone",
+    "water"
+   ]
+  },
+  {
+   "file": "ground_0_5.glb",
+   "tx": 0,
+   "tz": 5,
+   "bounds": {
+    "min": [
+     -1.303,
+     -2.228,
+     497.398
+    ],
+    "max": [
+     102.028,
+     0.592,
+     602.016
+    ]
+   },
+   "triangles": 9546,
+   "bytes": 426124,
+   "materials": [
+    "asphalt",
+    "fence",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_0_6.glb",
+   "tx": 0,
+   "tz": 6,
+   "bounds": {
+    "min": [
+     -1.802,
+     -2.161,
+     596.809
+    ],
+    "max": [
+     105.354,
+     -0.147,
+     701.581
+    ]
+   },
+   "triangles": 13398,
+   "bytes": 662588,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_0_7.glb",
+   "tx": 0,
+   "tz": 7,
+   "bounds": {
+    "min": [
+     -1.856,
+     -2.548,
+     698.39
+    ],
+    "max": [
+     102.396,
+     -1.247,
+     801.444
+    ]
+   },
+   "triangles": 9488,
+   "bytes": 426688,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "granite",
+    "grass",
+    "grate",
+    "gravel",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_0_8.glb",
+   "tx": 0,
+   "tz": 8,
+   "bounds": {
+    "min": [
+     -1.299,
+     -4.852,
+     798.441
+    ],
+    "max": [
+     105.23,
+     -1.791,
+     898.891
+    ]
+   },
+   "triangles": 4548,
+   "bytes": 219668,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grass",
+    "grate",
+    "gravel",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_0_9.glb",
+   "tx": 0,
+   "tz": 9,
+   "bounds": {
+    "min": [
+     66.854,
+     -3.066,
+     904.853
+    ],
+    "max": [
+     75.679,
+     -2.788,
+     997.456
+    ]
+   },
+   "triangles": 88,
+   "bytes": 5192,
+   "materials": [
+    "marking"
+   ]
+  },
+  {
+   "file": "ground_0_10.glb",
+   "tx": 0,
+   "tz": 10,
+   "bounds": {
+    "min": [
+     57.972,
+     -2.918,
+     1003.421
+    ],
+    "max": [
+     66.435,
+     -2.877,
+     1096.056
+    ]
+   },
+   "triangles": 88,
+   "bytes": 5196,
+   "materials": [
+    "marking"
+   ]
+  },
+  {
+   "file": "ground_0_11.glb",
+   "tx": 0,
+   "tz": 11,
+   "bounds": {
+    "min": [
+     56.357,
+     -2.895,
+     1102.021
+    ],
+    "max": [
+     57.553,
+     -2.88,
+     1113.984
+    ]
+   },
+   "triangles": 16,
+   "bytes": 1872,
+   "materials": [
+    "marking"
+   ]
+  },
+  {
+   "file": "ground_1_-9.glb",
+   "tx": 1,
+   "tz": -9,
+   "bounds": {
+    "min": [
+     98.586,
+     -4.587,
+     -858.532
+    ],
+    "max": [
+     203.03,
+     -2.13,
+     -798.66
+    ]
+   },
+   "triangles": 2820,
+   "bytes": 81200,
+   "materials": [
+    "pavers",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_1_-8.glb",
+   "tx": 1,
+   "tz": -8,
+   "bounds": {
+    "min": [
+     97.049,
+     -2.852,
+     -801.273
+    ],
+    "max": [
+     204.554,
+     -1.845,
+     -697.632
+    ]
+   },
+   "triangles": 7120,
+   "bytes": 286864,
+   "materials": [
+    "asphalt",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_1_-7.glb",
+   "tx": 1,
+   "tz": -7,
+   "bounds": {
+    "min": [
+     94.549,
+     -2.659,
+     -701.344
+    ],
+    "max": [
+     203.524,
+     -1.023,
+     -598.439
+    ]
+   },
+   "triangles": 9938,
+   "bytes": 463972,
+   "materials": [
+    "asphalt",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_1_-6.glb",
+   "tx": 1,
+   "tz": -6,
+   "bounds": {
+    "min": [
+     95.914,
+     -2.666,
+     -601.551
+    ],
+    "max": [
+     202.8,
+     -0.745,
+     -498.63
+    ]
+   },
+   "triangles": 5352,
+   "bytes": 184908,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_1_-5.glb",
+   "tx": 1,
+   "tz": -5,
+   "bounds": {
+    "min": [
+     98.85,
+     -2.973,
+     -501.885
+    ],
+    "max": [
+     203.415,
+     6.986,
+     -398.788
+    ]
+   },
+   "triangles": 19458,
+   "bytes": 844932,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "ballast",
+    "bin_grey",
+    "concrete",
+    "granite",
+    "grass",
+    "grate",
+    "groove",
+    "hst_h",
+    "hst_hauptbahnhof_zob",
+    "kerb",
+    "marking",
+    "paint_grey",
+    "pavers",
+    "rail",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "stainless",
+    "steel_dark",
+    "stone_light",
+    "wire"
+   ]
+  },
+  {
+   "file": "ground_1_-4.glb",
+   "tx": 1,
+   "tz": -4,
+   "bounds": {
+    "min": [
+     98.663,
+     -2.668,
+     -401.56
+    ],
+    "max": [
+     202.842,
+     3.671,
+     -297.489
+    ]
+   },
+   "triangles": 7095,
+   "bytes": 199000,
+   "materials": [
+    "ballast",
+    "concrete",
+    "downlight",
+    "granite",
+    "granite_polished",
+    "granite_step",
+    "granite_wall",
+    "nosing",
+    "pavers",
+    "slabs_ped",
+    "stainless"
+   ]
+  },
+  {
+   "file": "ground_1_-3.glb",
+   "tx": 1,
+   "tz": -3,
+   "bounds": {
+    "min": [
+     94.914,
+     -6.266,
+     -301.902
+    ],
+    "max": [
+     203.068,
+     5.656,
+     -194.997
+    ]
+   },
+   "triangles": 11489,
+   "bytes": 464848,
+   "materials": [
+    "ballast",
+    "citylight",
+    "cloth_a",
+    "cloth_c",
+    "cloth_d",
+    "cloth_e",
+    "cloth_f",
+    "concrete",
+    "concrete_panel",
+    "downlight",
+    "esc_plate",
+    "esc_step",
+    "glass",
+    "granite",
+    "granite_dark",
+    "granite_polished",
+    "granite_step",
+    "granite_wall",
+    "guidance",
+    "interior_dark",
+    "lightline",
+    "netmap",
+    "nosing",
+    "paint_dark",
+    "paint_grey",
+    "pavers",
+    "prom_signs_1",
+    "prom_signs_2",
+    "rubber",
+    "shopglass",
+    "shopint_kiosk",
+    "shopint_vacant",
+    "shutter_steel",
+    "sign_guide",
+    "sign_hbf",
+    "sign_u2",
+    "slabs_ped",
+    "slats",
+    "slats_dark",
+    "stainless",
+    "steel",
+    "stone_light",
+    "tactile",
+    "tile_white",
+    "water"
+   ]
+  },
+  {
+   "file": "ground_1_-2.glb",
+   "tx": 1,
+   "tz": -2,
+   "bounds": {
+    "min": [
+     94.281,
+     -6.346,
+     -204.958
+    ],
+    "max": [
+     203.08,
+     4.541,
+     -96.728
+    ]
+   },
+   "triangles": 17487,
+   "bytes": 812472,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "cloth_b",
+    "cloth_c",
+    "cloth_e",
+    "concrete",
+    "concrete_panel",
+    "esc_plate",
+    "esc_step",
+    "fence",
+    "glass",
+    "granite",
+    "granite_dark",
+    "granite_polished",
+    "granite_step",
+    "grate",
+    "hedge",
+    "kerb",
+    "lamp_glow",
+    "lightline",
+    "marking",
+    "mosaic_green",
+    "nosing",
+    "paint_dark",
+    "paint_grey",
+    "pavers",
+    "prom_signs_1",
+    "rubber",
+    "setts_road",
+    "setts_small",
+    "shopglass",
+    "shopint_generic",
+    "shopint_kiosk",
+    "shopint_vacant",
+    "slabs_ped",
+    "slats_dark",
+    "soil",
+    "stainless",
+    "steel",
+    "steel_dark",
+    "stone_light",
+    "tactile",
+    "tile_white",
+    "water"
+   ]
+  },
+  {
+   "file": "ground_1_-1.glb",
+   "tx": 1,
+   "tz": -1,
+   "bounds": {
+    "min": [
+     94.29,
+     -2.15,
+     -103.531
+    ],
+    "max": [
+     202.048,
+     -0.631,
+     -6.79
+    ]
+   },
+   "triangles": 6014,
+   "bytes": 244884,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_1_0.glb",
+   "tx": 1,
+   "tz": 0,
+   "bounds": {
+    "min": [
+     151.878,
+     -1.304,
+     53.228
+    ],
+    "max": [
+     171.598,
+     -1.206,
+     60.653
+    ]
+   },
+   "triangles": 27,
+   "bytes": 2356,
+   "materials": [
+    "marking"
+   ]
+  },
+  {
+   "file": "ground_1_2.glb",
+   "tx": 1,
+   "tz": 2,
+   "bounds": {
+    "min": [
+     97.74,
+     -5.647,
+     201.517
+    ],
+    "max": [
+     200.919,
+     2.886,
+     301.425
+    ]
+   },
+   "triangles": 5573,
+   "bytes": 305644,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "d_ground_asphalt_5cceef0e",
+    "d_ground_setts_84d7cf54",
+    "d_ground_slabs_3b6841b3",
+    "d_ground_slabs_b23c554f",
+    "downlight",
+    "granite",
+    "granite_polished",
+    "granite_step",
+    "granite_wall",
+    "grass",
+    "grate",
+    "hedge",
+    "kerb",
+    "nosing",
+    "paint_dark",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "sign_kroepcke",
+    "sign_u2",
+    "slabs_ped",
+    "soil",
+    "stainless",
+    "tactile"
+   ]
+  },
+  {
+   "file": "ground_1_3.glb",
+   "tx": 1,
+   "tz": 3,
+   "bounds": {
+    "min": [
+     95.986,
+     -1.923,
+     297.832
+    ],
+    "max": [
+     201.419,
+     0.255,
+     401.657
+    ]
+   },
+   "triangles": 14607,
+   "bytes": 811732,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "granite",
+    "grass",
+    "grate",
+    "hedge",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_1_4.glb",
+   "tx": 1,
+   "tz": 4,
+   "bounds": {
+    "min": [
+     97.694,
+     -2.206,
+     396.4
+    ],
+    "max": [
+     215.966,
+     0.069,
+     501.872
+    ]
+   },
+   "triangles": 6689,
+   "bytes": 309804,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "fence",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil",
+    "wallstone",
+    "water"
+   ]
+  },
+  {
+   "file": "ground_1_5.glb",
+   "tx": 1,
+   "tz": 5,
+   "bounds": {
+    "min": [
+     97.004,
+     -2.768,
+     498.555
+    ],
+    "max": [
+     201.543,
+     1.897,
+     601.25
+    ]
+   },
+   "triangles": 8662,
+   "bytes": 427108,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "fence",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_1_6.glb",
+   "tx": 1,
+   "tz": 6,
+   "bounds": {
+    "min": [
+     96.772,
+     -2.787,
+     598.673
+    ],
+    "max": [
+     202.528,
+     -1.013,
+     701.382
+    ]
+   },
+   "triangles": 11360,
+   "bytes": 570572,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "asphalt_red",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_1_7.glb",
+   "tx": 1,
+   "tz": 7,
+   "bounds": {
+    "min": [
+     97.894,
+     -3.089,
+     698.453
+    ],
+    "max": [
+     202.487,
+     -0.625,
+     802.289
+    ]
+   },
+   "triangles": 5819,
+   "bytes": 295152,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "water"
+   ]
+  },
+  {
+   "file": "ground_1_8.glb",
+   "tx": 1,
+   "tz": 8,
+   "bounds": {
+    "min": [
+     94.82,
+     -4.411,
+     797.958
+    ],
+    "max": [
+     204.476,
+     -1.452,
+     876.302
+    ]
+   },
+   "triangles": 3580,
+   "bytes": 177888,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "soil",
+    "water"
+   ]
+  },
+  {
+   "file": "ground_2_-9.glb",
+   "tx": 2,
+   "tz": -9,
+   "bounds": {
+    "min": [
+     198.318,
+     -4.618,
+     -848.962
+    ],
+    "max": [
+     301.66,
+     -2.062,
+     -798.655
+    ]
+   },
+   "triangles": 2039,
+   "bytes": 80772,
+   "materials": [
+    "asphalt",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_2_-8.glb",
+   "tx": 2,
+   "tz": -8,
+   "bounds": {
+    "min": [
+     194.6,
+     -3.166,
+     -801.19
+    ],
+    "max": [
+     302.388,
+     -1.829,
+     -694.691
+    ]
+   },
+   "triangles": 6378,
+   "bytes": 236660,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grass",
+    "kerb",
+    "pavers",
+    "setts_small"
+   ]
+  },
+  {
+   "file": "ground_2_-7.glb",
+   "tx": 2,
+   "tz": -7,
+   "bounds": {
+    "min": [
+     196.662,
+     -2.901,
+     -703.334
+    ],
+    "max": [
+     303.754,
+     -2.075,
+     -597.914
+    ]
+   },
+   "triangles": 6138,
+   "bytes": 260356,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_2_-6.glb",
+   "tx": 2,
+   "tz": -6,
+   "bounds": {
+    "min": [
+     197.844,
+     -2.81,
+     -602.558
+    ],
+    "max": [
+     303.754,
+     4.742,
+     -495.596
+    ]
+   },
+   "triangles": 21828,
+   "bytes": 953884,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "ballast",
+    "bin_grey",
+    "citylight",
+    "concrete",
+    "display_tram",
+    "fence",
+    "glass",
+    "granite",
+    "grate",
+    "groove",
+    "hst_h",
+    "hst_hauptbahnhof_zob",
+    "kerb",
+    "lightline",
+    "marking",
+    "paint_dark",
+    "paint_grey",
+    "pavers",
+    "rail",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "stainless",
+    "steel_dark",
+    "stone_light",
+    "tactile",
+    "ticket_machine",
+    "wire",
+    "wood"
+   ]
+  },
+  {
+   "file": "ground_2_-5.glb",
+   "tx": 2,
+   "tz": -5,
+   "bounds": {
+    "min": [
+     196.137,
+     -7.251,
+     -504.769
+    ],
+    "max": [
+     302.364,
+     4.717,
+     -394.509
+    ]
+   },
+   "triangles": 15399,
+   "bytes": 654348,
+   "materials": [
+    "asphalt",
+    "ballast",
+    "concrete",
+    "granite",
+    "granite_dark",
+    "grass",
+    "grate",
+    "groove",
+    "guidance",
+    "kerb",
+    "lightline",
+    "marking",
+    "netmap",
+    "paint_dark",
+    "paint_grey",
+    "pavers",
+    "rail",
+    "setts_road",
+    "setts_small",
+    "shutter_steel",
+    "sign_guide",
+    "sign_hbf",
+    "slabs_ped",
+    "slats",
+    "stainless",
+    "steel_dark",
+    "stone_light",
+    "tactile",
+    "tile_white",
+    "wire"
+   ]
+  },
+  {
+   "file": "ground_2_-4.glb",
+   "tx": 2,
+   "tz": -4,
+   "bounds": {
+    "min": [
+     197.78,
+     -2.715,
+     -403.049
+    ],
+    "max": [
+     304.262,
+     5.607,
+     -297.921
+    ]
+   },
+   "triangles": 9752,
+   "bytes": 373652,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "ballast",
+    "concrete",
+    "downlight",
+    "granite",
+    "granite_polished",
+    "granite_step",
+    "granite_wall",
+    "kerb",
+    "nosing",
+    "paint_dark",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "sign_hbf",
+    "sign_u2",
+    "slabs_ped",
+    "stainless",
+    "tactile"
+   ]
+  },
+  {
+   "file": "ground_2_-3.glb",
+   "tx": 2,
+   "tz": -3,
+   "bounds": {
+    "min": [
+     197.892,
+     0.892,
+     -301.542
+    ],
+    "max": [
+     301.403,
+     3.619,
+     -195.089
+    ]
+   },
+   "triangles": 6686,
+   "bytes": 178616,
+   "materials": [
+    "ballast",
+    "concrete",
+    "granite",
+    "granite_polished",
+    "slabs_ped",
+    "stainless"
+   ]
+  },
+  {
+   "file": "ground_2_-2.glb",
+   "tx": 2,
+   "tz": -2,
+   "bounds": {
+    "min": [
+     195.405,
+     -2.908,
+     -204.776
+    ],
+    "max": [
+     302.219,
+     3.181,
+     -98.785
+    ]
+   },
+   "triangles": 9585,
+   "bytes": 375068,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "ballast",
+    "concrete",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "water"
+   ]
+  },
+  {
+   "file": "ground_2_-1.glb",
+   "tx": 2,
+   "tz": -1,
+   "bounds": {
+    "min": [
+     196.965,
+     -2.321,
+     -101.971
+    ],
+    "max": [
+     302.757,
+     -0.871,
+     3.313
+    ]
+   },
+   "triangles": 4530,
+   "bytes": 173668,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_2_0.glb",
+   "tx": 2,
+   "tz": 0,
+   "bounds": {
+    "min": [
+     210.608,
+     -3.38,
+     -2.491
+    ],
+    "max": [
+     303.162,
+     -1.227,
+     104.005
+    ]
+   },
+   "triangles": 5513,
+   "bytes": 222392,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_2_1.glb",
+   "tx": 2,
+   "tz": 1,
+   "bounds": {
+    "min": [
+     232.62,
+     -4.568,
+     97.458
+    ],
+    "max": [
+     303.162,
+     -1.382,
+     201.75
+    ]
+   },
+   "triangles": 5814,
+   "bytes": 220196,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_2_2.glb",
+   "tx": 2,
+   "tz": 2,
+   "bounds": {
+    "min": [
+     198.87,
+     -2.28,
+     198.431
+    ],
+    "max": [
+     302.67,
+     -1.154,
+     304.931
+    ]
+   },
+   "triangles": 5892,
+   "bytes": 228996,
+   "materials": [
+    "asphalt",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_2_3.glb",
+   "tx": 2,
+   "tz": 3,
+   "bounds": {
+    "min": [
+     198.809,
+     -2.549,
+     297.206
+    ],
+    "max": [
+     305.224,
+     0.125,
+     404.67
+    ]
+   },
+   "triangles": 8676,
+   "bytes": 387580,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_2_4.glb",
+   "tx": 2,
+   "tz": 4,
+   "bounds": {
+    "min": [
+     184.947,
+     -2.174,
+     398.526
+    ],
+    "max": [
+     302.681,
+     -0.758,
+     501.096
+    ]
+   },
+   "triangles": 7214,
+   "bytes": 287272,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil",
+    "wallstone",
+    "water"
+   ]
+  },
+  {
+   "file": "ground_2_5.glb",
+   "tx": 2,
+   "tz": 5,
+   "bounds": {
+    "min": [
+     197.814,
+     -2.523,
+     498.731
+    ],
+    "max": [
+     301.519,
+     -0.514,
+     601.245
+    ]
+   },
+   "triangles": 7193,
+   "bytes": 312084,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "concrete",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_2_6.glb",
+   "tx": 2,
+   "tz": 6,
+   "bounds": {
+    "min": [
+     198.474,
+     -2.478,
+     597.81
+    ],
+    "max": [
+     301.456,
+     -0.547,
+     707.157
+    ]
+   },
+   "triangles": 11275,
+   "bytes": 541132,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "concrete",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_2_7.glb",
+   "tx": 2,
+   "tz": 7,
+   "bounds": {
+    "min": [
+     196.762,
+     -2.052,
+     693.173
+    ],
+    "max": [
+     302.024,
+     -0.367,
+     801.353
+    ]
+   },
+   "triangles": 7071,
+   "bytes": 314732,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_2_8.glb",
+   "tx": 2,
+   "tz": 8,
+   "bounds": {
+    "min": [
+     192.413,
+     -3.654,
+     798.664
+    ],
+    "max": [
+     300.166,
+     -1.31,
+     836.048
+    ]
+   },
+   "triangles": 2295,
+   "bytes": 120608,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_3_-9.glb",
+   "tx": 3,
+   "tz": -9,
+   "bounds": {
+    "min": [
+     298.896,
+     -4.711,
+     -829.174
+    ],
+    "max": [
+     340.423,
+     -2.767,
+     -798.764
+    ]
+   },
+   "triangles": 236,
+   "bytes": 19912,
+   "materials": [
+    "asphalt",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_3_-8.glb",
+   "tx": 3,
+   "tz": -8,
+   "bounds": {
+    "min": [
+     298.337,
+     -4.543,
+     -801.201
+    ],
+    "max": [
+     401.22,
+     -2.388,
+     -697.578
+    ]
+   },
+   "triangles": 7113,
+   "bytes": 305656,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grass",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_3_-7.glb",
+   "tx": 3,
+   "tz": -7,
+   "bounds": {
+    "min": [
+     297.25,
+     -3.024,
+     -702.034
+    ],
+    "max": [
+     403.785,
+     0.627,
+     -594.894
+    ]
+   },
+   "triangles": 7978,
+   "bytes": 373944,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_3_-6.glb",
+   "tx": 3,
+   "tz": -6,
+   "bounds": {
+    "min": [
+     297.268,
+     -7.097,
+     -603.056
+    ],
+    "max": [
+     401.289,
+     -0.953,
+     -497.884
+    ]
+   },
+   "triangles": 11374,
+   "bytes": 453744,
+   "materials": [
+    "asphalt",
+    "fence",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_3_-5.glb",
+   "tx": 3,
+   "tz": -5,
+   "bounds": {
+    "min": [
+     296.993,
+     -7.501,
+     -502.029
+    ],
+    "max": [
+     404.119,
+     0.948,
+     -394.985
+    ]
+   },
+   "triangles": 8202,
+   "bytes": 309588,
+   "materials": [
+    "asphalt",
+    "citylight",
+    "concrete",
+    "downlight",
+    "granite",
+    "granite_dark",
+    "granite_polished",
+    "granite_step",
+    "granite_wall",
+    "kerb",
+    "lightline",
+    "marking",
+    "nosing",
+    "paint_dark",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "sign_hbf",
+    "sign_u2",
+    "slabs_ped",
+    "slats",
+    "stainless",
+    "tactile",
+    "tile_white"
+   ]
+  },
+  {
+   "file": "ground_3_-4.glb",
+   "tx": 3,
+   "tz": -4,
+   "bounds": {
+    "min": [
+     294.568,
+     -2.889,
+     -406.152
+    ],
+    "max": [
+     402.035,
+     2.471,
+     -297.12
+    ]
+   },
+   "triangles": 11855,
+   "bytes": 576744,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "ballast",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_3_-3.glb",
+   "tx": 3,
+   "tz": -3,
+   "bounds": {
+    "min": [
+     298.342,
+     -2.716,
+     -301.101
+    ],
+    "max": [
+     403.977,
+     3.317,
+     -197.915
+    ]
+   },
+   "triangles": 7744,
+   "bytes": 255564,
+   "materials": [
+    "asphalt",
+    "ballast",
+    "concrete",
+    "fence",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_3_-2.glb",
+   "tx": 3,
+   "tz": -2,
+   "bounds": {
+    "min": [
+     297.182,
+     -1.951,
+     -201.804
+    ],
+    "max": [
+     401.993,
+     3.496,
+     -94.97
+    ]
+   },
+   "triangles": 5740,
+   "bytes": 153912,
+   "materials": [
+    "asphalt2",
+    "ballast",
+    "concrete",
+    "granite",
+    "grass",
+    "kerb",
+    "pavers"
+   ]
+  },
+  {
+   "file": "ground_3_-1.glb",
+   "tx": 3,
+   "tz": -1,
+   "bounds": {
+    "min": [
+     294.576,
+     -2.374,
+     -104.648
+    ],
+    "max": [
+     401.613,
+     2.758,
+     3.572
+    ]
+   },
+   "triangles": 5715,
+   "bytes": 250936,
+   "materials": [
+    "asphalt",
+    "ballast",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small"
+   ]
+  },
+  {
+   "file": "ground_3_0.glb",
+   "tx": 3,
+   "tz": 0,
+   "bounds": {
+    "min": [
+     294.576,
+     -4.023,
+     -2.491
+    ],
+    "max": [
+     401.162,
+     -1.646,
+     104.642
+    ]
+   },
+   "triangles": 5855,
+   "bytes": 236220,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_3_1.glb",
+   "tx": 3,
+   "tz": 1,
+   "bounds": {
+    "min": [
+     296.79,
+     -2.494,
+     93.515
+    ],
+    "max": [
+     402.612,
+     -1.479,
+     201.727
+    ]
+   },
+   "triangles": 5915,
+   "bytes": 239972,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_3_2.glb",
+   "tx": 3,
+   "tz": 2,
+   "bounds": {
+    "min": [
+     297.229,
+     -2.634,
+     198.209
+    ],
+    "max": [
+     404.647,
+     -1.156,
+     302.494
+    ]
+   },
+   "triangles": 8861,
+   "bytes": 408608,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grass",
+    "grate",
+    "hedge",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_3_3.glb",
+   "tx": 3,
+   "tz": 3,
+   "bounds": {
+    "min": [
+     297.187,
+     -2.615,
+     298.25
+    ],
+    "max": [
+     402.151,
+     -0.071,
+     404.131
+    ]
+   },
+   "triangles": 8775,
+   "bytes": 379972,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grass",
+    "grate",
+    "gravel",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_3_4.glb",
+   "tx": 3,
+   "tz": 4,
+   "bounds": {
+    "min": [
+     295.946,
+     -2.543,
+     395.714
+    ],
+    "max": [
+     403.453,
+     -0.893,
+     503.746
+    ]
+   },
+   "triangles": 8659,
+   "bytes": 408244,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "granite",
+    "grass",
+    "grate",
+    "gravel",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_3_5.glb",
+   "tx": 3,
+   "tz": 5,
+   "bounds": {
+    "min": [
+     297.657,
+     -6.759,
+     496.692
+    ],
+    "max": [
+     402.369,
+     1.521,
+     602.839
+    ]
+   },
+   "triangles": 15104,
+   "bytes": 731348,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "citylight",
+    "concrete",
+    "downlight",
+    "granite",
+    "granite_dark",
+    "granite_polished",
+    "granite_step",
+    "granite_wall",
+    "grass",
+    "grate",
+    "guidance",
+    "kerb",
+    "lightline",
+    "marking",
+    "netmap",
+    "nosing",
+    "paint_dark",
+    "pavers",
+    "setts_small",
+    "shutter_steel",
+    "sign_aegi",
+    "sign_guide",
+    "sign_u2",
+    "slabs_ped",
+    "slats",
+    "soil",
+    "stainless",
+    "tactile",
+    "tile_white",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_3_6.glb",
+   "tx": 3,
+   "tz": 6,
+   "bounds": {
+    "min": [
+     298.612,
+     -2.369,
+     598.255
+    ],
+    "max": [
+     402.476,
+     -0.504,
+     702.338
+    ]
+   },
+   "triangles": 10941,
+   "bytes": 525632,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "concrete",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_3_7.glb",
+   "tx": 3,
+   "tz": 7,
+   "bounds": {
+    "min": [
+     297.322,
+     -4.267,
+     698.166
+    ],
+    "max": [
+     404.908,
+     -0.358,
+     803.924
+    ]
+   },
+   "triangles": 6082,
+   "bytes": 250592,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_3_8.glb",
+   "tx": 3,
+   "tz": 8,
+   "bounds": {
+    "min": [
+     299.203,
+     -4.192,
+     795.342
+    ],
+    "max": [
+     353.136,
+     -1.701,
+     815.754
+    ]
+   },
+   "triangles": 492,
+   "bytes": 31244,
+   "materials": [
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_4_-8.glb",
+   "tx": 4,
+   "tz": -8,
+   "bounds": {
+    "min": [
+     398.343,
+     -4.717,
+     -761.51
+    ],
+    "max": [
+     498.853,
+     -1.976,
+     -697.977
+    ]
+   },
+   "triangles": 3658,
+   "bytes": 174008,
+   "materials": [
+    "asphalt",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_4_-7.glb",
+   "tx": 4,
+   "tz": -7,
+   "bounds": {
+    "min": [
+     394.668,
+     -4.318,
+     -702.856
+    ],
+    "max": [
+     501.384,
+     -1.051,
+     -598.662
+    ]
+   },
+   "triangles": 5193,
+   "bytes": 218704,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "fence",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_4_-6.glb",
+   "tx": 4,
+   "tz": -6,
+   "bounds": {
+    "min": [
+     398.48,
+     -3.176,
+     -601.179
+    ],
+    "max": [
+     501.596,
+     -1.681,
+     -496.753
+    ]
+   },
+   "triangles": 9928,
+   "bytes": 410264,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_4_-5.glb",
+   "tx": 4,
+   "tz": -5,
+   "bounds": {
+    "min": [
+     395.589,
+     -2.94,
+     -504.944
+    ],
+    "max": [
+     501.269,
+     -1.187,
+     -397.33
+    ]
+   },
+   "triangles": 10635,
+   "bytes": 472284,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_4_-4.glb",
+   "tx": 4,
+   "tz": -4,
+   "bounds": {
+    "min": [
+     398.44,
+     -3.495,
+     -402.74
+    ],
+    "max": [
+     502.048,
+     -1.554,
+     -295.861
+    ]
+   },
+   "triangles": 7188,
+   "bytes": 316464,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_4_-3.glb",
+   "tx": 4,
+   "tz": -3,
+   "bounds": {
+    "min": [
+     395.825,
+     -3.612,
+     -305.212
+    ],
+    "max": [
+     504.378,
+     -0.636,
+     -198.804
+    ]
+   },
+   "triangles": 7417,
+   "bytes": 336556,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "fence",
+    "granite",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small"
+   ]
+  },
+  {
+   "file": "ground_4_-2.glb",
+   "tx": 4,
+   "tz": -2,
+   "bounds": {
+    "min": [
+     397.643,
+     -2.336,
+     -201.66
+    ],
+    "max": [
+     502.003,
+     2.671,
+     -98.409
+    ]
+   },
+   "triangles": 8338,
+   "bytes": 331872,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "ballast",
+    "fence",
+    "granite",
+    "grass",
+    "kerb",
+    "pavers",
+    "setts_small"
+   ]
+  },
+  {
+   "file": "ground_4_-1.glb",
+   "tx": 4,
+   "tz": -1,
+   "bounds": {
+    "min": [
+     397.989,
+     -2.629,
+     -101.757
+    ],
+    "max": [
+     502.605,
+     3.123,
+     2.346
+    ]
+   },
+   "triangles": 8309,
+   "bytes": 283632,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "ballast",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_4_0.glb",
+   "tx": 4,
+   "tz": 0,
+   "bounds": {
+    "min": [
+     398.909,
+     -4.023,
+     -1.721
+    ],
+    "max": [
+     502.634,
+     2.818,
+     103.683
+    ]
+   },
+   "triangles": 6991,
+   "bytes": 259448,
+   "materials": [
+    "asphalt",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_4_1.glb",
+   "tx": 4,
+   "tz": 1,
+   "bounds": {
+    "min": [
+     397.438,
+     -2.578,
+     95.926
+    ],
+    "max": [
+     505.109,
+     -1.454,
+     201.232
+    ]
+   },
+   "triangles": 6611,
+   "bytes": 234952,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_4_2.glb",
+   "tx": 4,
+   "tz": 2,
+   "bounds": {
+    "min": [
+     394.79,
+     -2.739,
+     198.699
+    ],
+    "max": [
+     504.265,
+     -0.051,
+     301.593
+    ]
+   },
+   "triangles": 9850,
+   "bytes": 426508,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_4_3.glb",
+   "tx": 4,
+   "tz": 3,
+   "bounds": {
+    "min": [
+     397.823,
+     -2.785,
+     298.826
+    ],
+    "max": [
+     503.272,
+     0.008,
+     401.255
+    ]
+   },
+   "triangles": 8954,
+   "bytes": 386240,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_4_4.glb",
+   "tx": 4,
+   "tz": 4,
+   "bounds": {
+    "min": [
+     396.242,
+     -2.382,
+     398.427
+    ],
+    "max": [
+     504.061,
+     -0.447,
+     502.036
+    ]
+   },
+   "triangles": 4776,
+   "bytes": 214628,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_4_5.glb",
+   "tx": 4,
+   "tz": 5,
+   "bounds": {
+    "min": [
+     397.112,
+     -2.63,
+     498.362
+    ],
+    "max": [
+     501.799,
+     -0.402,
+     602.159
+    ]
+   },
+   "triangles": 9636,
+   "bytes": 435252,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "soil",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_4_6.glb",
+   "tx": 4,
+   "tz": 6,
+   "bounds": {
+    "min": [
+     397.25,
+     -2.988,
+     598.682
+    ],
+    "max": [
+     501.894,
+     -1.414,
+     701.967
+    ]
+   },
+   "triangles": 9468,
+   "bytes": 440092,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_4_7.glb",
+   "tx": 4,
+   "tz": 7,
+   "bounds": {
+    "min": [
+     395.266,
+     -3.921,
+     698.341
+    ],
+    "max": [
+     498.748,
+     -1.427,
+     799.963
+    ]
+   },
+   "triangles": 3068,
+   "bytes": 150132,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "asphalt_red",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_4_8.glb",
+   "tx": 4,
+   "tz": 8,
+   "bounds": {
+    "min": [
+     434.191,
+     -2.391,
+     802.562
+    ],
+    "max": [
+     453.191,
+     -2.18,
+     829.746
+    ]
+   },
+   "triangles": 64,
+   "bytes": 4080,
+   "materials": [
+    "marking"
+   ]
+  },
+  {
+   "file": "ground_5_-7.glb",
+   "tx": 5,
+   "tz": -7,
+   "bounds": {
+    "min": [
+     498.575,
+     -4.85,
+     -699.21
+    ],
+    "max": [
+     601.152,
+     -1.324,
+     -597.773
+    ]
+   },
+   "triangles": 6821,
+   "bytes": 315400,
+   "materials": [
+    "asphalt",
+    "fence",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_5_-6.glb",
+   "tx": 5,
+   "tz": -6,
+   "bounds": {
+    "min": [
+     498.49,
+     -2.999,
+     -601.498
+    ],
+    "max": [
+     602.218,
+     -1.22,
+     -498.654
+    ]
+   },
+   "triangles": 8929,
+   "bytes": 409500,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_5_-5.glb",
+   "tx": 5,
+   "tz": -5,
+   "bounds": {
+    "min": [
+     498.216,
+     -2.654,
+     -501.338
+    ],
+    "max": [
+     602.238,
+     -0.68,
+     -398.401
+    ]
+   },
+   "triangles": 14266,
+   "bytes": 709568,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "fence",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_5_-4.glb",
+   "tx": 5,
+   "tz": -4,
+   "bounds": {
+    "min": [
+     496.246,
+     -2.621,
+     -402.846
+    ],
+    "max": [
+     601.578,
+     -0.121,
+     -298.53
+    ]
+   },
+   "triangles": 11165,
+   "bytes": 543236,
+   "materials": [
+    "asphalt",
+    "fence",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_5_-3.glb",
+   "tx": 5,
+   "tz": -3,
+   "bounds": {
+    "min": [
+     495.62,
+     -2.645,
+     -301.307
+    ],
+    "max": [
+     601.779,
+     -0.647,
+     -197.46
+    ]
+   },
+   "triangles": 7263,
+   "bytes": 352560,
+   "materials": [
+    "asphalt",
+    "granite",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "wallstone",
+    "water"
+   ]
+  },
+  {
+   "file": "ground_5_-2.glb",
+   "tx": 5,
+   "tz": -2,
+   "bounds": {
+    "min": [
+     497.896,
+     -2.747,
+     -202.35
+    ],
+    "max": [
+     604.078,
+     -1.201,
+     -96.564
+    ]
+   },
+   "triangles": 7843,
+   "bytes": 324076,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_5_-1.glb",
+   "tx": 5,
+   "tz": -1,
+   "bounds": {
+    "min": [
+     498.085,
+     -2.474,
+     -103.225
+    ],
+    "max": [
+     603.424,
+     2.965,
+     2.765
+    ]
+   },
+   "triangles": 6354,
+   "bytes": 170976,
+   "materials": [
+    "asphalt",
+    "ballast",
+    "granite",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small"
+   ]
+  },
+  {
+   "file": "ground_5_0.glb",
+   "tx": 5,
+   "tz": 0,
+   "bounds": {
+    "min": [
+     496.013,
+     -2.71,
+     -3.003
+    ],
+    "max": [
+     601.767,
+     3.022,
+     104.636
+    ]
+   },
+   "triangles": 10333,
+   "bytes": 447524,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "ballast",
+    "granite",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small"
+   ]
+  },
+  {
+   "file": "ground_5_1.glb",
+   "tx": 5,
+   "tz": 1,
+   "bounds": {
+    "min": [
+     495.11,
+     -2.768,
+     95.344
+    ],
+    "max": [
+     602.354,
+     -1.702,
+     201.683
+    ]
+   },
+   "triangles": 7514,
+   "bytes": 293212,
+   "materials": [
+    "asphalt",
+    "asphalt_red",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small"
+   ]
+  },
+  {
+   "file": "ground_5_2.glb",
+   "tx": 5,
+   "tz": 2,
+   "bounds": {
+    "min": [
+     495.517,
+     -2.796,
+     198.36
+    ],
+    "max": [
+     601.636,
+     -1.031,
+     305.018
+    ]
+   },
+   "triangles": 7978,
+   "bytes": 304668,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small"
+   ]
+  },
+  {
+   "file": "ground_5_3.glb",
+   "tx": 5,
+   "tz": 3,
+   "bounds": {
+    "min": [
+     496.98,
+     -2.61,
+     295.176
+    ],
+    "max": [
+     601.461,
+     -1.22,
+     403.77
+    ]
+   },
+   "triangles": 9985,
+   "bytes": 447804,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grass",
+    "grate",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_5_4.glb",
+   "tx": 5,
+   "tz": 4,
+   "bounds": {
+    "min": [
+     497.592,
+     -2.463,
+     395.822
+    ],
+    "max": [
+     603.948,
+     -0.292,
+     502.443
+    ]
+   },
+   "triangles": 8572,
+   "bytes": 394016,
+   "materials": [
+    "asphalt",
+    "fence",
+    "granite",
+    "grass",
+    "grate",
+    "gravel",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_5_5.glb",
+   "tx": 5,
+   "tz": 5,
+   "bounds": {
+    "min": [
+     498.926,
+     -2.789,
+     495.628
+    ],
+    "max": [
+     602.178,
+     -0.747,
+     605.351
+    ]
+   },
+   "triangles": 10723,
+   "bytes": 531988,
+   "materials": [
+    "asphalt",
+    "fence",
+    "granite",
+    "grass",
+    "grate",
+    "gravel",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_5_6.glb",
+   "tx": 5,
+   "tz": 6,
+   "bounds": {
+    "min": [
+     497.83,
+     -3.74,
+     596.562
+    ],
+    "max": [
+     600.39,
+     -1.288,
+     699.221
+    ]
+   },
+   "triangles": 4593,
+   "bytes": 187836,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grass",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_6_-7.glb",
+   "tx": 6,
+   "tz": -7,
+   "bounds": {
+    "min": [
+     598.779,
+     -4.451,
+     -615.816
+    ],
+    "max": [
+     616.293,
+     -2.654,
+     -598.914
+    ]
+   },
+   "triangles": 121,
+   "bytes": 15288,
+   "materials": [
+    "granite",
+    "grass",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_6_-6.glb",
+   "tx": 6,
+   "tz": -6,
+   "bounds": {
+    "min": [
+     597.609,
+     -4.2,
+     -601.529
+    ],
+    "max": [
+     699.804,
+     -0.703,
+     -498.21
+    ]
+   },
+   "triangles": 5812,
+   "bytes": 231132,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "fence",
+    "granite",
+    "grass",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_6_-5.glb",
+   "tx": 6,
+   "tz": -5,
+   "bounds": {
+    "min": [
+     597.492,
+     -2.606,
+     -501.905
+    ],
+    "max": [
+     703.502,
+     -1.769,
+     -398.357
+    ]
+   },
+   "triangles": 6762,
+   "bytes": 253680,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_6_-4.glb",
+   "tx": 6,
+   "tz": -4,
+   "bounds": {
+    "min": [
+     598.056,
+     -2.548,
+     -401.322
+    ],
+    "max": [
+     701.561,
+     -1.634,
+     -297.41
+    ]
+   },
+   "triangles": 10435,
+   "bytes": 484372,
+   "materials": [
+    "asphalt",
+    "asphalt2",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_6_-3.glb",
+   "tx": 6,
+   "tz": -3,
+   "bounds": {
+    "min": [
+     597.712,
+     -2.614,
+     -304.095
+    ],
+    "max": [
+     702.832,
+     -0.647,
+     -197.854
+    ]
+   },
+   "triangles": 6826,
+   "bytes": 257072,
+   "materials": [
+    "asphalt",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_6_-2.glb",
+   "tx": 6,
+   "tz": -2,
+   "bounds": {
+    "min": [
+     595.84,
+     -2.64,
+     -202.481
+    ],
+    "max": [
+     703.728,
+     -0.807,
+     -97.358
+    ]
+   },
+   "triangles": 6786,
+   "bytes": 267520,
+   "materials": [
+    "asphalt",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "wallstone"
+   ]
+  },
+  {
+   "file": "ground_6_-1.glb",
+   "tx": 6,
+   "tz": -1,
+   "bounds": {
+    "min": [
+     597.254,
+     -2.815,
+     -102.757
+    ],
+    "max": [
+     701.162,
+     3.034,
+     1.228
+    ]
+   },
+   "triangles": 8807,
+   "bytes": 280228,
+   "materials": [
+    "asphalt",
+    "ballast",
+    "kerb",
+    "pavers",
+    "setts_small"
+   ]
+  },
+  {
+   "file": "ground_6_0.glb",
+   "tx": 6,
+   "tz": 0,
+   "bounds": {
+    "min": [
+     597.392,
+     -2.762,
+     -1.548
+    ],
+    "max": [
+     701.84,
+     3.067,
+     105.0
+    ]
+   },
+   "triangles": 11555,
+   "bytes": 439228,
+   "materials": [
+    "asphalt",
+    "ballast",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small"
+   ]
+  },
+  {
+   "file": "ground_6_1.glb",
+   "tx": 6,
+   "tz": 1,
+   "bounds": {
+    "min": [
+     597.704,
+     -2.843,
+     93.888
+    ],
+    "max": [
+     701.301,
+     -1.754,
+     202.068
+    ]
+   },
+   "triangles": 6565,
+   "bytes": 241532,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grass",
+    "kerb",
+    "pavers",
+    "setts_small"
+   ]
+  },
+  {
+   "file": "ground_6_2.glb",
+   "tx": 6,
+   "tz": 2,
+   "bounds": {
+    "min": [
+     597.638,
+     -2.732,
+     197.423
+    ],
+    "max": [
+     701.412,
+     -1.677,
+     304.393
+    ]
+   },
+   "triangles": 6839,
+   "bytes": 238328,
+   "materials": [
+    "asphalt",
+    "kerb",
+    "pavers",
+    "setts_small"
+   ]
+  },
+  {
+   "file": "ground_6_3.glb",
+   "tx": 6,
+   "tz": 3,
+   "bounds": {
+    "min": [
+     598.183,
+     -2.815,
+     295.952
+    ],
+    "max": [
+     701.4,
+     -1.391,
+     401.797
+    ]
+   },
+   "triangles": 5825,
+   "bytes": 153760,
+   "materials": [
+    "asphalt",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_6_4.glb",
+   "tx": 6,
+   "tz": 4,
+   "bounds": {
+    "min": [
+     596.296,
+     -2.969,
+     398.356
+    ],
+    "max": [
+     701.514,
+     -0.841,
+     500.97
+    ]
+   },
+   "triangles": 7659,
+   "bytes": 287660,
+   "materials": [
+    "asphalt",
+    "fence",
+    "granite",
+    "grass",
+    "gravel",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_6_5.glb",
+   "tx": 6,
+   "tz": 5,
+   "bounds": {
+    "min": [
+     597.813,
+     -4.284,
+     498.623
+    ],
+    "max": [
+     700.74,
+     -0.734,
+     602.402
+    ]
+   },
+   "triangles": 4741,
+   "bytes": 208808,
+   "materials": [
+    "asphalt",
+    "fence",
+    "granite",
+    "grass",
+    "gravel",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_6_6.glb",
+   "tx": 6,
+   "tz": 6,
+   "bounds": {
+    "min": [
+     598.598,
+     -4.134,
+     598.879
+    ],
+    "max": [
+     625.248,
+     -2.104,
+     621.716
+    ]
+   },
+   "triangles": 364,
+   "bytes": 28048,
+   "materials": [
+    "asphalt",
+    "granite",
+    "grass",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_7_-5.glb",
+   "tx": 7,
+   "tz": -5,
+   "bounds": {
+    "min": [
+     696.785,
+     -4.082,
+     -499.818
+    ],
+    "max": [
+     761.311,
+     -1.834,
+     -398.432
+    ]
+   },
+   "triangles": 1757,
+   "bytes": 56932,
+   "materials": [
+    "pavers",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_7_-4.glb",
+   "tx": 7,
+   "tz": -4,
+   "bounds": {
+    "min": [
+     698.236,
+     -3.912,
+     -401.2
+    ],
+    "max": [
+     800.94,
+     -2.063,
+     -297.238
+    ]
+   },
+   "triangles": 4787,
+   "bytes": 136668,
+   "materials": [
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_7_-3.glb",
+   "tx": 7,
+   "tz": -3,
+   "bounds": {
+    "min": [
+     695.752,
+     -2.581,
+     -301.398
+    ],
+    "max": [
+     801.23,
+     -1.941,
+     -198.544
+    ]
+   },
+   "triangles": 6626,
+   "bytes": 214108,
+   "materials": [
+    "asphalt",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_road",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_7_-2.glb",
+   "tx": 7,
+   "tz": -2,
+   "bounds": {
+    "min": [
+     697.7,
+     -2.52,
+     -201.661
+    ],
+    "max": [
+     801.748,
+     -2.008,
+     -98.617
+    ]
+   },
+   "triangles": 5311,
+   "bytes": 142500,
+   "materials": [
+    "asphalt",
+    "kerb",
+    "marking",
+    "pavers",
+    "setts_small",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_7_-1.glb",
+   "tx": 7,
+   "tz": -1,
+   "bounds": {
+    "min": [
+     698.772,
+     -2.45,
+     -101.35
+    ],
+    "max": [
+     801.562,
+     0.23,
+     1.401
+    ]
+   },
+   "triangles": 5851,
+   "bytes": 141400,
+   "materials": [
+    "pavers",
+    "slabs_ped"
+   ]
+  },
+  {
+   "file": "ground_7_0.glb",
+   "tx": 7,
+   "tz": 0,
+   "bounds": {
+    "min": [
+     697.389,
+     -2.568,
+     -1.299
+    ],
+    "max": [
+     801.625,
+     2.652,
+     101.514
+    ]
+   },
+   "triangles": 8587,
+   "bytes": 241992,
+   "materials": [
+    "ballast",
+    "kerb",
+    "pavers",
+    "setts_road",
+    "setts_small"
+   ]
+  },
+  {
+   "file": "ground_7_1.glb",
+   "tx": 7,
+   "tz": 1,
+   "bounds": {
+    "min": [
+     698.728,
+     -2.821,
+     98.589
+    ],
+    "max": [
+     801.456,
+     -2.269,
+     201.457
+    ]
+   },
+   "triangles": 6175,
+   "bytes": 188824,
+   "materials": [
+    "asphalt",
+    "kerb",
+    "pavers",
+    "setts_small"
+   ]
+  },
+  {
+   "file": "ground_7_2.glb",
+   "tx": 7,
+   "tz": 2,
+   "bounds": {
+    "min": [
+     698.703,
+     -2.664,
+     198.709
+    ],
+    "max": [
+     801.525,
+     -2.071,
+     301.503
+    ]
+   },
+   "triangles": 5234,
+   "bytes": 126584,
+   "materials": [
+    "pavers"
+   ]
+  },
+  {
+   "file": "ground_7_3.glb",
+   "tx": 7,
+   "tz": 3,
+   "bounds": {
+    "min": [
+     698.692,
+     -4.117,
+     298.865
+    ],
+    "max": [
+     801.666,
+     -2.019,
+     401.144
+    ]
+   },
+   "triangles": 4590,
+   "bytes": 117752,
+   "materials": [
+    "pavers",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_7_4.glb",
+   "tx": 7,
+   "tz": 4,
+   "bounds": {
+    "min": [
+     698.714,
+     -4.63,
+     398.852
+    ],
+    "max": [
+     761.179,
+     -2.196,
+     499.622
+    ]
+   },
+   "triangles": 2331,
+   "bytes": 88440,
+   "materials": [
+    "asphalt",
+    "kerb",
+    "pavers",
+    "setts_small",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_7_5.glb",
+   "tx": 7,
+   "tz": 5,
+   "bounds": {
+    "min": [
+     699.259,
+     -2.543,
+     559.362
+    ],
+    "max": [
+     800.477,
+     -2.349,
+     571.575
+    ]
+   },
+   "triangles": 99,
+   "bytes": 5672,
+   "materials": [
+    "marking"
+   ]
+  },
+  {
+   "file": "ground_8_-4.glb",
+   "tx": 8,
+   "tz": -4,
+   "bounds": {
+    "min": [
+     799.289,
+     -3.918,
+     -316.228
+    ],
+    "max": [
+     806.162,
+     -2.411,
+     -299.13
+    ]
+   },
+   "triangles": 42,
+   "bytes": 4916,
+   "materials": [
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_8_-3.glb",
+   "tx": 8,
+   "tz": -3,
+   "bounds": {
+    "min": [
+     798.52,
+     -3.918,
+     -301.098
+    ],
+    "max": [
+     836.622,
+     -2.18,
+     -198.666
+    ]
+   },
+   "triangles": 1239,
+   "bytes": 40736,
+   "materials": [
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_8_-2.glb",
+   "tx": 8,
+   "tz": -2,
+   "bounds": {
+    "min": [
+     799.004,
+     -3.84,
+     -201.287
+    ],
+    "max": [
+     853.845,
+     -2.232,
+     -98.841
+    ]
+   },
+   "triangles": 2456,
+   "bytes": 68560,
+   "materials": [
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_8_-1.glb",
+   "tx": 8,
+   "tz": -1,
+   "bounds": {
+    "min": [
+     798.673,
+     -3.84,
+     -101.595
+    ],
+    "max": [
+     860.0,
+     -2.109,
+     1.257
+    ]
+   },
+   "triangles": 3089,
+   "bytes": 86528,
+   "materials": [
+    "pavers",
+    "slabs_ped",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_8_0.glb",
+   "tx": 8,
+   "tz": 0,
+   "bounds": {
+    "min": [
+     797.892,
+     -3.93,
+     -1.534
+    ],
+    "max": [
+     860.0,
+     2.652,
+     101.302
+    ]
+   },
+   "triangles": 4046,
+   "bytes": 105644,
+   "materials": [
+    "ballast",
+    "pavers",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_8_1.glb",
+   "tx": 8,
+   "tz": 1,
+   "bounds": {
+    "min": [
+     798.292,
+     -4.196,
+     98.655
+    ],
+    "max": [
+     854.1,
+     -2.322,
+     201.391
+    ]
+   },
+   "triangles": 2488,
+   "bytes": 69376,
+   "materials": [
+    "pavers",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_8_2.glb",
+   "tx": 8,
+   "tz": 2,
+   "bounds": {
+    "min": [
+     798.725,
+     -3.846,
+     198.366
+    ],
+    "max": [
+     836.356,
+     -2.081,
+     300.7
+    ]
+   },
+   "triangles": 1251,
+   "bytes": 41088,
+   "materials": [
+    "pavers",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_8_3.glb",
+   "tx": 8,
+   "tz": 3,
+   "bounds": {
+    "min": [
+     798.86,
+     -3.612,
+     299.465
+    ],
+    "max": [
+     805.764,
+     -2.02,
+     316.064
+    ]
+   },
+   "triangles": 40,
+   "bytes": 4892,
+   "materials": [
+    "pavers",
+    "soil"
+   ]
+  },
+  {
+   "file": "ground_8_5.glb",
+   "tx": 8,
+   "tz": 5,
+   "bounds": {
+    "min": [
+     799.773,
+     -2.429,
+     557.353
+    ],
+    "max": [
+     809.277,
+     -2.422,
+     559.646
+    ]
+   },
+   "triangles": 9,
+   "bytes": 1604,
+   "materials": [
+    "marking"
+   ]
+  }
+ ],
+ "detail_square": {
+  "xmin": -67.38,
+  "zmin": -9.79,
+  "xmax": 235.62,
+  "zmax": 293.21,
+  "note": "ground there = Rhino detail model; our tiles overlap 3 m under it (2 cm lower)"
+ },
+ "materials": {
+  "asphalt": {
+   "tex": "tex/asphalt.jpg"
+  },
+  "asphalt2": {
+   "tex": "tex/asphalt2.jpg"
+  },
+  "asphalt_red": {
+   "tex": "tex/asphalt_red.jpg"
+  },
+  "setts_small": {
+   "tex": "tex/setts_small.jpg"
+  },
+  "setts_road": {
+   "tex": "tex/setts_road.jpg"
+  },
+  "slabs_ped": {
+   "tex": "tex/slabs_ped.jpg"
+  },
+  "pavers": {
+   "tex": "tex/pavers.jpg"
+  },
+  "slabs_dark": {
+   "tex": "tex/slabs_dark.jpg"
+  },
+  "kerb": {
+   "tex": "tex/kerb.jpg"
+  },
+  "granite": {
+   "tex": "tex/granite.jpg"
+  },
+  "wallstone": {
+   "tex": "tex/granite.jpg"
+  },
+  "grass": {
+   "tex": "tex/grass.jpg"
+  },
+  "soil": {
+   "tex": "tex/soil.jpg"
+  },
+  "grate": {
+   "tex": "tex/grate.jpg"
+  },
+  "gravel": {
+   "tex": "tex/gravel.jpg"
+  },
+  "ballast": {
+   "tex": "tex/ballast.jpg"
+  },
+  "concrete": {
+   "tex": "tex/concrete.jpg"
+  },
+  "cladding": {
+   "tex": "tex/cladding.jpg"
+  },
+  "hedge": {
+   "tex": "tex/hedge.jpg"
+  },
+  "shopfront": {
+   "tex": "tex/shopfront.jpg"
+  },
+  "shutter": {
+   "tex": "tex/shutter.jpg"
+  },
+  "fence": {
+   "tex": "tex/fence.png",
+   "alpha": "MASK",
+   "double": true
+  },
+  "poster": {
+   "tex": "tex/poster.jpg"
+  },
+  "wood": {
+   "tex": "tex/wood.jpg"
+  },
+  "tree_a": {
+   "tex": "tex/tree_a.png",
+   "alpha": "MASK",
+   "double": false
+  },
+  "tree_b": {
+   "tex": "tex/tree_b.png",
+   "alpha": "MASK",
+   "double": false
+  },
+  "tree_top": {
+   "tex": "tex/tree_top.png",
+   "alpha": "MASK",
+   "double": false
+  },
+  "sign_u": {
+   "tex": "tex/sign_u.png"
+  },
+  "sign_h": {
+   "tex": "tex/sign_h.png"
+  },
+  "water": {},
+  "marking": {},
+  "rail": {},
+  "groove": {},
+  "steel": {},
+  "steel_glass_frame": {},
+  "steel_dark": {},
+  "paint_green": {},
+  "bin_grey": {},
+  "glass": {
+   "alpha": "BLEND",
+   "double": true
+  },
+  "lightpanel": {},
+  "lamp_glow": {},
+  "signal_r": {},
+  "signal_y": {},
+  "signal_g": {},
+  "bark": {},
+  "bark_plane": {},
+  "collision": {},
+  "granite_step": {
+   "tex": "tex/granite_step.jpg"
+  },
+  "granite_polished": {
+   "tex": "tex/granite_polished.jpg"
+  },
+  "granite_wall": {
+   "tex": "tex/granite_wall.jpg"
+  },
+  "tactile": {
+   "tex": "tex/tactile.jpg"
+  },
+  "tactile_dots": {
+   "tex": "tex/tactile_dots.jpg"
+  },
+  "nosing": {},
+  "mosaic_teal": {
+   "tex": "tex/mosaic_teal.jpg"
+  },
+  "mosaic_yg": {
+   "tex": "tex/mosaic_yg.jpg"
+  },
+  "mosaic_green": {
+   "tex": "tex/mosaic_green.jpg"
+  },
+  "slats": {
+   "tex": "tex/slats.jpg"
+  },
+  "slats_dark": {
+   "tex": "tex/slats_dark.jpg"
+  },
+  "tile_beige": {
+   "tex": "tex/tile_beige.jpg"
+  },
+  "guidance": {
+   "tex": "tex/guidance.jpg"
+  },
+  "tile_white": {
+   "tex": "tex/tile_white.jpg"
+  },
+  "concrete_panel": {
+   "tex": "tex/concrete_panel.jpg"
+  },
+  "granite_dark": {
+   "tex": "tex/granite_dark.jpg"
+  },
+  "stone_light": {
+   "tex": "tex/stone_light.jpg"
+  },
+  "esc_step": {
+   "tex": "tex/esc_step.jpg"
+  },
+  "esc_plate": {
+   "tex": "tex/esc_plate.jpg"
+  },
+  "stainless": {
+   "tex": "tex/stainless.jpg"
+  },
+  "rubber": {},
+  "sign_u2": {
+   "tex": "tex/sign_u2.png"
+  },
+  "sign_kroepcke": {
+   "tex": "tex/sign_kroepcke.png"
+  },
+  "sign_steintor": {
+   "tex": "tex/sign_steintor.png"
+  },
+  "sign_markthalle": {
+   "tex": "tex/sign_markthalle.png"
+  },
+  "sign_hbf": {
+   "tex": "tex/sign_hbf.png"
+  },
+  "sign_aegi": {
+   "tex": "tex/sign_aegi.png"
+  },
+  "sign_waterloo": {
+   "tex": "tex/sign_waterloo.png"
+  },
+  "sign_guide": {
+   "tex": "tex/sign_guide.png"
+  },
+  "netmap": {
+   "tex": "tex/netmap.png"
+  },
+  "citylight": {
+   "tex": "tex/citylight.png"
+  },
+  "display_tram": {
+   "tex": "tex/display_tram.png"
+  },
+  "ticket_machine": {
+   "tex": "tex/ticket_machine.png"
+  },
+  "setts_arc": {
+   "tex": "tex/setts_arc.jpg"
+  },
+  "clinker": {
+   "tex": "tex/clinker.jpg"
+  },
+  "setts_rows": {
+   "tex": "tex/setts_rows.jpg"
+  },
+  "sandstone": {
+   "tex": "tex/sandstone.jpg"
+  },
+  "river": {
+   "tex": "tex/river.jpg"
+  },
+  "lightline": {},
+  "lightcove": {},
+  "downlight": {},
+  "paint_grey": {},
+  "paint_dark": {},
+  "alu": {},
+  "alu_under": {},
+  "black_glass": {},
+  "interior_dark": {},
+  "gold": {},
+  "iron_dark": {},
+  "bronze": {},
+  "stone_grey": {},
+  "wire": {},
+  "chess": {},
+  "water_basin": {},
+  "shutter_steel": {
+   "tex": "tex/shutter.jpg"
+  },
+  "d_ground_slabs_f833e41b": {
+   "tex": "tex/d_ground_slabs_f833e41b.jpg"
+  },
+  "d_ground_slabs_3b6841b3": {
+   "tex": "tex/d_ground_slabs_3b6841b3.jpg"
+  },
+  "d_ground_asphalt_5cceef0e": {
+   "tex": "tex/d_ground_asphalt_5cceef0e.jpg"
+  },
+  "d_ground_setts_84d7cf54": {
+   "tex": "tex/d_ground_setts_84d7cf54.jpg"
+  },
+  "d_ground_slabs_b23c554f": {
+   "tex": "tex/d_ground_slabs_b23c554f.jpg"
+  },
+  "d_ground_colour_3c3d3f": {},
+  "prom_signs_0": {
+   "tex": "tex/prom_signs_0.png"
+  },
+  "prom_signs_1": {
+   "tex": "tex/prom_signs_1.png"
+  },
+  "prom_signs_2": {
+   "tex": "tex/prom_signs_2.png"
+  },
+  "prom_signs_3": {
+   "tex": "tex/prom_signs_3.png"
+  },
+  "shopint_bakery": {
+   "tex": "tex/shopint_bakery.jpg"
+  },
+  "shopint_clothes": {
+   "tex": "tex/shopint_clothes.jpg"
+  },
+  "shopint_fast_food": {
+   "tex": "tex/shopint_fast_food.jpg"
+  },
+  "shopint_cafe": {
+   "tex": "tex/shopint_cafe.jpg"
+  },
+  "shopint_pharmacy": {
+   "tex": "tex/shopint_pharmacy.jpg"
+  },
+  "shopint_chemist": {
+   "tex": "tex/shopint_chemist.jpg"
+  },
+  "shopint_beauty": {
+   "tex": "tex/shopint_beauty.jpg"
+  },
+  "shopint_hairdresser": {
+   "tex": "tex/shopint_hairdresser.jpg"
+  },
+  "shopint_kiosk": {
+   "tex": "tex/shopint_kiosk.jpg"
+  },
+  "shopint_florist": {
+   "tex": "tex/shopint_florist.jpg"
+  },
+  "shopint_mobile_phone": {
+   "tex": "tex/shopint_mobile_phone.jpg"
+  },
+  "shopint_vacant": {
+   "tex": "tex/shopint_vacant.jpg"
+  },
+  "shopint_generic": {
+   "tex": "tex/shopint_generic.jpg"
+  },
+  "shopglass": {
+   "alpha": "BLEND",
+   "double": false
+  },
+  "cloth_a": {},
+  "cloth_b": {},
+  "cloth_c": {},
+  "cloth_d": {},
+  "cloth_e": {},
+  "cloth_f": {},
+  "mannequin": {},
+  "bread": {},
+  "hst_h": {
+   "tex": "tex/hst_h.png"
+  },
+  "checker_yb": {
+   "tex": "tex/checker_yb.png"
+  },
+  "hst_hauptbahnhof_zob": {
+   "tex": "tex/hst_hauptbahnhof_zob.png"
+  },
+  "hst_steintor": {
+   "tex": "tex/hst_steintor.png"
+  }
+ },
+ "notes": [
+  "Textures are external (tex/*.jpg|png) and shared by name; reuse one THREE.Material per material name across tiles.",
+  "Material 'marking' (road markings) and 'rail'/'groove' are decals 4-12 mm above the road: polygonOffset(-1,-1) recommended.",
+  "Underground parts (U-Bahn stairwells, Niki-de-Saint-Phalle-Promenade level -1) are in the tiles; their interior faces face inward.",
+  "Materials sign_*, citylight, netmap, display_tram use an emissiveTexture (illuminated signs).",
+  "Inside the detail square the old stairwells of the Rhino model are removed via data/detail_replace/*.json (apply_landmark_replace.py); the replacement paving patches are in these tiles."
+ ],
+ "attribution": [
+  "(c) GeoBasis-DE/LGLN 2026, CC BY 4.0 (veraendert) - DGM1 terrain heights, LoD2 footprints",
+  "(c) OpenStreetMap contributors (ODbL)",
+  "Textures partly from the Opernplatz detail model (Rhino)"
+ ],
+ "collision": {
+  "file": "collision_ground.glb",
+  "triangles": 750790,
+  "bytes": 13727892
+ },
+ "heightfield": {
+  "file": "heightfield.bin",
+  "meta": "heightfield.json",
+  "x0": -900.0,
+  "z0": -900.0,
+  "dx": 1.0,
+  "dz": 1.0,
+  "w": 1801,
+  "h": 1801,
+  "dtype": "float32",
+  "order": "row-major, row index = z"
+ },
+ "furniture": {
+  "file": "furniture.glb",
+  "instances": "furniture.json",
+  "extension": "EXT_mesh_gpu_instancing",
+  "prototypes": {
+   "tree_b": {
+    "count": 912,
+    "tris_per_instance": 120
+   },
+   "tree_a": {
+    "count": 829,
+    "tris_per_instance": 120
+   },
+   "lamp_lantern": {
+    "count": 62,
+    "tris_per_instance": 322
+   },
+   "lamp_mast": {
+    "count": 725,
+    "tris_per_instance": 286
+   },
+   "bollard": {
+    "count": 408,
+    "tris_per_instance": 80
+   },
+   "postbox": {
+    "count": 21,
+    "tris_per_instance": 30
+   },
+   "stop_sign": {
+    "count": 31,
+    "tris_per_instance": 40
+   },
+   "shelter": {
+    "count": 5,
+    "tris_per_instance": 102
+   },
+   "bike_stand": {
+    "count": 962,
+    "tris_per_instance": 108
+   },
+   "litfass": {
+    "count": 38,
+    "tris_per_instance": 192
+   },
+   "flagpole": {
+    "count": 22,
+    "tris_per_instance": 24
+   },
+   "bench": {
+    "count": 95,
+    "tris_per_instance": 259
+   },
+   "bin": {
+    "count": 68,
+    "tris_per_instance": 76
+   },
+   "cabinet": {
+    "count": 2,
+    "tris_per_instance": 12
+   },
+   "signal": {
+    "count": 218,
+    "tris_per_instance": 108
+   }
+  },
+  "instanced_triangles": 636315
+ },
+ "totals": {
+  "tile_triangles": 2114747,
+  "tile_bytes": 90714932
+ },
+ "ubahn_entrances": [
+  {
+   "key": "kroepcke_A",
+   "ref": "A",
+   "station": "Kr\u00f6pcke",
+   "top": [
+    -46.62980719285876,
+    51.65341528785646
+   ],
+   "dir": [
+    0.26771770144809637,
+    -0.9634973961206891
+   ],
+   "y_top": 0.138,
+   "y_floor": -4.662,
+   "width": 4.74,
+   "length_open": 10.9,
+   "lanes": [
+    "stair",
+    "esc_up",
+    "esc_down"
+   ],
+   "hall_end": [
+    -40.36521297897331,
+    29.10757621863234
+   ],
+   "note": "Street View: Trog parallel Karmarschstrasse, Granitbruestung ~1.0 m, Edelstahlgelaender; OSM: 2 Rolltreppen; Lage nach Detailmodell-Trog",
+   "detail_replaced": true
+  },
+  {
+   "key": "kroepcke_B",
+   "ref": "B",
+   "station": "Kr\u00f6pcke",
+   "top": [
+    -52.49,
+    -12.879999999999999
+   ],
+   "dir": [
+    0.9540420162918242,
+    0.29967287356354244
+   ],
+   "y_top": 0.236,
+   "y_floor": -4.564,
+   "width": 3.02,
+   "length_open": 10.01,
+   "lanes": [
+    "esc_up",
+    "esc_down"
+   ],
+   "hall_end": [
+    -34.8270150589135,
+    -7.331903204873211
+   ],
+   "note": "OSM: Rolltreppen Kr.71A (auf) / Kr.72A (ab); SV: Trog ~3 m, Granitbruestung",
+   "detail_replaced": true
+  },
+  {
+   "key": "kroepcke_C",
+   "ref": "C",
+   "station": "Kr\u00f6pcke",
+   "top": [
+    -48.11333333333334,
+    -28.123333333333335
+   ],
+   "dir": [
+    0.9558793464639994,
+    0.2937595530422072
+   ],
+   "y_top": -0.045,
+   "y_floor": -4.845,
+   "width": 4.94,
+   "length_open": 10.9,
+   "lanes": [
+    "esc_up",
+    "stair",
+    "esc_down"
+   ],
+   "hall_end": [
+    -28.61339466546775,
+    -22.130638451272308
+   ],
+   "note": "OSM: Kr.69A auf, Treppe, Kr.70A ab",
+   "detail_replaced": false
+  },
+  {
+   "key": "kroepcke_D",
+   "ref": "D",
+   "station": "Kr\u00f6pcke",
+   "top": [
+    18.18899400085427,
+    44.968379943986136
+   ],
+   "dir": [
+    -0.4762664169269945,
+    -0.8793010292883333
+   ],
+   "y_top": 0.034,
+   "y_floor": -4.766,
+   "width": 6.14,
+   "length_open": 10.9,
+   "lanes": [
+    "esc_up",
+    "stair",
+    "esc_down"
+   ],
+   "hall_end": [
+    7.044359844762598,
+    24.39273585863914
+   ],
+   "note": "OSM: Kr.69B auf, Treppe, Kr.68B ab; SV: U-Schild an der SO-Ecke; Breite/Lage nach Detailmodell-Trog",
+   "detail_replaced": true
+  },
+  {
+   "key": "kroepcke_E",
+   "ref": "E",
+   "station": "Kr\u00f6pcke",
+   "top": [
+    101.68147370739463,
+    211.78825922027488
+   ],
+   "dir": [
+    -0.5062170704469122,
+    -0.8624060978379884
+   ],
+   "y_top": -0.447,
+   "y_floor": -5.347,
+   "width": 3.6,
+   "length_open": 11.2,
+   "lanes": [
+    "stair"
+   ],
+   "hall_end": [
+    89.68412913780281,
+    191.34923470151455
+   ],
+   "note": "OSM Treppe 32773750 (level 0;-1); Breite/Lage nach Detailmodell-Trog",
+   "detail_replaced": true
+  },
+  {
+   "key": "kroepcke_F",
+   "ref": "F",
+   "station": "Kr\u00f6pcke",
+   "top": [
+    93.37652940067379,
+    218.3464583995955
+   ],
+   "dir": [
+    -0.48732043824731325,
+    -0.8732232191521516
+   ],
+   "y_top": -0.518,
+   "y_floor": -5.418,
+   "width": 3.97,
+   "length_open": 11.2,
+   "lanes": [
+    "esc_both",
+    "stair"
+   ],
+   "hall_end": [
+    81.82703501421247,
+    197.6510681056895
+   ],
+   "note": "OSM Treppe 331983409 + Rolltreppe Kr.76B (reversibel); Lage nach Detailmodell-Trog",
+   "detail_replaced": true
+  },
+  {
+   "key": "kroepcke_G",
+   "ref": "G",
+   "station": "Kr\u00f6pcke",
+   "top": [
+    -64.52,
+    162.38
+   ],
+   "dir": [
+    0.25804321780457534,
+    -0.9661333747185533
+   ],
+   "y_top": -0.416,
+   "y_floor": -4.816,
+   "width": 2.6,
+   "length_open": 10.3,
+   "lanes": [
+    "stair"
+   ],
+   "hall_end": [
+    -58.636614634055675,
+    140.35215905641698
+   ],
+   "note": "OSM Treppe 126562335; vor Ort nicht gesehen (LKW)",
+   "detail_replaced": true
+  },
+  {
+   "key": "kroepcke_H",
+   "ref": "H",
+   "station": "Kr\u00f6pcke",
+   "top": [
+    -78.225,
+    158.765
+   ],
+   "dir": [
+    0.2527060616592822,
+    -0.9675430979551531
+   ],
+   "y_top": -0.518,
+   "y_floor": -4.918,
+   "width": 3.02,
+   "length_open": 9.32,
+   "lanes": [
+    "esc_up",
+    "esc_down"
+   ],
+   "hall_end": [
+    -72.71069507647034,
+    137.65221927068478
+   ],
+   "note": "OSM Kr.67A auf / Kr.68A ab; vor Ort nicht gesehen",
+   "detail_replaced": false
+  },
+  {
+   "key": "kroepcke_I",
+   "ref": "I",
+   "station": "Kr\u00f6pcke",
+   "top": [
+    -67.64,
+    117.84
+   ],
+   "dir": [
+    -0.24844512468073712,
+    0.9686459724906582
+   ],
+   "y_top": -0.222,
+   "y_floor": -4.822,
+   "width": 3.2,
+   "length_open": 10.6,
+   "lanes": [
+    "stair"
+   ],
+   "hall_end": [
+    -73.37908238012503,
+    140.21572196453423
+   ],
+   "note": "SV: Trog parallel Karmarschstrasse, Breite ~3.5 m, Doppel-U-Wuerfel",
+   "detail_replaced": true
+  },
+  {
+   "key": "ub_299064939",
+   "ref": "",
+   "station": "Waterlooplatz",
+   "top": [
+    -531.6,
+    633.53
+   ],
+   "dir": [
+    0.8917888989780841,
+    -0.4524517208050561
+   ],
+   "y_top": -3.988,
+   "y_floor": -8.588,
+   "width": 2.6,
+   "length_open": 10.6,
+   "lanes": [
+    "stair"
+   ],
+   "hall_end": [
+    -510.9996764336063,
+    623.0783652494032
+   ],
+   "note": "OSM node 299064939 (Waterlooplatz)",
+   "detail_replaced": false
+  },
+  {
+   "key": "ub_324517470",
+   "ref": "",
+   "station": "Aegidientorplatz",
+   "top": [
+    347.02,
+    570.03
+   ],
+   "dir": [
+    -0.22715851613192994,
+    0.9738577968824503
+   ],
+   "y_top": -1.859,
+   "y_floor": -6.459,
+   "width": 2.6,
+   "length_open": 10.6,
+   "lanes": [
+    "stair"
+   ],
+   "hall_end": [
+    341.77263827735237,
+    592.5261151079845
+   ],
+   "note": "OSM node 324517470 (Ausgang D, Marienstr., Arnswaldtstr., Schiffgraben)",
+   "detail_replaced": false
+  },
+  {
+   "key": "ub_1274066800",
+   "ref": "",
+   "station": "Steintor",
+   "top": [
+    -502.7,
+    -141.57
+   ],
+   "dir": [
+    0.427468586054413,
+    -0.9040302030002323
+   ],
+   "y_top": -0.941,
+   "y_floor": -5.541,
+   "width": 2.6,
+   "length_open": 10.6,
+   "lanes": [
+    "stair"
+   ],
+   "hall_end": [
+    -492.82547566214305,
+    -162.45309768930537
+   ],
+   "note": "OSM node 1274066800 (Ausgang M\u00fcnzstra\u00dfe)",
+   "detail_replaced": false
+  },
+  {
+   "key": "ub_1274066802",
+   "ref": "",
+   "station": "Steintor",
+   "top": [
+    -390.8,
+    -123.25
+   ],
+   "dir": [
+    -0.9505254821982594,
+    -0.3106465961374218
+   ],
+   "y_top": -1.038,
+   "y_floor": -5.638,
+   "width": 2.6,
+   "length_open": 10.6,
+   "lanes": [
+    "stair"
+   ],
+   "hall_end": [
+    -412.7571386387798,
+    -130.42593637077445
+   ],
+   "note": "OSM node 1274066802 (Ausgang Steintorstra\u00dfe)",
+   "detail_replaced": false
+  },
+  {
+   "key": "ub_1396666085",
+   "ref": "",
+   "station": "Steintor",
+   "top": [
+    -357.06,
+    -135.33
+   ],
+   "dir": [
+    -0.9945686392198214,
+    -0.10408276456951329
+   ],
+   "y_top": -1.077,
+   "y_floor": -5.677,
+   "width": 2.6,
+   "length_open": 10.6,
+   "lanes": [
+    "stair"
+   ],
+   "hall_end": [
+    -380.0345355659779,
+    -137.73431186155577
+   ],
+   "note": "OSM node 1396666085 (Ausgang Georgstra\u00dfe)",
+   "detail_replaced": false
+  },
+  {
+   "key": "ub_1396666113",
+   "ref": "",
+   "station": "Steintor",
+   "top": [
+    -377.41,
+    -150.75
+   ],
+   "dir": [
+    -0.9492064169502821,
+    -0.31465406086749836
+   ],
+   "y_top": -1.06,
+   "y_floor": -5.66,
+   "width": 2.6,
+   "length_open": 10.6,
+   "lanes": [
+    "stair"
+   ],
+   "hall_end": [
+    -399.3366682315515,
+    -158.01850880603922
+   ],
+   "note": "OSM node 1396666113 (Ausgang Georgstra\u00dfe)",
+   "detail_replaced": false
+  },
+  {
+   "key": "ub_2747495414",
+   "ref": "",
+   "station": "Hauptbahnhof",
+   "top": [
+    306.9,
+    -477.11
+   ],
+   "dir": [
+    -0.4386114822814412,
+    0.8986767870657821
+   ],
+   "y_top": -2.601,
+   "y_floor": -7.201,
+   "width": 2.6,
+   "length_open": 10.6,
+   "lanes": [
+    "stair"
+   ],
+   "hall_end": [
+    296.76807475929866,
+    -456.35056621878044
+   ],
+   "note": "OSM node 2747495414 ()",
+   "detail_replaced": false
+  },
+  {
+   "key": "ub_4048984722",
+   "ref": "",
+   "station": "Hauptbahnhof",
+   "top": [
+    182.79,
+    -278.21
+   ],
+   "dir": [
+    0.6082251570642053,
+    -0.7937645484110656
+   ],
+   "y_top": 2.279,
+   "y_floor": -1.321,
+   "width": 2.6,
+   "length_open": 8.8,
+   "lanes": [
+    "stair"
+   ],
+   "hall_end": [
+    195.74519584546755,
+    -295.11718488115565
+   ],
+   "note": "OSM node 4048984722 ()",
+   "detail_replaced": false
+  },
+  {
+   "key": "ub_4048984735",
+   "ref": "",
+   "station": "Hauptbahnhof",
+   "top": [
+    202.65,
+    -305.05
+   ],
+   "dir": [
+    -0.6017491064156726,
+    0.7986851776062578
+   ],
+   "y_top": 2.222,
+   "y_floor": -0.778,
+   "width": 2.6,
+   "length_open": 7.6,
+   "lanes": [
+    "stair"
+   ],
+   "hall_end": [
+    190.55484296104498,
+    -288.99642793011424
+   ],
+   "note": "OSM node 4048984735 ()",
+   "detail_replaced": false
+  },
+  {
+   "key": "ub_4373301942",
+   "ref": "",
+   "station": "Markthalle",
+   "top": [
+    -229.26,
+    466.54
+   ],
+   "dir": [
+    0.7032576187635704,
+    -0.7109351036845718
+   ],
+   "y_top": -0.703,
+   "y_floor": -5.303,
+   "width": 2.6,
+   "length_open": 10.6,
+   "lanes": [
+    "stair"
+   ],
+   "hall_end": [
+    -213.01474900656152,
+    450.11739910488643
+   ],
+   "note": "OSM node 4373301942 (Markthalle)",
+   "detail_replaced": false
+  },
+  {
+   "key": "ub_4373301943",
+   "ref": "",
+   "station": "Markthalle",
+   "top": [
+    -237.85,
+    457.6
+   ],
+   "dir": [
+    0.7246521506909991,
+    -0.6891148383969902
+   ],
+   "y_top": -0.722,
+   "y_floor": -5.322,
+   "width": 2.6,
+   "length_open": 10.6,
+   "lanes": [
+    "stair"
+   ],
+   "hall_end": [
+    -221.11053531903792,
+    441.68144723302953
+   ],
+   "note": "OSM node 4373301943 (Markthalle)",
+   "detail_replaced": false
+  },
+  {
+   "key": "lift_Kr.80A",
+   "p": [
+    -41.7,
+    30.85
+   ],
+   "y": -0.129,
+   "note": "Glasaufzug Kr.80A (OSM 3392490912), Tueren nach Osten (Street View)"
+  }
+ ],
+ "detail_replace": [
+  "ubahn_A.json",
+  "ubahn_B.json",
+  "ubahn_D.json",
+  "ubahn_E.json",
+  "ubahn_F.json",
+  "ubahn_G.json",
+  "ubahn_I.json"
+ ],
+ "promenade": {
+  "sections": [
+   {
+    "kind": "cov",
+    "name": "sued",
+    "s0": -104.95,
+    "s1": -96.95,
+    "t0": -4.87,
+    "t1": 8.55,
+    "bridge": false,
+    "hcov": 3.4
+   },
+   {
+    "kind": "open",
+    "name": "op0",
+    "i": 0,
+    "s0": -96.95,
+    "s1": -66.04,
+    "t0": -4.87,
+    "t1": 8.55,
+    "bridge": false
+   },
+   {
+    "kind": "cov",
+    "name": "c01",
+    "s0": -66.04,
+    "s1": -59.85,
+    "t0": -4.67,
+    "t1": 3.51,
+    "bridge": true,
+    "hcov": 3.26
+   },
+   {
+    "kind": "open",
+    "name": "op1",
+    "i": 1,
+    "s0": -59.85,
+    "s1": -16.86,
+    "t0": -4.67,
+    "t1": 3.51,
+    "bridge": false
+   },
+   {
+    "kind": "cov",
+    "name": "c12",
+    "s0": -16.86,
+    "s1": -8.55,
+    "t0": -4.32,
+    "t1": 3.51,
+    "bridge": true,
+    "hcov": 2.88
+   },
+   {
+    "kind": "open",
+    "name": "op2",
+    "i": 2,
+    "s0": -8.55,
+    "s1": 33.65,
+    "t0": -4.32,
+    "t1": 3.88,
+    "bridge": false
+   },
+   {
+    "kind": "cov",
+    "name": "c23",
+    "s0": 33.65,
+    "s1": 41.27,
+    "t0": -4.12,
+    "t1": 3.88,
+    "bridge": true,
+    "hcov": 2.86
+   },
+   {
+    "kind": "open",
+    "name": "op3",
+    "i": 3,
+    "s0": 41.27,
+    "s1": 57.94,
+    "t0": -4.12,
+    "t1": 4.25,
+    "bridge": false
+   },
+   {
+    "kind": "cov",
+    "name": "c34",
+    "s0": 57.94,
+    "s1": 104.07,
+    "t0": -4.12,
+    "t1": 4.25,
+    "bridge": false,
+    "hcov": 2.83
+   },
+   {
+    "kind": "open",
+    "name": "op4",
+    "i": 4,
+    "s0": 104.07,
+    "s1": 131.85,
+    "t0": -4.19,
+    "t1": 5.01,
+    "bridge": false
+   },
+   {
+    "kind": "cov",
+    "name": "nord",
+    "s0": 131.85,
+    "s1": 143.85,
+    "t0": 0.15,
+    "t1": 5.01,
+    "bridge": false,
+    "hcov": 3.4
+   }
+  ],
+  "stairs": [
+   {
+    "name": "sued_29",
+    "kind": "stair",
+    "s": [
+     -96.95,
+     -86.4
+    ],
+    "t": [
+     5.95,
+     8.53
+    ]
+   },
+   {
+    "name": "bruecke1_s",
+    "kind": "stair",
+    "s": [
+     -25.91,
+     -16.86
+    ],
+    "t": [
+     1.61,
+     3.49
+    ]
+   },
+   {
+    "name": "bruecke1_n",
+    "kind": "stair",
+    "s": [
+     -8.55,
+     0.5
+    ],
+    "t": [
+     1.98,
+     3.86
+    ]
+   },
+   {
+    "name": "bruecke2_s",
+    "kind": "stair",
+    "s": [
+     24.6,
+     33.65
+    ],
+    "t": [
+     1.98,
+     3.86
+    ]
+   },
+   {
+    "name": "bruecke2_n",
+    "kind": "stair",
+    "s": [
+     41.27,
+     50.32
+    ],
+    "t": [
+     2.35,
+     4.23
+    ]
+   },
+   {
+    "name": "nord_treppe",
+    "kind": "stair",
+    "s": [
+     121.6,
+     131.85
+    ],
+    "t": [
+     -4.17,
+     -1.57
+    ]
+   },
+   {
+    "name": "nord_rolltreppe",
+    "kind": "esc",
+    "s": [
+     120.11,
+     131.85
+    ],
+    "t": [
+     -1.45,
+     0.0
+    ]
+   }
+  ],
+  "shops_named": [
+   "Vodafone",
+   "FOTOFIX",
+   "nail & spa",
+   "Dunkin'",
+   "Espresso House",
+   "Mac and Cheezy",
+   "Manti love",
+   "KFC",
+   "KFC",
+   "Rasierer St\u00f6ter",
+   "Trans-Asia",
+   "Haus des D\u00f6ners",
+   "Pommesgl\u00fcck",
+   "Trans-Asia",
+   "Hey Ferry",
+   "Hannoversche Kaffee Manufaktur",
+   "Tete",
+   "Kr\u00e4uter Basar",
+   "NEW YORKER",
+   "Galeria Outlet",
+   "Study Atelier",
+   "o2",
+   "High Style",
+   "Simba's Afro Friseur",
+   "Sushi deli",
+   "Asem Parfums",
+   "24Seven - 24-Stunden-Kiosk",
+   "Express"
+  ],
+  "axis": {
+   "origin": [
+    40.74179176990315,
+    -95.26408315696847
+   ],
+   "axis": [
+    0.6004671445204948,
+    -0.7996494284068507
+   ],
+   "normal": [
+    0.7996494284068507,
+    0.6004671445204948
+   ]
+  }
+ },
+ "transit": {
+  "platforms": [
+   [
+    244.44,
+    -511.37
+   ],
+   [
+    168.03,
+    -446.11
+   ],
+   [
+    -494.06,
+    -117.47
+   ],
+   [
+    -402.34,
+    -261.59
+   ],
+   [
+    -403.71,
+    -242.69
+   ]
+  ],
+  "catenary_stations": 49,
+  "platform_height": 0.86,
+  "mendini_busstops": 2
+ },
+ "altstadt": {
+  "fountains": [
+   {
+    "name": "Holzmarktbrunnen (Oskar-Winter-Brunnen)",
+    "p": [
+     -431.62,
+     332.19
+    ],
+    "y": -1.4
+   },
+   {
+    "name": "Ballhofbrunnen",
+    "p": [
+     -410.46,
+     213.39
+    ],
+    "y": -0.73
+   }
+  ],
+  "leine_railing_m": 668,
+  "leine_bridges": [
+   {
+    "id": 24565114,
+    "name": "Br\u00fchlstra\u00dfe",
+    "width": 14.1,
+    "y": [
+     -2.46,
+     -2.93
+    ]
+   },
+   {
+    "id": 24565119,
+    "name": "Goethestra\u00dfe",
+    "width": 7.9,
+    "y": [
+     -2.06,
+     -1.87
+    ]
+   },
+   {
+    "id": 28393402,
+    "name": "Hardenbergstra\u00dfe",
+    "width": 3.7,
+    "y": [
+     -3.04,
+     -3.1
+    ]
+   },
+   {
+    "id": 46817955,
+    "name": "Schlo\u00dfstra\u00dfe",
+    "width": 16.4,
+    "y": [
+     -3.59,
+     -3.59
+    ]
+   },
+   {
+    "id": 46817956,
+    "name": "Martin-Neuffer-Br\u00fccke",
+    "width": 8.7,
+    "y": [
+     -3.96,
+     -2.88
+    ]
+   },
+   {
+    "id": 53633072,
+    "name": "Schlo\u00dfbr\u00fccke",
+    "width": 3.7,
+    "y": [
+     -3.34,
+     -3.34
+    ]
+   },
+   {
+    "id": 53634363,
+    "name": null,
+    "width": 3.7,
+    "y": [
+     -3.03,
+     -4.84
+    ]
+   },
+   {
+    "id": 112290810,
+    "name": "Goethestra\u00dfe",
+    "width": 11.0,
+    "y": [
+     -1.83,
+     -2.17
+    ]
+   },
+   {
+    "id": 113944124,
+    "name": "Br\u00fchlstra\u00dfe",
+    "width": 14.1,
+    "y": [
+     -2.72,
+     -2.9
+    ]
+   },
+   {
+    "id": 269375804,
+    "name": null,
+    "width": 3.7,
+    "y": [
+     -1.71,
+     -2.08
+    ]
+   },
+   {
+    "id": 756176965,
+    "name": null,
+    "width": 3.7,
+    "y": [
+     -2.23,
+     -4.15
+    ]
+   }
+  ],
+  "leine_portals": [
+   {
+    "a": [
+     -373.77,
+     545.18
+    ],
+    "b": [
+     -372.58,
+     544.51
+    ],
+    "y_water": -7.62,
+    "y_top": -3.8
+   },
+   {
+    "a": [
+     -366.43,
+     550.3
+    ],
+    "b": [
+     -355.48,
+     538.01
+    ],
+    "y_water": -7.62,
+    "y_top": -3.72
+   },
+   {
+    "a": [
+     -355.48,
+     538.01
+    ],
+    "b": [
+     -339.64,
+     519.18
+    ],
+    "y_water": -7.62,
+    "y_top": -3.44
+   },
+   {
+    "a": [
+     -373.77,
+     545.18
+    ],
+    "b": [
+     -372.58,
+     544.51
+    ],
+    "y_water": -7.62,
+    "y_top": -3.8
+   },
+   {
+    "a": [
+     -366.43,
+     550.3
+    ],
+    "b": [
+     -355.48,
+     538.01
+    ],
+    "y_water": -7.62,
+    "y_top": -3.72
+   },
+   {
+    "a": [
+     -355.48,
+     538.01
+    ],
+    "b": [
+     -339.64,
+     519.18
+    ],
+    "y_water": -7.62,
+    "y_top": -3.44
+   },
+   {
+    "a": [
+     -352.21,
+     625.61
+    ],
+    "b": [
+     -360.42,
+     623.83
+    ],
+    "y_water": -4.43,
+    "y_top": -1.58
+   },
+   {
+    "a": [
+     -360.42,
+     623.83
+    ],
+    "b": [
+     -365.91,
+     621.82
+    ],
+    "y_water": -4.43,
+    "y_top": -1.58
+   }
+  ]
+ }
+}

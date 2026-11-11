@@ -1,0 +1,12 @@
+BUILD tris 249903 (anzeiger 191055, goseriedebad 58848), removed degenerate 6, bounds [-547.38   -2.   -365.41] .. [-485.93   50.49 -266.22], 9.4s
+   anz_detail_nocol 122062 ['glass_dark', 'glass_shop', 'klinker', 'lamp_glass', 'metal_dark', 'sign_panel', 'steel', 'stone_dark']
+   anz_dome 6432 ['copper']
+   anz_dome_detail_nocol 10216 ['copper', 'copper_dark', 'metal_dark']
+   anz_letters_nocol 7455 ['gold', 'metal_dark']
+   anz_shell 8391 ['chevron', 'concrete', 'copper_dark', 'klinker', 'roof_flat', 'stone_dark']
+   anz_windows_nocol 36496 ['glass', 'paint_white']
+   bad_detail_nocol 19183 ['alu', 'bronze', 'copper_dark', 'metal_dark', 'print_band', 'steel', 'stone']
+   bad_letters_nocol 4532 ['paint_white', 'steel', 'stone_dark']
+   bad_roof 18975 ['copper_dark', 'slate', 'stone', 'tiles']
+   bad_roof_detail_nocol 2988 ['copper_dark', 'glass', 'gold', 'metal_dark', 'paint_white', 'stone', 'tiles']
+   bad_shell 5216 ['alu', 'ashlar', 'copper_dark', 'glass', 'glass_dark', 'glass_green', 'metal_da

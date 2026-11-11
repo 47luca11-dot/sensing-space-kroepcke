@@ -1,0 +1,633 @@
+21:15:03 | INFO: Data are loaded, start creating Blender stuff
+21:15:03 | INFO: Blender create Mesh node Mesh_0
+21:15:03 | INFO: Blender create Mesh node Mesh_1
+21:15:03 | INFO: Blender create Mesh node Mesh_10
+21:15:03 | INFO: Blender create Mesh node Mesh_19
+21:15:03 | INFO: Blender create Mesh node Mesh_41
+21:15:03 | INFO: Blender create Mesh node Mesh_42
+21:15:03 | INFO: Blender create Mesh node Mesh_100
+21:15:03 | INFO: Blender create Mesh node Mesh_101
+21:15:03 | INFO: Blender create Mesh node Mesh_113
+21:15:03 | INFO: Blender create Mesh node Mesh_118
+21:15:03 | INFO: Blender create Mesh node Mesh_120
+21:15:03 | INFO: Blender create Mesh node Mesh_130
+21:15:03 | INFO: Blender create Mesh node Mesh_138
+21:15:03 | INFO: Blender create Mesh node Mesh_139
+21:15:03 | INFO: glTF import finished in 0.03s
+21:15:03 | INFO: Data are loaded, start creating Blender stuff
+21:15:03 | INFO: Blender create Mesh node Mesh_0
+21:15:03 | INFO: Blender create Mesh node Mesh_1
+21:15:03 | INFO: Blender create Mesh node Mesh_10
+21:15:03 | INFO: Blender create Mesh node Mesh_55
+21:15:04 | INFO: Blender create Mesh node Mesh_100
+21:15:04 | INFO: Blender create Mesh node Mesh_101
+21:15:04 | INFO: Blender create Mesh node Mesh_106
+21:15:04 | INFO: Blender create Mesh node Mesh_107
+21:15:04 | INFO: Blender create Mesh node Mesh_108
+21:15:04 | INFO: Blender create Mesh node Mesh_109
+21:15:04 | INFO: Blender create Mesh node Mesh_121
+21:15:04 | INFO: Blender create Mesh node Mesh_125
+21:15:04 | INFO: Blender create Mesh node Mesh_145
+21:15:04 | INFO: Blender create Mesh node Mesh_153
+21:15:04 | INFO: Blender create Mesh node Mesh_211
+21:15:04 | INFO: Blender create Mesh node Mesh_349
+21:15:04 | INFO: Blender create Mesh node Mesh_389
+21:15:04 | INFO: Blender create Mesh node Mesh_406
+21:15:04 | INFO: glTF import finished in 1.08s
+21:15:04 | INFO: Data are loaded, start creating Blender stuff
+21:15:04 | INFO: Blender create Mesh node Mesh_0
+21:15:04 | INFO: Blender create Mesh node Mesh_1
+21:15:04 | INFO: Blender create Mesh node Mesh_11
+21:15:04 | INFO: Blender create Mesh node Mesh_12
+21:15:04 | INFO: Blender create Mesh node Mesh_14
+21:15:04 | INFO: Blender create Mesh node Mesh_28
+21:15:04 | INFO: Blender create Mesh node Mesh_34
+21:15:04 | INFO: Blender create Mesh node Mesh_40
+21:15:04 | INFO: Blender create Mesh node Mesh_56
+21:15:04 | INFO: Blender create Mesh node Mesh_82
+21:15:04 | INFO: Blender create Mesh node Mesh_101
+21:15:04 | INFO: Blender create Mesh node Mesh_102
+21:15:04 | INFO: Blender create Mesh node Mesh_103
+21:15:04 | INFO: Blender create Mesh node Mesh_108
+21:15:04 | INFO: Blender create Mesh node Mesh_110
+21:15:04 | INFO: Blender create Mesh node Mesh_111
+21:15:04 | INFO: Blender create Mesh node Mesh_113
+21:15:04 | INFO: Blender create Mesh node Mesh_116
+21:15:04 | INFO: Blender create Mesh node Mesh_117
+21:15:04 | INFO: Blender create Mesh node Mesh_124
+21:15:04 | INFO: Blender create Mesh node Mesh_128
+21:15:04 | INFO: Blender create Mesh node Mesh_142
+21:15:04 | INFO: Blender create Mesh node Mesh_164
+21:15:04 | INFO: Blender create Mesh node Mesh_166
+21:15:04 | INFO: Blender create Mesh node Mesh_181
+21:15:04 | INFO: Blender create Mesh node Mesh_192
+21:15:04 | INFO: Blender create Mesh node Mesh_201
+21:15:04 | INFO: Blender create Mesh node Mesh_216
+21:15:04 | INFO: Blender create Mesh node Mesh_217
+21:15:04 | INFO: Blender create Mesh node Mesh_218
+21:15:04 | INFO: Blender create Mesh node Mesh_219
+21:15:04 | INFO: Blender create Mesh node Mesh_222
+21:15:04 | INFO: Blender create Mesh node Mesh_223
+21:15:04 | INFO: Blender create Mesh node Mesh_232
+21:15:04 | INFO: Blender create Mesh node Mesh_239
+21:15:04 | INFO: Blender create Mesh node Mesh_249
+21:15:04 | INFO: Blender create Mesh node Mesh_257
+21:15:04 | INFO: Blender create Mesh node Mesh_270
+21:15:04 | INFO: Blender create Mesh node Mesh_298
+21:15:04 | INFO: Blender create Mesh node Mesh_320
+21:15:04 | INFO: Blender create Mesh node Mesh_323
+21:15:04 | INFO: Blender create Mesh node Mesh_337
+21:15:04 | INFO: Blender create Mesh node Mesh_345
+21:15:04 | INFO: Blender create Mesh node Mesh_381
+21:15:04 | INFO: Blender create Mesh node Mesh_389
+21:15:04 | INFO: Blender create Mesh node Mesh_414
+21:15:04 | INFO: Blender create Mesh node Mesh_427
+21:15:04 | INFO: Blender create Mesh node Mesh_440
+21:15:04 | INFO: Blender create Mesh node Mesh_467
+21:15:04 | INFO: Blender create Mesh node Mesh_469
+21:15:04 | INFO: Blender create Mesh node Mesh_476
+21:15:04 | INFO: Blender create Mesh node Mesh_477
+21:15:04 | INFO: glTF import finished in 0.21s
+21:15:05 | INFO: Data are loaded, start creating Blender stuff
+21:15:05 | INFO: Blender create Mesh node Mesh_0
+21:15:05 | INFO: Blender create Mesh node Mesh_1
+21:15:05 | INFO: Blender create Mesh node Mesh_3
+21:15:05 | INFO: Blender create Mesh node Mesh_4
+21:15:05 | INFO: Blender create Mesh node Mesh_9
+21:15:05 | INFO: Blender create Mesh node Mesh_10
+21:15:05 | INFO: Blender create Mesh node Mesh_11
+21:15:05 | INFO: Blender create Mesh node Mesh_12
+21:15:05 | INFO: Blender create Mesh node Mesh_13
+21:15:05 | INFO: Blender create Mesh node Mesh_15
+21:15:05 | INFO: Blender create Mesh node Mesh_16
+21:15:05 | INFO: Blender create Mesh node Mesh_17
+21:15:05 | INFO: Blender create Mesh node Mesh_19
+21:15:05 | INFO: Blender create Mesh node Mesh_20
+21:15:05 | INFO: Blender create Mesh node Mesh_23
+21:15:05 | INFO: Blender create Mesh node Mesh_29
+21:15:05 | INFO: Blender create Mesh node Mesh_31
+21:15:05 | INFO: Blender create Mesh node Mesh_32
+21:15:05 | INFO: Blender create Mesh node Mesh_34
+21:15:05 | INFO: Blender create Mesh node Mesh_35
+21:15:05 | INFO: Blender create Mesh node Mesh_36
+21:15:05 | INFO: Blender create Mesh node Mesh_41
+21:15:05 | INFO: Blender create Mesh node Mesh_43
+21:15:05 | INFO: Blender create Mesh node Mesh_44
+21:15:05 | INFO: Blender create Mesh node Mesh_45
+21:15:05 | INFO: Blender create Mesh node Mesh_47
+21:15:05 | INFO: Blender create Mesh node Mesh_48
+21:15:05 | INFO: Blender create Mesh node Mesh_49
+21:15:05 | INFO: Blender create Mesh node Mesh_55
+21:15:05 | INFO: Blender create Mesh node Mesh_57
+21:15:05 | INFO: Blender create Mesh node Mesh_60
+21:15:05 | INFO: Blender create Mesh node Mesh_87
+21:15:05 | INFO: Blender create Mesh node Mesh_96
+21:15:05 | INFO: Blender create Mesh node Mesh_97
+21:15:05 | INFO: Blender create Mesh node Mesh_98
+21:15:05 | INFO: Blender create Mesh node Mesh_99
+21:15:05 | INFO: Blender create Mesh node Mesh_100
+21:15:05 | INFO: Blender create Mesh node Mesh_101
+21:15:05 | INFO: Blender create Mesh node Mesh_102
+21:15:05 | INFO: Blender create Mesh node Mesh_105
+21:15:05 | INFO: Blender create Mesh node Mesh_106
+21:15:05 | INFO: Blender create Mesh node Mesh_107
+21:15:05 | INFO: Blender create Mesh node Mesh_108
+21:15:05 | INFO: Blender create Mesh node Mesh_111
+21:15:05 | INFO: Blender create Mesh node Mesh_112
+21:15:05 | INFO: Blender create Mesh node Mesh_114
+21:15:05 | INFO: Blender create Mesh node Mesh_116
+21:15:05 | INFO: Blender create Mesh node Mesh_117
+21:15:05 | INFO: Blender create Mesh node Mesh_118
+21:15:05 | INFO: Blender create Mesh node Mesh_119
+21:15:05 | INFO: Blender create Mesh node Mesh_121
+21:15:05 | INFO: Blender create Mesh node Mesh_123
+21:15:05 | INFO: Blender create Mesh node Mesh_126
+21:15:05 | INFO: Blender create Mesh node Mesh_132
+21:15:05 | INFO: Blender create Mesh node Mesh_133
+21:15:05 | INFO: Blender create Mesh node Mesh_134
+21:15:05 | INFO: Blender create Mesh node Mesh_135
+21:15:05 | INFO: Blender create Mesh node Mesh_136
+21:15:05 | INFO: Blender create Mesh node Mesh_139
+21:15:05 | INFO: Blender create Mesh node Mesh_140
+21:15:05 | INFO: Blender create Mesh node Mesh_141
+21:15:05 | INFO: Blender create Mesh node Mesh_143
+21:15:05 | INFO: Blender create Mesh node Mesh_145
+21:15:05 | INFO: Blender create Mesh node Mesh_147
+21:15:05 | INFO: Blender create Mesh node Mesh_149
+21:15:05 | INFO: glTF import finished in 0.17s
+21:15:05 | INFO: Data are loaded, start creating Blender stuff
+21:15:05 | INFO: Blender create Mesh node Mesh_0
+21:15:05 | INFO: glTF import finished in 0.01s
+21:15:05 | INFO: Data are loaded, start creating Blender stuff
+21:15:05 | INFO: Blender create Mesh node Mesh_0
+21:15:05 | INFO: Blender create Mesh node Mesh_10
+21:15:05 | INFO: Blender create Mesh node Mesh_11
+21:15:05 | INFO: Blender create Mesh node Mesh_21
+21:15:05 | INFO: glTF import finished in 0.04s
+21:15:05 | INFO: Data are loaded, start creating Blender stuff
+21:15:05 | INFO: Blender create Mesh node Mesh_0
+21:15:05 | INFO: Blender create Mesh node Mesh_1
+21:15:05 | INFO: Blender create Mesh node Mesh_2
+21:15:05 | INFO: Blender create Mesh node Mesh_3
+21:15:05 | INFO: Blender create Mesh node Mesh_4
+21:15:05 | INFO: Blender create Mesh node Mesh_10
+21:15:05 | INFO: Blender create Mesh node Mesh_100
+21:15:05 | INFO: Blender create Mesh node Mesh_172
+21:15:05 | INFO: glTF import finished in 0.06s
+21:15:05 | INFO: Data are loaded, start creating Blender stuff
+21:15:05 | INFO: Blender create Mesh node Mesh_0
+21:15:05 | INFO: Blender create Mesh node Mesh_10
+21:15:05 | INFO: Blender create Mesh node Mesh_11
+21:15:05 | INFO: Blender create Mesh node Mesh_31
+21:15:05 | INFO: Blender create Mesh node Mesh_48
+21:15:05 | INFO: Blender create Mesh node Mesh_49
+21:15:05 | INFO: Blender create Mesh node Mesh_50
+21:15:05 | INFO: Blender create Mesh node Mesh_53
+21:15:05 | INFO: Blender create Mesh node Mesh_56
+21:15:05 | INFO: glTF import finished in 0.06s
+21:15:05 | INFO: Data are loaded, start creating Blender stuff
+21:15:05 | INFO: Blender create Mesh node Mesh_0
+21:15:05 | INFO: glTF import finished in 0.38s
+21:15:05 | INFO: Data are loaded, start creating Blender stuff
+21:15:05 | INFO: Blender create Mesh node Mesh_0
+21:15:05 | INFO: Blender create Mesh node Mesh_1
+21:15:05 | INFO: Blender create Mesh node Mesh_10
+21:15:05 | INFO: Blender create Mesh node Mesh_21
+21:15:05 | INFO: glTF import finished in 0.03s
+21:15:05 | INFO: Data are loaded, start creating Blender stuff
+21:15:05 | INFO: Blender create Mesh node Mesh_0
+21:15:05 | INFO: Blender create Mesh node Mesh_1
+21:15:06 | INFO: Blender create Mesh node Mesh_3
+21:15:06 | INFO: Blender create Mesh node Mesh_4
+21:15:06 | INFO: Blender create Mesh node Mesh_6
+21:15:06 | INFO: Blender create Mesh node Mesh_7
+21:15:06 | INFO: Blender create Mesh node Mesh_10
+21:15:06 | INFO: Blender create Mesh node Mesh_11
+21:15:06 | INFO: Blender create Mesh node Mesh_13
+21:15:06 | INFO: Blender create Mesh node Mesh_14
+21:15:06 | INFO: Blender create Mesh node Mesh_17
+21:15:06 | INFO: glTF import finished in 0.42s
+21:15:06 | INFO: Data are loaded, start creating Blender stuff
+21:15:06 | INFO: Blender create Mesh node Mesh_0
+21:15:06 | INFO: Blender create Mesh node Mesh_11
+21:15:06 | INFO: Blender create Mesh node Mesh_12
+21:15:06 | INFO: Blender create Mesh node Mesh_30
+21:15:06 | INFO: Blender create Mesh node Mesh_34
+21:15:06 | INFO: Blender create Mesh node Mesh_40
+21:15:06 | INFO: Blender create Mesh node Mesh_43
+21:15:06 | INFO: Blender create Mesh node Mesh_45
+21:15:06 | INFO: glTF import finished in 0.05s
+21:15:06 | INFO: Data are loaded, start creating Blender stuff
+21:15:06 | INFO: Blender create Mesh node Mesh_0
+21:15:06 | INFO: Blender create Mesh node Mesh_10
+21:15:06 | INFO: Blender create Mesh node Mesh_11
+21:15:06 | INFO: Blender create Mesh node Mesh_12
+21:15:06 | INFO: Blender create Mesh node Mesh_18
+21:15:06 | INFO: Blender create Mesh node Mesh_19
+21:15:06 | INFO: Blender create Mesh node Mesh_20
+21:15:06 | INFO: Blender create Mesh node Mesh_21
+21:15:06 | INFO: Blender create Mesh node Mesh_27
+21:15:06 | INFO: Blender create Mesh node Mesh_28
+21:15:06 | INFO: Blender create Mesh node Mesh_42
+21:15:06 | INFO: Blender create Mesh node Mesh_45
+21:15:06 | INFO: Blender create Mesh node Mesh_46
+21:15:06 | INFO: Blender create Mesh node Mesh_47
+21:15:06 | INFO: glTF import finished in 0.18s
+21:15:06 | INFO: Data are loaded, start creating Blender stuff
+21:15:06 | INFO: Blender create Mesh node Mesh_0
+21:15:06 | INFO: Blender create Mesh node Mesh_1
+21:15:06 | INFO: Blender create Mesh node Mesh_2
+21:15:06 | INFO: Blender create Mesh node Mesh_3
+21:15:06 | INFO: Blender create Mesh node Mesh_10
+21:15:06 | INFO: Blender create Mesh node Mesh_137
+21:15:06 | INFO: Blender create Mesh node Mesh_157
+21:15:06 | INFO: Blender create Mesh node Mesh_162
+21:15:06 | INFO: Blender create Mesh node Mesh_704
+21:15:06 | INFO: Blender create Mesh node Mesh_1000
+21:15:07 | INFO: Blender create Mesh node Mesh_1007
+21:15:07 | INFO: glTF import finished in 0.48s
+collection Detail_Opernplatz 220
+21:15:07 | INFO: Data are loaded, start creating Blender stuff
+21:15:07 | INFO: Blender create Mesh node Stufe_Granit
+21:15:07 | INFO: Blender create Mesh node Sockel_Platte
+21:15:07 | INFO: Blender create Mesh node Sockel_Kern
+21:15:07 | INFO: Blender create Mesh node Stern_Sockel_0_-0.80
+21:15:07 | INFO: Blender create Mesh node Vitrine_Glas_0
+21:15:07 | INFO: Blender create Mesh node Vitrine_Kunst_0
+21:15:07 | INFO: Blender create Mesh node Vitrine_Kunst_1
+21:15:07 | INFO: Blender create Mesh node Vitrine_Kunst_2
+21:15:07 | INFO: Blender create Mesh node Vitrine_Kunst_3
+21:15:07 | INFO: Blender create Mesh node Zifferblatt_0
+21:15:07 | INFO: Blender create Mesh node Strich_0_0
+21:15:07 | INFO: Blender create Mesh node Zeiger_hour_0
+21:15:07 | INFO: Blender create Mesh node Zeiger_minute_0
+21:15:07 | INFO: Blender create Mesh node Zeiger_hour_1
+21:15:07 | INFO: Blender create Mesh node Zeiger_minute_1
+21:15:07 | INFO: Blender create Mesh node Zeiger_hour_2
+21:15:07 | INFO: Blender create Mesh node Zeiger_minute_2
+21:15:07 | INFO: Blender create Mesh node Zeiger_hour_3
+21:15:07 | INFO: Blender create Mesh node Zeiger_minute_3
+21:15:07 | INFO: Blender create Mesh node Bambus_0_Latte_0_0
+21:15:07 | INFO: Blender create Mesh node Bambus_0_Pfosten_-1_-1
+21:15:07 | INFO: Blender create Mesh node Bambus_0_Erde
+21:15:07 | INFO: Blender create Mesh node Bambus_0_Halm_0
+21:15:07 | INFO: Blender create Mesh node Bambus_0_Blatt_0
+21:15:07 | INFO: glTF import finished in 0.15s
+21:15:07 | INFO: Data are loaded, start creating Blender stuff
+21:15:07 | INFO: Blender create Mesh node Lichtwolke_Baender
+21:15:07 | INFO: Blender create Mesh node LED_0
+21:15:07 | INFO: Blender create Mesh node LED_1
+21:15:07 | INFO: Blender create Mesh node LED_2
+21:15:07 | INFO: Blender create Mesh node LED_3
+21:15:07 | INFO: Blender create Mesh node LED_4
+21:15:07 | INFO: Blender create Mesh node LED_5
+21:15:07 | INFO: Blender create Mesh node LED_6
+21:15:07 | INFO: Blender create Mesh node LED_7
+21:15:07 | INFO: Blender create Mesh node LED_8
+21:15:07 | INFO: Blender create Mesh node LED_9
+21:15:07 | INFO: Blender create Mesh node LED_10
+21:15:07 | INFO: Blender create Mesh node LED_11
+21:15:07 | INFO: Blender create Mesh node LED_12
+21:15:07 | INFO: Blender create Mesh node LED_13
+21:15:07 | INFO: Blender create Mesh node LED_14
+21:15:07 | INFO: Blender create Mesh node LED_15
+21:15:07 | INFO: Blender create Mesh node LED_16
+21:15:07 | INFO: Blender create Mesh node LED_17
+21:15:07 | INFO: Blender create Mesh node LED_18
+21:15:07 | INFO: Blender create Mesh node LED_19
+21:15:07 | INFO: Blender create Mesh node LED_20
+21:15:07 | INFO: Blender create Mesh node LED_21
+21:15:07 | INFO: Blender create Mesh node LED_22
+21:15:07 | INFO: Blender create Mesh node LED_23
+21:15:07 | INFO: Blender create Mesh node LED_24
+21:15:07 | INFO: Blender create Mesh node LED_25
+21:15:07 | INFO: Blender create Mesh node LED_26
+21:15:07 | INFO: Blender create Mesh node LED_27
+21:15:07 | INFO: Blender create Mesh node LED_28
+21:15:07 | INFO: Blender create Mesh node LED_29
+21:15:07 | INFO: Blender create Mesh node LED_30
+21:15:07 | INFO: Blender create Mesh node LED_31
+21:15:07 | INFO: Blender create Mesh node LED_32
+21:15:07 | INFO: Blender create Mesh node LED_33
+21:15:07 | INFO: Blender create Mesh node LED_34
+21:15:07 | INFO: Blender create Mesh node LED_35
+21:15:07 | INFO: Blender create Mesh node LED_36
+21:15:07 | INFO: Blender create Mesh node LED_37
+21:15:07 | INFO: Blender create Mesh node LED_38
+21:15:07 | INFO: Blender create Mesh node LED_39
+21:15:07 | INFO: Blender create Mesh node LED_40
+21:15:07 | INFO: Blender create Mesh node LED_41
+21:15:07 | INFO: Blender create Mesh node LED_42
+21:15:07 | INFO: Blender create Mesh node LED_43
+21:15:07 | INFO: Blender create Mesh node LED_44
+21:15:07 | INFO: Blender create Mesh node LED_45
+21:15:07 | INFO: Blender create Mesh node LED_46
+21:15:07 | INFO: Blender create Mesh node LED_47
+21:15:07 | INFO: Blender create Mesh node LED_48
+21:15:07 | INFO: Blender create Mesh node LED_49
+21:15:07 | INFO: Blender create Mesh node LED_50
+21:15:07 | INFO: Blender create Mesh node LED_51
+21:15:07 | INFO: Blender create Mesh node LED_52
+21:15:07 | INFO: Blender create Mesh node LED_53
+21:15:07 | INFO: Blender create Mesh node LED_54
+21:15:07 | INFO: Blender create Mesh node LED_55
+21:15:07 | INFO: Blender create Mesh node LED_56
+21:15:07 | INFO: Blender create Mesh node LED_57
+21:15:07 | INFO: Blender create Mesh node LED_58
+21:15:07 | INFO: Blender create Mesh node LED_59
+21:15:07 | INFO: Blender create Mesh node LED_60
+21:15:07 | INFO: Blender create Mesh node LED_61
+21:15:07 | INFO: Blender create Mesh node LED_62
+21:15:07 | INFO: Blender create Mesh node LED_63
+21:15:07 | INFO: Blender create Mesh node Lichtwolke_Nabe
+21:15:07 | INFO: Blender create Mesh node Seil_0
+21:15:07 | INFO: Blender create Mesh node Haken_0
+21:15:07 | INFO: Blender create Mesh node Abspannung_0_0
+21:15:07 | INFO: Blender create Mesh node Abspannung_0_1
+21:15:07 | INFO: Blender create Mesh node Abspannung_0_2
+21:15:07 | INFO: Blender create Mesh node Seil_1
+21:15:07 | INFO: Blender create Mesh node Haken_1
+21:15:07 | INFO: Blender create Mesh node Abspannung_1_0
+21:15:07 | INFO: Blender create Mesh node Abspannung_1_1
+21:15:07 | INFO: Blender create Mesh node Abspannung_1_2
+21:15:07 | INFO: Blender create Mesh node Seil_2
+21:15:07 | INFO: Blender create Mesh node Haken_2
+21:15:07 | INFO: Blender create Mesh node Abspannung_2_0
+21:15:07 | INFO: Blender create Mesh node Abspannung_2_1
+21:15:07 | INFO: Blender create Mesh node Abspannung_2_2
+21:15:07 | INFO: Blender create Mesh node Seil_3
+21:15:07 | INFO: Blender create Mesh node Haken_3
+21:15:07 | INFO: Blender create Mesh node Abspannung_3_0
+21:15:07 | INFO: Blender create Mesh node Abspannung_3_1
+21:15:07 | INFO: Blender create Mesh node Abspannung_3_2
+21:15:07 | INFO: glTF import finished in 0.14s
+collection Wahrzeichen 110
+21:15:07 | INFO: Data are loaded, start creating Blender stuff
+21:15:07 | INFO: Blender create Mesh node Mesh_0
+21:15:07 | INFO: Blender create Mesh node Mesh_1
+21:15:07 | INFO: Blender create Mesh node Mesh_2
+21:15:07 | INFO: Blender create Mesh node Mesh_14
+21:15:07 | INFO: Blender create Mesh node Mesh_16
+21:15:07 | INFO: Blender create Mesh node Mesh_28
+21:15:07 | INFO: Blender create Mesh node Mesh_35
+21:15:07 | INFO: glTF import finished in 0.05s
+21:15:07 | INFO: Data are loaded, start creating Blender stuff
+21:15:07 | INFO: Blender create Mesh node Mesh_0
+21:15:07 | INFO: Blender create Mesh node Mesh_1
+21:15:07 | INFO: Blender create Mesh node Mesh_6
+21:15:07 | INFO: Blender create Mesh node Mesh_9
+21:15:07 | INFO: Blender create Mesh node Mesh_12
+21:15:07 | INFO: Blender create Mesh node Mesh_14
+21:15:07 | INFO: Blender create Mesh node Mesh_15
+21:15:07 | INFO: Blender create Mesh node Mesh_46
+21:15:07 | INFO: Blender create Mesh node Mesh_54
+21:15:07 | INFO: Blender create Mesh node Mesh_89
+21:15:07 | INFO: Blender create Mesh node Mesh_107
+21:15:07 | INFO: Blender create Mesh node Mesh_155
+21:15:07 | INFO: Blender create Mesh node Mesh_156
+21:15:07 | INFO: Blender create Mesh node Mesh_157
+21:15:07 | INFO: Blender create Mesh node Mesh_160
+21:15:07 | INFO: glTF import finished in 0.21s
+21:15:07 | INFO: Data are loaded, start creating Blender stuff
+21:15:07 | INFO: Blender create Mesh node Mesh_21
+21:15:07 | INFO: Blender create Mesh node Mesh_251
+21:15:07 | INFO: Blender create Mesh node Mesh_257
+21:15:07 | INFO: Blender create Mesh node Mesh_372
+21:15:07 | INFO: Blender create Mesh node Mesh_375
+21:15:07 | INFO: Blender create Mesh node Mesh_491
+21:15:07 | INFO: Blender create Mesh node Mesh_517
+21:15:07 | INFO: Blender create Mesh node Mesh_520
+21:15:07 | INFO: Blender create Mesh node Mesh_547
+21:15:07 | INFO: Blender create Mesh node Mesh_549
+21:15:07 | INFO: Blender create Mesh node Mesh_561
+21:15:07 | INFO: Blender create Mesh node Mesh_567
+21:15:07 | INFO: Blender create Mesh node Mesh_568
+21:15:07 | INFO: Blender create Mesh node Mesh_579
+21:15:07 | INFO: Blender create Mesh node Mesh_612
+21:15:07 | INFO: Blender create Mesh node Mesh_640
+21:15:07 | INFO: Blender create Mesh node Mesh_641
+21:15:07 | INFO: Blender create Mesh node Mesh_644
+21:15:07 | INFO: Blender create Mesh node Mesh_654
+21:15:07 | INFO: Blender create Mesh node Mesh_655
+21:15:07 | INFO: Blender create Mesh node Mesh_658
+21:15:07 | INFO: Blender create Mesh node Mesh_697
+21:15:07 | INFO: Blender create Mesh node Mesh_710
+21:15:07 | INFO: Blender create Mesh node Mesh_717
+21:15:07 | INFO: Blender create Mesh node Mesh_720
+21:15:07 | INFO: Blender create Mesh node Mesh_1000
+21:15:07 | INFO: Blender create Mesh node Mesh_1005
+21:15:07 | INFO: Blender create Mesh node Mesh_1101
+21:15:07 | INFO: Blender create Mesh node Mesh_1197
+21:15:08 | INFO: Blender create Mesh node Mesh_1693
+21:15:08 | INFO: Blender create Mesh node Mesh_1702
+21:15:08 | INFO: Blender create Mesh node Mesh_1893
+21:15:08 | INFO: Blender create Mesh node Mesh_1894
+21:15:08 | INFO: Blender create Mesh node Mesh_1945
+21:15:08 | INFO: Blender create Mesh node Mesh_1961
+21:15:08 | INFO: Blender create Mesh node Mesh_1965
+21:15:08 | INFO: Blender create Mesh node Mesh_1980
+21:15:08 | INFO: glTF import finished in 0.35s
+21:15:08 | INFO: Data are loaded, start creating Blender stuff
+21:15:08 | INFO: Blender create Mesh node Mesh_0
+21:15:08 | INFO: Blender create Mesh node Mesh_1
+21:15:08 | INFO: Blender create Mesh node Mesh_10
+21:15:08 | INFO: Blender create Mesh node Mesh_1114
+21:15:08 | INFO: glTF import finished in 0.10s
+21:15:08 | INFO: Data are loaded, start creating Blender stuff
+21:15:08 | INFO: Blender create Mesh node Mesh_0
+21:15:08 | INFO: Blender create Mesh node Mesh_230
+21:15:08 | INFO: glTF import finished in 0.38s
+21:15:08 | INFO: Data are loaded, start creating Blender stuff
+21:15:08 | INFO: Blender create Mesh node Mesh_0
+21:15:08 | INFO: Blender create Mesh node Mesh_1
+21:15:08 | INFO: Blender create Mesh node Mesh_2
+21:15:08 | INFO: Blender create Mesh node Mesh_31
+21:15:08 | INFO: Blender create Mesh node Mesh_34
+21:15:08 | INFO: Blender create Mesh node Mesh_61
+21:15:08 | INFO: Blender create Mesh node Mesh_77
+21:15:08 | INFO: Blender create Mesh node Mesh_89
+21:15:08 | INFO: Blender create Mesh node Mesh_293
+21:15:08 | INFO: Blender create Mesh node Mesh_373
+21:15:08 | INFO: Blender create Mesh node Mesh_376
+21:15:08 | INFO: Blender create Mesh node Mesh_390
+21:15:08 | INFO: Blender create Mesh node Mesh_393
+21:15:08 | INFO: Blender create Mesh node Mesh_394
+21:15:08 | INFO: Blender create Mesh node Mesh_397
+21:15:08 | INFO: Blender create Mesh node Mesh_398
+21:15:08 | INFO: Blender create Mesh node Mesh_399
+21:15:08 | INFO: Blender create Mesh node Mesh_400
+21:15:08 | INFO: Blender create Mesh node Mesh_404
+21:15:08 | INFO: Blender create Mesh node Mesh_411
+21:15:08 | INFO: Blender create Mesh node Mesh_504
+21:15:08 | INFO: Blender create Mesh node Mesh_505
+21:15:08 | INFO: Blender create Mesh node Mesh_511
+21:15:08 | INFO: Blender create Mesh node Mesh_521
+21:15:08 | INFO: Blender create Mesh node Mesh_524
+21:15:08 | INFO: Blender create Mesh node Mesh_526
+21:15:08 | INFO: Blender create Mesh node Mesh_576
+21:15:08 | INFO: Blender create Mesh node Mesh_623
+21:15:08 | INFO: Blender create Mesh node Mesh_624
+21:15:08 | INFO: Blender create Mesh node Mesh_631
+21:15:08 | INFO: Blender create Mesh node Mesh_632
+21:15:08 | INFO: Blender create Mesh node Mesh_668
+21:15:08 | INFO: Blender create Mesh node Mesh_800
+21:15:08 | INFO: glTF import finished in 0.26s
+21:15:08 | INFO: Data are loaded, start creating Blender stuff
+21:15:08 | INFO: Blender create Mesh node Mesh_0
+21:15:08 | INFO: Blender create Mesh node Mesh_13
+21:15:08 | INFO: Blender create Mesh node Mesh_16
+21:15:09 | INFO: Blender create Mesh node Mesh_19
+21:15:09 | INFO: Blender create Mesh node Mesh_45
+21:15:09 | INFO: Blender create Mesh node Mesh_46
+21:15:09 | INFO: Blender create Mesh node Mesh_86
+21:15:09 | INFO: Blender create Mesh node Mesh_145
+21:15:09 | INFO: Blender create Mesh node Mesh_196
+21:15:09 | INFO: Blender create Mesh node Mesh_198
+21:15:09 | INFO: Blender create Mesh node Mesh_200
+21:15:09 | INFO: Blender create Mesh node Mesh_203
+21:15:09 | INFO: Blender create Mesh node Mesh_204
+21:15:09 | INFO: Blender create Mesh node Mesh_247
+21:15:09 | INFO: Blender create Mesh node Mesh_248
+21:15:09 | INFO: Blender create Mesh node Mesh_250
+21:15:09 | INFO: Blender create Mesh node Mesh_252
+21:15:09 | INFO: Blender create Mesh node Mesh_277
+21:15:09 | INFO: Blender create Mesh node Mesh_290
+21:15:09 | INFO: Blender create Mesh node Mesh_291
+21:15:09 | INFO: Blender create Mesh node Mesh_292
+21:15:09 | INFO: Blender create Mesh node Mesh_296
+21:15:09 | INFO: Blender create Mesh node Mesh_297
+21:15:09 | INFO: Blender create Mesh node Mesh_345
+21:15:09 | INFO: Blender create Mesh node Mesh_613
+21:15:09 | INFO: glTF import finished in 0.20s
+21:15:09 | INFO: Data are loaded, start creating Blender stuff
+21:15:09 | INFO: Blender create Mesh node Mesh_10
+21:15:09 | INFO: Blender create Mesh node Mesh_32
+21:15:09 | INFO: Blender create Mesh node Mesh_35
+21:15:09 | INFO: Blender create Mesh node Mesh_62
+21:15:09 | INFO: Blender create Mesh node Mesh_70
+21:15:09 | INFO: Blender create Mesh node Mesh_73
+21:15:09 | INFO: Blender create Mesh node Mesh_74
+21:15:09 | INFO: Blender create Mesh node Mesh_76
+21:15:09 | INFO: Blender create Mesh node Mesh_77
+21:15:09 | INFO: Blender create Mesh node Mesh_103
+21:15:09 | INFO: Blender create Mesh node Mesh_104
+21:15:09 | INFO: Blender create Mesh node Mesh_111
+21:15:09 | INFO: Blender create Mesh node Mesh_128
+21:15:09 | INFO: Blender create Mesh node Mesh_177
+21:15:09 | INFO: Blender create Mesh node Mesh_384
+21:15:09 | INFO: Blender create Mesh node Mesh_394
+21:15:09 | INFO: Blender create Mesh node Mesh_399
+21:15:09 | INFO: glTF import finished in 0.16s
+21:15:09 | INFO: Data are loaded, start creating Blender stuff
+21:15:09 | INFO: Blender create Mesh node Mesh_0
+21:15:09 | INFO: Blender create Mesh node Mesh_15
+21:15:09 | INFO: Blender create Mesh node Mesh_18
+21:15:09 | INFO: Blender create Mesh node Mesh_21
+21:15:09 | INFO: Blender create Mesh node Mesh_50
+21:15:09 | INFO: Blender create Mesh node Mesh_54
+21:15:09 | INFO: Blender create Mesh node Mesh_79
+21:15:09 | INFO: Blender create Mesh node Mesh_100
+21:15:09 | INFO: Blender create Mesh node Mesh_103
+21:15:09 | INFO: Blender create Mesh node Mesh_179
+21:15:09 | INFO: Blender create Mesh node Mesh_185
+21:15:09 | INFO: Blender create Mesh node Mesh_186
+21:15:09 | INFO: glTF import finished in 0.11s
+collection TIB 152
+21:15:09 | INFO: Data are loaded, start creating Blender stuff
+21:15:09 | INFO: Blender create Mesh node Mesh_3
+21:15:09 | INFO: glTF import finished in 0.06s
+21:15:09 | INFO: Data are loaded, start creating Blender stuff
+21:15:09 | INFO: Blender create Mesh node Mesh_3
+21:15:09 | INFO: glTF import finished in 0.04s
+21:15:09 | INFO: Data are loaded, start creating Blender stuff
+21:15:09 | INFO: Blender create Mesh node Mesh_0
+21:15:09 | INFO: glTF import finished in 0.04s
+21:15:09 | INFO: Data are loaded, start creating Blender stuff
+21:15:09 | INFO: Blender create Mesh node Mesh_1
+21:15:09 | INFO: glTF import finished in 0.04s
+21:15:09 | INFO: Data are loaded, start creating Blender stuff
+21:15:09 | INFO: Blender create Mesh node Mesh_0
+21:15:09 | INFO: glTF import finished in 0.04s
+21:15:09 | INFO: Data are loaded, start creating Blender stuff
+21:15:09 | INFO: Blender create Mesh node Mesh_2
+21:15:10 | INFO: glTF import finished in 0.05s
+21:15:10 | INFO: Data are loaded, start creating Blender stuff
+21:15:10 | INFO: Blender create Mesh node Mesh_0
+21:15:10 | INFO: glTF import finished in 0.04s
+21:15:10 | INFO: Data are loaded, start creating Blender stuff
+21:15:10 | INFO: Blender create Mesh node Mesh_0
+21:15:10 | INFO: glTF import finished in 0.04s
+C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\assemble_master.py:25: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  w = bpy.data.worlds.new('Himmel'); sc.world = w; w.use_nodes = True
+00:15.484  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\master_kroepcke_nord.png'
+Blender 5.0.1 (hash a3db93c5b259 built 2025-12-16 01:32:30)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2126 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2121 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2148 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2120 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2157 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2153 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2122 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2156 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2128 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2153 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2122 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2129 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2127 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2149 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2124 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2125 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2128 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2153 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2119 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2130 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2123 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2120 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2159 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2152 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2124 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2130 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2121 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2152 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2123 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2124 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2127 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2126 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2123 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2127 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2121 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2129 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2124 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2127 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2121 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2127 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2153 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2151 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2121 / 00:23.313  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\master_kroepcke_sued.png'
+00:24.406  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\master_aerial.png'
+00:25.063  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\master_tib.png'
+collection TIB_Umgebung 8
+Info: Saved as "hannover_master.blend"
+2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2129 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2123 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2151 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2117 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2165 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2127 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2132 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2151 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2132 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2150 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2151 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2122 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2129 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2125 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2127 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2123 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2127 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2165 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2156 / 2048)
+Error: Shadow buffer full, may result in missing shadows and lower performance. (2150 / 2048)
+
+Blender quit

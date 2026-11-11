@@ -1,0 +1,17 @@
+LoD2_32_549_5802_1_ni.gml 986
+LoD2_32_549_5803_1_ni.gml 2242
+LoD2_32_550_5802_1_ni.gml 4883
+LoD2_32_550_5803_1_ni.gml 7155
+parts 7155
+
+real	0m2.500s
+user	0m0.015s
+sys	0m0.015s
+  teilweise im Detailmodell -> geschnitten: ID_a44b2f58-d97b-37d3-9df6-09d85d7b03cd Bahnhofstraße 1
+  teilweise im Detailmodell -> geschnitten: ID_0508a59c-a5d1-3fdd-908a-af5c03c2bb7e An der Börse 5
+Gebaeude 1966 davon im Detailmodell 89 geschnitten 2 Volumen 11169 Strassen 2438 Laeden 933
+18.6 s
+
+real	0m19.135s
+user	0m0.015s
+sys	0m0.000s

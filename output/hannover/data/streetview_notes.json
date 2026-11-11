@@ -1,0 +1,1241 @@
+[
+ {
+  "place": "Kröpcke Nord (zwischen Uhr und Passerellen-Öffnung) – Rundblick",
+  "lat": 52.3745216,
+  "lon": 9.7388664,
+  "game_xz": [
+   0.1,
+   -11.1
+  ],
+  "heading": "0-360",
+  "imagery_date_if_shown": "Aug. 2022",
+  "pano_id": "VcAo0oRX1hHBXqn0K-snkw",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [
+   {
+    "name_on_sign": "H&M",
+    "sign_type": "rotes Logo, Einzelbuchstaben auf Rundecke 3.OG + über EG-Eingang",
+    "colours": "rot #E50010 auf weiß/glas",
+    "position": "NW-Ecke Georgstr. 31-33 / Bahnhofstr."
+   },
+   {
+    "name_on_sign": "Hugendubel",
+    "sign_type": "weiße Einzelbuchstaben vor 1.OG-Fenstern + rote Tafel 'Welt der Bücher'",
+    "colours": "weiß #FFFFFF, rot #C8102E",
+    "position": "Bahnhofstr. 14 (Westseite)"
+   },
+   {
+    "name_on_sign": "Sparkasse",
+    "sign_type": "rote Einzelbuchstaben auf Dachbrüstung + rotes S-Logo",
+    "colours": "rot #FF0000 auf weiß",
+    "position": "Bahnhofstr. 13 (Westseite, nördlich Hugendubel)"
+   },
+   {
+    "name_on_sign": "o2 (Telefónica)",
+    "sign_type": "durchlaufendes tiefblaues Fascia-Band mit weißen Wellen-Grafiken, um die Ecke geführt",
+    "colours": "blau #0019A5 / weiß",
+    "position": "Ecke Bahnhofstr. 1 / Rathenaustr. (Ostseite)"
+   },
+   {
+    "name_on_sign": "EUROPA-HAUS",
+    "sign_type": "erhabene graue Antiqua-Versalien in Fassadenfläche zwischen 3. und 4. OG",
+    "colours": "grau #8A8A8A auf weiß",
+    "position": "Eckhaus Georgstr./Karmarschstr. (SW-Seite des Platzes)"
+   },
+   {
+    "name_on_sign": "STIEBEL ELTRON",
+    "sign_type": "3 Dach-Leuchtschriften (rote Versalien auf weißem Rahmen), je Gebäudeseite eine",
+    "colours": "rot #D2232A / weiß",
+    "position": "Dach Europa-Haus"
+   },
+   {
+    "name_on_sign": "Jack the Ripper's / LONDON • TAVERN",
+    "sign_type": "goldene Schreibschrift auf dunkler Fascia",
+    "colours": "gold #B8902F auf schwarz",
+    "position": "EG Europa-Haus, Ecke Karmarschstr."
+   },
+   {
+    "name_on_sign": "CITY KIOSK",
+    "sign_type": "weiße Versalien auf dunkelrot",
+    "colours": "weiß / #7A1E1E",
+    "position": "EG Europa-Haus"
+   },
+   {
+    "name_on_sign": "BLUE HOUSE / Herrenhäuser",
+    "sign_type": "Dachschrift weiße Versalien + Schreibschrift (Brauerei-Werbung) auf Brüstung",
+    "colours": "weiß auf blau #1E3A8A",
+    "position": "Karmarschstr. 6"
+   }
+  ],
+  "shopfront_details": "Hugendubel: über das ganze EG durchlaufendes, leicht geneigtes Glasvordach in dunklem Stahlrahmen (~2 m tief, Höhe ~4,5 m), darunter rahmenlose Schaufenster mit Bücherwänden, hellgraue Stützen ~0,6 m; hängende Banner unter dem Vordach. o2: rahmenlose Glasfront zwischen weiß gestrichenen Pfeilern (~0,7 m), Fascia ~1,2 m hoch. H&M (Georgstr. 33): EG + 1.OG vollverglast, gerundete Ecke zum Kröpcke, Fascia gebürstetes Metall grau.",
+  "facade_details": "Georgstr. 31-33 (H&M): 5 Geschosse, 3 Obergeschosse mit durchlaufenden Fensterbändern (~18-20 Felder/Geschoss), helle Brüstungsbänder (#E6E6E2), Viertelzylinder-Ecke zum Platz, an der Nahtstelle zur Bahnhofstr. ein über die Traufe ragender vollverglaster Treppenturm (schlanke Pfosten, ~8 Felder hoch). Bahnhofstr. 14: 6 Geschosse + Staffel, ~14 Achsen, hellgrau. Europa-Haus: weiß verputzt (#F2F2EE), 6 Vollgeschosse + zurückgesetztes, vollverglastes Staffelgeschoss, ~8 Achsen zum Platz, 2-flügelige Fenster mit grauen Rahmen; EG-Ecke mit vorspringendem eingeschossigem Glaskubus (dunkle Profile). Kröpcke-Center (SW): heller Kalkstein/Travertin (#D8CDB8), vertikales Pfeilerraster, schmale hohe Fenster, gerundeter verglaster Eckturm mit Eingang.",
+  "ground": "Kröpcke-Platz: großformatige hellgraue Betonplatten (~60x60 cm, #A9A9A6) im Raster, dazwischen dunkelgraue Bänder ~0,5 m (#5E5F60); Gehbereiche entlang der Fassaden mit anthrazitfarbenen Rechteck-Pflastersteinen 20x10 cm im Läuferverband (#4F5052). Kanaldeckel rund (Guss), Schlitzrinnen selten sichtbar.",
+  "furniture": "Kröpcke-Uhr: dunkelgrüne Gusseisen-Säulenuhr (#1F3A2E) mit 4 Zifferblättern (weiß, schwarze Ziffern), Kuppel + Spitze, auf 2-stufigem Sockel. Bambus-Pflanzkübel in Lärchenholz-Kästen ~1,5x1,5x1,0 m mit Stahl-Eckwinkeln. Mülleimer: graue Edelstahl-Zylinder mit Deckel. Schlanke graue Zylindermasten ~6 m (Leuchten). Werbesäulen/Doppel-Displays (weiß). E-Scooter (Voi, rot/orange) überall. Über Georgstr./Kröpcke an Seilen abgehängt: dunkler Metall-Ring/Krone als Kunst-/Deko-Objekt (Stand Aug. 2022, evtl. temporär).",
+  "u_bahn_entrance_details": "",
+  "passerelle_details": "Südende der offenen Passerelle direkt nördlich der Uhr: Trog mit gerundetem Südende; Brüstung aus hellgrauen Betonfertigteilen (~1,0 m hoch, Elemente ~2,5 m lang, #B5B5B0) mit verzinktem Stahlrohrgeländer obenauf (Pfosten ~1,25 m, Handlauf + 2 Knieleisten); Treppe nach unten an der Westseite des Trogs, parallel zur Straße, Edelstahl-Handläufe beidseitig + Glasbrüstung.",
+  "roofs_from_earth": "",
+  "confidence": "high"
+ },
+ {
+  "place": "Café Kröpcke / Mövenpick (Pavillon in Platzmitte) – von Rathenaustraße (Nord) und Georgstraße (SW)",
+  "lat": 52.3744495,
+  "lon": 9.7390278,
+  "game_xz": [
+   11.0,
+   -3.0
+  ],
+  "heading": "120-215",
+  "imagery_date_if_shown": "Aug. 2022",
+  "pano_id": "VoAE3zP7gKVtF5wuH2gJ0A",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [
+   {
+    "name_on_sign": "MÖVENPICK",
+    "sign_type": "weiße Versalien auf rotem Portalrahmen",
+    "colours": "weiß / rot #C8102E",
+    "position": "West-Ende des Pavillons (Georgstr.-Seite)"
+   },
+   {
+    "name_on_sign": "Café Kröpcke",
+    "sign_type": "weiße Schreibschrift auf dunkelgrauer Fascia",
+    "colours": "weiß auf #3A3A3A",
+    "position": "Südwest-Fascia"
+   },
+   {
+    "name_on_sign": "JIM BLOCK",
+    "sign_type": "rotes rundes Logo + weiße Versalien",
+    "colours": "rot #D0021B / weiß",
+    "position": "Südost-Fascia, neben U-Bahn-Schild"
+   },
+   {
+    "name_on_sign": "...Tabak · Lotto...",
+    "sign_type": "Fascia-Schrift mit gelbem Lotto-Logo",
+    "colours": "weiß/gelb auf dunkel",
+    "position": "Südost-Ecke"
+   },
+   {
+    "name_on_sign": "TUI",
+    "sign_type": "rotes TUI-Lächeln-Logo + 'TUI' auf schwarzer Fascia, schwarze Glasfront",
+    "colours": "rot #D40E14 / schwarz",
+    "position": "gegenüber, Rathenaustr. 16 (Nordseite)"
+   },
+   {
+    "name_on_sign": "LOTTO",
+    "sign_type": "rote Versalien auf Dachkante",
+    "colours": "rot",
+    "position": "Gebäude östlich hinter dem Pavillon"
+   }
+  ],
+  "shopfront_details": "Pavillon allseitig verglast, dunkelgrüne/schwarze Stahlprofile (#1E2A26), Sockel 2-3 Stufen über Platzniveau mit Terrasse. Nordfassade (Rathenaustr.): 3 große halbrunde Lünetten-Giebel mit Radialsprossen in sandsteinfarbenen Bogenrahmungen (#C9B48E). Terrasse: dunkelrote Holzstühle/-bänke, cremefarbene Schirme mit roter Paspel, Kugelleuchten (weiße Kugeln auf Mast).",
+  "facade_details": "Dachlandschaft: Gruppe von hellgrün getönten Glas-Tonnengewölben (#8FB3A6, weiße Rippen), mehrere parallel und quer; auf dem Dach ein quadratischer dunkler Stahlrahmen-Aufbau.",
+  "ground": "Kröpcke-Platz: großformatige hellgraue Betonplatten (~60x60 cm, #A9A9A6) im Raster, dazwischen dunkelgraue Bänder ~0,5 m (#5E5F60); Gehbereiche entlang der Fassaden mit anthrazitfarbenen Rechteck-Pflastersteinen 20x10 cm im Läuferverband (#4F5052). Kanaldeckel rund (Guss), Schlitzrinnen selten sichtbar.",
+  "furniture": "Pflanzkübel anthrazit Stahl ~1,2 m hoch mit Holz-Sockelband; Platanen/Linden in quadratischen Baumscheiben mit Fahrradbügeln; Vitrinen-Kiosk (weißer Rahmen, Glas) vor TUI.",
+  "u_bahn_entrance_details": "Eingang D an der SW-/S-Seite des Pavillons: siehe eigener Eintrag.",
+  "passerelle_details": "",
+  "roofs_from_earth": "Google Earth 3D: Café Kröpcke = Cluster aus ca. 8-10 hellgrünen Glastonnen (N-S und O-W orientiert), südlich weiße Markisen/Terrasse; östlich anschließend ein Flachdach dunkelgrau mit ~10 runden weißen Oberlichtern.",
+  "confidence": "high"
+ },
+ {
+  "place": "Kröpcke Süd / Georgstraße 30 (Kröpcke-Center Ostfassade) + U-Bahn-Eingang D",
+  "lat": 52.3739681,
+  "lon": 9.7388757,
+  "game_xz": [
+   0.7,
+   50.5
+  ],
+  "heading": "20-312",
+  "imagery_date_if_shown": "Aug. 2022",
+  "pano_id": "_voRUm7QJAPFAC39emM2zA",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [
+   {
+    "name_on_sign": "Peek&Cloppenburg",
+    "sign_type": "vertikale schwarze Ausleger-Schilder mit weißer Schrift, mehrere entlang der Fassade",
+    "colours": "weiß auf schwarz",
+    "position": "Kröpcke-Center, Georgstr. 30"
+   },
+   {
+    "name_on_sign": "WIR FEIERN DEN SOMMER",
+    "sign_type": "Schaufenster-Plakat",
+    "colours": "weiß/bunt",
+    "position": "Schaufenster P&C"
+   },
+   {
+    "name_on_sign": "Aufzug / Lift / Ascenseur – Passerellenebene",
+    "sign_type": "blaue Emailtafel mit Liniennummern-Quadraten 1 2 8 18 / 3 7 9 13 / 4 5 6 11",
+    "colours": "weiß auf blau #1F3F8F",
+    "position": "Aufzug-Eingang im Kröpcke-Center (Georgstr.)"
+   },
+   {
+    "name_on_sign": "Passerellen / Bahnsteige",
+    "sign_type": "blaue Emailtafel mit Zielen (Sarstedt, Rethen, Messe/Nord ...)",
+    "colours": "weiß auf blau",
+    "position": "daneben"
+   },
+   {
+    "name_on_sign": "U",
+    "sign_type": "blauer Würfel mit weißem U, auskragend an Gebäudeecke",
+    "colours": "blau #1F4FA0 / weiß",
+    "position": "Kröpcke-Center Ostecke"
+   }
+  ],
+  "shopfront_details": "Kröpcke-Center: Schaufenster ~3,5-4 m hoch in tiefen Leibungen der Kalksteinpfeiler; über jedem Fenster auskragendes Glasvordach (~1,5 m tief, Stahlkonsolen, Höhe ~5 m); Schaufensterpuppen in Sommer-Deko. Edelstahl-Aufzugstüren; Service-Doppeltür Edelstahl mit Lüftungslamellen darüber.",
+  "facade_details": "Kröpcke-Center: Kalkstein-/Travertinplatten (~0,6x1,2 m, #D8CDB8), Pfeilerraster, 5 Geschosse + Staffel.",
+  "ground": "Kröpcke-Platz: großformatige hellgraue Betonplatten (~60x60 cm, #A9A9A6) im Raster, dazwischen dunkelgraue Bänder ~0,5 m (#5E5F60); Gehbereiche entlang der Fassaden mit anthrazitfarbenen Rechteck-Pflastersteinen 20x10 cm im Läuferverband (#4F5052). Kanaldeckel rund (Guss), Schlitzrinnen selten sichtbar.",
+  "furniture": "Fahrradbügel (Kreuzberger Bügel, Edelstahl) in Reihe; Leuchtmasten grau mit Kopfleuchte; doppelseitige Werbesäulen.",
+  "u_bahn_entrance_details": "Eingang D (Kröpcke/Georgstraße): offener Treppen-/Rolltreppen-Trog entlang der Süd-/Südwestseite des Café-Kröpcke-Pavillons, O-W orientiert; Einfassung hellgraue Betonbrüstung ~0,9 m mit Edelstahl-Handlauf; Rolltreppen-Balustrade (Edelstahl) sichtbar; blaues U-Quadratschild (weißes U) auf schlankem grauen Mast an der SO-Ecke. Treppenbreite/Stufenzahl aus Street View nicht ablesbar.",
+  "passerelle_details": "",
+  "roofs_from_earth": "Google Earth 3D: Kröpcke-Center hat großes extensives Gründach (Sedum, olivbraun #6E6A45) mit zwei Lichthöfen (dreieckig + rechteckig) und weißer Attika; Grundriss trapez-/dreieckförmig.",
+  "confidence": "high",
+  "onsite_todo": "Eingang D: Stufenzahl, Treppenbreite, Rolltreppe ja/nein, Lage der Rolltreppe (links/rechts), Brüstungsmaterial vor Ort fotografieren."
+ },
+ {
+  "place": "Kröpcke-Station B-Ebene / Passerellen-Ebene unter dem Kröpcke (INNEN)",
+  "lat": 52.3739918,
+  "lon": 9.7386931,
+  "game_xz": [
+   -11.7,
+   47.8
+  ],
+  "heading": "27/220/320",
+  "imagery_date_if_shown": "Okt. 2025",
+  "pano_id": "CIABIhC9kQKHSjaZ254m5sUfqCDH",
+  "source": "Google Maps Nutzer-360°-Foto ('Stephan')",
+  "shops_visible": [
+   {
+    "name_on_sign": "Ernst-August-Apotheke",
+    "sign_type": "rote Schreibschrift auf weißer Fascia + grünes Apothekenkreuz",
+    "colours": "rot #C8102E / weiß / grün",
+    "position": "Ladenzeile B-Ebene, Niki-de-Saint-Phalle-Promenade 2b"
+   }
+  ],
+  "shopfront_details": "Läden mit rahmenlosen Glasfronten, schmale Edelstahlprofile; Werbe-Stelen (Infoscreen 'STRÖER') an den Stützen.",
+  "facade_details": "Ovale Stützen ~1,5x1,0 m, verkleidet mit grünem Glasmosaik (gemischte Grüntöne #3E7A3A-#7DB36A), mit vertikaler elliptischer Leuchte (weiß) eingelassen; Decke weiß verputzt mit dunkelgrauen Linear-Lamellenfeldern (#3A3A3A), eingelassene Leuchtstoffröhren; gelb leuchtende Lichtvoute (#F2C230); dunkelblaues Leitsystem-Band (#1C2E6E) mit weißer Schrift und farbigen Liniennummern; Notausgang-Schilder grün.",
+  "ground": "Boden: sand-/beigefarbene Keramikfliesen ~40x40 cm orthogonal verlegt (#D9C4A6), helle Fugen.",
+  "furniture": "Werbe-Infoscreens an Stützen; Edelstahl-Geländer an Treppen-/Rolltreppenöffnungen.",
+  "u_bahn_entrance_details": "",
+  "passerelle_details": "Ebene -1 unter dem Kröpcke = Verteilerebene + Ladenpassage, nahtlos verbunden mit der Niki-de-Saint-Phalle-Promenade.",
+  "roofs_from_earth": "",
+  "confidence": "medium",
+  "onsite_todo": "Komplette B-Ebene (Kröpcke) inkl. Treppenköpfe zu allen Ausgängen A-I und Aufzüge Kr.79B/80A/80B von innen fotografieren (Decke, Boden, Stützen, Beschilderung)."
+ },
+ {
+  "place": "U-Bahn Eingang A (Kröpcke/Karmarschstraße) + Aufzug Kr.80A + Lüftungs-Werbesäule",
+  "lat": 52.3740447,
+  "lon": 9.7382739,
+  "game_xz": [
+   -40.2,
+   42.0
+  ],
+  "heading": "215/260/290",
+  "imagery_date_if_shown": "Aug. 2022",
+  "pano_id": "EmjSfLzIfdpeHIrRAORJNg",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [
+   {
+    "name_on_sign": "zero",
+    "sign_type": "weiße Kleinbuchstaben auf schwarzem Band",
+    "colours": "weiß/schwarz",
+    "position": "Karmarschstr. 6 (Westseite)"
+   },
+   {
+    "name_on_sign": "BLUE HOUSE",
+    "sign_type": "weiße Versalien auf blauem Kastenschild",
+    "colours": "weiß / blau #1E3A8A",
+    "position": "Karmarschstr. 6 (Westseite)"
+   },
+   {
+    "name_on_sign": "Kröpcke",
+    "sign_type": "weiße Schrift auf dunkelblauem Band am Aufzugkopf",
+    "colours": "weiß / #1C2E6E",
+    "position": "Glasaufzug Kr.80A"
+   }
+  ],
+  "shopfront_details": "Westseite Karmarschstr. 6: hellgraue Steinfassade, 5 Geschosse, Glasvordach über EG.",
+  "facade_details": "",
+  "ground": "Gehweg: graue Rechteckpflaster 20x10 im Läuferverband; um den Trog hellere Platten.",
+  "furniture": "Aufzug Kr.80A: freistehender Glasaufzugsturm ~2,0x2,0 m Grundfläche, ~3,2 m hoch, Edelstahlrahmen + Klarglas, Edelstahl-Schiebetüren nach Osten, auskragendes Flachdach aus Glas mit dunklem Rahmen, Schriftband 'Kröpcke'; davor Stahl-Gitterrost-Matte. Daneben runde Werbesäule ~1,8 m Ø, ~3,5 m hoch mit gerippter/lamellierter Metall-Krone = Lüftungsschacht (vermutlich OSM vent (-44,37)). Holz-Pflanzkübel mit Stahlrahmen; Poller Edelstahl.",
+  "u_bahn_entrance_details": "Eingang A: langer offener Trog parallel zur Karmarschstraße, abwärts nach SW; Breite ~4,5 m (Treppe ~2,5-3 m links + Rolltreppe ~1,2 m rechts), Länge ~15 m; Brüstung aus poliertem grauem Granit (gesprenkelt, #7D7D7D) ~1,0-1,1 m hoch, Deckplatte ~0,35 m; obenauf Edelstahl-Rohrhandlauf auf Pfosten (~1,5 m Abstand, Handlauf + Knieleiste); Rolltreppen-Balustrade schwarz/Edelstahl; blaues U-Schild (Quadrat, weißes U) auf dunklem Mast am Trogkopf.",
+  "passerelle_details": "",
+  "roofs_from_earth": "",
+  "confidence": "high",
+  "onsite_todo": "Eingang A: Stufenzahl, Podeste, Deckenhöhe am Fuß der Treppe, Wandverkleidung im Trog."
+ },
+ {
+  "place": "U-Bahn Eingänge B und C (Georgstraße vor H&M / JD Sports)",
+  "lat": 52.3745761,
+  "lon": 9.738136,
+  "game_xz": [
+   -49.6,
+   -17.1
+  ],
+  "heading": "200/345",
+  "imagery_date_if_shown": "Aug. 2022",
+  "pano_id": "DVPkjIijVC5-vByCosdhGg",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [
+   {
+    "name_on_sign": "JDSPORTS.DE + JD",
+    "sign_type": "weiße Versalien + JD-Logo auf dunkelgrauer Fascia",
+    "colours": "weiß / #333333",
+    "position": "Georgstr. 24 (Südseite)"
+   },
+   {
+    "name_on_sign": "PANDÓRA",
+    "sign_type": "schwarze Versalien mit Krone auf weißer Fascia",
+    "colours": "schwarz / weiß",
+    "position": "Georgstr. 24 (Südseite, östlich JD)"
+   },
+   {
+    "name_on_sign": "CALZEDONIA",
+    "sign_type": "schwarze Versalien auf hellem Steinband",
+    "colours": "schwarz",
+    "position": "Georgstr. 33 EG West (Nordseite)"
+   },
+   {
+    "name_on_sign": "H&M / Sale",
+    "sign_type": "rote Logos, rote 'Sale'-Plakate im 1.OG",
+    "colours": "rot",
+    "position": "Georgstr. 31-33"
+   },
+   {
+    "name_on_sign": "Giovanni L.",
+    "sign_type": "goldene Schreibschrift",
+    "colours": "gold auf dunkel",
+    "position": "Georgstr. 22/24 westlich JD"
+   }
+  ],
+  "shopfront_details": "",
+  "facade_details": "Georgstr. 24: historische Sandsteinfassade (#CDBB9A), 5 Geschosse, Neorenaissance/Jugendstil, Steinbalustraden-Balkone, Pilaster; EG modern grauer Naturstein mit hohen Schaufenstern.",
+  "ground": "Georgstraße: graue Rechteckpflaster 20x10 in breiter Fläche, Rinnen-Streifen mit dunklerem Pflaster.",
+  "furniture": "Leuchtmasten grau; City-Light-Werbevitrinen (rot hinterleuchtet) direkt neben den U-Schildern.",
+  "u_bahn_entrance_details": "Eingang C (vor Georgstr. 31/33, Nordseite) und Eingang B (vor JD Sports/Pandora, Südseite): je offener Treppentrog parallel zur Straße (O-W), ~12 m lang, ~3 m breit, niedrige Brüstung aus hellgrauem Granit ~0,9 m; Edelstahl-Rohrhandläufe mit gebogenen Bügel-Enden (bogenförmig über die Treppe geführt); am Trogkopf blauer Würfel-Schild 'U' auf Mast + City-Light-Vitrine; bei C zusätzlich Werbesäule.",
+  "passerelle_details": "",
+  "roofs_from_earth": "",
+  "confidence": "high",
+  "onsite_todo": "B/C: Treppenbreite und Stufenanzahl, Material der Stufen (Granit?), Rolltreppe vorhanden? (aus SV keine Rolltreppe erkennbar)."
+ },
+ {
+  "place": "U-Bahn Eingang I (Kröpcke/Karmarschstraße Süd) + Karmarschstraße 19-23",
+  "lat": 52.3734282,
+  "lon": 9.7380144,
+  "game_xz": [
+   -57.8,
+   110.5
+  ],
+  "heading": "120/200/245/300",
+  "imagery_date_if_shown": "Aug. 2022",
+  "pano_id": "od33uYse2OhBCozcHw9tVA",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [
+   {
+    "name_on_sign": "HERRENMODEN",
+    "sign_type": "goldene Einzelbuchstaben auf Kalkstein + quadratischer schwarzer Ausleger mit goldenem Emblem",
+    "colours": "gold #B8964A / schwarz",
+    "position": "Kröpcke-Center, Karmarschstr. 23 (Ostseite)"
+   },
+   {
+    "name_on_sign": "Läderach (vermutet, '…ach' in Goldschrift)",
+    "sign_type": "goldene Schreibschrift",
+    "colours": "gold auf dunkel",
+    "position": "Kröpcke-Center Karmarschstr. 23"
+   },
+   {
+    "name_on_sign": "MARC O'POLO",
+    "sign_type": "weiße Schrift auf dunklem vertikalem Schild",
+    "colours": "weiß/schwarz",
+    "position": "Westseite gegenüber"
+   },
+   {
+    "name_on_sign": "Zalando (Outlet)",
+    "sign_type": "oranges Rechteckschild",
+    "colours": "orange #FF6900 / weiß",
+    "position": "Westseite, Karmarschstr. ~10-14"
+   },
+   {
+    "name_on_sign": "ONLY",
+    "sign_type": "weiße Versalien auf schwarzem vertikalem Schild",
+    "colours": "weiß/schwarz",
+    "position": "Westseite"
+   },
+   {
+    "name_on_sign": "NEW… (rotes vertikales Schild)",
+    "sign_type": "rotes Ausleger-/Vertikalschild",
+    "colours": "rot/weiß",
+    "position": "Westseite, weiter nördlich"
+   }
+  ],
+  "shopfront_details": "Kröpcke-Center: Schaufenster ~3,5 m in Travertin-Pfeilern; Deko 'CLEAN & GREEN' mit Tchibo-Kaffeesack.",
+  "facade_details": "Westseite Karmarschstr.: 6-geschossiger Bürobau, grau-beige Steinplatten, je Achse 2 Rechteckfenster dunkel gerahmt, Achsbreite ~4 m; nördlich anschließend dunkler Stahl-/Glasbau (6 G.) und weiße Bauten.",
+  "ground": "Karmarschstraße: hellgraue Betonplatten ~30x60 im Reihenverband, Mittelzone Lieferverkehr.",
+  "furniture": "Außengastronomie (schwarze Bistrotische/Stühle), Holzbänke vor Baumkübeln (Holzkästen mit Stahlrahmen).",
+  "u_bahn_entrance_details": "Eingang I: offener Treppentrog parallel zur Karmarschstraße (abwärts nach SW), Breite ~3,5 m; Granitbrüstung ~0,9 m + Edelstahl-Rohrgeländer; freistehender Doppel-'U'-Würfel (zwei Seiten, blau #1F4FA0 mit weißem U) auf dunkelgrauem Mast ~3,2 m.",
+  "passerelle_details": "",
+  "roofs_from_earth": "",
+  "confidence": "high"
+ },
+ {
+  "place": "Platz der Weltausstellung / Blätterbrunnen (Nähe Eingänge G/H)",
+  "lat": 52.373223,
+  "lon": 9.7380885,
+  "game_xz": [
+   -52.8,
+   133.3
+  ],
+  "heading": "150/200/230",
+  "imagery_date_if_shown": "Aug. 2022",
+  "pano_id": "oMJSIWEAp55fccTMJR0FIQ",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [
+   {
+    "name_on_sign": "IMMOBILIEN AM KRÖPCKE",
+    "sign_type": "weiße Versalien auf Ziegelfassade über EG",
+    "colours": "weiß auf rotbraunem Ziegel #8A4A3A",
+    "position": "Ständehausstr. 1 (Südseite)"
+   }
+  ],
+  "shopfront_details": "",
+  "facade_details": "Ständehausstr. 1: rotbrauner Ziegelbau 6 Geschosse, weiße Fenster; östlich weißer Eckbau mit Rundbogenfenstern; westlich Gebäude mit blauen vertikalen Lisenen (#2B3F8F) und weißen Paneelen.",
+  "ground": "Hellgraue Betonplatten, Pflaster im Fischgrät in Randbereichen.",
+  "furniture": "Blätterbrunnen: flaches Bronzeobjekt aus großen grün patinierten Blättern (#5E7A5A) ~6x4 m, umringt von ~8 Holzbänken (Lattenbänke mit Stahlwangen).",
+  "u_bahn_entrance_details": "Eingänge G (-64,162) und H (-78,159) im Street View 2022 nicht eindeutig erkennbar (durch LKW verdeckt).",
+  "passerelle_details": "",
+  "roofs_from_earth": "",
+  "confidence": "low",
+  "onsite_todo": "Eingänge G und H am Platz der Weltausstellung: Lage, Form (Trog/Treppe/Rolltreppe), Brüstung, Schild – komplett vor Ort aufnehmen."
+ },
+ {
+  "place": "Bahnhofstraße Ost, Höhe Nr. 1-2 (Telekom, Löwen-Apotheke)",
+  "lat": 52.3747794,
+  "lon": 9.7389965,
+  "game_xz": [
+   8.9,
+   -39.7
+  ],
+  "heading": "115/250/300",
+  "imagery_date_if_shown": "Aug. 2022",
+  "pano_id": "0W8kpD-bD_7-BmUbySPoZQ",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [
+   {
+    "name_on_sign": "Telekom",
+    "sign_type": "magenta T-Logo + Fascia hell; magenta vertikaler Streifen",
+    "colours": "magenta #E20074 / weiß",
+    "position": "Ostseite, Bahnhofstr. 1/2"
+   },
+   {
+    "name_on_sign": "LÖWEN-APOTHEKE",
+    "sign_type": "graublaue Antiqua-Versalien auf langer weißer Fascia (~10 m) + rotes Apotheken-A; klein 'KOSMETIK-STUDIO' darüber",
+    "colours": "#4A5A6A auf weiß, rot #E30613",
+    "position": "Ostseite, Bahnhofstr. 2"
+   },
+   {
+    "name_on_sign": "TRADITIONELL · HANDGEMACHT · NATÜRLICH (Back Geschwister)",
+    "sign_type": "Schriftband + rotes rundes Logo",
+    "colours": "rot/weiß",
+    "position": "Ostseite, nördlich Apotheke"
+   }
+  ],
+  "shopfront_details": "Apotheke: EG graue Steinpfeiler, Glasfront mit mittiger Rundstütze, Eingang mittig.",
+  "facade_details": "Bahnhofstr. 2: beige verputzt, 1.OG durchlaufender Balkon mit Stahlgeländer, Reliefplatte (Vogelmotiv) über EG.",
+  "ground": "Ostgehweg: anthrazitfarbene Rechteckpflaster ~3 m breiter Streifen an den Fassaden, sonst hellgrau 20x10 Läuferverband.",
+  "furniture": "",
+  "u_bahn_entrance_details": "",
+  "passerelle_details": "Trog-Südende rund; Treppe abwärts an der Westseite parallel zur Straße mit Edelstahlhandläufen + Glasbrüstung; Brüstung Betonfertigteile ~1,0 m mit Stahlrohrgeländer.",
+  "roofs_from_earth": "",
+  "confidence": "high"
+ },
+ {
+  "place": "Bahnhofstraße Mitte, Höhe Nr. 4-5 / 12-13 (Apple, Five Guys, Sparkasse, Foot Locker)",
+  "lat": 52.3750026,
+  "lon": 9.7392812,
+  "game_xz": [
+   28.3,
+   -64.6
+  ],
+  "heading": "120/295/300",
+  "imagery_date_if_shown": "Aug. 2022",
+  "pano_id": "gkBm_0Wq4SGzBXBnsu0yjw",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [
+   {
+    "name_on_sign": "Apple (Logo)",
+    "sign_type": "kleine weiße Apfel-Logo-Plakette am Stein",
+    "colours": "weiß auf dunkelgrau",
+    "position": "Ostseite, Bahnhofstr. 5"
+   },
+   {
+    "name_on_sign": "FIVE GUYS",
+    "sign_type": "weiße Versalien auf anthrazit Fascia, innen rot-weißes Karo",
+    "colours": "weiß / #2B2B2B, rot #D7192D",
+    "position": "Ostseite, Bahnhofstr. 4"
+   },
+   {
+    "name_on_sign": "Sparkasse",
+    "sign_type": "rote Fascia-Buchstaben + rotes S auf Ausleger-Würfel",
+    "colours": "rot #FF0000 / weiß",
+    "position": "Westseite, Bahnhofstr. 13"
+   },
+   {
+    "name_on_sign": "Foot Locker",
+    "sign_type": "weiße Schrift auf schwarzer Glas-Fascia + Schiedsrichter-Streifenlogo",
+    "colours": "weiß/schwarz",
+    "position": "Westseite, Bahnhofstr. 12/13"
+   }
+  ],
+  "shopfront_details": "Apple: dunkelgrauer glatter Granit (#3F4245), EG tief zurückgesetzte Glastüren; Five Guys: rote Schirme. Foot Locker: Rautengitter-Rollladen (Edelstahl).",
+  "facade_details": "Bahnhofstr. 5: dunkelgrauer Naturstein, Steinfensterrahmungen, Gesimsband; Westseite: weiße 5-6-geschossige Bauten mit 7 Achsen.",
+  "ground": "",
+  "furniture": "",
+  "u_bahn_entrance_details": "",
+  "passerelle_details": "Brüstung Westseite des Trogs: Betonelemente ~2,5 m, ~0,9 m hoch, Stahlrohrgeländer (3 waagerechte Rohre).",
+  "roofs_from_earth": "",
+  "confidence": "high"
+ },
+ {
+  "place": "Bahnhofstraße Nord, Höhe Nr. 6-8 (New Yorker, freenet, Mango, Galeria)",
+  "lat": 52.3752114,
+  "lon": 9.7395521,
+  "game_xz": [
+   46.7,
+   -87.8
+  ],
+  "heading": "125/300",
+  "imagery_date_if_shown": "Aug. 2022",
+  "pano_id": "BQ1gGYOM0jDU9uETuMxElA",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [
+   {
+    "name_on_sign": "NEW YORKER",
+    "sign_type": "rote 3D-Einzelbuchstaben ~1 m hoch auf dunkelgrauem Granit",
+    "colours": "rot #E2001A",
+    "position": "Ostseite, Bahnhofstr. 6/7"
+   },
+   {
+    "name_on_sign": "SUPER SALE / FINAL SALE",
+    "sign_type": "Schaufensterplakate",
+    "colours": "gelb/schwarz",
+    "position": "New Yorker Schaufenster"
+   },
+   {
+    "name_on_sign": "freenet",
+    "sign_type": "weiße Schrift + grünes Logo auf schwarzer Fascia",
+    "colours": "weiß / grün #7AB800 / schwarz",
+    "position": "Ostseite, neben New Yorker"
+   },
+   {
+    "name_on_sign": "MANGO",
+    "sign_type": "weiße Versalien auf schwarzem Band",
+    "colours": "weiß/schwarz",
+    "position": "Ostseite, Bahnhofstr. 8"
+   },
+   {
+    "name_on_sign": "GALERIA (Kaufhof)",
+    "sign_type": "große grüne Versalien 'GALERIA' + kleiner 'KAUFHOF' auf gekrümmter Metallfassade; am N-Ende rundes weißes GALERIA-Logo",
+    "colours": "grün #6CB33F / weiß",
+    "position": "Westseite / Ernst-August-Platz"
+   }
+  ],
+  "shopfront_details": "Galeria-EG Aug. 2022 teilweise mit OSB-Platten verschlossen. Mango: Glas-Vorhangfassade mit dunkelgrauen Pfosten, beige Kalksteinpfeiler, Hausnummer '8'.",
+  "facade_details": "Galeria: horizontale hellgraue Metallpaneelbänder + Fensterbänder, 4-5 Geschosse; Nordfassade zum Ernst-August-Platz mit bronze-/kupferfarbenen vertikalen Metalllamellen.",
+  "ground": "",
+  "furniture": "",
+  "u_bahn_entrance_details": "",
+  "passerelle_details": "Nordende des Trogs vor Ernst-August-Platz mit Treppe/Rampe abwärts (Edelstahlhandläufe).",
+  "roofs_from_earth": "",
+  "confidence": "high",
+  "onsite_todo": "Status Galeria-Gebäude (Schließung/Umnutzung nach 2022?) und aktuelle Beschriftung vor Ort prüfen."
+ },
+ {
+  "place": "Bahnhofstraße Westgehweg (Hugendubel/Sparkasse/Curry)",
+  "lat": 52.3751962,
+  "lon": 9.7391405,
+  "game_xz": [
+   18.7,
+   -86.1
+  ],
+  "heading": "30/110/212/295",
+  "imagery_date_if_shown": "Aug. 2022",
+  "pano_id": "chbUZnwEZZ0fM2Ilor_9Tw",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [
+   {
+    "name_on_sign": "Curry … Sparmenü",
+    "sign_type": "goldenes Kreis-Logo auf dunkelgrauer Fascia + Menütafeln",
+    "colours": "gold/dunkelgrau",
+    "position": "Westseite, Bahnhofstr. 12 (EG Galeria-Bau)"
+   },
+   {
+    "name_on_sign": "Hugendubel – Die Welt der Bücher",
+    "sign_type": "vertikales Fahnen-Schild rot/weiß",
+    "colours": "rot #C8102E / weiß",
+    "position": "Bahnhofstr. 14"
+   },
+   {
+    "name_on_sign": "Sparkasse / Immobilien",
+    "sign_type": "roter S-Würfel als Ausleger + rote Streifen in Verglasung",
+    "colours": "rot / weiß",
+    "position": "Bahnhofstr. 13"
+   }
+  ],
+  "shopfront_details": "Hugendubel: geschwungenes Glasvordach mit dunklem Stahltragwerk; Galeria-Nebeneingänge: dunkle Holz-/Metalltüren unter Vordach.",
+  "facade_details": "",
+  "ground": "Westgehweg: dunkelgraue Rechteckpflaster; Baumscheiben mit quadratischen Gussgittern (~1,5x1,5 m, Rundloch-Muster) + Stabschutzkörbe.",
+  "furniture": "Doppelbänke Rücken an Rücken (Holzlatten auf verzinktem Stahl), schlanke graue Leuchtmasten, Fahrradbügel, junge Linden.",
+  "u_bahn_entrance_details": "",
+  "passerelle_details": "",
+  "roofs_from_earth": "",
+  "confidence": "high",
+  "other_panos_west_side": [
+   "O92jeuSDo83rCkn0DetA0g",
+   "c43dFwstC1Bf5N200bJg4g",
+   "uIMtnawVZxuI3P46qhIaTg",
+   "KQNulOfB6jMO5VEb_y3HyQ"
+  ]
+ },
+ {
+  "place": "Passerelle (Niki-de-Saint-Phalle-Promenade) – offener Trog Bahnhofstraße aus Google Earth 3D",
+  "lat": 52.3751,
+  "lon": 9.7393,
+  "game_xz": [
+   29.5,
+   -75.4
+  ],
+  "heading": "200 (Kamera Richtung SSW)",
+  "imagery_date_if_shown": "Google Earth 3D (Datum nicht angezeigt)",
+  "pano_id": null,
+  "source": "Google Earth Web 3D",
+  "shops_visible": [],
+  "shopfront_details": "",
+  "facade_details": "",
+  "ground": "",
+  "furniture": "",
+  "u_bahn_entrance_details": "",
+  "passerelle_details": "Offener Trog über die ganze Bahnhofstraße vom Kröpcke bis Ernst-August-Platz, Breite ca. 8-10 m, Boden tief verschattet; Südende rund mit Treppe an der Westseite; am Nordende Treppe/Rampe; im Mittelteil scheint eine dunkle Überdeckung/Querung zu liegen (nicht sicher).",
+  "roofs_from_earth": "Ostseite Bahnhofstr.: Altbauten mit dunklen Schiefer-Mansarddächern (#3C3F44); Westseite: Galeria mit großem hellgrauem Flachdach + Technik; Bahnhofstr. 1/2: Flachdächer grau mit HVAC-Aufbauten.",
+  "confidence": "medium",
+  "onsite_todo": "Passerelle: Querbrücken/Überdeckungen über dem Trog (Anzahl, Breite, Geländer), Treppen am Süd- und Nordende (Stufenzahl, Breite), Innenwände/Decke/Boden im Trog, Ladenfronten unten – vor Ort fotografieren (Street View zeigt nur die Brüstung von oben)."
+ },
+ {
+  "place": "Georgstraße, Kreuzung Große Packhofstraße",
+  "lat": 52.3746017,
+  "lon": 9.737631,
+  "game_xz": [
+   -83.9,
+   -20.0
+  ],
+  "heading": "20/200",
+  "imagery_date_if_shown": "Aug. 2022",
+  "pano_id": "avmhmX4O-Qs5LPnCsB7QDQ",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [
+   {
+    "name_on_sign": "Dr. Martens",
+    "sign_type": "gelbe Schreibschrift auf schwarzer Fascia in Bronze-/Messingrahmen",
+    "colours": "gelb #F2C200 / schwarz",
+    "position": "SW-Ecke Georgstr./Gr. Packhofstr."
+   }
+  ],
+  "shopfront_details": "",
+  "facade_details": "NW-Ecke: rotbrauner Ziegel-Bürobau (#8A4B3A), 5 Geschosse, weiße Fenster (Aug. 2022 eingerüstet). SW-Ecke: weiß/creme verputzter Bau mit gerundeter Ecke und gebogener Glas-Eckeingangstür.",
+  "ground": "Georgstr.: graue Pflasterfläche; Gr. Packhofstr.: hellgraue Platten.",
+  "furniture": "",
+  "u_bahn_entrance_details": "",
+  "passerelle_details": "",
+  "roofs_from_earth": "",
+  "confidence": "high"
+ },
+ {
+  "place": "Große Packhofstraße (Höhe Nr. 30)",
+  "lat": 52.3743245,
+  "lon": 9.737551,
+  "game_xz": [
+   -89.3,
+   10.9
+  ],
+  "heading": "185",
+  "imagery_date_if_shown": "Aug. 2022",
+  "pano_id": "Jt53Rvg1PQlXEwBYJe3t6A",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [
+   {
+    "name_on_sign": "hunkemöller",
+    "sign_type": "weiße Kleinbuchstaben auf schwarzer Fascia",
+    "colours": "weiß/schwarz",
+    "position": "Ostseite"
+   },
+   {
+    "name_on_sign": "LUSH",
+    "sign_type": "weiße Versalien auf schwarz",
+    "colours": "weiß/schwarz",
+    "position": "Ostseite, weiter südlich"
+   },
+   {
+    "name_on_sign": "WORMLAND",
+    "sign_type": "vertikales Ausleger-Schild weiß auf dunkelgrau",
+    "colours": "weiß / #333333",
+    "position": "Ostseite"
+   },
+   {
+    "name_on_sign": "SportScheck",
+    "sign_type": "vertikales Banner weiß auf dunkelblau",
+    "colours": "weiß / #1B2A55",
+    "position": "Westseite, moderner Glas-/Steinbau"
+   }
+  ],
+  "shopfront_details": "",
+  "facade_details": "Ostseite: weiß verputzte 4-5-geschossige Bauten mit hohen EG-Schaufenstern und dunkelgrauen Fascia-Kästen; Westseite moderner Glasbau mit Steinbändern.",
+  "ground": "Hellgraue Betonpflaster mit dunkleren Einlagestreifen.",
+  "furniture": "",
+  "u_bahn_entrance_details": "",
+  "passerelle_details": "",
+  "roofs_from_earth": "",
+  "confidence": "high"
+ },
+ {
+  "place": "Georgstraße Süd, Höhe Nr. 22-23 (Sidestep, Douglas)",
+  "lat": 52.3747593,
+  "lon": 9.7369084,
+  "game_xz": [
+   -133.0,
+   -37.5
+  ],
+  "heading": "25/205",
+  "imagery_date_if_shown": "Aug. 2022",
+  "pano_id": "wG5yh1yoYiBz4ONcgAXdwA",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [
+   {
+    "name_on_sign": "SIDESTEP",
+    "sign_type": "weiße Versalien auf schwarzer Fascia",
+    "colours": "weiß/schwarz",
+    "position": "Südseite"
+   },
+   {
+    "name_on_sign": "DOUGLAS Hair Design",
+    "sign_type": "weiße Schrift auf schwarz",
+    "colours": "weiß/schwarz",
+    "position": "Südseite"
+   },
+   {
+    "name_on_sign": "DOUGLAS",
+    "sign_type": "mint-/türkisgrüne Versalien auf schwarz",
+    "colours": "#6FD3C0 / schwarz",
+    "position": "Südseite"
+   }
+  ],
+  "shopfront_details": "Abgehängtes Glasvordach mit diagonalen Stahl-Zugstangen über den Schaufenstern; Douglas-Schaufenster 'SUMMER OF BEAUTY'.",
+  "facade_details": "Nordseite: blaugläserne Vorhangfassade (6+ G.), EG-Kolonnade mit grauen Rundstützen.",
+  "ground": "",
+  "furniture": "Holzbänke auf Betonsockel, Fahrradbügel, digitale schwarze Info-Stelen ~2,5 m.",
+  "u_bahn_entrance_details": "",
+  "passerelle_details": "",
+  "roofs_from_earth": "",
+  "confidence": "high"
+ },
+ {
+  "place": "Georgstraße Höhe Nr. 14-16 (Mana Bowls, Vagant, Vaund)",
+  "lat": 52.3748429,
+  "lon": 9.7364974,
+  "game_xz": [
+   -160.9,
+   -46.8
+  ],
+  "heading": "25/205",
+  "imagery_date_if_shown": "Aug. 2022",
+  "pano_id": "Uow4fIQ-aVnBCo2XAmlElQ",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [
+   {
+    "name_on_sign": "MANA BOWLS",
+    "sign_type": "weiße Versalien + Schalen-Icon auf türkiser Fascia",
+    "colours": "weiß / #1FA3A6",
+    "position": "Südseite, Georgstr. 16"
+   },
+   {
+    "name_on_sign": "VAGANT – Dress, Suits…",
+    "sign_type": "weiße Antiqua-Versalien auf dunkelblauem Band im 1.OG",
+    "colours": "weiß / #1E2A4A",
+    "position": "Südseite, Georgstr. 16"
+   },
+   {
+    "name_on_sign": "VAUND",
+    "sign_type": "dunkelgraue Versalien auf hellgrauem Paneel",
+    "colours": "#3A3A3A / #DADADA",
+    "position": "Südseite, Georgstr. 14 (E-Bike-Store)"
+   },
+   {
+    "name_on_sign": "Testzentrum / KOSTENLOS",
+    "sign_type": "Schaufensterfolien magenta/blau",
+    "colours": "magenta/blau",
+    "position": "Mana Bowls (Aug. 2022)"
+   }
+  ],
+  "shopfront_details": "Vaund: 2-geschossige Glasfront zwischen poliertem grauem Granit (#6E6E70); Mana Bowls: schwarze Rahmen.",
+  "facade_details": "Nordseite: großer Glas-Vorhangfassadenbau mit gerundetem Glas-Eckturm, EG Pilotis-Kolonnade (graue Rundstützen ~0,6 m).",
+  "ground": "",
+  "furniture": "Bänke weiß/hell (Holzlatten auf dunklem Stahl), Doppel-Kugelleuchten (grauer Mast, 2 weiße Kugeln), schwarze digitale Stelen, Platanen-/Lindenreihe mit Bügeln.",
+  "u_bahn_entrance_details": "",
+  "passerelle_details": "",
+  "roofs_from_earth": "",
+  "confidence": "high"
+ },
+ {
+  "place": "Georgstraße / Schillerdenkmal (Höhe Nr. 10)",
+  "lat": 52.3752131,
+  "lon": 9.7356532,
+  "game_xz": [
+   -218.3,
+   -88.0
+  ],
+  "heading": "30/210",
+  "imagery_date_if_shown": "Aug. 2022",
+  "pano_id": "YyJq3yP2MOv7-ksQiVRaGA",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [
+   {
+    "name_on_sign": "C&A",
+    "sign_type": "Logo auf grauer Fassade",
+    "colours": "blau/rot/weiß",
+    "position": "Nordseite"
+   },
+   {
+    "name_on_sign": "Snipes",
+    "sign_type": "weiße Schrift auf schwarz",
+    "colours": "weiß/schwarz",
+    "position": "Südseite, links des neugotischen Baus"
+   }
+  ],
+  "shopfront_details": "",
+  "facade_details": "Südseite: neugotischer Sandsteinbau (#D6C7A6) mit zwei Staffelgiebeln + Fialen, reiches Spitzbogenportal (~4 m) mit Skulpturennische; rechts moderner 6-geschossiger Glas-/Bandbau. Nordseite: C&A grauer Stein-/Metallbau mit Fensterbändern.",
+  "ground": "Rotes Klinkerband (#9C4A3A) + graue Betonplatten.",
+  "furniture": "Bronzestatue Schiller auf hohem Granitsockel (~4 m) bei (-230,-82); braune Fußgänger-Wegweiser; Platanenallee nach Westen; Laternen mit Kugelkopf.",
+  "u_bahn_entrance_details": "",
+  "passerelle_details": "",
+  "roofs_from_earth": "",
+  "confidence": "high"
+ },
+ {
+  "place": "Georgstraße West, Höhe Nr. 4 (Steintor-nah)",
+  "lat": 52.3754431,
+  "lon": 9.7340161,
+  "game_xz": [
+   -329.5,
+   -113.5
+  ],
+  "heading": "25/205",
+  "imagery_date_if_shown": "Nov. 2022",
+  "pano_id": "FJxMstO9ZUomNfnEJ7gTfg",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [
+   {
+    "name_on_sign": "LOXO",
+    "sign_type": "rot-weißes Fascia-Band",
+    "colours": "rot #C8102E / weiß",
+    "position": "Südseite, Georgstr. 4"
+   },
+   {
+    "name_on_sign": "SL (?) Pylon",
+    "sign_type": "hoher schwarzer Pylon mit weißem Logo",
+    "colours": "weiß/schwarz",
+    "position": "Nordseite (Logo nicht sicher lesbar)"
+   }
+  ],
+  "shopfront_details": "",
+  "facade_details": "Nordseite: weißer 50er-Jahre-Bürobau, 6 Geschosse, ~25 Achsen, EG Läden; Südseite: beige Natursteinfassade 50er Jahre, 5 Geschosse.",
+  "ground": "",
+  "furniture": "Weihnachtsbeleuchtung (Kugelketten) in Bäumen (Nov.), Bänke, Fahrradbügel.",
+  "u_bahn_entrance_details": "",
+  "passerelle_details": "",
+  "roofs_from_earth": "",
+  "confidence": "medium",
+  "onsite_todo": "Pylon-Logo Nordseite Georgstr. 1-3 lesen; Georgstraße zwischen Schmiedestraße und Steintor (x -230..-370) beidseitig Ladenschilder."
+ },
+ {
+  "place": "Steintor – Steintorstraße / U-Bahn-Ausgang Steintorstraße",
+  "lat": 52.3755355,
+  "lon": 9.7333372,
+  "game_xz": [
+   -375.6,
+   -123.8
+  ],
+  "heading": "10/200/290",
+  "imagery_date_if_shown": "Nov. 2022",
+  "pano_id": "-0cpphs86n8ElCmCf2tGFQ",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [
+   {
+    "name_on_sign": "spiel mit",
+    "sign_type": "Fensterfolien gelb/blau gestreift + Schriftzug",
+    "colours": "gelb #F2C500 / blau #1F3F8F",
+    "position": "Steintorstr. 13, 2-geschossiger Pavillon"
+   }
+  ],
+  "shopfront_details": "",
+  "facade_details": "Steintorstr. 13: 2-geschossiger beige/weißer Flachbau; am Platz weißer 5-geschossiger Eckbau 50er Jahre; im Hintergrund rotbraune Ziegelbauten (Das Neue Steintor).",
+  "ground": "Platz: rotbraunes Klinkerpflaster + graue Platten; Steintorstr.: Asphalt mit Radweg, Bordsteine Granit.",
+  "furniture": "Hohe graue Leuchtmasten, Bänke, Fahrradbügel, Wegweiser 'Einbahnstraße', Litfaßsäule.",
+  "u_bahn_entrance_details": "Ausgang Steintorstraße (-391,-123): offener Treppentrog mit Edelstahlgeländer und grauer Betonbrüstung, neben Bus-/Radspur.",
+  "passerelle_details": "",
+  "roofs_from_earth": "",
+  "confidence": "medium",
+  "onsite_todo": "Steintor-Platzinneres (Fußgängerfläche) + alle 5 Steintor-Ausgänge (Georgstraße x3, Lange Laube, Münzstraße) und Gänseliesel-Brunnen (-433,-191) fotografieren."
+ },
+ {
+  "place": "Steintor – Stadtbahn-Haltestelle Kurt-Schumacher-Straße (Mendini-Haltestelle)",
+  "lat": 52.3767122,
+  "lon": 9.7328574,
+  "game_xz": [
+   -408.2,
+   -254.7
+  ],
+  "heading": "40/140/200/260",
+  "imagery_date_if_shown": "Juni 2022",
+  "pano_id": "3_2PKZE-Zrq8Nk0aUXt_TQ",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [],
+  "shopfront_details": "Haltestellen-Design: Schachbrett-Fliesen gelb #E6BE2E / schwarz #161616 (Felder ~0,35 m); je Bahnsteig ein Kubus-Häuschen ~3x2,5x3 m mit goldenem Kegel-Turm (~5-6 m, #C9A23A) + langer Schachbrett-Balken (~1,2 m hoch auf ~2,5 m) auf Schachbrett-Stützen, zweiter kleinerer Goldkegel am anderen Ende; Glas-Windschutz, Fahrplanvitrine.",
+  "facade_details": "Umgebung: 50er/60er-Jahre-Bürobauten 5-6 Geschosse, weiß/grau; Blick auf Anzeiger-Hochhaus mit hellem Kuppeldach.",
+  "ground": "Hochbahnsteige (~0,8 m) mit Rampen, helle Betonplatten; Gleise mittig in Asphalt, Oberleitung an grauen Masten.",
+  "furniture": "Bäume am Bahnsteig, Fahrradständer, Ampeln.",
+  "u_bahn_entrance_details": "",
+  "passerelle_details": "",
+  "roofs_from_earth": "Google Earth: Steintor-Platz große helle Fläche mit rotem Klinker-Ring/-Wegen, Baumgruppen, runde Pflanzbeete; Haltestelle gelb-schwarz erkennbar.",
+  "confidence": "high"
+ },
+ {
+  "place": "Anzeiger-Hochhaus / Goseriede 9 + Goseriedebad",
+  "lat": 52.3770132,
+  "lon": 9.7320382,
+  "game_xz": [
+   -463.9,
+   -288.1
+  ],
+  "heading": "170/265/330",
+  "imagery_date_if_shown": "Nov. 2022",
+  "pano_id": "C_dXOASGiQh8j_JGFNPJiw",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [
+   {
+    "name_on_sign": "Sparkasse",
+    "sign_type": "rotes Logo + Schrift am EG",
+    "colours": "rot/weiß",
+    "position": "Nachbarbau südlich (Goseriede)"
+   }
+  ],
+  "shopfront_details": "",
+  "facade_details": "Anzeiger-Hochhaus: dunkel rotbraun/aubergine Klinker (#5A2E2A), ~10 Geschosse + Kuppel, vertikale Ziegelpfeiler, ~13 schmale Fensterachsen an der Ostseite, weiße Fensterrahmen; im EG 5 hohe gestufte/gezackte expressionistische Spitzportale; Kuppel hell verdigris/weißlich (#9DBFAE). Nov. 2022 teilweise eingerüstet. Goseriedebad nördlich: Sandstein/Putz, Neorenaissance, Turm mit Kupferhaube, rote Ziegeldächer.",
+  "ground": "Goseriede: 2+2 Fahrstreifen Asphalt, Gehweg graue Platten, Bordstein Granit.",
+  "furniture": "",
+  "u_bahn_entrance_details": "",
+  "passerelle_details": "",
+  "roofs_from_earth": "Google Earth: Kuppel grün/hell auf dem Hochhaus sichtbar; 'Das Neue Steintor' = dunkelroter Ziegelbau 6-7 G. mit konkav viertelkreisförmiger Fassade.",
+  "confidence": "high"
+ },
+ {
+  "place": "Marktkirche Chor (Ost) / Schmiedestraße 5",
+  "lat": 52.3718282,
+  "lon": 9.7359142,
+  "game_xz": [
+   -200.5,
+   288.4
+  ],
+  "heading": "80/175/235/266",
+  "imagery_date_if_shown": "Aug. 2023",
+  "pano_id": "Z1sXAMwgyfIjSKj40NTQSg",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [
+   {
+    "name_on_sign": "DÖNERSCHMIEDE",
+    "sign_type": "blaue Versalien auf weißem Band",
+    "colours": "blau/weiß",
+    "position": "Grupenstraße/Schmiedestr."
+   }
+  ],
+  "shopfront_details": "",
+  "facade_details": "Marktkirche: Backsteingotik dunkelrot-braun (#7A3B2A), polygonaler Chor (5/8), sehr hohe Spitzbogenfenster (~18-20 m) mit Maßwerk, Strebepfeiler mit Sockel aus dunklem Sandstein/Grauwacke (#4A4640), Kupferabdeckungen (grün patiniert #6E9C86) auf Pfeilerabsätzen und Traufgesims, Blendnischen mit Spitzbogen.",
+  "ground": "Marktplatz: rotes Klinkerpflaster (#9C4A3A) im Fischgrät/Läufer mit Granit-Bänderraster (~3x3 m); Schmiedestr.: rotes Klinkerpflaster als Fahrbahn.",
+  "furniture": "Kandelaber mit Doppel-Kugelleuchten (grauer Mast, weiße Kugeln), Poller, Fahrradbügel.",
+  "u_bahn_entrance_details": "",
+  "passerelle_details": "",
+  "roofs_from_earth": "Google Earth: Kirchenschiff mit sehr steilem Satteldach in Rotorange (#B5532F), Chor mit Walm/Polygon-Dach; Turm: 4 Giebel + schlanke Spitze.",
+  "confidence": "high"
+ },
+ {
+  "place": "Marktplatz / Altes Rathaus (Marktfassade)",
+  "lat": 52.3716693,
+  "lon": 9.735782,
+  "game_xz": [
+   -209.5,
+   306.1
+  ],
+  "heading": "150/220/278",
+  "imagery_date_if_shown": "Aug. 2022",
+  "pano_id": "Ee9CqLaZnxckiesSVkLcpw",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [],
+  "shopfront_details": "",
+  "facade_details": "Altes Rathaus: Backsteingotik (#8B3F2E) mit dunkel glasierten Ziegelbändern, 2 Hauptgeschosse, steiles dunkelrotes Ziegeldach (#5C2A20) mit 3 prunkvollen Zwerchgiebeln (Staffelgiebel mit Fialen, Maßwerk-/Terrakottafriesen); EG Spitzbogenfenster/-arkaden; NW-Ecke mit Fiale. Davor Marktbrunnen (Bronze, dunkel).",
+  "ground": "Rotes Klinkerpflaster mit Granitraster.",
+  "furniture": "Temporär (Aug. 2022/2023): oranges/graues Kletter-Spielobjekt in Sandkasten mit Holzeinfassung auf dem Marktplatz. Kandelaber Doppel-Kugel.",
+  "u_bahn_entrance_details": "",
+  "passerelle_details": "",
+  "roofs_from_earth": "",
+  "confidence": "high"
+ },
+ {
+  "place": "Marktkirche Westturm / Am Markte 11 (Arkaden)",
+  "lat": 52.3716024,
+  "lon": 9.7347336,
+  "game_xz": [
+   -280.8,
+   313.6
+  ],
+  "heading": "60/210/330",
+  "imagery_date_if_shown": "Aug. 2022",
+  "pano_id": "nNOJHU7BSpj7Zd1rCrEFhw",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [],
+  "shopfront_details": "",
+  "facade_details": "Turm: massiver quadratischer Backsteinturm (~97 m gesamt), Westportal mit dunklem Sandstein-Gewände und Figuren, Blendnischen, schmale Spitzbogen-Schallfenster; Luther-Denkmal (Bronze auf Sockel) an der Turmnordseite. Am Markte 11: helle Sandstein-Rundbogenarkaden (#D8CDB5) mit Pfeilern ~1,2 m; Blick Richtung Kramerstr./Knochenhauerstr.: Neogotik/Neorenaissance-Bauten 4-5 G., Staffelgiebel, Eckturm mit Schieferspitze, rote Ziegeldächer.",
+  "ground": "Graues Granit-Großpflaster in Bögen + rote Klinkerflächen.",
+  "furniture": "",
+  "u_bahn_entrance_details": "",
+  "passerelle_details": "",
+  "roofs_from_earth": "",
+  "confidence": "high"
+ },
+ {
+  "place": "Hanns-Lilje-Platz – Gabelung Kramerstraße / Knochenhauerstraße",
+  "lat": 52.3718067,
+  "lon": 9.7344149,
+  "game_xz": [
+   -302.4,
+   290.8
+  ],
+  "heading": "255/330",
+  "imagery_date_if_shown": "Nov. 2022",
+  "pano_id": "JBZ2jvcvDsrp73yRQrHc2w",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [
+   {
+    "name_on_sign": "Buchhandlung an der Marktkirche",
+    "sign_type": "weiße Schrift auf braunem Band",
+    "colours": "weiß / #5A3A28",
+    "position": "Ecke Knochenhauerstr. (Nordost)"
+   },
+   {
+    "name_on_sign": "HANNOVERSCHE … (Kaffee/Feinkost) – '…UNDT DER FEINSCHMECKER…'",
+    "sign_type": "vergoldete Inschrift im Gesims + goldene Schaufensterschrift",
+    "colours": "gold auf dunkelrotbraunem Sandstein",
+    "position": "Eckhaus Kramerstr./Hanns-Lilje-Platz (Südseite)"
+   }
+  ],
+  "shopfront_details": "Ornamentierte schmiedeeiserne Laternen (schwarz/gold) an Konsolen; Schaufenster in tiefen Sandstein-Rundbögen.",
+  "facade_details": "Südwest-Eckhaus: dunkelrotbrauner Sandstein, Neorenaissance mit Rundbogenfenstern + Reliefs. Nordost-Eckhaus Knochenhauerstr.: ocker/braun, Jugendstil mit Eck-Erker. Kramerstr. Nordseite: 4-geschossiger 50er-Jahre-Putzbau beige mit Mansardgauben, weiße Markisen.",
+  "ground": "Graue Granit-Kleinpflaster im Segmentbogen-Verband, glatte Granitplatten-Laufstreifen.",
+  "furniture": "",
+  "u_bahn_entrance_details": "",
+  "passerelle_details": "",
+  "roofs_from_earth": "",
+  "confidence": "high"
+ },
+ {
+  "place": "Kramerstraße (Fachwerkzeile, Höhe Nr. 9-14)",
+  "lat": 52.3716557,
+  "lon": 9.7332037,
+  "game_xz": [
+   -384.7,
+   307.6
+  ],
+  "heading": "195/345",
+  "imagery_date_if_shown": "Aug. 2022",
+  "pano_id": "qrq2596FHswIjbOZMQ8d7A",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [
+   {
+    "name_on_sign": "Meisterwerkstatt / …seit 1916",
+    "sign_type": "weiße Schrift auf schwarzer Fascia + goldene Schaufensterschrift",
+    "colours": "weiß/gold/schwarz",
+    "position": "Südseite, Fachwerkhaus (Juwelier/Uhren)"
+   },
+   {
+    "name_on_sign": "STEEL (rot)",
+    "sign_type": "rote Versalien in Glasfront + rote Säulen-Aufsteller",
+    "colours": "rot #D2232A / weiß",
+    "position": "Nordseite, Kramerstr. 9"
+   }
+  ],
+  "shopfront_details": "Holz-Ladenfronten blau lackiert (#2A4A8A) bzw. dunkelbraun; Café-Terrassen mit Holzstühlen und dunkelroten Markisen; schmiedeeiserne Wandlaternen.",
+  "facade_details": "Fachwerk 3-4 Geschosse + Giebel, Auskragungen je Geschoss mit Balkenköpfen; Balken dunkelbraun/schwarz (#3B2A20) oder grau/blau gestrichen, Gefache weiß (#F0EDE6) oder ocker (#D8B878); Fenster weiß, 2x2 Sprossen; ein Haus schiefergrau gestrichen.",
+  "ground": "Granit-Kleinpflaster grau; roter Farbstreifen 'Roter Faden' (Touristenpfad, ~5 cm, rot #C8102E) auf dem Pflaster.",
+  "furniture": "Wandlaternen, Postkartenständer, Café-Mobiliar.",
+  "u_bahn_entrance_details": "",
+  "passerelle_details": "",
+  "roofs_from_earth": "",
+  "confidence": "high"
+ },
+ {
+  "place": "Holzmarkt – Leibnizhaus, Holzmarktbrunnen, Historisches Museum",
+  "lat": 52.3715792,
+  "lon": 9.7324522,
+  "game_xz": [
+   -435.8,
+   316.1
+  ],
+  "heading": "140/205/330",
+  "imagery_date_if_shown": "Aug. 2022",
+  "pano_id": "kcqduT8UQ_vef43COmIgDA",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [
+   {
+    "name_on_sign": "hannover-museum.de",
+    "sign_type": "Schrift über Eingang",
+    "colours": "weiß/rot",
+    "position": "Historisches Museum"
+   },
+   {
+    "name_on_sign": "R (Modegeschäft)",
+    "sign_type": "rundes Monogramm-Logo",
+    "colours": "weiß/schwarz",
+    "position": "Neorenaissance-Bau Pferdestr. 8"
+   }
+  ],
+  "shopfront_details": "",
+  "facade_details": "Leibnizhaus (Rekonstruktion): reiche Renaissance-Sandsteinfassade (#D6C49A), 5 Geschosse, hoher Volutengiebel mit Obelisken, mittiger 2-geschossiger Erker (Utlucht) mit Reliefs, Kreuzstockfenster. Links davon moderner dunkelrotbrauner Ziegelbau mit Steilgiebel und Schlitzfenstern. Rechts Neorenaissance-Bau mit Ornamentfriesen. Historisches Museum: 60er-Jahre, Bruchstein-Verblendung (#A89A86) in Bändern + weiße Betonbänder, EG verglast auf weißen Rundstützen.",
+  "ground": "Holzmarkt: graues Granit-Großpflaster in Bögen.",
+  "furniture": "Holzmarktbrunnen (Oskar-Winter-Brunnen): neugotische Brunnensäule (~8 m, dunkel mit vergoldeten Details) über achteckigem Steinbecken auf 3-4 Stufen, schmiedeeisernes Gitter. Polierte Edelstahl-Skulptursäule neben dem Museum.",
+  "u_bahn_entrance_details": "",
+  "passerelle_details": "",
+  "roofs_from_earth": "Google Earth: Historisches Museum mit großem Flachdach + 5 parallelen Sheddach-Oberlichtern; umliegende Fachwerkhäuser mit steilen roten Ziegeldächern + Gauben.",
+  "confidence": "high"
+ },
+ {
+  "place": "Pferdestraße / Beginenturm (Blick)",
+  "lat": 52.3716052,
+  "lon": 9.7318568,
+  "game_xz": [
+   -476.2,
+   313.2
+  ],
+  "heading": "180/270",
+  "imagery_date_if_shown": "Aug. 2022",
+  "pano_id": "00XP2XgXSN2zzVyhV6GarQ",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [
+   {
+    "name_on_sign": "Buddha Bowl – rice, sushi & tapas cuisine",
+    "sign_type": "weiße Schreibschrift auf braunem Holzbrett",
+    "colours": "weiß / #6A4A3A",
+    "position": "Pferdestr. 11 (Südseite)"
+   }
+  ],
+  "shopfront_details": "Faltbare Glasfront, Rattan-Hängeleuchten, Außenbestuhlung.",
+  "facade_details": "Beginenturm am Ende der Pferdestraße: mittelalterlicher Bruchsteinturm (hellgrau-beige), wenige kleine Fenster, flacher Abschluss; Museumshof mit Bruchsteinwand + weißen Bändern.",
+  "ground": "Rotbraunes Klinkerpflaster.",
+  "furniture": "",
+  "u_bahn_entrance_details": "",
+  "passerelle_details": "",
+  "roofs_from_earth": "",
+  "confidence": "medium",
+  "onsite_todo": "Beginenturm aus der Nähe (Leineseite + Hof): Form (rund/eckig), Höhe, Dachabschluss, Mauerwerk."
+ },
+ {
+  "place": "Leineschloss – Portikus Leinstraße (Landtag)",
+  "lat": 52.3707223,
+  "lon": 9.7337563,
+  "game_xz": [
+   -347.2,
+   411.4
+  ],
+  "heading": "250/275",
+  "imagery_date_if_shown": "Nov. 2022",
+  "pano_id": "h9xTcr122yhwHNG6CF1ZYw",
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [],
+  "shopfront_details": "",
+  "facade_details": "Portikus mit 6 kolossalen korinthischen Säulen (kanneliert, heller Sandstein #D9CFB8, ~15 m), Dreiecksgiebel mit Relief im Tympanon, dahinter Rundbogenfenster und moderne Glastür; Seitenflügel 3 Geschosse, Gesims + Dachbalustrade, Fenster mit Verdachungen.",
+  "ground": "Breite Freitreppe über ganze Portikusbreite (~10 Stufen, Granit); Vorplatz graues Granitpflaster; Leinstraße Asphalt mit Radweg.",
+  "furniture": "3 hohe Edelstahl-Fahnenmasten.",
+  "u_bahn_entrance_details": "",
+  "passerelle_details": "",
+  "roofs_from_earth": "",
+  "confidence": "high"
+ },
+ {
+  "place": "Ballhofplatz",
+  "lat": 52.3725202,
+  "lon": 9.7323976,
+  "game_xz": [
+   -439.5,
+   211.5
+  ],
+  "heading": "270",
+  "imagery_date_if_shown": "Feb. 2016",
+  "pano_id": "CIHM0ogKEICAgIC4_M23EA",
+  "source": "Google Maps Nutzer-360°-Foto (Martin Chadwick)",
+  "shops_visible": [
+   {
+    "name_on_sign": "Ballhof Café",
+    "sign_type": "weiße Markise",
+    "colours": "weiß",
+    "position": "Westseite des Platzes"
+   }
+  ],
+  "shopfront_details": "",
+  "facade_details": "Ballhof: EG dunkler Backstein, Obergeschosse Fachwerk (weiße Gefache, dunkle Balken), großes Satteldach mit Zwerchgiebeln; daneben rotbrauner Backsteinbau mit weißen Fenstern; ocker verputztes Giebelhaus; Fachwerkhäuser links; Kreuzkirchturm mit grüner Kupfer-Barockhaube im Hintergrund.",
+  "ground": "Rotes Klinkerpflaster im Fischgrät mit Granit-Einfassung.",
+  "furniture": "Ballhofbrunnen: moderne dunkle Bronze-Skulpturformen in flachem ovalem Betonbecken.",
+  "u_bahn_entrance_details": "",
+  "passerelle_details": "",
+  "roofs_from_earth": "Google Earth: Ballhof großes Hallendach steil, rote Ziegel; Platz mit Bäumen.",
+  "confidence": "medium",
+  "onsite_todo": "Ballhofplatz + Burgstraße + Kreuzkirchhof aktuell (offizielles SV fehlt dort weitgehend) – Fassaden, Ladenschilder, Brunnen."
+ },
+ {
+  "place": "Knochenhauerstraße / Burgstraße / Schmiedestraße (nur Anfang gesehen)",
+  "lat": 52.3718067,
+  "lon": 9.7344149,
+  "game_xz": [
+   -302.4,
+   290.8
+  ],
+  "heading": "-",
+  "imagery_date_if_shown": "Nov. 2022 (nur Einmündungen)",
+  "pano_id": null,
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [],
+  "shopfront_details": "",
+  "facade_details": "Knochenhauerstr.: 50er-Jahre-Zeile 4 G. mit weißen Markisen + Gastronomie (Westseite), Jugendstil-Eckhaus mit Erker (Ostseite). Burgstraße: rot gestrichenes Fachwerk mit weißen Gefachen (aus Holzmarkt gesehen).",
+  "ground": "",
+  "furniture": "",
+  "u_bahn_entrance_details": "",
+  "passerelle_details": "",
+  "roofs_from_earth": "",
+  "confidence": "low",
+  "onsite_todo": "Knochenhauerstraße, Burgstraße (Fachwerkzeile), Schmiedestraße komplett beidseitig: Ladennamen, Fassadenfarben, Fachwerkmuster."
+ },
+ {
+  "place": "U-Bahn Eingänge E/F (Opernplatz/Windmühlenstraße) und Lüftungsschacht (-12,22)",
+  "lat": 52.3725,
+  "lon": 9.7403,
+  "game_xz": [
+   97.5,
+   213.7
+  ],
+  "heading": "-",
+  "imagery_date_if_shown": "nicht aufgenommen",
+  "pano_id": null,
+  "source": "Google Street View (offiziell)",
+  "shops_visible": [],
+  "shopfront_details": "",
+  "facade_details": "",
+  "ground": "",
+  "furniture": "",
+  "u_bahn_entrance_details": "Nicht im Street View geprüft (Zeit). Vermutlich gleiche Typologie wie A/I (offener Trog mit Granitbrüstung, Edelstahlgeländer, blaues U-Würfelschild).",
+  "passerelle_details": "",
+  "roofs_from_earth": "",
+  "confidence": "low",
+  "onsite_todo": "Eingänge E und F + Lüftungsschacht bei (-12,22) am Kröpcke (vermutlich ebenfalls Werbesäule mit Lamellenkrone) vor Ort fotografieren."
+ }
+]

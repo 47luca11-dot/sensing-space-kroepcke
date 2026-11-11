@@ -1,0 +1,22 @@
+doc C:\Users\luca\Downloads\tib_rv_190_tragwerk_final.3dm objects 28936
+meshes ensured 7718 3.0 s
+groups {'tib_eg': 1986, 'tib_ug2': 371, 'tib_ug1': 788, 'tib_og1': 1061, 'tib_dach': 166, 'tib_og2': 783, 'tib_jalousien': 460, 'tib_fassade': 1322, 'tib_anbau': 40, 'umgebung_pflanzbeet': 1, 'umgebung_kies': 1, 'umgebung_nachbarbauten': 721, 'umgebung_gelaender_lichtschacht': 1, 'umgebung_gelaende': 4, 'umgebung_baeume': 4, 'umgebung_baumstaemme': 4, 'umgebung_gitterrost': 3, 'umgebung_gelaender': 2}
+export tib_eg 1986 True 20977004 9.7 s
+export tib_ug2 371 True 3752584 1.0 s
+export tib_ug1 788 True 6883624 1.5 s
+export tib_og1 1061 True 8155724 0.9 s
+export tib_dach 166 True 8810300 0.9 s
+export tib_og2 783 True 5641400 0.7 s
+export tib_jalousien 460 True 10511816 0.6 s
+export tib_fassade 1322 True 8084196 1.2 s
+export tib_anbau 40 True 2250532 0.4 s
+export umgebung_pflanzbeet 1 True 18484 0.2 s
+export umgebung_kies 1 True 18728 0.2 s
+export umgebung_nachbarbauten 721 True 8899712 1.2 s
+export umgebung_gelaender_lichtschacht 1 True 241796 0.2 s
+export umgebung_gelaende 4 True 119936 0.2 s
+export umgebung_baeume 4 True 542704 0.2 s
+export umgebung_baumstaemme 4 True 32828 0.2 s
+export umgebung_gitterrost 3 True 1000340 0.3 s
+export umgebung_gelaender 2 True 95136 0.2 s
+DONE

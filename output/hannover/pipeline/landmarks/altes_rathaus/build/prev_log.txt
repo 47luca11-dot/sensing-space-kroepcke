@@ -1,0 +1,56 @@
+12:43:03 | INFO: Data are loaded, start creating Blender stuff
+12:43:03 | INFO: Blender create Mesh node AR_Backstein_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Backstein19_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Backstein_Fiale_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Dachbahn_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Dachziegel_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Dunkel_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Eisen_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Fensterglas_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Fensterrahmen_nocol
+12:43:03 | INFO: Blender create Mesh node AR_First_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Fries_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Glasdach_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Glasur_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Granit_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Masswerk_gruen_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Putz_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Quader_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Rosette_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Sandstein_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Schaufenster_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Schiefer_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Schild_sparkasse_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Schild_stichnoth_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Schild_viviry_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Stahl_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Tuer_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Tuer_gruen_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Vierpass_nocol
+12:43:03 | INFO: Blender create Mesh node AR_Zink_nocol
+12:43:03 | INFO: Blender create Mesh node crown_inst_nocol
+12:43:04 | INFO: Blender create Mesh node frieze_inst_nocol
+12:43:04 | INFO: Blender create Mesh node rosette_inst_nocol
+12:43:04 | INFO: Blender create Mesh node col_altes_rathaus
+12:43:04 | INFO: glTF import finished in 0.39s
+C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\pipeline\landmarks\altes_rathaus\blender_preview.py:62: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  w = bpy.data.worlds.new('w'); sc.world = w; w.use_nodes = True
+00:05.750  render           | Saved: 'C:\Users\luca\AppData\Local\Temp\claude\86a9b6371061b51e\b8a76d7d-27b8-490e-b6de-334a309ea42a\scratchpad\ar\prev\v2_close_window.png'
+00:06.328  render           | Saved: 'C:\Users\luca\AppData\Local\Temp\claude\86a9b6371061b51e\b8a76d7d-27b8-490e-b6de-334a309ea42a\scratchpad\ar\prev\v2_close_gable.png'
+00:06.953  render           | Saved: 'C:\Users\luca\AppData\Local\Temp\claude\86a9b6371061b51e\b8a76d7d-27b8-490e-b6de-334a309ea42a\scratchpad\ar\prev\v2_close_arcade.png'
+00:07.500  render           | Saved: 'C:\Users\luca\AppData\Local\Temp\claude\86a9b6371061b51e\b8a76d7d-27b8-490e-b6de-334a309ea42a\scratchpad\ar\prev\v2_west_corner.png'
+00:08.047  render           | Saved: 'C:\Users\luca\AppData\Local\Temp\claude\86a9b6371061b51e\b8a76d7d-27b8-490e-b6de-334a309ea42a\scratchpad\ar\prev\v2_koebelinger.png'
+00:08.672  render           | Saved: 'C:\Users\luca\AppData\Local\Temp\claude\86a9b6371061b51e\b8a76d7d-27b8-490e-b6de-334a309ea42a\scratchpad\ar\prev\v2_south.png'
+00:09.203  render           | Saved: 'C:\Users\luca\AppData\Local\Temp\claude\86a9b6371061b51e\b8a76d7d-27b8-490e-b6de-334a309ea42a\scratchpad\ar\prev\v2_schmiede_n.png'
+00:09.781  render           | Saved: 'C:\Users\luca\AppData\Local\Temp\claude\86a9b6371061b51e\b8a76d7d-27b8-490e-b6de-334a309ea42a\scratchpad\ar\prev\v2_markt_w.png'
+RENDERED C:/Users/luca/AppData/Local/Temp/claude/86a9b6371061b51e/b8a76d7d-27b8-490e-b6de-334a309ea42a/scratchpad/ar/prev/v2_close_window.png
+RENDERED C:/Users/luca/AppData/Local/Temp/claude/86a9b6371061b51e/b8a76d7d-27b8-490e-b6de-334a309ea42a/scratchpad/ar/prev/v2_close_gable.png
+RENDERED C:/Users/luca/AppData/Local/Temp/claude/86a9b6371061b51e/b8a76d7d-27b8-490e-b6de-334a309ea42a/scratchpad/ar/prev/v2_close_arcade.png
+RENDERED C:/Users/luca/AppData/Local/Temp/claude/86a9b6371061b51e/b8a76d7d-27b8-490e-b6de-334a309ea42a/scratchpad/ar/prev/v2_west_corner.png
+RENDERED C:/Users/luca/AppData/Local/Temp/claude/86a9b6371061b51e/b8a76d7d-27b8-490e-b6de-334a309ea42a/scratchpad/ar/prev/v2_koebelinger.png
+RENDERED C:/Users/luca/AppData/Local/Temp/claude/86a9b6371061b51e/b8a76d7d-27b8-490e-b6de-334a309ea42a/scratchpad/ar/prev/v2_south.png
+RENDERED C:/Users/luca/AppData/Local/Temp/claude/86a9b6371061b51e/b8a76d7d-27b8-490e-b6de-334a309ea42a/scratchpad/ar/prev/v2_schmiede_n.png
+RENDERED C:/Users/luca/AppData/Local/Temp/claude/86a9b6371061b51e/b8a76d7d-27b8-490e-b6de-334a309ea42a/scratchpad/ar/prev/v2_markt_w.png
+Blender 5.0.1 (hash a3db93c5b259 built 2025-12-16 01:32:30)
+
+Blender quit

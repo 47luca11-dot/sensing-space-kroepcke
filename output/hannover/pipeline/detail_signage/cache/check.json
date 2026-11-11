@@ -1,0 +1,812 @@
+{
+ "overlay_tris": 586984,
+ "edge_cross_overlay": 0,
+ "edge_cross_scene": 0,
+ "zfight_scene": 0,
+ "zfight_scene_at": [],
+ "zfight_overlay_pairs": 603,
+ "zfight_overlay_area_m2": 0.03961,
+ "zfight_overlay_at": [
+  {
+   "c": [
+    -51.789,
+    2.541,
+    353.383
+   ],
+   "area": 0.002884,
+   "sep": 0.00011,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    40.575,
+    0.905,
+    145.056
+   ],
+   "area": 0.002009,
+   "sep": 0.00119,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    67.083,
+    0.218,
+    49.099
+   ],
+   "area": 0.001967,
+   "sep": 0.00182,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    -36.309,
+    1.184,
+    139.927
+   ],
+   "area": 0.001753,
+   "sep": 0.00104,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    132.187,
+    0.373,
+    -9.881
+   ],
+   "area": 0.001732,
+   "sep": 0.0002,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    127.306,
+    0.236,
+    4.613
+   ],
+   "area": 0.00165,
+   "sep": 0.00102,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    -22.905,
+    0.622,
+    243.796
+   ],
+   "area": 0.001597,
+   "sep": 4e-05,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    103.3,
+    0.15,
+    12.572
+   ],
+   "area": 0.001221,
+   "sep": 0.00084,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    -58.497,
+    1.145,
+    -4.389
+   ],
+   "area": 0.001212,
+   "sep": 0.00089,
+   "mats": [
+    "Signage Matte",
+    "Signage Gloss"
+   ]
+  },
+  {
+   "c": [
+    -58.497,
+    1.145,
+    -4.389
+   ],
+   "area": 0.001128,
+   "sep": 0.00089,
+   "mats": [
+    "Signage Matte",
+    "Signage Gloss"
+   ]
+  },
+  {
+   "c": [
+    -57.461,
+    1.12,
+    -4.028
+   ],
+   "area": 0.000911,
+   "sep": 0.00065,
+   "mats": [
+    "Signage Gloss",
+    "Signage Gloss"
+   ]
+  },
+  {
+   "c": [
+    -62.326,
+    1.12,
+    -5.722
+   ],
+   "area": 0.000907,
+   "sep": 0.00224,
+   "mats": [
+    "Signage Gloss",
+    "Signage Gloss"
+   ]
+  },
+  {
+   "c": [
+    -22.914,
+    0.582,
+    243.976
+   ],
+   "area": 0.000779,
+   "sep": 2e-05,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    127.135,
+    0.196,
+    4.554
+   ],
+   "area": 0.000777,
+   "sep": 0.00102,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    103.47,
+    0.11,
+    12.631
+   ],
+   "area": 0.000743,
+   "sep": 0.00083,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    40.576,
+    0.865,
+    144.876
+   ],
+   "area": 0.000714,
+   "sep": 0.00119,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    40.61,
+    0.905,
+    144.877
+   ],
+   "area": 0.000648,
+   "sep": 0.00119,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    40.576,
+    0.865,
+    144.876
+   ],
+   "area": 0.000648,
+   "sep": 0.00119,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    131.297,
+    0.34,
+    -7.316
+   ],
+   "area": 0.000639,
+   "sep": 0.0027,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    -58.506,
+    1.173,
+    -4.362
+   ],
+   "area": 0.000621,
+   "sep": 0.00089,
+   "mats": [
+    "Signage Matte",
+    "Signage Gloss"
+   ]
+  },
+  {
+   "c": [
+    -58.356,
+    1.1,
+    -4.377
+   ],
+   "area": 0.000562,
+   "sep": 0.0017,
+   "mats": [
+    "Signage Gloss",
+    "Signage Gloss"
+   ]
+  },
+  {
+   "c": [
+    -51.789,
+    2.541,
+    353.383
+   ],
+   "area": 0.000487,
+   "sep": 0.00011,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    127.147,
+    0.236,
+    4.521
+   ],
+   "area": 0.000436,
+   "sep": 0.00102,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    127.135,
+    0.196,
+    4.554
+   ],
+   "area": 0.000436,
+   "sep": 0.00102,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    -22.914,
+    0.582,
+    243.976
+   ],
+   "area": 0.000409,
+   "sep": 2e-05,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    -22.949,
+    0.622,
+    243.974
+   ],
+   "area": 0.000409,
+   "sep": 2e-05,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    -58.386,
+    1.096,
+    -4.388
+   ],
+   "area": 0.000407,
+   "sep": 0.0017,
+   "mats": [
+    "Signage Gloss",
+    "Signage Gloss"
+   ]
+  },
+  {
+   "c": [
+    -57.461,
+    1.12,
+    -4.028
+   ],
+   "area": 0.000321,
+   "sep": 0.00065,
+   "mats": [
+    "Signage Gloss",
+    "Signage Gloss"
+   ]
+  },
+  {
+   "c": [
+    -62.326,
+    1.12,
+    -5.722
+   ],
+   "area": 0.000321,
+   "sep": 0.00224,
+   "mats": [
+    "Signage Gloss",
+    "Signage Gloss"
+   ]
+  },
+  {
+   "c": [
+    -7.578,
+    3.292,
+    284.376
+   ],
+   "area": 0.000289,
+   "sep": 0.00211,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    -47.389,
+    2.009,
+    0.636
+   ],
+   "area": 0.000255,
+   "sep": 0.00286,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    103.47,
+    0.11,
+    12.631
+   ],
+   "area": 0.000239,
+   "sep": 0.00083,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    103.459,
+    0.15,
+    12.664
+   ],
+   "area": 0.000239,
+   "sep": 0.00083,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    130.293,
+    -0.073,
+    -4.395
+   ],
+   "area": 0.000201,
+   "sep": 0.00111,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    -50.637,
+    2.541,
+    352.7
+   ],
+   "area": 0.0002,
+   "sep": 0.00011,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    130.117,
+    -0.114,
+    -4.456
+   ],
+   "area": 0.000189,
+   "sep": 0.00111,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    -62.301,
+    1.096,
+    -5.747
+   ],
+   "area": 0.000186,
+   "sep": 4e-05,
+   "mats": [
+    "Signage Gloss",
+    "Signage Gloss"
+   ]
+  },
+  {
+   "c": [
+    -57.464,
+    1.1,
+    -4.063
+   ],
+   "area": 0.000174,
+   "sep": 0.00199,
+   "mats": [
+    "Signage Gloss",
+    "Signage Gloss"
+   ]
+  },
+  {
+   "c": [
+    -58.386,
+    1.096,
+    -4.388
+   ],
+   "area": 0.000155,
+   "sep": 0.0017,
+   "mats": [
+    "Signage Gloss",
+    "Signage Gloss"
+   ]
+  },
+  {
+   "c": [
+    -7.827,
+    3.292,
+    283.581
+   ],
+   "area": 0.000149,
+   "sep": 0.00211,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    -39.163,
+    1.826,
+    223.482
+   ],
+   "area": 0.000137,
+   "sep": 0.0,
+   "mats": [
+    "Signage Gloss",
+    "Signage Gloss"
+   ]
+  },
+  {
+   "c": [
+    70.77,
+    1.845,
+    14.744
+   ],
+   "area": 0.000137,
+   "sep": 0.0,
+   "mats": [
+    "Signage Gloss",
+    "Signage Gloss"
+   ]
+  },
+  {
+   "c": [
+    47.032,
+    2.17,
+    6.397
+   ],
+   "area": 0.000137,
+   "sep": 0.0,
+   "mats": [
+    "Signage Gloss",
+    "Signage Gloss"
+   ]
+  },
+  {
+   "c": [
+    47.12,
+    1.988,
+    6.428
+   ],
+   "area": 0.000137,
+   "sep": 0.0,
+   "mats": [
+    "Signage Gloss",
+    "Signage Gloss"
+   ]
+  },
+  {
+   "c": [
+    154.335,
+    1.311,
+    40.373
+   ],
+   "area": 0.000137,
+   "sep": 0.0,
+   "mats": [
+    "Signage Gloss",
+    "Signage Gloss"
+   ]
+  },
+  {
+   "c": [
+    -39.163,
+    1.648,
+    223.482
+   ],
+   "area": 0.000136,
+   "sep": 0.0,
+   "mats": [
+    "Signage Gloss",
+    "Signage Gloss"
+   ]
+  },
+  {
+   "c": [
+    70.77,
+    1.667,
+    14.744
+   ],
+   "area": 0.000136,
+   "sep": 0.0,
+   "mats": [
+    "Signage Gloss",
+    "Signage Gloss"
+   ]
+  },
+  {
+   "c": [
+    47.032,
+    1.992,
+    6.397
+   ],
+   "area": 0.000136,
+   "sep": 0.0,
+   "mats": [
+    "Signage Gloss",
+    "Signage Gloss"
+   ]
+  },
+  {
+   "c": [
+    47.12,
+    2.166,
+    6.428
+   ],
+   "area": 0.000136,
+   "sep": 0.0,
+   "mats": [
+    "Signage Gloss",
+    "Signage Gloss"
+   ]
+  },
+  {
+   "c": [
+    154.335,
+    1.489,
+    40.373
+   ],
+   "area": 0.000136,
+   "sep": 0.0,
+   "mats": [
+    "Signage Gloss",
+    "Signage Gloss"
+   ]
+  },
+  {
+   "c": [
+    26.271,
+    3.464,
+    -0.691
+   ],
+   "area": 0.000116,
+   "sep": 0.00225,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    69.326,
+    3.263,
+    195.261
+   ],
+   "area": 0.000115,
+   "sep": 0.00225,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    -47.273,
+    2.009,
+    0.68
+   ],
+   "area": 8.7e-05,
+   "sep": 0.00286,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    -47.269,
+    1.982,
+    0.657
+   ],
+   "area": 8.7e-05,
+   "sep": 0.00286,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    -47.269,
+    1.982,
+    0.657
+   ],
+   "area": 8.1e-05,
+   "sep": 0.00286,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    51.444,
+    5.638,
+    163.635
+   ],
+   "area": 5.9e-05,
+   "sep": 0.00038,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    51.069,
+    5.638,
+    162.976
+   ],
+   "area": 5.9e-05,
+   "sep": 0.00038,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    -7.827,
+    3.292,
+    283.581
+   ],
+   "area": 4.2e-05,
+   "sep": 0.00211,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    132.015,
+    0.148,
+    -9.96
+   ],
+   "area": 3.2e-05,
+   "sep": 0.00187,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  },
+  {
+   "c": [
+    69.487,
+    3.263,
+    195.537
+   ],
+   "area": 2.9e-05,
+   "sep": 0.00225,
+   "mats": [
+    "Signage Matte",
+    "Signage Matte"
+   ]
+  }
+ ],
+ "see_through": {
+  "eyes_blocked": 3764,
+  "rays": 38076,
+  "ok_overlay": 12209,
+  "front_of_glass": 5464,
+  "ok_scene": 656,
+  "ok_double_sided": 19747
+ },
+ "see_through_leaks": {
+  "nohit": 0,
+  "deep": 0,
+  "overlay_back": 0,
+  "scene_back": 0
+ },
+ "see_through_bad_openings": [],
+ "see_through_examples": [],
+ "box_overlaps": [],
+ "hidden_boxes": [],
+ "normal_flips": 0,
+ "bad_overlay_tris": [],
+ "bad_scene": []
+}

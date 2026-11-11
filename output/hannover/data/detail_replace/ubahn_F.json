@@ -1,0 +1,34 @@
+{
+ "footprints": [
+  [
+   [
+    91.267,
+    220.898
+   ],
+   [
+    96.655,
+    217.891
+   ],
+   [
+    96.821,
+    217.288
+   ],
+   [
+    90.174,
+    206.277
+   ],
+   [
+    84.786,
+    209.284
+   ]
+  ]
+ ],
+ "ymin": -8.0,
+ "ymax": 4.0,
+ "files": [
+  "street",
+  "street_furniture",
+  "ground"
+ ],
+ "note": "U-Bahn-Zugang Kröpcke F: alter Treppenschacht/Belag entfernt, ersetzt durch ground/ubahn (pipeline/ground/ubahn.py). Pflaster im Fussabdruck lueckenlos neu (Material/UV/Hoehe aus dem Detailmodell)."
+}

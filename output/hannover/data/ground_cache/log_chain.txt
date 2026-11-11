@@ -1,0 +1,164 @@
+Mon Nov  9 15:33:08     2026
+=== layout.py 15:33:08
+[layout   0.7s] lod2 footprints 1985 area 804853
+[layout   0.8s] region area 2247985 seam strip 3600
+[layout   0.8s] roads 927 parking 76 street_side 71
+[layout   1.0s] grass 101 beds 20 ped areas 54 water 11 rail 6 hbs 11 islands 2
+[layout   1.0s] trees 1915 lamps 221
+[layout   1.0s] lines: foot 640 cycle 47 sidewalk 36 ped 113
+[layout   4.8s] skip subway entrance ub_735830545 overlap
+[layout   4.8s] skip subway entrance ub_1396666129 overlap
+[layout   4.8s] skip subway entrance ub_1540130653 overlap
+[layout   4.8s] skip subway entrance ub_3727432826 passerelle
+[layout   4.8s] promenade openings 5 subway entrances used 20 with terrain holes 16
+[layout   8.8s] seam side top detail road intervals [(127.5, 132.0), (151.5, 159.0), (185.5, 191.5), (223.5, 278.5), (280.0, 301.5)] osm at band [(np.float64(191.0), np.float64(194.6))]
+[layout   8.8s] seam side right detail road intervals [(2.0, 9.0), (20.5, 27.0), (63.0, 80.0), (109.0, 113.5), (129.0, 135.0), (192.0, 211.5), (231.5, 254.5), (263.0, 286.0)] osm at band [(np.float64(61.2), np.float64(73.1)), (np.float64(195.5), np.float64(207.1))]
+[layout   8.8s] seam side bottom detail road intervals [(40.5, 49.0), (90.0, 98.0), (112.5, 115.0), (133.0, 136.0), (144.5, 191.5), (215.5, 229.0), (249.0, 261.5), (267.5, 277.5), (287.5, 301.5)] osm at band [(np.float64(42.8), np.float64(46.8)), (np.float64(83.9), np.float64(90.8)), (np.float64(247.0), np.float64(254.4))]
+[layout   8.8s] seam side left detail road intervals [(1.5, 5.5), (11.0, 36.0), (69.5, 78.5), (274.5, 279.5)] osm at band [(np.float64(72.4), np.float64(80.4))]
+[layout  10.0s] road area 318940 track 4534 parking 54018
+[layout  10.4s] river area 19518 bridges over river 11
+[layout  13.2s] tree pits 1178
+[layout  14.4s] class coping 270.6
+[layout  14.4s] class river 19517.8
+[layout  14.4s] class rim 301.3
+[layout  14.4s] class water 1875.2
+[layout  15.1s] class pitframe 800.8
+[layout  15.5s] class treepit 3014.9
+[layout  17.2s] class kerb_ch 2246.4
+[layout  19.8s] class kerb 10425.1
+[layout  24.8s] class gutter 20937.4
+[layout  25.8s] class setts_road 27014.2
+[layout  26.7s] class track 3458.8
+[layout  27.7s] class parking 48007.0
+[layout  30.3s] class road 212456.6
+[layout  30.6s] class bed 4338.0
+[layout  31.0s] class gravel 5577.1
+[layout  31.6s] class path 4838.2
+[layout  32.5s] class edge 1107.5
+[layout  33.3s] class grass 166176.9
+[layout  33.9s] class cycle 2609.5
+[layout  34.2s] class island 120.3
+[layout  34.5s] class railplat 26234.7
+[layout  35.0s] class ballast 115664.5
+[layout  36.0s] class ped 142760.8
+[layout  36.4s] rest (paved) 1422693
+[layout  45.2s] altstadt setts 101741 clinker 9673
+[layout  45.5s] seam class seam_road 2070.8
+[layout  45.5s] seam class seam_setts 3.6
+[layout  45.5s] seam class seam_grass 0.5
+[layout  45.5s] final coping 270.6 MultiPolygon
+[layout  45.5s] final river 19517.8 MultiPolygon
+[layout  45.5s] final rim 301.3 MultiPolygon
+[layout  45.5s] final water 1875.2 MultiPolygon
+[layout  45.5s] final pitframe 800.8 MultiPolygon
+[layout  45.5s] final treepit 3014.9 MultiPolygon
+[layout  45.5s] final kerb_ch 2246.4 MultiPolygon
+[layout  45.5s] final kerb 10425.1 MultiPolygon
+[layout  45.5s] final gutter 20937.4 MultiPolygon
+[layout  45.5s] final setts_road 27014.2 MultiPolygon
+[layout  45.5s] final track 3458.8 MultiPolygon
+[layout  45.5s] final parking 48007.0 MultiPolygon
+[layout  45.5s] final road 212456.6 MultiPolygon
+[layout  45.5s] final bed 4338.0 MultiPolygon
+[layout  45.5s] final gravel 5577.1 MultiPolygon
+[layout  45.5s] final path 4245.6 MultiPolygon
+[layout  45.5s] final edge 1107.5 MultiPolygon
+[layout  45.5s] final grass 166176.9 MultiPolygon
+[layout  45.5s] final cycle 2461.6 MultiPolygon
+[layout  45.5s] final island 120.3 MultiPolygon
+[layout  45.5s] final railplat 26234.7 MultiPolygon
+[layout  45.5s] final ballast 115664.5 MultiPolygon
+[layout  45.5s] final ped 563855.6 MultiPolygon
+[layout  45.5s] final sidewalk 891000.6 MultiPolygon
+[layout  45.5s] final clinker 9673.3 MultiPolygon
+[layout  45.5s] final alt_setts 101740.8 MultiPolygon
+[layout  45.5s] final seam_road 2070.8 MultiPolygon
+[layout  45.5s] final seam_setts 3.6 MultiPolygon
+[layout  45.5s] final seam_grass 0.5 Polygon
+[layout  45.5s] final seam 1514.6 MultiPolygon
+[layout  45.6s] done
+=== terrain_mesh.py 15:33:55
+[tmesh    0.8s] rings 9398
+[tmesh    4.7s] noded
+[tmesh    9.1s] pslg vertices 420616 segments 425807
+[tmesh    9.8s] pass1 CDT 420616 836330
+[tmesh   17.8s] pass 2 692999 1381096
+[tmesh   34.4s] error refine 69358
+[tmesh   35.2s] pass 3 810763 1616624
+[tmesh   51.1s] labels {'seam_road': 10657, 'seam_setts': 34, 'seam_grass': 4, 'seam': 7837, 'coping': 979, 'rim': 2055, 'water': 1579, 'pitframe': 11333, 'treepit': 4978, 'kerb_ch': 143311, 'kerb': 143826, 'gutter': 132520, 'setts_road': 21976, 'track': 3109, 'parking': 25340, 'road': 144209, 'bed': 4531, 'gravel': 3606, 'path': 4595, 'edge': 13621, 'grass': 87414, 'cycle': 3050, 'island': 74, 'railplat': 17560, 'ballast': 59190, 'ped': 274442, 'sidewalk': 433746, 'river': 5935, 'alt_setts': 50521, 'clinker': 4592}
+[tmesh   54.7s] inner edges 2422467 boundary edges 4938
+[tmesh   55.4s] crossings 211
+[tmesh   58.2s] lowered kerb vertices 9156
+[tmesh   58.6s] river vertices 3660 levels [-7.62 -7.55 -7.5  -7.49 -7.46 -7.17 -7.08]
+[tmesh   59.0s] heights done
+[tmesh   60.2s] wall edges 100004
+[tmesh   83.0s] hole edges {'prom0': 48, 'prom1': 54, 'prom2': 54, 'prom3': 28, 'prom4': 40, 'ub_kroepcke_B_0': 17, 'ub_kroepcke_C_0': 20, 'ub_kroepcke_G_0': 4, 'ub_kroepcke_H_0': 17, 'ub_kroepcke_I_0': 18, 'ub_ub_299064939_0': 17, 'ub_ub_324517470_0': 17, 'ub_ub_1274066800_0': 17, 'ub_ub_1274066802_0': 19, 'ub_ub_1396666085_0': 17, 'ub_ub_1396666113_0': 21, 'ub_ub_2747495414_0': 17, 'ub_ub_4048984722_0': 17, 'ub_ub_4048984735_0': 13, 'ub_ub_4373301942_0': 23, 'ub_ub_4373301943_0': 17} skirts 4443
+[tmesh   86.5s] detail uv maps ['asphalt', 'slabs_ped', 'setts_road', 'grass']
+[tmesh   89.3s] output vertices 1355826 triangles 1616624
+[tmesh   89.6s] wall/skirt triangles 209249
+[tmesh   98.7s] saved
+=== structures.py 15:35:35
+[struct   50.7s] hedges 49 walls 121 fences 42
+[struct   51.0s] rail tracks 23
+[struct   55.9s] markings 5300 area 1848.1
+[struct   56.0s] total structure tris 52565 collision 6628
+=== ubahn.py 15:36:42
+[ubahn   30.1s] detail meshes 42
+[ubahn   30.2s] kroepcke_A patch tris 47 rim edges 5 removed {'street': 918}
+[ubahn   30.4s] built kroepcke_A Kröpcke tris 6503
+[ubahn   30.5s] kroepcke_B patch tris 20 rim edges 2 removed {'street': 2}
+[ubahn   30.7s] built kroepcke_B Kröpcke tris 4712
+[ubahn   30.8s] built kroepcke_C Kröpcke tris 6374
+[ubahn   30.9s] kroepcke_D patch tris 109 rim edges 4 removed {'street': 976}
+[ubahn   31.1s] built kroepcke_D Kröpcke tris 7345
+[ubahn   31.2s] kroepcke_E patch tris 75 rim edges 4 removed {'street': 1062, 'ground': 44}
+[ubahn   31.5s] built kroepcke_E Kröpcke tris 4431
+[ubahn   31.6s] kroepcke_F patch tris 83 rim edges 4 removed {'street': 1057}
+[ubahn   31.8s] built kroepcke_F Kröpcke tris 4979
+[ubahn   31.9s] kroepcke_G patch tris 60 rim edges 4 removed {'street': 33}
+[ubahn   32.0s] built kroepcke_G Kröpcke tris 3188
+[ubahn   32.1s] built kroepcke_H Kröpcke tris 4636
+[ubahn   32.2s] kroepcke_I patch tris 15 rim edges 2 removed {'street': 2}
+[ubahn   32.3s] built kroepcke_I Kröpcke tris 4233
+[ubahn   32.4s] built ub_299064939 Waterlooplatz tris 3228
+[ubahn   32.5s] built ub_324517470 Aegidientorplatz tris 3228
+[ubahn   32.6s] built ub_1274066800 Steintor tris 3228
+[ubahn   32.7s] built ub_1274066802 Steintor tris 3236
+[ubahn   32.8s] built ub_1396666085 Steintor tris 3220
+[ubahn   32.9s] built ub_1396666113 Steintor tris 3244
+[ubahn   32.9s] built ub_2747495414 Hauptbahnhof tris 3216
+[ubahn   33.0s] built ub_4048984722 Hauptbahnhof tris 2676
+[ubahn   33.1s] built ub_4048984735 Hauptbahnhof tris 2448
+[ubahn   33.2s] built ub_4373301942 Markthalle tris 3244
+[ubahn   33.3s] built ub_4373301943 Markthalle tris 3220
+[ubahn   33.5s] done: entrances 20 tris 80813 collision 14233 detail materials ['d_ground_slabs_f833e41b', 'd_ground_slabs_3b6841b3', 'd_ground_asphalt_5cceef0e', 'd_ground_setts_84d7cf54', 'd_ground_slabs_b23c554f']
+=== promenade.py 15:37:27
+[prom   29.0s] sections [('sued', -105.0, -97.0, -4.9, 8.6), ('op0', -97.0, -66.0, -4.9, 8.6), ('c01', -66.0, -59.8, -4.7, 3.5), ('op1', -59.8, -16.9, -4.7, 3.5), ('c12', -16.9, -8.6, -4.3, 3.5), ('op2', -8.6, 33.7, -4.3, 3.9), ('c23', 33.7, 41.3, -4.1, 3.9), ('op3', 41.3, 57.9, -4.1, 4.3), ('c34', 57.9, 104.1, -4.1, 4.3), ('op4', 104.1, 131.9, -4.2, 5.0), ('nord', 131.9, 143.9, 0.2, 5.0)]
+[prom   29.0s] stair sued_29 stair D=4.67 s -97.0..-86.4 t 5.95..8.53
+[prom   29.0s] stair bruecke1_s stair D=3.87 s -25.9..-16.9 t 1.61..3.49
+[prom   29.0s] stair bruecke1_n stair D=3.82 s -8.6..0.5 t 1.98..3.86
+[prom   29.0s] stair bruecke2_s stair D=3.81 s 24.6..33.7 t 1.98..3.86
+[prom   29.0s] stair bruecke2_n stair D=3.80 s 41.3..50.3 t 2.35..4.23
+[prom   29.0s] stair nord_treppe stair D=4.47 s 121.6..131.9 t -4.17..-1.57
+[prom   29.0s] stair nord_rolltreppe esc D=4.47 s 120.1..131.9 t -1.45..0.00
+[prom   29.0s] op 0 edges long 32 end full 4 fascia 12 stair heads 2
+[prom   29.0s] op 1 edges long 44 end full 1 fascia 10 stair heads 2
+[prom   29.0s] op 2 edges long 44 end full 1 fascia 8 stair heads 5
+[prom   29.0s] op 3 edges long 18 end full 0 fascia 9 stair heads 3
+[prom   29.0s] op 4 edges long 28 end full 5 fascia 8 stair heads 4
+[prom   29.2s] stairs built, tris 10766
+[prom   29.4s] shop units 63 named 32
+[prom   29.8s] shopfronts named 28 tris 20142
+[prom   30.4s] done parapets, tris 50072
+[prom   30.5s] done: tris 50072 collision 7824 named shops 28
+=== transit.py 15:38:08
+[transit   30.6s] surface track lines 23 length 2672
+[transit   31.4s] platform Hauptbahnhof/ZOB len 51.6 ramps [True, True] island True shelters 1 tris so far 15319
+[transit   31.5s] platform Hauptbahnhof/ZOB len 33.9 ramps [True, True] island False shelters 1 tris so far 18353
+[transit   32.0s] Steintor canopy s -9.5..10.5 columns 3
+[transit   32.0s] platform Steintor len 44.8 ramps [True, True] island True shelters 1 tris so far 29811
+[transit   32.0s] mendini stop at [-402.3 -261.6] len 23.2 road side 1
+[transit   32.1s] mendini stop at [-403.7 -242.7] len 23.6 road side -1
+[transit   33.5s] catenary stations 49 masts 87 contact wires 23
+[transit   33.5s] done: tris 39341 collision 24957 walk 18563
+Mon Nov  9 15:38:53     2026

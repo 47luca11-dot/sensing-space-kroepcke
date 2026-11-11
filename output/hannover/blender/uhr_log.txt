@@ -1,0 +1,63 @@
+C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\kroepcke_uhr.py:23: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new(name); m.use_nodes = True
+C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\kroepcke_uhr.py:42: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new(name); m.use_nodes = True; nt = m.node_tree
+KROEPCKE_UHR objects 1282 tris 62028
+KROEPCKE_UHR nodes after join 24
+INFO Draco mesh compression is available, use library at C:\Program Files\Blender Foundation\Blender 5.0\5.0\scripts\addons_core\io_scene_gltf2\extern_draco.dll
+21:10:02 | INFO: Starting glTF 2.0 export
+21:10:02 | INFO: Extracting primitive: Stufe_Granit
+21:10:02 | INFO: Primitives created: 1
+21:10:02 | INFO: Extracting primitive: Sockel_Platte
+21:10:02 | INFO: Primitives created: 1
+21:10:02 | INFO: Extracting primitive: Sockel_Kern
+21:10:02 | INFO: Primitives created: 1
+21:10:02 | INFO: Extracting primitive: Stern_Sockel_0_-0.80
+21:10:02 | INFO: Primitives created: 1
+21:10:02 | INFO: Extracting primitive: Vitrine_Glas_0
+21:10:02 | INFO: Primitives created: 1
+21:10:02 | INFO: Extracting primitive: Vitrine_Kunst_0
+21:10:02 | INFO: Primitives created: 1
+21:10:02 | INFO: Extracting primitive: Vitrine_Kunst_1
+21:10:02 | INFO: Primitives created: 1
+21:10:02 | INFO: Extracting primitive: Vitrine_Kunst_2
+21:10:02 | INFO: Primitives created: 1
+21:10:02 | INFO: Extracting primitive: Vitrine_Kunst_3
+21:10:02 | INFO: Primitives created: 1
+21:10:02 | INFO: Extracting primitive: Zifferblatt_0
+21:10:02 | INFO: Primitives created: 1
+21:10:02 | INFO: Extracting primitive: Strich_0_0
+21:10:02 | INFO: Primitives created: 1
+21:10:02 | INFO: Extracting primitive: Zeiger_hour_0
+21:10:02 | INFO: Primitives created: 1
+21:10:02 | INFO: Extracting primitive: Zeiger_minute_0
+21:10:02 | INFO: Primitives created: 1
+21:10:02 | INFO: Extracting primitive: Zeiger_hour_1
+21:10:02 | INFO: Primitives created: 1
+21:10:02 | INFO: Extracting primitive: Zeiger_minute_1
+21:10:02 | INFO: Primitives created: 1
+21:10:02 | INFO: Extracting primitive: Zeiger_hour_2
+21:10:02 | INFO: Primitives created: 1
+21:10:02 | INFO: Extracting primitive: Zeiger_minute_2
+21:10:02 | INFO: Primitives created: 1
+21:10:02 | INFO: Extracting primitive: Zeiger_hour_3
+21:10:02 | INFO: Primitives created: 1
+21:10:02 | INFO: Extracting primitive: Zeiger_minute_3
+21:10:02 | INFO: Primitives created: 1
+21:10:02 | INFO: Extracting primitive: Bambus_0_Latte_0_0
+21:10:02 | INFO: Primitives created: 1
+21:10:02 | INFO: Extracting primitive: Bambus_0_Pfosten_-1_-1
+21:10:02 | INFO: Primitives created: 1
+21:10:02 | INFO: Extracting primitive: Bambus_0_Erde
+21:10:02 | INFO: Primitives created: 1
+21:10:02 | INFO: Extracting primitive: Bambus_0_Halm_0
+21:10:02 | INFO: Primitives created: 1
+21:10:02 | INFO: Extracting primitive: Bambus_0_Blatt_0
+21:10:02 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+21:10:02 | INFO: Primitives created: 1
+21:10:02 | INFO: Finished glTF 2.0 export in 0.16994547843933105 s
+
+Info: Saved as "kroepcke_uhr.blend"
+Blender 5.0.1 (hash a3db93c5b259 built 2025-12-16 01:32:30)
+
+Blender quit

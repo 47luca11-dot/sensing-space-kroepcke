@@ -1,0 +1,4 @@
+tris 350774 bounds [[-273.0, -1.2, 277.05], [-205.4, 97.6, 313.41]]
+rays 400000 hits 266837 backface hits 16 (0.006%)
+by object: [('MK_det_Sandstein', 15), ('MK_roof_Kupfer', 1)]
+hot spots (x,y,z game): [((np.int64(-272), np.int64(6), np.int64(297)), 15), ((np.int64(-225), np.int64(21), np.int64(279)), 1)]

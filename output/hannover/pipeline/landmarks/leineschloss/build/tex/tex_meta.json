@@ -1,0 +1,16 @@
+{
+ "sandstein": 2.0,
+ "sandstein_quader": 3.0,
+ "rustika": 3.0,
+ "putz": 3.0,
+ "schiefer": 2.0,
+ "zink": 2.0,
+ "kupfer": 2.0,
+ "marmor": 3.0,
+ "granit": 1.2,
+ "quai": 4.0,
+ "flachdach": 4.0,
+ "holz": 1.0,
+ "putz_weiss": 3.0,
+ "platten": 3.0
+}

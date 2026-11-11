@@ -1,0 +1,50 @@
+20:57:32 | INFO: Data are loaded, start creating Blender stuff
+20:57:32 | INFO: Blender create Mesh node anz_detail_nocol
+20:57:32 | INFO: Blender create Mesh node anz_dome
+20:57:32 | INFO: Blender create Mesh node anz_dome_detail_nocol
+20:57:32 | INFO: Blender create Mesh node anz_letters_nocol
+20:57:32 | INFO: Blender create Mesh node anz_shell
+20:57:32 | INFO: Blender create Mesh node anz_windows_nocol
+20:57:32 | INFO: Blender create Mesh node bad_detail_nocol
+20:57:33 | INFO: Blender create Mesh node bad_letters_nocol
+20:57:33 | INFO: Blender create Mesh node bad_roof
+20:57:33 | INFO: Blender create Mesh node bad_roof_detail_nocol
+20:57:33 | INFO: Blender create Mesh node bad_shell
+20:57:33 | INFO: Blender create Mesh node bad_windows_nocol
+20:57:33 | INFO: glTF import finished in 0.91s
+C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\pipeline\landmarks\anzeiger\qa\qa_render.py:55: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  w = bpy.data.worlds.new('w'); sc.world = w; w.use_nodes = True
+00:19.641  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\qa2_anzeiger_holes_north_block.png'
+00:24.844  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\qa2_anzeiger_holes_rear_sw.png'
+00:30.438  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\qa2_anzeiger_holes_rear_nw.png'
+00:37.141  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\qa2_anzeiger_holes_east.png'
+00:40.891  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\qa2_anzeiger_holes_top.png'
+00:45.297  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\qa2_anzeiger_holes_low_west.png'
+00:50.563  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\qa2_anzeiger_holes_south.png'
+00:56.297  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\qa2_anzeiger_holes_court.png'
+01:00.125  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\qa2_anzeiger_holes2_strip.png'
+01:04.500  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\qa2_anzeiger_holes2_gap_sw.png'
+01:07.891  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\qa2_anzeiger_holes2_rear_sw.png'
+01:10.797  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\qa2_anzeiger_holes2_nw_low.png'
+01:16.969  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\qa2_anzeiger_holes3_lightwell.png'
+01:20.735  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\qa2_anzeiger_holes3_lightwell_top.png'
+01:23.985  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\qa2_anzeiger_aerial_sw_magenta.png'
+QA landmark objects 12
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/qa2_anzeiger_holes_north_block.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/qa2_anzeiger_holes_rear_sw.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/qa2_anzeiger_holes_rear_nw.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/qa2_anzeiger_holes_east.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/qa2_anzeiger_holes_top.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/qa2_anzeiger_holes_low_west.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/qa2_anzeiger_holes_south.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/qa2_anzeiger_holes_court.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/qa2_anzeiger_holes2_strip.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/qa2_anzeiger_holes2_gap_sw.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/qa2_anzeiger_holes2_rear_sw.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/qa2_anzeiger_holes2_nw_low.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/qa2_anzeiger_holes3_lightwell.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/qa2_anzeiger_holes3_lightwell_top.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/qa2_anzeiger_aerial_sw_magenta.png
+Blender 5.0.1 (hash a3db93c5b259 built 2025-12-16 01:32:30)
+
+Blender quit

@@ -1,0 +1,5 @@
+scene tris 2204532
+see-through: 0 windows with leaking rays (0 rays) of 2766
+gaps around openings: 0 windows (0 rays)
+z-fighting candidates: 0 of 1241557 d0 faces (all checked)
+wall boundary edges: orig 20807, new 39218, added 18411, removed 0

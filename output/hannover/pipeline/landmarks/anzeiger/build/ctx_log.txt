@@ -1,0 +1,2 @@
+CTX lod2 buildings 68 tris 26695 facade tiles []
+SHOTS ['front', 'gose', 'square_ne', 'dome_e', 'aerial_se', 'aerial_nw', 'portals', 'crown', 'lookup', 'bay_close', 'kestner', 'west', 'portal_eye', 'lightwell', 'north_ne', 'roofs_top']

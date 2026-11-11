@@ -1,0 +1,22 @@
+🔄 blenderkit: Verbose is enabled
+🔄 blenderkit: Read in JSON settings from file
+ℹ️  blenderkit: Ports reordered so first port is now 62485 (previous index was 0) [21:07:51.212, client_lib.py:125]
+BlenderMCP addon registered
+Created history step e346ab67-3a11-4edd-ab9d-65999c486661
+ℹ️  blenderkit: Created new search history step [21:07:51.510, search.py:1926]
+ℹ️  blenderkit: No temporarily enabled addons to clean up [21:07:51.510, download.py:398]
+00:02.969  blend            | Read blend: "C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\kroepcke_uhr.blend"
+ℹ️  blenderkit: No temporarily enabled addons to clean up [21:07:51.562, download.py:398]
+C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\preview_uhr.py:4: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  w = bpy.data.worlds.new('w'); sc.world = w; w.use_nodes = True
+C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\preview_uhr.py:9: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('pave'); m.use_nodes = True
+00:08.141  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\uhr_front.png'
+00:09.594  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\uhr_dial.png'
+00:11.297  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\uhr_base.png'
+ℹ️  blenderkit: Unregistering BlenderKit add-on [21:07:59.856, __init__.py:2696]
+ℹ️  blenderkit: No temporarily enabled addons to clean up [21:07:59.856, download.py:398]
+BlenderMCP addon unregistered
+Blender 5.0.1 (hash a3db93c5b259 built 2025-12-16 01:32:30)
+
+Blender quit

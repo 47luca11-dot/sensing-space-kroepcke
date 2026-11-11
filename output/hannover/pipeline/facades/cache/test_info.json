@@ -1,0 +1,1967 @@
+[
+{
+"id": "ID_661a2aa2-d13a-33c5-b3b5-b0327e254c9a",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.62,
+"y_ref": -0.62,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 2.6,
+"height": 3.0,
+"retail_walls": 0,
+"openings": 0,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_3",
+"tris": 106,
+"instances": 0
+},
+{
+"id": "ID_84c907f3-0cb0-3b58-b370-ed0645ed516e",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.11,
+"y_ref": -0.31,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 2.6,
+"height": 2.8,
+"retail_walls": 0,
+"openings": 4,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_3",
+"tris": 202,
+"instances": 12
+},
+{
+"id": "ID_4b4e15ea-ae88-337e-a7c7-0218b75ca260",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.38,
+"y_ref": -0.58,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 2.6,
+"height": 1.7,
+"retail_walls": 0,
+"openings": 0,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_1",
+"tris": 106,
+"instances": 0
+},
+{
+"id": "ID_fc1db415-757a-3360-8ede-7402c0ec5d3c",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.19,
+"y_ref": -0.64,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 3.11,
+"height": 3.7,
+"retail_walls": 0,
+"openings": 6,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_3",
+"tris": 332,
+"instances": 21
+},
+{
+"id": "ID_abc2cc9b-f64a-35d5-8bcf-e5b3c962f387",
+"kind": "nachkrieg",
+"street": null,
+"number": null,
+"y_lod2": -0.81,
+"y_ref": -1.13,
+"storeys": 1,
+"storey_h": 3.3,
+"gf_h": 3.75,
+"height": 4.3,
+"retail_walls": 0,
+"openings": 13,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_3",
+"tris": 741,
+"instances": 51
+},
+{
+"id": "ID_58f63cf5-b16f-3118-a790-2730cef7ab7e",
+"kind": "modern",
+"street": null,
+"number": null,
+"y_lod2": -0.12,
+"y_ref": -0.34,
+"storeys": 2,
+"storey_h": 2.7,
+"gf_h": 4.61,
+"height": 6.5,
+"retail_walls": 0,
+"openings": 7,
+"pitched": false,
+"wall_mat": "panel",
+"tile": "bldg_-4_3",
+"tris": 781,
+"instances": 24
+},
+{
+"id": "ID_26a3ce99-5ee8-317d-8540-2489e6119f5d",
+"kind": "altbau",
+"street": null,
+"number": null,
+"y_lod2": -0.23,
+"y_ref": -0.7,
+"storeys": 1,
+"storey_h": 3.94,
+"gf_h": 3.02,
+"height": 3.5,
+"retail_walls": 0,
+"openings": 6,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_3",
+"tris": 506,
+"instances": 21
+},
+{
+"id": "ID_3fa079f8-93e2-30c0-abfc-e9ecc5bf8d81",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -1.01,
+"y_ref": -1.01,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 3.76,
+"height": 4.2,
+"retail_walls": 0,
+"openings": 3,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_3",
+"tris": 260,
+"instances": 9
+},
+{
+"id": "ID_71c669b3-3e2e-3dcd-8b70-7fae1ab59f95",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": 0.0,
+"y_ref": -0.21,
+"storeys": 2,
+"storey_h": 2.7,
+"gf_h": 3.0,
+"height": 5.1,
+"retail_walls": 0,
+"openings": 1,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_3",
+"tris": 136,
+"instances": 3
+},
+{
+"id": "ID_6b962ebf-49de-35d8-b913-56548a97f375",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.32,
+"y_ref": -0.59,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 3.42,
+"height": 3.9,
+"retail_walls": 0,
+"openings": 2,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_3",
+"tris": 295,
+"instances": 6
+},
+{
+"id": "ID_371f5e19-3bf0-3e23-bb18-6e78b9010512",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.34,
+"y_ref": -0.34,
+"storeys": 2,
+"storey_h": 2.7,
+"gf_h": 3.0,
+"height": 5.1,
+"retail_walls": 0,
+"openings": 0,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_3",
+"tris": 192,
+"instances": 0
+},
+{
+"id": "ID_fa2f0156-e3bb-3491-84d5-00d3f728b9ce",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.28,
+"y_ref": -0.53,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 3.21,
+"height": 3.8,
+"retail_walls": 0,
+"openings": 1,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_3",
+"tris": 148,
+"instances": 3
+},
+{
+"id": "ID_b7f4c22c-f3c8-326e-9853-4558bf8b2995",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.34,
+"y_ref": -0.62,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 3.33,
+"height": 3.9,
+"retail_walls": 0,
+"openings": 1,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_3",
+"tris": 148,
+"instances": 3
+},
+{
+"id": "ID_9b7b89a1-f618-35da-a413-bf7d819390db",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.29,
+"y_ref": -0.29,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 3.15,
+"height": 3.6,
+"retail_walls": 0,
+"openings": 0,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_3",
+"tris": 93,
+"instances": 0
+},
+{
+"id": "ID_a4df8d00-82f9-3600-bbec-9721ad171356",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.83,
+"y_ref": -0.98,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 3.7,
+"height": 4.3,
+"retail_walls": 0,
+"openings": 6,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_3",
+"tris": 340,
+"instances": 19
+},
+{
+"id": "ID_795815ad-b12c-3258-8b10-5510b5600e7a",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.17,
+"y_ref": -0.39,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 2.92,
+"height": 3.4,
+"retail_walls": 0,
+"openings": 4,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_3",
+"tris": 254,
+"instances": 13
+},
+{
+"id": "ID_9f20b1a1-8aae-3a68-9d8e-f25c2579d918",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.96,
+"y_ref": -1.16,
+"storeys": 2,
+"storey_h": 2.7,
+"gf_h": 3.0,
+"height": 6.0,
+"retail_walls": 0,
+"openings": 2,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_3",
+"tris": 412,
+"instances": 6
+},
+{
+"id": "ID_678d4d75-f1a5-37b8-a62b-59167473e847",
+"kind": "altbau",
+"street": "Knochenhauerstraße",
+"number": "23",
+"y_lod2": -0.6,
+"y_ref": -0.8,
+"storeys": 4,
+"storey_h": 2.82,
+"gf_h": 3.2,
+"height": 12.3,
+"retail_walls": 1,
+"openings": 37,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n6720611064",
+"name": "Viet Kafé",
+"kind": "cafe",
+"p": [
+-356.5,
+-0.84,
+190.83
+],
+"n": [
+-0.985,
+0.172
+],
+"sign": "fascia_panel"
+},
+{
+"id": "osm-n2784163843",
+"name": "Cape Town",
+"kind": "cafe",
+"p": [
+-356.05,
+-0.79,
+193.42
+],
+"n": [
+-0.985,
+0.172
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_1",
+"tris": 4071,
+"instances": 194
+},
+{
+"id": "ID_c92d063e-7c13-3f65-bd76-4892e019e4c5",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.17,
+"y_ref": -0.37,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 2.98,
+"height": 3.4,
+"retail_walls": 0,
+"openings": 4,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_3",
+"tris": 231,
+"instances": 13
+},
+{
+"id": "ID_e9694952-3b48-3189-9e87-f9baf1472379",
+"kind": "nachkrieg",
+"street": "Leinstraße",
+"number": "30",
+"y_lod2": -1.25,
+"y_ref": -1.45,
+"storeys": 3,
+"storey_h": 3.45,
+"gf_h": 3.71,
+"height": 11.8,
+"retail_walls": 0,
+"openings": 18,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_3",
+"tris": 1083,
+"instances": 80
+},
+{
+"id": "ID_82031d3d-1949-3d17-bbd1-ccccd7a70f9e",
+"kind": "altbau",
+"street": "Knochenhauerstraße",
+"number": "13",
+"y_lod2": -0.65,
+"y_ref": -0.85,
+"storeys": 3,
+"storey_h": 2.78,
+"gf_h": 3.2,
+"height": 9.4,
+"retail_walls": 3,
+"openings": 37,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n6720664826",
+"name": "BUAFAH | Thai Art Bistro",
+"kind": "cafe",
+"p": [
+-360.39,
+-0.9,
+119.0
+],
+"n": [
+-0.997,
+-0.073
+],
+"sign": "fascia_panel"
+},
+{
+"id": "osm-n6720666312",
+"name": "Herrlichperlich",
+"kind": "jewellery",
+"p": [
+-349.96,
+-0.59,
+131.24
+],
+"n": [
+0.997,
+0.077
+],
+"sign": "channel_letters"
+}
+],
+"tile": "bldg_-4_1",
+"tris": 5493,
+"instances": 184
+},
+{
+"id": "ID_09cc9864-8f3e-3066-8769-8ddc31e636fd",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.29,
+"y_ref": -0.5,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 2.6,
+"height": 2.8,
+"retail_walls": 0,
+"openings": 1,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_1",
+"tris": 159,
+"instances": 3
+},
+{
+"id": "ID_e191660a-829b-3bd3-9afe-00a65582828a",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.92,
+"y_ref": -0.7,
+"storeys": 6,
+"storey_h": 3.22,
+"gf_h": 3.0,
+"height": 20.0,
+"retail_walls": 0,
+"openings": 2,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_3",
+"tris": 176,
+"instances": 6
+},
+{
+"id": "ID_c97a9fe9-e04b-32c6-85ed-04b47bb6db3b",
+"kind": "altbau",
+"street": "Kramerstraße",
+"number": "20",
+"y_lod2": -0.27,
+"y_ref": -0.47,
+"storeys": 4,
+"storey_h": 3.07,
+"gf_h": 3.2,
+"height": 13.0,
+"retail_walls": 1,
+"openings": 5,
+"pitched": true,
+"wall_mat": "brick",
+"shops": [
+{
+"id": "osm-n12942193901",
+"name": "Eismanufaktur Hannover Arena",
+"kind": "cafe",
+"p": [
+-348.77,
+-0.52,
+305.18
+],
+"n": [
+-0.238,
+-0.971
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_3",
+"tris": 2624,
+"instances": 26
+},
+{
+"id": "ID_91d3bc7c-4419-360d-8a34-17ea0ed9a001",
+"kind": "altbau",
+"street": "Kramerstraße",
+"number": "25",
+"y_lod2": -0.02,
+"y_ref": -0.22,
+"storeys": 5,
+"storey_h": 4.06,
+"gf_h": 4.45,
+"height": 21.3,
+"retail_walls": 2,
+"openings": 18,
+"pitched": true,
+"wall_mat": "brick",
+"shops": [
+{
+"id": "osm-n10313166015",
+"name": "Hannoversche Kaffee Manufaktur",
+"kind": "cafe",
+"p": [
+-300.61,
+-0.27,
+301.56
+],
+"n": [
+0.57,
+-0.822
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_3",
+"tris": 3797,
+"instances": 81
+},
+{
+"id": "ID_4a4b2a1d-504a-319b-83b9-6f73ec60f934",
+"kind": "altbau",
+"street": "Knochenhauerstraße",
+"number": "19",
+"y_lod2": -0.47,
+"y_ref": -0.7,
+"storeys": 3,
+"storey_h": 2.84,
+"gf_h": 3.2,
+"height": 9.5,
+"retail_walls": 1,
+"openings": 15,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n6720663710",
+"name": "Stephan Krause",
+"kind": "salon",
+"p": [
+-359.84,
+-0.75,
+164.6
+],
+"n": [
+-0.991,
+0.137
+],
+"sign": "fascia_panel"
+},
+{
+"id": "osm-n6720648707",
+"name": "For your nails",
+"kind": "drugstore",
+"p": [
+-359.34,
+-0.75,
+168.26
+],
+"n": [
+-0.991,
+0.137
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_1",
+"tris": 2883,
+"instances": 82
+},
+{
+"id": "ID_ce368573-8155-39e4-9b5b-b44caea88b22",
+"kind": "fachwerk",
+"street": "Kramerstraße",
+"number": "19",
+"y_lod2": -0.35,
+"y_ref": -0.58,
+"storeys": 4,
+"storey_h": 3.04,
+"gf_h": 3.39,
+"height": 13.1,
+"retail_walls": 2,
+"openings": 26,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n5055919146",
+"name": "Farina Spritz",
+"kind": "kiosk",
+"p": [
+-354.51,
+-0.63,
+306.58
+],
+"n": [
+-0.238,
+-0.971
+],
+"sign": "light_box"
+}
+],
+"tile": "bldg_-4_3",
+"tris": 6744,
+"instances": 81
+},
+{
+"id": "ID_ceafc391-5472-371e-b01a-2d879eb79b5e",
+"kind": "fachwerk",
+"street": "Kramerstraße",
+"number": "24",
+"y_lod2": -0.04,
+"y_ref": -0.26,
+"storeys": 3,
+"storey_h": 3.8,
+"gf_h": 3.48,
+"height": 11.7,
+"retail_walls": 1,
+"openings": 31,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n3689109043",
+"name": "Broyhan Haus",
+"kind": "cafe",
+"p": [
+-319.73,
+-0.31,
+297.62
+],
+"n": [
+-0.158,
+-0.987
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_3",
+"tris": 7741,
+"instances": 103
+},
+{
+"id": "ID_5a28005b-0edf-3c30-b758-d42752b753db",
+"kind": "fachwerk",
+"street": "Kramerstraße",
+"number": "14",
+"y_lod2": -0.62,
+"y_ref": -0.82,
+"storeys": 4,
+"storey_h": 3.02,
+"gf_h": 3.86,
+"height": 13.5,
+"retail_walls": 1,
+"openings": 12,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n5055919144",
+"name": "K 14 Kaffeewerk",
+"kind": "cafe",
+"p": [
+-390.26,
+-0.87,
+317.8
+],
+"n": [
+-0.205,
+-0.979
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_3",
+"tris": 2809,
+"instances": 36
+},
+{
+"id": "ID_2d579363-4aff-3a6b-8adf-c6bd11db503e",
+"kind": "fachwerk",
+"street": "Ballhofstraße",
+"number": "4",
+"y_lod2": -0.88,
+"y_ref": -0.88,
+"storeys": 3,
+"storey_h": 3.22,
+"gf_h": 3.44,
+"height": 10.5,
+"retail_walls": 0,
+"openings": 51,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-4_1",
+"tris": 5571,
+"instances": 167
+},
+{
+"id": "ID_edd0328c-dce8-3cd1-8ef6-9b54a11d0c81",
+"kind": "nachkrieg",
+"street": "Hannah-Arendt-Platz",
+"number": "2",
+"y_lod2": -1.56,
+"y_ref": -1.15,
+"storeys": 4,
+"storey_h": 3.62,
+"gf_h": 3.66,
+"height": 15.1,
+"retail_walls": 0,
+"openings": 236,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-4_3",
+"tris": 6332,
+"instances": 944
+},
+{
+"id": "ID_7346e2cd-e8b5-317e-ab00-1eb7fbe5c528",
+"kind": "altbau",
+"street": "Knochenhauerstraße",
+"number": "16",
+"y_lod2": -0.73,
+"y_ref": -0.98,
+"storeys": 3,
+"storey_h": 2.83,
+"gf_h": 3.2,
+"height": 9.5,
+"retail_walls": 2,
+"openings": 43,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n11805422269",
+"name": "Café Donnerlitjen",
+"kind": "cafe",
+"p": [
+-378.98,
+-1.08,
+130.82
+],
+"n": [
+1.0,
+0.0
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_1",
+"tris": 3258,
+"instances": 186
+},
+{
+"id": "ID_b1118e14-44ec-3267-9490-0ebdd3403062",
+"kind": "altbau",
+"street": "Leinstraße",
+"number": "33",
+"y_lod2": -1.37,
+"y_ref": -1.58,
+"storeys": 4,
+"storey_h": 2.93,
+"gf_h": 4.46,
+"height": 13.9,
+"retail_walls": 0,
+"openings": 40,
+"pitched": true,
+"wall_mat": "stone",
+"tile": "bldg_-4_3",
+"tris": 1630,
+"instances": 189
+},
+{
+"id": "ID_2aa725a7-5a75-3ed9-baef-44deeca184e9",
+"kind": "fachwerk",
+"street": "Kramerstraße",
+"number": "22",
+"y_lod2": -0.19,
+"y_ref": -0.4,
+"storeys": 4,
+"storey_h": 2.84,
+"gf_h": 3.6,
+"height": 12.7,
+"retail_walls": 1,
+"openings": 18,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n11807222777",
+"name": "Wok 'n' Joy",
+"kind": "cafe",
+"p": [
+-332.13,
+-0.45,
+301.1
+],
+"n": [
+-0.238,
+-0.971
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_3",
+"tris": 3792,
+"instances": 56
+},
+{
+"id": "ID_e7d73b0c-342b-3417-b3ee-19a271d51163",
+"kind": "fachwerk",
+"street": "Kramerstraße",
+"number": "18",
+"y_lod2": -0.38,
+"y_ref": -0.63,
+"storeys": 4,
+"storey_h": 3.11,
+"gf_h": 3.65,
+"height": 13.6,
+"retail_walls": 1,
+"openings": 19,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n5055919145",
+"name": "Brautmoden an der Marktkirche",
+"kind": "fashion",
+"p": [
+-362.0,
+-0.68,
+308.58
+],
+"n": [
+-0.343,
+-0.939
+],
+"sign": "channel_letters"
+}
+],
+"tile": "bldg_-4_3",
+"tris": 8130,
+"instances": 59
+},
+{
+"id": "ID_5cfbacab-7718-3f54-bdf1-8c3724290ae6",
+"kind": "nachkrieg",
+"street": "Knochenhauerstraße",
+"number": "18",
+"y_lod2": -0.86,
+"y_ref": -1.12,
+"storeys": 3,
+"storey_h": 3.08,
+"gf_h": 3.69,
+"height": 10.4,
+"retail_walls": 1,
+"openings": 18,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n6720661004",
+"name": "OPTICK",
+"kind": "optician",
+"p": [
+-378.89,
+-1.17,
+143.43
+],
+"n": [
+1.0,
+-0.012
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_1",
+"tris": 1595,
+"instances": 77
+},
+{
+"id": "ID_a77efcdb-1bdb-39da-b791-ae998be5a65e",
+"kind": "fachwerk",
+"street": "Kramerstraße",
+"number": "17",
+"y_lod2": -0.58,
+"y_ref": -0.83,
+"storeys": 4,
+"storey_h": 3.6,
+"gf_h": 3.71,
+"height": 15.1,
+"retail_walls": 1,
+"openings": 71,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n6720644481",
+"name": "Layalina",
+"kind": "cafe",
+"p": [
+-369.43,
+-0.83,
+311.27
+],
+"n": [
+-0.332,
+-0.943
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_3",
+"tris": 14850,
+"instances": 200
+},
+{
+"id": "ID_18c136e6-d795-3cdf-a511-a405f0a2fcfe",
+"kind": "modern",
+"street": "Leinstraße",
+"number": "31",
+"y_lod2": -0.99,
+"y_ref": -0.55,
+"storeys": 6,
+"storey_h": 3.18,
+"gf_h": 4.72,
+"height": 21.4,
+"retail_walls": 0,
+"openings": 31,
+"pitched": false,
+"wall_mat": "panel",
+"tile": "bldg_-4_3",
+"tris": 1671,
+"instances": 184
+},
+{
+"id": "ID_1c76a872-2ad2-365d-8ee4-75f963dc3478",
+"kind": "modern",
+"street": "Am Markte",
+"number": "8",
+"y_lod2": -0.2,
+"y_ref": -0.2,
+"storeys": 4,
+"storey_h": 3.84,
+"gf_h": 4.78,
+"height": 17.3,
+"retail_walls": 2,
+"openings": 355,
+"pitched": false,
+"wall_mat": "panel",
+"tile": "bldg_-4_3",
+"tris": 14808,
+"instances": 1970
+},
+{
+"id": "ID_ce4154f1-e9ab-3da8-81fc-215726ef3275",
+"kind": "nachkrieg",
+"street": "Kramerstraße",
+"number": "23",
+"y_lod2": -0.11,
+"y_ref": -0.36,
+"storeys": 3,
+"storey_h": 3.5,
+"gf_h": 4.04,
+"height": 11.6,
+"retail_walls": 1,
+"openings": 14,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n5055919150",
+"name": "Antiquitäten Schmuck - Münzen - Briefmarken",
+"kind": "home",
+"p": [
+-328.52,
+-0.41,
+299.03
+],
+"n": [
+-0.162,
+-0.987
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_3",
+"tris": 2564,
+"instances": 62
+},
+{
+"id": "ID_3b50862f-d9bc-369f-abcb-751cb491d4d8",
+"kind": "altbau",
+"street": "Knochenhauerstraße",
+"number": "17",
+"y_lod2": -0.51,
+"y_ref": -0.73,
+"storeys": 3,
+"storey_h": 2.76,
+"gf_h": 3.2,
+"height": 9.3,
+"retail_walls": 1,
+"openings": 23,
+"pitched": true,
+"wall_mat": "brick",
+"shops": [
+{
+"id": "osm-n6720662888",
+"name": "Citypfandhaus",
+"kind": "jewellery",
+"p": [
+-360.8,
+-0.78,
+153.53
+],
+"n": [
+-0.997,
+0.076
+],
+"sign": "channel_letters"
+},
+{
+"id": "osm-n6720629451",
+"name": "La Vie",
+"kind": "fashion",
+"p": [
+-360.62,
+-0.78,
+155.91
+],
+"n": [
+-0.997,
+0.076
+],
+"sign": "channel_letters"
+}
+],
+"tile": "bldg_-4_1",
+"tris": 3444,
+"instances": 118
+},
+{
+"id": "ID_68690981-4d75-387b-9e28-cd6ea1abdc73",
+"kind": "altbau",
+"street": "Knochenhauerstraße",
+"number": "21",
+"y_lod2": -0.59,
+"y_ref": -0.79,
+"storeys": 4,
+"storey_h": 2.83,
+"gf_h": 3.2,
+"height": 12.3,
+"retail_walls": 1,
+"openings": 37,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-4_1",
+"tris": 2444,
+"instances": 179
+},
+{
+"id": "ID_cd5d91d6-ce32-3f98-972a-b9579ce4df2d",
+"kind": "altbau",
+"street": "Knochenhauerstraße",
+"number": "20",
+"y_lod2": -0.84,
+"y_ref": -0.97,
+"storeys": 2,
+"storey_h": 5.4,
+"gf_h": 4.59,
+"height": 10.6,
+"retail_walls": 3,
+"openings": 22,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n6720642939",
+"name": "Modecafé",
+"kind": "fashion",
+"p": [
+-377.95,
+-0.97,
+158.89
+],
+"n": [
+0.999,
+-0.039
+],
+"sign": "channel_letters"
+},
+{
+"id": "osm-n6720614543",
+"name": "Vintage Queen",
+"kind": "fashion",
+"p": [
+-378.73,
+-1.14,
+149.83
+],
+"n": [
+1.0,
+-0.031
+],
+"sign": "channel_letters"
+}
+],
+"tile": "bldg_-4_1",
+"tris": 4455,
+"instances": 94
+},
+{
+"id": "ID_ae3514fa-c314-3569-9f32-ca13d41882b2",
+"kind": "nachkrieg",
+"street": "Knochenhauerstraße",
+"number": "28",
+"y_lod2": -0.9,
+"y_ref": -0.9,
+"storeys": 2,
+"storey_h": 4.31,
+"gf_h": 4.32,
+"height": 9.2,
+"retail_walls": 3,
+"openings": 33,
+"pitched": true,
+"wall_mat": "brick",
+"shops": [
+{
+"id": "osm-n10995567839",
+"name": "Ballhof Café",
+"kind": "cafe",
+"p": [
+-371.1,
+-0.87,
+179.0
+],
+"n": [
+0.834,
+-0.552
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_1",
+"tris": 5834,
+"instances": 151
+},
+{
+"id": "ID_44b0d565-0f01-3f3d-b60c-8f4d60063815",
+"kind": "fachwerk",
+"street": "Kramerstraße",
+"number": "15",
+"y_lod2": -0.54,
+"y_ref": -0.78,
+"storeys": 4,
+"storey_h": 2.91,
+"gf_h": 3.79,
+"height": 13.1,
+"retail_walls": 1,
+"openings": 7,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n8939589067",
+"name": "Carl Küster",
+"kind": "books",
+"p": [
+-384.59,
+-0.83,
+316.48
+],
+"n": [
+-0.276,
+-0.961
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_3",
+"tris": 3436,
+"instances": 23
+},
+{
+"id": "ID_25d9c66a-ad4d-3de6-a9e8-47af6142e342",
+"kind": "altbau",
+"street": "Kramerstraße",
+"number": "21",
+"y_lod2": -0.24,
+"y_ref": -0.45,
+"storeys": 4,
+"storey_h": 3.06,
+"gf_h": 3.2,
+"height": 13.0,
+"retail_walls": 1,
+"openings": 9,
+"pitched": true,
+"wall_mat": "brick",
+"shops": [
+{
+"id": "osm-n5055919147",
+"name": "Asia Food",
+"kind": "cafe",
+"p": [
+-344.62,
+-0.5,
+304.16
+],
+"n": [
+-0.238,
+-0.971
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_3",
+"tris": 1815,
+"instances": 50
+},
+{
+"id": "ID_06668730-d561-3641-8c04-5b276f363590",
+"kind": "altbau",
+"street": "Knochenhauerstraße",
+"number": "15",
+"y_lod2": -0.58,
+"y_ref": -0.82,
+"storeys": 2,
+"storey_h": 3.99,
+"gf_h": 4.5,
+"height": 9.1,
+"retail_walls": 1,
+"openings": 17,
+"pitched": true,
+"wall_mat": "stone",
+"tile": "bldg_-4_1",
+"tris": 2563,
+"instances": 95
+},
+{
+"id": "ID_fd4a2d94-0ccc-3c6f-a554-94ff8a4b021b",
+"kind": "fachwerk",
+"street": "Kramerstraße",
+"number": "13",
+"y_lod2": -0.86,
+"y_ref": -1.06,
+"storeys": 4,
+"storey_h": 3.9,
+"gf_h": 3.64,
+"height": 15.9,
+"retail_walls": 1,
+"openings": 19,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n3956509986",
+"name": "Traut Euch",
+"kind": "jewellery",
+"p": [
+-393.67,
+-1.11,
+318.43
+],
+"n": [
+-0.154,
+-0.988
+],
+"sign": "channel_letters"
+}
+],
+"tile": "bldg_-4_3",
+"tris": 3941,
+"instances": 59
+},
+{
+"id": "ID_ea1b603c-beee-3fc7-b862-a11a56fcf488",
+"kind": "fachwerk",
+"street": "Kramerstraße",
+"number": "16",
+"y_lod2": -0.48,
+"y_ref": -0.7,
+"storeys": 4,
+"storey_h": 3.33,
+"gf_h": 3.38,
+"height": 14.0,
+"retail_walls": 1,
+"openings": 16,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n343319826",
+"name": "Juwelier Albrecht",
+"kind": "jewellery",
+"p": [
+-380.19,
+-0.75,
+315.07
+],
+"n": [
+-0.334,
+-0.943
+],
+"sign": "channel_letters"
+}
+],
+"tile": "bldg_-4_3",
+"tris": 5827,
+"instances": 48
+},
+{
+"id": "ID_d792df47-fc19-3b8e-a61a-cd858cb96955",
+"kind": "fachwerk",
+"street": "Kramerstraße",
+"number": "10",
+"y_lod2": -0.77,
+"y_ref": -1.01,
+"storeys": 4,
+"storey_h": 3.78,
+"gf_h": 3.66,
+"height": 15.6,
+"retail_walls": 1,
+"openings": 22,
+"pitched": true,
+"wall_mat": "brick",
+"shops": [
+{
+"id": "osm-n6720658721",
+"name": "Kenibo",
+"kind": "cafe",
+"p": [
+-389.0,
+-1.06,
+306.89
+],
+"n": [
+0.164,
+0.986
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_3",
+"tris": 4734,
+"instances": 62
+},
+{
+"id": "ID_c193f133-0049-3c06-9107-611bc134b089",
+"kind": "parking",
+"street": "Schmiedestraße",
+"number": "13",
+"y_lod2": -0.41,
+"y_ref": -0.61,
+"storeys": 5,
+"storey_h": 2.7,
+"gf_h": 3.2,
+"height": 14.8,
+"retail_walls": 2,
+"openings": 171,
+"pitched": false,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n10311381949",
+"name": "BARMER",
+"kind": "office",
+"p": [
+-292.02,
+-0.66,
+119.26
+],
+"n": [
+0.982,
+-0.189
+],
+"sign": "channel_letters"
+},
+{
+"id": "osm-n349975958",
+"name": "Brauhaus Ernst-August",
+"kind": "cafe",
+"p": [
+-288.49,
+-0.65,
+147.15
+],
+"n": [
+0.983,
+-0.186
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_1",
+"tris": 7531,
+"instances": 213
+},
+{
+"id": "ID_c5e4597d-9e39-3fd1-803f-2308a6696e8a",
+"kind": "altbau",
+"street": "Leinstraße",
+"number": "32",
+"y_lod2": -1.39,
+"y_ref": -1.59,
+"storeys": 4,
+"storey_h": 3.01,
+"gf_h": 4.28,
+"height": 13.9,
+"retail_walls": 1,
+"openings": 46,
+"pitched": true,
+"wall_mat": "brick",
+"shops": [
+{
+"id": "osm-n8939588097",
+"name": "Teraske",
+"kind": "pharmacy",
+"p": [
+-387.62,
+-1.64,
+370.21
+],
+"n": [
+-0.626,
+0.78
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_3",
+"tris": 3723,
+"instances": 209
+},
+{
+"id": "ID_e8562f0c-c9ae-31fb-96fa-03d05f0ece75",
+"kind": "nachkrieg",
+"street": null,
+"number": null,
+"y_lod2": 0.06,
+"y_ref": -0.25,
+"storeys": 3,
+"storey_h": 4.32,
+"gf_h": 4.18,
+"height": 13.7,
+"retail_walls": 1,
+"openings": 6,
+"pitched": false,
+"wall_mat": "brick",
+"tile": "bldg_0_-1",
+"tris": 273,
+"instances": 25
+},
+{
+"id": "ID_a0dbcd1a-1e62-33d6-a44a-9523d6970692",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.04,
+"y_ref": -0.2,
+"storeys": 2,
+"storey_h": 2.7,
+"gf_h": 3.0,
+"height": 5.0,
+"retail_walls": 0,
+"openings": 3,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_0_-1",
+"tris": 207,
+"instances": 10
+},
+{
+"id": "ID_4fbe53c7-c2c9-31d5-b5db-eba6b2166714",
+"kind": "nachkrieg",
+"street": null,
+"number": null,
+"y_lod2": -0.15,
+"y_ref": -0.15,
+"storeys": 1,
+"storey_h": 3.22,
+"gf_h": 3.19,
+"height": 3.8,
+"retail_walls": 0,
+"openings": 9,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_0_-1",
+"tris": 849,
+"instances": 37
+},
+{
+"id": "ID_ffa067d6-6ee5-3be4-bd6f-5b018966663f",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": 0.09,
+"y_ref": -0.23,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 3.11,
+"height": 3.6,
+"retail_walls": 0,
+"openings": 1,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_0_-1",
+"tris": 144,
+"instances": 4
+},
+{
+"id": "ID_2282a3f3-f314-3254-8358-c25f36ba0c09",
+"kind": "nachkrieg",
+"street": null,
+"number": null,
+"y_lod2": -0.13,
+"y_ref": -0.28,
+"storeys": 1,
+"storey_h": 3.26,
+"gf_h": 3.08,
+"height": 3.6,
+"retail_walls": 2,
+"openings": 7,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_0_-1",
+"tris": 673,
+"instances": 26
+},
+{
+"id": "ID_5c422e65-6d30-3e1c-93da-c89e4a0dedfa",
+"kind": "nachkrieg",
+"street": null,
+"number": null,
+"y_lod2": -0.26,
+"y_ref": -0.26,
+"storeys": 1,
+"storey_h": 3.16,
+"gf_h": 2.95,
+"height": 3.3,
+"retail_walls": 0,
+"openings": 0,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_0_-1",
+"tris": 911,
+"instances": 0
+},
+{
+"id": "ID_b086d99b-7c57-3c85-a22b-c1c3dba58986",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": 0.08,
+"y_ref": -0.23,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 4.25,
+"height": 4.8,
+"retail_walls": 1,
+"openings": 0,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_0_-1",
+"tris": 98,
+"instances": 0
+},
+{
+"id": "ID_afc1d194-3450-3f6d-99d1-34373f7837ab",
+"kind": "modern",
+"street": null,
+"number": null,
+"y_lod2": -3.09,
+"y_ref": -1.1,
+"storeys": 1,
+"storey_h": 3.51,
+"gf_h": 3.69,
+"height": 4.1,
+"retail_walls": 0,
+"openings": 3,
+"pitched": false,
+"wall_mat": "panel",
+"tile": "bldg_0_-1",
+"tris": 513,
+"instances": 12
+},
+{
+"id": "ID_03ad88be-3ecf-3892-ad83-5b72993ca474",
+"kind": "nachkrieg",
+"street": "Bahnhofstraße",
+"number": "2",
+"y_lod2": -0.35,
+"y_ref": -0.55,
+"storeys": 6,
+"storey_h": 3.34,
+"gf_h": 3.78,
+"height": 21.4,
+"retail_walls": 1,
+"openings": 37,
+"pitched": false,
+"wall_mat": "brick",
+"shops": [
+{
+"id": "osm-n1240781902",
+"name": "Löwen-Apotheke",
+"kind": "pharmacy",
+"p": [
+14.83,
+-0.6,
+-36.69
+],
+"n": [
+-0.797,
+-0.605
+],
+"sign": "fascia_panel"
+},
+{
+"id": "osm-n3760139157",
+"name": "Back Geschwister",
+"kind": "bakery",
+"p": [
+12.81,
+-0.54,
+-34.03
+],
+"n": [
+-0.797,
+-0.605
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_0_-1",
+"tris": 3982,
+"instances": 178
+},
+{
+"id": "ID_23851694-ebf7-3904-8e1e-22129cbad129",
+"kind": "nachkrieg",
+"street": "Bahnhofstraße",
+"number": "3",
+"y_lod2": -0.51,
+"y_ref": -0.71,
+"storeys": 6,
+"storey_h": 3.24,
+"gf_h": 3.74,
+"height": 20.8,
+"retail_walls": 2,
+"openings": 18,
+"pitched": false,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n3637946057",
+"name": "Telekom Shop",
+"kind": "phone",
+"p": [
+24.84,
+-0.76,
+-47.76
+],
+"n": [
+-0.815,
+-0.58
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_0_-1",
+"tris": 1980,
+"instances": 80
+},
+{
+"id": "ID_818f67f2-a606-3e04-9001-dc67861da441",
+"kind": "modern",
+"street": "Kröpckepassage",
+"number": "15",
+"y_lod2": -3.09,
+"y_ref": -1.18,
+"storeys": 1,
+"storey_h": 3.54,
+"gf_h": 4.42,
+"height": 5.0,
+"retail_walls": 1,
+"openings": 1,
+"pitched": false,
+"wall_mat": "brick",
+"shops": [
+{
+"id": "osm-n8224043347",
+"name": "Rotonda Bistro Origlio",
+"kind": "cafe",
+"p": [
+100.32,
+-1.19,
+-40.91
+],
+"n": [
+0.365,
+-0.931
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_0_-1",
+"tris": 2236,
+"instances": 6
+},
+{
+"id": "ID_a44b2f58-d97b-37d3-9df6-09d85d7b03cd",
+"kind": "modern",
+"street": "Bahnhofstraße",
+"number": "1",
+"y_lod2": -0.23,
+"y_ref": -0.23,
+"storeys": 7,
+"storey_h": 2.97,
+"gf_h": 4.47,
+"height": 23.4,
+"retail_walls": 5,
+"openings": 44,
+"pitched": false,
+"wall_mat": "panel",
+"shops": [
+{
+"id": "osm-n7112183582",
+"name": "BUTLERS",
+"kind": "home",
+"p": [
+12.26,
+-0.3,
+-10.47
+],
+"n": [
+-0.332,
+0.943
+],
+"sign": "channel_letters"
+},
+{
+"id": "osm-n7112183583",
+"name": "TUI",
+"kind": "office",
+"p": [
+14.95,
+-0.34,
+-9.53
+],
+"n": [
+-0.332,
+0.943
+],
+"sign": "fascia_panel"
+},
+{
+"id": "osm-n3637946054",
+"name": "o2",
+"kind": "phone",
+"p": [
+3.9,
+-0.07,
+-14.88
+],
+"n": [
+-0.951,
+-0.309
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_0_-1",
+"tris": 2753,
+"instances": 423
+},
+{
+"id": "ID_3cc4d720-7c30-3ce2-8c25-8cde108fe292",
+"kind": "nachkrieg",
+"street": "Bahnhofstraße",
+"number": "5",
+"y_lod2": -0.9,
+"y_ref": -1.18,
+"storeys": 6,
+"storey_h": 3.17,
+"gf_h": 4.12,
+"height": 20.9,
+"retail_walls": 2,
+"openings": 147,
+"pitched": false,
+"wall_mat": "stone",
+"shops": [
+{
+"id": "osm-n13947838685",
+"name": "Kult",
+"kind": "fashion",
+"p": [
+48.94,
+-1.23,
+-82.16
+],
+"n": [
+-0.77,
+-0.639
+],
+"sign": "channel_letters"
+},
+{
+"id": "osm-n3095112743",
+"name": "Apple Store",
+"kind": "phone",
+"p": [
+40.03,
+-1.18,
+-70.36
+],
+"n": [
+-0.795,
+-0.606
+],
+"sign": "logo_only"
+}
+],
+"tile": "bldg_0_-1",
+"tris": 6446,
+"instances": 675
+},
+{
+"id": "ID_0cd6bac8-ebc5-3916-af64-cc6a687fbe51",
+"kind": "nachkrieg",
+"street": "Bahnhofstraße",
+"number": "4",
+"y_lod2": -0.66,
+"y_ref": -0.86,
+"storeys": 4,
+"storey_h": 3.91,
+"gf_h": 3.69,
+"height": 16.3,
+"retail_walls": 1,
+"openings": 59,
+"pitched": false,
+"wall_mat": "brick",
+"shops": [
+{
+"id": "osm-n7044500313",
+"name": "Five Guys",
+"kind": "fastfood",
+"p": [
+31.63,
+-0.91,
+-58.76
+],
+"n": [
+-0.796,
+-0.605
+],
+"sign": "fascia_panel"
+},
+{
+"id": "osm-n3760138557",
+"name": "l'tur",
+"kind": "office",
+"p": [
+26.49,
+-0.87,
+-51.99
+],
+"n": [
+-0.796,
+-0.605
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_0_-1",
+"tris": 3828,
+"instances": 280
+},
+{
+"id": "ID_53c6c245-a4e6-3b46-8251-3f1db8136506",
+"kind": "modern",
+"street": "Bahnhofstraße",
+"number": "6",
+"y_lod2": -1.2,
+"y_ref": -1.41,
+"storeys": 5,
+"storey_h": 4.09,
+"gf_h": 4.53,
+"height": 21.8,
+"retail_walls": 1,
+"openings": 41,
+"pitched": false,
+"wall_mat": "panel",
+"shops": [
+{
+"id": "osm-w186296457",
+"name": "NEW YORKER",
+"kind": "fashion",
+"p": [
+55.3,
+-1.46,
+-89.84
+],
+"n": [
+-0.796,
+-0.605
+],
+"sign": "channel_letters"
+}
+],
+"tile": "bldg_0_-1",
+"tris": 1805,
+"instances": 517
+}
+]

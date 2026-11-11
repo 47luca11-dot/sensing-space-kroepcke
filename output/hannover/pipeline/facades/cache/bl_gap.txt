@@ -1,0 +1,20 @@
+free GB: 7.14
+C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\pipeline\facades\blender_preview.py:311: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  w = bpy.data.worlds.new('w'); sc.world = w; w.use_nodes = True
+C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\pipeline\facades\blender_preview.py:74: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m.use_nodes = True
+C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\pipeline\facades\blender_preview.py:246: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('ground'); m.use_nodes = True
+00:08.563  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\facades_gap_7ba8.png'
+00:14.250  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\facades_gap_6cf8.png'
+00:17.688  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\facades_gap_6cf8b.png'
+00:20.844  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\facades_gap_e616.png'
+Kacheln 15 geladen 1.0 s
+Umgebung geladen 1.2 s
+render facades_gap_7ba8 6.0 s
+render facades_gap_6cf8 5.7 s
+render facades_gap_6cf8b 3.4 s
+render facades_gap_e616 3.2 s
+Blender 5.0.1 (hash a3db93c5b259 built 2025-12-16 01:32:30)
+
+Blender quit

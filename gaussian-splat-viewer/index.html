@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gaussian Splat Viewer</title>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+
+    <button id="ui-toggle" type="button" title="Bedienfeld ein-/ausblenden (Taste H)">☰</button>
+
+    <div id="panel">
+      <h1>Gaussian Splat Viewer</h1>
+      <form id="url-form">
+        <input id="url-input" type="url" placeholder="URL zu .ply / .splat / .spz" />
+        <button type="submit">Laden</button>
+      </form>
+      <div class="row">
+        <label class="file-button">
+          Datei wählen…
+          <input id="file-input" type="file" accept=".ply,.splat,.spz,.ksplat,.sog,.zip" hidden />
+        </label>
+        <label><input id="flip-input" type="checkbox" checked /> Y-Achse drehen</label>
+        <button id="reset-button" type="button">Kamera zurücksetzen</button>
+      </div>
+      <p id="status">Bereit.</p>
+
+      <details id="segment-panel" open>
+        <summary>Objekt freistellen</summary>
+        <div class="row">
+          <button id="pick-button" type="button">Objekt anklicken…</button>
+          <button id="show-all-button" type="button" disabled>Alles zeigen</button>
+          <button id="export-button" type="button" disabled>Auswahl als .ply</button>
+        </div>
+        <label class="slider">
+          Abstand zur Tischebene <output id="offset-value"></output>
+          <input id="offset-input" type="range" min="0" max="5" step="0.1" value="1.5" />
+        </label>
+        <label class="slider">
+          Verbindungsabstand <output id="voxel-value"></output>
+          <input id="voxel-input" type="range" min="0.3" max="5" step="0.1" value="1.5" />
+        </label>
+      </details>
+
+      <details id="components-panel" open>
+        <summary>Komponenten</summary>
+        <div id="components-list"></div>
+      </details>
+
+      <details id="view-panel">
+        <summary>Geometrie</summary>
+        <div class="row">
+          <label><input type="radio" name="mode" value="color" checked /> Farbe</label>
+          <label><input type="radio" name="mode" value="clay" /> Schattiert</label>
+          <label><input type="radio" name="mode" value="normals" /> Normalen</label>
+        </div>
+        <label class="slider">
+          Splat-Größe <output id="size-value"></output>
+          <input id="size-input" type="range" min="10" max="100" step="5" value="100" />
+        </label>
+        <label class="slider">
+          Mindest-Deckkraft <output id="opacity-value"></output>
+          <input id="opacity-input" type="range" min="0" max="0.95" step="0.05" value="0" />
+        </label>
+      </details>
+      <p class="hint">Datei ins Fenster ziehen · Linke Maustaste: drehen · Rechte: verschieben · Rad: zoomen · H: Bedienfeld aus/ein</p>
+    </div>
+
+    <div id="drop-overlay">Datei hier ablegen</div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

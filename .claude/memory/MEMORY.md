@@ -1,0 +1,3 @@
+- [Meshes immer lückenlos + hochauflösend](meshes-always-gapfree-highres.md) — bei jeder Scan-/Figuren-Aufgabe alle Meshes bereinigen und alle Lücken schließen
+- [Scan-Pipeline](scan-pipeline.md) — wo Skripte, Assets und Server für Startbildschirm und Scan-Viewer liegen
+- [Hannover-Stadtmodell](hannover-city-model.md) — Kröpcke-Spiel auf localhost 5177: Koordinatenframe, Datenquellen, Pipeline-Orte, Entscheidungen

@@ -1,0 +1,87 @@
+C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\pipeline\landmarks\marktkirche\mk_blender.py:60: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new('MK_' + name); m.use_nodes = True
+MK objects 35 tris 357350
+INFO Draco mesh compression is available, use library at C:\Program Files\Blender Foundation\Blender 5.0\5.0\scripts\addons_core\io_scene_gltf2\extern_draco.dll
+20:33:37 | INFO: Starting glTF 2.0 export
+20:33:37 | INFO: Extracting primitive: MK_det_Backstein_nocol
+20:33:37 | INFO: Primitives created: 1
+20:33:37 | INFO: Extracting primitive: MK_det_Bleiglas_nocol
+20:33:37 | INFO: Primitives created: 1
+20:33:37 | INFO: Extracting primitive: MK_det_Bronze_nocol
+20:33:37 | INFO: Primitives created: 1
+20:33:37 | INFO: Extracting primitive: MK_det_Dunkel_nocol
+20:33:37 | INFO: Primitives created: 1
+20:33:37 | INFO: Extracting primitive: MK_det_Glasurstein_nocol
+20:33:37 | INFO: Primitives created: 1
+20:33:37 | INFO: Extracting primitive: MK_det_Kupfer_nocol
+20:33:37 | INFO: Primitives created: 1
+20:33:37 | INFO: Extracting primitive: MK_det_Kupfer_Patina_nocol
+20:33:37 | INFO: Primitives created: 1
+20:33:37 | INFO: Extracting primitive: MK_det_Sandstein_dunkel_nocol
+20:33:37 | INFO: Primitives created: 1
+20:33:37 | INFO: Extracting primitive: MK_det_Sandstein_nocol
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_det_Schaukasten_nocol
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_det_Stahl_nocol
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_det_Zifferblatt_nocol
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_fine_Dunkel_nocol_noshadow
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_fine_Eisen_nocol_noshadow
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_fine_Gold_nocol_noshadow
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_fine_Inschrift_1483_nocol_noshadow
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_fine_Inschrift_MART_nocol_noshadow
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_fine_Kupfer_nocol_noshadow
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_fine_Lamellen_nocol_noshadow
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_fine_Sandstein_dunkel_nocol_noshadow
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_fine_Sandstein_nocol_noshadow
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_fine_Stahl_nocol_noshadow
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_fine_Tuerbronze_nocol_noshadow
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_roof_Backstein_nocol
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_roof_Dachziegel_nocol
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_roof_Dunkel_nocol
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_roof_Kupfer_nocol
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_wall_Backstein
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_wall_Fliesen
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_wall_Glasurstein
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_wall_Granit
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_wall_Sandstein
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_wall_Sandstein_dunkel
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_wall_Sandstein_Quader
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_wall_Sockelstein
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_wall_Stahl
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Extracting primitive: MK_wall_Tuerbronze
+20:33:38 | INFO: Primitives created: 1
+20:33:38 | INFO: Finished glTF 2.0 export in 1.1050236225128174 s
+
+MK wrote C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/data/landmarks_raw/marktkirche.glb 36247292
+Info: Saved as "marktkirche.blend"
+MK saved C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/landmarks/marktkirche.blend
+Blender 5.0.1 (hash a3db93c5b259 built 2025-12-16 01:32:30)
+
+Blender quit

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Startbildschirm</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ui.css">
+</head>
+<body>
+<div id="stage">
+  <!-- alles in #world wackelt bei Explosionen; das UI liegt außerhalb und bleibt ruhig -->
+  <div id="world">
+    <div id="bg"></div>
+    <canvas id="fxBack"></canvas>    <!-- Feuer, Rauch, Explosionen, ferner Schnee -->
+    <div id="trees"></div>          <!-- Bäume aus dem Hintergrund als Maske vor dem Feuer -->
+    <canvas id="gl"></canvas>        <!-- three.js: Splat-Figuren -->
+    <canvas id="fxFront"></canvas>   <!-- naher Schnee -->
+    <div id="flash"></div>
+    <div id="grade"></div>
+  </div>
+
+  <div id="ui">
+    <nav id="topbar">
+      <div class="emblem" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M6 8 L20 32 L34 8 L27 8 L20 21 L13 8 Z"/></svg></div>
+      <div class="nav-left">
+        <button class="nav-item" data-nav="locker">SPIND</button>
+        <button class="nav-item" data-nav="quests">AUFTRÄGE</button>
+      </div>
+      <button id="play-tab" data-nav="play"><span>SPIELEN</span></button>
+      <div class="nav-right">
+        <button class="nav-item" data-nav="options">OPTIONEN</button>
+      </div>
+      <button class="gear" data-nav="options" aria-label="Optionen"><svg viewBox="0 0 24 24"><path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm8.6 4.9-.1-2.8 2-1.6-2-3.4-2.4.9-2.3-1.4L15.4 2h-3.9l-.5 2.6-2.3 1.4-2.4-.9-2 3.4 2 1.6-.1 2.8-2 1.6 2 3.4 2.4-.9 2.3 1.4.5 2.6h3.9l.5-2.6 2.3-1.4 2.4.9 2-3.4Z"/></svg></button>
+    </nav>
+
+    <button class="arrow" id="prev" aria-label="vorherige Figur"><svg viewBox="0 0 60 90"><path d="M52 6 L8 45 L52 84 Z"/></svg></button>
+    <button class="arrow" id="next" aria-label="nächste Figur"><svg viewBox="0 0 60 90"><path d="M8 6 L52 45 L8 84 Z"/></svg></button>
+
+    <aside id="panel">
+      <div class="role"><span id="c-role">ÜBERLEBENDER</span><i></i></div>
+      <h1 id="c-name">ANDIS</h1>
+      <div class="rule"><span id="c-index">01 / 02</span></div>
+      <ul id="stats"></ul>
+      <p id="c-bio"></p>
+      <div class="actions">
+        <button class="btn primary" id="btn-ready">BEREIT</button>
+        <button class="btn ghost" id="btn-custom">ANPASSEN</button>
+      </div>
+    </aside>
+
+    <div id="roster"></div>
+    <div id="hint">◀ ▶ oder Pfeiltasten zum Wechseln &nbsp;·&nbsp; Figur mit der Maus ziehen zum Drehen</div>
+  </div>
+
+  <div id="fade"></div>
+  <div id="toast"></div>
+  <div id="loading"><span>LÄDT</span><i></i></div>
+</div>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/",
+  "@sparkjsdev/spark": "./vendor/spark/spark.module.js"
+} }
+</script>
+<script type="module" src="main.js"></script>
+</body>
+</html>

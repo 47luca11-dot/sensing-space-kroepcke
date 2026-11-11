@@ -1,0 +1,469 @@
+17:57:11 | INFO: Data are loaded, start creating Blender stuff
+17:57:11 | INFO: Blender create Mesh node ground_-1_0
+17:57:11 | INFO: glTF import finished in 0.07s
+17:57:11 | INFO: Data are loaded, start creating Blender stuff
+17:57:11 | INFO: Blender create Mesh node ground_-1_1
+17:57:11 | INFO: glTF import finished in 0.05s
+17:57:11 | INFO: Data are loaded, start creating Blender stuff
+17:57:11 | INFO: Blender create Mesh node ground_-1_2
+17:57:12 | INFO: glTF import finished in 0.02s
+17:57:12 | INFO: Data are loaded, start creating Blender stuff
+17:57:12 | INFO: Blender create Mesh node ground_-1_3
+17:57:12 | INFO: glTF import finished in 0.02s
+17:57:12 | INFO: Data are loaded, start creating Blender stuff
+17:57:12 | INFO: Blender create Mesh node ground_-1_4
+17:57:12 | INFO: glTF import finished in 0.03s
+17:57:12 | INFO: Data are loaded, start creating Blender stuff
+17:57:12 | INFO: Blender create Mesh node ground_-1_5
+17:57:12 | INFO: glTF import finished in 0.03s
+17:57:12 | INFO: Data are loaded, start creating Blender stuff
+17:57:12 | INFO: Blender create Mesh node ground_-1_6
+17:57:12 | INFO: glTF import finished in 0.03s
+17:57:12 | INFO: Data are loaded, start creating Blender stuff
+17:57:12 | INFO: Blender create Mesh node ground_-2_0
+17:57:12 | INFO: glTF import finished in 0.01s
+17:57:12 | INFO: Data are loaded, start creating Blender stuff
+17:57:12 | INFO: Blender create Mesh node ground_-2_1
+17:57:12 | INFO: glTF import finished in 0.02s
+17:57:12 | INFO: Data are loaded, start creating Blender stuff
+17:57:12 | INFO: Blender create Mesh node ground_-2_2
+17:57:12 | INFO: glTF import finished in 0.04s
+17:57:12 | INFO: Data are loaded, start creating Blender stuff
+17:57:12 | INFO: Blender create Mesh node ground_-2_3
+17:57:12 | INFO: glTF import finished in 0.03s
+17:57:12 | INFO: Data are loaded, start creating Blender stuff
+17:57:12 | INFO: Blender create Mesh node ground_-2_4
+17:57:12 | INFO: glTF import finished in 0.03s
+17:57:12 | INFO: Data are loaded, start creating Blender stuff
+17:57:12 | INFO: Blender create Mesh node ground_-2_5
+17:57:12 | INFO: glTF import finished in 0.03s
+17:57:12 | INFO: Data are loaded, start creating Blender stuff
+17:57:12 | INFO: Blender create Mesh node ground_-2_6
+17:57:12 | INFO: glTF import finished in 0.03s
+17:57:12 | INFO: Data are loaded, start creating Blender stuff
+17:57:12 | INFO: Blender create Mesh node ground_-3_0
+17:57:12 | INFO: glTF import finished in 0.02s
+17:57:12 | INFO: Data are loaded, start creating Blender stuff
+17:57:12 | INFO: Blender create Mesh node ground_-3_1
+17:57:12 | INFO: glTF import finished in 0.03s
+17:57:12 | INFO: Data are loaded, start creating Blender stuff
+17:57:12 | INFO: Blender create Mesh node ground_-3_2
+17:57:12 | INFO: glTF import finished in 0.21s
+17:57:12 | INFO: Data are loaded, start creating Blender stuff
+17:57:12 | INFO: Blender create Mesh node ground_-3_3
+17:57:12 | INFO: glTF import finished in 0.19s
+17:57:12 | INFO: Data are loaded, start creating Blender stuff
+17:57:12 | INFO: Blender create Mesh node ground_-3_4
+17:57:13 | INFO: glTF import finished in 0.31s
+17:57:13 | INFO: Data are loaded, start creating Blender stuff
+17:57:13 | INFO: Blender create Mesh node ground_-3_5
+17:57:13 | INFO: glTF import finished in 0.06s
+17:57:13 | INFO: Data are loaded, start creating Blender stuff
+17:57:13 | INFO: Blender create Mesh node ground_-3_6
+17:57:13 | INFO: glTF import finished in 0.21s
+17:57:13 | INFO: Data are loaded, start creating Blender stuff
+17:57:13 | INFO: Blender create Mesh node ground_-4_0
+17:57:13 | INFO: glTF import finished in 0.16s
+17:57:13 | INFO: Data are loaded, start creating Blender stuff
+17:57:13 | INFO: Blender create Mesh node ground_-4_1
+17:57:13 | INFO: glTF import finished in 0.18s
+17:57:13 | INFO: Data are loaded, start creating Blender stuff
+17:57:13 | INFO: Blender create Mesh node ground_-4_2
+17:57:14 | INFO: glTF import finished in 0.14s
+17:57:14 | INFO: Data are loaded, start creating Blender stuff
+17:57:14 | INFO: Blender create Mesh node ground_-4_3
+17:57:14 | INFO: glTF import finished in 0.16s
+17:57:14 | INFO: Data are loaded, start creating Blender stuff
+17:57:14 | INFO: Blender create Mesh node ground_-4_4
+17:57:14 | INFO: glTF import finished in 0.14s
+17:57:14 | INFO: Data are loaded, start creating Blender stuff
+17:57:14 | INFO: Blender create Mesh node ground_-4_5
+17:57:14 | INFO: glTF import finished in 0.33s
+17:57:14 | INFO: Data are loaded, start creating Blender stuff
+17:57:14 | INFO: Blender create Mesh node ground_-4_6
+17:57:14 | INFO: glTF import finished in 0.18s
+17:57:14 | INFO: Data are loaded, start creating Blender stuff
+17:57:14 | INFO: Blender create Mesh node ground_-5_0
+17:57:15 | INFO: glTF import finished in 0.11s
+17:57:15 | INFO: Data are loaded, start creating Blender stuff
+17:57:15 | INFO: Blender create Mesh node ground_-5_1
+17:57:15 | INFO: glTF import finished in 0.12s
+17:57:15 | INFO: Data are loaded, start creating Blender stuff
+17:57:15 | INFO: Blender create Mesh node ground_-5_2
+17:57:15 | INFO: glTF import finished in 0.11s
+17:57:15 | INFO: Data are loaded, start creating Blender stuff
+17:57:15 | INFO: Blender create Mesh node ground_-5_3
+17:57:15 | INFO: glTF import finished in 0.23s
+17:57:15 | INFO: Data are loaded, start creating Blender stuff
+17:57:15 | INFO: Blender create Mesh node ground_-5_4
+17:57:15 | INFO: glTF import finished in 0.42s
+17:57:16 | INFO: Data are loaded, start creating Blender stuff
+17:57:16 | INFO: Blender create Mesh node ground_-5_5
+17:57:16 | INFO: glTF import finished in 0.40s
+17:57:16 | INFO: Data are loaded, start creating Blender stuff
+17:57:16 | INFO: Blender create Mesh node ground_-5_6
+17:57:16 | INFO: glTF import finished in 0.38s
+17:57:16 | INFO: Data are loaded, start creating Blender stuff
+17:57:16 | INFO: Blender create Mesh node ground_-6_0
+17:57:17 | INFO: glTF import finished in 0.54s
+17:57:17 | INFO: Data are loaded, start creating Blender stuff
+17:57:17 | INFO: Blender create Mesh node ground_-6_1
+17:57:17 | INFO: glTF import finished in 0.20s
+17:57:17 | INFO: Data are loaded, start creating Blender stuff
+17:57:17 | INFO: Blender create Mesh node ground_-6_2
+17:57:17 | INFO: glTF import finished in 0.38s
+17:57:18 | INFO: Data are loaded, start creating Blender stuff
+17:57:18 | INFO: Blender create Mesh node ground_-6_3
+17:57:18 | INFO: glTF import finished in 0.65s
+17:57:18 | INFO: Data are loaded, start creating Blender stuff
+17:57:18 | INFO: Blender create Mesh node ground_-6_4
+17:57:19 | INFO: glTF import finished in 0.37s
+17:57:19 | INFO: Data are loaded, start creating Blender stuff
+17:57:19 | INFO: Blender create Mesh node ground_-6_5
+17:57:19 | INFO: glTF import finished in 0.25s
+17:57:19 | INFO: Data are loaded, start creating Blender stuff
+17:57:19 | INFO: Blender create Mesh node ground_-6_6
+17:57:19 | INFO: glTF import finished in 0.64s
+17:57:19 | INFO: Data are loaded, start creating Blender stuff
+17:57:19 | INFO: Blender create Mesh node ground_-7_0
+17:57:20 | INFO: glTF import finished in 0.65s
+17:57:20 | INFO: Data are loaded, start creating Blender stuff
+17:57:20 | INFO: Blender create Mesh node ground_-7_1
+17:57:21 | INFO: glTF import finished in 0.43s
+17:57:21 | INFO: Data are loaded, start creating Blender stuff
+17:57:21 | INFO: Blender create Mesh node ground_-7_2
+17:57:21 | INFO: glTF import finished in 0.25s
+17:57:21 | INFO: Data are loaded, start creating Blender stuff
+17:57:21 | INFO: Blender create Mesh node ground_-7_3
+17:57:21 | INFO: glTF import finished in 0.46s
+17:57:21 | INFO: Data are loaded, start creating Blender stuff
+17:57:21 | INFO: Blender create Mesh node ground_-7_4
+17:57:22 | INFO: glTF import finished in 0.63s
+17:57:22 | INFO: Data are loaded, start creating Blender stuff
+17:57:22 | INFO: Blender create Mesh node ground_-7_5
+17:57:23 | INFO: glTF import finished in 0.66s
+17:57:23 | INFO: Data are loaded, start creating Blender stuff
+17:57:23 | INFO: Blender create Mesh node ground_-7_6
+17:57:24 | INFO: glTF import finished in 1.18s
+17:57:24 | INFO: Data are loaded, start creating Blender stuff
+17:57:24 | INFO: Blender create Mesh node ground_-8_0
+17:57:25 | INFO: glTF import finished in 1.09s
+17:57:25 | INFO: Data are loaded, start creating Blender stuff
+17:57:25 | INFO: Blender create Mesh node ground_-8_1
+17:57:26 | INFO: glTF import finished in 0.75s
+17:57:26 | INFO: Data are loaded, start creating Blender stuff
+17:57:26 | INFO: Blender create Mesh node ground_-8_2
+17:57:27 | INFO: glTF import finished in 1.13s
+17:57:27 | INFO: Data are loaded, start creating Blender stuff
+17:57:27 | INFO: Blender create Mesh node ground_-8_3
+17:57:28 | INFO: glTF import finished in 0.90s
+17:57:28 | INFO: Data are loaded, start creating Blender stuff
+17:57:28 | INFO: Blender create Mesh node ground_-8_4
+17:57:29 | INFO: glTF import finished in 0.32s
+17:57:29 | INFO: Data are loaded, start creating Blender stuff
+17:57:29 | INFO: Blender create Mesh node ground_-8_5
+17:57:29 | INFO: glTF import finished in 0.17s
+ground tiles 55
+17:57:29 | INFO: Data are loaded, start creating Blender stuff
+17:57:29 | INFO: Blender create Mesh node tree_b
+17:57:29 | INFO: Blender create Mesh node tree_a
+17:57:30 | INFO: Blender create Mesh node lamp_lantern
+17:57:30 | INFO: Blender create Mesh node lamp_mast
+17:57:30 | INFO: Blender create Mesh node bollard
+17:57:30 | INFO: Blender create Mesh node postbox
+17:57:30 | INFO: Blender create Mesh node stop_sign
+17:57:30 | INFO: Blender create Mesh node shelter
+17:57:30 | INFO: Blender create Mesh node bike_stand
+17:57:31 | INFO: Blender create Mesh node litfass
+17:57:31 | INFO: Blender create Mesh node flagpole
+17:57:31 | INFO: Blender create Mesh node bench
+17:57:31 | INFO: Blender create Mesh node bin
+17:57:31 | INFO: Blender create Mesh node cabinet
+17:57:31 | INFO: Blender create Mesh node signal
+17:57:32 | INFO: glTF import finished in 3.22s
+17:57:32 | INFO: Data are loaded, start creating Blender stuff
+17:57:32 | INFO: Blender create Mesh node bldg_-1_0_shell
+17:57:32 | INFO: Blender create Mesh node bldg_-1_0_detail
+17:57:33 | INFO: glTF import finished in 0.64s
+17:57:33 | INFO: Data are loaded, start creating Blender stuff
+17:57:33 | INFO: Blender create Mesh node bldg_-1_1_shell
+17:57:33 | INFO: Blender create Mesh node bldg_-1_1_detail
+17:57:33 | INFO: glTF import finished in 0.60s
+17:57:33 | INFO: Data are loaded, start creating Blender stuff
+17:57:33 | INFO: Blender create Mesh node bldg_-1_2_shell
+17:57:33 | INFO: Blender create Mesh node bldg_-1_2_detail
+17:57:34 | INFO: glTF import finished in 0.70s
+17:57:34 | INFO: Data are loaded, start creating Blender stuff
+17:57:34 | INFO: Blender create Mesh node bldg_-1_3_shell
+17:57:34 | INFO: Blender create Mesh node bldg_-1_3_detail
+17:57:36 | INFO: glTF import finished in 1.85s
+17:57:36 | INFO: Data are loaded, start creating Blender stuff
+17:57:36 | INFO: Blender create Mesh node bldg_-1_4_shell
+17:57:37 | INFO: Blender create Mesh node bldg_-1_4_detail
+17:57:39 | INFO: glTF import finished in 2.25s
+17:57:39 | INFO: Data are loaded, start creating Blender stuff
+17:57:39 | INFO: Blender create Mesh node bldg_-1_5_shell
+17:57:39 | INFO: Blender create Mesh node bldg_-1_5_detail
+17:57:41 | INFO: glTF import finished in 1.90s
+17:57:41 | INFO: Data are loaded, start creating Blender stuff
+17:57:41 | INFO: Blender create Mesh node bldg_-1_6_shell
+17:57:42 | INFO: Blender create Mesh node bldg_-1_6_detail
+17:57:43 | INFO: glTF import finished in 2.06s
+17:57:43 | INFO: Data are loaded, start creating Blender stuff
+17:57:43 | INFO: Blender create Mesh node bldg_-2_0_shell
+17:57:44 | INFO: Blender create Mesh node bldg_-2_0_detail
+17:57:45 | INFO: glTF import finished in 1.95s
+17:57:46 | INFO: Data are loaded, start creating Blender stuff
+17:57:46 | INFO: Blender create Mesh node bldg_-2_1_shell
+17:57:47 | INFO: Blender create Mesh node bldg_-2_1_detail
+17:57:49 | INFO: glTF import finished in 3.75s
+17:57:49 | INFO: Data are loaded, start creating Blender stuff
+17:57:49 | INFO: Blender create Mesh node bldg_-2_2_shell
+17:57:50 | INFO: Blender create Mesh node bldg_-2_2_detail
+17:57:52 | INFO: glTF import finished in 2.47s
+17:57:52 | INFO: Data are loaded, start creating Blender stuff
+17:57:52 | INFO: Blender create Mesh node bldg_-2_3_shell
+17:57:53 | INFO: Blender create Mesh node bldg_-2_3_detail
+17:57:55 | INFO: glTF import finished in 2.35s
+17:57:56 | INFO: Data are loaded, start creating Blender stuff
+17:57:56 | INFO: Blender create Mesh node bldg_-2_4_shell
+17:57:57 | INFO: Blender create Mesh node bldg_-2_4_detail
+17:57:58 | INFO: glTF import finished in 2.11s
+17:57:59 | INFO: Data are loaded, start creating Blender stuff
+17:57:59 | INFO: Blender create Mesh node bldg_-2_5_shell
+17:57:59 | INFO: Blender create Mesh node bldg_-2_5_detail
+17:58:00 | INFO: glTF import finished in 1.62s
+17:58:00 | INFO: Data are loaded, start creating Blender stuff
+17:58:00 | INFO: Blender create Mesh node bldg_-2_6_shell
+17:58:01 | INFO: Blender create Mesh node bldg_-2_6_detail
+17:58:02 | INFO: glTF import finished in 1.61s
+17:58:02 | INFO: Data are loaded, start creating Blender stuff
+17:58:02 | INFO: Blender create Mesh node bldg_-3_0_shell
+17:58:03 | INFO: Blender create Mesh node bldg_-3_0_detail
+17:58:05 | INFO: glTF import finished in 2.56s
+17:58:05 | INFO: Data are loaded, start creating Blender stuff
+17:58:05 | INFO: Blender create Mesh node bldg_-3_1_shell
+17:58:05 | INFO: Blender create Mesh node bldg_-3_1_detail
+17:58:07 | INFO: glTF import finished in 2.51s
+17:58:08 | INFO: Data are loaded, start creating Blender stuff
+17:58:08 | INFO: Blender create Mesh node bldg_-3_2_shell
+17:58:08 | INFO: Blender create Mesh node bldg_-3_2_detail
+17:58:10 | INFO: glTF import finished in 1.94s
+17:58:10 | INFO: Data are loaded, start creating Blender stuff
+17:58:10 | INFO: Blender create Mesh node bldg_-3_3_shell
+17:58:10 | INFO: Blender create Mesh node bldg_-3_3_detail
+17:58:12 | INFO: glTF import finished in 2.71s
+17:58:13 | INFO: Data are loaded, start creating Blender stuff
+17:58:13 | INFO: Blender create Mesh node bldg_-3_4_shell
+17:58:13 | INFO: Blender create Mesh node bldg_-3_4_detail
+17:58:14 | INFO: glTF import finished in 1.55s
+17:58:15 | INFO: Data are loaded, start creating Blender stuff
+17:58:15 | INFO: Blender create Mesh node bldg_-3_5_shell
+17:58:15 | INFO: Blender create Mesh node bldg_-3_5_detail
+17:58:17 | INFO: glTF import finished in 2.06s
+17:58:17 | INFO: Data are loaded, start creating Blender stuff
+17:58:17 | INFO: Blender create Mesh node bldg_-4_0_shell
+17:58:18 | INFO: Blender create Mesh node bldg_-4_0_detail
+17:58:21 | INFO: glTF import finished in 3.44s
+17:58:21 | INFO: Data are loaded, start creating Blender stuff
+17:58:21 | INFO: Blender create Mesh node bldg_-4_1_shell
+17:58:21 | INFO: Blender create Mesh node bldg_-4_1_detail
+17:58:23 | INFO: glTF import finished in 2.11s
+17:58:24 | INFO: Data are loaded, start creating Blender stuff
+17:58:24 | INFO: Blender create Mesh node bldg_-4_2_shell
+17:58:25 | INFO: Blender create Mesh node bldg_-4_2_detail
+17:58:29 | INFO: glTF import finished in 4.71s
+17:58:29 | INFO: Data are loaded, start creating Blender stuff
+17:58:29 | INFO: Blender create Mesh node bldg_-4_3_shell
+17:58:30 | INFO: Blender create Mesh node bldg_-4_3_detail
+17:58:32 | INFO: glTF import finished in 3.77s
+17:58:33 | INFO: Data are loaded, start creating Blender stuff
+17:58:33 | INFO: Blender create Mesh node bldg_-4_4_shell
+17:58:33 | INFO: Blender create Mesh node bldg_-4_4_detail
+17:58:35 | INFO: glTF import finished in 2.26s
+17:58:35 | INFO: Data are loaded, start creating Blender stuff
+17:58:35 | INFO: Blender create Mesh node bldg_-5_0_shell
+17:58:36 | INFO: Blender create Mesh node bldg_-5_0_detail
+17:58:37 | INFO: glTF import finished in 1.60s
+17:58:37 | INFO: Data are loaded, start creating Blender stuff
+17:58:37 | INFO: Blender create Mesh node bldg_-5_1_shell
+17:58:37 | INFO: Blender create Mesh node bldg_-5_1_detail
+17:58:39 | INFO: glTF import finished in 2.45s
+17:58:39 | INFO: Data are loaded, start creating Blender stuff
+17:58:39 | INFO: Blender create Mesh node bldg_-5_2_shell
+17:58:40 | INFO: Blender create Mesh node bldg_-5_2_detail
+17:58:41 | INFO: glTF import finished in 1.22s
+17:58:41 | INFO: Data are loaded, start creating Blender stuff
+17:58:41 | INFO: Blender create Mesh node bldg_-5_3_shell
+17:58:41 | INFO: Blender create Mesh node bldg_-5_3_detail
+17:58:42 | INFO: glTF import finished in 1.27s
+17:58:42 | INFO: Data are loaded, start creating Blender stuff
+17:58:42 | INFO: Blender create Mesh node bldg_-5_6_shell
+17:58:42 | INFO: Blender create Mesh node bldg_-5_6_detail
+17:58:43 | INFO: glTF import finished in 1.19s
+17:58:43 | INFO: Data are loaded, start creating Blender stuff
+17:58:43 | INFO: Blender create Mesh node bldg_-6_0_shell
+17:58:44 | INFO: Blender create Mesh node bldg_-6_0_detail
+17:58:45 | INFO: glTF import finished in 1.29s
+17:58:45 | INFO: Data are loaded, start creating Blender stuff
+17:58:45 | INFO: Blender create Mesh node bldg_-6_1_shell
+17:58:45 | INFO: Blender create Mesh node bldg_-6_1_detail
+17:58:46 | INFO: glTF import finished in 1.60s
+17:58:47 | INFO: Data are loaded, start creating Blender stuff
+17:58:47 | INFO: Blender create Mesh node bldg_-6_2_shell
+17:58:47 | INFO: Blender create Mesh node bldg_-6_2_detail
+17:58:47 | INFO: glTF import finished in 0.93s
+17:58:47 | INFO: Data are loaded, start creating Blender stuff
+17:58:47 | INFO: Blender create Mesh node bldg_-6_3_shell
+17:58:48 | INFO: Blender create Mesh node bldg_-6_3_detail
+17:58:49 | INFO: glTF import finished in 1.36s
+17:58:49 | INFO: Data are loaded, start creating Blender stuff
+17:58:49 | INFO: Blender create Mesh node bldg_-6_4_shell
+17:58:49 | INFO: Blender create Mesh node bldg_-6_4_detail
+17:58:50 | INFO: glTF import finished in 0.95s
+17:58:50 | INFO: Data are loaded, start creating Blender stuff
+17:58:50 | INFO: Blender create Mesh node bldg_-6_5_shell
+17:58:50 | INFO: Blender create Mesh node bldg_-6_5_detail
+17:58:51 | INFO: glTF import finished in 1.09s
+17:58:51 | INFO: Data are loaded, start creating Blender stuff
+17:58:51 | INFO: Blender create Mesh node bldg_-7_0_shell
+17:58:51 | INFO: Blender create Mesh node bldg_-7_0_detail
+17:58:52 | INFO: glTF import finished in 1.16s
+17:58:52 | INFO: Data are loaded, start creating Blender stuff
+17:58:52 | INFO: Blender create Mesh node bldg_-7_2_shell
+17:58:53 | INFO: Blender create Mesh node bldg_-7_2_detail
+17:58:53 | INFO: glTF import finished in 0.74s
+17:58:53 | INFO: Data are loaded, start creating Blender stuff
+17:58:53 | INFO: Blender create Mesh node bldg_-7_3_shell
+17:58:53 | INFO: Blender create Mesh node bldg_-7_3_detail
+17:58:54 | INFO: glTF import finished in 0.81s
+17:58:54 | INFO: Data are loaded, start creating Blender stuff
+17:58:54 | INFO: Blender create Mesh node bldg_-7_4_shell
+17:58:54 | INFO: Blender create Mesh node bldg_-7_4_detail
+17:58:55 | INFO: glTF import finished in 0.96s
+17:58:55 | INFO: Data are loaded, start creating Blender stuff
+17:58:55 | INFO: Blender create Mesh node bldg_-7_5_shell
+17:58:55 | INFO: Blender create Mesh node bldg_-7_5_detail
+17:58:56 | INFO: glTF import finished in 1.02s
+17:58:56 | INFO: Data are loaded, start creating Blender stuff
+17:58:56 | INFO: Blender create Mesh node bldg_-8_0_shell
+17:58:56 | INFO: Blender create Mesh node bldg_-8_0_detail
+17:58:58 | INFO: glTF import finished in 1.27s
+17:58:58 | INFO: Data are loaded, start creating Blender stuff
+17:58:58 | INFO: Blender create Mesh node bldg_-8_1_shell
+17:58:58 | INFO: Blender create Mesh node bldg_-8_1_detail
+17:58:59 | INFO: glTF import finished in 0.92s
+17:58:59 | INFO: Data are loaded, start creating Blender stuff
+17:58:59 | INFO: Blender create Mesh node bldg_-8_2_shell
+17:58:59 | INFO: Blender create Mesh node bldg_-8_2_detail
+17:59:00 | INFO: glTF import finished in 1.21s
+17:59:00 | INFO: Data are loaded, start creating Blender stuff
+17:59:00 | INFO: Blender create Mesh node bldg_-8_3_shell
+17:59:00 | INFO: Blender create Mesh node bldg_-8_3_detail
+17:59:01 | INFO: glTF import finished in 0.88s
+17:59:01 | INFO: Data are loaded, start creating Blender stuff
+17:59:01 | INFO: Blender create Mesh node bldg_-8_4_shell
+17:59:01 | INFO: Blender create Mesh node bldg_-8_4_detail
+17:59:02 | INFO: glTF import finished in 0.93s
+17:59:02 | INFO: Data are loaded, start creating Blender stuff
+17:59:02 | INFO: Blender create Mesh node AR_Backstein_nocol
+17:59:02 | INFO: Blender create Mesh node AR_Backstein19_nocol
+17:59:03 | INFO: Blender create Mesh node AR_Backstein_Fiale_nocol
+17:59:03 | INFO: Blender create Mesh node AR_Backstein_Giebel_nocol
+17:59:03 | INFO: Blender create Mesh node AR_Backstein_Nische_nocol
+17:59:03 | INFO: Blender create Mesh node AR_Backstein_innen_nocol
+17:59:03 | INFO: Blender create Mesh node AR_Dachbahn_nocol
+17:59:03 | INFO: Blender create Mesh node AR_Dachziegel_nocol
+17:59:03 | INFO: Blender create Mesh node AR_Dunkel_nocol
+17:59:03 | INFO: Blender create Mesh node AR_Eisen_nocol
+17:59:03 | INFO: Blender create Mesh node AR_Fensterglas_nocol
+17:59:03 | INFO: Blender create Mesh node AR_Fensterrahmen_nocol
+17:59:03 | INFO: Blender create Mesh node AR_First_nocol
+17:59:03 | INFO: Blender create Mesh node AR_Fries_nocol
+17:59:03 | INFO: Blender create Mesh node AR_Glasdach_nocol
+17:59:03 | INFO: Blender create Mesh node AR_Glasur_nocol
+17:59:03 | INFO: Blender create Mesh node AR_Granit_nocol
+17:59:03 | INFO: Blender create Mesh node AR_Masswerk_gruen_nocol
+17:59:03 | INFO: Blender create Mesh node AR_Masswerk_rot_nocol
+17:59:03 | INFO: Blender create Mesh node AR_Masswerk_ziegel_nocol
+17:59:03 | INFO: Blender create Mesh node AR_Putz_nocol
+17:59:03 | INFO: Blender create Mesh node AR_Putz_innen_nocol
+17:59:03 | INFO: Blender create Mesh node AR_Quader_nocol
+17:59:04 | INFO: Blender create Mesh node AR_Rosette_nocol
+17:59:04 | INFO: Blender create Mesh node AR_Sandstein_nocol
+17:59:04 | INFO: Blender create Mesh node AR_Schaufenster_nocol
+17:59:04 | INFO: Blender create Mesh node AR_Schiefer_nocol
+17:59:04 | INFO: Blender create Mesh node AR_Schild_sparkasse_nocol
+17:59:04 | INFO: Blender create Mesh node AR_Schild_stichnoth_nocol
+17:59:04 | INFO: Blender create Mesh node AR_Schild_viviry_nocol
+17:59:04 | INFO: Blender create Mesh node AR_Stahl_nocol
+17:59:04 | INFO: Blender create Mesh node AR_Tuer_nocol
+17:59:04 | INFO: Blender create Mesh node AR_Tuer_gruen_nocol
+17:59:04 | INFO: Blender create Mesh node AR_Vierpass_nocol
+17:59:04 | INFO: Blender create Mesh node AR_Wechsel_nocol
+17:59:05 | INFO: Blender create Mesh node AR_Zink_nocol
+17:59:05 | INFO: Blender create Mesh node crown_inst_nocol
+17:59:05 | INFO: Blender create Mesh node figure_inst_nocol
+17:59:05 | INFO: Blender create Mesh node frieze_inst_nocol
+17:59:05 | INFO: Blender create Mesh node rosette_inst_nocol
+17:59:05 | INFO: Blender create Mesh node col_altes_rathaus
+17:59:07 | INFO: glTF import finished in 4.53s
+17:59:08 | INFO: Data are loaded, start creating Blender stuff
+17:59:08 | INFO: Blender create Mesh node MK_det_Backstein
+17:59:08 | INFO: Blender create Mesh node MK_det_Bleiglas
+17:59:08 | INFO: Blender create Mesh node MK_det_Bronze
+17:59:08 | INFO: Blender create Mesh node MK_det_Dunkel
+17:59:08 | INFO: Blender create Mesh node MK_det_Glasurstein
+17:59:08 | INFO: Blender create Mesh node MK_det_Gold
+17:59:08 | INFO: Blender create Mesh node MK_det_Kupfer
+17:59:08 | INFO: Blender create Mesh node MK_det_Kupfer_Patina
+17:59:09 | INFO: Blender create Mesh node MK_det_Sandstein_dunkel
+17:59:09 | INFO: Blender create Mesh node MK_det_Sandstein
+17:59:10 | INFO: Blender create Mesh node MK_det_Zifferblatt
+17:59:10 | INFO: Blender create Mesh node MK_fine_Dunkel
+17:59:10 | INFO: Blender create Mesh node MK_fine_Eisen
+17:59:11 | INFO: Blender create Mesh node MK_fine_Gold
+17:59:11 | INFO: Blender create Mesh node Inschrift.001
+17:59:11 | INFO: Blender create Mesh node Inschrift
+17:59:11 | INFO: Blender create Mesh node MK_fine_Kupfer
+17:59:12 | INFO: Blender create Mesh node MK_fine_Lamellen
+17:59:12 | INFO: Blender create Mesh node MK_fine_Sandstein_dunkel
+17:59:13 | INFO: Blender create Mesh node MK_fine_Sandstein
+17:59:13 | INFO: Blender create Mesh node MK_fine_Stahl
+17:59:13 | INFO: Blender create Mesh node MK_roof_Backstein
+17:59:13 | INFO: Blender create Mesh node MK_roof_Dachziegel
+17:59:14 | INFO: Blender create Mesh node MK_roof_Dunkel
+17:59:14 | INFO: Blender create Mesh node MK_roof_Kupfer
+17:59:14 | INFO: Blender create Mesh node MK_wall_Backstein
+17:59:14 | INFO: Blender create Mesh node MK_wall_Glasurstein
+17:59:14 | INFO: Blender create Mesh node MK_wall_Granit
+17:59:14 | INFO: Blender create Mesh node MK_wall_Sandstein
+17:59:14 | INFO: Blender create Mesh node MK_wall_Sandstein_dunkel
+17:59:14 | INFO: Blender create Mesh node MK_wall_Sandstein_Quader
+17:59:15 | INFO: Blender create Mesh node MK_wall_Sockelstein
+17:59:15 | INFO: Blender create Mesh node MK_wall_Stahl
+17:59:15 | INFO: glTF import finished in 7.63s
+C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\pipeline\ground\preview2.py:88: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  w = bpy.data.worlds.new('w'); sc.world = w; w.use_nodes = True
+02:21.828  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\ground2_holzmarkt.png'
+objects 4931
+rendered ground2_holzmarkt
+02:34.110  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\ground2_holzmarkt_close.png'
+rendered ground2_holzmarkt_close
+02:47.828  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\ground2_marktplatz.png'
+rendered ground2_marktplatz
+02:54.391  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\ground2_marktplatz_high.png'
+rendered ground2_marktplatz_high
+03:10.907  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\ground2_ballhofplatz.png'
+rendered ground2_ballhofplatz
+03:17.969  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\ground2_leine_hohes_ufer.png'
+rendered ground2_leine_hohes_ufer
+03:25.813  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\ground2_leine_leibnizufer.png'
+rendered ground2_leine_leibnizufer
+03:32.641  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\ground2_leine_schlossbruecke.png'
+rendered ground2_leine_schlossbruecke
+03:37.188  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\ground2_leine_portal.png'
+rendered ground2_leine_portal
+Blender 5.0.1 (hash a3db93c5b259 built 2025-12-16 01:32:30)
+
+Blender quit

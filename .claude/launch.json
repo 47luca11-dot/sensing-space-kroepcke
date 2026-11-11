@@ -1,0 +1,35 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "splat-viewer",
+      "runtimeExecutable": "C:/PROGRA~1/nodejs/npm.cmd",
+      "runtimeArgs": ["--prefix", "gaussian-splat-viewer", "run", "dev", "--", "--port", "5173", "--strictPort"],
+      "port": 5173
+    },
+    {
+      "name": "escape-room",
+      "runtimeExecutable": "C:/PROGRA~1/nodejs/npm.cmd",
+      "runtimeArgs": ["--prefix", "escape-room", "run", "dev", "--", "--port", "5174", "--strictPort"],
+      "port": 5174
+    },
+    {
+      "name": "startbildschirm",
+      "runtimeExecutable": "C:/PROGRA~1/nodejs/node.exe",
+      "runtimeArgs": ["output/startbildschirm_demo/server.mjs", "5175"],
+      "port": 5175
+    },
+    {
+      "name": "scan-viewer",
+      "runtimeExecutable": "output/scan_viewer/.venv/Scripts/python.exe",
+      "runtimeArgs": ["-I", "output/scan_viewer/server.py", "5176"],
+      "port": 5176
+    },
+    {
+      "name": "hannover",
+      "runtimeExecutable": "C:/PROGRA~1/nodejs/node.exe",
+      "runtimeArgs": ["output/hannover/web/server.mjs", "5177"],
+      "port": 5177
+    }
+  ]
+}

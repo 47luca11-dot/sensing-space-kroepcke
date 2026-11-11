@@ -1,0 +1,28 @@
+20:58:56 | INFO: Data are loaded, start creating Blender stuff
+20:58:56 | INFO: Blender create Mesh node anz_detail_nocol
+20:58:57 | INFO: Blender create Mesh node anz_dome
+20:58:57 | INFO: Blender create Mesh node anz_dome_detail_nocol
+20:58:57 | INFO: Blender create Mesh node anz_letters_nocol
+20:58:57 | INFO: Blender create Mesh node anz_shell
+20:58:57 | INFO: Blender create Mesh node anz_windows_nocol
+20:58:57 | INFO: Blender create Mesh node bad_detail_nocol
+20:58:57 | INFO: Blender create Mesh node bad_letters_nocol
+20:58:57 | INFO: Blender create Mesh node bad_roof
+20:58:57 | INFO: Blender create Mesh node bad_roof_detail_nocol
+20:58:57 | INFO: Blender create Mesh node bad_shell
+20:58:57 | INFO: Blender create Mesh node bad_windows_nocol
+20:58:57 | INFO: glTF import finished in 0.74s
+C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\pipeline\landmarks\anzeiger\qa\qa_render.py:55: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  w = bpy.data.worlds.new('w'); sc.world = w; w.use_nodes = True
+00:14.156  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\qa2_anzeiger_graze_from_s.png'
+00:17.437  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\qa2_anzeiger_graze_from_n.png'
+00:21.094  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\qa2_anzeiger_graze_kestner_n_end.png'
+00:26.047  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\qa2_anzeiger_graze_recess.png'
+QA landmark objects 12
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/qa2_anzeiger_graze_from_s.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/qa2_anzeiger_graze_from_n.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/qa2_anzeiger_graze_kestner_n_end.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/qa2_anzeiger_graze_recess.png
+Blender 5.0.1 (hash a3db93c5b259 built 2025-12-16 01:32:30)
+
+Blender quit

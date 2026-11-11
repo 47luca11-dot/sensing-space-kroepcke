@@ -1,0 +1,4 @@
+  teilweise im Detailmodell -> geschnitten: ID_a44b2f58-d97b-37d3-9df6-09d85d7b03cd Bahnhofstraße 1
+  teilweise im Detailmodell -> geschnitten: ID_0508a59c-a5d1-3fdd-908a-af5c03c2bb7e An der Börse 5
+Gebaeude 1966 davon im Detailmodell 89 geschnitten 2 Volumen 11169 Strassen 2438 Laeden 933
+18.7 s

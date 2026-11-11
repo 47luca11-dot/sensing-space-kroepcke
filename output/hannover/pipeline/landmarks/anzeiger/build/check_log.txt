@@ -1,0 +1,46 @@
+faces 254849
+cameras 106
+rays hit 352538, back-face first hits 53 (0.015%), real see-through (no front face within 12 cm behind) 32
+   SEE ('bad_roof', 'tiles') cam (np.float64(-480.6), np.float64(15.0), np.float64(-340.7)) at (np.float64(-500.49), np.float64(21.91), np.float64(-307.49))
+   SEE ('bad_roof', 'tiles') cam (np.float64(-579.2), np.float64(45.0), np.float64(-343.8)) at (np.float64(-496.33), np.float64(16.29), np.float64(-314.82))
+   SEE ('bad_shell', 'ashlar') cam (np.float64(-470.6), np.float64(45.0), np.float64(-358.1)) at (np.float64(-502.19), np.float64(11.65), np.float64(-300.76))
+   SEE ('bad_roof', 'tiles') cam (np.float64(-470.6), np.float64(45.0), np.float64(-358.1)) at (np.float64(-501.69), np.float64(18.68), np.float64(-304.03))
+   SEE ('anz_detail_nocol', 'metal_dark') cam (np.float64(-473.1), np.float64(80.0), np.float64(-237.7)) at (np.float64(-489.11), np.float64(5.13), np.float64(-293.07))
+   SEE ('bad_detail_nocol', 'stone') cam (np.float64(-531.1), np.float64(80.0), np.float64(-338.1)) at (np.float64(-494.34), np.float64(16.8), np.float64(-310.27))
+   SEE ('bad_shell', 'ashlar') cam (np.float64(-445.6), np.float64(30.0), np.float64(-158.9)) at (np.float64(-498.36), np.float64(10.75), np.float64(-358.88))
+   SEE ('bad_detail_nocol', 'bronze') cam (np.float64(-445.6), np.float64(30.0), np.float64(-158.9)) at (np.float64(-496.27), np.float64(0.37), np.float64(-329.88))
+   SEE ('bad_roof', 'tiles') cam (np.float64(-479.3), np.float64(30.0), np.float64(-415.3)) at (np.float64(-497.82), np.float64(22.74), np.float64(-350.52))
+   SEE ('bad_shell', 'ashlar') cam (np.float64(-445.6), np.float64(30.0), np.float64(-401.4)) at (np.float64(-493.01), np.float64(9.19), np.float64(-313.38))
+   SEE ('bad_roof', 'tiles') cam (np.float64(-445.6), np.float64(30.0), np.float64(-401.4)) at (np.float64(-503.29), np.float64(18.48), np.float64(-303.71))
+   SEE ('bad_roof_detail_nocol', 'copper_dark') cam (np.float64(-490.0), np.float64(1.7), np.float64(-378.0)) at (np.float64(-494.5), np.float64(10.14), np.float64(-315.41))
+   SEE ('bad_detail_nocol', 'stone') cam (np.float64(-490.0), np.float64(1.7), np.float64(-378.0)) at (np.float64(-494.31), np.float64(14.68), np.float64(-306.74))
+   SEE ('bad_roof_detail_nocol', 'stone') cam (np.float64(-484.0), np.float64(1.7), np.float64(-352.0)) at (np.float64(-494.76), np.float64(10.14), np.float64(-317.28))
+   SEE ('bad_roof_detail_nocol', 'copper_dark') cam (np.float64(-484.0), np.float64(1.7), np.float64(-352.0)) at (np.float64(-494.6), np.float64(10.13), np.float64(-316.0))
+   SEE ('bad_shell', 'roof_flat') cam (np.float64(-484.0), np.float64(1.7), np.float64(-352.0)) at (np.float64(-490.23), np.float64(10.06), np.float64(-301.76))
+   SEE ('anz_shell', 'klinker') cam (np.float64(-489.0), np.float64(0.2), np.float64(-346.0)) at (np.float64(-489.57), np.float64(28.3), np.float64(-295.28))
+   SEE ('bad_roof', 'tiles') cam (np.float64(-489.0), np.float64(0.2), np.float64(-346.0)) at (np.float64(-497.88), np.float64(22.0), np.float64(-308.62))
+   SEE ('bad_roof', 'tiles') cam (np.float64(-489.0), np.float64(0.2), np.float64(-346.0)) at (np.float64(-499.35), np.float64(21.97), np.float64(-307.59))
+   SEE ('bad_shell', 'roof_flat') cam (np.float64(-489.5), np.float64(1.7), np.float64(-306.0)) at (np.float64(-492.11), np.float64(10.06), np.float64(-303.56))
+   SEE ('bad_shell', 'roof_flat') cam (np.float64(-489.5), np.float64(1.7), np.float64(-306.0)) at (np.float64(-490.37), np.float64(10.06), np.float64(-303.47))
+   SEE ('bad_roof', 'tiles') cam (np.float64(-492.0), np.float64(1.7), np.float64(-362.0)) at (np.float64(-500.28), np.float64(19.52), np.float64(-304.98))
+   SEE ('bad_shell', 'roof_flat') cam (np.float64(-492.5), np.float64(3.0), np.float64(-322.0)) at (np.float64(-491.74), np.float64(10.06), np.float64(-311.62))
+   SEE ('bad_shell', 'roof_flat') cam (np.float64(-492.5), np.float64(3.0), np.float64(-322.0)) at (np.float64(-490.41), np.float64(10.06), np.float64(-303.66))
+   SEE ('bad_shell', 'ashlar') cam (np.float64(-492.5), np.float64(3.0), np.float64(-322.0)) at (np.float64(-498.32), np.float64(10.48), np.float64(-358.89))
+   SEE ('bad_shell', 'roof_flat') cam (np.float64(-484.0), np.float64(1.7), np.float64(-312.0)) at (np.float64(-491.96), np.float64(10.06), np.float64(-303.6))
+   SEE ('bad_shell', 'roof_flat') cam (np.float64(-484.0), np.float64(1.7), np.float64(-312.0)) at (np.float64(-492.4), np.float64(10.06), np.float64(-305.34))
+   SEE ('bad_shell', 'roof_flat') cam (np.float64(-484.0), np.float64(1.7), np.float64(-312.0)) at (np.float64(-491.94), np.float64(10.06), np.float64(-306.17))
+   SEE ('bad_shell', 'roof_flat') cam (np.float64(-484.0), np.float64(1.7), np.float64(-312.0)) at (np.float64(-491.63), np.float64(10.06), np.float64(-303.65))
+   SEE ('bad_shell', 'ashlar') cam (np.float64(-484.0), np.float64(1.7), np.float64(-312.0)) at (np.float64(-498.37), np.float64(2.36), np.float64(-358.88))
+   ('bad_shell', 'roof_flat') hits 23 faces 4 e.g. at [[-492.25, 10.06, -312.39], [-490.84, 10.06, -302.56], [-491.78, 10.06, -306.57]]
+   ('bad_shell', 'ashlar') hits 11 faces 5 e.g. at [[-492.91, 9.29, -313.4], [-492.97, 9.67, -313.39], [-503.82, 11.44, -300.66]]
+   ('bad_roof', 'tiles') hits 8 faces 8 e.g. at [[-496.3, 16.29, -314.77], [-504.0, 18.44, -303.62], [-504.01, 18.62, -303.8]]
+   ('bad_detail_nocol', 'stone') hits 2 faces 2 e.g. at [[-494.27, 14.67, -306.75], [-494.34, 17.15, -310.22]]
+   ('bad_roof_detail_nocol', 'copper_dark') hits 2 faces 1 e.g. at [[-494.64, 10.14, -316.34]]
+   ('bad_roof_detail_nocol', 'tiles') hits 1 faces 1 e.g. at [[-517.14, 15.08, -299.4]]
+   ('anz_detail_nocol', 'metal_dark') hits 1 faces 1 e.g. at [[-489.11, 5.43, -293.08]]
+   ('anz_dome_detail_nocol', 'copper') hits 1 faces 1 e.g. at [[-494.74, 48.87, -281.47]]
+   ('anz_windows_nocol', 'paint_white') hits 1 faces 1 e.g. at [[-510.68, 29.4, -282.59]]
+   ('bad_detail_nocol', 'bronze') hits 1 faces 1 e.g. at [[-496.26, 0.75, -329.89]]
+   ('bad_roof_detail_nocol', 'stone') hits 1 faces 1 e.g. at [[-494.76, 10.18, -317.27]]
+   ('anz_shell', 'klinker') hits 1 faces 1 e.g. at [[-489.6, 31.28, -295.12]]
+letters: 4497 front faces tested, 0 buried (inside a wall) []

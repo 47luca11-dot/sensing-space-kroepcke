@@ -1,0 +1,53 @@
+{
+ "total": 527844,
+ "selected": 338877,
+ "clusters": 1169,
+ "taken": 1,
+ "center": [
+  0.01445723231881857,
+  -0.0026711225509643555,
+  -0.02557578682899475
+ ],
+ "up": [
+  0.004884449830992625,
+  0.9998249427083553,
+  0.01806172993051285
+ ],
+ "plane_d": 0.004084451637326036,
+ "ground_inliers": 269586,
+ "eps": 0.0033563786828289845,
+ "scale": 0.23152288166941656,
+ "height": 1.39950957308429,
+ "params": {
+  "radius": 2.5,
+  "group": false,
+  "min_opacity": 0.1,
+  "ground_margin": 2.5,
+  "keep_soft": true
+ },
+ "mode": "surface",
+ "bbox_min": [
+  -0.5592732429504395,
+  -0.021225810050964355,
+  -0.41082969307899475
+ ],
+ "bbox_max": [
+  0.5925822257995605,
+  0.017592549324035645,
+  0.38311561942100525
+ ],
+ "extracted_raw": 338877,
+ "mesh": {
+  "voxel": 0.0031567018205521016,
+  "faces": 300000,
+  "vertices": 150002,
+  "boundary_edges": 0,
+  "components": 1,
+  "watertight": false,
+  "removed_splats": 0,
+  "kept_splats": 338877,
+  "giant_or_needle": 0
+ },
+ "cleaned": true,
+ "seconds": 102.71
+}

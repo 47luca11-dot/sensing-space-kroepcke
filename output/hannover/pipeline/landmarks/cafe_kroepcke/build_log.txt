@@ -1,0 +1,160 @@
+00:03:01 | INFO: Data are loaded, start creating Blender stuff
+00:03:01 | INFO: Blender create Mesh node Mesh_0
+00:03:01 | INFO: Blender create Mesh node Mesh_10
+00:03:01 | INFO: Blender create Mesh node Mesh_11
+00:03:01 | INFO: Blender create Mesh node Mesh_12
+00:03:01 | INFO: Blender create Mesh node Mesh_18
+00:03:01 | INFO: Blender create Mesh node Mesh_19
+00:03:01 | INFO: Blender create Mesh node Mesh_20
+00:03:01 | INFO: Blender create Mesh node Mesh_21
+00:03:01 | INFO: Blender create Mesh node Mesh_27
+00:03:01 | INFO: Blender create Mesh node Mesh_28
+00:03:01 | INFO: Blender create Mesh node Mesh_42
+00:03:01 | INFO: Blender create Mesh node Mesh_45
+00:03:01 | INFO: Blender create Mesh node Mesh_46
+00:03:01 | INFO: Blender create Mesh node Mesh_47
+00:03:01 | INFO: glTF import finished in 0.09s
+00:03:02 | INFO: Data are loaded, start creating Blender stuff
+00:03:02 | INFO: Blender create Mesh node Mesh_0
+00:03:02 | INFO: Blender create Mesh node Mesh_10
+00:03:02 | INFO: Blender create Mesh node Mesh_11
+00:03:02 | INFO: Blender create Mesh node Mesh_31
+00:03:02 | INFO: Blender create Mesh node Mesh_48
+00:03:02 | INFO: Blender create Mesh node Mesh_49
+00:03:02 | INFO: Blender create Mesh node Mesh_50
+00:03:02 | INFO: Blender create Mesh node Mesh_53
+00:03:02 | INFO: Blender create Mesh node Mesh_56
+00:03:02 | INFO: glTF import finished in 0.02s
+00:03:02 | INFO: Data are loaded, start creating Blender stuff
+00:03:02 | INFO: Blender create Mesh node Mesh_0
+00:03:02 | INFO: glTF import finished in 0.00s
+CAFE pavement at portal -0.292
+CAFE tris total 263613
+    Cafe_Kroepcke_Kupfer_Falz 70736
+    Cafe_Kroepcke_Rippen 36248
+    Cafe_Kroepcke_Stahl 24208
+    Innen_Stuhl 14256
+    Cafe_Kroepcke_Kupfer 14169
+    Innen_Tisch 13068
+    Innen_Pendel 11424
+    Leuchte_Kugel_2 10296
+    Cafe_Kroepcke_Decke_innen 6975
+    Txt_Café K 5020
+    Txt_Café K.001 5020
+    Txt_Café K.002 5020
+    Stuhl_Gestell 4440
+    Cafe_Kroepcke_Edelstahl 4088
+    Txt_MÖVENP 3308
+    Leuchte_Arm_2 3276
+    Stuhl_Sitz 2880
+    Leuchte_Kugel_3 2376
+    Txt_Markise 2324
+    Txt_Markise.001 2324
+    Txt_Markise.002 2324
+    Txt_Markise.003 2324
+    Leuchte_Kugel_1 1980
+    Cafe_Kroepcke_Trommel_Band 1384
+    Cafe_Kroepcke_Pflanze 1200
+    Cafe_Kroepcke_Trommel 1080
+    Cafe_Kroepcke_Paneel 932
+    Tisch_Fuss 900
+    Leuchte_Arm_1 660
+    Cafe_Kroepcke_Granit 656
+    Leuchte_Arm_3 648
+    Schirm_Mast 640
+    Cafe_Kroepcke_Glas 570
+    Innen_Pendel_Kabel 564
+    Txt_Trommel_Ö 544
+    Cafe_Kroepcke_Portal_Rot 516
+    Txt_Trommel_K 468
+    Txt_Trommel_E 424
+    Tisch_Platte 420
+    Txt_Trommel_M 408
+CAFE vault shells: verts 10588 faces 20504 non-manifold edges 0
+Info: Saved as "cafe_kroepcke.blend"
+saved C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/landmarks/cafe_kroepcke.blend
+CAFE export nodes 38 tris 263693
+INFO Draco mesh compression is available, use library at C:\Program Files\Blender Foundation\Blender 5.0\5.0\scripts\addons_core\io_scene_gltf2\extern_draco.dll
+00:03:03 | INFO: Starting glTF 2.0 export
+00:03:03 | INFO: Extracting primitive: Txt_Markise
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Txt_Café K
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Kupfer
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Decke_innen
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Kupfer_Falz
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Rippen
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Paneel
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Granit
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Stahl
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Innen_Boden
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Glas
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Satinierung
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Edelstahl
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Portal_Rot
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Innen_Licht
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_LED
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Innen_Dunkel
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Innen_Unterzug
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Dach
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Markise
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Trommel_Kern
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Trommel
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Trommel_Band
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Dachtechnik
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Kuebel
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Pflanze
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Heizstrahler
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Innen_Wand
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Cafe_Kroepcke_Innen_Theke
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: col_Cafe_Kroepcke_Huelle
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Leuchte_Arm_3.001
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Leuchte_Kugel_3.001
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Tisch_Platte.001
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Tisch_Fuss.001
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Stuhl_Sitz.001
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Schirm_Bespannung.001
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Innen_Tisch.001
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Extracting primitive: Innen_Pendel_Kabel.001
+00:03:03 | INFO: Primitives created: 1
+00:03:03 | INFO: Finished glTF 2.0 export in 0.27779388427734375 s
+
+exported C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/data/landmarks_raw/cafe_kroepcke.glb
+Blender 5.0.1 (hash a3db93c5b259 built 2025-12-16 01:32:30)
+
+Blender quit

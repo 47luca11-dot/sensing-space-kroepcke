@@ -1,19 +1,15 @@
-# Nur Spiel + Quellcode versionieren; Rohdaten, Renders, .blend und Caches bleiben lokal.
-/data/
-/pipeline/**
-/blender/**
-!/pipeline/**/
-!/blender/**/
-!/pipeline/**/*.py
-!/pipeline/**/*.sh
-!/pipeline/**/*.md
-!/blender/**/*.py
-!/blender/**/*.sh
-!/blender/**/*.md
-!/pipeline/detail_signage/sign_overrides.json
-**/cache/
-**/qa/
+# Abhängigkeiten / Umgebungen (werden per npm install bzw. pip neu erzeugt)
+node_modules/
+.venv/
+venv/
 __pycache__/
 *.pyc
-*.blend
-*.blend1
+dist/
+dist-artifact/
+# generierte Artifact-Demo (node output/hannover/pipeline/build_artifact_demo.mjs)
+output/hannover/artifact_demo/
+# lokale Claude-Einstellungen
+.claude/settings.local.json
+# Umgebungsdateien nie committen
+.env
+.env.*

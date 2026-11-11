@@ -1,0 +1,2 @@
+{"note": "TIB Rhino local (X,Y,Z) -> EPSG:25832: [E,N] = R(rot_deg) @ [X,Y] + t + origin; H = Z + 54.93 (DHHN92). ICP vs LH-LoD2 neighbours, median residual 0.035 m",
+ "origin": [548986.0, 5803674.0, 54.93], "rot_deg": -6.2588, "t": [-0.469, 5.914]}

@@ -1,0 +1,12 @@
+{
+ "overlay_tris": 597504,
+ "edge_cross_overlay": 0,
+ "edge_cross_scene": 0,
+ "zfight": 0,
+ "see_through_leaks": 0,
+ "see_through_rays": 15696,
+ "leak_openings": [],
+ "normal_flips": 0,
+ "bad_overlay_tris": [],
+ "bad_scene": []
+}

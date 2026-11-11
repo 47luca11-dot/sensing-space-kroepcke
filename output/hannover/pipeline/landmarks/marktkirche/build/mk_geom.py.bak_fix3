@@ -1,0 +1,1097 @@
+"""Marktkirche St. Georgii et Jacobi -- Geometrie (Stufe 1, numpy).
+Massgaben: LGLN-LoD2 (Grundriss, Traufe 21.4 / First 40.5, Turm 13.74 x 16.18 m), DOM1 (Giebelfuss ~50 m), Fotos (Proportionen
+Turmhelm: Giebelspitze 69.5, Laterne 70.3-74.6, Wimperge 79.4, Nadel 90.4, Kugel 93.1, Fahne 97.5).
+Ausgabe: build/mk_geo.npz (je Material+Gruppe: Dreiecke + UV in Metern) + build/mk_geo.json
+Aufruf: python mk_geom.py [--quick]"""
+import json, math, os, sys, time
+import numpy as np
+from shapely.geometry import Polygon, Point
+from shapely.ops import unary_union
+from shapely.geometry.polygon import orient
+from mklib import *
+from mk_parts import *
+from mk_luther import luther, standplatte
+from mk_figs import george_dragon, death_and_man, relief_panel
+PEDSTONE = 'Sockelstein'
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+BUILD = os.path.join(HERE, 'build'); os.makedirs(BUILD, exist_ok=True)
+PL = json.load(open(os.path.join(BUILD, 'plan_local.json')))
+GG = PL['ground_grid']; GY = np.array(GG['y'])
+t0 = time.time()
+
+
+def G(u, v):
+    fu = (u - GG['u0']) / GG['d']; fv = (v - GG['v0']) / GG['d']
+    i = int(np.clip(math.floor(fv), 0, GG['nv'] - 2)); j = int(np.clip(math.floor(fu), 0, GG['nu'] - 2))
+    a = np.clip(fv - i, 0, 1); b = np.clip(fu - j, 0, 1)
+    return float((1 - a) * (1 - b) * GY[i, j] + (1 - a) * b * GY[i, j + 1] + a * (1 - b) * GY[i + 1, j] + a * b * GY[i + 1, j + 1])
+
+
+B = Builder()
+Y0 = -1.2                   # Fundamentunterkante (unter Gelaende, nie schwebend)
+# ---------------------------------------------------------------- Hauptmasse
+TU, TV = 6.87, 8.09         # Turm halbe Laenge (u) / Breite (v)
+S_TOP = 49.8                # Turmschaft-Oberkante (Giebelfuss)
+GAPEX = 69.5                # Giebelspitze
+RRIDGE = 68.4               # Kreuzdach-First
+EAVE, RIDGE = 21.45, 40.5   # Langhaus Traufe / First
+APEX_U = 45.8               # Ende First / Spitze Chorwalm
+
+
+def hw(u):                  # halbe Langhausbreite (leicht konisch, LoD2)
+    return 13.645 + (13.215 - 13.645) * (u - 6.87) / (45.6 - 6.87)
+
+
+EAST_N = [(45.6, 13.215), (48.0, 12.85), (49.65, 10.6), (49.6, 6.9), (53.3, 6.0), (55.75, 2.3)]
+OUT = [(6.87, -hw(6.87))] + [(u, -v) for u, v in EAST_N] + [(u, v) for u, v in EAST_N[::-1]] + [(6.87, hw(6.87))]
+# OUT: CCW: SW -> Suedwand -> Ostschluss -> Nordwand -> NW ; Westkante (6.87) schliesst
+OUT = [OUT[0]] + OUT[1:]
+OUTA = np.array(OUT)
+
+
+def edge_frames():
+    fr = []
+    n = len(OUTA)
+    for i in range(n):
+        a, b = OUTA[i], OUTA[(i + 1) % n]
+        fr.append((a, b))
+    return fr
+
+
+def outward(a, b):
+    t = nrm(np.array([b[0] - a[0], b[1] - a[1], 0.0]))
+    return np.cross(t, UP)
+
+
+def xpos(F, u, v):
+    return float(np.dot(np.array([u, v, 0.0]) - F.o, F.t))
+
+
+# ---------------------------------------------------------------- Strebepfeiler
+def buttress(B, p, out, w, levels, base=Y0, mat=BRICK, capmat=PATINA, slope=1.25, grp='wall'):
+    """p = Punkt auf Wandflaeche (u,v), out = Aussenrichtung; levels = [(y_oben, tiefe), ...]."""
+    out = nrm([out[0], out[1], 0.0]); t = np.cross(UP, out)
+    o = np.array([p[0], p[1], 0.0])
+    yb = base
+    for i, (yt, d) in enumerate(levels):
+        dn = levels[i + 1][1] if i + 1 < len(levels) else 0.0
+        yn = yt + slope * (d - dn)
+        prof = [(-0.35, yb), (d, yb), (d, yt), (dn, yn), (-0.35, yn)]
+        B.add(mat, extrude_profile(prof, o, out, UP, t, -w / 2, w / 2), grp, closed=True)
+        cap = [(d + 0.05, yt - 0.07), (d + 0.05, yt + 0.04), (dn - 0.03, yn + 0.04 + 0.03 * slope), (dn - 0.03, yn - 0.07 + 0.03 * slope)]
+        B.add(capmat, extrude_profile(cap, o, out, UP, t, -w / 2 - 0.04, w / 2 + 0.04), 'det', closed=True)
+        yb = yt
+    return Polygon([tuple(o[:2] + t[:2] * s * w / 2 + out[:2] * dd) for s, dd in ((-1, -0.3), (1, -0.3), (1, levels[0][1]), (-1, levels[0][1]))])
+
+
+BUTTS = []      # (p, out, w, levels)
+NAVE_BU = [14.33, 21.57, 28.93, 36.24]
+LV_NAVE = [(5.3, 1.45), (12.6, 1.2), (19.0, 0.92)]
+for ub in NAVE_BU:
+    for sgn in (-1, 1):
+        BUTTS.append(((ub, sgn * hw(ub)), (0, sgn), 1.3, LV_NAVE))
+for sgn in (-1, 1):
+    BUTTS.append(((6.87, sgn * hw(6.87)), nrm([-1, sgn, 0]), 1.3, [(5.3, 1.55), (12.6, 1.3), (19.0, 1.0)]))   # Westecken diagonal
+    for (u, v) in [(48.0, 12.85), (49.65, 10.6), (53.3, 6.0), (55.75, 2.3)]:
+        i = EAST_N.index((u, v))
+        a, b, c = np.array(EAST_N[i - 1]), np.array(EAST_N[i]), np.array(EAST_N[i + 1]) if i + 1 < len(EAST_N) else np.array([55.75, -2.3])
+        n1 = outward(c, b)[:2]; n2 = outward(b, a)[:2]     # Nordseite: Reihenfolge im CCW-Umlauf ist umgekehrt
+        d = nrm(np.r_[n1 + n2, 0])
+        BUTTS.append(((u, sgn * v), (d[0], sgn * d[1]), 1.2, [(5.3, 1.4), (12.6, 1.15), (19.0, 0.85)]))
+# Turm-Strebepfeiler (LoD2 69045_15/21) und Eckmassive zum Seitenschiff (69045_14/20)
+TBUTTS = [((-2.33, TV), (0, 1), 1.2, [(6.0, 1.3), (13.0, 1.0), (19.0, 0.7)]),
+          ((-2.5, -TV), (0, -1), 1.28, [(6.0, 1.35), (13.0, 1.05), (19.0, 0.75)]),
+          ((5.3, TV), (0, 1), 3.1, [(5.3, 2.0), (12.6, 1.6), (19.0, 1.1)]),
+          ((5.05, -TV), (0, -1), 3.6, [(5.3, 1.45), (12.6, 1.2), (19.0, 0.9)])]
+TURRETS = [(44.57, -13.30), (44.57, 13.27)]
+TUR_A = 1.5     # Apothem Treppenturm
+
+
+def octagon(c, apo, h, phase=0.0):
+    R = apo / math.cos(math.pi / 8)
+    return circle([c[0], c[1], 0], R, 8, h, phase=math.pi / 8 + phase)
+
+
+# ---------------------------------------------------------------- Fenster-/Portalliste je Wandfacette
+WIN_MAIN = dict(w=3.2, sill=5.9, hs=16.4, lights=3)
+BAYC = [10.3, 17.95, 25.25, 32.6, 39.98]
+
+
+def facet_openings(i, a, b):
+    """Liste von Oeffnungs-Specs (x in Facettenkoordinaten) fuer Facette i (a->b)."""
+    F = WallFrame(a, b - a)
+    L = float(np.linalg.norm(b - a)); ops = []
+    a_t = tuple(np.round(a, 3)); b_t = tuple(np.round(b, 3))
+    south = abs(a[1] + hw(a[0])) < 0.01 and abs(b[1] + hw(b[0])) < 0.05 and b[0] > a[0] + 20
+    north = abs(a[1] - hw(a[0])) < 0.05 and abs(b[1] - hw(b[0])) < 0.01 and a[0] > b[0] + 20
+    if south or north:
+        for k, uc in enumerate(BAYC):
+            portal = (south and k == 4) or (north and k == 0)
+            sp = dict(WIN_MAIN); sp['x'] = xpos(F, uc, 0)
+            if portal:
+                sp['sill'] = 7.6
+            sp['portal'] = portal
+            ops.append(sp)
+        return F, L, ops
+    # Ostschluss
+    m = {((49.65, 10.6), (49.6, 6.9)): dict(w=2.4, lights=3), ((48.0, 12.85), (49.65, 10.6)): dict(w=1.25, lights=2),
+         ((49.6, 6.9), (53.3, 6.0)): dict(w=2.1, lights=2), ((53.3, 6.0), (55.75, 2.3)): dict(w=2.6, lights=3),
+         ((55.75, 2.3), (55.75, -2.3)): dict(w=2.6, lights=3)}
+    key = None
+    for (p, q), spec in m.items():
+        for sg in (1, -1):
+            P = (p[0], sg * p[1]); Q = (q[0], sg * q[1])
+            if (np.allclose(a, P, atol=0.02) and np.allclose(b, Q, atol=0.02)) or (np.allclose(a, Q, atol=0.02) and np.allclose(b, P, atol=0.02)):
+                key = spec
+    if key:
+        sp = dict(sill=5.9, hs=16.4); sp.update(key); sp['x'] = L / 2
+        if key['w'] == 2.1:       # Chorseitenwand: Fenster vom Strebepfeiler weg schieben
+            sp['x'] = L / 2 - 0.35 if np.linalg.norm(a - np.array([49.6, np.sign(a[1]) * 6.9])) < 0.05 else L / 2 + 0.35
+        ops.append(sp)
+    return F, L, ops
+
+
+def window_spec(sp):
+    w = sp['w']
+    d = dict(x=sp['x'], sill=sp['sill'], w=w, hs=sp['hs'], R=w, seg=12, fill='glass',
+             orders=[(0.30, 0.0), (0.30, 0.14), (0.16, 0.14), (0.16, 0.30), (0.0, 0.52)],
+             mats=[GLAZED, SAND, BRICK, BRICK], sill_block=True)
+    return d
+
+
+def build_window(F, sp, lights):
+    d = window_spec(sp)
+    hole = opening(B, F, d)
+    tracery(B, F, sp['x'], sp['sill'], sp['w'], sp['hs'], sp['w'], -0.40, lights, SAND, bar=0.15, depthbar=0.2)
+    return hole
+
+
+def side_portal(F, x, gy):
+    """Seitenportal nach Foto 01 (Suedportal): breites Spitzbogenportal mit 8 Rundstab-Ordnungen in rotem und schwarz
+    glasiertem Backstein, Sandstein-Masswerkzwickel (Kreis + Dreipass) im Rechteckfeld, grau-gruen abgedeckte Verdachung
+    zwischen den Strebepfeilern mit zwei Steinfialen, zweifluegelige Metalltuer (4 Felder), Granitstufen."""
+    th = gy + 0.18
+    w, hs = 2.3, th + 2.9
+    R = w * 0.95
+    NO, STEP, DEP = 8, 0.13, 0.11
+    orders = []
+    for k in range(NO, -1, -1):
+        off = STEP * k
+        orders += [(off, DEP * (NO - k)), (off, DEP * (NO - k) + DEP)]
+    orders = orders[:-1] + [(0.0, DEP * NO + 0.25)]
+    mats = []
+    for k in range(len(orders) - 1):
+        mats.append(GLAZED if (k // 2) % 2 == 0 else BRICK)
+    sp = dict(x=x, sill=th, w=w, hs=hs, R=R, seg=14, fill='door', orders=orders, mats=mats, sill_block=False, no_floor=True)
+    hole = opening(B, F, sp)
+    BASE_H = 0.55                                            # dunkle Sockelsteine unter den Rundstaeben (Foto 01)
+    # Rundstaebe in den Ecken der Stufen: Formsteine rot / schwarz glasiert im Wechsel, zwischen Nachbarstaeben versetzt
+    for k in range(1, NO + 1):
+        off = STEP * k - 0.012; d = DEP * (NO - k) + 0.012
+        ring = offset_outline(w, th, hs, R, off, 14, 'pointed', sill_drop=0.0) + np.array([x, 0])
+        path2 = np.vstack([[ring[1, 0], th + BASE_H - 0.02], ring[2:], [ring[0, 0], th + BASE_H - 0.02]])
+        brick_roll(B, F.pts(path2, -d), 0.05, GLAZED, BRICK, k0=k, course=0.1, seg=8, nref=F.n, grp='det', seed=k * 7 + int(x))
+    # Sockelsteine der Gewaende: gestufter Grundriss der Leibung, 3 cm umlaufend vorstehend
+    from shapely.geometry import Polygon as _Poly
+    jamb = [(w / 2 + off_, -d_) for off_, d_ in orders] + [(w / 2 + STEP * NO + 0.6, -(DEP * NO + 0.25)), (w / 2 + STEP * NO + 0.6, 0.0)]
+    jp = _Poly(jamb).buffer(0.03, join_style=2).intersection(_Poly([(w / 2 - 0.1, -(DEP * NO + 0.25) + 0.012), (w / 2 + 2.0, -(DEP * NO + 0.25) + 0.012),
+                                                                     (w / 2 + 2.0, 0.035), (w / 2 - 0.1, 0.035)]))
+    jp = orient(jp, 1.0)
+    jr = np.array(jp.exterior.coords)[:-1]
+    for s_ in (-1, 1):
+        B.add(SANDDK, extrude_profile(jr * np.array([s_, 1.0]), F.p(x, 0.0, 0.0), F.t, F.n, UP, th, th + BASE_H), 'det', closed=True)
+    W2 = w / 2 + STEP * NO                                   # halbe Aussenbreite
+    ap_out = arch_apex(2 * W2, hs, R + STEP * NO)
+    HOOD = min(th + 6.35, 7.1)                                # Verdachung unter dem Fenster (Fensterbank 7.6, Oberkante HOOD+0.42)
+    # Masswerkzwickel: Sandsteinfeld (Rechteck minus Bogen) etwas vor der Wand
+    rect = Polygon([(x - W2 - 0.08, hs), (x + W2 + 0.08, hs), (x + W2 + 0.08, HOOD - 0.12), (x - W2 - 0.08, HOOD - 0.12)])
+    arcp = Polygon(offset_outline(w, th - 1.0, hs, R, STEP * NO - 0.02, 14) + np.array([x, 0]))
+    zw = rect.difference(arcp)
+    for g in (list(zw.geoms) if zw.geom_type != 'Polygon' else [zw]):
+        if g.area < 0.05: continue
+        rr_ = np.array(orient(g, 1.0).exterior.coords)[:-1]
+        B.add(SAND, extrude_profile(rr_, F.p(0, 0, 0), F.t, UP, F.n, -0.05, 0.07), 'det', closed=True)
+    for s_ in (-1, 1):
+        # Kreis + Dreipass im Zwickel (Inkreis grob: Mitte zwischen Bogen und Rechteckecke)
+        cx = x + s_ * (W2 - 0.55); cy = HOOD - 0.12 - 0.62
+        rc = 0.5
+        # sicherstellen, dass der Kreis ausserhalb des Bogens liegt
+        while arch_halfwidth_at(2 * W2, hs, R + STEP * NO, cy - 0.1) > abs(cx - x) - rc - 0.04 and rc > 0.25:
+            rc -= 0.03; cx = x + s_ * (W2 - rc - 0.06); cy = HOOD - 0.12 - rc - 0.1
+        cc = F.p(cx, cy, 0.1)
+        cpts = np.array([cc + rc * (math.cos(q) * F.t + math.sin(q) * UP) for q in np.linspace(0, 2 * math.pi, 28, endpoint=False)])
+        B.add(SAND, sweep(cpts, rect_prof(0.07, 0.07), F.n, closed_path=True), 'fine', closed=True)
+        for k in range(3):
+            q0 = math.pi / 2 + k * 2 * math.pi / 3
+            c2 = cc + (rc * 0.45) * (math.cos(q0) * F.t + math.sin(q0) * UP)
+            pts = np.array([c2 + rc * 0.42 * (math.cos(z) * F.t + math.sin(z) * UP) for z in np.linspace(0, 2 * math.pi, 16, endpoint=False)])
+            B.add(SAND, sweep(pts, rect_prof(0.045, 0.06), F.n, closed_path=True), 'fine', closed=True)
+    # Verdachung (abgedecktes Gesims) ueber die Joch-Breite zwischen den Strebepfeilern (frei vom Fallrohr)
+    hb = 2.6
+    prof = [(0.0, -0.10), (0.42, -0.04), (0.47, 0.02), (0.40, 0.06), (0.0, 0.42)]
+    B.add(PATINA, extrude_profile(prof, F.p(x - hb, HOOD), F.n, UP, F.t, 0, 2 * hb), 'det', closed=True)
+    B.add(SAND, box(F.p(x, HOOD - 0.2, 0.2), F.t, UP, F.n, hb, 0.1, 0.2), 'det', closed=True)
+    for s_ in (-1, 1):
+        bp = F.p(x + s_ * (W2 + 0.12), HOOD + 0.02, 0.15)
+        B.add(SANDDK, chamfer_box(bp + UP * 0.35, F.t, F.n, UP, 0.16, 0.16, 0.35, 0.02), 'det', closed=True)
+        pinnacle(B, bp + UP * 0.7, 0.34, 0.35, 0.75, SANDDK, crockets=True, grp='det')
+    # Tuer: zweifluegelig, 4 glatte Felder (Rahmen + Mittelstoss + Querriegel), Griffschlitze
+    inner = opening_outline(w, th, hs, R, 14) + np.array([x, 0.0])
+    dd = -(DEP * NO + 0.25)
+    B.add(STEEL, tri_poly(F.pts(inner, dd - 0.002)), 'wall', expect=F.n)
+    B.add(STEEL, sweep(F.pts(inner, dd + 0.01), rect_prof(0.06, 0.03), F.n, closed_path=True), 'fine', closed=True)
+    apx = arch_apex(w, hs, R)
+    B.add(STEEL, box(F.p(x, (th + apx) / 2, dd + 0.015), F.t, UP, F.n, 0.025, (apx - th) / 2 - 0.02, 0.02), 'fine', closed=True)
+    yq = th + 2.55
+    B.add(STEEL, box(F.p(x, yq, dd + 0.015), F.t, UP, F.n, w / 2 - 0.03, 0.025, 0.02), 'fine', closed=True)
+    for xx in (x - 0.2, x + 0.2):
+        B.add(IRON, box(F.p(xx, th + 1.05, dd + 0.02), F.t, UP, F.n, 0.035, 0.11, 0.015), 'fine', closed=True)
+    B.add(DARK, box(F.p(x, apx - 0.45, dd + 0.08), F.t, UP, F.n, 0.07, 0.11, 0.08), 'fine', closed=True)   # Leuchte im Scheitel
+    # Granit: EINE Platte ueber den ganzen Leibungsboden bis vor die Wand (Oberkante = Schwelle th; der Leibungsboden
+    # aus Backstein entfaellt -> keine koplanaren Flaechen), davor die Antrittsstufe
+    dfront = 0.75
+    B.add(GRANITE, box(F.p(x, th - 0.2, (dd - 0.02 + dfront) / 2), F.t, UP, F.n, W2 + 0.2, 0.2, (dfront - dd + 0.02) / 2), 'wall', closed=True)
+    B.add(GRANITE, box(F.p(x, gy - 0.25, 1.4), F.t, UP, F.n, W2 + 0.6, 0.27, 0.7), 'wall', closed=True)
+    return hole
+
+
+# ================================================================= LANGHAUS + CHOR: Waende
+t_walls = time.time()
+facets = edge_frames()
+nave_holes_count = 0
+for i, (a, b) in enumerate(facets):
+    if abs(a[0] - 6.87) < 1e-6 and abs(b[0] - 6.87) < 1e-6:
+        continue                                   # Westkante -> separat (Seitenschiff-Westwaende)
+    F, L, ops = facet_openings(i, a, b)
+    holes = []
+    for sp in ops:
+        holes.append(build_window(F, sp, sp['lights']))
+        if sp.get('portal'):
+            uc = F.o[0] + F.t[0] * sp['x']; vc = F.o[1] + F.t[1] * sp['x']
+            gy = max(G(uc + du, vc + dv) for du in (-1.5, 0, 1.5) for dv in (-1.0, 0.0, 1.0))
+            holes.append(side_portal(F, sp['x'], gy))
+    nave_holes_count += len(holes)
+    wall_face(B, F, [(0, Y0), (L, Y0), (L, 21.4), (0, 21.4)], holes)
+
+# Seitenschiff-Westwaende (u = 6.87, |v| 8.09..hw) mit je einem Fenster
+for sgn in (1, -1):
+    if sgn > 0:
+        F = WallFrame((6.87, hw(6.87)), (0, -1)); L = hw(6.87) - TV
+    else:
+        F = WallFrame((6.87, -TV), (0, -1)); L = hw(6.87) - TV
+    xw = (hw(6.87) - 11.15) if sgn > 0 else (11.15 - TV)
+    sp = dict(x=xw, sill=6.6, hs=15.6, w=1.3)
+    hole = build_window(F, sp, 2)
+    wall_face(B, F, [(0, Y0), (L, Y0), (L, 21.4), (0, 21.4)], [hole])
+    # Westgiebel des Langhausdachs (sichtbar neben dem Turm)
+    k = (RIDGE - EAVE) / (hw(6.75) + 0.45)
+    vv0, vv1 = TV - 0.6, hw(6.75) + 0.48       # 3 cm vor dem Traufblech (sonst gestapelt)
+    poly = [(vv0, 21.3), (vv1, 21.3), (vv1, EAVE + 0.3), (vv0, EAVE + k * (vv1 - vv0) + 0.3)]
+    poly = [(sgn * p, q) for p, q in poly]
+    o = np.array([6.85, 0.0, 0.0])
+    T = extrude_profile(poly, o, np.array([0, 1.0, 0]), UP, np.array([1.0, 0, 0]), -0.17, 1.0)   # deckt die Dach-Westkante (UW=6.75) ab
+    B.add(BRICK, T, 'wall', closed=True)
+    cop = [(sgn * (vv1 + 0.05), EAVE + 0.22), (sgn * (vv0), EAVE + k * (vv1 - vv0) + 0.22)]
+    path = np.array([[6.85 + 0.5, cop[0][0], cop[0][1]], [6.85 + 0.5, cop[1][0], cop[1][1]]])
+    B.add(PATINA, sweep(path, rect_prof(1.25, 0.16, ch=0.03), np.array([1.0, 0, 0])), 'det', closed=True)
+
+# Strebepfeiler (Langhaus/Chor/Westecken) + Turm
+bfoot = []
+for p, o, w, lv in BUTTS:
+    bfoot.append(buttress(B, p, o, w, lv))
+tbfoot = []
+for p, o, w, lv in TBUTTS:
+    tbfoot.append(buttress(B, p, o, w, lv))
+print('walls+windows %.1fs tris %d' % (time.time() - t_walls, B.tri_count()))
+
+# ---------------------------------------------------------------- Treppentuerme (achteckig) am Chorbeginn
+def turret(c, sgn):
+    c3 = np.array([c[0], c[1], 0.0])
+    ring = lambda h, apo=TUR_A: octagon(c, apo, h)
+    B.add(BRICK, loft([ring(Y0), ring(24.6)]), 'wall', closed=True)
+    for yb, hh, mt in ((21.25, 0.32, GLAZED), (24.45, 0.4, SAND)):
+        B.add(mt, loft([ring(yb, TUR_A + 0.02), ring(yb, TUR_A + 0.14), ring(yb + hh, TUR_A + 0.14), ring(yb + hh, TUR_A + 0.02)]), 'det', closed=True)
+    # Schlitzfenster (aussen liegende Seiten) + Schallfenster oben
+    Rr = TUR_A / math.cos(math.pi / 8)
+    for k in range(8):
+        a = math.pi / 4 * k
+        nvec = np.array([math.cos(a), math.sin(a), 0.0])
+        if nvec[1] * sgn < 0.2: continue                # nur nach aussen
+        t = np.cross(UP, nvec)
+        F = WallFrame(c3[:2] + nvec[:2] * TUR_A - t[:2] * 0.6, t[:2], nvec[:2])
+        for y0 in (8.0, 14.0):
+            B.add(DARK, box(F.p(0.6, y0 + 0.6, -0.02), F.t, UP, F.n, 0.11, 0.6, 0.06), 'det', closed=True)
+            B.add(SAND, sweep(F.pts(opening_outline(0.34, y0, y0 + 1.05, 0.34, 4) + np.array([0.6, 0]), 0.03), rect_prof(0.08, 0.08), F.n, closed_path=True), 'fine', closed=True)
+        B.add(DARK, box(F.p(0.6, 23.0, -0.02), F.t, UP, F.n, 0.2, 0.9, 0.06), 'det', closed=True)
+        B.add(SAND, sweep(F.pts(opening_outline(0.5, 22.1, 23.4, 0.5, 6) + np.array([0.6, 0]), 0.03), rect_prof(0.09, 0.09), F.n, closed_path=True), 'fine', closed=True)
+    # 8 Wimperge + achteckiger Helm + Knauf/Kreuz
+    for k in range(8):
+        a = math.pi / 4 * k
+        nvec = np.array([math.cos(a), math.sin(a), 0.0]); t = np.cross(UP, nvec)
+        fw = 2 * TUR_A * math.tan(math.pi / 8)
+        p0 = c3 + nvec * (TUR_A + 0.02) + UP * 24.8
+        tri = [(-fw / 2 - 0.02, 0.0), (fw / 2 + 0.02, 0.0), (0.0, 1.45)]
+        B.add(BRICK, extrude_profile(tri, p0, t, UP, -nvec, -0.06, 0.5), 'det', closed=True)
+        B.add(SAND, sweep(np.array([p0 - t * (fw / 2 + 0.05) + UP * 0.05, p0 + UP * 1.5, p0 + t * (fw / 2 + 0.05) + UP * 0.05]) + nvec * 0.0,
+                          rect_prof(0.14, 0.62, cy=-0.22), nvec), 'det', closed=True)
+        iron_finial(B, p0 + UP * 1.55 - nvec * 0.05, 0.55, 0.05)
+    B.add(COPPER, loft([ring(24.75, TUR_A * 0.98), ring(25.9, TUR_A * 0.86), octagon(c, 0.04, 30.6)]), 'roof', closed=True)
+    for k in range(8):
+        a = math.pi / 8 + math.pi / 4 * k
+        Rr0 = TUR_A * 0.98 / math.cos(math.pi / 8)
+        p0 = c3 + np.array([math.cos(a), math.sin(a), 0]) * (Rr0 * 0.86 / 0.98) + UP * 25.9
+        p1 = c3 + UP * 30.55
+        B.add(COPPER, sweep(np.array([p0, p1]), rect_prof(0.06, 0.06), UP), 'fine', closed=True)
+    B.add(GOLD, lathe(c3 + UP * 30.5, [(0.03, 0), (0.03, 0.25), (0.0, 0.25 + 0.0), ], 6), 'fine', closed=True)
+    B.add(GOLD, lathe(c3 + UP * 30.75, [(0.0, 0), (0.12, 0.04), (0.14, 0.13), (0.1, 0.22), (0.0, 0.26)], 10), 'fine', closed=True)
+    B.add(IRON, lathe(c3 + UP * 30.95, [(0.025, 0), (0.02, 0.7), (0.0, 0.72)], 6), 'fine', closed=True)
+    B.add(IRON, box(c3 + UP * 31.45, np.array([1.0, 0, 0]), UP, np.array([0, 1.0, 0]), 0.2, 0.02, 0.02), 'fine', closed=True)
+
+
+for sgn, c in zip((-1, 1), TURRETS):
+    turret(c, sgn)
+
+# ---------------------------------------------------------------- Sockel, Kaffgesims, Traufgesims (Sweeps um Umriss)
+navepoly = Polygon(OUTA).buffer(0)
+tur_polys = [Polygon(octagon(c, TUR_A, 0)[:, :2]) for c in TURRETS]
+U1 = unary_union([navepoly] + bfoot + tur_polys).simplify(0.02)
+ring = np.array(orient(U1, 1.0).exterior.coords)[:-1]
+PT = 2.45                   # Sockel-Oberkante (Fotos 01/13: ~1.7-2 m ueber dem Platz, dunkler Sandstein mit Schraege)
+plinth = [(-0.4, Y0), (0.14, Y0), (0.14, PT - 0.28), (0.02, PT), (-0.4, PT)]
+kaff = [(-0.4, 4.75), (0.05, 4.75), (0.12, 4.83), (0.12, 4.92), (0.0, 5.12), (-0.4, 5.12)]
+from shapely.geometry import LineString
+from shapely.ops import substring
+
+
+def open_segments(ring, gaps):
+    L = LineString(np.vstack([ring, ring[:1]])); tot = L.length
+    cuts = sorted((L.project(Point(p)), hwd) for p, hwd in gaps)
+    segs = []
+    for i, (s0, h0) in enumerate(cuts):
+        s1, h1 = cuts[(i + 1) % len(cuts)]
+        a = s0 + h0; b = s1 - h1 + (tot if i + 1 == len(cuts) else 0.0)
+        if b - a < 0.05: continue
+        if b <= tot:
+            g = substring(L, a, b)
+            pts = np.array(g.coords)
+        else:
+            p1 = np.array(substring(L, a, tot).coords); p2 = np.array(substring(L, 0.0, b - tot).coords)
+            pts = np.vstack([p1, p2[1:]])
+        keep = np.r_[True, np.linalg.norm(np.diff(pts, axis=0), axis=1) > 1e-4]
+        segs.append(pts[keep])
+    return segs
+
+
+PORTALS = [((BAYC[4], -hw(BAYC[4])),), ((BAYC[0], hw(BAYC[0])),)]
+for gaps_hw, prof, mat, grp in ((2.22, plinth, ASHLAR, 'wall'), (2.4, kaff, SAND, 'det')):
+    for seg in open_segments(ring, [(p[0], gaps_hw) for p in PORTALS]):
+        B.add(mat, sweep(np.c_[seg, np.zeros(len(seg))], prof, UP, closed_path=False, caps=True), grp, closed=True)
+ring2 = np.array(orient(unary_union([navepoly] + tur_polys).simplify(0.02), 1.0).exterior.coords)[:-1]
+ringN = np.array(orient(navepoly, 1.0).exterior.coords)[:-1]
+corb = [(-0.4, 20.25), (0.02, 20.25), (0.02, 20.5), (0.1, 20.5), (0.1, 20.75), (0.18, 20.75), (0.18, 21.0), (0.28, 21.0),
+        (0.28, 21.25), (0.4, 21.25), (0.4, 21.42), (-0.4, 21.42)]
+B.add(BRICK, sweep(np.c_[ringN, np.zeros(len(ringN))], corb, UP, closed_path=True), 'det', closed=True)
+B.add(GLAZED, sweep(np.c_[ringN, np.zeros(len(ringN))], [(-0.4, 19.95), (0.03, 19.95), (0.03, 20.25), (-0.4, 20.25)], UP, closed_path=True), 'det', closed=True)
+print('plinth/cornice ok tris %d' % B.tri_count())
+
+
+# ================================================================= DACH (Biberschwanz-Lagen mit echter Stufung)
+def offset_vertex(prev, p, nxt, d):
+    n1 = outward(prev, p)[:2]; n2 = outward(p, nxt)[:2]
+    return np.array(p) + d * (n1 + n2) / (1 + float(np.dot(n1, n2)))
+
+
+east_ccw = [(u, -v) for u, v in EAST_N] + [(u, v) for u, v in EAST_N[::-1]]
+ext = [(6.0, -hw(6.0))] + east_ccw + [(6.0, hw(6.0))]
+EAVES = [offset_vertex(ext[i - 1], ext[i], ext[i + 1], 0.45) for i in range(1, len(ext) - 1)]
+AP = np.array([APEX_U, 0.0, RIDGE])
+UW = 6.75
+EW_S = np.array([UW, -(hw(UW) + 0.45), EAVE]); EW_N = np.array([UW, hw(UW) + 0.45, EAVE])
+RW = np.array([UW, 0.0, RIDGE])
+E3 = [np.array([p[0], p[1], EAVE]) for p in EAVES]
+FACETS = [(EW_S, E3[0], RW, AP)]
+for i in range(len(E3) - 1):
+    FACETS.append((E3[i], E3[i + 1], AP, AP))
+FACETS.append((E3[-1], EW_N, AP, RW))
+COURSE = 0.165
+
+
+def tile_facet(E0, E1, T0, T1):
+    def P(t, s):
+        return (1 - s) * ((1 - t) * E0 + t * E1) + s * ((1 - t) * T0 + t * T1)
+    Ls = 0.5 * (np.linalg.norm(T0 - E0) + np.linalg.norm(T1 - E1))
+    nc = max(1, int(round(Ls / COURSE)))
+    nrmv = nrm(np.cross(E1 - E0, T0 - E0 if np.linalg.norm(T0 - E0) > 1e-6 else T1 - E0))
+    if nrmv[2] < 0: nrmv = -nrmv
+    down = nrm((E0 + E1) / 2 - (T0 + T1) / 2)
+    lip = 0.032
+    strips, uvs, risers = [], [], []
+    Le = np.linalg.norm(E1 - E0)
+    for k in range(nc):
+        s0, s1 = k / nc, (k + 1) / nc
+        a0, a1, b1, b0 = P(0, s0), P(1, s0), P(1, s1), P(0, s1)
+        if np.linalg.norm(b1 - b0) < 0.08 and k < nc - 1:
+            # Rest bis zur Spitze als ein Dreieck
+            q = np.array([[a0 + nrmv * lip, a1 + nrmv * lip, (T0 + T1) / 2]])
+            strips.append(q); uvs.append(np.array([[[0, k * COURSE], [Le, k * COURSE], [Le / 2, nc * COURSE]]]))
+            break
+        quad = np.array([a0 + nrmv * lip, a1 + nrmv * lip, b1, b0])
+        T = quads_to_tris(quad[None])
+        uv = np.array([[0, k * COURSE], [Le * 1.0, k * COURSE], [Le * (np.linalg.norm(b1 - b0) / max(Le, 1e-6)), (k + 1) * COURSE], [0, (k + 1) * COURSE]])
+        # u-Koordinate je Punkt entlang der Lage messen (Biberschwaenze behalten ihre Breite)
+        uv[1, 0] = np.linalg.norm(a1 - a0); uv[2, 0] = np.linalg.norm(b1 - b0)
+        U = quads_to_tris(uv[None])
+        strips.append(T); uvs.append(U)
+        if k > 0:
+            r = np.array([a0, a1, a1 + nrmv * lip, a0 + nrmv * lip])
+            risers.append(quads_to_tris(r[None]))
+    St = np.concatenate(strips); Su = np.concatenate(uvs)
+    B.add(TILE, St, 'roof', uv=Su, expect=nrmv)
+    if risers:
+        R = np.concatenate(risers)
+        B.add(TILE, R, 'roof', uv=np.zeros((len(R), 3, 2)) + np.array([0.5, 0.05]), expect=down)
+
+
+for f in FACETS:
+    tile_facet(*f)
+# Untersicht/Traufkasten (nach unten) zwischen Traufe und Gesims
+for f in FACETS:
+    E0, E1 = f[0], f[1]
+    n_out = nrm(np.r_[np.cross(np.r_[E1[:2] - E0[:2], 0], UP)[:2], 0])
+    q = np.array([E0, E1, E1 - n_out * 0.5, E0 - n_out * 0.5]); q[:, 2] = EAVE - 0.02
+    B.add(BRICK, quads_to_tris(q[None]), 'roof', expect=-UP)
+    q2 = np.array([E0, E1, E1, E0]); q2[2, 2] = q2[3, 2] = EAVE + 0.05; q2[:2, 2] = EAVE - 0.03
+    B.add(COPPER, quads_to_tris(q2[None]), 'roof', expect=n_out)
+# First- und Gratziegel (Halbrund)
+half = np.array([(0.15 * math.cos(q), 0.15 * math.sin(q) + 0.02) for q in np.linspace(0, math.pi, 7)] + [(-0.15, -0.06), (0.15, -0.06)])
+B.add(TILE, sweep(np.array([RW + np.array([0.3, 0, 0]), AP]), half, UP), 'roof', closed=True)
+for e in [EW_S, EW_N] if False else []:
+    pass
+for E in E3:
+    B.add(TILE, sweep(np.array([E + np.array([0, 0, 0.02]), AP]), half, UP), 'roof', closed=True)
+# Kehlbleche an den einspringenden Ecken (Chorschulter)
+for E in E3:
+    pass
+# Lueftungsziegel (dunkle Oeffnungen) in einer Reihe ueber der Traufe
+for (E0, E1, T0, T1) in (FACETS[0], FACETS[-1]):
+    nrmv = nrm(np.cross(E1 - E0, T0 - E0)); nrmv = nrmv if nrmv[2] > 0 else -nrmv
+    for t in np.linspace(0.1, 0.9, 8):
+        p = (1 - 0.12) * ((1 - t) * E0 + t * E1) + 0.12 * ((1 - t) * T0 + t * T1)
+        ax = nrm(E1 - E0); ay = nrm(np.cross(nrmv, ax))
+        B.add(TILE, chamfer_box(p + nrmv * 0.08, ax, ay, nrmv, 0.22, 0.2, 0.08, 0.02), 'roof', closed=True)
+        B.add(DARK, box(p + nrmv * 0.1 - ay * 0.215, ax, ay, nrmv, 0.15, 0.035, 0.05), 'roof', closed=True)   # Luftschlitz 4 cm vorstehend
+# Anschlussblech Dach/Turm (Ostseite des Turms)
+for sgn in (1, -1):
+    vv = TV
+    h_at = EAVE + (RIDGE - EAVE) * (1 - (TV) / (hw(UW) + 0.45))
+    path = np.array([[TU + 0.02, sgn * (TV + 0.0), h_at + 0.08], [TU + 0.02, 0.0, RIDGE + 0.08]])
+    B.add(PATINA, sweep(path, rect_prof(0.06, 0.5), np.array([1.0, 0, 0])), 'det', closed=True)
+print('roof tris %d' % B.tri_count())
+
+
+# ================================================================= TURM
+TF = {'S': WallFrame((-TU, -TV), (1, 0)), 'E': WallFrame((TU, -TV), (0, 1)),
+      'N': WallFrame((TU, TV), (-1, 0)), 'W': WallFrame((-TU, TV), (0, -1))}
+TL = {'S': 2 * TU, 'N': 2 * TU, 'E': 2 * TV, 'W': 2 * TV}
+
+
+def lancet(F, x, sill, hs, w=1.3, fill='louvre'):
+    sp = dict(x=x, sill=sill, w=w, hs=hs, R=w, seg=10, fill=fill,
+              orders=[(0.42, 0.0), (0.42, 0.16), (0.26, 0.16), (0.26, 0.32), (0.12, 0.32), (0.12, 0.48), (0.0, 0.62)],
+              mats=[GLAZED, BRICK, BRICK, GLAZED, GLAZED, BRICK], sill_block=True)
+    h = opening(B, F, sp)
+    # kleiner Sandstein-Kaempferring
+    return h
+
+
+# Westportal-Grundmasse (Fotos 04/16): Vorbau 7.9 m breit, weite tiefe Vorhalle (licht 4.2 m, Scheitel ~6.8 m ueber dem Platz),
+# rot glasierte Fliesen, 6 Stufen in der Vorhalle, Bronzetuer hinten in der Turmwand
+WP_V = 3.95; WP_U0 = -8.75
+gw = G(WP_U0 - 1.5, 0.0)
+NST = 6
+TH = gw + 0.75                                   # Podest / Kirchenfussboden
+FW = WallFrame((WP_U0, WP_V), (0, -1))           # x = WP_V - v, n = -u (nach Westen)
+XC = WP_V; PW = 4.2; PSILL = gw - 0.08; PHS = gw + 4.0; PR = 2.9
+PAP = arch_apex(PW, PHS, PR)
+VDEP = 4.0                                       # Vorbau-Front -> Tuerwand
+VSEG = 16
+tower_holes = {k: [] for k in TF}
+tower_holes['W'].append(opening_outline(PW, PSILL, PHS, PR, VSEG) + np.array([XC + TV - WP_V, 0.0]))   # Vorhalle durch die Turmwand
+for k, F in TF.items():
+    L = TL[k]
+    sp3 = 2.6 if k in 'EW' else 2.4
+    for dx in (-sp3, 0, sp3):
+        tower_holes[k].append(lancet(F, L / 2 + dx, 41.6, 46.7, 1.25))
+    if k in 'NSW':
+        tower_holes[k].append(lancet(F, L / 2, 31.0, 35.6, 1.4))
+    if k in 'NS':
+        tower_holes[k].append(lancet(F, L / 2, 20.6, 25.0, 1.4))
+    if k == 'W':
+        sp = dict(x=L / 2, sill=12.4, hs=16.6, w=2.3)
+        tower_holes[k].append(build_window(F, sp, 2))
+    wall_face(B, F, [(0, Y0), (L, Y0), (L, S_TOP), (0, S_TOP)], tower_holes[k])
+
+# Eckquaderung (dunkler Sandstein, Laeufer/Binder wechselnd). Unter den Gurtgesimsen / dem Schaftgesims ausgespart,
+# damit keine Quaderfront wenige mm hinter einer Gesimsfront liegt (Z-Fighting auf Distanz)
+GURT_Y = (19.7, 30.0, 40.2)
+QCUT = [(yy - 0.2, yy + 0.32) for yy in GURT_Y] + [(S_TOP - 0.5, S_TOP + 1.0)]
+
+
+def _clip_iv(a, b, cuts):
+    segs = [(a, b)]
+    for c0, c1 in cuts:
+        nxt = []
+        for s0, s1 in segs:
+            if s1 <= c0 or s0 >= c1: nxt.append((s0, s1)); continue
+            if s0 < c0: nxt.append((s0, c0))
+            if s1 > c1: nxt.append((c1, s1))
+        segs = nxt
+    return [(s0, s1) for s0, s1 in segs if s1 - s0 > 0.03]
+
+
+for k, F in TF.items():
+    L = TL[k]
+    y = 3.45; i = 0
+    while y < S_TOP - 0.45:
+        hgt = 0.46
+        ln = 1.05 if i % 2 == 0 else 0.62
+        for x0, sg in ((0.0, 1), (L, -1)):
+            xa, xb = sorted((x0, x0 + sg * ln))
+            for ya, yb in _clip_iv(y + 0.006, y + hgt - 0.006, QCUT):
+                B.add(SANDDK, chamfer_box(F.p((xa + xb) / 2, (ya + yb) / 2, -0.12), F.t, UP, F.n, (xb - xa) / 2, (yb - ya) / 2, 0.155, 0.015), 'wall', closed=True)
+        y += hgt; i += 1
+# Turmsockel, Gurtgesimse, Schaftgesims
+tp = Polygon([(-TU, -TV), (TU, -TV), (TU, TV), (-TU, TV)])
+portal_fp = Polygon([(WP_U0 - 0.35, -WP_V), (-TU + 0.1, -WP_V), (-TU + 0.1, WP_V), (WP_U0 - 0.35, WP_V)])
+UT = orient(unary_union([tp] + tbfoot).simplify(0.02), 1.0)
+rt = np.array(UT.exterior.coords)[:-1]
+# Ring am Portal oeffnen: Punkte auf der Vorbau-Front (u = WP_U0-0.35) zwischen v=-2.45..2.45 herausschneiden
+fr_u = -TU
+idx = [i for i in range(len(rt)) if abs(rt[i, 0] - fr_u) < 0.02]
+# rotiere so, dass Pfad am suedlichen Portalpfeiler beginnt und am noerdlichen endet
+cut_s = np.array([fr_u, -WP_V + 0.03]); cut_n = np.array([fr_u, WP_V - 0.03])
+pts = list(map(tuple, rt))
+# Kante auf der Front finden (Richtung CCW: auf der Westfront laeuft der Umlauf von Nord nach Sued)
+for i in range(len(pts)):
+    a, b = np.array(pts[i]), np.array(pts[(i + 1) % len(pts)])
+    if abs(a[0] - fr_u) < 0.02 and abs(b[0] - fr_u) < 0.02 and a[1] > b[1]:
+        path2 = [tuple(cut_s)] + [pts[(i + 1 + j) % len(pts)] for j in range(len(pts))] + [tuple(cut_n)]
+        # path2 endet mit a (=pts[i]) vor cut_n
+        break
+P2 = np.array(path2)
+tplinth = [(-0.4, Y0), (0.15, Y0), (0.15, 3.15), (0.02, 3.42), (-0.4, 3.42)]
+B.add(SANDDK, sweep(np.c_[P2, np.zeros(len(P2))], tplinth, UP, closed_path=False, caps=True), 'wall', closed=True)
+B.add(SAND, sweep(np.c_[P2, np.zeros(len(P2))], [(-0.3, 3.3), (0.19, 3.3), (0.22, 3.4), (0.22, 3.5), (0.05, 3.62), (-0.3, 3.62)], UP, closed_path=False, caps=True), 'det', closed=True)
+trect = np.array([(-TU, -TV, 0), (TU, -TV, 0), (TU, TV, 0), (-TU, TV, 0)], float)
+gurt = [(-0.4, -0.2), (0.04, -0.2), (0.04, 0.12), (0.14, 0.15), (0.14, 0.2), (0.0, 0.32), (-0.4, 0.32)]
+for yy in GURT_Y:
+    B.add(GLAZED, sweep(trect, [(a, b + yy) for a, b in gurt], UP, closed_path=True), 'det', closed=True)
+B.add(SAND, sweep(trect, [(-0.4, S_TOP - 0.5), (0.05, S_TOP - 0.5), (0.05, S_TOP - 0.2), (0.2, S_TOP - 0.12), (0.2, S_TOP + 0.02), (-0.4, S_TOP + 0.02)], UP, closed_path=True), 'det', closed=True)
+print('tower shaft tris %d' % B.tri_count())
+
+# ---------------------------------------------------------------- Giebelkranz
+kA = (RRIDGE - S_TOP) / TU; kB = (RRIDGE - S_TOP) / TV
+GW = 1.0      # Giebelwandstaerke
+CLOCK_C = S_TOP + 7.0
+for k, F in TF.items():
+    L = TL[k]
+    holes = []
+    apx = (L / 2, GAPEX)
+    # kleine Fenster/Schlitze
+    if k == 'E':
+        for dx in (-0.75, 0, 0.75):
+            sp = dict(x=L / 2 + dx, sill=S_TOP + 13.6, hs=S_TOP + 15.0, w=0.32, R=0.32, seg=4, fill='dark', dark_depth=0.5,
+                      orders=[(0.1, 0.0), (0.1, 0.12), (0.0, 0.25)], mats=[BRICK, GLAZED], sill_block=False)
+            holes.append(opening(B, F, sp))
+    else:
+        for dx in (-0.55, 0.55):
+            sp = dict(x=L / 2 + dx, sill=S_TOP + 12.3, hs=S_TOP + 13.5, w=0.45, R=0.45, seg=5, fill='dark', dark_depth=0.5,
+                      orders=[(0.12, 0.0), (0.12, 0.12), (0.0, 0.28)], mats=[BRICK, GLAZED], sill_block=False)
+            holes.append(opening(B, F, sp))
+        sp = dict(x=L / 2, sill=S_TOP + 16.0, hs=S_TOP + 16.7, w=0.22, R=0.22, seg=3, fill='dark', dark_depth=0.5,
+                  orders=[(0.08, 0.0), (0.0, 0.2)], mats=[BRICK], sill_block=False)
+        holes.append(opening(B, F, sp))
+    outline = [(0, S_TOP - 0.3), (L, S_TOP - 0.3), apx]
+    front = F.pts(np.array(outline), 0.0); back = F.pts(np.array(outline), -GW)
+    B.add(BRICK, tri_poly_holes(front, [F.pts(h, 0.0) for h in holes], F.n), 'wall', expect=F.n)
+    B.add(BRICK, tri_poly(back[::-1]), 'wall', expect=-F.n)
+    for i0, i1 in ((1, 2), (2, 0)):
+        q = np.array([front[i0], front[i1], back[i1], back[i0]])
+        e = nrm(np.cross(front[i1] - front[i0], F.n)) if False else None
+        c = q.mean(axis=0); cen = F.p(L / 2, S_TOP + 5.0, -GW / 2)
+        B.add(BRICK, quads_to_tris(q[None]), 'wall', expect=c - cen)
+    # Abdeckung der Ortgaenge: graugruenes Kupferblech (Fotos 06/11), ~0.5 m Ansicht mit Tropfkante
+    path = np.array([F.p(-0.1, S_TOP - 0.02, 0), F.p(L / 2, GAPEX + 0.05, 0), F.p(L + 0.1, S_TOP - 0.02, 0)])
+    B.add(PATINA, sweep(path, [(-0.22, 0.16), (-0.16, 0.19), (0.2, 0.19), (0.27, 0.12), (0.27, -GW - 0.1), (0.2, -GW - 0.16), (-0.22, -GW - 0.16)], F.n), 'det', closed=True)
+    # Glasurband unten im Giebel
+    for yb, frac in ((S_TOP + 1.3, None), (S_TOP + 11.3, None)):
+        half_w = (L / 2) * (1 - (yb + 0.3 - S_TOP) / (GAPEX - S_TOP)) - 0.05
+        B.add(GLAZED, box(F.p(L / 2, yb + 0.15, 0.02), F.t, UP, F.n, half_w, 0.15, 0.04), 'det', closed=True)
+    # Kreis: Uhr (N/S/W) bzw. Drudenfuss (E)
+    cc = F.p(L / 2, CLOCK_C, 0.0)
+    rr = 4.0 if k == 'E' else 3.55
+    if k == 'E':        # Drudenfuss im Kreis (nur Ostgiebel; Uhren ohne Steinring, Fotos 03/11)
+        cpts = np.array([cc + rr * (math.cos(q) * F.t + math.sin(q) * UP) for q in np.linspace(0, 2 * math.pi, 48, endpoint=False)])
+        B.add(SAND, sweep(cpts, np.array([(0.16 * math.cos(q), 0.1 * math.sin(q) + 0.02) for q in np.linspace(0, 2 * math.pi, 9)[:-1]]), F.n, closed_path=True), 'det', closed=True)
+    if k == 'E':
+        star = [cc + (rr - 0.1) * (math.cos(math.pi / 2 + j * 4 * math.pi / 5) * F.t + math.sin(math.pi / 2 + j * 4 * math.pi / 5) * UP) for j in range(5)]
+        for j in range(5):
+            B.add(SAND, sweep(np.array([star[j] + F.n * 0.03, star[(j + 1) % 5] + F.n * 0.03]), rect_prof(0.2, 0.07), F.n), 'det', closed=True)
+    else:
+        # Zifferblatt: fast schwarze Scheibe direkt im Backstein (kein Steinring), goldene roemische Ziffern + Zeiger (Fotos 03/11)
+        dr = 2.45
+        ring_ = lambda r_, dn: np.array([cc + r_ * (math.cos(q) * F.t + math.sin(q) * UP) + F.n * dn for q in np.linspace(0, 2 * math.pi, 48, endpoint=False)])
+        disc = ring_(dr, 0.05)
+        Td = tri_poly(disc, F.n)
+        rel = Td - cc[None, None]
+        uvd = np.stack([0.5 + (rel @ F.t) / (2 * dr), 0.5 + (rel @ UP) / (2 * dr)], axis=-1)
+        B.add(DIAL, Td, 'det', uv=uvd, expect=F.n)
+        Tr = loft([ring_(dr, -0.06), ring_(dr, 0.05)], cap0=False, cap1=False)          # Scheibenrand (5 cm vor der Wand)
+        cr =(Tr.mean(axis=1) - cc[None]); cr = cr - (cr @ F.n)[:, None] * F.n[None]
+        B.add(DARK, Tr, 'det', expect=cr)
+        hands = [(math.radians(90 - 30 * 10 - 0.5 * 9), 1.45, 0.11), (math.radians(90 - 6 * 9), 2.15, 0.07)]
+        for ang, ln, wd in hands:
+            dvec = math.cos(ang) * F.t + math.sin(ang) * UP
+            pts = np.array([cc - dvec * 0.35 + F.n * 0.085, cc + dvec * ln + F.n * 0.085])     # 3.5 cm vor der Scheibe
+            prof = np.array([(wd, 0.0), (0.0, 0.015), (-wd, 0.0), (0.0, -0.015)])
+            B.add(GOLD, sweep(pts, prof, F.n, scale=[1.0, 0.35]), 'fine', closed=True)
+        B.add(GOLD, lathe(cc + F.n * 0.04, [(0.0, 0), (0.12, 0.0), (0.1, 0.08), (0.0, 0.1)], 10, az=F.n), 'fine', closed=True)
+    # Fiale an der Giebelspitze
+    top = F.p(L / 2, GAPEX + 0.25, -GW / 2)
+    B.add(GLAZED, chamfer_box(top + UP * 0.3, F.t, F.n, UP, 0.32, 0.55, 0.35, 0.04), 'det', closed=True)
+    iron_finial(B, top + UP * 0.65, 1.7, 0.13)
+# Eckaufsaetze (Turmecken): niedriger Abdeckklotz ueber dem Stoss der Ortgangbleche + schlanke Fiale mit Kugelspitze (Fotos 03/11)
+for cu in (-TU, TU):
+    for cv in (-TV, TV):
+        c = np.array([cu - np.sign(cu) * 0.45, cv - np.sign(cv) * 0.45, S_TOP])
+        B.add(PATINA, loft([rect_ring(c[0], c[1], 0.67, 0.67, S_TOP - 0.05, ch=0.04), rect_ring(c[0], c[1], 0.67, 0.67, S_TOP + 0.4, ch=0.04),
+                            rect_ring(c[0], c[1], 0.2, 0.2, S_TOP + 0.62, ch=0.02)]), 'det', closed=True)
+        B.add(GLAZED, loft([octagon(c, 0.16, S_TOP + 0.55), octagon(c, 0.16, S_TOP + 1.35)]), 'det', closed=True)
+        B.add(PATINA, loft([octagon(c, 0.2, S_TOP + 1.33), octagon(c, 0.2, S_TOP + 1.43), octagon(c, 0.02, S_TOP + 1.95)]), 'det', closed=True)
+        iron_finial(B, c + UP * 1.9, 1.0, 0.1)
+print('gables tris %d' % B.tri_count())
+
+# ---------------------------------------------------------------- Kreuzdach (8 Dreiecke, Stehfalz-Kupfer)
+def seam(p0, p1, nface, mat=COPPER, w=0.035, hgt=0.05):
+    off = nface * (hgt / 2)
+    B.add(mat, sweep(np.array([p0 + off, p1 + off]), rect_prof(w, hgt), nface), 'fine', closed=True)
+
+
+C0 = np.array([0.0, 0.0, RRIDGE])
+gi = GW * 0.6
+cross_facets = []
+for su in (-1, 1):
+    for sv in (-1, 1):
+        # Arm Nord/Sued (Dach A, First entlang v): Dreieck Mitte - Giebelpunkt - Ecke
+        gv = sv * (TV - gi); cu_ = su * TU * (TV - gi) / TV
+        corner = np.array([cu_, gv, RRIDGE - kA * abs(cu_)])
+        GA = np.array([0.0, gv, RRIDGE])
+        cross_facets.append((C0, GA, corner, 'A', su, sv))
+        gu = su * (TU - gi); cv_ = sv * TV * (TU - gi) / TU
+        corner2 = np.array([gu, cv_, RRIDGE - kB * abs(cv_)])
+        GB = np.array([gu, 0.0, RRIDGE])
+        cross_facets.append((C0, GB, corner2, 'B', su, sv))
+for (a, b, c, kind, su, sv) in cross_facets:
+    T = np.array([[a, b, c]])
+    nf = nrm(np.cross(b - a, c - a)); nf = nf if nf[2] > 0 else -nf
+    B.add(COPPER, T, 'roof', expect=nf)
+    # Stehfalze in Fallrichtung
+    if kind == 'A':
+        for vv in np.arange(0.55, abs(b[1]) - 0.1, 0.55):
+            uv_ = kB * vv / kA
+            p0 = np.array([0.0, sv * vv, RRIDGE]); p1 = np.array([su * uv_, sv * vv, RRIDGE - kA * uv_])
+            seam(p0, p1, nf)
+    else:
+        for uu in np.arange(0.55, abs(b[0]) - 0.1, 0.55):
+            vv_ = kA * uu / kB
+            p0 = np.array([su * uu, 0.0, RRIDGE]); p1 = np.array([su * uu, sv * vv_, RRIDGE - kB * vv_])
+            seam(p0, p1, nf)
+# Kehlen + Grate
+for su in (-1, 1):
+    for sv in (-1, 1):
+        B.add(COPPER, sweep(np.array([[su * TU * 0.93, sv * TV * 0.93, S_TOP + (RRIDGE - S_TOP) * 0.07 + 0.05], C0 + np.array([0, 0, 0.05])]), rect_prof(0.35, 0.05), UP), 'fine', closed=True)
+for p in ([0, TV - gi, RRIDGE], [0, -(TV - gi), RRIDGE], [TU - gi, 0, RRIDGE], [-(TU - gi), 0, RRIDGE]):
+    B.add(COPPER, sweep(np.array([np.array(p, float) + [0, 0, 0.02], C0 + [0, 0, 0.02]]), np.array([(0.09 * math.cos(q), 0.09 * math.sin(q)) for q in np.linspace(0, math.pi, 5)] + [(-0.09, -0.04), (0.09, -0.04)]), UP), 'fine', closed=True)
+print('cross roof tris %d' % B.tri_count())
+
+# ---------------------------------------------------------------- Helm: Tambour, Laterne, 4 Wimperge, Nadel
+DR = 2.3; DRB = 60.0; DRT = 70.0; LANB = 70.5; LANT = 74.3; LR = 2.15; LCOR = 74.8; LG_AP = 79.0; R2 = 78.6
+B.add(COPPER, loft([rect_ring(0, 0, DR, DR, DRB), rect_ring(0, 0, DR, DR, DRT)]), 'roof', closed=True)
+for ax_ in range(4):
+    a = ax_ * math.pi / 2
+    nvec = np.array([math.cos(a), math.sin(a), 0.0]); t = np.cross(UP, nvec)
+    for x in np.arange(-DR + 0.46, DR - 0.2, 0.46):
+        p0 = nvec * DR + t * x + UP * 61.0; p1 = nvec * DR + t * x + UP * DRT
+        seam(p0, p1, nvec, COPPER, 0.035, 0.05)
+for cu in (-1, 1):
+    for cv in (-1, 1):
+        B.add(COPPER, box(np.array([cu * DR, cv * DR, (61.0 + DRT) / 2]), np.array([1.0, 0, 0]), np.array([0, 1.0, 0]), UP, 0.06, 0.06, (DRT - 61.0) / 2), 'fine', closed=True)
+sq = np.array([(-1, -1, 0), (1, -1, 0), (1, 1, 0), (-1, 1, 0)], float)
+B.add(COPPER, sweep(sq * DR, [(-0.3, DRT - 0.05), (0.05, DRT - 0.05), (0.18, DRT + 0.15), (0.3, DRT + 0.18), (0.3, DRT + 0.4), (-0.3, LANB + 0.02)], UP, closed_path=True), 'det', closed=True)
+# Laterne mit je 2 rundbogigen Schallluken pro Seite
+lan_faces = {}
+for ax_ in range(4):
+    a = ax_ * math.pi / 2
+    nvec = np.array([math.cos(a), math.sin(a), 0.0]); t = np.cross(UP, nvec)
+    o = nvec[:2] * LR - t[:2] * LR
+    F = WallFrame(o, t[:2], nvec[:2])
+    holes = []
+    for xx in (0.92, 1.58, 2 * LR - 1.58, 2 * LR - 0.92):
+        # dark_depth 0.4: die dunklen Schaechte benachbarter Seiten duerfen sich in der Ecke nicht durchdringen
+        sp = dict(x=xx, sill=71.35, hs=72.95, w=0.34, kind='round', seg=5, fill='louvre', R=0.17, dark_depth=0.4,
+                  orders=[(0.1, 0.0), (0.1, 0.08), (0.0, 0.18)], mats=[COPPER, COPPER], sill_block=False, grp='roof')
+        holes.append(opening(B, F, sp))
+    outline = [(0, LANB), (2 * LR, LANB), (2 * LR, LANT), (0, LANT)]
+    B.add(COPPER, tri_poly_holes(F.pts(np.array(outline)), [F.pts(h) for h in holes], F.n), 'roof', expect=F.n)
+    for x in (0.12, LR, 2 * LR - 0.12):
+        seam(F.p(x, LANB, 0), F.p(x, LANT, 0), F.n, COPPER, 0.06, 0.06)
+B.add(COPPER, sweep(sq * LR, [(-0.3, LANT - 0.1), (0.04, LANT - 0.1), (0.2, LANT + 0.12), (0.34, LANT + 0.18), (0.34, LCOR - 0.1), (0.1, LCOR), (-0.3, LCOR)], UP, closed_path=True), 'det', closed=True)
+# kleine Giebel (Wimperge) auf der Laterne + Kreuzdaechlein
+k2a = (R2 - LCOR) / LR
+for ax_ in range(4):
+    a = ax_ * math.pi / 2
+    nvec = np.array([math.cos(a), math.sin(a), 0.0]); t = np.cross(UP, nvec)
+    p0 = nvec * LR + UP * (LCOR - 0.05)
+    tri = [(-LR, 0.0), (LR, 0.0), (0.0, LG_AP - LCOR + 0.05)]
+    B.add(COPPER, extrude_profile(tri, p0, t, UP, -nvec, -0.05, 0.25), 'roof', closed=True)
+    for x in np.arange(-LR + 0.45, LR - 0.2, 0.45):
+        hh = (LG_AP - LCOR) * (1 - abs(x) / LR) - 0.1
+        if hh > 0.2: seam(p0 + t * x + UP * 0.05 + nvec * 0.05, p0 + t * x + UP * hh + nvec * 0.05, nvec, COPPER, 0.03, 0.04)   # auf der Giebelfront
+    B.add(COPPER, sweep(np.array([p0 - t * (LR + 0.06), p0 + UP * (LG_AP - LCOR + 0.08), p0 + t * (LR + 0.06)]), rect_prof(0.12, 0.42, cy=-0.12), nvec), 'det', closed=True)
+    iron_finial(B, p0 + UP * (LG_AP - LCOR + 0.12) - nvec * 0.08, 1.5, 0.11)
+    for sg in (-1, 1):
+        iron_finial(B, p0 + t * sg * (LR - 0.05) + UP * 0.05 - nvec * 0.05, 1.05, 0.08)
+C2 = np.array([0, 0, R2])
+for su in (-1, 1):
+    for sv in (-1, 1):
+        for kind in 'AB':
+            if kind == 'A':
+                corner = np.array([su * LR * 0.97, sv * LR * 0.97, R2 - k2a * LR * 0.97]); g = np.array([0, sv * LR * 0.95, R2])
+            else:
+                corner = np.array([su * LR * 0.97, sv * LR * 0.97, R2 - k2a * LR * 0.97]); g = np.array([su * LR * 0.95, 0, R2])
+            T = np.array([[C2, g, corner]])
+            nf = nrm(np.cross(g - C2, corner - C2)); nf = nf if nf[2] > 0 else -nf
+            B.add(COPPER, T, 'roof', expect=nf)
+# Nadel (achteckig, leicht geschweifter Fuss) mit Graten + Falzen
+NB = 76.6; NT = 90.4
+nprof = [(2.0, LCOR + 0.05), (1.95, NB), (1.78, 77.6), (1.6, 78.6), (1.42, 80.0), (0.95, 83.5), (0.5, 86.8), (0.16, 89.4), (0.06, NT)]
+rings = [circle([0, 0, 0], r / math.cos(math.pi / 8), 8, h, phase=math.pi / 8) for r, h in nprof]
+B.add(COPPER, loft(rings), 'roof', closed=True)
+for k in range(8):
+    edge = np.array([rr[k] for rr in rings])
+    B.add(COPPER, sweep(edge * np.array([1.012, 1.012, 1.0]), rect_prof(0.07, 0.07), UP), 'fine', closed=True)
+    for frac in (-0.3, 0.3):
+        e2 = np.array([rr[k] * (0.5 - frac) + rr[(k + 1) % 8] * (0.5 + frac) for rr in rings])
+        nf = nrm(np.r_[(e2[0, :2]), 0])
+        B.add(COPPER, sweep(e2 + np.c_[nf[0] * 0.025 * np.ones(len(e2)), nf[1] * 0.025 * np.ones(len(e2)), np.zeros(len(e2))], rect_prof(0.035, 0.045), UP), 'fine', closed=True)
+# Knauf, Stange, Kugel, Wetterfahne
+B.add(COPPER, lathe(np.array([0, 0, NT - 0.3]), [(0.09, 0), (0.12, 0.25), (0.06, 0.4)], 10), 'fine', closed=True)
+B.add(IRON, lathe(np.array([0, 0, NT]), [(0.055, 0), (0.045, 3.0), (0.03, 7.1), (0.0, 7.2)], 8), 'fine', closed=True)
+B.add(GOLD, lathe(np.array([0, 0, 93.1 - 0.43]), [(0.0, 0), (0.15, 0.03), (0.3, 0.12), (0.4, 0.27), (0.43, 0.43), (0.4, 0.59), (0.3, 0.74), (0.15, 0.83), (0.0, 0.86)], 16), 'fine', closed=True)
+B.add(GOLD, lathe(np.array([0, 0, 95.0]), [(0.0, 0), (0.12, 0.04), (0.13, 0.12), (0.0, 0.2)], 10), 'fine', closed=True)
+vane = [(0.0, 0.0), (0.95, 0.04), (1.05, 0.22), (0.95, 0.4), (0.0, 0.42)]
+B.add(GOLD, extrude_profile(vane, np.array([0.05, 0, 95.6]), np.array([0.6, 0.8, 0]), UP, np.array([-0.8, 0.6, 0]), -0.012, 0.012), 'fine', closed=True)
+B.add(GOLD, lathe(np.array([0, 0, 96.7]), [(0.0, 0), (0.09, 0.05), (0.09, 0.12), (0.0, 0.18)], 8), 'fine', closed=True)
+for k in range(8):
+    a = k * math.pi / 4
+    B.add(GOLD, sweep(np.array([[0, 0, 97.0], [0.32 * math.cos(a), 0.32 * math.sin(a), 97.0]]), np.array([(0.03, 0.0), (0.0, 0.02), (-0.03, 0.0), (0.0, -0.02)]), UP, scale=[1, 0.2]), 'fine', closed=True)
+B.add(IRON, lathe(np.array([0, 0, 97.0]), [(0.02, 0), (0.0, 0.5)], 6), 'fine', closed=True)
+TOP_Y = 97.5
+print('spire tris %d' % B.tri_count())
+
+# ================================================================= WESTPORTAL (Sandstein-Vorbau mit Wimperg, Fialen, Figurengruppen)
+# Fotos 04/16: weite, ~4 m tiefe Vorhalle (Spitzbogen licht 4.2 m, Scheitel ~6.8 m), Gewoelbe und Waende mit rot glasierten
+# Fliesen, 6 Granitstufen in der Vorhalle, Handlauf rechts, dunkle Bronzetuer (Spitzbogen) hinten in der Turmwand.
+# Archivolte aus dunklem Sandstein mit Rundstaeben, links St. Georg mit dem Drachen, rechts Tod und Mann.
+MO = [(0.55, 0.0), (0.55, 0.08), (0.42, 0.08), (0.42, 0.2), (0.29, 0.2), (0.29, 0.32), (0.15, 0.32), (0.15, 0.44), (0.0, 0.44), (0.0, VDEP)]
+sp = dict(x=XC, sill=PSILL, w=PW, hs=PHS, R=PR, seg=VSEG, fill='door', orders=MO, mats=[SANDDK] * 8 + [FLIESEN],
+          sill_block=False, no_floor=True)
+phole = opening(B, FW, sp)
+WBASE = gw + 0.9                                  # Sockel der Archivolte
+for off, d in MO[1:8:2]:
+    ring = offset_outline(PW, PSILL, PHS, PR, off - 0.01, VSEG, 'pointed', sill_drop=0.0) + np.array([XC, 0])
+    path2 = np.vstack([[ring[1, 0], WBASE - 0.02], ring[2:], [ring[0, 0], WBASE - 0.02]])
+    B.add(SANDDK, tube(FW.pts(path2, -d - 0.01), 0.065, 8, nref=FW.n), 'det', closed=True)
+from shapely.geometry import Polygon as _Poly
+jamb = [(PW / 2 + o_, -d_) for o_, d_ in MO[:9]] + [(PW / 2 + 0.95, -0.44), (PW / 2 + 0.95, 0.0)]
+jp = _Poly(jamb).buffer(0.03, join_style=2).intersection(_Poly([(PW / 2 - 0.1, -0.5), (PW / 2 + 0.9, -0.5), (PW / 2 + 0.9, 0.04), (PW / 2 - 0.1, 0.04)]))
+jr = np.array(orient(jp, 1.0).exterior.coords)[:-1]
+for s_ in (-1, 1):
+    jm = jr * np.array([s_, 1.0])
+    B.add(SANDDK, extrude_profile(jm, FW.p(XC, 0.0, 0.0), FW.t, FW.n, UP, PSILL - 0.3, WBASE), 'det', closed=True)
+    jc = np.array(orient(_Poly(jm).buffer(0.035, join_style=2), 1.0).exterior.coords)[:-1]
+    B.add(SANDDK, extrude_profile(jc, FW.p(XC, 0.0, 0.0), FW.t, FW.n, UP, WBASE, WBASE + 0.12), 'det', closed=True)
+# Front zwischen den Pfeilern
+VX0, VX1 = 1.25, 2 * WP_V - 1.25
+FTOP = 10.4
+B.add(SANDDK, tri_poly_holes(FW.pts(np.array([(VX0, Y0), (VX1, Y0), (VX1, FTOP), (VX0, FTOP)])), [FW.pts(phole)], FW.n), 'wall', expect=FW.n)
+# Seiten + Deckel des Vorbaus
+for x0 in (0.0, 2 * WP_V):
+    q = np.array([FW.p(x0, Y0, 0), FW.p(x0, FTOP, 0), FW.p(x0, FTOP, -(-WP_U0 - TU) - 0.1), FW.p(x0, Y0, -(-WP_U0 - TU) - 0.1)])
+    B.add(SANDDK, quads_to_tris(q[None]), 'wall', expect=FW.t * (-1 if x0 == 0 else 1))
+q = np.array([FW.p(0, FTOP, 0), FW.p(2 * WP_V, FTOP, 0), FW.p(2 * WP_V, FTOP, -2.0), FW.p(0, FTOP, -2.0)])
+B.add(SANDDK, quads_to_tris(q[None]), 'wall', expect=UP)
+B.add(PATINA, extrude_profile([(0.08, -0.05), (0.08, 0.06), (-2.0, 0.5), (-2.0, 0.3)], FW.p(-0.05, FTOP), FW.n, UP, FW.t, 0, 2 * WP_V + 0.1), 'det', closed=True)
+# Stufen (6 Granitstufen in der Vorhalle) + Podest bis hinter die Tuerwand
+rise = (TH - gw) / NST
+TREAD = 0.32
+for k in range(NST):
+    top = gw + rise * (k + 1)
+    d0 = 0.03 + k * TREAD
+    B.add(GRANITE, chamfer_box(FW.p(XC, (top + gw - 0.6) / 2, -(d0 + VDEP + 0.3) / 2), FW.t, UP, FW.n,
+                               PW / 2 + 0.56, (top - gw + 0.6) / 2, (VDEP + 0.3 - d0) / 2, 0.012), 'wall', closed=True)
+# Tuerwand mit Bronzetuer (Spitzbogen, zweifluegelig, Jugendstil-Ornament, zwei Ringgriffe)
+FB = WallFrame((WP_U0 + VDEP, WP_V), (0, -1))
+DW, DHS, DRR = 3.3, TH + 2.1, 3.0
+dsp = dict(x=XC, sill=TH, w=DW, hs=DHS, R=DRR, seg=14, fill='door', orders=[(0.14, 0.0), (0.14, 0.07), (0.0, 0.07), (0.0, 0.22)],
+           mats=[SANDDK] * 3, sill_block=False, no_floor=True)
+dhole = opening(B, FB, dsp)
+vring = opening_outline(PW, PSILL, PHS, PR, VSEG) + np.array([XC, 0])
+B.add(FLIESEN, tri_poly_holes(FB.pts(vring, 0.0), [FB.pts(dhole, 0.0)], FB.n), 'wall', expect=FB.n)
+DDp = -0.222
+B.add(DOOR, tri_poly(FB.pts(offset_outline(DW, TH, DHS, DRR, 0.012, 14) + np.array([XC, 0]), DDp)), 'wall', expect=FB.n)
+dapx = arch_apex(DW, DHS, DRR)
+B.add(DOOR, box(FB.p(XC, (TH + dapx) / 2, DDp + 0.02), FB.t, UP, FB.n, 0.035, (dapx - TH) / 2 - 0.04, 0.025), 'fine', closed=True)
+B.add(DOOR, sweep(FB.pts(opening_outline(DW - 0.2, TH + 0.1, DHS, DRR - 0.1, 14) + np.array([XC, 0]), DDp + 0.015), rect_prof(0.07, 0.035), FB.n, closed_path=True), 'fine', closed=True)
+for s in (-1, 1):
+    xm = XC + s * DW / 4
+    wav = np.array([FB.p(xm + 0.22 * math.sin(t * 2.2) * s, TH + 0.35 + t * 0.95, DDp + 0.02) for t in np.linspace(0, 3.4, 26)])
+    B.add(DOOR, tube(wav, 0.028, 6, nref=FB.n), 'fine', closed=True)
+    for yy in (TH + 1.05, TH + 2.45):
+        hwid = DW / 4 - 0.12
+        B.add(DOOR, sweep(np.array([FB.p(xm - hwid, yy, DDp + 0.02), FB.p(xm + hwid, yy, DDp + 0.02)]), rect_prof(0.05, 0.035), FB.n), 'fine', closed=True)
+    for k in range(4):
+        c_ = FB.p(xm + (0.25 if k % 2 else -0.25) * s, TH + 0.6 + k * 0.7, DDp + 0.02)
+        B.add(DOOR, lathe(c_, [(0.0, 0.0), (0.09, 0.0), (0.07, 0.03), (0.0, 0.04)], 10, az=FB.n), 'fine', closed=True)
+    # Ringgriff
+    c_ = FB.p(XC + s * 0.3, TH + 1.35, DDp + 0.02)
+    B.add(IRON, lathe(c_, [(0.0, 0.0), (0.07, 0.0), (0.06, 0.04), (0.0, 0.06)], 10, az=FB.n), 'fine', closed=True)
+    ring_pts = np.array([c_ + FB.n * 0.07 + 0.12 * (math.cos(q) * FB.t + math.sin(q) * UP) - UP * 0.12 for q in np.linspace(0, 2 * math.pi, 16, endpoint=False)])
+    B.add(IRON, sweep(ring_pts, np.array([(0.016 * math.cos(q), 0.016 * math.sin(q)) for q in np.linspace(0, 2 * math.pi, 9)[:-1]]), FB.t, closed_path=True), 'fine', closed=True)
+# Motiv im Spitzbogenfeld der Tuer (stilisiertes Kreuz mit Strahlen)
+cm = FB.p(XC, TH + 3.95, DDp + 0.02)
+for a in (90, 210, 330):
+    v_ = math.cos(math.radians(a)) * FB.t + math.sin(math.radians(a)) * UP
+    B.add(DOOR, tube(np.array([cm, cm + v_ * 0.55]), 0.035, 6, nref=FB.n), 'fine', closed=True)
+B.add(DOOR, tube(np.array([FB.p(XC - 0.9, TH + 3.5, DDp + 0.02), cm - UP * 0.35, FB.p(XC + 0.9, TH + 3.5, DDp + 0.02)]), 0.03, 6, nref=FB.n), 'fine', closed=True)
+# Handlauf (Stahl) an der rechten (suedlichen) Vorhallenwand
+xr = XC + PW / 2 - 0.085
+nose = lambda d_: gw + rise * (1 + (d_ - 0.03) / TREAD)
+rail = [(0.55, nose(0.55) + 0.9), (0.03 + (NST - 1) * TREAD + 0.15, TH + 0.9), (2.45, TH + 0.9)]
+B.add(STEEL, tube(np.array([FW.p(xr, y_, -d_) for d_, y_ in rail]), 0.021, 8), 'fine', closed=True)
+for d_, y_ in (rail[0], rail[-1]):
+    B.add(STEEL, tube(np.array([FW.p(xr, y_, -d_), FW.p(xr + 0.1, y_, -d_)]), 0.017, 6), 'fine', closed=True)
+rail_y = lambda d_: float(np.interp(d_, [r_[0] for r_ in rail], [r_[1] for r_ in rail]))
+for d_ in (1.0, 1.65, 2.3):
+    y_ = rail_y(d_)
+    B.add(STEEL, tube(np.array([FW.p(xr, y_ - 0.015, -d_), FW.p(xr + 0.03, y_ - 0.09, -d_), FW.p(xr + 0.1, y_ - 0.09, -d_)]), 0.009, 6), 'fine', closed=True)
+# Leuchte im Gewoelbescheitel
+B.add(IRON, lathe(FW.p(XC, PAP - 0.45, -2.6), [(0.0, 0.0), (0.12, 0.0), (0.14, 0.18), (0.05, 0.3), (0.012, 0.3), (0.012, 0.46), (0.0, 0.46)], 10), 'fine', closed=True)
+# Pfeiler mit Konsolen, Figurengruppen, Baldachinen und Fialen
+FIG_Y = gw + 5.35                                  # Standflaeche der Figuren (Foto 16: Gruppen etwa 5.5-7.7 m ueber dem Platz)
+for xs, sg in ((VX0 / 2 + 0.0, 1), (2 * WP_V - VX0 / 2, -1)):
+    pc = FW.p(xs, 0.0, 0.0)
+    pd = 0.38
+    B.add(SANDDK, chamfer_box(pc + FW.n * (pd - 0.6) / 2 + UP * (Y0 + 10.9) / 2, FW.t, FW.n, UP, VX0 / 2, (pd + 0.6) / 2, (10.9 - Y0) / 2, 0.03), 'wall', closed=True)
+    B.add(SANDDK, chamfer_box(pc + FW.n * (pd + 0.12 - 0.6) / 2 + UP * (Y0 + 1.6) / 2, FW.t, FW.n, UP, VX0 / 2 + 0.1, (pd + 0.12 + 0.6) / 2, (1.6 - Y0) / 2, 0.04), 'wall', closed=True)
+    for yy in (3.0, FIG_Y - 1.05):
+        B.add(SANDDK, chamfer_box(pc + FW.n * pd + UP * yy, FW.t, FW.n, UP, VX0 / 2 + 0.07, 0.1, 0.11, 0.03), 'det', closed=True)
+    # Blendmasswerk-Bahnen an der Pfeilerfront (unten) und oberhalb des Baldachins
+    for y0_, hh_ in ((1.75, 0.75), (FIG_Y + 3.2, 1.3)):
+        for xx in (-0.3, 0.3):
+            arc = opening_outline(0.42, y0_, y0_ + hh_, 0.42, 6) + np.array([xs + xx, 0])
+            B.add(SANDDK, sweep(FW.pts(arc, pd + 0.03), rect_prof(0.06, 0.07), FW.n, closed_path=True), 'fine', closed=True)
+    con = pc + FW.n * (pd + 0.27) + UP * (FIG_Y - 0.48)
+    B.add(SANDDK, lathe(con - UP * 0.45, [(0.1, 0), (0.3, 0.25), (0.46, 0.42), (0.5, 0.48)], 8, phase=math.pi / 8), 'det', closed=True)
+    if sg > 0:     # links: St. Georg ersticht den Drachen
+        george_dragon(B, con + UP * 0.48, FW.t * 0.1 + FW.n, 1.75, SAND, 'det')
+    else:          # rechts: Tod (Skelett) legt dem Mann die Hand auf die Schulter
+        death_and_man(B, con + UP * 0.48, -FW.t * 0.1 + FW.n, 1.72, SAND, 'det')
+    can = pc + FW.n * (pd + 0.27) + UP * (FIG_Y + 2.3)
+    B.add(SANDDK, chamfer_box(can, FW.t, FW.n, UP, 0.52, 0.38, 0.12, 0.03), 'det', closed=True)
+    for k_ in range(3):          # Baldachin-Unterseite mit kleinen Spitzboegen
+        cx_ = -0.3 + 0.3 * k_
+        arc = opening_outline(0.26, FIG_Y + 1.95, FIG_Y + 2.05, 0.26, 4) + np.array([xs + cx_, 0])
+        B.add(SANDDK, sweep(FW.pts(arc[2:], pd + 0.27 + 0.33), rect_prof(0.05, 0.05), FW.n), "fine", closed=True)
+    pinnacle(B, can + UP * 0.12, 0.6, 0.55, 1.1, SANDDK, crockets=True, grp='det')
+    # Fiale oben auf dem Pfeiler
+    pinnacle(B, pc + FW.n * (pd - 0.6) / 2 + UP * 10.9, 1.0, 1.4, 3.6, SANDDK, crockets=True, grp='det')
+# Wimperg ueber dem Bogen (mit Ausschnitt fuer die Archivolte), Krabben, Kreuzblume, Masswerkkreis mit Drudenfuss
+WB = PAP - 0.9; WAP = 13.1
+wpoly = Polygon([(VX0, WB), (VX1, WB), (XC, WAP)])
+arch_cut = Polygon(offset_outline(PW, PSILL - 2, PHS, PR, MO[0][0] + 0.02, VSEG) + np.array([XC, 0]))
+wp = wpoly.difference(arch_cut)
+wp = max(wp.geoms, key=lambda g: g.area) if wp.geom_type != 'Polygon' else wp
+wr = np.array(orient(wp, 1.0).exterior.coords)[:-1]
+B.add(SANDDK, extrude_profile(wr, FW.p(0, 0, 0), FW.t, UP, FW.n, -0.05, 0.32), 'det', closed=True)
+edgeL = [np.array([VX0, WB]), np.array([XC, WAP])]; edgeR = [np.array([VX1, WB]), np.array([XC, WAP])]
+for e, sgn in ((edgeL, -1), (edgeR, 1)):
+    path = FW.pts(np.array([e[0], e[1]]), 0.14)
+    B.add(SANDDK, sweep(path, rect_prof(0.22, 0.42), FW.n), 'det', closed=True)
+    dirv = nrm(path[1] - path[0]); outv = nrm(np.cross(dirv, FW.n)) * (-sgn)
+    if outv[2] < 0: outv = -outv
+    for q in np.arange(0.12, 0.93, 0.085):
+        pp = path[0] + (path[1] - path[0]) * q + outv * 0.1
+        crocket(B, pp, nrm(outv + FW.n * 0.25), dirv, 0.42, SANDDK, 'fine')
+finial(B, FW.p(XC, WAP - 0.05, 0.14), 1.0, SANDDK, 'fine')
+ccw = FW.p(XC, (WB + WAP) / 2 - 0.35, 0.34)
+rw_ = 1.2
+circ = np.array([ccw + rw_ * (math.cos(q) * FW.t + math.sin(q) * UP) for q in np.linspace(0, 2 * math.pi, 36, endpoint=False)])
+B.add(SANDDK, sweep(circ, rect_prof(0.13, 0.12), FW.n, closed_path=True), 'det', closed=True)
+star = [ccw + (rw_ - 0.06) * (math.cos(math.pi / 2 + j * 4 * math.pi / 5) * FW.t + math.sin(math.pi / 2 + j * 4 * math.pi / 5) * UP) for j in range(5)]
+for j in range(5):
+    B.add(SANDDK, sweep(np.array([star[j], star[(j + 1) % 5]]), rect_prof(0.09, 0.1), FW.n), 'det', closed=True)
+for j in range(5):
+    a = math.pi / 2 + j * 2 * math.pi / 5
+    cc = ccw + 0.75 * (math.cos(a) * FW.t + math.sin(a) * UP)
+    pts = np.array([cc + 0.28 * (math.cos(q) * FW.t + math.sin(q) * UP) for q in np.linspace(0, 2 * math.pi, 14, endpoint=False)])
+    B.add(SANDDK, sweep(pts, rect_prof(0.05, 0.05), FW.n, closed_path=True), 'fine', closed=True)   # 2.5 cm hinter der Sternfront
+# Blendmasswerk im Wimpergfeld (zwei Lanzetten seitlich)
+for s in (-1, 1):
+    arc = opening_outline(0.55, WB + 0.4, WB + 1.4, 0.55, 6) + np.array([XC + s * 1.25, 0])
+    B.add(SANDDK, sweep(FW.pts(arc, 0.35), rect_prof(0.06, 0.07), FW.n, closed_path=True), 'fine', closed=True)
+# Schaukasten "Ev.-luth. Marktkirche" links (noerdlich) vom Portal auf zwei Pfosten, Hausnummernschild "11" am Turmsockel
+bc = FW.p(-1.95, gw + 1.5, -1.45)
+textured_box(B, bc, FW.t, UP, FW.n, 0.92, 0.62, 0.045, BOARD, DARK, (0.0, 0.3, 1.0, 1.0))
+for s in (-1, 1):
+    B.add(DARK, chamfer_box(bc + FW.t * s * 0.94 + FW.n * 0.02, FW.t, UP, FW.n, 0.035, 0.66, 0.05, 0.008), 'det', closed=True)
+    B.add(DARK, chamfer_box(bc + UP * s * 0.64 + FW.n * 0.02, FW.t, UP, FW.n, 0.97, 0.035, 0.05, 0.008), 'det', closed=True)
+    B.add(STEEL, box(FW.p(-1.95 + s * 0.72, (gw - 0.4 + gw + 0.9) / 2, -1.5), FW.t, UP, FW.n, 0.03, (1.3) / 2, 0.03), 'det', closed=True)
+B.add(DARK, box(bc + UP * 0.72 + FW.n * 0.02, FW.t, UP, FW.n, 1.0, 0.05, 0.09), 'det', closed=True)
+textured_box(B, FW.p(-3.15, gw + 2.6, -1.722), FW.t, UP, FW.n, 0.18, 0.13, 0.008, BOARD, BOARD, (0.0, 0.0, 0.4, 0.25))
+print('west portal tris %d' % B.tri_count())
+
+# ================================================================= LUTHERDENKMAL (Bronze auf Granitsockel, 1900)
+LC = np.array([2.17, -12.35]); LA = math.radians(-117.5)
+fdir = np.array([math.cos(LA), math.sin(LA), 0.0]); rdir = np.cross(fdir, UP)
+gl = min(G(LC[0] + du, LC[1] + dv) for du in (-0.8, 0, 0.8) for dv in (-0.8, 0, 0.8))   # tiefster Punkt -> nie schwebend
+lc3 = np.array([LC[0], LC[1], gl])
+# Sockel (Foto 13): flache Stufe + hoher schlichter Block aus dunklem Stein, Bronze-Standplatte, Figur ~2.65 m
+PED_D, PED_W, PED_H = 0.58, 0.66, 1.86          # halbe Tiefe (Blickrichtung), halbe Breite, Oberkante ueber Gelaende
+B.add(PEDSTONE, chamfer_box(lc3 + UP * (-0.35 + 0.14) / 2, fdir, rdir, UP, PED_D + 0.12, PED_W + 0.12, (0.14 + 0.35) / 2, 0.025), 'wall', closed=True)
+B.add(PEDSTONE, chamfer_box(lc3 + UP * (0.14 + PED_H) / 2, fdir, rdir, UP, PED_D, PED_W, (PED_H - 0.14) / 2, 0.02), 'wall', closed=True)
+standplatte(B, lc3 + UP * (PED_H - 0.01), fdir, BRONZE, 'det', S=1.0)
+luther(B, lc3 + UP * (PED_H + 0.13), fdir, 2.65, BRONZE, 'det')
+LUTHER = dict(center=[float(LC[0]), float(LC[1]), gl], face=[float(fdir[0]), float(fdir[1])], top=gl + PED_H + 0.13 + 2.65 * 1.11,
+              front=PED_D + 0.004, ins=[PED_H - 0.33, PED_H - 0.55])
+
+# ================================================================= EPITAPHE + WANDRELIEFS (Sandstein; Reliefs als Hoehenfeld-Netze)
+def epitaph_ren(F, x, y0, w=1.5, h=2.5, kind='crucifixion', seed=0, mat=SAND, d=0.0):
+    """Renaissance-Epitaph (Foto 13): Sockelgesims, zwei Pilaster mit Kandelaber-Relief, oben figuerliches Relief,
+    unten Inschrifttafel, Gebaelk mit Kranzgesims, Aufsatz mit Wappen-Relief, Giebel und seitlichen Voluten."""
+    pf = d + 0.1                                     # Vorderflaeche der Rueckplatte
+    B.add(mat, chamfer_box(F.p(x, y0 + h / 2, d + 0.03), F.t, UP, F.n, w / 2, h / 2, 0.07, 0.015), 'det', closed=True)
+    B.add(mat, extrude_profile([(-0.04, 0.0), (pf + 0.1, 0.0), (pf + 0.14, 0.05), (pf + 0.14, 0.15), (pf + 0.1, 0.2), (-0.04, 0.2)],
+                               F.p(x - w / 2 - 0.06, y0), F.n, UP, F.t, 0, w + 0.12), 'det', closed=True)
+    pw = 0.19 * w / 1.5
+    yb, yt = y0 + 0.2, y0 + h - 0.3
+    for x0 in (x - w / 2 + 0.03, x + w / 2 - 0.03 - pw):
+        relief_panel(B, F, x0, yb, pw, yt - yb, pf + 0.03, 0.05, 'ornament', mat, back=0.06, res=0.02, seed=seed + int(x0 * 10), frame=0.025)
+    iw = w - 2 * pw - 0.1
+    ih = (yt - yb) * 0.46
+    B.add(mat, chamfer_box(F.p(x, yb + 0.04 + ih / 2, pf + 0.0125), F.t, UP, F.n, iw / 2, ih / 2, 0.0225, 0.01), 'det', closed=True)
+    relief_panel(B, F, x - iw / 2, yb + ih + 0.08, iw, yt - yb - ih - 0.1, pf + 0.03, 0.13, kind, mat, back=0.06, res=0.02, seed=seed, frame=0.04, mat_bg=SANDDK)
+    # Gebaelk + Kranzgesims
+    B.add(mat, chamfer_box(F.p(x, yt + 0.09, pf / 2 + 0.06), F.t, UP, F.n, w / 2 + 0.03, 0.09, pf / 2 + 0.1, 0.015), 'det', closed=True)
+    B.add(mat, extrude_profile([(-0.04, 0.0), (pf + 0.16, 0.0), (pf + 0.22, 0.06), (pf + 0.22, 0.12), (-0.04, 0.12)],
+                               F.p(x - w / 2 - 0.1, yt + 0.18), F.n, UP, F.t, 0, w + 0.2), 'det', closed=True)
+    # Aufsatz: Wappen-Relief mit Dreiecksgiebel und Voluten
+    aw, ah = w * 0.46, 0.62
+    relief_panel(B, F, x - aw / 2, yt + 0.3, aw, ah, d + 0.07, 0.1, 'arms', mat, back=0.08, res=0.02, seed=seed + 3, frame=0.03, mat_bg=SANDDK)
+    B.add(mat, extrude_profile([(-aw / 2 - 0.08, 0.0), (aw / 2 + 0.08, 0.0), (0.0, 0.32)], F.p(x, yt + 0.3 + ah, 0.0), F.t, UP, F.n, -0.01, pf + 0.02), 'det', closed=True)
+    for s in (-1, 1):
+        spi = [(x + s * (aw / 2 + 0.05 + 0.2 * (1 - t) * (0.5 + 0.5 * math.cos(t * 5))), yt + 0.32 + 0.45 * t * (0.6 + 0.4 * math.sin(t * 4))) for t in np.linspace(0, 1, 10)]
+        B.add(mat, tube(F.pts(np.array(spi), pf - 0.02), 0.045, 8, nref=F.n), 'det', closed=True)
+        B.add(mat, lathe(F.p(x + s * (w / 2 + 0.0), yt + 0.3, pf), [(0.0, 0.0), (0.06, 0.0), (0.07, 0.06), (0.03, 0.12), (0.05, 0.16), (0.0, 0.22)], 8), 'fine', closed=True)
+    # Konsolen unter dem Sockelgesims
+    for s in (-1, 1):
+        B.add(mat, extrude_profile([(-0.04, 0.0), (0.2, 0.0), (0.2, -0.06), (0.06, -0.3), (-0.04, -0.3)], F.p(x + s * (w / 2 - 0.12) - 0.08, y0), F.n, UP, F.t, 0, 0.16), 'det', closed=True)
+
+
+def epitaph_baroque(F, x, y0, w=1.7, h=2.9, mat=SANDDK, d=0.0):
+    """Dunkles Barock-Epitaph (Foto 04, Turm-Westseite suedlich des Portals): Konsole mit Totenkopf, Platte mit eingezogenen Ecken,
+    ovale Kartusche mit Rahmenwulst, seitliche Voluten, gesprengter Giebel mit Urne."""
+    relief_panel(B, F, x - 0.42, y0, 0.84, 0.55, d + 0.12, 0.08, 'skull', mat, back=0.14, res=0.02, frame=0.04, seed=9)
+    hm = h - 1.05
+    r_ = 0.18
+    pts = []
+    for cx_, cy_, a0 in ((w / 2, 0.0, math.pi), (w / 2, hm, 1.5 * math.pi), (-w / 2, hm, 0.0), (-w / 2, 0.0, 0.5 * math.pi)):
+        for t in np.linspace(0, -0.5 * math.pi, 5):
+            pts.append((x + cx_ + r_ * math.cos(a0 + t), y0 + 0.55 + cy_ + r_ * math.sin(a0 + t)))
+    pts = np.array(pts)
+    B.add(mat, extrude_profile(pts, F.p(0, 0, 0), F.t, UP, F.n, d - 0.02, d + 0.14), 'det', closed=True)
+    ov = np.array([(x + 0.52 * math.cos(q) * w / 2 * 1.1, y0 + 0.55 + hm / 2 + 0.85 * math.sin(q) * hm / 2) for q in np.linspace(0, 2 * math.pi, 40, endpoint=False)])
+    B.add(mat, extrude_profile(ov, F.p(0, 0, 0), F.t, UP, F.n, d + 0.13, d + 0.18), 'det', closed=True)
+    B.add(mat, sweep(F.pts(ov, d + 0.18), np.array([(0.05 * math.cos(q), 0.05 * math.sin(q)) for q in np.linspace(0, 2 * math.pi, 9)[:-1]]), F.n, closed_path=True), 'det', closed=True)
+    for s in (-1, 1):
+        spi = [(x + s * (w / 2 + 0.02 + 0.14 * math.cos(t * 6) * (1 - t)), y0 + 0.6 + hm * t) for t in np.linspace(0, 1, 14)]
+        B.add(mat, tube(F.pts(np.array(spi), d + 0.06), 0.06, 8, nref=F.n), 'det', closed=True)
+        # gesprengter Giebel: zwei steigende Gesimsstuecke
+        p0 = (x + s * (w / 2 + 0.1), y0 + 0.55 + hm + 0.05); p1 = (x + s * 0.25, y0 + 0.55 + hm + 0.42)
+        B.add(mat, sweep(F.pts(np.array([p0, p1]), d + 0.1), rect_prof(0.16, 0.24), F.n), 'det', closed=True)
+    B.add(mat, lathe(F.p(x, y0 + 0.55 + hm + 0.02, d + 0.1), [(0.0, 0.0), (0.16, 0.0), (0.14, 0.08), (0.06, 0.12), (0.17, 0.3), (0.15, 0.42),
+                                                           (0.05, 0.48), (0.07, 0.56), (0.0, 0.62)], 12), 'det', closed=True)
+
+
+epitaph_ren(TF['S'], 8.75, 3.85, 1.35, 2.25, 'crucifixion', seed=11)          # Turm-Suedseite (vgl. Foto Lutherdenkmal)
+epitaph_ren(TF['S'], 7.05, 3.95, 1.1, 1.9, 'donors', seed=12)
+FwS = WallFrame((6.87, -TV), (0, -1))
+epitaph_ren(FwS, 2.6, PT + 0.02, 1.55, 2.6, 'crucifixion', seed=13)              # Seitenschiff-Westwand Sued (hinter Luther, Foto 13)
+epitaph_ren(WallFrame((6.87, hw(6.87)), (0, -1)), 1.65, PT + 0.02, 1.15, 1.9, 'resurrection', seed=14)
+epitaph_baroque(TF['W'], TV + 5.35, 3.62, 1.7, 2.7, d=0.0)              # Turm-Westseite suedlich vom Portal (Foto 04)
+# Reliefplatten an der Nordwand zwischen den Strebepfeilern (Foto 2026 marktplatz/13; Lage zu pruefen: Begehung B-18)
+FN = WallFrame((45.6, 13.215), np.array([6.87, hw(6.87)]) - np.array([45.6, 13.215]))
+for k, (uc, kind) in enumerate(((17.95, 'crucifixion'), (25.25, 'donors'), (32.6, 'resurrection'), (39.98, 'arms'))):
+    xk = xpos(FN, uc, hw(uc))
+    B.add(SAND, chamfer_box(FN.p(xk, PT + 0.2 + 0.74, 0.03), FN.t, UP, FN.n, 0.56, 0.78, 0.06, 0.015), 'det', closed=True)
+    relief_panel(B, FN, xk - 0.5, PT + 0.24, 1.0, 1.4, 0.12, 0.13, kind, SAND, back=0.06, res=0.02, seed=30 + k, frame=0.05, mat_bg=SANDDK)
+    B.add(SAND, extrude_profile([(-0.04, 0.0), (0.16, 0.0), (0.2, 0.05), (0.2, 0.1), (-0.04, 0.1)], FN.p(xk - 0.62, PT + 1.72), FN.n, UP, FN.t, 0, 1.24), 'det', closed=True)
+print('epitaphs/reliefs tris %d' % B.tri_count())
+
+# ================================================================= Rinnen + Fallrohre
+eave_line = [np.array([UW + 0.25, -(hw(UW + 0.25) + 0.5), EAVE - 0.05])] + [np.array([p[0], p[1], EAVE - 0.05]) + np.r_[nrm(p[:2] - np.array([46.0, 0])) * 0.06, 0] for p in EAVES] + [np.array([UW + 0.25, hw(UW + 0.25) + 0.5, EAVE - 0.05])]
+gut = np.array([(0.14 * math.cos(q), 0.14 * math.sin(q)) for q in np.linspace(math.pi, 2 * math.pi, 7)] + [(0.15, 0.03), (-0.15, 0.03)])
+B.add(PATINA, sweep(np.array(eave_line), gut, UP), 'det', closed=True)
+for ub in (14.33 - 0.95, 28.93 - 0.95, 42.88):
+    for sgn in (-1, 1):
+        x = ub; vw = sgn * hw(ub)
+        top = np.array([x, vw + sgn * 0.5, EAVE - 0.12]); mid = np.array([x, vw + sgn * 0.14, EAVE - 0.6])
+        bot = np.array([x, vw + sgn * 0.14, G(x, vw + sgn * 0.5) + 0.25]); foot = bot + np.array([0, sgn * 0.25, -0.15])
+        B.add(PATINA, tube(np.array([top, mid, mid - UP * 0.3, bot, foot]), 0.055, 8), 'det', closed=True)
+        for yy in np.arange(bot[2] + 1.0, mid[2] - 0.6, 2.5):
+            B.add(IRON, box(np.array([x, vw + sgn * 0.1, yy]), np.array([1.0, 0, 0]), np.array([0, 1.0, 0]), UP, 0.075, 0.075, 0.025), 'fine', closed=True)
+
+# ================================================================= Ausgabe
+arr = B.arrays()
+TILES = {FLIESEN: (1.2, 1.2), DOOR: (1.0, 1.0), BOARD: (1.0, 1.0), BRICK: (2.0, 2.0), GLAZED: (2.0, 2.0), ASHLAR: (2.4, 2.4), SAND: (1.6, 1.6), SANDDK: (2.4, 2.4), COPPER: (2.0, 2.0),
+         PATINA: (1.0, 1.0), TILE: (1.08, 0.99), GLASS: (1.2, 1.2), STEEL: (1.0, 1.0), WOOD: (1.0, 1.0), GOLD: (1.0, 1.0),
+         BRONZE: (0.8, 0.8), GRANITE: (1.2, 1.2), DIAL: (1.0, 1.0), IRON: (1.0, 1.0), DARK: (1.0, 1.0), PEDSTONE: (1.6, 1.6)}
+O = np.array(PL['origin']); Uv = np.array(PL['U']); Vv = np.array(PL['V'])
+save = {}; meta = {'groups': [], 'origin': PL['origin'], 'U': PL['U'], 'V': PL['V'], 'top_y': TOP_Y, 'luther': LUTHER}
+tot = 0
+for i, ((mat, grp), (T, UVm)) in enumerate(sorted(arr.items())):
+    P = T.reshape(-1, 3)
+    gx = O[0] + P[:, 0] * Uv[0] + P[:, 1] * Vv[0]
+    gz = O[1] + P[:, 0] * Uv[1] + P[:, 1] * Vv[1]
+    bl = np.c_[gx, -gz, P[:, 2]].astype(np.float32)            # Blender-Frame: x Ost, y Nord, z oben
+    sx, sy = TILES[mat]
+    if mat == BRONZE:
+        # Zylinderabbildung um die Figurachse: stetige Patina statt Flicken je Dreieck
+        ang = np.arctan2(T[:, :, 1] - LC[1], T[:, :, 0] - LC[0])
+        wrap = (ang.max(axis=1) - ang.min(axis=1)) > math.pi
+        ang = np.where(wrap[:, None] & (ang < 0), ang + 2 * math.pi, ang)
+        rr_ = np.hypot(T[:, :, 0] - LC[0], T[:, :, 1] - LC[1])            # Bogenlaenge statt Winkel: Kopf/Arme nicht gestaucht
+        UVm = np.stack([ang * np.maximum(rr_, 0.12), T[:, :, 2]], axis=-1)
+    uv = (UVm.reshape(-1, 2) / np.array([sx, sy])).astype(np.float32)
+    if mat in (DIAL, BOARD): uv = UVm.reshape(-1, 2).astype(np.float32)
+    save['p%d' % i] = bl; save['uv%d' % i] = uv
+    meta['groups'].append(dict(i=i, mat=mat, grp=grp, tris=int(len(T))))
+    tot += len(T)
+meta['total_tris'] = tot
+np.savez_compressed(os.path.join(BUILD, 'mk_geo.npz'), **save)
+json.dump(meta, open(os.path.join(BUILD, 'mk_geo.json'), 'w'), indent=1)
+json.dump({'top': TOP_Y}, open(os.path.join(BUILD, 'model_top.json'), 'w'))
+print('TOTAL TRIS', tot, 'flipped solids', B.flip_count, 'time %.1fs' % (time.time() - t0))
+for g in meta['groups']:
+    print('  %-18s %-6s %7d' % (g['mat'], g['grp'], g['tris']))

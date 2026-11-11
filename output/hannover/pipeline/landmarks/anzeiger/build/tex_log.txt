@@ -1,0 +1,12 @@
+tex klinker
+tex chevron
+tex ashlar
+tex stone
+tex tiles
+tex copper
+tex copper_dark
+tex slate
+tex roof_flat
+tex plaster
+tex concrete
+tex stone_dark

@@ -1,0 +1,30 @@
+[ubahn   32.2s] detail meshes 42
+[ubahn   32.3s]    kroepcke_A footprint grows by 2 detail triangles reaching into the opening
+[ubahn   32.5s] kroepcke_A patch tris 66 rim edges 39 removed {'street': 925}
+[ubahn   32.7s] built kroepcke_A Kröpcke tris 6606
+[ubahn   32.8s] kroepcke_B patch tris 14 rim edges 2 removed {'street': 2}
+[ubahn   33.0s] built kroepcke_B Kröpcke tris 4706
+[ubahn   33.1s] built kroepcke_C Kröpcke tris 6374
+[ubahn   33.4s] kroepcke_D patch tris 100 rim edges 28 removed {'street': 976}
+[ubahn   33.7s] built kroepcke_D Kröpcke tris 7414
+[ubahn   34.0s] kroepcke_E patch tris 121 rim edges 27 removed {'street': 1062, 'ground': 44}
+[ubahn   34.2s] built kroepcke_E Kröpcke tris 4541
+[ubahn   34.5s] kroepcke_F patch tris 83 rim edges 10 removed {'street': 1057}
+[ubahn   34.7s] built kroepcke_F Kröpcke tris 5003
+[ubahn   34.8s] kroepcke_G patch tris 58 rim edges 30 removed {'street': 33}
+[ubahn   35.0s] built kroepcke_G Kröpcke tris 3244
+[ubahn   35.1s] built kroepcke_H Kröpcke tris 4636
+[ubahn   35.2s] kroepcke_I patch tris 12 rim edges 2 removed {'street': 2}
+[ubahn   35.3s] built kroepcke_I Kröpcke tris 4230
+[ubahn   35.4s] built ub_299064939 Waterlooplatz tris 3228
+[ubahn   35.5s] built ub_324517470 Aegidientorplatz tris 3228
+[ubahn   35.6s] built ub_1274066800 Steintor tris 3228
+[ubahn   35.7s] built ub_1274066802 Steintor tris 3236
+[ubahn   35.8s] built ub_1396666085 Steintor tris 3220
+[ubahn   35.9s] built ub_1396666113 Steintor tris 3244
+[ubahn   36.0s] built ub_2747495414 Hauptbahnhof tris 3216
+[ubahn   36.1s] built ub_4048984722 Hauptbahnhof tris 2676
+[ubahn   36.2s] built ub_4048984735 Hauptbahnhof tris 2448
+[ubahn   36.3s] built ub_4373301942 Markthalle tris 3244
+[ubahn   36.4s] built ub_4373301943 Markthalle tris 3220
+[ubahn   36.6s] done: entrances 20 tris 81166 collision 14522 detail materials ['d_ground_slabs_f833e41b', 'd_ground_slabs_3b6841b3', 'd_ground_asphalt_5cceef0e', 'd_ground_setts_84d7cf54', 'd_ground_slabs_b23c554f', 'd_ground_colour_3c3d3f']

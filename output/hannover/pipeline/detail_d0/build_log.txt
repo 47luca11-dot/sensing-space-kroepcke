@@ -1,0 +1,126 @@
+loaded 0.1s
+D0 quads: 2770
+orientation votes: 72 comps by D0 (vis agrees on 49/49), 119 by visibility, 120 by roof test, 127 kept
+orientation: 438 comps, 1992 inconsistent edges, 0 parity conflicts, flipping 3652/62334 tris (19680 m2)
+merged 8 touching D0 rects into 4 openings
+cluster   0 n=  4 style=narrow    wall=Plaster #C9B79C joinery=#3A3D40 (nearby) trim=False bars=0 shutters=False
+cluster   1 n= 14 style=altbau    wall=Plaster #D8D0C0 joinery=#F2F2EE (palette) trim=False bars=0 shutters=False
+cluster   2 n= 15 style=altbau    wall=Plaster #D8D0C0 joinery=#F2F2EE (palette) trim=True bars=1 shutters=False
+cluster   3 n= 15 style=altbau    wall=Plaster #E3D3B8 joinery=#F2F2EE (palette) trim=True bars=1 shutters=False
+cluster   4 n= 12 style=altbau    wall=Plaster #E3D3B8 joinery=#F2F2EE (palette) trim=True bars=0 shutters=False
+cluster   5 n=111 style=modern    wall=Plaster #B9A28A joinery=#8C969C (palette) trim=False bars=0 shutters=False
+cluster   6 n=144 style=altbau    wall=Plaster #D9C7A7 joinery=#3A3D40 (nearby) trim=True bars=0 shutters=False
+cluster   7 n= 54 style=altbau    wall=Plaster #E4E6E4 joinery=#4B3528 (palette) trim=True bars=1 shutters=False
+cluster   8 n= 26 style=narrow    wall=Plaster #D8D0C0 joinery=#2F3337 (palette) trim=False bars=0 shutters=False
+cluster   9 n= 49 style=narrow    wall=Plaster #D8D0C0 joinery=#F2F2EE (palette) trim=False bars=0 shutters=False
+cluster  10 n=  1 style=modern    wall=Plaster #CECED2 joinery=#8C969C (palette) trim=False bars=0 shutters=False
+cluster  11 n=  1 style=modern    wall=Plaster #CECED2 joinery=#F2F2EE (palette) trim=False bars=0 shutters=False
+cluster  12 n= 18 style=altbau    wall=Plaster #CECED2 joinery=#F2F2EE (palette) trim=True bars=0 shutters=False
+cluster  13 n=  6 style=modern    wall=Plaster #CECED2 joinery=#2F3337 (palette) trim=False bars=0 shutters=False
+cluster  14 n=  6 style=modern    wall=Plaster #CECED2 joinery=#8C969C (palette) trim=False bars=0 shutters=False
+cluster  15 n=  6 style=modern    wall=Plaster #CECED2 joinery=#F2F2EE (palette) trim=False bars=0 shutters=False
+cluster  16 n=  8 style=altbau    wall=Plaster #CECED2 joinery=#F2F2EE (palette) trim=True bars=1 shutters=False
+cluster  17 n=  6 style=modern    wall=Plaster #CECED2 joinery=#2F3337 (palette) trim=False bars=0 shutters=False
+cluster  18 n= 54 style=altbau    wall=Plaster #CECED2 joinery=#F2F2EE (palette) trim=True bars=0 shutters=False
+cluster  19 n=  6 style=modern    wall=Plaster #CECED2 joinery=#8C969C (palette) trim=False bars=0 shutters=False
+cluster  20 n= 12 style=altbau    wall=Plaster #CECED2 joinery=#F2F2EE (palette) trim=True bars=1 shutters=False
+cluster  21 n=  6 style=modern    wall=Plaster #CECED2 joinery=#2F3337 (palette) trim=False bars=0 shutters=False
+cluster  22 n=  5 style=modern    wall=Plaster #CECED2 joinery=#8C969C (palette) trim=False bars=0 shutters=False
+cluster  23 n=  1 style=modern    wall=Plaster #CECED2 joinery=#2F3337 (palette) trim=False bars=0 shutters=False
+cluster  24 n=  1 style=modern    wall=Plaster #CECED2 joinery=#8C969C (palette) trim=False bars=0 shutters=False
+cluster  25 n=  4 style=modern    wall=Plaster #CECED2 joinery=#2F3337 (palette) trim=False bars=0 shutters=False
+cluster  26 n=  4 style=modern    wall=Plaster #CECED2 joinery=#F2F2EE (palette) trim=False bars=0 shutters=False
+cluster  27 n=  6 style=modern    wall=Plaster #CECED2 joinery=#F2F2EE (palette) trim=False bars=0 shutters=False
+cluster  28 n= 12 style=altbau    wall=Plaster #CECED2 joinery=#E8DDC5 (palette) trim=True bars=1 shutters=False
+cluster  29 n= 20 style=modern    wall=Plaster #8A4B3A joinery=#8C969C (palette) trim=False bars=0 shutters=False
+cluster  30 n= 17 style=modern    wall=Plaster #8A4B3A joinery=#2F3337 (palette) trim=False bars=0 shutters=False
+cluster  31 n=120 style=narrow    wall=Plaster #CFD3D2 joinery=#2F3337 (palette) trim=False bars=0 shutters=False
+cluster  32 n=  5 style=nachkrieg wall=Plaster #5D4D55 joinery=#F2F2EE (palette) trim=False bars=0 shutters=True
+cluster  33 n= 15 style=modern    wall=Plaster #5D4D55 joinery=#2F3337 (palette) trim=False bars=0 shutters=False
+cluster  34 n= 15 style=nachkrieg wall=Plaster #5D4D55 joinery=#F2F2EE (palette) trim=False bars=0 shutters=True
+cluster  35 n=  5 style=modern    wall=Plaster #5D4D55 joinery=#F2F2EE (palette) trim=False bars=0 shutters=False
+cluster  36 n= 10 style=modern    wall=Plaster #5D4D55 joinery=#F2F2EE (palette) trim=False bars=0 shutters=False
+cluster  37 n= 14 style=altbau    wall=Plaster #E0E0DA joinery=#F2F2EE (palette) trim=True bars=1 shutters=False
+cluster  38 n= 25 style=altbau    wall=Plaster #E0E0DA joinery=#F2F2EE (nearby) trim=True bars=0 shutters=False
+cluster  39 n=334 style=nachkrieg wall=Plaster #D8D0C0 joinery=#F2F2EE (palette) trim=False bars=0 shutters=True
+cluster  40 n= 36 style=altbau    wall=Plaster #C9B79C joinery=#F2F2EE (palette) trim=True bars=0 shutters=False
+cluster  41 n= 15 style=modern    wall=Plaster #BFA58A joinery=#8C969C (palette) trim=False bars=0 shutters=False
+cluster  42 n= 20 style=modern    wall=Plaster #BFA58A joinery=#2F3337 (palette) trim=False bars=0 shutters=False
+cluster  43 n= 20 style=nachkrieg wall=Plaster #C9B79C joinery=#F2F2EE (palette) trim=True bars=0 shutters=False
+cluster  44 n= 12 style=nachkrieg wall=Plaster #C9B79C joinery=#F2F2EE (palette) trim=True bars=0 shutters=True
+cluster  45 n= 90 style=altbau    wall=Plaster #BDBDB8 joinery=#E8DDC5 (palette) trim=True bars=1 shutters=False
+cluster  46 n=147 style=altbau    wall=Plaster #BDBDB8 joinery=#F2F2EE (palette) trim=False bars=1 shutters=False
+cluster  47 n= 35 style=narrow    wall=Plaster #D6DADD joinery=#2F3337 (palette) trim=False bars=0 shutters=False
+cluster  48 n= 10 style=narrow    wall=Plaster #D6DADD joinery=#F2F2EE (palette) trim=False bars=0 shutters=False
+cluster  49 n= 33 style=narrow    wall=Plaster #BDC0C0 joinery=#F2F2EE (palette) trim=False bars=0 shutters=False
+cluster  50 n=  9 style=nachkrieg wall=Plaster #BDC0C0 joinery=#C9C6BE (palette) trim=True bars=0 shutters=False
+cluster  51 n=103 style=nachkrieg wall=Plaster #E5E2D9 joinery=#C9C6BE (palette) trim=True bars=0 shutters=True
+cluster  52 n= 35 style=nachkrieg wall=Plaster #E5E2D9 joinery=#F2F2EE (palette) trim=True bars=0 shutters=True
+cluster  53 n= 19 style=altbau    wall=Plaster #D5D7DC joinery=#F2F2EE (palette) trim=True bars=1 shutters=False
+cluster  54 n= 15 style=altbau    wall=Plaster #D5D7DC joinery=#F2F2EE (palette) trim=True bars=1 shutters=False
+cluster  55 n= 11 style=nachkrieg wall=Plaster #D9C7A7 joinery=#3A3D40 (palette) trim=True bars=0 shutters=True
+cluster  56 n=119 style=nachkrieg wall=Plaster #E3D3B8 joinery=#3A3D40 (palette) trim=False bars=0 shutters=True
+cluster  57 n=115 style=narrow    wall=Plaster #E6E0D4.001 joinery=#F2F2EE (palette) trim=False bars=0 shutters=False
+cluster  58 n=  5 style=modern    wall=Plaster #8A4B3A joinery=#8C969C (palette) trim=False bars=0 shutters=False
+cluster  59 n=  5 style=modern    wall=Plaster #A9A59C joinery=#2F3337 (palette) trim=False bars=0 shutters=False
+cluster  60 n=  1 style=altbau    wall=Plaster #A9A59C joinery=#F2F2EE (palette) trim=True bars=0 shutters=False
+cluster  61 n=  6 style=modern    wall=Plaster #A9A59C joinery=#2F3337 (palette) trim=False bars=0 shutters=False
+cluster  62 n=  6 style=modern    wall=Plaster #A9A59C joinery=#8C969C (palette) trim=False bars=0 shutters=False
+cluster  63 n= 31 style=nachkrieg wall=Plaster #A9A59C joinery=#F2F2EE (palette) trim=False bars=0 shutters=True
+cluster  64 n= 84 style=nachkrieg wall=Plaster #EDF1F4 joinery=#3A3D40 (palette) trim=True bars=0 shutters=True
+cluster  65 n=339 style=narrow    wall=Plaster #DFE0DF joinery=#8C969C (palette) trim=False bars=0 shutters=False
+cluster  66 n=  5 style=nachkrieg wall=Plaster #A9A59C joinery=#C9C6BE (palette) trim=False bars=0 shutters=True
+cluster  67 n=  5 style=nachkrieg wall=Plaster #A9A59C joinery=#F2F2EE (palette) trim=False bars=0 shutters=True
+cluster  68 n=227 style=altbau    wall=Plaster #CFC2AE joinery=#F2F2EE (palette) trim=True bars=0 shutters=False
+cluster  69 n=  2 style=altbau    wall=Plaster #CFC2AE joinery=#F2F2EE (palette) trim=False bars=1 shutters=False
+cluster  70 n=  2 style=altbau    wall=Plaster #CFC2AE joinery=#4B3528 (palette) trim=True bars=0 shutters=False
+cluster  71 n= 17 style=altbau    wall=Plaster #CFC2AE joinery=#F2F2EE (palette) trim=False bars=1 shutters=False
+layer-2 cuts 70, corner conflicts -> flush 12, interior boxes shortened 976 times
+cut: 218 groups, 0 failed
+cut 2754, flush 12 {'corner': 12}
+kinds: {'narrow': 723, 'shop': 121, 'altbau': 863, 'modern': 156, 'door': 5, 'ribbon': 167, 'nachkrieg': 731}
+tris/window: mean 478, max 5038, total 1322384
+bldg_walls.glb: 100348 tris (orig 62334), flipped 3652
+bldg_openings.glb: 790116 tris
+  Facade Blind #DCDDD8                        33482 tris
+  Facade Curtain #CFC6B4                      14346 tris
+  Facade Curtain #EEE9DF                      21674 tris
+  Facade Glass v4                             13884 tris
+  Facade Hardware Metal v2                   117616 tris
+  Facade Interior Ceiling                      5508 tris
+  Facade Interior Dark                        21104 tris
+  Facade Joinery #2F3337                     205272 tris
+  Facade Joinery #3A3D40                     108132 tris
+  Facade Joinery #4B3528                      20400 tris
+  Facade Joinery #8C969C                     170376 tris
+  Facade Joinery #C9C6BE                      32672 tris
+  Facade Joinery #E8DDC5                      33804 tris
+  Facade Joinery #F2F2EE                     355932 tris
+  Facade Shop Fit                              5076 tris
+  Facade Shop Interior                          952 tris
+  Facade Shutter #9EA2A4                      12348 tris
+  Facade Shutter #B9AD95                       2736 tris
+  Facade Shutter #C8C6BE                       7104 tris
+  Facade Sill Metal                           54392 tris
+  Facade Sill Stone                           57024 tris
+  Facade Spandrel Glass v3 #33434C             2990 tris
+  Facade Trim #A3A5A5                           248 tris
+  Facade Trim #AD9D86                           710 tris
+  Facade Trim #BBAB90                           302 tris
+  Facade Trim #C5C2BB                          3686 tris
+  Facade Trim #CACAC5                          2112 tris
+  Facade Trim #CCCFD2                          2072 tris
+  Facade Trim #D7C4A7                           964 tris
+  Facade Trim #DCDCE1                          1432 tris
+  Facade Trim #DDD0BA                          6112 tris
+  Facade Trim #E4E6EB                           830 tris
+  Facade Trim #E7DFCD                           398 tris
+  Facade Trim #E8D5B3                          3754 tris
+  Facade Trim #F0F0E9                           988 tris
+  Facade Trim #F3E2C5                           640 tris
+  Facade Trim #F4F6F4                          1312 tris
+d0_windows.glb: 1322384 tris, 37 materials
+web bldg_walls: 0.8 MB (4s)
+web bldg_openings: 7.7 MB (5s)
+web d0_windows: 9.6 MB (5s)
+done 109.8s

@@ -1,0 +1,5 @@
+rays 300000 thr 0.012 z-fight candidates 3
+  3 ('MK_fine_Sandstein', 'MK_det_Sandstein')
+  at [-254.8, 17.7, 284.6]
+  at [-241.8, 17.7, 309.2]
+  at [-227.5, 17.7, 306.6]

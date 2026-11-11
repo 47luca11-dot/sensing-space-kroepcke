@@ -1,0 +1,16 @@
+=== altstadt.py 15:38:53
+[altstadt   28.9s] Holzmarktbrunnen at [-431.6  332.2] top y 7.6 height 9.0 m
+[altstadt   29.0s] Ballhofbrunnen at [-410.5  213.4]
+[altstadt   29.2s] Leine railings 18 length 668 m water level -7.48
+[altstadt   29.2s] done: tris 26498 collision 2410
+=== export --dry 15:39:33
+[export    0.8s] module ubahn parts 5885 tris 80813
+[export    0.8s] module promenade parts 4205 tris 50072
+[export    0.8s] module transit parts 769 tris 39341
+[export    0.8s] module altstadt parts 884 tris 26498
+[export   71.0s] terrain tiles 266
+[export   73.4s] tiles written 280 triangles 2074418 MB 88.8
+[export   94.1s] collision triangles 743585 MB 13.6
+[export  103.7s] heightfield (1801, 1801) fallback cells 942507
+[export  103.8s] dry run: files in C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/data/ground_cache/dry/
+Mon Nov  9 15:41:19     2026

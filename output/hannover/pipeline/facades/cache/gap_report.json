@@ -1,0 +1,56 @@
+[
+{
+"id": "ID_60cbc5d9-c564-3bf4-b251-2e89d4d44626",
+"kind": "fachwerk",
+"open_m": 0.0,
+"where": []
+},
+{
+"id": "ID_6d256eb6-7861-3dbc-9b9f-0071be225ad6",
+"kind": "fachwerk",
+"open_m": 0.0,
+"where": []
+},
+{
+"id": "ID_4f69486f-cda3-355a-bee3-e29ac0847164",
+"kind": "fachwerk",
+"open_m": 0.0,
+"where": []
+},
+{
+"id": "ID_a45fef04-bb7f-36e8-a412-3a18c29de892",
+"kind": "modern",
+"open_m": 0.0,
+"where": []
+},
+{
+"id": "ID_6efcb086-4c94-3d3c-9bc0-e0e5c18766f5",
+"kind": "modern",
+"open_m": 0.0,
+"where": []
+},
+{
+"id": "ID_3cc4d720-7c30-3ce2-8c25-8cde108fe292",
+"kind": "nachkrieg",
+"open_m": 0.0,
+"where": []
+},
+{
+"id": "ID_e8f2a770-b0a2-3934-a092-ff331f1965c9",
+"kind": "nachkrieg",
+"open_m": 0.0,
+"where": []
+},
+{
+"id": "ID_a8ec46b5-104f-3422-ac72-2fbe54884984",
+"kind": "modern",
+"open_m": 0.0,
+"where": []
+},
+{
+"id": "ID_12b82579-2ad0-37f8-ab0d-3fd2bc2c95eb",
+"kind": "kaufhaus",
+"open_m": 0.0,
+"where": []
+}
+]

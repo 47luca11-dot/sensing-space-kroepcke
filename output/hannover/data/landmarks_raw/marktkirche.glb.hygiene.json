@@ -1,0 +1,264 @@
+{
+ "objects": {
+  "MK_wall_Tuerbronze": {
+   "tris": 29,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_wall_Stahl": {
+   "tris": 58,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_wall_Sockelstein": {
+   "tris": 120,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_wall_Sandstein_Quader": {
+   "tris": 932,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_wall_Sandstein_dunkel": {
+   "tris": 48715,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_wall_Sandstein": {
+   "tris": 1144,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_wall_Granit": {
+   "tris": 408,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_wall_Glasurstein": {
+   "tris": 4690,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_wall_Fliesen": {
+   "tris": 134,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_wall_Backstein": {
+   "tris": 8292,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_roof_Kupfer_nocol": {
+   "tris": 1394,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_roof_Dunkel_nocol": {
+   "tris": 192,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_roof_Dachziegel_nocol": {
+   "tris": 8229,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_roof_Backstein_nocol": {
+   "tris": 26,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_fine_Tuerbronze_nocol_noshadow": {
+   "tris": 1336,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_fine_Stahl_nocol_noshadow": {
+   "tris": 17632,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_fine_Sandstein_nocol_noshadow": {
+   "tris": 35056,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_fine_Sandstein_dunkel_nocol_noshadow": {
+   "tris": 27604,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_fine_Lamellen_nocol_noshadow": {
+   "tris": 5556,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_fine_Kupfer_nocol_noshadow": {
+   "tris": 4232,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_fine_Inschrift_MART_nocol_noshadow": {
+   "tris": 648,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_fine_Inschrift_1483_nocol_noshadow": {
+   "tris": 708,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_fine_Gold_nocol_noshadow": {
+   "tris": 764,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_fine_Eisen_nocol_noshadow": {
+   "tris": 5088,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_fine_Dunkel_nocol_noshadow": {
+   "tris": 24,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_det_Zifferblatt_nocol": {
+   "tris": 138,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_det_Stahl_nocol": {
+   "tris": 24,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_det_Schaukasten_nocol": {
+   "tris": 14,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_det_Sandstein_nocol": {
+   "tris": 101970,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_det_Sandstein_dunkel_nocol": {
+   "tris": 29914,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_det_Kupfer_Patina_nocol": {
+   "tris": 2124,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_det_Kupfer_nocol": {
+   "tris": 184,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_det_Glasurstein_nocol": {
+   "tris": 15472,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_det_Dunkel_nocol": {
+   "tris": 2887,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_det_Bronze_nocol": {
+   "tris": 16166,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_det_Bleiglas_nocol": {
+   "tris": 550,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  },
+  "MK_det_Backstein_nocol": {
+   "tris": 14896,
+   "degenerate": 0,
+   "zero_uv": 0,
+   "zero_uv_m2": 0.0,
+   "nonmanifold": 0
+  }
+ },
+ "coplanar": {}
+}

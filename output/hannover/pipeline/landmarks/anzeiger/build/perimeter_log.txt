@@ -1,0 +1,1 @@
+PERIMETER rays 13296, failing 0 (misses 0, back-face first 0)

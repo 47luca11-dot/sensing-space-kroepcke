@@ -1,0 +1,1208 @@
+{
+ "version": 1,
+ "frame": "game (x=dE, y=Z-56.16, z=-dN; Y up, m; origin Kroepcke clock)",
+ "tile_size": 100.0,
+ "compression": "EXT_meshopt_compression + KHR_mesh_quantization",
+ "notes": [
+  "Each tile: <name>.glb (shell + facade details, node *_shell_nocol / *_detail_nocol) and <name>_win.glb (instanced window/door/shopfront assemblies, EXT_mesh_gpu_instancing with _COLOR_0 instance colours).",
+  "Load *_win.glb only for tiles within ~150-200 m of the camera; the shell already closes every opening (reveal + dark back plane), so far tiles look right without it.",
+  "No normals are stored: three.js uses flatShading automatically.",
+  "Materials are shared by name (bldg_*); dedupe them across tiles after loading to share textures (textures/*.jpg are referenced externally).",
+  "Collision: collision_buildings.glb (LoD2 solids; canopies as slab + posts).",
+  "Quality gates (check_rays.py): every exposed facade is hit by rays from 3 m at every storey/axis; every window glass instance sits in a shell opening with a back plane; shell bounding spheres valid."
+ ],
+ "materials": {
+  "plaster": {
+   "tex": "plaster",
+   "period": [
+    3.0,
+    3.0
+   ],
+   "rough": 0.92,
+   "metal": 0.0
+  },
+  "stone": {
+   "tex": "stone",
+   "period": [
+    2.4,
+    2.4
+   ],
+   "rough": 0.85,
+   "metal": 0.0
+  },
+  "brick": {
+   "tex": "brick",
+   "period": [
+    1.56,
+    1.54
+   ],
+   "rough": 0.9,
+   "metal": 0.0
+  },
+  "brick_y": {
+   "tex": "brick_y",
+   "period": [
+    1.56,
+    1.54
+   ],
+   "rough": 0.9,
+   "metal": 0.0
+  },
+  "rubble": {
+   "tex": "rubble",
+   "period": [
+    3.0,
+    3.0
+   ],
+   "rough": 0.95,
+   "metal": 0.0
+  },
+  "panel": {
+   "tex": "panel",
+   "period": [
+    2.4,
+    2.4
+   ],
+   "rough": 0.7,
+   "metal": 0.0
+  },
+  "trim": {
+   "rough": 0.5,
+   "metal": 0.0
+  },
+  "metal": {
+   "rough": 0.38,
+   "metal": 0.7
+  },
+  "spandrel": {
+   "rough": 0.12,
+   "metal": 0.35
+  },
+  "interior": {
+   "rough": 0.9,
+   "metal": 0.0
+  },
+  "shop_interior": {
+   "rough": 0.85,
+   "metal": 0.0,
+   "emissive": [
+    0.16,
+    0.155,
+    0.145
+   ]
+  },
+  "glass": {
+   "rough": 0.04,
+   "metal": 0.0,
+   "alpha": 0.58,
+   "base": [
+    0.05,
+    0.065,
+    0.075
+   ]
+  },
+  "roof_tile": {
+   "tex": "tiles",
+   "period": [
+    2.4,
+    2.8
+   ],
+   "rough": 0.8,
+   "metal": 0.0
+  },
+  "roof_slate": {
+   "tex": "slate",
+   "period": [
+    2.5,
+    2.0
+   ],
+   "rough": 0.6,
+   "metal": 0.0
+  },
+  "roof_metal": {
+   "tex": "seam",
+   "period": [
+    2.0,
+    2.0
+   ],
+   "rough": 0.42,
+   "metal": 0.55
+  },
+  "roof_gravel": {
+   "tex": "gravel",
+   "period": [
+    2.0,
+    2.0
+   ],
+   "rough": 1.0,
+   "metal": 0.0
+  },
+  "roof_membrane": {
+   "tex": "membrane",
+   "period": [
+    4.0,
+    4.0
+   ],
+   "rough": 0.85,
+   "metal": 0.0
+  },
+  "roof_green": {
+   "tex": "green",
+   "period": [
+    3.0,
+    3.0
+   ],
+   "rough": 1.0,
+   "metal": 0.0
+  },
+  "glow": {
+   "rough": 0.6,
+   "metal": 0.0,
+   "base": [
+    0.8,
+    0.8,
+    0.78
+   ],
+   "emissive": [
+    0.95,
+    0.93,
+    0.86
+   ]
+  },
+  "glow_warm": {
+   "rough": 0.6,
+   "metal": 0.0,
+   "base": [
+    0.8,
+    0.7,
+    0.55
+   ],
+   "emissive": [
+    1.0,
+    0.78,
+    0.48
+   ]
+  },
+  "glow_33CC66": {
+   "rough": 0.45,
+   "metal": 0.0,
+   "base": [
+    0.014897144956898275,
+    0.27172230248490203,
+    0.05979074469921809
+   ],
+   "emissive": [
+    0.028139051585252296,
+    0.5132532380270372,
+    0.11293807332074528
+   ]
+  },
+  "glow_CC1133": {
+   "rough": 0.45,
+   "metal": 0.0,
+   "base": [
+    0.27172230248490203,
+    0.0025224262308912253,
+    0.014897144956898275
+   ],
+   "emissive": [
+    0.42267913719873645,
+    0.003923774136941905,
+    0.023173336599619537
+   ]
+  },
+  "glow_222222": {
+   "rough": 0.45,
+   "metal": 0.0,
+   "base": [
+    0.007198332014479334,
+    0.007198332014479334,
+    0.007198332014479334
+   ],
+   "emissive": [
+    0.013596849360683186,
+    0.013596849360683186,
+    0.013596849360683186
+   ]
+  },
+  "glow_337733": {
+   "rough": 0.45,
+   "metal": 0.0,
+   "base": [
+    0.014897144956898275,
+    0.08301374752519845,
+    0.014897144956898275
+   ],
+   "emissive": [
+    0.023173336599619537,
+    0.1291324961503087,
+    0.023173336599619537
+   ]
+  },
+  "glow_AA8855": {
+   "rough": 0.45,
+   "metal": 0.0,
+   "base": [
+    0.18089000092448812,
+    0.11079059701852596,
+    0.04087877003253346
+   ],
+   "emissive": [
+    0.3416811128573664,
+    0.20927112770166015,
+    0.07721545450589654
+   ]
+  },
+  "glow_FFFFFF": {
+   "rough": 0.45,
+   "metal": 0.0,
+   "base": [
+    0.45,
+    0.45,
+    0.45
+   ],
+   "emissive": [
+    0.6,
+    0.6,
+    0.6
+   ]
+  },
+  "glow_DD2200": {
+   "rough": 0.45,
+   "metal": 0.0,
+   "base": [
+    0.3253748080148862,
+    0.007198332014479334,
+    0.0
+   ],
+   "emissive": [
+    0.6145968595836739,
+    0.013596849360683186,
+    0.0
+   ]
+  },
+  "glow_DD0011": {
+   "rough": 0.45,
+   "metal": 0.0,
+   "base": [
+    0.3253748080148862,
+    0.0,
+    0.0025224262308912253
+   ],
+   "emissive": [
+    0.6145968595836739,
+    0.0,
+    0.0047645828805723146
+   ]
+  },
+  "glow_000000": {
+   "rough": 0.45,
+   "metal": 0.0,
+   "base": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "emissive": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "glow_CCAA44": {
+   "rough": 0.45,
+   "metal": 0.0,
+   "base": [
+    0.27172230248490203,
+    0.18089000092448812,
+    0.026012443585980254
+   ],
+   "emissive": [
+    0.5132532380270372,
+    0.3416811128573664,
+    0.04913461566240714
+   ]
+  },
+  "glow_FFBB11": {
+   "rough": 0.45,
+   "metal": 0.0,
+   "base": [
+    0.45,
+    0.2236198477773917,
+    0.0025224262308912253
+   ],
+   "emissive": [
+    0.85,
+    0.42239304580173986,
+    0.0047645828805723146
+   ]
+  },
+  "glow_004477": {
+   "rough": 0.45,
+   "metal": 0.0,
+   "base": [
+    0.0,
+    0.026012443585980254,
+    0.08301374752519845
+   ],
+   "emissive": [
+    0.0,
+    0.040463801133747056,
+    0.1291324961503087
+   ]
+  },
+  "glow_EEEEFF": {
+   "rough": 0.45,
+   "metal": 0.0,
+   "base": [
+    0.38474667365590526,
+    0.38474667365590526,
+    0.45
+   ],
+   "emissive": [
+    0.5984948256869637,
+    0.5984948256869637,
+    0.7
+   ]
+  },
+  "glow_FF6600": {
+   "rough": 0.45,
+   "metal": 0.0,
+   "base": [
+    0.45,
+    0.05979074469921809,
+    0.0
+   ],
+   "emissive": [
+    0.85,
+    0.11293807332074528,
+    0.0
+   ]
+  },
+  "glow_00AADD": {
+   "rough": 0.45,
+   "metal": 0.0,
+   "base": [
+    0.0,
+    0.18089000092448812,
+    0.3253748080148862
+   ],
+   "emissive": [
+    0.0,
+    0.3416811128573664,
+    0.6145968595836739
+   ]
+  },
+  "glow_66BB44": {
+   "rough": 0.45,
+   "metal": 0.0,
+   "base": [
+    0.05979074469921809,
+    0.2236198477773917,
+    0.026012443585980254
+   ],
+   "emissive": [
+    0.09965124116536347,
+    0.37269974629565283,
+    0.04335407264330042
+   ]
+  }
+ },
+ "tiles": [
+  {
+   "name": "bldg_-1_-1",
+   "tile": [
+    -1,
+    -1
+   ],
+   "file": "bldg_-1_-1.glb",
+   "windows": "bldg_-1_-1_win.glb",
+   "bounds": {
+    "min": [
+     -112.73,
+     -1.15,
+     -111.78
+    ],
+    "max": [
+     13.74,
+     28.42,
+     6.58
+    ]
+   },
+   "triangles": 50572,
+   "triangles_shell": 24521,
+   "triangles_detail": 26051,
+   "instances": 3972,
+   "instanced_triangles": 456730,
+   "prototype_triangles": 39248,
+   "bytes": 609456,
+   "windows_bytes": 783120,
+   "raw_bytes": 2634068,
+   "buildings": [
+    "ID_b5c91b8e-0e47-3f60-ad55-c982c3cd967c",
+    "ID_f652f586-3c67-3d99-9a58-1ec64e4cd593",
+    "ID_6efcb086-4c94-3d3c-9bc0-e0e5c18766f5",
+    "ID_ae3c7fa9-c7f6-3fa6-a625-f0bab8ae9534",
+    "ID_e8f2a770-b0a2-3934-a092-ff331f1965c9",
+    "ID_70b50309-6ff3-339a-86ff-888669208df5",
+    "ID_25e98fff-dbe7-37ac-864c-2fd28b58a9e9",
+    "ID_361895a3-a7ef-37f1-ae37-09cf8820f090",
+    "ID_b2e3c7c3-54ba-3c5b-873c-1f5eb0ffd809",
+    "ID_254fd352-d387-3566-93df-2f69bbd4f867",
+    "ID_0bcda641-da79-3e3d-b834-522c62bdc2ab",
+    "ID_40793427-dbff-3535-88c7-d7317d4c529f",
+    "ID_349457e8-915a-3d37-a84f-dae02a728616",
+    "ID_58c4db48-7822-30ac-9d4c-756eb8e4896c",
+    "ID_b65ce90a-9e8a-3f25-99c3-704f64d70ed1",
+    "ID_14c354f3-fa99-38bf-90fa-b30df8600601",
+    "ID_1f597dc4-18b1-3c45-9f9b-b1cea4da9106",
+    "ID_e9d88775-5857-3f92-8523-8f7e450282d5",
+    "ID_bf659144-98de-3e34-8c77-2baa9963e8be",
+    "ID_8d1c3d8c-929e-38b3-853d-da52a5d4fec6"
+   ]
+  },
+  {
+   "name": "bldg_-1_-4",
+   "tile": [
+    -1,
+    -4
+   ],
+   "file": "bldg_-1_-4.glb",
+   "windows": "bldg_-1_-4_win.glb",
+   "bounds": {
+    "min": [
+     -183.51,
+     -2.48,
+     -482.45
+    ],
+    "max": [
+     58.03,
+     25.99,
+     -279.49
+    ]
+   },
+   "triangles": 37009,
+   "triangles_shell": 15756,
+   "triangles_detail": 21253,
+   "instances": 6391,
+   "instanced_triangles": 354548,
+   "prototype_triangles": 38038,
+   "bytes": 202952,
+   "windows_bytes": 775716,
+   "raw_bytes": 1965032,
+   "buildings": [
+    "ID_25f8a0da-8323-3c10-ad45-95d51597231d"
+   ]
+  },
+  {
+   "name": "bldg_-1_1",
+   "tile": [
+    -1,
+    1
+   ],
+   "file": "bldg_-1_1.glb",
+   "windows": "bldg_-1_1_win.glb",
+   "bounds": {
+    "min": [
+     -117.09,
+     -0.78,
+     90.34
+    ],
+    "max": [
+     -70.48,
+     23.61,
+     177.23
+    ]
+   },
+   "triangles": 17453,
+   "triangles_shell": 7711,
+   "triangles_detail": 9742,
+   "instances": 1196,
+   "instanced_triangles": 157472,
+   "prototype_triangles": 20128,
+   "bytes": 224060,
+   "windows_bytes": 414900,
+   "raw_bytes": 1094852,
+   "buildings": [
+    "ID_43f2b84d-ae2b-3b0c-b216-2f0a189324ab",
+    "ID_292f1c1a-164a-3c63-bbbd-492fe849fcff",
+    "ID_2ebf21af-c5c4-3a87-ba4f-6324c3e3024c",
+    "ID_dc9f0bee-e4a5-3f17-a3ea-fc8a8cba36af",
+    "ID_f18e0eec-d6dd-3cb2-849b-671583a2adb4",
+    "ID_67833a41-98ba-37d7-90ea-d76d530a3600"
+   ]
+  },
+  {
+   "name": "bldg_-2_-1",
+   "tile": [
+    -2,
+    -1
+   ],
+   "file": "bldg_-2_-1.glb",
+   "windows": "bldg_-2_-1_win.glb",
+   "bounds": {
+    "min": [
+     -199.3,
+     -1.3,
+     -117.94
+    ],
+    "max": [
+     -94.01,
+     32.38,
+     3.78
+    ]
+   },
+   "triangles": 43062,
+   "triangles_shell": 19910,
+   "triangles_detail": 23152,
+   "instances": 2857,
+   "instanced_triangles": 275878,
+   "prototype_triangles": 31800,
+   "bytes": 476964,
+   "windows_bytes": 648244,
+   "raw_bytes": 2113340,
+   "buildings": [
+    "ID_ed46c2af-fb8c-39bb-acfc-c3e1f78b92ea",
+    "ID_20939091-0c84-3bcb-afcd-483ded54db11",
+    "ID_69a0f9c2-82e8-3c9a-97f4-81f736e87802",
+    "ID_95efc744-b4a2-3317-a767-23e9960863b2",
+    "ID_3d2d408d-4c5d-3f1a-b7ef-9543864567a1",
+    "ID_4eb8ac1a-9177-390f-8028-c1602ef7d410",
+    "ID_6b0bdb4d-3040-35bd-b090-5fba5fa70fa2",
+    "ID_4d4fe513-8853-38b1-a76e-2aedc24bb825",
+    "ID_d8dcda45-e20a-38a4-83d3-2ab2ebd8948a",
+    "ID_31bb978c-e967-3b04-b03c-4612a11bca30",
+    "ID_afa0dbc7-b4ff-3405-9ded-b6091a6a9be7",
+    "ID_e48bb462-90f2-3419-a410-183920eb36e2",
+    "ID_3bf10d95-4d38-3c15-914d-0ea7ddfcb992",
+    "ID_68ead5f7-f483-3796-9e56-b4a72af04a61",
+    "ID_42cf3d15-b4e1-37be-94da-2184bdb424e6",
+    "ID_20c1d572-5f58-38fe-9f42-9a7b69cdf007",
+    "ID_bfeb67ef-32e7-33cf-a6b0-694cb4eb935c",
+    "ID_5637a084-4679-371b-8f8f-f5aeaa864163",
+    "ID_12b82579-2ad0-37f8-ab0d-3fd2bc2c95eb"
+   ]
+  },
+  {
+   "name": "bldg_-2_0",
+   "tile": [
+    -2,
+    0
+   ],
+   "file": "bldg_-2_0.glb",
+   "windows": "bldg_-2_0_win.glb",
+   "bounds": {
+    "min": [
+     -221.46,
+     -3.35,
+     -11.09
+    ],
+    "max": [
+     -90.76,
+     30.62,
+     114.27
+    ]
+   },
+   "triangles": 40895,
+   "triangles_shell": 24450,
+   "triangles_detail": 16445,
+   "instances": 3286,
+   "instanced_triangles": 412736,
+   "prototype_triangles": 43704,
+   "bytes": 513652,
+   "windows_bytes": 834236,
+   "raw_bytes": 2473768,
+   "buildings": [
+    "ID_aea5c00e-d73e-3d9c-9fa3-e95b03fdd77e",
+    "ID_9ea04e8d-e7f2-340b-a9ae-9dc6923b8ef1",
+    "ID_981f3164-4010-3c77-bf5d-2e4ea2ad67b2",
+    "ID_ebab9865-7f49-398d-a44f-3336591277cc",
+    "ID_061b4245-f480-39cc-9e8c-5856a74f63ff",
+    "ID_edc82b44-c4e6-37c8-ab85-3433c2a0140a",
+    "ID_b3346704-bda5-3216-b619-2c28a82d27ac",
+    "ID_45024d15-c318-3697-864c-3ad2197072e2",
+    "ID_e65487f0-c6aa-3e30-9b8e-155cdadfe063",
+    "ID_ff36b989-6375-31ea-acc0-30f36d97a33b",
+    "ID_03c06935-a651-36bc-865d-fa3d38d6b946",
+    "ID_7fff2aa3-8e2c-3ad5-9ed3-1a209df69b17",
+    "ID_ba5be715-13e8-3f4a-ae3c-2b2039ddc1ed",
+    "ID_bd4088b5-5ffe-3f20-9c93-eca615db9a34"
+   ]
+  },
+  {
+   "name": "bldg_-4_-2",
+   "tile": [
+    -4,
+    -2
+   ],
+   "file": "bldg_-4_-2.glb",
+   "windows": "bldg_-4_-2_win.glb",
+   "bounds": {
+    "min": [
+     -398.61,
+     -3.21,
+     -203.65
+    ],
+    "max": [
+     -292.2,
+     22.52,
+     -91.86
+    ]
+   },
+   "triangles": 36290,
+   "triangles_shell": 13850,
+   "triangles_detail": 22440,
+   "instances": 2011,
+   "instanced_triangles": 273622,
+   "prototype_triangles": 39042,
+   "bytes": 398188,
+   "windows_bytes": 797992,
+   "raw_bytes": 2108840,
+   "buildings": [
+    "ID_ae055c34-64e8-3dcf-97dc-1b0167e9aa44",
+    "ID_d0cae36c-b05e-3791-8b23-6a977d671e34",
+    "ID_a34caa8f-1be9-3dec-90d5-faac42446a77",
+    "ID_8c6b357e-a071-31ab-b1a7-a9cb6139c3fc",
+    "ID_768a21a9-1afd-3479-a61f-8ec8e00a1172",
+    "ID_60e07ad6-d772-30be-a642-6860fcffb869",
+    "ID_bc3fa6c7-8507-39f1-952d-91c061878115",
+    "ID_fbd61251-02ed-3de0-9bb6-81788939252d",
+    "ID_2242b707-1d63-35b0-a763-6d58d60f4b3e",
+    "ID_57e5b932-dce3-3237-a633-96af914d20c4",
+    "ID_66208fda-acf6-3c67-b91e-7c70948fb3c5",
+    "ID_2cdf1e57-b8d0-3c8c-ac73-234e058e2de1",
+    "ID_dc9cf3ef-45c8-3311-8d46-74b3bd5ca514",
+    "ID_849c409f-5da2-3b2f-ae99-44badee51a14",
+    "ID_0a54a39b-57de-33fe-88be-683401644763",
+    "ID_1820b72c-c73b-3c0c-97bc-75538ec98345",
+    "ID_a45fef04-bb7f-36e8-a412-3a18c29de892",
+    "ID_dadab77b-52ac-312f-8c4f-f31a8763f2c2",
+    "ID_a7b36059-1183-386f-b984-d5e85accf5ba",
+    "ID_c4690852-6ef1-3e96-90fd-950c189ae05c"
+   ]
+  },
+  {
+   "name": "bldg_-4_3",
+   "tile": [
+    -4,
+    3
+   ],
+   "file": "bldg_-4_3.glb",
+   "windows": "bldg_-4_3_win.glb",
+   "bounds": {
+    "min": [
+     -409.88,
+     -2.08,
+     292.76
+    ],
+    "max": [
+     -280.13,
+     27.77,
+     409.22
+    ]
+   },
+   "triangles": 107248,
+   "triangles_shell": 33006,
+   "triangles_detail": 74242,
+   "instances": 4732,
+   "instanced_triangles": 565474,
+   "prototype_triangles": 34694,
+   "bytes": 949612,
+   "windows_bytes": 737908,
+   "raw_bytes": 3647480,
+   "buildings": [
+    "ID_661a2aa2-d13a-33c5-b3b5-b0327e254c9a",
+    "ID_84c907f3-0cb0-3b58-b370-ed0645ed516e",
+    "ID_fc1db415-757a-3360-8ede-7402c0ec5d3c",
+    "ID_abc2cc9b-f64a-35d5-8bcf-e5b3c962f387",
+    "ID_58f63cf5-b16f-3118-a790-2730cef7ab7e",
+    "ID_26a3ce99-5ee8-317d-8540-2489e6119f5d",
+    "ID_3fa079f8-93e2-30c0-abfc-e9ecc5bf8d81",
+    "ID_71c669b3-3e2e-3dcd-8b70-7fae1ab59f95",
+    "ID_6b962ebf-49de-35d8-b913-56548a97f375",
+    "ID_371f5e19-3bf0-3e23-bb18-6e78b9010512",
+    "ID_fa2f0156-e3bb-3491-84d5-00d3f728b9ce",
+    "ID_b7f4c22c-f3c8-326e-9853-4558bf8b2995",
+    "ID_9b7b89a1-f618-35da-a413-bf7d819390db",
+    "ID_a4df8d00-82f9-3600-bbec-9721ad171356",
+    "ID_795815ad-b12c-3258-8b10-5510b5600e7a",
+    "ID_9f20b1a1-8aae-3a68-9d8e-f25c2579d918",
+    "ID_c92d063e-7c13-3f65-bd76-4892e019e4c5",
+    "ID_e9694952-3b48-3189-9e87-f9baf1472379",
+    "ID_e191660a-829b-3bd3-9afe-00a65582828a",
+    "ID_c97a9fe9-e04b-32c6-85ed-04b47bb6db3b",
+    "ID_91d3bc7c-4419-360d-8a34-17ea0ed9a001",
+    "ID_ce368573-8155-39e4-9b5b-b44caea88b22",
+    "ID_ceafc391-5472-371e-b01a-2d879eb79b5e",
+    "ID_5a28005b-0edf-3c30-b758-d42752b753db",
+    "ID_edd0328c-dce8-3cd1-8ef6-9b54a11d0c81",
+    "ID_b1118e14-44ec-3267-9490-0ebdd3403062",
+    "ID_2aa725a7-5a75-3ed9-baef-44deeca184e9",
+    "ID_e7d73b0c-342b-3417-b3ee-19a271d51163",
+    "ID_a77efcdb-1bdb-39da-b791-ae998be5a65e",
+    "ID_18c136e6-d795-3cdf-a511-a405f0a2fcfe",
+    "ID_1c76a872-2ad2-365d-8ee4-75f963dc3478",
+    "ID_ce4154f1-e9ab-3da8-81fc-215726ef3275",
+    "ID_44b0d565-0f01-3f3d-b60c-8f4d60063815",
+    "ID_25d9c66a-ad4d-3de6-a9e8-47af6142e342",
+    "ID_fd4a2d94-0ccc-3c6f-a554-94ff8a4b021b",
+    "ID_ea1b603c-beee-3fc7-b862-a11a56fcf488",
+    "ID_d792df47-fc19-3b8e-a61a-cd858cb96955",
+    "ID_c5e4597d-9e39-3fd1-803f-2308a6696e8a"
+   ]
+  },
+  {
+   "name": "bldg_-5_1",
+   "tile": [
+    -5,
+    1
+   ],
+   "file": "bldg_-5_1.glb",
+   "windows": "bldg_-5_1_win.glb",
+   "bounds": {
+    "min": [
+     -506.11,
+     -1.77,
+     95.82
+    ],
+    "max": [
+     -396.6,
+     71.39,
+     208.41
+    ]
+   },
+   "triangles": 93211,
+   "triangles_shell": 23722,
+   "triangles_detail": 69489,
+   "instances": 2509,
+   "instanced_triangles": 444100,
+   "prototype_triangles": 22290,
+   "bytes": 799304,
+   "windows_bytes": 474100,
+   "raw_bytes": 2836596,
+   "buildings": [
+    "ID_9850fd33-58c8-3cc6-bffc-a396527794b2",
+    "ID_b5f87917-9f73-36d3-90a9-5e70c41c0dc0",
+    "ID_26edb28c-2d86-328c-bcad-2440ffa5f4f0",
+    "ID_379b0975-8f69-3e63-89aa-aa94ac451db8",
+    "ID_e3f02994-48cd-3ea0-b0b6-0dc083f1e855",
+    "ID_88246ce8-34fd-38d2-b81f-1ee43e2d52df",
+    "ID_c654b357-c4f7-3567-9889-7f3cfbd672d0",
+    "ID_b715fdf3-9f3e-3b2e-b061-25febaef3d7d",
+    "ID_2ec17eee-ab39-3da5-a083-72883e638e51",
+    "ID_6f787b36-e78c-3f3f-a83b-d401f4814d7a",
+    "ID_70893d5d-fc6b-3597-a5a4-e5a31729a355",
+    "ID_68e1d53c-90c4-308c-9cf9-750a4dab7c07",
+    "ID_0fe5f09f-3021-302a-9a19-9d345b0dd5ec",
+    "ID_c3ac93d1-1134-3011-a8a8-80a4158adc78",
+    "ID_1b1b6f71-2aec-3538-bf69-736e7ebe4045",
+    "ID_613dd3fc-6f22-3427-9491-794b802aff73",
+    "ID_ab2cb6d9-5519-3d6c-99e1-46a09ec8cdc7",
+    "ID_e161a205-96bc-3735-b611-2dfe9109ad77",
+    "ID_9249b16b-732a-302e-a508-f7ec9e8c11d2",
+    "ID_a3f7a90c-8fc8-3183-932e-7059021212e4",
+    "ID_e70d5bb7-a2a8-3169-b9b9-f0ddb4d442a5",
+    "ID_ad4d90bd-35e7-3610-b9d5-6b9fdbe561ef"
+   ]
+  },
+  {
+   "name": "bldg_-5_2",
+   "tile": [
+    -5,
+    2
+   ],
+   "file": "bldg_-5_2.glb",
+   "windows": "bldg_-5_2_win.glb",
+   "bounds": {
+    "min": [
+     -508.72,
+     -1.44,
+     219.82
+    ],
+    "max": [
+     -397.18,
+     20.5,
+     299.16
+    ]
+   },
+   "triangles": 34199,
+   "triangles_shell": 7771,
+   "triangles_detail": 26428,
+   "instances": 914,
+   "instanced_triangles": 131660,
+   "prototype_triangles": 9892,
+   "bytes": 268820,
+   "windows_bytes": 223244,
+   "raw_bytes": 1004100,
+   "buildings": [
+    "ID_2bee1064-1ed9-3467-a974-15ef0cc8cb80",
+    "ID_6d735a28-51ad-3678-9724-4ca7451390d7",
+    "ID_1311345d-6aa1-322c-a408-949dd71c3e41",
+    "ID_c1816ac4-69bc-391b-88d9-d415c2ab070f",
+    "ID_9bc17b19-56c4-3270-9fda-a0f254195867",
+    "ID_38477871-1b60-35e2-ac87-b4d002aa7e61",
+    "ID_4c631123-cbc3-3f6d-9fea-6a77059e9a7d",
+    "ID_5cef9a44-af3f-3e29-bbf3-4a42658dc746",
+    "ID_0270cc38-c629-33d2-b909-7141b285932f",
+    "ID_93528938-baef-395a-bfa8-df4f22156f68",
+    "ID_2bcbfea4-1c8c-3ebf-80be-4077366124be"
+   ]
+  },
+  {
+   "name": "bldg_-5_3",
+   "tile": [
+    -5,
+    3
+   ],
+   "file": "bldg_-5_3.glb",
+   "windows": "bldg_-5_3_win.glb",
+   "bounds": {
+    "min": [
+     -501.88,
+     -2.91,
+     293.69
+    ],
+    "max": [
+     -394.55,
+     21.12,
+     379.3
+    ]
+   },
+   "triangles": 88923,
+   "triangles_shell": 18002,
+   "triangles_detail": 70921,
+   "instances": 1993,
+   "instanced_triangles": 324350,
+   "prototype_triangles": 21714,
+   "bytes": 665836,
+   "windows_bytes": 460880,
+   "raw_bytes": 2491856,
+   "buildings": [
+    "ID_e9a96a50-38ca-3afb-9a46-88d720f0fa66",
+    "ID_bb48c6bb-6d1f-3a74-974b-a7e2863d9820",
+    "ID_91fa1678-3530-33a2-b54a-9a01d6130546",
+    "ID_db90e7e2-a731-3925-b964-cbef39586c35",
+    "ID_aa6c299c-9b3d-3174-8de0-938a3f48fb87",
+    "ID_d8ed0750-eb0f-34d8-a2e2-db5633214512",
+    "ID_60cbc5d9-c564-3bf4-b251-2e89d4d44626",
+    "ID_e81d227b-f318-3c4b-81e8-a3ffde95b2bb",
+    "ID_6d256eb6-7861-3dbc-9b9f-0071be225ad6",
+    "ID_e4ad976f-b06e-3124-bf27-8794c4ffcd35",
+    "ID_4f69486f-cda3-355a-bee3-e29ac0847164",
+    "ID_b5973fae-14ec-3b9f-ab79-ef8c4bce13de",
+    "ID_8399e9b2-dacc-3280-9267-b6030e0e7c61",
+    "ID_edb66e78-4a7d-394b-9c1f-4faa2b931a11",
+    "ID_f8b19745-b591-38a0-9be3-5ae7a95d2726",
+    "ID_5220330c-71e7-3f91-9b8b-fd0f2f6f82d6",
+    "ID_ca694c1f-26e0-33cd-a35e-d115d293b4ea"
+   ]
+  },
+  {
+   "name": "bldg_-6_2",
+   "tile": [
+    -6,
+    2
+   ],
+   "file": "bldg_-6_2.glb",
+   "windows": "bldg_-6_2_win.glb",
+   "bounds": {
+    "min": [
+     -539.18,
+     -1.41,
+     220.76
+    ],
+    "max": [
+     -515.43,
+     20.51,
+     250.19
+    ]
+   },
+   "triangles": 17155,
+   "triangles_shell": 3131,
+   "triangles_detail": 14024,
+   "instances": 393,
+   "instanced_triangles": 78190,
+   "prototype_triangles": 5918,
+   "bytes": 125176,
+   "windows_bytes": 123028,
+   "raw_bytes": 495184,
+   "buildings": [
+    "ID_e6f0e322-9ac3-3d17-8283-eaa254a306b0"
+   ]
+  },
+  {
+   "name": "bldg_0_-1",
+   "tile": [
+    0,
+    -1
+   ],
+   "file": "bldg_0_-1.glb",
+   "windows": "bldg_0_-1_win.glb",
+   "bounds": {
+    "min": [
+     3.42,
+     -3.39,
+     -105.72
+    ],
+    "max": [
+     102.76,
+     23.67,
+     -8.91
+    ]
+   },
+   "triangles": 26698,
+   "triangles_shell": 11920,
+   "triangles_detail": 14778,
+   "instances": 2273,
+   "instanced_triangles": 237288,
+   "prototype_triangles": 26020,
+   "bytes": 333752,
+   "windows_bytes": 530276,
+   "raw_bytes": 1516120,
+   "buildings": [
+    "ID_e8562f0c-c9ae-31fb-96fa-03d05f0ece75",
+    "ID_a0dbcd1a-1e62-33d6-a44a-9523d6970692",
+    "ID_4fbe53c7-c2c9-31d5-b5db-eba6b2166714",
+    "ID_ffa067d6-6ee5-3be4-bd6f-5b018966663f",
+    "ID_2282a3f3-f314-3254-8358-c25f36ba0c09",
+    "ID_5c422e65-6d30-3e1c-93da-c89e4a0dedfa",
+    "ID_b086d99b-7c57-3c85-a22b-c1c3dba58986",
+    "ID_afc1d194-3450-3f6d-99d1-34373f7837ab",
+    "ID_03ad88be-3ecf-3892-ad83-5b72993ca474",
+    "ID_23851694-ebf7-3904-8e1e-22129cbad129",
+    "ID_818f67f2-a606-3e04-9001-dc67861da441",
+    "ID_a44b2f58-d97b-37d3-9df6-09d85d7b03cd",
+    "ID_3cc4d720-7c30-3ce2-8c25-8cde108fe292",
+    "ID_0cd6bac8-ebc5-3916-af64-cc6a687fbe51",
+    "ID_53c6c245-a4e6-3b46-8251-3f1db8136506"
+   ]
+  },
+  {
+   "name": "bldg_0_-2",
+   "tile": [
+    0,
+    -2
+   ],
+   "file": "bldg_0_-2.glb",
+   "windows": "bldg_0_-2_win.glb",
+   "bounds": {
+    "min": [
+     -42.85,
+     -3.77,
+     -190.39
+    ],
+    "max": [
+     121.27,
+     30.13,
+     -80.1
+    ]
+   },
+   "triangles": 41417,
+   "triangles_shell": 21781,
+   "triangles_detail": 19636,
+   "instances": 3199,
+   "instanced_triangles": 372104,
+   "prototype_triangles": 42138,
+   "bytes": 501020,
+   "windows_bytes": 823320,
+   "raw_bytes": 2424320,
+   "buildings": [
+    "ID_1e235bc6-b73b-3550-9530-08365ae3bc61",
+    "ID_f15ca140-4781-3fe1-a48f-4acf152d002b",
+    "ID_a8ec46b5-104f-3422-ac72-2fbe54884984"
+   ]
+  }
+ ],
+ "collision": {
+  "file": "collision_buildings.glb",
+  "triangles": 14701,
+  "bytes": 301624
+ },
+ "totals": {
+  "coplanar_moved_parts": 5547,
+  "coplanar_dropped_parts": 18,
+  "triangles": 634132,
+  "triangles_shell": 225531,
+  "triangles_detail": 408601,
+  "instances": 35726,
+  "instanced_triangles": 4084152,
+  "prototype_triangles": 374626,
+  "bytes": 6068792,
+  "windows_bytes": 7626964,
+  "raw_bytes": 26805556,
+  "collision_triangles": 14701,
+  "collision_bytes": 301624
+ },
+ "styles": {
+  "shed": 35,
+  "nachkrieg": 65,
+  "modern": 32,
+  "altbau": 16,
+  "fachwerk": 35,
+  "gothic": 1,
+  "kaufhaus": 2,
+  "curtain": 1
+ },
+ "buildings": 187,
+ "replaced_by_landmarks": {
+  "ID_7bf3782c-bd5b-3e10-8b2c-c872158c3382": "ballhof",
+  "ID_ff0b0763-d722-3c5a-a2d1-a5543b1e6800": "ballhof",
+  "ID_98a9691d-b236-3bb4-91ec-55ec0f3fa9a0": "ballhof",
+  "ID_bcc9a17d-17ac-3796-8109-95830183bbd7": "ballhof",
+  "ID_0875e4bf-2b9c-3d2a-ae27-3bc0e500bbca": "ballhof",
+  "ID_84e270ab-c650-3efb-96cb-75d0449a9249": "ballhof",
+  "ID_1e223c17-842e-3f52-a54c-082809ef52fc": "leibnizhaus",
+  "ID_7f103f76-2cb1-36a5-b1f5-e39a5d4db35d": "leibnizhaus",
+  "ID_b150f6c8-2886-3ae9-b09f-044416be3d53": "ballhof",
+  "ID_5051cc6a-c86e-3179-b258-2228f15d551b": "leibnizhaus",
+  "ID_b1e08153-ebb6-3af8-8652-e6862bb48eee": "leineschloss",
+  "ID_1a4a4aa4-01e2-3f9d-8d35-387256f6bc34": "ballhof",
+  "ID_c48b3643-2c73-3bca-98d8-5b26f0175d9b": "ballhof",
+  "ID_c494dba7-3b4a-3a44-9e3d-f038d58e0852": "leibnizhaus",
+  "ID_6388af31-4867-3e8b-b3dd-1f30ff2b3d7c": "anzeiger",
+  "ID_5ea871fc-25a3-3730-b301-1be715d487a0": "anzeiger",
+  "ID_0a25725c-24e1-3239-8d49-0b0bb20eb212": "kroepcke_center",
+  "ID_eac4b0e4-bb4e-3389-a0e4-73efb1359670": "marktkirche",
+  "ID_f11763d1-f306-3636-91b8-8805e57702b9": "cafe_kroepcke",
+  "ID_dedae90c-48f4-3b9e-9176-f04541ffbcb2": "altes_rathaus"
+ },
+ "shops_placed": 134,
+ "shops_placed_ids": [
+  "osm-n1005794426",
+  "osm-n10174210029",
+  "osm-n10308842755",
+  "osm-n10311326753",
+  "osm-n10311359702",
+  "osm-n10311381950",
+  "osm-n10313166015",
+  "osm-n10705377336",
+  "osm-n10994517756",
+  "osm-n11515985125",
+  "osm-n11618169458",
+  "osm-n11627263627",
+  "osm-n11627314307",
+  "osm-n11766651380",
+  "osm-n11807222777",
+  "osm-n11954171132",
+  "osm-n11954171136",
+  "osm-n11954171137",
+  "osm-n12291342389",
+  "osm-n1240781902",
+  "osm-n12569418417",
+  "osm-n12606827302",
+  "osm-n1274297582",
+  "osm-n12877282666",
+  "osm-n12942193901",
+  "osm-n12953962944",
+  "osm-n12953962945",
+  "osm-n13673788960",
+  "osm-n13895375289",
+  "osm-n13895377329",
+  "osm-n13895391311",
+  "osm-n13947838685",
+  "osm-n14295870624",
+  "osm-n14295888067",
+  "osm-n14295888068",
+  "osm-n1552753393",
+  "osm-n1803292119",
+  "osm-n2071168295",
+  "osm-n2286146803",
+  "osm-n2286146828",
+  "osm-n2286146835",
+  "osm-n2286146841",
+  "osm-n2286146845",
+  "osm-n2286146865",
+  "osm-n2286146868",
+  "osm-n2286146875",
+  "osm-n2286146884",
+  "osm-n2286146909",
+  "osm-n2286146992",
+  "osm-n2286147012",
+  "osm-n2286147020",
+  "osm-n2286147049",
+  "osm-n2286147054",
+  "osm-n2286147058",
+  "osm-n2286147063",
+  "osm-n2286147068",
+  "osm-n2286147073",
+  "osm-n2314743450",
+  "osm-n2437510475",
+  "osm-n2437510548",
+  "osm-n2437510549",
+  "osm-n2437510574",
+  "osm-n2450732535",
+  "osm-n2452882319",
+  "osm-n247415262",
+  "osm-n261744174",
+  "osm-n261744178",
+  "osm-n265546906",
+  "osm-n277463487",
+  "osm-n278804248",
+  "osm-n3061932859",
+  "osm-n3095112743",
+  "osm-n318105349",
+  "osm-n320902086",
+  "osm-n321257013",
+  "osm-n321257135",
+  "osm-n323100972",
+  "osm-n343319826",
+  "osm-n3637946048",
+  "osm-n3637946051",
+  "osm-n3637946052",
+  "osm-n3637946054",
+  "osm-n3637946057",
+  "osm-n364513770",
+  "osm-n3689109043",
+  "osm-n3760103218",
+  "osm-n3760138557",
+  "osm-n3760139157",
+  "osm-n3956509986",
+  "osm-n4511434053",
+  "osm-n452986988",
+  "osm-n503562830",
+  "osm-n5055919143",
+  "osm-n5055919144",
+  "osm-n5055919145",
+  "osm-n5055919146",
+  "osm-n5055919147",
+  "osm-n5055919150",
+  "osm-n5113274475",
+  "osm-n5894399985",
+  "osm-n613601588",
+  "osm-n6267642198",
+  "osm-n6720626840",
+  "osm-n6720644481",
+  "osm-n6720649613",
+  "osm-n6720658721",
+  "osm-n7044500313",
+  "osm-n7066027628",
+  "osm-n7066027629",
+  "osm-n7112183582",
+  "osm-n7112183583",
+  "osm-n8188024315",
+  "osm-n8224043347",
+  "osm-n8224088194",
+  "osm-n8224108429",
+  "osm-n8224117422",
+  "osm-n8939588097",
+  "osm-n8939589067",
+  "osm-n8939589772",
+  "osm-n8939607929",
+  "osm-n9701179053",
+  "osm-n9791245092",
+  "osm-n9791245093",
+  "osm-n9791245095",
+  "osm-n9791245096",
+  "osm-n9791245097",
+  "osm-w1124726171",
+  "osm-w124270967",
+  "osm-w125844277",
+  "osm-w1298345925",
+  "osm-w1298407168",
+  "osm-w186296457",
+  "osm-w25129958",
+  "osm-w332653414"
+ ],
+ "shops_placed_named": 119,
+ "shops_placed_unnamed": 15
+}

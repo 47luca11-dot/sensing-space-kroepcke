@@ -1,0 +1,5 @@
+z-fight pairs 20, total overlap m2 0.008
+  0.0032 m2 at [-491.45, 2.81, -308.72] n [1.0, -0.0, 0.06] ('bad_windows_nocol', 'metal_dark') ('bad_windows_nocol', 'metal_dark')
+  0.0016 m2 at [-493.58, 2.66, -316.93] n [0.99, 0.0, -0.14] ('bad_windows_nocol', 'metal_dark') ('bad_windows_nocol', 'metal_dark')
+  0.0016 m2 at [-492.13, 2.81, -311.83] n [0.88, 0.0, -0.47] ('bad_windows_nocol', 'metal_dark') ('bad_windows_nocol', 'metal_dark')
+  0.0016 m2 at [-491.58, 2.81, -310.32] n [0.98, 0.0, -0.21] ('bad_windows_nocol', 'metal_dark') ('bad_windows_nocol', 'metal_dark')

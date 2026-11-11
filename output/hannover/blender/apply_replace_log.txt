@@ -1,0 +1,864 @@
+replace polygons 2
+01:52:13 | INFO: Data are loaded, start creating Blender stuff
+01:52:13 | INFO: Blender create Mesh node Mesh_0
+01:52:13 | INFO: Blender create Mesh node Mesh_1
+01:52:13 | INFO: Blender create Mesh node Mesh_10
+01:52:13 | INFO: Blender create Mesh node Mesh_19
+01:52:13 | INFO: Blender create Mesh node Mesh_41
+01:52:13 | INFO: Blender create Mesh node Mesh_42
+01:52:13 | INFO: Blender create Mesh node Mesh_100
+01:52:13 | INFO: Blender create Mesh node Mesh_101
+01:52:13 | INFO: Blender create Mesh node Mesh_113
+01:52:13 | INFO: Blender create Mesh node Mesh_118
+01:52:13 | INFO: Blender create Mesh node Mesh_120
+01:52:13 | INFO: Blender create Mesh node Mesh_130
+01:52:13 | INFO: Blender create Mesh node Mesh_138
+01:52:13 | INFO: Blender create Mesh node Mesh_139
+01:52:13 | INFO: glTF import finished in 0.03s
+INFO Draco mesh compression is available, use library at C:\Program Files\Blender Foundation\Blender 5.0\5.0\scripts\addons_core\io_scene_gltf2\extern_draco.dll
+01:52:13 | INFO: Starting glTF 2.0 export
+01:52:13 | INFO: Extracting primitive: Mesh_0
+01:52:13 | INFO: Primitives created: 1
+01:52:13 | INFO: Extracting primitive: Mesh_1
+01:52:13 | INFO: Primitives created: 1
+01:52:13 | INFO: Extracting primitive: Mesh_10
+01:52:13 | INFO: Primitives created: 1
+01:52:13 | INFO: Extracting primitive: Mesh_19
+01:52:13 | INFO: Primitives created: 1
+01:52:13 | INFO: Extracting primitive: Mesh_41
+01:52:13 | INFO: Primitives created: 1
+01:52:13 | INFO: Extracting primitive: Mesh_42
+01:52:13 | INFO: Primitives created: 1
+01:52:13 | INFO: Extracting primitive: Mesh_100
+01:52:13 | INFO: Primitives created: 1
+01:52:13 | INFO: Extracting primitive: Mesh_101
+01:52:13 | INFO: Primitives created: 1
+01:52:13 | INFO: Extracting primitive: Mesh_113
+01:52:13 | INFO: Primitives created: 1
+01:52:13 | INFO: Extracting primitive: Mesh_118
+01:52:13 | INFO: Primitives created: 1
+01:52:13 | INFO: Extracting primitive: Mesh_120
+01:52:13 | INFO: Primitives created: 1
+01:52:13 | INFO: Extracting primitive: Mesh_130
+01:52:13 | INFO: Primitives created: 1
+01:52:13 | INFO: Extracting primitive: Mesh_138
+01:52:13 | INFO: Primitives created: 1
+01:52:13 | INFO: Extracting primitive: Mesh_139
+01:52:13 | INFO: Primitives created: 1
+01:52:13 | INFO: Finished glTF 2.0 export in 0.03331708908081055 s
+
+REPLACE bldg_base removed faces 1265
+01:52:13 | INFO: Data are loaded, start creating Blender stuff
+01:52:13 | INFO: Blender create Mesh node bldg_openings__Facade Joinery #3A3D40
+01:52:13 | INFO: Blender create Mesh node bldg_openings__Facade Hardware Metal v2
+01:52:13 | INFO: Blender create Mesh node bldg_openings__Facade Joinery #986B43
+01:52:13 | INFO: Blender create Mesh node bldg_openings__Facade Joinery #F2F2EE
+01:52:14 | INFO: Blender create Mesh node bldg_openings__Facade Joinery #5A3B28
+01:52:14 | INFO: Blender create Mesh node bldg_openings__Facade Joinery #682F32
+01:52:14 | INFO: Blender create Mesh node bldg_openings__Facade Interior Dark
+01:52:14 | INFO: Blender create Mesh node bldg_openings__Facade Sill Stone
+01:52:14 | INFO: Blender create Mesh node bldg_openings__Facade Glass v4
+01:52:14 | INFO: Blender create Mesh node bldg_openings__Facade Joinery #294738
+01:52:14 | INFO: Blender create Mesh node bldg_openings__Facade Joinery #B8BEBD
+01:52:14 | INFO: Blender create Mesh node bldg_openings__Facade Joinery #A6AEAF
+01:52:14 | INFO: Blender create Mesh node bldg_openings__Facade Joinery #E8DDC5
+01:52:14 | INFO: Blender create Mesh node bldg_openings__Facade Joinery #4B3528
+01:52:14 | INFO: Blender create Mesh node bldg_openings__Facade Joinery #C9C6BE
+01:52:14 | INFO: Blender create Mesh node bldg_openings__Facade Joinery #2F3337
+01:52:14 | INFO: Blender create Mesh node bldg_openings__Facade Joinery #8C969C
+01:52:15 | INFO: glTF import finished in 1.51s
+01:52:18 | INFO: Starting glTF 2.0 export
+01:52:18 | INFO: Extracting primitive: bldg_openings__Facade Joinery #3A3D40
+01:52:18 | INFO: Primitives created: 1
+01:52:18 | INFO: Extracting primitive: bldg_openings__Facade Hardware Metal v2
+01:52:18 | INFO: Primitives created: 1
+01:52:18 | INFO: Extracting primitive: bldg_openings__Facade Joinery #986B43
+01:52:18 | INFO: Primitives created: 1
+01:52:18 | INFO: Extracting primitive: bldg_openings__Facade Joinery #F2F2EE
+01:52:18 | INFO: Primitives created: 1
+01:52:18 | INFO: Extracting primitive: bldg_openings__Facade Joinery #5A3B28
+01:52:18 | INFO: Primitives created: 1
+01:52:18 | INFO: Extracting primitive: bldg_openings__Facade Joinery #682F32
+01:52:18 | INFO: Primitives created: 1
+01:52:18 | INFO: Extracting primitive: bldg_openings__Facade Interior Dark
+01:52:19 | INFO: Primitives created: 1
+01:52:19 | INFO: Extracting primitive: bldg_openings__Facade Sill Stone
+01:52:19 | INFO: Primitives created: 1
+01:52:19 | INFO: Extracting primitive: bldg_openings__Facade Glass v4
+01:52:19 | INFO: Primitives created: 1
+01:52:19 | INFO: Extracting primitive: bldg_openings__Facade Joinery #294738
+01:52:19 | INFO: Primitives created: 1
+01:52:19 | INFO: Extracting primitive: bldg_openings__Facade Joinery #B8BEBD
+01:52:19 | INFO: Primitives created: 1
+01:52:19 | INFO: Extracting primitive: bldg_openings__Facade Joinery #A6AEAF
+01:52:19 | INFO: Primitives created: 1
+01:52:19 | INFO: Extracting primitive: bldg_openings__Facade Joinery #E8DDC5
+01:52:19 | INFO: Primitives created: 1
+01:52:19 | INFO: Extracting primitive: bldg_openings__Facade Joinery #4B3528
+01:52:19 | INFO: Primitives created: 1
+01:52:19 | INFO: Extracting primitive: bldg_openings__Facade Joinery #C9C6BE
+01:52:19 | INFO: Primitives created: 1
+01:52:19 | INFO: Extracting primitive: bldg_openings__Facade Joinery #2F3337
+01:52:19 | INFO: Primitives created: 1
+01:52:19 | INFO: Extracting primitive: bldg_openings__Facade Joinery #8C969C
+01:52:19 | INFO: Primitives created: 1
+01:52:19 | INFO: Finished glTF 2.0 export in 1.5484654903411865 s
+
+REPLACE bldg_openings removed faces 106920
+01:52:19 | INFO: Data are loaded, start creating Blender stuff
+01:52:19 | INFO: Blender create Mesh node Mesh_0
+01:52:20 | INFO: Blender create Mesh node Mesh_1
+01:52:20 | INFO: Blender create Mesh node Mesh_11
+01:52:20 | INFO: Blender create Mesh node Mesh_12
+01:52:20 | INFO: Blender create Mesh node Mesh_14
+01:52:20 | INFO: Blender create Mesh node Mesh_28
+01:52:20 | INFO: Blender create Mesh node Mesh_34
+01:52:20 | INFO: Blender create Mesh node Mesh_40
+01:52:20 | INFO: Blender create Mesh node Mesh_56
+01:52:20 | INFO: Blender create Mesh node Mesh_82
+01:52:20 | INFO: Blender create Mesh node Mesh_101
+01:52:20 | INFO: Blender create Mesh node Mesh_102
+01:52:20 | INFO: Blender create Mesh node Mesh_103
+01:52:20 | INFO: Blender create Mesh node Mesh_108
+01:52:20 | INFO: Blender create Mesh node Mesh_110
+01:52:20 | INFO: Blender create Mesh node Mesh_111
+01:52:20 | INFO: Blender create Mesh node Mesh_113
+01:52:20 | INFO: Blender create Mesh node Mesh_116
+01:52:20 | INFO: Blender create Mesh node Mesh_117
+01:52:20 | INFO: Blender create Mesh node Mesh_124
+01:52:20 | INFO: Blender create Mesh node Mesh_128
+01:52:20 | INFO: Blender create Mesh node Mesh_142
+01:52:20 | INFO: Blender create Mesh node Mesh_164
+01:52:20 | INFO: Blender create Mesh node Mesh_166
+01:52:20 | INFO: Blender create Mesh node Mesh_181
+01:52:20 | INFO: Blender create Mesh node Mesh_192
+01:52:20 | INFO: Blender create Mesh node Mesh_201
+01:52:20 | INFO: Blender create Mesh node Mesh_216
+01:52:20 | INFO: Blender create Mesh node Mesh_217
+01:52:20 | INFO: Blender create Mesh node Mesh_218
+01:52:20 | INFO: Blender create Mesh node Mesh_219
+01:52:20 | INFO: Blender create Mesh node Mesh_222
+01:52:20 | INFO: Blender create Mesh node Mesh_223
+01:52:20 | INFO: Blender create Mesh node Mesh_232
+01:52:20 | INFO: Blender create Mesh node Mesh_239
+01:52:20 | INFO: Blender create Mesh node Mesh_249
+01:52:20 | INFO: Blender create Mesh node Mesh_257
+01:52:20 | INFO: Blender create Mesh node Mesh_270
+01:52:20 | INFO: Blender create Mesh node Mesh_298
+01:52:20 | INFO: Blender create Mesh node Mesh_320
+01:52:20 | INFO: Blender create Mesh node Mesh_323
+01:52:20 | INFO: Blender create Mesh node Mesh_337
+01:52:20 | INFO: Blender create Mesh node Mesh_345
+01:52:20 | INFO: Blender create Mesh node Mesh_381
+01:52:20 | INFO: Blender create Mesh node Mesh_389
+01:52:20 | INFO: Blender create Mesh node Mesh_414
+01:52:20 | INFO: Blender create Mesh node Mesh_427
+01:52:20 | INFO: Blender create Mesh node Mesh_440
+01:52:20 | INFO: Blender create Mesh node Mesh_467
+01:52:20 | INFO: Blender create Mesh node Mesh_469
+01:52:20 | INFO: Blender create Mesh node Mesh_476
+01:52:20 | INFO: Blender create Mesh node Mesh_477
+01:52:20 | INFO: glTF import finished in 0.36s
+01:52:20 | INFO: Starting glTF 2.0 export
+01:52:20 | INFO: Extracting primitive: Mesh_0
+01:52:20 | INFO: Primitives created: 1
+01:52:20 | INFO: Extracting primitive: Mesh_1
+01:52:20 | INFO: Primitives created: 1
+01:52:20 | INFO: Extracting primitive: Mesh_11
+01:52:20 | INFO: Primitives created: 1
+01:52:20 | INFO: Extracting primitive: Mesh_12
+01:52:20 | INFO: Primitives created: 1
+01:52:20 | INFO: Extracting primitive: Mesh_14
+01:52:20 | INFO: Primitives created: 1
+01:52:20 | INFO: Extracting primitive: Mesh_28
+01:52:20 | INFO: Primitives created: 1
+01:52:20 | INFO: Extracting primitive: Mesh_34
+01:52:20 | INFO: Primitives created: 1
+01:52:20 | INFO: Extracting primitive: Mesh_40
+01:52:20 | INFO: Primitives created: 1
+01:52:20 | INFO: Extracting primitive: Mesh_56
+01:52:20 | INFO: Primitives created: 1
+01:52:20 | INFO: Extracting primitive: Mesh_101
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_102
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_103
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_108
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_110
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_111
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_113
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_116
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_117
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_124
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_128
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_142
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_164
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_166
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_181
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_192
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_201
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_216
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_217
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_218
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_219
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_222
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_223
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_232
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_239
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_249
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_257
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_270
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_298
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_320
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_323
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_337
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_345
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_381
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_389
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_414
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_427
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_440
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_467
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_469
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_476
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: Mesh_477
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Finished glTF 2.0 export in 0.37203025817871094 s
+
+REPLACE bldg_roof removed faces 15705
+01:52:21 | INFO: Data are loaded, start creating Blender stuff
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #C9B79C
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #D8D0C0
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #B9A28A
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #B9A28A.001
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #BEBEC1
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #BEBEC1.001
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #E0E5E8
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #E0E5E8.001
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #D6D6D2
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #E4E6E4
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #D2D2D5
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #D2D2D5.001
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #CECED2
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #E6E0D4
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #33434C
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #8A4B3A
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #CFD3D2
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #5D4D55
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #D9C7A7.001
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #D9C7A7
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #E0E0DA
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #BFA58A
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #BDBDB8
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Spandrel Glass v3 #33434C
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Glass Pane
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Spandrel Glass v3 #33434C.001
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #D6DADD
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #BDC0C0
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #BFA58A.001
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #E5E2D9
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #D5D7DC
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #C9B79C.001
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #EBEAE5
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #EBEAE5.001
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #EDF1F4
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #DFE0DF
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #A9A59C
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #E8DCC8
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #E8DCC8.001
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #D6D6D2.001
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #C2B6A3
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #E4E2DC.001
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Post Metal
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #C2B6A3.001
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #D8D0C0.001
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #E4E2DC
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #ADAEAF
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #ADAEAF.001
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #BCBEC2
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #BCBEC2.001
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #E3D3B8.001
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #E3D3B8
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #A9A59C.001
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #E6E0D4.001
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #CFC2AE
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #F2F0EA
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Spandrel Glass v3 #3C4A50
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #B9B4AA
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #9A5B44
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #F2F0EA.001
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Spandrel Glass v3 #3C4A50.001
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #B9B4AA.001
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Plaster #9A5B44.001
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Spandrel Glass v3 #2B3940
+01:52:21 | INFO: Blender create Mesh node bldg_walls__Facade Spandrel Glass v3 #2B3940.001
+01:52:21 | INFO: glTF import finished in 0.34s
+01:52:21 | INFO: Starting glTF 2.0 export
+01:52:21 | INFO: Extracting primitive: bldg_walls__Facade Plaster #C9B79C
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: bldg_walls__Facade Plaster #D8D0C0
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: bldg_walls__Facade Plaster #B9A28A
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: bldg_walls__Facade Plaster #B9A28A.001
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: bldg_walls__Facade Plaster #BEBEC1
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: bldg_walls__Facade Plaster #BEBEC1.001
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: bldg_walls__Facade Plaster #E0E5E8
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: bldg_walls__Facade Plaster #E0E5E8.001
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: bldg_walls__Facade Plaster #D6D6D2
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: bldg_walls__Facade Plaster #E4E6E4
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: bldg_walls__Facade Plaster #D2D2D5
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: bldg_walls__Facade Plaster #D2D2D5.001
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: bldg_walls__Facade Plaster #CECED2
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: bldg_walls__Facade Plaster #E6E0D4
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: bldg_walls__Facade Plaster #33434C
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: bldg_walls__Facade Plaster #8A4B3A
+01:52:21 | INFO: Primitives created: 1
+01:52:21 | INFO: Extracting primitive: bldg_walls__Facade Plaster #CFD3D2
+01:52:21 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #5D4D55
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #D9C7A7.001
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #D9C7A7
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #E0E0DA
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #BFA58A
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #BDBDB8
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Spandrel Glass v3 #33434C
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Glass Pane
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Spandrel Glass v3 #33434C.001
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #D6DADD
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #BDC0C0
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #BFA58A.001
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #E5E2D9
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #D5D7DC
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #C9B79C.001
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #EBEAE5
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #EBEAE5.001
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #EDF1F4
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #DFE0DF
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #A9A59C
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #E8DCC8
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #E8DCC8.001
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #D6D6D2.001
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #C2B6A3
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #E4E2DC.001
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Post Metal
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #C2B6A3.001
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #D8D0C0.001
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #E4E2DC
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #ADAEAF
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #ADAEAF.001
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #BCBEC2
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #BCBEC2.001
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #E3D3B8.001
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #E3D3B8
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #A9A59C.001
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #E6E0D4.001
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #CFC2AE
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #F2F0EA
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Spandrel Glass v3 #3C4A50
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #B9B4AA
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #9A5B44
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #F2F0EA.001
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Spandrel Glass v3 #3C4A50.001
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #B9B4AA.001
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Plaster #9A5B44.001
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Spandrel Glass v3 #2B3940
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Extracting primitive: bldg_walls__Facade Spandrel Glass v3 #2B3940.001
+01:52:22 | INFO: Primitives created: 1
+01:52:22 | INFO: Finished glTF 2.0 export in 0.41918230056762695 s
+
+REPLACE bldg_walls removed faces 8896
+01:52:22 | INFO: Data are loaded, start creating Blender stuff
+01:52:22 | INFO: Blender create Mesh node d0_windows__Facade Blind #DCDDD8
+01:52:22 | INFO: Blender create Mesh node d0_windows__Facade Curtain #CFC6B4
+01:52:22 | INFO: Blender create Mesh node d0_windows__Facade Curtain #EEE9DF
+01:52:22 | INFO: Blender create Mesh node d0_windows__Facade Glass v4
+01:52:22 | INFO: Blender create Mesh node d0_windows__Facade Hardware Metal v2
+01:52:22 | INFO: Blender create Mesh node d0_windows__Facade Interior Ceiling
+01:52:22 | INFO: Blender create Mesh node d0_windows__Facade Interior Dark
+01:52:22 | INFO: Blender create Mesh node d0_windows__Facade Joinery #2F3337
+01:52:23 | INFO: Blender create Mesh node d0_windows__Facade Joinery #3A3D40
+01:52:23 | INFO: Blender create Mesh node d0_windows__Facade Joinery #4B3528
+01:52:23 | INFO: Blender create Mesh node d0_windows__Facade Joinery #8C969C
+01:52:24 | INFO: Blender create Mesh node d0_windows__Facade Joinery #C9C6BE
+01:52:24 | INFO: Blender create Mesh node d0_windows__Facade Joinery #E8DDC5
+01:52:24 | INFO: Blender create Mesh node d0_windows__Facade Joinery #F2F2EE
+01:52:24 | INFO: Blender create Mesh node d0_windows__Facade Shop Fit
+01:52:24 | INFO: Blender create Mesh node d0_windows__Facade Shop Interior
+01:52:24 | INFO: Blender create Mesh node d0_windows__Facade Shutter #9EA2A4
+01:52:25 | INFO: Blender create Mesh node d0_windows__Facade Shutter #B9AD95
+01:52:25 | INFO: Blender create Mesh node d0_windows__Facade Shutter #C8C6BE
+01:52:25 | INFO: Blender create Mesh node d0_windows__Facade Sill Metal
+01:52:25 | INFO: Blender create Mesh node d0_windows__Facade Sill Stone
+01:52:25 | INFO: Blender create Mesh node d0_windows__Facade Spandrel Glass v3 #33434C
+01:52:25 | INFO: Blender create Mesh node d0_windows__Facade Trim #A3A5A5
+01:52:25 | INFO: Blender create Mesh node d0_windows__Facade Trim #AD9D86
+01:52:25 | INFO: Blender create Mesh node d0_windows__Facade Trim #BBAB90
+01:52:25 | INFO: Blender create Mesh node d0_windows__Facade Trim #C5C2BB
+01:52:25 | INFO: Blender create Mesh node d0_windows__Facade Trim #CACAC5
+01:52:25 | INFO: Blender create Mesh node d0_windows__Facade Trim #CCCFD2
+01:52:25 | INFO: Blender create Mesh node d0_windows__Facade Trim #D7C4A7
+01:52:25 | INFO: Blender create Mesh node d0_windows__Facade Trim #DCDCE1
+01:52:25 | INFO: Blender create Mesh node d0_windows__Facade Trim #DDD0BA
+01:52:25 | INFO: Blender create Mesh node d0_windows__Facade Trim #E4E6EB
+01:52:25 | INFO: Blender create Mesh node d0_windows__Facade Trim #E7DFCD
+01:52:25 | INFO: Blender create Mesh node d0_windows__Facade Trim #E8D5B3
+01:52:25 | INFO: Blender create Mesh node d0_windows__Facade Trim #F0F0E9
+01:52:25 | INFO: Blender create Mesh node d0_windows__Facade Trim #F3E2C5
+01:52:25 | INFO: Blender create Mesh node d0_windows__Facade Trim #F4F6F4
+01:52:25 | INFO: glTF import finished in 2.91s
+01:52:28 | INFO: Starting glTF 2.0 export
+01:52:28 | INFO: Extracting primitive: d0_windows__Facade Blind #DCDDD8
+01:52:28 | INFO: Primitives created: 1
+01:52:28 | INFO: Extracting primitive: d0_windows__Facade Curtain #CFC6B4
+01:52:28 | INFO: Primitives created: 1
+01:52:28 | INFO: Extracting primitive: d0_windows__Facade Curtain #EEE9DF
+01:52:28 | INFO: Primitives created: 1
+01:52:28 | INFO: Extracting primitive: d0_windows__Facade Glass v4
+01:52:28 | INFO: Primitives created: 1
+01:52:28 | INFO: Extracting primitive: d0_windows__Facade Hardware Metal v2
+01:52:28 | INFO: Primitives created: 1
+01:52:28 | INFO: Extracting primitive: d0_windows__Facade Interior Ceiling
+01:52:28 | INFO: Primitives created: 1
+01:52:28 | INFO: Extracting primitive: d0_windows__Facade Interior Dark
+01:52:28 | INFO: Primitives created: 1
+01:52:28 | INFO: Extracting primitive: d0_windows__Facade Joinery #2F3337
+01:52:29 | INFO: Primitives created: 1
+01:52:29 | INFO: Extracting primitive: d0_windows__Facade Joinery #3A3D40
+01:52:29 | INFO: Primitives created: 1
+01:52:29 | INFO: Extracting primitive: d0_windows__Facade Joinery #4B3528
+01:52:29 | INFO: Primitives created: 1
+01:52:29 | INFO: Extracting primitive: d0_windows__Facade Joinery #8C969C
+01:52:29 | INFO: Primitives created: 1
+01:52:29 | INFO: Extracting primitive: d0_windows__Facade Joinery #C9C6BE
+01:52:29 | INFO: Primitives created: 1
+01:52:29 | INFO: Extracting primitive: d0_windows__Facade Joinery #E8DDC5
+01:52:29 | INFO: Primitives created: 1
+01:52:29 | INFO: Extracting primitive: d0_windows__Facade Joinery #F2F2EE
+01:52:30 | INFO: Primitives created: 1
+01:52:30 | INFO: Extracting primitive: d0_windows__Facade Shop Fit
+01:52:30 | INFO: Primitives created: 1
+01:52:30 | INFO: Extracting primitive: d0_windows__Facade Shop Interior
+01:52:30 | INFO: Primitives created: 1
+01:52:30 | INFO: Extracting primitive: d0_windows__Facade Shutter #9EA2A4
+01:52:30 | INFO: Primitives created: 1
+01:52:30 | INFO: Extracting primitive: d0_windows__Facade Shutter #B9AD95
+01:52:30 | INFO: Primitives created: 1
+01:52:30 | INFO: Extracting primitive: d0_windows__Facade Shutter #C8C6BE
+01:52:30 | INFO: Primitives created: 1
+01:52:30 | INFO: Extracting primitive: d0_windows__Facade Sill Metal
+01:52:30 | INFO: Primitives created: 1
+01:52:30 | INFO: Extracting primitive: d0_windows__Facade Sill Stone
+01:52:30 | INFO: Primitives created: 1
+01:52:30 | INFO: Extracting primitive: d0_windows__Facade Spandrel Glass v3 #33434C
+01:52:30 | INFO: Primitives created: 1
+01:52:30 | INFO: Extracting primitive: d0_windows__Facade Trim #A3A5A5
+01:52:30 | INFO: Primitives created: 1
+01:52:30 | INFO: Extracting primitive: d0_windows__Facade Trim #AD9D86
+01:52:30 | INFO: Primitives created: 1
+01:52:30 | INFO: Extracting primitive: d0_windows__Facade Trim #BBAB90
+01:52:30 | INFO: Primitives created: 1
+01:52:30 | INFO: Extracting primitive: d0_windows__Facade Trim #C5C2BB
+01:52:30 | INFO: Primitives created: 1
+01:52:30 | INFO: Extracting primitive: d0_windows__Facade Trim #CACAC5
+01:52:30 | INFO: Primitives created: 1
+01:52:30 | INFO: Extracting primitive: d0_windows__Facade Trim #CCCFD2
+01:52:30 | INFO: Primitives created: 1
+01:52:30 | INFO: Extracting primitive: d0_windows__Facade Trim #D7C4A7
+01:52:30 | INFO: Primitives created: 1
+01:52:30 | INFO: Extracting primitive: d0_windows__Facade Trim #DCDCE1
+01:52:30 | INFO: Primitives created: 1
+01:52:30 | INFO: Extracting primitive: d0_windows__Facade Trim #DDD0BA
+01:52:30 | INFO: Primitives created: 1
+01:52:30 | INFO: Extracting primitive: d0_windows__Facade Trim #E4E6EB
+01:52:30 | INFO: Primitives created: 1
+01:52:30 | INFO: Extracting primitive: d0_windows__Facade Trim #E7DFCD
+01:52:30 | INFO: Primitives created: 1
+01:52:30 | INFO: Extracting primitive: d0_windows__Facade Trim #E8D5B3
+01:52:30 | INFO: Primitives created: 1
+01:52:30 | INFO: Extracting primitive: d0_windows__Facade Trim #F0F0E9
+01:52:30 | INFO: Primitives created: 1
+01:52:30 | INFO: Extracting primitive: d0_windows__Facade Trim #F3E2C5
+01:52:30 | INFO: Primitives created: 1
+01:52:30 | INFO: Extracting primitive: d0_windows__Facade Trim #F4F6F4
+01:52:30 | INFO: Primitives created: 1
+01:52:30 | INFO: Finished glTF 2.0 export in 2.4757368564605713 s
+
+REPLACE d0_windows removed faces 0
+01:52:31 | INFO: Data are loaded, start creating Blender stuff
+01:52:31 | INFO: Blender create Mesh node Mesh_0
+01:52:31 | INFO: glTF import finished in 0.00s
+01:52:31 | INFO: Starting glTF 2.0 export
+01:52:31 | INFO: Extracting primitive: Mesh_0
+01:52:31 | INFO: Primitives created: 1
+01:52:31 | INFO: Finished glTF 2.0 export in 0.006089925765991211 s
+
+REPLACE fix removed faces 124
+01:52:31 | INFO: Data are loaded, start creating Blender stuff
+01:52:31 | INFO: Blender create Mesh node Mesh_0
+01:52:31 | INFO: Blender create Mesh node Mesh_10
+01:52:31 | INFO: Blender create Mesh node Mesh_11
+01:52:31 | INFO: Blender create Mesh node Mesh_21
+01:52:31 | INFO: glTF import finished in 0.03s
+01:52:31 | INFO: Starting glTF 2.0 export
+01:52:31 | INFO: Extracting primitive: Mesh_0
+01:52:31 | INFO: Primitives created: 1
+01:52:31 | INFO: Extracting primitive: Mesh_10
+01:52:31 | INFO: Primitives created: 1
+01:52:31 | INFO: Extracting primitive: Mesh_11
+01:52:31 | INFO: Primitives created: 1
+01:52:31 | INFO: Extracting primitive: Mesh_21
+01:52:31 | INFO: Primitives created: 1
+01:52:31 | INFO: Finished glTF 2.0 export in 0.065338134765625 s
+
+REPLACE green removed faces 0
+01:52:31 | INFO: Data are loaded, start creating Blender stuff
+01:52:31 | INFO: Blender create Mesh node Mesh_0
+01:52:31 | INFO: Blender create Mesh node Mesh_1
+01:52:31 | INFO: Blender create Mesh node Mesh_2
+01:52:31 | INFO: Blender create Mesh node Mesh_3
+01:52:31 | INFO: Blender create Mesh node Mesh_4
+01:52:31 | INFO: Blender create Mesh node Mesh_10
+01:52:31 | INFO: Blender create Mesh node Mesh_100
+01:52:31 | INFO: Blender create Mesh node Mesh_172
+01:52:31 | INFO: glTF import finished in 0.03s
+01:52:31 | INFO: Starting glTF 2.0 export
+01:52:31 | INFO: Extracting primitive: Mesh_0
+01:52:31 | INFO: Primitives created: 1
+01:52:31 | INFO: Extracting primitive: Mesh_1
+01:52:31 | INFO: Primitives created: 1
+01:52:31 | INFO: Extracting primitive: Mesh_2
+01:52:31 | INFO: Primitives created: 1
+01:52:31 | INFO: Extracting primitive: Mesh_3
+01:52:31 | INFO: Primitives created: 1
+01:52:31 | INFO: Extracting primitive: Mesh_4
+01:52:31 | INFO: Primitives created: 1
+01:52:31 | INFO: Extracting primitive: Mesh_10
+01:52:31 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+01:52:31 | INFO: Primitives created: 1
+01:52:31 | INFO: Extracting primitive: Mesh_100
+01:52:31 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+01:52:31 | INFO: Primitives created: 1
+01:52:31 | INFO: Extracting primitive: Mesh_172
+01:52:31 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+01:52:31 | INFO: Primitives created: 1
+01:52:31 | INFO: Finished glTF 2.0 export in 0.18880009651184082 s
+
+REPLACE green_trees removed faces 0
+01:52:31 | INFO: Data are loaded, start creating Blender stuff
+01:52:31 | INFO: Blender create Mesh node Mesh_0
+01:52:31 | INFO: Blender create Mesh node Mesh_10
+01:52:31 | INFO: Blender create Mesh node Mesh_11
+01:52:31 | INFO: Blender create Mesh node Mesh_31
+01:52:31 | INFO: Blender create Mesh node Mesh_48
+01:52:31 | INFO: Blender create Mesh node Mesh_49
+01:52:31 | INFO: Blender create Mesh node Mesh_50
+01:52:31 | INFO: Blender create Mesh node Mesh_53
+01:52:31 | INFO: Blender create Mesh node Mesh_56
+01:52:31 | INFO: glTF import finished in 0.03s
+01:52:31 | INFO: Starting glTF 2.0 export
+01:52:31 | INFO: Extracting primitive: Mesh_0
+01:52:31 | INFO: Primitives created: 1
+01:52:31 | INFO: Extracting primitive: Mesh_10
+01:52:31 | INFO: Primitives created: 1
+01:52:31 | INFO: Extracting primitive: Mesh_11
+01:52:31 | INFO: Primitives created: 1
+01:52:31 | INFO: Extracting primitive: Mesh_31
+01:52:31 | INFO: Primitives created: 1
+01:52:31 | INFO: Extracting primitive: Mesh_48
+01:52:31 | INFO: Primitives created: 1
+01:52:31 | INFO: Extracting primitive: Mesh_49
+01:52:31 | INFO: Primitives created: 1
+01:52:31 | INFO: Extracting primitive: Mesh_50
+01:52:31 | INFO: Primitives created: 1
+01:52:31 | INFO: Extracting primitive: Mesh_53
+01:52:31 | INFO: Primitives created: 1
+01:52:31 | INFO: Extracting primitive: Mesh_56
+01:52:31 | INFO: Primitives created: 1
+01:52:31 | INFO: Finished glTF 2.0 export in 0.07818317413330078 s
+
+REPLACE ground removed faces 0
+01:52:31 | INFO: Data are loaded, start creating Blender stuff
+01:52:31 | INFO: Blender create Mesh node Mesh_0
+01:52:32 | INFO: glTF import finished in 0.34s
+01:52:32 | INFO: Starting glTF 2.0 export
+01:52:32 | INFO: Extracting primitive: Mesh_0
+01:52:32 | INFO: Primitives created: 1
+01:52:32 | INFO: Finished glTF 2.0 export in 0.39798760414123535 s
+
+REPLACE kiosk removed faces 0
+01:52:33 | INFO: Data are loaded, start creating Blender stuff
+01:52:33 | INFO: Blender create Mesh node Mesh_0
+01:52:33 | INFO: Blender create Mesh node Mesh_1
+01:52:33 | INFO: Blender create Mesh node Mesh_10
+01:52:33 | INFO: Blender create Mesh node Mesh_21
+01:52:33 | INFO: glTF import finished in 0.01s
+01:52:33 | INFO: Starting glTF 2.0 export
+01:52:33 | INFO: Extracting primitive: Mesh_0
+01:52:33 | INFO: Primitives created: 1
+01:52:33 | INFO: Extracting primitive: Mesh_1
+01:52:33 | INFO: Primitives created: 1
+01:52:33 | INFO: Extracting primitive: Mesh_10
+01:52:33 | INFO: Primitives created: 1
+01:52:33 | INFO: Extracting primitive: Mesh_21
+01:52:33 | INFO: Primitives created: 1
+01:52:33 | INFO: Finished glTF 2.0 export in 0.015611648559570312 s
+
+REPLACE landmark_mahnmal removed faces 0
+01:52:33 | INFO: Data are loaded, start creating Blender stuff
+01:52:33 | INFO: Blender create Mesh node Mesh_0
+01:52:33 | INFO: Blender create Mesh node Mesh_1
+01:52:33 | INFO: Blender create Mesh node Mesh_3
+01:52:33 | INFO: Blender create Mesh node Mesh_4
+01:52:33 | INFO: Blender create Mesh node Mesh_6
+01:52:33 | INFO: Blender create Mesh node Mesh_7
+01:52:33 | INFO: Blender create Mesh node Mesh_10
+01:52:33 | INFO: Blender create Mesh node Mesh_11
+01:52:33 | INFO: Blender create Mesh node Mesh_13
+01:52:33 | INFO: Blender create Mesh node Mesh_14
+01:52:33 | INFO: Blender create Mesh node Mesh_17
+01:52:33 | INFO: glTF import finished in 0.35s
+01:52:33 | INFO: Starting glTF 2.0 export
+01:52:33 | INFO: Extracting primitive: Mesh_0
+01:52:33 | INFO: Primitives created: 1
+01:52:33 | INFO: Extracting primitive: Mesh_1
+01:52:33 | INFO: Primitives created: 1
+01:52:33 | INFO: Extracting primitive: Mesh_3
+01:52:33 | INFO: Primitives created: 1
+01:52:33 | INFO: Extracting primitive: Mesh_4
+01:52:33 | INFO: Primitives created: 1
+01:52:33 | INFO: Extracting primitive: Mesh_6
+01:52:33 | INFO: Primitives created: 1
+01:52:33 | INFO: Extracting primitive: Mesh_7
+01:52:33 | INFO: Primitives created: 1
+01:52:33 | INFO: Extracting primitive: Mesh_10
+01:52:33 | INFO: Primitives created: 1
+01:52:33 | INFO: Extracting primitive: Mesh_11
+01:52:33 | INFO: Primitives created: 1
+01:52:33 | INFO: Extracting primitive: Mesh_13
+01:52:33 | INFO: Primitives created: 1
+01:52:33 | INFO: Extracting primitive: Mesh_14
+01:52:33 | INFO: Primitives created: 1
+01:52:33 | INFO: Extracting primitive: Mesh_17
+01:52:33 | INFO: Primitives created: 1
+01:52:33 | INFO: Finished glTF 2.0 export in 0.365034818649292 s
+
+REPLACE landmark_opernhaus removed faces 0
+01:52:33 | INFO: Data are loaded, start creating Blender stuff
+01:52:33 | INFO: Blender create Mesh node Mesh_0
+01:52:33 | INFO: Blender create Mesh node Mesh_11
+01:52:33 | INFO: Blender create Mesh node Mesh_12
+01:52:33 | INFO: Blender create Mesh node Mesh_30
+01:52:33 | INFO: Blender create Mesh node Mesh_34
+01:52:33 | INFO: Blender create Mesh node Mesh_40
+01:52:33 | INFO: Blender create Mesh node Mesh_43
+01:52:33 | INFO: Blender create Mesh node Mesh_45
+01:52:33 | INFO: glTF import finished in 0.02s
+01:52:33 | INFO: Starting glTF 2.0 export
+01:52:33 | INFO: Extracting primitive: Mesh_0
+01:52:33 | INFO: Primitives created: 1
+01:52:33 | INFO: Extracting primitive: Mesh_11
+01:52:33 | INFO: Primitives created: 1
+01:52:33 | INFO: Extracting primitive: Mesh_12
+01:52:33 | INFO: Primitives created: 1
+01:52:33 | INFO: Extracting primitive: Mesh_30
+01:52:33 | INFO: Primitives created: 1
+01:52:33 | INFO: Extracting primitive: Mesh_34
+01:52:33 | INFO: Primitives created: 1
+01:52:33 | INFO: Extracting primitive: Mesh_40
+01:52:33 | INFO: Primitives created: 1
+01:52:33 | INFO: Extracting primitive: Mesh_43
+01:52:33 | INFO: Primitives created: 1
+01:52:33 | INFO: Extracting primitive: Mesh_45
+01:52:33 | INFO: Primitives created: 1
+01:52:34 | INFO: Finished glTF 2.0 export in 0.03312110900878906 s
+
+REPLACE landmark_tiefgarage_pavillon removed faces 0
+01:52:34 | INFO: Data are loaded, start creating Blender stuff
+01:52:34 | INFO: Blender create Mesh node Mesh_0
+01:52:34 | INFO: Blender create Mesh node Mesh_10
+01:52:34 | INFO: Blender create Mesh node Mesh_11
+01:52:34 | INFO: Blender create Mesh node Mesh_12
+01:52:34 | INFO: Blender create Mesh node Mesh_18
+01:52:34 | INFO: Blender create Mesh node Mesh_19
+01:52:34 | INFO: Blender create Mesh node Mesh_20
+01:52:34 | INFO: Blender create Mesh node Mesh_21
+01:52:34 | INFO: Blender create Mesh node Mesh_27
+01:52:34 | INFO: Blender create Mesh node Mesh_28
+01:52:34 | INFO: Blender create Mesh node Mesh_42
+01:52:34 | INFO: Blender create Mesh node Mesh_45
+01:52:34 | INFO: Blender create Mesh node Mesh_46
+01:52:34 | INFO: Blender create Mesh node Mesh_47
+01:52:34 | INFO: glTF import finished in 0.14s
+01:52:34 | INFO: Starting glTF 2.0 export
+01:52:34 | INFO: Extracting primitive: Mesh_0
+01:52:34 | INFO: Primitives created: 1
+01:52:34 | INFO: Extracting primitive: Mesh_10
+01:52:34 | INFO: Primitives created: 1
+01:52:34 | INFO: Extracting primitive: Mesh_11
+01:52:34 | INFO: Primitives created: 1
+01:52:34 | INFO: Extracting primitive: Mesh_12
+01:52:34 | INFO: Primitives created: 1
+01:52:34 | INFO: Extracting primitive: Mesh_18
+01:52:34 | INFO: Primitives created: 1
+01:52:34 | INFO: Extracting primitive: Mesh_19
+01:52:34 | INFO: Primitives created: 1
+01:52:34 | INFO: Extracting primitive: Mesh_20
+01:52:34 | INFO: Primitives created: 1
+01:52:34 | INFO: Extracting primitive: Mesh_21
+01:52:34 | INFO: Primitives created: 1
+01:52:34 | INFO: Extracting primitive: Mesh_27
+01:52:34 | INFO: Primitives created: 1
+01:52:34 | INFO: Extracting primitive: Mesh_28
+01:52:34 | INFO: Primitives created: 1
+01:52:34 | INFO: Extracting primitive: Mesh_42
+01:52:34 | INFO: Primitives created: 1
+01:52:34 | INFO: Extracting primitive: Mesh_45
+01:52:34 | INFO: Primitives created: 1
+01:52:34 | INFO: Extracting primitive: Mesh_46
+01:52:34 | INFO: Primitives created: 1
+01:52:34 | INFO: Extracting primitive: Mesh_47
+01:52:34 | INFO: Primitives created: 1
+01:52:34 | INFO: Finished glTF 2.0 export in 0.20326542854309082 s
+
+REPLACE street removed faces 0
+01:52:34 | INFO: Data are loaded, start creating Blender stuff
+01:52:34 | INFO: Blender create Mesh node Mesh_0
+01:52:34 | INFO: Blender create Mesh node Mesh_1
+01:52:34 | INFO: Blender create Mesh node Mesh_2
+01:52:34 | INFO: Blender create Mesh node Mesh_3
+01:52:34 | INFO: Blender create Mesh node Mesh_10
+01:52:34 | INFO: Blender create Mesh node Mesh_137
+01:52:34 | INFO: Blender create Mesh node Mesh_157
+01:52:34 | INFO: Blender create Mesh node Mesh_162
+01:52:34 | INFO: Blender create Mesh node Mesh_704
+01:52:34 | INFO: Blender create Mesh node Mesh_1000
+01:52:34 | INFO: Blender create Mesh node Mesh_1007
+01:52:34 | INFO: glTF import finished in 0.40s
+01:52:34 | INFO: Starting glTF 2.0 export
+01:52:34 | INFO: Extracting primitive: Mesh_0
+01:52:34 | INFO: Primitives created: 1
+01:52:34 | INFO: Extracting primitive: Mesh_1
+01:52:34 | INFO: Primitives created: 1
+01:52:34 | INFO: Extracting primitive: Mesh_2
+01:52:34 | INFO: Primitives created: 1
+01:52:34 | INFO: Extracting primitive: Mesh_3
+01:52:34 | INFO: Primitives created: 1
+01:52:34 | INFO: Extracting primitive: Mesh_10
+01:52:35 | INFO: Primitives created: 1
+01:52:35 | INFO: Extracting primitive: Mesh_137
+01:52:35 | INFO: Primitives created: 1
+01:52:35 | INFO: Extracting primitive: Mesh_157
+01:52:35 | INFO: Primitives created: 1
+01:52:35 | INFO: Extracting primitive: Mesh_162
+01:52:35 | INFO: Primitives created: 1
+01:52:35 | INFO: Extracting primitive: Mesh_704
+01:52:35 | INFO: Primitives created: 1
+01:52:35 | INFO: Extracting primitive: Mesh_1000
+01:52:35 | INFO: Primitives created: 1
+01:52:35 | INFO: Extracting primitive: Mesh_1007
+01:52:35 | INFO: Primitives created: 1
+01:52:35 | INFO: Finished glTF 2.0 export in 0.5678167343139648 s
+
+REPLACE street_furniture removed faces 0
+Blender 5.0.1 (hash a3db93c5b259 built 2025-12-16 01:32:30)
+
+Blender quit

@@ -1,0 +1,9 @@
+durch Wahrzeichen ersetzt: 20 {'ballhof': 9, 'leibnizhaus': 4, 'leineschloss': 1, 'anzeiger': 2, 'kroepcke_center': 1, 'marktkirche': 1, 'cafe_kroepcke': 1, 'altes_rathaus': 1}
+Vorbereitung geladen 13.1 s
+Gebaeude erzeugt: 67 in 29.2 s, Masken-Eindringen (Vertices): 0
+  bldg_-4_1      tris   49411  inst   1743 (  303898)    0.51 MB +  0.75 MB
+  bldg_-4_3      tris  107259  inst   4732 (  565474)    0.95 MB +  0.74 MB
+  bldg_0_-1      tris   26701  inst   2273 (  237288)    0.33 MB +  0.53 MB
+Summe: {'coplanar_moved_parts': 1475, 'coplanar_dropped_parts': 12, 'triangles': 183371, 'triangles_shell': 60524, 'triangles_detail': 122847, 'instances': 8748, 'instanced_triangles': 1106660, 'prototype_triangles': 98866, 'bytes': 1795200, 'windows_bytes': 2020996, 'raw_bytes': 7544516, 'collision_triangles': 4334, 'collision_bytes': 91296}
+Stile: {'shed': 20, 'nachkrieg': 14, 'modern': 7, 'altbau': 14, 'fachwerk': 11, 'parking': 1}
+fertig in 48.4 s

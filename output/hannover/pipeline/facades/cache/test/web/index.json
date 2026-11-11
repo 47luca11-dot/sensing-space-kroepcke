@@ -1,0 +1,303 @@
+{
+ "version": 1,
+ "frame": "game (x=dE, y=Z-56.16, z=-dN; Y up, m; origin Kroepcke clock)",
+ "tile_size": 100.0,
+ "compression": "EXT_meshopt_compression + KHR_mesh_quantization",
+ "notes": [
+  "Each tile: <name>.glb (shell + facade details, node *_shell_nocol / *_detail_nocol) and <name>_win.glb (instanced window/door/shopfront assemblies, EXT_mesh_gpu_instancing with _COLOR_0 instance colours).",
+  "Load *_win.glb only for tiles within ~150-200 m of the camera; the shell already closes every opening (reveal + dark back plane), so far tiles look right without it.",
+  "No normals are stored: three.js uses flatShading automatically.",
+  "Materials are shared by name (bldg_*); dedupe them across tiles after loading to share textures (textures/*.jpg are referenced externally).",
+  "Collision: collision_buildings.glb (LoD2 solids; canopies as slab + posts).",
+  "Quality gates (check_rays.py): every exposed facade is hit by rays from 3 m at every storey/axis; every window glass instance sits in a shell opening with a back plane; shell bounding spheres valid."
+ ],
+ "materials": {
+  "plaster": {
+   "tex": "plaster",
+   "period": [
+    3.0,
+    3.0
+   ],
+   "rough": 0.92,
+   "metal": 0.0
+  },
+  "stone": {
+   "tex": "stone",
+   "period": [
+    2.4,
+    2.4
+   ],
+   "rough": 0.85,
+   "metal": 0.0
+  },
+  "brick": {
+   "tex": "brick",
+   "period": [
+    1.56,
+    1.54
+   ],
+   "rough": 0.9,
+   "metal": 0.0
+  },
+  "panel": {
+   "tex": "panel",
+   "period": [
+    2.4,
+    2.4
+   ],
+   "rough": 0.7,
+   "metal": 0.0
+  },
+  "trim": {
+   "rough": 0.5,
+   "metal": 0.0
+  },
+  "metal": {
+   "rough": 0.38,
+   "metal": 0.7
+  },
+  "spandrel": {
+   "rough": 0.12,
+   "metal": 0.35
+  },
+  "interior": {
+   "rough": 0.9,
+   "metal": 0.0
+  },
+  "shop_interior": {
+   "rough": 0.85,
+   "metal": 0.0,
+   "emissive": [
+    0.16,
+    0.155,
+    0.145
+   ]
+  },
+  "glass": {
+   "rough": 0.04,
+   "metal": 0.0,
+   "alpha": 0.58,
+   "base": [
+    0.05,
+    0.065,
+    0.075
+   ]
+  },
+  "roof_tile": {
+   "tex": "tiles",
+   "period": [
+    2.4,
+    2.8
+   ],
+   "rough": 0.8,
+   "metal": 0.0
+  },
+  "roof_slate": {
+   "tex": "slate",
+   "period": [
+    2.5,
+    2.0
+   ],
+   "rough": 0.6,
+   "metal": 0.0
+  },
+  "roof_metal": {
+   "tex": "seam",
+   "period": [
+    2.0,
+    2.0
+   ],
+   "rough": 0.42,
+   "metal": 0.55
+  },
+  "roof_gravel": {
+   "tex": "gravel",
+   "period": [
+    2.0,
+    2.0
+   ],
+   "rough": 1.0,
+   "metal": 0.0
+  },
+  "roof_membrane": {
+   "tex": "membrane",
+   "period": [
+    4.0,
+    4.0
+   ],
+   "rough": 0.85,
+   "metal": 0.0
+  },
+  "roof_green": {
+   "tex": "green",
+   "period": [
+    3.0,
+    3.0
+   ],
+   "rough": 1.0,
+   "metal": 0.0
+  },
+  "glow": {
+   "rough": 0.6,
+   "metal": 0.0,
+   "base": [
+    0.8,
+    0.8,
+    0.78
+   ],
+   "emissive": [
+    0.95,
+    0.93,
+    0.86
+   ]
+  },
+  "glow_warm": {
+   "rough": 0.6,
+   "metal": 0.0,
+   "base": [
+    0.8,
+    0.7,
+    0.55
+   ],
+   "emissive": [
+    1.0,
+    0.78,
+    0.48
+   ]
+  }
+ },
+ "tiles": [
+  {
+   "name": "bldg_-5_-4",
+   "tile": [
+    -5,
+    -4
+   ],
+   "file": "bldg_-5_-4.glb",
+   "windows": null,
+   "bounds": {
+    "min": [
+     -469.01,
+     -1.66,
+     -390.61
+    ],
+    "max": [
+     -454.25,
+     3.35,
+     -380.32
+    ]
+   },
+   "triangles": 1106,
+   "triangles_shell": 358,
+   "triangles_detail": 748,
+   "instances": 0,
+   "instanced_triangles": 0,
+   "prototype_triangles": 0,
+   "bytes": 23844,
+   "windows_bytes": 0,
+   "raw_bytes": 41504,
+   "buildings": [
+    "ID_ef6f828b-2ad8-316a-a4a1-f756d10168b1"
+   ]
+  },
+  {
+   "name": "bldg_-5_1",
+   "tile": [
+    -5,
+    1
+   ],
+   "file": "bldg_-5_1.glb",
+   "windows": "bldg_-5_1_win.glb",
+   "bounds": {
+    "min": [
+     -449.38,
+     -0.71,
+     102.8
+    ],
+    "max": [
+     -401.37,
+     71.39,
+     129.07
+    ]
+   },
+   "triangles": 6280,
+   "triangles_shell": 2813,
+   "triangles_detail": 3467,
+   "instances": 14,
+   "instanced_triangles": 9940,
+   "prototype_triangles": 5362,
+   "bytes": 114340,
+   "windows_bytes": 75284,
+   "raw_bytes": 348652,
+   "buildings": [
+    "ID_9850fd33-58c8-3cc6-bffc-a396527794b2"
+   ]
+  },
+  {
+   "name": "bldg_-8_3",
+   "tile": [
+    -8,
+    3
+   ],
+   "file": "bldg_-8_3.glb",
+   "windows": "bldg_-8_3_win.glb",
+   "bounds": {
+    "min": [
+     -754.37,
+     -5.05,
+     277.18
+    ],
+    "max": [
+     -657.4,
+     16.42,
+     338.13
+    ]
+   },
+   "triangles": 23705,
+   "triangles_shell": 11898,
+   "triangles_detail": 11807,
+   "instances": 1994,
+   "instanced_triangles": 257244,
+   "prototype_triangles": 3820,
+   "bytes": 367516,
+   "windows_bytes": 119384,
+   "raw_bytes": 1022680,
+   "buildings": [
+    "ID_428adb92-05c6-3746-9c0f-a6c3be475c32"
+   ]
+  }
+ ],
+ "collision": {
+  "file": "collision_buildings.glb",
+  "triangles": 1313,
+  "bytes": 27488
+ },
+ "totals": {
+  "triangles": 31091,
+  "triangles_shell": 15069,
+  "triangles_detail": 16022,
+  "instances": 2008,
+  "instanced_triangles": 267184,
+  "prototype_triangles": 9182,
+  "bytes": 505700,
+  "windows_bytes": 194668,
+  "raw_bytes": 1412836,
+  "collision_triangles": 1313,
+  "collision_bytes": 27488
+ },
+ "styles": {
+  "gothic": 2,
+  "altbau": 1
+ },
+ "buildings": 3,
+ "replaced_by_landmarks": {
+  "ID_6388af31-4867-3e8b-b3dd-1f30ff2b3d7c": "anzeiger",
+  "ID_5ea871fc-25a3-3730-b301-1be715d487a0": "anzeiger",
+  "ID_0a25725c-24e1-3239-8d49-0b0bb20eb212": "kroepcke_center",
+  "ID_eac4b0e4-bb4e-3389-a0e4-73efb1359670": "marktkirche",
+  "ID_f11763d1-f306-3636-91b8-8805e57702b9": "cafe_kroepcke",
+  "ID_dedae90c-48f4-3b9e-9176-f04541ffbcb2": "altes_rathaus"
+ },
+ "shops_placed": 0,
+ "shops_placed_ids": []
+}

@@ -1,0 +1,245 @@
+{
+ "groups": [
+  {
+   "i": 0,
+   "mat": "Backstein",
+   "grp": "det",
+   "tris": 14896
+  },
+  {
+   "i": 1,
+   "mat": "Backstein",
+   "grp": "roof",
+   "tris": 26
+  },
+  {
+   "i": 2,
+   "mat": "Backstein",
+   "grp": "wall",
+   "tris": 8292
+  },
+  {
+   "i": 3,
+   "mat": "Bleiglas",
+   "grp": "det",
+   "tris": 550
+  },
+  {
+   "i": 4,
+   "mat": "Bronze",
+   "grp": "det",
+   "tris": 16166
+  },
+  {
+   "i": 5,
+   "mat": "Dachziegel",
+   "grp": "roof",
+   "tris": 8229
+  },
+  {
+   "i": 6,
+   "mat": "Dunkel",
+   "grp": "det",
+   "tris": 2887
+  },
+  {
+   "i": 7,
+   "mat": "Dunkel",
+   "grp": "fine",
+   "tris": 24
+  },
+  {
+   "i": 8,
+   "mat": "Dunkel",
+   "grp": "roof",
+   "tris": 192
+  },
+  {
+   "i": 9,
+   "mat": "Eisen",
+   "grp": "fine",
+   "tris": 5544
+  },
+  {
+   "i": 10,
+   "mat": "Fliesen",
+   "grp": "wall",
+   "tris": 134
+  },
+  {
+   "i": 11,
+   "mat": "Glasurstein",
+   "grp": "det",
+   "tris": 15472
+  },
+  {
+   "i": 12,
+   "mat": "Glasurstein",
+   "grp": "wall",
+   "tris": 4690
+  },
+  {
+   "i": 13,
+   "mat": "Gold",
+   "grp": "fine",
+   "tris": 764
+  },
+  {
+   "i": 14,
+   "mat": "Granit",
+   "grp": "wall",
+   "tris": 408
+  },
+  {
+   "i": 15,
+   "mat": "Kupfer",
+   "grp": "det",
+   "tris": 184
+  },
+  {
+   "i": 16,
+   "mat": "Kupfer",
+   "grp": "fine",
+   "tris": 4232
+  },
+  {
+   "i": 17,
+   "mat": "Kupfer",
+   "grp": "roof",
+   "tris": 1394
+  },
+  {
+   "i": 18,
+   "mat": "Kupfer_Patina",
+   "grp": "det",
+   "tris": 2124
+  },
+  {
+   "i": 19,
+   "mat": "Lamellen",
+   "grp": "fine",
+   "tris": 5556
+  },
+  {
+   "i": 20,
+   "mat": "Sandstein",
+   "grp": "det",
+   "tris": 101970
+  },
+  {
+   "i": 21,
+   "mat": "Sandstein",
+   "grp": "fine",
+   "tris": 35056
+  },
+  {
+   "i": 22,
+   "mat": "Sandstein",
+   "grp": "wall",
+   "tris": 1144
+  },
+  {
+   "i": 23,
+   "mat": "Sandstein_Quader",
+   "grp": "wall",
+   "tris": 932
+  },
+  {
+   "i": 24,
+   "mat": "Sandstein_dunkel",
+   "grp": "det",
+   "tris": 29914
+  },
+  {
+   "i": 25,
+   "mat": "Sandstein_dunkel",
+   "grp": "fine",
+   "tris": 27604
+  },
+  {
+   "i": 26,
+   "mat": "Sandstein_dunkel",
+   "grp": "wall",
+   "tris": 48715
+  },
+  {
+   "i": 27,
+   "mat": "Schaukasten",
+   "grp": "det",
+   "tris": 14
+  },
+  {
+   "i": 28,
+   "mat": "Sockelstein",
+   "grp": "wall",
+   "tris": 120
+  },
+  {
+   "i": 29,
+   "mat": "Stahl",
+   "grp": "det",
+   "tris": 24
+  },
+  {
+   "i": 30,
+   "mat": "Stahl",
+   "grp": "fine",
+   "tris": 17632
+  },
+  {
+   "i": 31,
+   "mat": "Stahl",
+   "grp": "wall",
+   "tris": 58
+  },
+  {
+   "i": 32,
+   "mat": "Tuerbronze",
+   "grp": "fine",
+   "tris": 1336
+  },
+  {
+   "i": 33,
+   "mat": "Tuerbronze",
+   "grp": "wall",
+   "tris": 29
+  },
+  {
+   "i": 34,
+   "mat": "Zifferblatt",
+   "grp": "det",
+   "tris": 138
+  }
+ ],
+ "origin": [
+  -262.40205003818846,
+  299.22867247171956
+ ],
+ "U": [
+  0.986720566672569,
+  -0.16242697837909906
+ ],
+ "V": [
+  -0.16242697837909906,
+  -0.986720566672569
+ ],
+ "top_y": 97.5,
+ "luther": {
+  "center": [
+   2.17,
+   -12.35,
+   0.40427100000000005
+  ],
+  "face": [
+   -0.4617486132350338,
+   -0.8870108331782218
+  ],
+  "top": 5.335770999999999,
+  "front": 0.584,
+  "ins": [
+   1.53,
+   1.31
+  ]
+ },
+ "total_tris": 356450
+}

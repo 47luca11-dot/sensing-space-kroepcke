@@ -1,0 +1,63 @@
+{
+ "footprints": [
+  [
+   [
+    -506.355,
+    -97.318
+   ],
+   [
+    -500.795,
+    -95.032
+   ],
+   [
+    -500.466,
+    -95.045
+   ],
+   [
+    -500.217,
+    -95.261
+   ],
+   [
+    -481.715,
+    -136.023
+   ],
+   [
+    -481.688,
+    -136.361
+   ],
+   [
+    -481.924,
+    -136.665
+   ],
+   [
+    -488.176,
+    -139.396
+   ],
+   [
+    -488.514,
+    -139.385
+   ],
+   [
+    -488.767,
+    -139.162
+   ],
+   [
+    -506.596,
+    -97.912
+   ],
+   [
+    -506.583,
+    -97.571
+   ]
+  ]
+ ],
+ "ymin": -3.0,
+ "ymax": 8.0,
+ "files": [
+  "street"
+ ],
+ "lod2_ids": [
+  "ID_ccf17541-cb4f-3cc7-9b4e-3ba4b49127bb"
+ ],
+ "note": "Hochbahnsteig Steintor (Muenzstrasse): das LoD2-Objekt ID_ccf17541-... (201 m2, h 5.2 m) ist das Bahnsteigdach. Es wird von pipeline/ground/transit.py als Dach mit Stuetzen + Bahnsteig gebaut und sollte in pipeline/facades NICHT als Gebaeude erzeugt werden (facades/replaced.py liest bisher nur data/landmarks_replace). Im Detailmodell liegt hier nichts (files street = No-op)."
+}

@@ -1,0 +1,102 @@
+20:56:48 | INFO: Data are loaded, start creating Blender stuff
+20:56:48 | INFO: Blender create Mesh node ground_-7_-5
+20:56:48 | INFO: glTF import finished in 0.04s
+20:56:48 | INFO: Data are loaded, start creating Blender stuff
+20:56:48 | INFO: Blender create Mesh node ground_-7_-4
+20:56:48 | INFO: glTF import finished in 0.02s
+20:56:48 | INFO: Data are loaded, start creating Blender stuff
+20:56:48 | INFO: Blender create Mesh node ground_-7_-3
+20:56:48 | INFO: glTF import finished in 0.03s
+20:56:48 | INFO: Data are loaded, start creating Blender stuff
+20:56:48 | INFO: Blender create Mesh node ground_-7_-2
+20:56:48 | INFO: glTF import finished in 0.03s
+20:56:48 | INFO: Data are loaded, start creating Blender stuff
+20:56:48 | INFO: Blender create Mesh node ground_-6_-5
+20:56:48 | INFO: glTF import finished in 0.03s
+20:56:48 | INFO: Data are loaded, start creating Blender stuff
+20:56:48 | INFO: Blender create Mesh node ground_-6_-4
+20:56:48 | INFO: glTF import finished in 0.05s
+20:56:48 | INFO: Data are loaded, start creating Blender stuff
+20:56:48 | INFO: Blender create Mesh node ground_-6_-3
+20:56:48 | INFO: glTF import finished in 0.03s
+20:56:48 | INFO: Data are loaded, start creating Blender stuff
+20:56:48 | INFO: Blender create Mesh node ground_-6_-2
+20:56:48 | INFO: glTF import finished in 0.05s
+20:56:48 | INFO: Data are loaded, start creating Blender stuff
+20:56:48 | INFO: Blender create Mesh node ground_-5_-5
+20:56:48 | INFO: glTF import finished in 0.03s
+20:56:48 | INFO: Data are loaded, start creating Blender stuff
+20:56:48 | INFO: Blender create Mesh node ground_-5_-4
+20:56:48 | INFO: glTF import finished in 0.03s
+20:56:48 | INFO: Data are loaded, start creating Blender stuff
+20:56:48 | INFO: Blender create Mesh node ground_-5_-3
+20:56:48 | INFO: glTF import finished in 0.07s
+20:56:48 | INFO: Data are loaded, start creating Blender stuff
+20:56:48 | INFO: Blender create Mesh node ground_-5_-2
+20:56:48 | INFO: glTF import finished in 0.12s
+20:56:48 | INFO: Data are loaded, start creating Blender stuff
+20:56:48 | INFO: Blender create Mesh node ground_-4_-5
+20:56:48 | INFO: glTF import finished in 0.03s
+20:56:48 | INFO: Data are loaded, start creating Blender stuff
+20:56:48 | INFO: Blender create Mesh node ground_-4_-4
+20:56:48 | INFO: glTF import finished in 0.03s
+20:56:48 | INFO: Data are loaded, start creating Blender stuff
+20:56:48 | INFO: Blender create Mesh node ground_-4_-3
+20:56:48 | INFO: glTF import finished in 0.06s
+20:56:48 | INFO: Data are loaded, start creating Blender stuff
+20:56:48 | INFO: Blender create Mesh node ground_-4_-2
+20:56:48 | INFO: glTF import finished in 0.07s
+C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\pipeline\landmarks\anzeiger\preview.py:35: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m = bpy.data.materials.new(mn); m.use_nodes = True
+20:56:49 | INFO: Data are loaded, start creating Blender stuff
+20:56:49 | INFO: Blender create Mesh node anz_detail_nocol
+20:56:49 | INFO: Blender create Mesh node anz_dome
+20:56:49 | INFO: Blender create Mesh node anz_dome_detail_nocol
+20:56:49 | INFO: Blender create Mesh node anz_letters_nocol
+20:56:49 | INFO: Blender create Mesh node anz_shell
+20:56:49 | INFO: Blender create Mesh node anz_windows_nocol
+20:56:49 | INFO: Blender create Mesh node bad_detail_nocol
+20:56:49 | INFO: Blender create Mesh node bad_letters_nocol
+20:56:49 | INFO: Blender create Mesh node bad_roof
+20:56:49 | INFO: Blender create Mesh node bad_roof_detail_nocol
+20:56:49 | INFO: Blender create Mesh node bad_shell
+20:56:49 | INFO: Blender create Mesh node bad_windows_nocol
+20:56:49 | INFO: glTF import finished in 0.76s
+C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\pipeline\landmarks\anzeiger\preview.py:56: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  w = bpy.data.worlds.new('w'); sc.world = w; w.use_nodes = True
+00:11.422  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\lm_anzeiger_front.png'
+00:13.578  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\lm_anzeiger_gose.png'
+00:15.438  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\lm_anzeiger_square_ne.png'
+00:16.391  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\lm_anzeiger_dome_e.png'
+00:17.656  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\lm_anzeiger_aerial_se.png'
+00:18.938  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\lm_anzeiger_aerial_nw.png'
+00:22.422  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\lm_anzeiger_portals.png'
+00:24.031  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\lm_anzeiger_crown.png'
+00:28.656  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\lm_anzeiger_lookup.png'
+00:30.328  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\lm_anzeiger_bay_close.png'
+00:31.906  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\lm_anzeiger_kestner.png'
+00:33.860  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\lm_anzeiger_west.png'
+00:38.313  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\lm_anzeiger_portal_eye.png'
+00:39.891  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\lm_anzeiger_lightwell.png'
+00:41.891  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\lm_anzeiger_north_ne.png'
+00:43.172  render           | Saved: 'C:\Users\luca\Documents\Sensing Space\Claude Code\output\hannover\blender\previews\lm_anzeiger_roofs_top.png'
+PREVIEW landmark objects 12
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_front.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_gose.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_square_ne.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_dome_e.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_aerial_se.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_aerial_nw.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_portals.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_crown.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_lookup.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_bay_close.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_kestner.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_west.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_portal_eye.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_lightwell.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_north_ne.png
+RENDERED C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/blender/previews/lm_anzeiger_roofs_top.png
+Blender 5.0.1 (hash a3db93c5b259 built 2025-12-16 01:32:30)
+
+Blender quit

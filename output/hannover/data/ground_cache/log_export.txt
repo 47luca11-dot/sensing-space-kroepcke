@@ -1,0 +1,10 @@
+=== export Mon Nov  9 17:50:21     2026
+[export    1.8s] module ubahn parts 5977 tris 81166
+[export    1.9s] module promenade parts 5142 tris 64244
+[export    1.9s] module transit parts 769 tris 39341
+[export    2.0s] module altstadt parts 1545 tris 52302
+[export  198.5s] terrain tiles 266
+[export  202.4s] tiles written 280 triangles 2114747 MB 90.7
+[export  225.3s] collision triangles 750790 MB 13.7
+[export  243.3s] heightfield (1801, 1801) fallback cells 942464
+[export  255.1s] published 284 files; raw copies in C:/Users/luca/Documents/Sensing Space/Claude Code/output/hannover/data/ground_raw/

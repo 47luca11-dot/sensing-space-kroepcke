@@ -1,0 +1,200 @@
+{
+ "tris_merged": 68238,
+ "tris_instanced": 111955,
+ "tris_total": 180193,
+ "bytes": 27942252,
+ "per_mat": {
+  "Blech_tuerkis": 2,
+  "Bronze": 10,
+  "Dachbahn": 9,
+  "Efeu": 2474,
+  "Eisen": 384,
+  "Farbe_rot": 80,
+  "Fensterglas": 4,
+  "Fensterrahmen": 20,
+  "Glasdach": 7,
+  "Holz_braun": 3922,
+  "Holz_dunkel": 8334,
+  "Holz_rotbraun": 8760,
+  "Holz_schwarz": 24996,
+  "Kies": 17,
+  "Markise": 14,
+  "Putz_bordeaux": 323,
+  "Putz_creme": 636,
+  "Putz_hell": 963,
+  "Putz_rosa": 126,
+  "Putz_weiss": 2934,
+  "Quader": 173,
+  "Quader_hell": 1047,
+  "Sandstein": 3484,
+  "Schaufenster": 8,
+  "Schiefer": 124,
+  "Schilder": 28,
+  "Stahl_dunkel": 596,
+  "Traufe": 367,
+  "Tuer_dunkel": 8,
+  "Tuer_gruen": 80,
+  "Ziegel": 3691,
+  "Ziegel_alt": 704,
+  "Ziegel_braun": 1187,
+  "Zink": 2726,
+  "inst:door_bh": [
+   513,
+   3
+  ],
+  "inst:door_bp1": [
+   357,
+   1
+  ],
+  "inst:door_sp": [
+   357,
+   1
+  ],
+  "inst:gutter_hook": [
+   12,
+   336
+  ],
+  "inst:joist_Holz_braun_30_1": [
+   36,
+   24
+  ],
+  "inst:joist_Holz_dunkel_0_0": [
+   26,
+   48
+  ],
+  "inst:knagge_40_78": [
+   124,
+   48
+  ],
+  "inst:lantern": [
+   266,
+   10
+  ],
+  "inst:ridge": [
+   32,
+   614
+  ],
+  "inst:ridge_alt": [
+   32,
+   268
+  ],
+  "inst:ridge_braun": [
+   32,
+   263
+  ],
+  "inst:w_bh": [
+   142,
+   52
+  ],
+  "inst:w_bp1_1": [
+   212,
+   30
+  ],
+  "inst:w_bp1_2": [
+   212,
+   30
+  ],
+  "inst:w_bp1_eg": [
+   212,
+   15
+  ],
+  "inst:w_bp1_g60": [
+   130,
+   1
+  ],
+  "inst:w_bp1_g80": [
+   130,
+   2
+  ],
+  "inst:w_bp1_gross": [
+   178,
+   1
+  ],
+  "inst:w_bp1_hof": [
+   212,
+   7
+  ],
+  "inst:w_bp1_z75": [
+   142,
+   1
+  ],
+  "inst:w_bp1_z85": [
+   142,
+   3
+  ],
+  "inst:w_bp2": [
+   142,
+   46
+  ],
+  "inst:w_bp2_z": [
+   142,
+   5
+  ],
+  "inst:w_bp3": [
+   142,
+   41
+  ],
+  "inst:w_bp3_eg": [
+   142,
+   2
+  ],
+  "inst:w_gaube_bp1": [
+   142,
+   9
+  ],
+  "inst:w_gaube_ost": [
+   130,
+   5
+  ],
+  "inst:w_gaube_sp": [
+   130,
+   10
+  ],
+  "inst:w_ost_eg": [
+   200,
+   14
+  ],
+  "inst:w_ost_klein": [
+   130,
+   4
+  ],
+  "inst:w_ost_og": [
+   142,
+   13
+  ],
+  "inst:w_ost_og2": [
+   142,
+   3
+  ],
+  "inst:w_pav": [
+   130,
+   27
+  ],
+  "inst:w_sp1": [
+   142,
+   16
+  ],
+  "inst:w_sp2": [
+   142,
+   16
+  ],
+  "inst:w_sp_eg": [
+   200,
+   7
+  ],
+  "inst:w_spg_55": [
+   130,
+   1
+  ],
+  "inst:w_spg_70": [
+   130,
+   2
+  ],
+  "inst:w_spg_80": [
+   130,
+   3
+  ]
+ },
+ "top": 20.13,
+ "seconds": 9.7
+}

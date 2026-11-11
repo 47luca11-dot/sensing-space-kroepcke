@@ -1,0 +1,46 @@
+=== ubahn
+[ubahn  106.2s] detail meshes 42
+[ubahn  106.6s] kroepcke_A patch tris 47 rim edges 5 removed {'street': 918}
+[ubahn  107.0s] built kroepcke_A Kröpcke tris 6503
+[ubahn  107.7s] kroepcke_B patch tris 20 rim edges 2 removed {'street': 2}
+[ubahn  108.0s] built kroepcke_B Kröpcke tris 4712
+[ubahn  108.3s] built kroepcke_C Kröpcke tris 6374
+[ubahn  108.4s] kroepcke_D patch tris 109 rim edges 4 removed {'street': 976}
+[ubahn  109.0s] built kroepcke_D Kröpcke tris 7345
+[ubahn  118.1s] kroepcke_E patch tris 55759 rim edges 4 removed {'street': 1062, 'ground': 44}
+[ubahn  118.8s] built kroepcke_E Kröpcke tris 60115
+[ubahn  119.1s] kroepcke_F patch tris 387 rim edges 4 removed {'street': 1057}
+[ubahn  119.6s] built kroepcke_F Kröpcke tris 5283
+[ubahn  119.8s] kroepcke_G patch tris 118 rim edges 4 removed {'street': 33}
+[ubahn  120.0s] built kroepcke_G Kröpcke tris 3246
+[ubahn  120.4s] built kroepcke_H Kröpcke tris 4636
+[ubahn  120.7s] kroepcke_I patch tris 15 rim edges 2 removed {'street': 2}
+[ubahn  121.1s] built kroepcke_I Kröpcke tris 4233
+[ubahn  121.3s] built ub_299064939 Waterlooplatz tris 3228
+[ubahn  121.5s] built ub_324517470 Aegidientorplatz tris 3228
+[ubahn  121.9s] built ub_1274066800 Steintor tris 3228
+[ubahn  122.1s] built ub_1274066802 Steintor tris 3236
+[ubahn  122.3s] built ub_1396666085 Steintor tris 3220
+[ubahn  122.8s] built ub_1396666113 Steintor tris 3244
+[ubahn  123.0s] built ub_2747495414 Hauptbahnhof tris 3216
+[ubahn  123.1s] built ub_4048984722 Hauptbahnhof tris 2676
+[ubahn  123.3s] built ub_4048984735 Hauptbahnhof tris 2448
+[ubahn  123.7s] built ub_4373301942 Markthalle tris 3244
+[ubahn  123.9s] built ub_4373301943 Markthalle tris 3220
+[ubahn  124.4s] done: entrances 20 tris 136859 collision 70279 detail materials ['d_ground_slabs_f833e41b', 'd_ground_slabs_3b6841b3', 'd_ground_asphalt_5cceef0e', 'd_ground_setts_84d7cf54', 'd_ground_slabs_b23c554f', 'd_ground_colour_3c3d3f', 'd_ground_asphalt_61feabfb']
+=== altstadt
+[altstadt  110.3s] Holzmarktbrunnen at [-431.6  332.2] top y 7.6 height 9.0 m
+[altstadt  110.4s] Ballhofbrunnen at [-410.5  213.4]
+[altstadt  110.9s] Leine railings 18 length 668 m water level -7.48
+[altstadt  111.0s] bridge 24565114 Brühlstraße deck 353 m2 y -2.46..-2.90
+[altstadt  111.3s] bridge 24565119 Goethestraße deck 257 m2 y -2.06..-1.82
+[altstadt  111.5s] bridge 28393402 Hardenbergstraße deck 89 m2 y -3.04..-3.05
+[altstadt  111.6s] bridge 46817955 Schloßstraße deck 139 m2 y -7.17..-4.02
+[altstadt  111.8s] bridge 46817956 Martin-Neuffer-Brücke deck 222 m2 y -3.96..-2.87
+[altstadt  111.8s] bridge 53633072 Schloßbrücke deck 52 m2 y -3.46..-6.87
+[altstadt  112.1s] bridge 53634363 None deck 81 m2 y -3.00..-4.47
+[altstadt  112.4s] bridge 112290810 Goethestraße deck 358 m2 y -1.83..-2.05
+[altstadt  112.6s] bridge 113944124 Brühlstraße deck 310 m2 y -2.71..-2.84
+[altstadt  112.7s] bridge 269375804 None deck 120 m2 y -1.71..-1.97
+[altstadt  112.7s] bridge 756176965 None deck 89 m2 y -2.23..-4.11
+[altstadt  113.1s] done: tris 48806 collision 8834
