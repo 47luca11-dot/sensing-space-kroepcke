@@ -26,4 +26,4 @@
 *.pkl filter=lfs diff=lfs merge=lfs -text
 *.mp4 filter=lfs diff=lfs merge=lfs -text
 *.mov filter=lfs diff=lfs merge=lfs -text
-output/hannover/data/osm/area.json filter=lfs diff=lfs merge=lfs -text
+data/osm/area.json filter=lfs diff=lfs merge=lfs -text

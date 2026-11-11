@@ -7,7 +7,7 @@ __pycache__/
 dist/
 dist-artifact/
 # generierte Artifact-Demo (node output/hannover/pipeline/build_artifact_demo.mjs)
-output/hannover/artifact_demo/
+/artifact_demo/
 # lokale Claude-Einstellungen
 .claude/settings.local.json
 # Umgebungsdateien nie committen
