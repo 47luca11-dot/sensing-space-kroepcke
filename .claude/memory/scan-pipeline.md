@@ -15,4 +15,6 @@ Project (since 2026-11-05); since 2026-11-11 moved into `Documents/Sensing Space
 - Blender 5.0 is run headless (`blender.exe -b --factory-startup -P bl_rig.py`); the Blender MCP addon was not connected.
 - Character intermediates (glb/ply/blend) in `figuren/`. Characters: person1 = "Carlos" (Bothfeld body + Centre head), andis, (planned) luca from "Unbenannter Scan.ply".
 
+- Since 2026-11-12 the reusable pipeline is the project skill `.claude/skills/figur-einbauen/` (splat_werkzeug.py = crop/align splat scenes, figur_bauen.py = Blender build for splat or textured-mesh figures). First figure built with it: `trainingsjacke`. Pitfall found: splat skin indices must follow the GLB joint order.
+
 Related: [[meshes-always-gapfree-highres]]

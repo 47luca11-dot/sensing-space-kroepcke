@@ -109,6 +109,7 @@ canvas { position: absolute; left: 0; top: 0; width: 1588px; height: 991px; poin
 /* Panel-Wechsel */
 #c-name.long { font-size: 112px; }
 #c-name.xlong { font-size: 84px; }
+#c-name.xxlong { font-size: 70px; }
 #panel.swap #c-name, #panel.swap #stats, #panel.swap #c-bio, #panel.swap .role { opacity: 0; transform: translateX(18px); }
 #c-name, #stats, #c-bio, .role { transition: opacity .28s, transform .28s; }
 

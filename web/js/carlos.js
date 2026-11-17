@@ -8,7 +8,7 @@ import { SplatMesh, SplatSkinning } from '@sparkjsdev/spark';
 
 // Spielfigur aus ?figur= (vom Startbildschirm); Standard Carlos. handsInPockets: Arme bleiben ruhig (keine Balance-Arme).
 // mesh: texturiertes Mesh ohne Splats (nur <id>.glb)
-const FIGS = { person1: { base: 'assets/carlos/' }, mohammad: { base: 'assets/mohammad/', handsInPockets: true }, daunenjacke: { base: 'assets/daunenjacke/', mesh: true } };
+const FIGS = { person1: { base: 'assets/carlos/' }, mohammad: { base: 'assets/mohammad/', handsInPockets: true }, daunenjacke: { base: 'assets/daunenjacke/', mesh: true }, trainingsjacke: { base: 'assets/trainingsjacke/' }, jackemesh: { base: 'assets/jackemesh/', mesh: true } };
 const wanted = new URLSearchParams(location.search).get('figur');
 const ID = FIGS[wanted] ? wanted : 'person1', BASE = FIGS[ID].base;
 export const FIGURE = { id: ID, ...FIGS[ID] };

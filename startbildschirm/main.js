@@ -36,6 +36,12 @@ const CHARACTERS = [
   { id: 'daunenjacke', name: 'DAUNENJACKE', role: 'NACHTWACHE', x: 2.50, timeOffset: 0.4, mesh: true,     // Name vorläufig
     stats: { AUSDAUER: 8, GESUNDHEIT: 8, GESCHWINDIGKEIT: 5, WILLE: 6 },
     bio: 'Kapuze auf, Jacke zu bis oben. Friert nie, redet wenig – und ist immer da, wenn es dunkel wird.' },
+  { id: 'trainingsjacke', name: 'TRAININGSJACKE', role: 'LÄUFER', x: 3.30, timeOffset: 1.2,     // Name vorläufig, gebaut mit Skill figur-einbauen
+    stats: { AUSDAUER: 6, GESUNDHEIT: 6, GESCHWINDIGKEIT: 8, WILLE: 7 },
+    bio: 'Locken, Trainingsjacke, Hände immer offen. Kennt jeden Flur in Bothfeld und ist weg, bevor man ihn gesehen hat.' },
+  { id: 'jackemesh', name: 'JACKE MESH', role: 'TESTFIGUR', x: 4.10, timeOffset: 0.6, mesh: true,     // Vergleich: KI-Mesh (figuro) + Farben aus dem Splat-Scan
+    stats: { AUSDAUER: 6, GESUNDHEIT: 6, GESCHWINDIGKEIT: 8, WILLE: 7 },
+    bio: 'Derselbe Läufer – diesmal als geschlossenes Mesh mit Textur statt Punktwolke. Zum Vergleichen.' },
 ];
 const SEGMENTS = 10;
 
@@ -211,7 +217,7 @@ const panel = $('panel');
 function renderPanel() {
   const c = CHARACTERS[selected];
   $('c-name').textContent = c.name; $('c-role').textContent = c.role; $('c-bio').textContent = c.bio;
-  $('c-name').classList.toggle('long', c.name.length > 6); $('c-name').classList.toggle('xlong', c.name.length > 9);          // lange Namen (MOHAMMAD) kleiner, damit sie ins Panel passen
+  $('c-name').classList.toggle('long', c.name.length > 6); $('c-name').classList.toggle('xlong', c.name.length > 9); $('c-name').classList.toggle('xxlong', c.name.length > 12);          // lange Namen (MOHAMMAD) kleiner, damit sie ins Panel passen
   $('c-index').textContent = `${String(selected + 1).padStart(2, '0')} / ${String(CHARACTERS.length).padStart(2, '0')}`;
   $('stats').innerHTML = Object.entries(c.stats).map(([k, v]) =>
     `<li><span class="lbl">${k[0] + k.slice(1).toLowerCase()}</span><span class="bar">${Array.from({ length: SEGMENTS }, (_, i) => `<i class="seg${i < v ? ' on' : ''}"></i>`).join('')}</span></li>`).join('');
@@ -233,8 +239,9 @@ renderPanel();
 
 // Porträts für die Roster-Karten: einmalig aus dem gerenderten Bild ausschneiden (Kopf-Region)
 let portraitsDue = Infinity;
+const portraitMissing = new Set();               // Figuren, die beim ersten Foto außerhalb des Bildes standen
 const _hp = new THREE.Vector3();
-function capturePortraits() {
+function capturePortraits(nurFehlende = false) {
   // einmal mit voller Helligkeit rendern (die nicht gewählte Figur ist sonst abgedunkelt)
   const saved = [];
   for (const f of Object.values(figures)) {
@@ -244,10 +251,13 @@ function capturePortraits() {
   renderScene();
   document.querySelectorAll('.card canvas').forEach((cv, i) => {
     const f = figures[CHARACTERS[i].id]; if (!f || !f.bones.spine006) return;
+    if (nurFehlende && !portraitMissing.has(i)) return;
     f.bones.spine006.getWorldPosition(_hp); _hp.y += 0.09; _hp.project(camera);   // ~Gesichtsmitte
     const px = (_hp.x * 0.5 + 0.5) * glCanvas.width, py = (-_hp.y * 0.5 + 0.5) * glCanvas.height;
     const pxPerM = (FH / 2) / (CAM_D * Math.tan(THREE.MathUtils.degToRad(FOV / 2)));
     const size = 0.46 * (glCanvas.height / FH) * pxPerM;   // ~0.46 m Ausschnitt (Kopf + Schulteransatz)
+    if (px < size / 2 || px > glCanvas.width - size / 2) { portraitMissing.add(i); return; }   // nicht im Bild -> später, wenn gewählt
+    portraitMissing.delete(i);
     const g = cv.getContext('2d'); g.clearRect(0, 0, cv.width, cv.height);
     g.filter = 'brightness(1.5) contrast(1.06) saturate(1.05)';
     g.drawImage(glCanvas, px - size / 2, py - size * 0.36, size, size, 0, 0, cv.width, cv.height);   // Gesicht im oberen Drittel, über dem Namensschild
@@ -559,7 +569,7 @@ $('btn-ready').addEventListener('click', startGame);
 
 // Spiel starten: spielbar sind Figuren mit Geh-/Lauf-Animationen (Carlos, Mohammad, Daunenjacke).
 // Läuft der Startbildschirm über den Spiel-Server (/startbildschirm/), geht es relativ zurück, sonst zum Spiel-Port 5177.
-const PLAYABLE = ['person1', 'mohammad', 'daunenjacke'];
+const PLAYABLE = ['person1', 'mohammad', 'daunenjacke', 'trainingsjacke', 'jackemesh'];
 const GAME_URL = location.pathname.startsWith('/startbildschirm') ? '/' : `${location.protocol}//${location.hostname}:5177/`;
 function startGame() {
   const c = CHARACTERS[selected];
@@ -631,6 +641,7 @@ function tick(rawDt, scripted = false, render = true) {
   const p1 = performance.now();
   if (render) renderScene();             // Spark sortiert asynchron: gescriptete Zwischenschritte nur simulieren
   if (render && T >= portraitsDue) { capturePortraits(); portraitsDue = Infinity; }   // direkt nach dem Rendern auslesen
+  else if (render && portraitMissing.has(selected) && Math.abs(cam.x - (selX - SEL_NDC_X * HALF_W)) < 0.02) capturePortraits(true);   // Porträt nachholen, sobald die Kamera da ist
   const p2 = performance.now();
   drawFront(dt, t);
   const p3 = performance.now();
