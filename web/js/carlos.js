@@ -9,7 +9,7 @@ import { SplatMesh, SplatSkinning } from '@sparkjsdev/spark';
 // Spielfigur aus ?figur= (vom Startbildschirm); Standard Carlos. handsInPockets: Arme bleiben ruhig (keine Balance-Arme).
 // mesh: texturiertes Mesh ohne Splats (nur <id>.glb)
 const FIGS = { person1: { base: 'assets/carlos/' }, mohammad: { base: 'assets/mohammad/', handsInPockets: true }, daunenjacke: { base: 'assets/daunenjacke/', mesh: true }, trainingsjacke: { base: 'assets/trainingsjacke/' }, jackemesh: { base: 'assets/jackemesh/', mesh: true },
-  bv9: { base: 'assets/bv9/' }, bv10: { base: 'assets/bv10/' }, bv11: { base: 'assets/bv11/' } };   // Bothfeld-Vahrenheide 9-11: Skelett mit Fingern (figur_finger.py)
+  bv9: { base: 'assets/bv9/', sh: 3 }, bv10: { base: 'assets/bv10/', sh: 3 }, bv11: { base: 'assets/bv11/', sh: 3 } };   // Bothfeld-Vahrenheide 9-11: Skelett mit Fingern (figur_finger.py)
 const wanted = new URLSearchParams(location.search).get('figur');
 const ID = FIGS[wanted] ? wanted : 'person1', BASE = FIGS[ID].base;
 export const FIGURE = { id: ID, ...FIGS[ID] };
@@ -41,7 +41,7 @@ export async function loadCarlos(scene) {
   const [gltf, skinBuf, splat] = await Promise.all([
     loader.loadAsync(BASE + ID + '.glb'),
     FIGURE.mesh ? null : fetch(BASE + ID + '_skin.bin').then((r) => { if (!r.ok) throw new Error('skin.bin ' + r.status); return r.arrayBuffer(); }),
-    FIGURE.mesh ? null : (async () => { const s = new SplatMesh({ url: BASE + ID + '_splats.ply' }); await s.initialized; s.maxSh = 1; if (s.recolor && s.recolor.setScalar) s.recolor.setScalar(FIG_DARK); else s.recolor = new THREE.Color(FIG_DARK, FIG_DARK, FIG_DARK); return s; })(),
+    FIGURE.mesh ? null : (async () => { const s = new SplatMesh({ url: BASE + ID + '_splats.ply' }); await s.initialized; s.maxSh = FIGURE.sh || 1; if (s.recolor && s.recolor.setScalar) s.recolor.setScalar(FIG_DARK); else s.recolor = new THREE.Color(FIG_DARK, FIG_DARK, FIG_DARK); return s; })(),
   ]);
   return new Character(scene, gltf, skinBuf, splat);
 }

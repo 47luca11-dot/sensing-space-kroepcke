@@ -70,7 +70,11 @@ void main(){
       vis = ds <= occ + 0.25 + ds * 0.012 ? 1.0 : 0.0;
     }
     float reached = 1.0 - smoothstep(uScanR - 1.0, uScanR, ds);
-    float life = 1.0 - smoothstep(uScanHold - 2.5, uScanHold, uScanAge);
+    // Zurückfaden: das Gedächtnis zieht sich in den letzten ~4 s zum Spieler zurück (Fernes zuerst), jeder Punkt mit
+    // etwas Zufallsversatz -> weiches Auflösen statt abruptem Wegschalten
+    float hf = fract(sin((uOff + float(gl_VertexID)) * 3.917 + 7.1) * 24634.6345);
+    float t0 = uScanHold - 4.2 + 1.6 * (1.0 - clamp(ds / 70.0, 0.0, 1.0)) + 0.5 * (hf - 0.5);
+    float life = 1.0 - smoothstep(t0, min(t0 + 2.4, uScanHold), uScanAge);
     scanK = vis * reached * life * (1.0 - smoothstep(uScanMax * 0.85, uScanMax, ds));
     vRing = vis * exp(-pow((ds - uScanR) / 1.1, 2.0)) * (uScanR < uScanMax ? 1.0 : 0.0);
     f = max(f, scanK);

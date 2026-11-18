@@ -18,3 +18,7 @@ dist-artifact/
 # Punktwolken-Kacheln (~3,3 GB, zu groß für das Git-LFS-Kontingent) – erzeugen mit:
 #   blender -b --factory-startup -P pipeline/pointcloud/run_headless.py
 /web/assets/city/pointcloud/
+
+# veraltete figuro-STL-Hybrid-Builds (ersetzt durch scan-treue build/) und Blender-Warteschlange
+figuren/*/hybrid/
+figuren/_warteschlange.txt

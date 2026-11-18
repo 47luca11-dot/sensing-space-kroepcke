@@ -43,13 +43,13 @@ const CHARACTERS = [
     stats: { AUSDAUER: 6, GESUNDHEIT: 6, GESCHWINDIGKEIT: 8, WILLE: 7 },
     bio: 'Derselbe Läufer – diesmal als geschlossenes Mesh mit Textur statt Punktwolke. Zum Vergleichen.' },
   // Bothfeld-Vahrenheide (9)-(11): Skelett mit Fingern, Finger entspannt (Skill figur-einbauen, figur_finger.py im Live-Blender) – Namen vorläufig
-  { id: 'bv9', name: 'LEDERJACKE', role: 'SPÄHER', x: 4.90, timeOffset: 0.3,
+  { id: 'bv9', sh: 3, name: 'LEDERJACKE', role: 'SPÄHER', x: 4.90, timeOffset: 0.3,
     stats: { AUSDAUER: 7, GESUNDHEIT: 6, GESCHWINDIGKEIT: 7, WILLE: 8 },
     bio: 'Lange Locken, braune Jacke, Blick nach vorn. Geht leise und merkt sich jeden Weg.' },
-  { id: 'bv10', name: 'LOCKEN', role: 'FUNKER', x: 5.70, timeOffset: 1.5,
+  { id: 'bv10', sh: 3, name: 'LOCKEN', role: 'FUNKER', x: 5.70, timeOffset: 1.5,
     stats: { AUSDAUER: 6, GESUNDHEIT: 7, GESCHWINDIGKEIT: 7, WILLE: 7 },
     bio: 'Schwarzes Shirt, Kabel im Ohr. Hört mehr, als er sagt.' },
-  { id: 'bv11', name: 'BOOTS', role: 'TRÄGER', x: 6.50, timeOffset: 0.8,
+  { id: 'bv11', sh: 3, name: 'BOOTS', role: 'TRÄGER', x: 6.50, timeOffset: 0.8,
     stats: { AUSDAUER: 9, GESUNDHEIT: 8, GESCHWINDIGKEIT: 6, WILLE: 7 },
     bio: 'Feste Stiefel, kurze Locken. Trägt, was andere stehen lassen.' },
 ];
@@ -146,7 +146,7 @@ async function loadFigure(c, index) {
   const [gltf, skinBuf, splat] = await Promise.all([
     loader.loadAsync(`assets/${c.id}.glb`),
     c.mesh ? null : fetch(`assets/${c.id}_skin.bin`).then((r) => r.arrayBuffer()),
-    c.mesh ? null : (async () => { const s = new SplatMesh({ url: `assets/${c.id}_splats.ply` }); await s.initialized; s.maxSh = 1; return s; })(),   // SH Grad 1: Glanz/Blickwinkel; Grad 2-3 rauschen an selten gesehenen Seiten
+    c.mesh ? null : (async () => { const s = new SplatMesh({ url: `assets/${c.id}_splats.ply` }); await s.initialized; s.maxSh = c.sh || 1; return s; })(),   // SH Grad 1: Glanz/Blickwinkel; Grad 2-3 rauschen an selten gesehenen Seiten
   ]);
   const root = gltf.scene;
   root.position.x = c.x;

@@ -89,6 +89,49 @@ der Lauf dauert ~1,5 min und blockiert sonst den MCP-Aufruf. Headless geht auch:
 - Scan-Viewer-Extraktion erkennt „oben“ bei diesen Flur-Szenen oft falsch (Wand als Boden) – Achse selbst prüfen (KIRI/COLMAP: `-y`).
   `scripts/aus_viewer.py` nutzt die Viewer-Werte (Mitte/oben/Höhe) und skaliert die Szene vorab auf Meter.
 
+## 2d. Bevorzugt: figuro-STL + Scan-Splats, eigene Bewegungen (Stand 2026-11-18)
+
+Wenn es ein figuro-STL der Person gibt, immer damit bauen – geschlossener Körper mit echten Fingern, keine Löcher:
+1. `figur_hybrid.py -- --id <id> --stl <figuro.stl> --farbe <person.ply> --out figuren/<id>/hybrid` (im Live-Blender per Timer wie 2c).
+   ICP mit Maßstab, danach Körper + Splats gemeinsam auf den Boden; Splats auf die Fläche gelegt, **nur deckende Scan-Splats (Deckkraft > 0,45)
+   zählen als Abdeckung**, überall sonst (Abstand > 4 mm, `--luecke`) neue Splats aus dem Mesh mit Scan-Farbe → lückenlos.
+2. `gang.py -- --id <id> --out <ordner mit <id>_skin.json>`: ersetzt Walk/Run/Idle_Breathing durch eigene Zyklen (IK-Beine mit
+   Fersenaufsatz/Abrollen, Becken-Höhe/Pendel/Rotation, Rumpf-Gegenrotation, stabilisierter Kopf, Armpendel gegengleich, Laufen mit
+   Flugphase und ~85° Ellbogen), exportiert die GLB neu und prüft, dass die Gelenk-Reihenfolge zum Skin passt.
+   In Blender prüfen: Aktion auf das Rig legen, `look` mit `mode=frames`, `view=right`.
+Ohne STL (z. B. bv9): `figur_finger.py --voxel 0.004 --schliessen 2` + `gang.py`.
+
+**Scan-treu**: Scan-Splats bleiben unverändert (Position, Form, volle SH); Füll-Splats nur in echten Löchern (kein deckender Splat
+im Umkreis von 2,5 cm). Nie Splats aufs Mesh ziehen oder Hände ersetzen – das hat Gesicht und Details zerstört.
+
+**Gelenke (skelett.py, geprüft mit Prüf-Agenten 2026-11-18)** – Zielwerte als Anteil der Körperhöhe H:
+- Schultergelenk: 4,7·k unter der Schulter-Oberkante bei |x| 17–21 cm (≈ 0,78–0,80 H), links/rechts gleich hoch, seitlich aus der
+  Oberarmachse, symmetrisch um die Körpermitte auf Schulterhöhe. Nie die Armachse bis zur Schulter verlängern (6–8 cm zu hoch).
+- Hüftkopf ≈ 0,505 H (nicht unter Schritt + 6 cm), 8,2–9,2·k neben der Beckenmitte, Tiefe = Mitte des Becken-Querschnitts.
+- Knie/Knöchel: Mitte des Bein-Querschnitts (Ausdehnung, nicht Punktschwerpunkt); Knöchel 0,045 H.
+- Wirbelsäule je Höhe an der Querschnittsmitte; Tiefe Becken 55 %, Lende 62–68 %, Brust 72 % von vorn; C7 4,5·k unter der Rückenhaut;
+  Atlas (Kopfgelenk) bei H − 0,09 H (Ohrläppchen) mittig/hinten im Kopf; Schlüsselbein beginnt vorn am Brustbein.
+- Finger: geodätische Entfernung vom Handgelenk + Merge-Tree (Persistenz) → die längsten Äste sind Finger, Sattel = Schwimmhaut.
+  Verschmolzene Finger: Ast nach Breite (~1,9 cm/Finger) in Streifen teilen. Knöchel tief in der Handfläche (Fingerlänge als Anteil der
+  Handlänge: Zeige .47, Mittel .51, Ring .48, Klein .39). Hand-Gewichte nur für Punkte ≤ 4,5·k von Hand-/Fingerknochen (sonst hängt
+  z. B. Jackensaum an der Hüfte an den Fingern → Stachel beim Armschwung).
+
+**Stand 2026-11-18 abends – maßgeblich:**
+- Alle Scan-Figuren (bv9, bv10, bv11) **nur aus dem Scan** bauen (`figur_finger.py --voxel 0.004 --schliessen 2`, Ausgabe `build/`).
+  Die figuro-STL-Variante (`figur_hybrid.py`, Ausgabe `hybrid/`) verschmiert Textur an den Armen – nicht mehr verwenden.
+  LEDERJACKE (bv9) ist der Qualitätsmaßstab für Textur/Detail.
+- Gehen/Laufen kommen aus **echten Motion-Capture-Aufnahmen** (CMU Graphics Lab, frei auch kommerziell; `figuren/_mocap/`):
+  `07_01.bvh` Gehen (Knie im Stand ~9°, Spitze ~66° bei ~67 % – am nächsten an der Normkurve), `35_17.bvh` Joggen.
+  `gang.py` überträgt sie per `mocap.py` (Welt-Drehungen relativ zur T-Pose, A-Pose-Angleichung je Knochen, Zyklus nahtlos,
+  Becken auf der Stelle, tiefster Fußpunkt je Bild auf den Boden). Andere Aufnahme: `--walk_bvh <datei>` / `--run_bvh <datei>`.
+  `--ohne_mocap` nimmt die alten prozeduralen Zyklen (nicht empfohlen). Idle bleibt prozedural.
+- Kniekurve prüfen: Hilfsskript `knie.py` (Scratchpad-Muster): Knie-/Hüftwinkel je Bild gegen die Normkurve (Winter).
+
+**Gang prozedural (alt, nur Fallback)**: Doppelschritt ≈ 0,82·k/0,6 (≈ 1,3 m) – das Spiel spielt Walk bei 1,5 m/s; zu kurze Schritte = Trippeln/„Pferd“.
+Beckenhöhe aus der Beinreichweite (Pendel ~5 cm, nicht dauerhaft eingeknickt). Ferse löst sich ab ~35 % des Zyklus, Fuß rollt über den
+Ballen (Knöchel geht hoch UND nach vorn), Hüftstreckung hinten ~15°, Zehen im Schwung 2 cm über dem Boden. **Vorzeichen**: Blick −Y →
+Fuß-Kipp `Rotation(-kipp, 'X')` (+kipp = Zehen hoch). Laufen: Doppelschritt ≈ 2,8 m, Stand 27 %.
+
 ## 3. Ins Spiel eintragen
 
 1. Dateien kopieren nach `web/assets/<id>/` **und** `startbildschirm/assets/`: `<id>.glb`, bei Splat-Figuren zusätzlich `<id>_splats.ply`, `<id>_skin.bin`, `<id>_skin.json`.
@@ -128,6 +171,6 @@ Große Dateien laufen über Git LFS (`.gitattributes` deckt .glb/.ply/.bin ab). 
 | jackemesh (Test) | `figuro-19a5….stl` + Farbe aus `trainingsjacke`-Splats | `--art stl --farbe jacke_splats_roh.ply --modus mesh --arme a` – Abstand zum Scan nach Ausrichtung ~1 cm, ~20 % der Fläche > 3 cm daneben (KI-Proportionen) |
 | daunenjacke | `KIRI Person Daunenjacke_mesh.ply` | `--art scan --modus mesh --arme a` (ursprünglich mit eigenem Skript gebaut) |
 | bv9 „Lederjacke" | `Bothfeld-Vahrenheide (9).ply` | `ausschneiden … --zentrum "0.164,-0.2,0.02" --oben -y` → `figur_finger.py --id bv9 --voxel 0.004 --schliessen 2` (Finger verschmolzen → Vorlage + geometrische Gewichte) |
-| bv10 „Locken" | `Bothfeld-Vahrenheide (10).ply` | `--zentrum "0.349,0.0,-0.019" --oben -y`, danach 180° um z drehen (Blick war verkehrt), orange Bodenreflexe bis Knie entfernt → `figur_finger.py --id bv10 --voxel 0.004 --schliessen 2` (5+5 Finger) |
-| bv11 „Boots" | `Bothfeld-Vahrenheide (11).ply` | `--zentrum "-0.106,0.3,-0.129" --oben -y` → `figur_finger.py --id bv11` (5+5 Finger) |
+| bv10 „Locken" (jetzt figuro_bv10.stl + Scan, gang.py) | `Bothfeld-Vahrenheide (10).ply` | `--zentrum "0.349,0.0,-0.019" --oben -y`, danach 180° um z drehen (Blick war verkehrt), orange Bodenreflexe bis Knie entfernt → `figur_finger.py --id bv10 --voxel 0.004 --schliessen 2` (5+5 Finger) |
+| bv11 „Boots" (jetzt figuro_bv11.stl + Scan, gang.py) | `Bothfeld-Vahrenheide (11).ply` | `--zentrum "-0.106,0.3,-0.129" --oben -y` → `figur_finger.py --id bv11` (5+5 Finger) |
 | mohammad | `KIRI Person Weste_mesh.ply` | `--art scan --modus splat --arme taschen` (ursprünglich mit eigenem Skript gebaut) |

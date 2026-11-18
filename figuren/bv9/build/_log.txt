@@ -1,27 +1,13 @@
-[     0s] 1 Körper aus den Splats
-[    36s] Körper {'punkte': 381908, 'dreiecke': 764628, 'offene_kanten': 0, 'nicht_mannigfaltig': 0, 'groesse_m': 1.804, 'voxel_mm': 4.0, 'schwebeteile': 606}
-[    36s] 2 Skelett
-[    37s]   Hand: nur 3 Finger-Äste
-[    37s]   Hand L: Finger nicht erkannt -> Vorlage
-[    38s]   Hand: nur 2 Finger-Äste
-[    38s]   Hand R: Finger nicht erkannt -> Vorlage
-[    38s] 3 Füll-Mesh + Gewichte
-[    55s]   Hand-Gewichte geometrisch gesetzt: 1245 Punkte
-Info: 50684 vertex weights limited
-[    56s] 4 Splats auf das Mesh legen
-[    66s] Splats {'gesamt': 166713, 'auf_mesh': 154496} {'haende': 77188, 'luecken': 45849}
-[    66s] 5 Finger entspannen
-[    66s] 6 Animationen
-17:44:53 | INFO: Data are loaded, start creating Blender stuff
-17:44:53 | INFO: Blender create Mesh node person1_mesh
-17:44:54 | INFO: glTF import finished in 1.28s
-[    69s] 7 Export
-Info: Saved copy as "bv9.blend"
-17:44:56 | INFO: Starting glTF 2.0 export
-17:44:56 | INFO: Extracting primitive: bv9_mesh
-17:44:56 | INFO: Primitives created: 1
-17:45:00 | INFO: Finished glTF 2.0 export in 4.158910274505615 s
+[gang] Höhe 1.777  Bein 0.819  Oberarm 0.332  Unterarm 0.287  Fuß→Ballen 0.174
+[gang] Pole L: Bein 90°, Arm -90°
+[gang] Pole R: Bein 90°, Arm -90°
+[gang] bv9_Walk: 24 Bilder (1.00 s)
+[gang] bv9_Run: 17 Bilder (0.71 s)
+[gang] bv9_Idle_Breathing: 96 Bilder (4.00 s)
+18:50:17 | INFO: Starting glTF 2.0 export
+18:50:17 | INFO: Extracting primitive: bv9_mesh
+18:50:17 | INFO: Primitives created: 1
+18:50:19 | INFO: Finished glTF 2.0 export in 1.998025894165039 s
 
-[    75s] 8 Testbilder
-REPORT {"id": "bv9", "art": "splats_finger", "koerper": {"punkte": 381908, "dreiecke": 764628, "offene_kanten": 0, "nicht_mannigfaltig": 0, "groesse_m": 1.804, "voxel_mm": 4.0, "schwebeteile": 606}, "skelett": {"knochen": 61, "schritt_z": 0.839, "arm_achse": {"L": {"neigung_grad": 75.6}, "R": {"neigung_grad": 71.4}}, "schulter_z": 1.542, "arm_L": {"laenge": 0.782, "handgelenk_bei": 0.626}, "arm_R": {"laenge": 0.782, "handgelenk_bei": 0.616}, "finger": {"L": false, "R": false}}, "hand_gewichte": 1245, "fuellmesh": {"punkte": 39594, "dreiecke": 80000, "offene_kanten": 0, "nicht_mannigfaltig": 0, "nachgetragen": 0, "jacke_entkoppelt": 7666}, "scan_splats": {"gesamt": 166713, "auf_mesh": 154496}, "neue_splats": {"haende": 77188, "luecken": 45849}, "finger_entspannt": true, "animationen": ["bv9_HeadTilt_L", "bv9_HeadTilt_R", "bv9_Idle_Breathing", "bv9_Pockets", "bv9_Run", "bv9_Stumble", "bv9_Walk"], "glb": {"mb": 3.0, "knochen": 61, "clips": 7}, "splats": {"anzahl": 277533, "teile": [154496, 77188, 45849], "mb": 28.9}}
+REPORT {"id": "bv9", "clips": ["bv9_HeadTilt_L", "bv9_HeadTilt_R", "bv9_Idle_Breathing", "bv9_Pockets", "bv9_Run", "bv9_Stumble", "bv9_Walk"], "gelenke_gleich": true, "mb": 3.0}
 FERTIG

@@ -1,0 +1,125 @@
+[gang] Höhe 1.777  Bein 0.834  Oberarm 0.300  Unterarm 0.240  Fuß→Ballen 0.177
+[gang] Becken walk: -6.3 .. -0.4 cm
+[gang] Becken run: -6.1 .. -0.4 cm
+	parsing bvh 'C:\\Users\\luca\\Documents\\Sensing Space\\Claude Code\\output\\hannover\\figuren\\_mocap\\07_01.bvh'...	zero length node found: Hips
+	zero length node found: Spine1
+	zero length node found: LeftHand
+	zero length node found: RightHand
+0.0128
+	importing to blender...Done in 0.1804
+
+	parsing bvh 'C:\\Users\\luca\\Documents\\Sensing Space\\Claude Code\\output\\hannover\\figuren\\_mocap\\07_01.bvh'...	zero length node found: Hips
+	zero length node found: Spine1
+	zero length node found: LeftHand
+	zero length node found: RightHand
+0.0109
+	importing to blender...Done in 0.1679
+
+[gang] Mocap 07_01.bvh: Zyklus Bild 70-201 (1.09 s), Maßstab 0.0582, Tempo 1.42 m/s
+[gang] Mocap walk: upper_arm.L Achsdrehung +30° ausgeglichen
+[gang] Mocap walk: forearm.L Achsdrehung +27° ausgeglichen
+[gang] Mocap walk: hand.L Achsdrehung +25° ausgeglichen
+[gang] Mocap walk: upper_arm.R Achsdrehung -28° ausgeglichen
+[gang] Mocap walk: forearm.R Achsdrehung -23° ausgeglichen
+[gang] Mocap walk: hand.R Achsdrehung -17° ausgeglichen
+[gang] Mocap-Mittel walk: 1 Aufnahmen, Zyklus 1.09 s, Tempo 1.42 m/s
+[gang] Knie-Streckung um den Fersenaufsatz: max 17°
+[gang] Mocap walk: 26 Bilder, Boden-Korrektur -9.8..-3.2 cm
+	parsing bvh 'C:\\Users\\luca\\Documents\\Sensing Space\\Claude Code\\output\\hannover\\figuren\\_mocap\\35_17.bvh'...	zero length node found: Hips
+	zero length node found: Spine1
+	zero length node found: LeftHand
+	zero length node found: RightHand
+0.0075
+	importing to blender...Done in 0.0930
+
+	parsing bvh 'C:\\Users\\luca\\Documents\\Sensing Space\\Claude Code\\output\\hannover\\figuren\\_mocap\\35_18.bvh'...	zero length node found: Hips
+	zero length node found: Spine1
+	zero length node found: LeftHand
+	zero length node found: RightHand
+0.0081
+	importing to blender...Done in 0.0957
+
+	parsing bvh 'C:\\Users\\luca\\Documents\\Sensing Space\\Claude Code\\output\\hannover\\figuren\\_mocap\\35_19.bvh'...	zero length node found: Hips
+	zero length node found: Spine1
+	zero length node found: LeftHand
+	zero length node found: RightHand
+0.0062
+	importing to blender...Done in 0.0820
+
+	parsing bvh 'C:\\Users\\luca\\Documents\\Sensing Space\\Claude Code\\output\\hannover\\figuren\\_mocap\\35_20.bvh'...	zero length node found: Hips
+	zero length node found: Spine1
+	zero length node found: LeftHand
+	zero length node found: RightHand
+0.0062
+	importing to blender...Done in 0.0818
+
+	parsing bvh 'C:\\Users\\luca\\Documents\\Sensing Space\\Claude Code\\output\\hannover\\figuren\\_mocap\\35_17.bvh'...	zero length node found: Hips
+	zero length node found: Spine1
+	zero length node found: LeftHand
+	zero length node found: RightHand
+0.0086
+	importing to blender...Done in 0.0837
+
+[gang] Mocap 35_17.bvh: Zyklus Bild 34-125 (0.76 s), Maßstab 0.0544, Tempo 3.04 m/s
+[gang] Mocap run: upper_arm.L Achsdrehung +46° ausgeglichen
+[gang] Mocap run: forearm.L Achsdrehung +13° ausgeglichen
+[gang] Mocap run: hand.L Achsdrehung -13° ausgeglichen
+[gang] Mocap run: upper_arm.R Achsdrehung -45° ausgeglichen
+[gang] Mocap run: forearm.R Achsdrehung -5° ausgeglichen
+[gang] Mocap run: hand.R Achsdrehung +34° ausgeglichen
+	parsing bvh 'C:\\Users\\luca\\Documents\\Sensing Space\\Claude Code\\output\\hannover\\figuren\\_mocap\\35_18.bvh'...	zero length node found: Hips
+	zero length node found: Spine1
+	zero length node found: LeftHand
+	zero length node found: RightHand
+0.0077
+	importing to blender...Done in 0.0955
+
+[gang] Mocap 35_18.bvh: Zyklus Bild 30-123 (0.78 s), Maßstab 0.0544, Tempo 3.02 m/s
+[gang] Mocap run: upper_arm.L Achsdrehung +44° ausgeglichen
+[gang] Mocap run: forearm.L Achsdrehung +11° ausgeglichen
+[gang] Mocap run: hand.L Achsdrehung -21° ausgeglichen
+[gang] Mocap run: upper_arm.R Achsdrehung -42° ausgeglichen
+[gang] Mocap run: forearm.R Achsdrehung -3° ausgeglichen
+[gang] Mocap run: hand.R Achsdrehung +41° ausgeglichen
+	parsing bvh 'C:\\Users\\luca\\Documents\\Sensing Space\\Claude Code\\output\\hannover\\figuren\\_mocap\\35_19.bvh'...	zero length node found: Hips
+	zero length node found: Spine1
+	zero length node found: LeftHand
+	zero length node found: RightHand
+0.0076
+	importing to blender...Done in 0.0913
+
+[gang] Mocap 35_19.bvh: Zyklus Bild 33-122 (0.74 s), Maßstab 0.0544, Tempo 3.22 m/s
+[gang] Mocap run: upper_arm.L Achsdrehung +48° ausgeglichen
+[gang] Mocap run: forearm.L Achsdrehung +11° ausgeglichen
+[gang] Mocap run: hand.L Achsdrehung -24° ausgeglichen
+[gang] Mocap run: upper_arm.R Achsdrehung -46° ausgeglichen
+[gang] Mocap run: forearm.R Achsdrehung -3° ausgeglichen
+[gang] Mocap run: hand.R Achsdrehung +46° ausgeglichen
+	parsing bvh 'C:\\Users\\luca\\Documents\\Sensing Space\\Claude Code\\output\\hannover\\figuren\\_mocap\\35_20.bvh'...	zero length node found: Hips
+	zero length node found: Spine1
+	zero length node found: LeftHand
+	zero length node found: RightHand
+0.0061
+	importing to blender...Done in 0.0953
+
+[gang] Mocap 35_20.bvh: Zyklus Bild 36-124 (0.73 s), Maßstab 0.0544, Tempo 3.29 m/s
+[gang] Mocap run: upper_arm.L Achsdrehung +40° ausgeglichen
+[gang] Mocap run: forearm.L Achsdrehung +10° ausgeglichen
+[gang] Mocap run: hand.L Achsdrehung -20° ausgeglichen
+[gang] Mocap run: upper_arm.R Achsdrehung -39° ausgeglichen
+[gang] Mocap run: forearm.R Achsdrehung -3° ausgeglichen
+[gang] Mocap run: hand.R Achsdrehung +39° ausgeglichen
+[gang] Mocap-Mittel run: 4 Aufnahmen, Zyklus 0.75 s, Tempo 3.14 m/s
+[gang] Mocap run: 18 Bilder, Boden-Korrektur -4.2..-4.2 cm
+[gang] Pole L: Bein 90°, Arm -90°
+[gang] Pole R: Bein 90°, Arm -90°
+[gang] bv9_Walk: 26 Bilder (1.08 s)
+[gang] bv9_Run: 18 Bilder (0.75 s)
+[gang] bv9_Idle_Breathing: 96 Bilder (4.00 s)
+20:19:54 | INFO: Starting glTF 2.0 export
+20:19:54 | INFO: Extracting primitive: bv9_mesh
+20:19:54 | INFO: Primitives created: 1
+20:19:58 | INFO: Finished glTF 2.0 export in 3.8683810234069824 s
+
+REPORT {"id": "bv9", "clips": ["bv9_HeadTilt_L", "bv9_HeadTilt_R", "bv9_Idle_Breathing", "bv9_Pockets", "bv9_Run", "bv9_Stumble", "bv9_Walk"], "gelenke_gleich": true, "mb": 3.0}
+FERTIG

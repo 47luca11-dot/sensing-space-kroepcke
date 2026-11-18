@@ -224,15 +224,15 @@ def in_hand(Pq):
     m = np.zeros(len(Pq), bool)
     for w, d in hand.values(): m |= (((Pq - w) @ d) > -0.01 * k) & (np.linalg.norm(Pq - w, axis=1) < 0.26 * k)
     return m
-SPl = FP.copy(); behalten = np.zeros(len(FP), bool); NN = np.zeros((len(FP), 3))
+# Scan-treu: Original-Splats bleiben exakt wie gescannt (Position, Form, Drehung, volle SH-Farbe) – nur Schwebeteile weit weg
+# vom Körper fallen raus. Hände werden NICHT ersetzt (die Finger werden später über ihre Knochen entspannt).
+SPl = FP.copy(); behalten = np.zeros(len(FP), bool)
 for i, p in enumerate(FP):
-    if FOP[i] < 0.05: continue
-    loc, nrm, _, dist = bvh.find_nearest(Vector(p), 0.03)
-    if loc is None: continue
-    sd = float((Vector(p) - loc).dot(nrm)); SPl[i] = np.array(loc + nrm * float(np.clip(sd, -0.004, 0.012))); NN[i] = nrm; behalten[i] = True
-behalten &= ~in_hand(SPl)
-rep["scan_splats"] = dict(gesamt=int(len(FP)), auf_mesh=int(behalten.sum()))
-# neue Splats: Hände dicht, sonst nur wo nach dem Auflegen nichts liegt
+    if FOP[i] < 0.03: continue
+    loc, nrm, _, dist = bvh.find_nearest(Vector(p), 0.06)
+    if loc is not None: behalten[i] = True
+rep["scan_splats"] = dict(gesamt=int(len(FP)), behalten=int(behalten.sum()), unveraendert=True)
+# Füll-Splats nur in echten Löchern: Körperpunkte (~5 mm Raster), in deren Umkreis (2,5 cm) kein deckender Scan-Splat liegt
 me = hi.data; me.calc_loop_triangles(); nt = len(me.loop_triangles)
 tv = np.zeros(nt * 3, np.int64); me.loop_triangles.foreach_get("vertices", tv); tv = tv.reshape(-1, 3)
 A = V[tv]; area = 0.5 * np.linalg.norm(np.cross(A[:, 1] - A[:, 0], A[:, 2] - A[:, 0]), axis=1)
@@ -242,15 +242,15 @@ def abtasten(tri_maske, dichte):
     pts = A[pick, 0] * (1 - u - w2)[:, None] + A[pick, 1] * u[:, None] + A[pick, 2] * w2[:, None]
     nrm = np.cross(A[pick, 1] - A[pick, 0], A[pick, 2] - A[pick, 0]); nrm /= np.linalg.norm(nrm, axis=1, keepdims=True) + 1e-12
     return pts, nrm
-schwer = A.mean(1)
-hP, hN = abtasten(in_hand(schwer), 1 / 2.5e-6)                       # ~1,6 mm Abstand
-gP, gN = abtasten(~in_hand(schwer), 1 / 16e-6)                       # Kandidaten ~4 mm
-kd2 = KDTree(int(behalten.sum()))
-for i, p in enumerate(SPl[behalten]): kd2.insert(p, i)
+gP, gN = abtasten(np.ones(len(A), bool), 1 / 25e-6)
+dicht = behalten & (FOP > 0.45)
+kd2 = KDTree(int(dicht.sum()))
+for i, p in enumerate(SPl[dicht]): kd2.insert(p, i)
 kd2.balance()
-frei = np.array([kd2.find(p)[2] > 0.006 for p in gP]) if len(gP) else np.zeros(0, bool)
+frei = np.array([kd2.find(p)[2] > float(arg("--luecke", 0.025)) for p in gP]) if len(gP) else np.zeros(0, bool)
 gP, gN = gP[frei], gN[frei]
-rep["neue_splats"] = dict(haende=int(len(hP)), luecken=int(len(gP)))
+hP, hN = gP[:0], gN[:0]
+rep["neue_splats"] = dict(haende=0, luecken=int(len(gP)))
 def neue(pts, nrm, gr, dick):
     b = np.zeros((len(pts), len(fprops)))
     b[:, SW.spalten(fprops, "x", "y", "z")] = pts
@@ -261,9 +261,9 @@ def neue(pts, nrm, gr, dick):
     ang = np.arctan2(sn, nrm[:, 2]); ax = np.where(sn[:, None] > 1e-8, ax / (sn[:, None] + 1e-12), np.array([1.0, 0, 0]))
     b[:, SW.spalten(fprops, "rot_0", "rot_1", "rot_2", "rot_3")] = np.concatenate([np.cos(ang / 2)[:, None], ax * np.sin(ang / 2)[:, None]], 1)
     return b
-sa = fa[behalten].copy(); sa[:, SW.spalten(fprops, "x", "y", "z")] = SPl[behalten]
-a = np.concatenate([sa, neue(hP, hN, 0.0016, 0.0005), neue(gP, gN, 0.0028, 0.0008)], 0)
-parts = [int(len(sa)), int(len(hP)), int(len(gP))]
+sa = fa[behalten].copy()
+a = np.concatenate([sa, neue(gP, gN, 0.0035, 0.001)], 0)
+parts = [int(len(sa)), 0, int(len(gP))]
 # Gewichte per Data-Transfer vom Füll-Mesh (noch gespreizt)
 joints = list(MENSCH.keys()); jpos = {n: i for i, n in enumerate(joints)}
 def gewichte(PTS):
@@ -348,6 +348,7 @@ rep["animationen"] = sorted(names)
 log("7 Export")
 hi.hide_render = True; hi.hide_set(True)
 bpy.ops.wm.save_as_mainfile(filepath=f"{OUT}/{ID}.blend", copy=True)
+for _a in [x for x in bpy.data.actions if not x.name.startswith(ID + "_")]: bpy.data.actions.remove(_a)
 aktiv(game, rig); glb = f"{OUT}/{ID}.glb"
 kw = dict(filepath=glb, use_selection=True, use_active_scene=True, export_format='GLB', export_animations=True, export_animation_mode='ACTIONS',
           export_skins=True, export_force_sampling=True, export_def_bones=False, export_materials='NONE')
@@ -358,11 +359,7 @@ glb_joints = [gj['nodes'][i]['name'] for i in gj['skins'][0]['joints']]
 rep["glb"] = dict(mb=round(len(g) / 1e6, 1), knochen=len(glb_joints), clips=len(gj['animations']))
 props = list(fprops)
 SW.transformieren(props, a, np.array([[1.0, 0, 0], [0, 0, 1.0], [0, -1.0, 0]]), np.zeros(3), 1.0)
-rest = [p for p in props if p.startswith("f_rest_")]
-if len(rest) > 9:
-    kk = len(rest) // 3; keep = [props.index(f"f_rest_{ch * kk + i}") for ch in range(3) for i in range(3)]
-    basis = [i for i, p in enumerate(props) if not p.startswith("f_rest_")]
-    a = a[:, basis[:9] + keep + basis[9:]]; props = [props[i] for i in basis[:9]] + [f"f_rest_{i}" for i in range(9)] + [props[i] for i in basis[9:]]
+# volle SH-Farbe behalten (Grad 3 wie im Scan) – früher auf Grad 1 gekürzt
 SW.schreiben(f"{OUT}/{ID}_splats.ply", props, a)
 W = W[:, [joints.index(n_) for n_ in glb_joints]]
 top = np.argsort(-W, axis=1)[:, :4]; tw = np.take_along_axis(W, top, 1); tw = tw / np.maximum(tw.sum(1, keepdims=True), 1e-6)

@@ -1,0 +1,27 @@
+[     0s] 1 Körper aus den Splats
+[    34s] Körper {'punkte': 291496, 'dreiecke': 583500, 'offene_kanten': 0, 'nicht_mannigfaltig': 0, 'groesse_m': 1.812, 'voxel_mm': 4.0, 'schwebeteile': 1501}
+[    34s] 2 Skelett
+[    34s]   Hand: verschmolzener Ast (6.6 cm breit) in 3 Finger geteilt
+[    34s]   Hand: 5 Finger, Schwimmhäute bei [0.056, 0.149, 0.149, 0.149, 0.149] m, Längen [0.043, 0.054, 0.067, 0.065, 0.054]
+[    35s]   Hand: verschmolzener Ast (7.5 cm breit) in 4 Finger geteilt
+[    35s]   Hand: 5 Finger, Schwimmhäute bei [0.175, 0.175, 0.175, 0.175, 0.175] m, Längen [0.132, 0.11, 0.116, 0.117, 0.1]
+[    35s] 3 Füll-Mesh + Gewichte
+[    49s]   Hand-Gewichte geometrisch gesetzt: 1436 Punkte
+Info: 29041 vertex weights limited
+[    49s] 4 Splats auf das Mesh legen
+[    53s] Splats {'gesamt': 143366, 'behalten': 141129, 'unveraendert': True} {'haende': 0, 'luecken': 46}
+[    53s] 5 Finger entspannen
+[    53s] 6 Animationen
+20:20:51 | INFO: Data are loaded, start creating Blender stuff
+20:20:51 | INFO: Blender create Mesh node person1_mesh
+20:20:53 | INFO: glTF import finished in 1.30s
+[    56s] 7 Export
+Info: Saved copy as "bv10.blend"
+20:20:54 | INFO: Starting glTF 2.0 export
+20:20:54 | INFO: Extracting primitive: bv10_mesh
+20:20:55 | INFO: Primitives created: 1
+20:20:58 | INFO: Finished glTF 2.0 export in 4.096649169921875 s
+
+[    61s] 8 Testbilder
+REPORT {"id": "bv10", "art": "splats_finger", "koerper": {"punkte": 291496, "dreiecke": 583500, "offene_kanten": 0, "nicht_mannigfaltig": 0, "groesse_m": 1.812, "voxel_mm": 4.0, "schwebeteile": 1501}, "skelett": {"knochen": 61, "schritt_z": 0.843, "arm_achse": {"L": {"neigung_grad": 54.8}, "R": {"neigung_grad": 62.6}}, "schulter_z": 1.402, "schulter_oben": 1.449, "schulter_x": 0.186, "arm_L": {"laenge": 0.504, "handgelenk_bei": 0.358}, "arm_R": {"laenge": 0.785, "handgelenk_bei": 0.549}, "finger": {"L": true, "R": true}}, "hand_gewichte": 1436, "fuellmesh": {"punkte": 39746, "dreiecke": 80000, "offene_kanten": 0, "nicht_mannigfaltig": 0, "nachgetragen": 0, "jacke_entkoppelt": 7667}, "scan_splats": {"gesamt": 143366, "behalten": 141129, "unveraendert": true}, "neue_splats": {"haende": 0, "luecken": 46}, "finger_entspannt": true, "animationen": ["bv10_HeadTilt_L", "bv10_HeadTilt_R", "bv10_Idle_Breathing", "bv10_Pockets", "bv10_Run", "bv10_Stumble", "bv10_Walk"], "glb": {"mb": 3.0, "knochen": 61, "clips": 7}, "splats": {"anzahl": 141175, "teile": [141129, 0, 46], "mb": 35.0}}
+FERTIG
