@@ -14,6 +14,12 @@
       "port": 5175
     },
     {
+      "name": "listen",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["pipeline/tools/md_server.mjs", "5178"],
+      "port": 5178
+    },
+    {
       "name": "scan-viewer",
       "runtimeExecutable": "scan_viewer/.venv/Scripts/python.exe",
       "runtimeArgs": ["-I", "scan_viewer/server.py", "5176"],

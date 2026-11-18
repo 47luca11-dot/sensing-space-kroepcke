@@ -14,7 +14,8 @@ import process as Pr  # noqa: E402
 
 UP, EX, ST = (os.path.join(ROOT, d) for d in ('uploads', 'extracted', 'static'))
 for d in (UP, EX): os.makedirs(d, exist_ok=True)
-PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 5176
+# PORT aus der Umgebung (z. B. vom Vorschau-Werkzeug zugewiesen) hat Vorrang vor dem Argument
+PORT = int(os.environ.get('PORT') or (sys.argv[1] if len(sys.argv) > 1 else 5176))
 MAX_UPLOAD = 2 * 1024 ** 3
 TYPES = {'.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json',
          '.ply': 'application/octet-stream', '.png': 'image/png', '.svg': 'image/svg+xml'}
@@ -78,16 +79,17 @@ class H(BaseHTTPRequestHandler):
         try:
             if p == '/api/scans':
                 return self.send(200, sorted([{k: v for k, v in s.items() if k != 'path'} for s in SCANS.values()], key=lambda s: -s['added']))
-            m = re.fullmatch(r'/api/scan/(\w+)/(original|extracted|mesh)\.ply', p)
+            m = re.fullmatch(r'/api/scan/(\w+)/(original|extracted|mesh)\.ply', p) or re.fullmatch(r'/api/scan/(\w+)/(glb)\.glb', p)
             if m:
                 s = SCANS.get(m[1])
                 if not s: return self.send(404, {'error': 'unbekannt'})
-                path = {'original': s['path'], 'extracted': s.get('extracted'), 'mesh': s.get('mesh')}[m[2]]
+                path = {'original': s['path'], 'extracted': s.get('extracted'), 'mesh': s.get('mesh'), 'glb': s.get('glb')}[m[2]]
                 if not path or not os.path.isfile(path): return self.send(404, {'error': 'noch nicht vorhanden'})
                 dl = None
                 if 'download' in q:
-                    dl = {'original': s['name'], 'extracted': s['name'][:-4] + '_extrahiert.ply', 'mesh': s['name'][:-4] + '_mesh.ply'}[m[2]]
-                return self.send_file(path, 'application/octet-stream', dl)
+                    dl = {'original': s['name'], 'extracted': s['name'][:-4] + '_extrahiert.ply', 'mesh': s['name'][:-4] + '_mesh.ply',
+                          'glb': s['name'][:-4] + '_mesh.glb'}[m[2]]
+                return self.send_file(path, 'model/gltf-binary' if m[2] == 'glb' else 'application/octet-stream', dl)
             f = os.path.normpath(os.path.join(ST, p.lstrip('/') or 'index.html'))
             if not f.startswith(ST) or not os.path.isfile(f): return self.send(404, 'not found', 'text/plain')
             return self.send_file(f, TYPES.get(os.path.splitext(f)[1], 'application/octet-stream'))
@@ -118,6 +120,8 @@ class H(BaseHTTPRequestHandler):
             if m:
                 s = SCANS.get(m[1])
                 if not s: return self.send(404, {'error': 'unbekannt'})
+                if (s.get('info') or {}).get('source', {}).get('type') == 'mesh':
+                    return self.send(409, {'error': 'Mesh-Scan: wurde mit import_mesh.py freigestellt (dort neu erzeugen)'})
                 n = int(self.headers.get('Content-Length', 0) or 0)
                 opts = json.loads(self.rfile.read(n) or b'{}') if n else {}
                 t0 = time.time()
@@ -146,8 +150,11 @@ if __name__ == '__main__':
             if os.path.isfile(ex):
                 SCANS[sid]['extracted'] = ex
                 if os.path.isfile(ex.replace('_extrahiert.ply', '_mesh.ply')): SCANS[sid]['mesh'] = ex.replace('_extrahiert.ply', '_mesh.ply')
+                if os.path.isfile(ex.replace('_extrahiert.ply', '_mesh.glb')): SCANS[sid]['glb'] = ex.replace('_extrahiert.ply', '_mesh.glb')
                 j = ex[:-4] + '.json'
                 if os.path.isfile(j): SCANS[sid]['info'] = json.load(open(j))
+    # unter Windows erlaubt SO_REUSEADDR, einen belegten Port still mitzubenutzen -> lieber klar scheitern
+    ThreadingHTTPServer.allow_reuse_address = sys.platform != 'win32'
     srv = ThreadingHTTPServer(('127.0.0.1', PORT), H)
     print(f'Scan-Viewer: http://localhost:{PORT}', flush=True)
     srv.serve_forever()

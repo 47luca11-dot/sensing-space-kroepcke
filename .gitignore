@@ -13,3 +13,8 @@ dist-artifact/
 # Umgebungsdateien nie committen
 .env
 .env.*
+# Punktwolken-Zwischenstände (pipeline/pointcloud/bl_sample.py, mehrere GB, jederzeit neu erzeugbar)
+/data/pointcloud/stage/
+# Punktwolken-Kacheln (~3,3 GB, zu groß für das Git-LFS-Kontingent) – erzeugen mit:
+#   blender -b --factory-startup -P pipeline/pointcloud/run_headless.py
+/web/assets/city/pointcloud/

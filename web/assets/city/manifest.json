@@ -192,6 +192,20 @@
    "tris": 1340
   },
   {
+   "url": "detail/signage.glb",
+   "kind": "both",
+   "group": "detail",
+   "bounds": [
+    -84.62,
+    -3.04,
+    -41.12,
+    253.31,
+    8.0,
+    362.64
+   ],
+   "tris": 586984
+  },
+  {
    "url": "detail/street.glb",
    "kind": "both",
    "group": "detail",
@@ -220,6 +234,34 @@
    "tris": 364590
   },
   {
+   "url": "landmarks/altes_rathaus.glb",
+   "kind": "both",
+   "group": "landmark",
+   "bounds": [
+    -222.16,
+    -1.0,
+    -1.18,
+    2.4,
+    25.95,
+    390.19
+   ],
+   "tris": 156885
+  },
+  {
+   "url": "landmarks/anzeiger.glb",
+   "kind": "both",
+   "group": "landmark",
+   "bounds": [
+    -547.38,
+    -2.0,
+    -365.41,
+    -485.93,
+    50.49,
+    -266.22
+   ],
+   "tris": 249903
+  },
+  {
    "url": "landmarks/cafe_kroepcke.glb",
    "kind": "both",
    "group": "landmark",
@@ -232,6 +274,20 @@
     46.26
    ],
    "tris": 263693
+  },
+  {
+   "url": "landmarks/gottfried_holzmarkt6.glb",
+   "kind": "both",
+   "group": "landmark",
+   "bounds": [
+    -454.94,
+    -2.48,
+    340.79,
+    -431.52,
+    18.87,
+    361.34
+   ],
+   "tris": 34436
   },
   {
    "url": "landmarks/kroepcke_center.glb",
@@ -276,6 +332,20 @@
    "tris": 8276
   },
   {
+   "url": "landmarks/marktkirche.glb",
+   "kind": "both",
+   "group": "landmark",
+   "bounds": [
+    -273.0,
+    -1.2,
+    277.05,
+    -205.4,
+    97.6,
+    313.41
+   ],
+   "tris": 357350
+  },
+  {
    "url": "buildings/bldg_-1_-1.glb",
    "kind": "visual",
    "group": "buildings",
@@ -284,10 +354,10 @@
     -1.15,
     -111.77,
     13.74,
-    28.42,
+    28.02,
     6.58
    ],
-   "tris": 48427
+   "tris": 50032
   },
   {
    "url": "buildings/bldg_-1_-1_win.glb",
@@ -298,10 +368,10 @@
     -1.15,
     -111.77,
     13.74,
-    28.42,
+    28.02,
     6.58
    ],
-   "tris": 4566,
+   "tris": 37432,
    "cullDist": 230
   },
   {
@@ -316,7 +386,7 @@
     23.57,
     -91.25
    ],
-   "tris": 33943
+   "tris": 37323
   },
   {
    "url": "buildings/bldg_-1_-2_win.glb",
@@ -330,7 +400,7 @@
     23.57,
     -91.25
    ],
-   "tris": 7182,
+   "tris": 41372,
    "cullDist": 230
   },
   {
@@ -345,7 +415,7 @@
     29.66,
     -185.14
    ],
-   "tris": 34834
+   "tris": 35583
   },
   {
    "url": "buildings/bldg_-1_-3_win.glb",
@@ -359,7 +429,7 @@
     29.66,
     -185.14
    ],
-   "tris": 7212,
+   "tris": 24846,
    "cullDist": 230
   },
   {
@@ -374,7 +444,7 @@
     25.99,
     -279.49
    ],
-   "tris": 33351
+   "tris": 36201
   },
   {
    "url": "buildings/bldg_-1_-4_win.glb",
@@ -388,7 +458,7 @@
     25.99,
     -279.49
    ],
-   "tris": 2202,
+   "tris": 38086,
    "cullDist": 230
   },
   {
@@ -396,28 +466,115 @@
    "kind": "visual",
    "group": "buildings",
    "bounds": [
-    -7.23,
-    2.0,
-    -537.67,
-    -1.07,
-    4.86,
-    -532.3
+    -63.04,
+    -1.26,
+    -605.38,
+    52.35,
+    14.3,
+    -516.05
    ],
-   "tris": 246
+   "tris": 6544
   },
   {
    "url": "buildings/bldg_-1_-6_win.glb",
    "kind": "visual",
    "group": "windows",
    "bounds": [
-    -7.23,
-    2.0,
-    -537.67,
-    -1.07,
-    4.86,
-    -532.3
+    -63.04,
+    -1.26,
+    -605.38,
+    52.35,
+    14.3,
+    -516.05
    ],
-   "tris": 234,
+   "tris": 458,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-1_-7.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -148.02,
+    -2.3,
+    -702.68,
+    -7.14,
+    25.29,
+    -586.47
+   ],
+   "tris": 13526
+  },
+  {
+   "url": "buildings/bldg_-1_-7_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -148.02,
+    -2.3,
+    -702.68,
+    -7.14,
+    25.29,
+    -586.47
+   ],
+   "tris": 1690,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-1_-8.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -107.55,
+    -3.0,
+    -805.69,
+    22.78,
+    49.88,
+    -674.77
+   ],
+   "tris": 29557
+  },
+  {
+   "url": "buildings/bldg_-1_-8_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -107.55,
+    -3.0,
+    -805.69,
+    22.78,
+    49.88,
+    -674.77
+   ],
+   "tris": 7829,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-1_-9.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -78.49,
+    -2.47,
+    -867.76,
+    4.53,
+    17.97,
+    -796.2
+   ],
+   "tris": 14003
+  },
+  {
+   "url": "buildings/bldg_-1_-9_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -78.49,
+    -2.47,
+    -867.76,
+    4.53,
+    17.97,
+    -796.2
+   ],
+   "tris": 3188,
    "cullDist": 230
   },
   {
@@ -425,28 +582,28 @@
    "kind": "visual",
    "group": "buildings",
    "bounds": [
-    -106.65,
+    -106.19,
     -0.31,
     13.79,
     -66.24,
     25.05,
     96.58
    ],
-   "tris": 14216
+   "tris": 14470
   },
   {
    "url": "buildings/bldg_-1_0_win.glb",
    "kind": "visual",
    "group": "windows",
    "bounds": [
-    -106.65,
+    -106.19,
     -0.31,
     13.79,
     -66.24,
     25.05,
     96.58
    ],
-   "tris": 5570,
+   "tris": 19550,
    "cullDist": 230
   },
   {
@@ -461,7 +618,7 @@
     23.61,
     177.23
    ],
-   "tris": 13863
+   "tris": 15590
   },
   {
    "url": "buildings/bldg_-1_1_win.glb",
@@ -475,7 +632,7 @@
     23.61,
     177.23
    ],
-   "tris": 3892,
+   "tris": 19148,
    "cullDist": 230
   },
   {
@@ -490,7 +647,7 @@
     19.75,
     316.42
    ],
-   "tris": 5996
+   "tris": 10253
   },
   {
    "url": "buildings/bldg_-1_2_win.glb",
@@ -504,7 +661,7 @@
     19.75,
     316.42
    ],
-   "tris": 3284,
+   "tris": 12668,
    "cullDist": 230
   },
   {
@@ -516,10 +673,10 @@
     -1.48,
     309.75,
     0.26,
-    20.29,
+    21.49,
     400.98
    ],
-   "tris": 22106
+   "tris": 28498
   },
   {
    "url": "buildings/bldg_-1_3_win.glb",
@@ -530,10 +687,10 @@
     -1.48,
     309.75,
     0.26,
-    20.29,
+    21.49,
     400.98
    ],
-   "tris": 6970,
+   "tris": 28702,
    "cullDist": 230
   },
   {
@@ -545,10 +702,10 @@
     -0.88,
     380.59,
     16.83,
-    20.96,
+    20.83,
     503.58
    ],
-   "tris": 33409
+   "tris": 40808
   },
   {
    "url": "buildings/bldg_-1_4_win.glb",
@@ -559,10 +716,111 @@
     -0.88,
     380.59,
     16.83,
-    20.96,
+    20.83,
     503.58
    ],
-   "tris": 8767,
+   "tris": 28753,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-1_5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -37.34,
+    -0.95,
+    567.66,
+    -13.4,
+    9.19,
+    600.7
+   ],
+   "tris": 1874
+  },
+  {
+   "url": "buildings/bldg_-1_5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -37.34,
+    -0.95,
+    567.66,
+    -13.4,
+    9.19,
+    600.7
+   ],
+   "tris": 7386,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-1_6.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -73.71,
+    -2.35,
+    597.2,
+    5.24,
+    23.73,
+    670.31
+   ],
+   "tris": 19414
+  },
+  {
+   "url": "buildings/bldg_-1_6_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -73.71,
+    -2.35,
+    597.2,
+    5.24,
+    23.73,
+    670.31
+   ],
+   "tris": 5340,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-1_7.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -95.33,
+    -1.2,
+    758.6,
+    -74.43,
+    16.47,
+    765.48
+   ],
+   "tris": 1720
+  },
+  {
+   "url": "buildings/bldg_-1_8.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -165.46,
+    -2.59,
+    751.54,
+    -25.01,
+    92.49,
+    847.78
+   ],
+   "tris": 121169
+  },
+  {
+   "url": "buildings/bldg_-1_8_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -165.46,
+    -2.59,
+    751.54,
+    -25.01,
+    92.49,
+    847.78
+   ],
+   "tris": 3600,
    "cullDist": 230
   },
   {
@@ -572,12 +830,12 @@
    "bounds": [
     -199.3,
     -1.3,
-    -118.54,
+    -117.94,
     -94.02,
     32.38,
     3.77
    ],
-   "tris": 39116
+   "tris": 40934
   },
   {
    "url": "buildings/bldg_-2_-1_win.glb",
@@ -586,12 +844,12 @@
    "bounds": [
     -199.3,
     -1.3,
-    -118.54,
+    -117.94,
     -94.02,
     32.38,
     3.77
    ],
-   "tris": 4352,
+   "tris": 35900,
    "cullDist": 230
   },
   {
@@ -606,7 +864,7 @@
     24.53,
     -108.91
    ],
-   "tris": 28227
+   "tris": 31880
   },
   {
    "url": "buildings/bldg_-2_-2_win.glb",
@@ -620,7 +878,7 @@
     24.53,
     -108.91
    ],
-   "tris": 5614,
+   "tris": 33444,
    "cullDist": 230
   },
   {
@@ -635,7 +893,7 @@
     21.38,
     -173.05
    ],
-   "tris": 43291
+   "tris": 43506
   },
   {
    "url": "buildings/bldg_-2_-3_win.glb",
@@ -649,7 +907,7 @@
     21.38,
     -173.05
    ],
-   "tris": 7620,
+   "tris": 46778,
    "cullDist": 230
   },
   {
@@ -664,7 +922,7 @@
     23.28,
     -285.26
    ],
-   "tris": 30338
+   "tris": 30432
   },
   {
    "url": "buildings/bldg_-2_-4_win.glb",
@@ -678,7 +936,7 @@
     23.28,
     -285.26
    ],
-   "tris": 9198,
+   "tris": 12226,
    "cullDist": 230
   },
   {
@@ -687,13 +945,13 @@
    "group": "buildings",
    "bounds": [
     -191.92,
-    2.34,
-    -536.55,
-    -171.4,
+    -1.55,
+    -600.59,
+    -94.52,
     12.27,
     -513.53
    ],
-   "tris": 1879
+   "tris": 2539
   },
   {
    "url": "buildings/bldg_-2_-6_win.glb",
@@ -701,13 +959,100 @@
    "group": "windows",
    "bounds": [
     -191.92,
-    2.34,
-    -536.55,
-    -171.4,
+    -1.55,
+    -600.59,
+    -94.52,
     12.27,
     -513.53
    ],
-   "tris": 1426,
+   "tris": 2674,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-2_-7.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -193.87,
+    -2.81,
+    -706.02,
+    -86.13,
+    13.38,
+    -642.56
+   ],
+   "tris": 10405
+  },
+  {
+   "url": "buildings/bldg_-2_-7_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -193.87,
+    -2.81,
+    -706.02,
+    -86.13,
+    13.38,
+    -642.56
+   ],
+   "tris": 8443,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-2_-8.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -204.87,
+    -3.58,
+    -803.53,
+    -95.88,
+    24.51,
+    -688.44
+   ],
+   "tris": 49269
+  },
+  {
+   "url": "buildings/bldg_-2_-8_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -204.87,
+    -3.58,
+    -803.53,
+    -95.88,
+    24.51,
+    -688.44
+   ],
+   "tris": 8309,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-2_-9.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -194.51,
+    -2.6,
+    -864.48,
+    -95.42,
+    24.69,
+    -797.62
+   ],
+   "tris": 17138
+  },
+  {
+   "url": "buildings/bldg_-2_-9_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -194.51,
+    -2.6,
+    -864.48,
+    -95.42,
+    24.69,
+    -797.62
+   ],
+   "tris": 4649,
    "cullDist": 230
   },
   {
@@ -722,7 +1067,7 @@
     30.62,
     114.27
    ],
-   "tris": 41128
+   "tris": 40773
   },
   {
    "url": "buildings/bldg_-2_0_win.glb",
@@ -736,7 +1081,7 @@
     30.62,
     114.27
    ],
-   "tris": 4352,
+   "tris": 46056,
    "cullDist": 230
   },
   {
@@ -751,7 +1096,7 @@
     28.45,
     207.82
    ],
-   "tris": 30914
+   "tris": 32999
   },
   {
    "url": "buildings/bldg_-2_1_win.glb",
@@ -765,7 +1110,7 @@
     28.45,
     207.82
    ],
-   "tris": 7286,
+   "tris": 39846,
    "cullDist": 230
   },
   {
@@ -780,7 +1125,7 @@
     25.31,
     312.3
    ],
-   "tris": 48338
+   "tris": 64556
   },
   {
    "url": "buildings/bldg_-2_2_win.glb",
@@ -794,7 +1139,7 @@
     25.31,
     312.3
    ],
-   "tris": 8397,
+   "tris": 56319,
    "cullDist": 230
   },
   {
@@ -802,28 +1147,28 @@
    "kind": "visual",
    "group": "buildings",
    "bounds": [
-    -222.55,
+    -172.3,
     -1.35,
     292.84,
     -90.4,
-    23.16,
+    17.94,
     400.77
    ],
-   "tris": 33947
+   "tris": 20357
   },
   {
    "url": "buildings/bldg_-2_3_win.glb",
    "kind": "visual",
    "group": "windows",
    "bounds": [
-    -222.55,
+    -172.3,
     -1.35,
     292.84,
     -90.4,
-    23.16,
+    17.94,
     400.77
    ],
-   "tris": 4972,
+   "tris": 33892,
    "cullDist": 230
   },
   {
@@ -835,10 +1180,10 @@
     -0.53,
     401.88,
     -117.1,
-    18.38,
+    18.65,
     511.42
    ],
-   "tris": 15135
+   "tris": 15314
   },
   {
    "url": "buildings/bldg_-2_4_win.glb",
@@ -849,10 +1194,10 @@
     -0.53,
     401.88,
     -117.1,
-    18.38,
+    18.65,
     511.42
    ],
-   "tris": 2808,
+   "tris": 20108,
    "cullDist": 230
   },
   {
@@ -861,13 +1206,13 @@
    "group": "buildings",
    "bounds": [
     -204.7,
-    -1.01,
+    -1.8,
     468.07,
     -85.54,
     22.94,
-    561.2
+    588.01
    ],
-   "tris": 18763
+   "tris": 24991
   },
   {
    "url": "buildings/bldg_-2_5_win.glb",
@@ -875,13 +1220,71 @@
    "group": "windows",
    "bounds": [
     -204.7,
-    -1.01,
+    -1.8,
     468.07,
     -85.54,
     22.94,
-    561.2
+    588.01
    ],
-   "tris": 6878,
+   "tris": 7402,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-2_6.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -198.76,
+    -3.09,
+    573.22,
+    -58.61,
+    32.78,
+    643.7
+   ],
+   "tris": 15310
+  },
+  {
+   "url": "buildings/bldg_-2_6_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -198.76,
+    -3.09,
+    573.22,
+    -58.61,
+    32.78,
+    643.7
+   ],
+   "tris": 3359,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-2_7.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -191.75,
+    -2.17,
+    681.49,
+    -148.32,
+    17.2,
+    728.16
+   ],
+   "tris": 5081
+  },
+  {
+   "url": "buildings/bldg_-2_7_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -191.75,
+    -2.17,
+    681.49,
+    -148.32,
+    17.2,
+    728.16
+   ],
+   "tris": 3134,
    "cullDist": 230
   },
   {
@@ -896,7 +1299,7 @@
     29.43,
     11.91
    ],
-   "tris": 49621
+   "tris": 53453
   },
   {
    "url": "buildings/bldg_-3_-1_win.glb",
@@ -910,7 +1313,7 @@
     29.43,
     11.91
    ],
-   "tris": 5768,
+   "tris": 50630,
    "cullDist": 230
   },
   {
@@ -923,9 +1326,9 @@
     -201.65,
     -196.15,
     29.7,
-    -93.07
+    -93.76
    ],
-   "tris": 30645
+   "tris": 28311
   },
   {
    "url": "buildings/bldg_-3_-2_win.glb",
@@ -937,9 +1340,9 @@
     -201.65,
     -196.15,
     29.7,
-    -93.07
+    -93.76
    ],
-   "tris": 5390,
+   "tris": 34938,
    "cullDist": 230
   },
   {
@@ -951,10 +1354,10 @@
     -3.44,
     -316.28,
     -194.64,
-    26.38,
+    26.25,
     -199.54
    ],
-   "tris": 49867
+   "tris": 48063
   },
   {
    "url": "buildings/bldg_-3_-3_win.glb",
@@ -965,10 +1368,10 @@
     -3.44,
     -316.28,
     -194.64,
-    26.38,
+    26.25,
     -199.54
    ],
-   "tris": 9924,
+   "tris": 37940,
    "cullDist": 230
   },
   {
@@ -983,7 +1386,7 @@
     19.72,
     -296.86
    ],
-   "tris": 26454
+   "tris": 25804
   },
   {
    "url": "buildings/bldg_-3_-4_win.glb",
@@ -997,7 +1400,7 @@
     19.72,
     -296.86
    ],
-   "tris": 5750,
+   "tris": 7624,
    "cullDist": 230
   },
   {
@@ -1012,7 +1415,7 @@
     25.4,
     -391.44
    ],
-   "tris": 38159
+   "tris": 38167
   },
   {
    "url": "buildings/bldg_-3_-5_win.glb",
@@ -1030,6 +1433,64 @@
    "cullDist": 230
   },
   {
+   "url": "buildings/bldg_-3_-8.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -250.63,
+    -3.57,
+    -807.16,
+    -194.02,
+    15.96,
+    -731.46
+   ],
+   "tris": 17339
+  },
+  {
+   "url": "buildings/bldg_-3_-8_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -250.63,
+    -3.57,
+    -807.16,
+    -194.02,
+    15.96,
+    -731.46
+   ],
+   "tris": 4439,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-3_-9.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -251.29,
+    -2.55,
+    -844.29,
+    -197.11,
+    16.4,
+    -796.78
+   ],
+   "tris": 9687
+  },
+  {
+   "url": "buildings/bldg_-3_-9_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -251.29,
+    -2.55,
+    -844.29,
+    -197.11,
+    16.4,
+    -796.78
+   ],
+   "tris": 3985,
+   "cullDist": 230
+  },
+  {
    "url": "buildings/bldg_-3_0.glb",
    "kind": "visual",
    "group": "buildings",
@@ -1037,11 +1498,11 @@
     -299.35,
     -1.25,
     10.93,
-    -204.6,
-    21.07,
+    -204.63,
+    20.94,
     93.53
    ],
-   "tris": 31470
+   "tris": 32820
   },
   {
    "url": "buildings/bldg_-3_0_win.glb",
@@ -1051,11 +1512,11 @@
     -299.35,
     -1.25,
     10.93,
-    -204.6,
-    21.07,
+    -204.63,
+    20.94,
     93.53
    ],
-   "tris": 4566,
+   "tris": 40400,
    "cullDist": 230
   },
   {
@@ -1065,12 +1526,12 @@
    "bounds": [
     -290.88,
     -0.93,
-    99.37,
+    99.31,
     -137.39,
-    32.69,
+    32.74,
     232.41
    ],
-   "tris": 45847
+   "tris": 52727
   },
   {
    "url": "buildings/bldg_-3_1_win.glb",
@@ -1079,12 +1540,12 @@
    "bounds": [
     -290.88,
     -0.93,
-    99.37,
+    99.31,
     -137.39,
-    32.69,
+    32.74,
     232.41
    ],
-   "tris": 5988,
+   "tris": 49608,
    "cullDist": 230
   },
   {
@@ -1096,10 +1557,10 @@
     -0.23,
     201.55,
     -189.76,
-    85.24,
-    313.13
+    26.98,
+    283.11
    ],
-   "tris": 48270
+   "tris": 44248
   },
   {
    "url": "buildings/bldg_-3_2_win.glb",
@@ -1110,10 +1571,10 @@
     -0.23,
     201.55,
     -189.76,
-    85.24,
-    313.13
+    26.98,
+    283.11
    ],
-   "tris": 15813,
+   "tris": 31934,
    "cullDist": 230
   },
   {
@@ -1128,7 +1589,7 @@
     27.18,
     414.48
    ],
-   "tris": 35680
+   "tris": 36344
   },
   {
    "url": "buildings/bldg_-3_3_win.glb",
@@ -1142,7 +1603,7 @@
     27.18,
     414.48
    ],
-   "tris": 9040,
+   "tris": 27502,
    "cullDist": 230
   },
   {
@@ -1157,7 +1618,7 @@
     29.33,
     469.76
    ],
-   "tris": 32814
+   "tris": 38043
   },
   {
    "url": "buildings/bldg_-3_4_win.glb",
@@ -1171,7 +1632,65 @@
     29.33,
     469.76
    ],
-   "tris": 8113,
+   "tris": 29477,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-3_5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -290.42,
+    -3.14,
+    517.56,
+    -198.25,
+    19.11,
+    605.84
+   ],
+   "tris": 15808
+  },
+  {
+   "url": "buildings/bldg_-3_5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -290.42,
+    -3.14,
+    517.56,
+    -198.25,
+    19.11,
+    605.84
+   ],
+   "tris": 11556,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-3_7.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -266.0,
+    -4.48,
+    673.57,
+    -205.28,
+    29.44,
+    813.71
+   ],
+   "tris": 24774
+  },
+  {
+   "url": "buildings/bldg_-3_7_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -266.0,
+    -4.48,
+    673.57,
+    -205.28,
+    29.44,
+    813.71
+   ],
+   "tris": 1252,
    "cullDist": 230
   },
   {
@@ -1186,7 +1705,7 @@
     23.86,
     -22.82
    ],
-   "tris": 42358
+   "tris": 48992
   },
   {
    "url": "buildings/bldg_-4_-1_win.glb",
@@ -1200,7 +1719,7 @@
     23.86,
     -22.82
    ],
-   "tris": 8891,
+   "tris": 36987,
    "cullDist": 230
   },
   {
@@ -1208,28 +1727,28 @@
    "kind": "visual",
    "group": "buildings",
    "bounds": [
-    -399.25,
+    -398.61,
     -3.21,
     -203.65,
     -292.2,
-    22.47,
+    22.52,
     -91.87
    ],
-   "tris": 29792
+   "tris": 35626
   },
   {
    "url": "buildings/bldg_-4_-2_win.glb",
    "kind": "visual",
    "group": "windows",
    "bounds": [
-    -399.25,
+    -398.61,
     -3.21,
     -203.65,
     -292.2,
-    22.47,
+    22.52,
     -91.87
    ],
-   "tris": 6166,
+   "tris": 39920,
    "cullDist": 230
   },
   {
@@ -1244,7 +1763,7 @@
     21.86,
     -200.61
    ],
-   "tris": 33815
+   "tris": 38281
   },
   {
    "url": "buildings/bldg_-4_-3_win.glb",
@@ -1258,7 +1777,7 @@
     21.86,
     -200.61
    ],
-   "tris": 9316,
+   "tris": 40572,
    "cullDist": 230
   },
   {
@@ -1266,28 +1785,28 @@
    "kind": "visual",
    "group": "buildings",
    "bounds": [
-    -428.96,
+    -430.18,
     -2.3,
-    -418.01,
+    -417.67,
     -287.41,
     21.94,
     -296.31
    ],
-   "tris": 52659
+   "tris": 53836
   },
   {
    "url": "buildings/bldg_-4_-4_win.glb",
    "kind": "visual",
    "group": "windows",
    "bounds": [
-    -428.96,
+    -430.18,
     -2.3,
-    -418.01,
+    -417.67,
     -287.41,
     21.94,
     -296.31
    ],
-   "tris": 10641,
+   "tris": 31315,
    "cullDist": 230
   },
   {
@@ -1295,28 +1814,86 @@
    "kind": "visual",
    "group": "buildings",
    "bounds": [
-    -377.02,
+    -403.41,
     -2.2,
     -456.3,
     -299.85,
-    19.1,
-    -408.44
+    22.39,
+    -405.63
    ],
-   "tris": 11263
+   "tris": 22398
   },
   {
    "url": "buildings/bldg_-4_-5_win.glb",
    "kind": "visual",
    "group": "windows",
    "bounds": [
-    -377.02,
+    -403.41,
     -2.2,
     -456.3,
     -299.85,
-    19.1,
-    -408.44
+    22.39,
+    -405.63
    ],
-   "tris": 8045,
+   "tris": 25733,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-4_-7.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -407.52,
+    -2.97,
+    -708.59,
+    -298.6,
+    21.59,
+    -600.76
+   ],
+   "tris": 13844
+  },
+  {
+   "url": "buildings/bldg_-4_-7_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -407.52,
+    -2.97,
+    -708.59,
+    -298.6,
+    21.59,
+    -600.76
+   ],
+   "tris": 20068,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-4_-8.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -400.62,
+    -2.11,
+    -760.81,
+    -313.64,
+    18.68,
+    -661.14
+   ],
+   "tris": 10218
+  },
+  {
+   "url": "buildings/bldg_-4_-8_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -400.62,
+    -2.11,
+    -760.81,
+    -313.64,
+    18.68,
+    -661.14
+   ],
+   "tris": 10090,
    "cullDist": 230
   },
   {
@@ -1327,11 +1904,11 @@
     -419.66,
     -1.26,
     -19.32,
-    -295.3,
+    -296.21,
     20.8,
-    106.58
+    106.96
    ],
-   "tris": 70362
+   "tris": 72006
   },
   {
    "url": "buildings/bldg_-4_0_win.glb",
@@ -1341,11 +1918,11 @@
     -419.66,
     -1.26,
     -19.32,
-    -295.3,
+    -296.21,
     20.8,
-    106.58
+    106.96
    ],
-   "tris": 8845,
+   "tris": 53198,
    "cullDist": 230
   },
   {
@@ -1353,28 +1930,28 @@
    "kind": "visual",
    "group": "buildings",
    "bounds": [
-    -403.19,
+    -403.21,
     -1.26,
     107.19,
     -278.23,
     18.58,
     201.3
    ],
-   "tris": 42669
+   "tris": 47776
   },
   {
    "url": "buildings/bldg_-4_1_win.glb",
    "kind": "visual",
    "group": "windows",
    "bounds": [
-    -403.19,
+    -403.21,
     -1.26,
     107.19,
     -278.23,
     18.58,
     201.3
    ],
-   "tris": 7612,
+   "tris": 37014,
    "cullDist": 230
   },
   {
@@ -1383,13 +1960,13 @@
    "group": "buildings",
    "bounds": [
     -414.93,
-    -1.2,
+    -1.22,
     183.58,
     -285.98,
     24.08,
-    307.41
+    307.25
    ],
-   "tris": 83100
+   "tris": 110187
   },
   {
    "url": "buildings/bldg_-4_2_win.glb",
@@ -1397,13 +1974,13 @@
    "group": "windows",
    "bounds": [
     -414.93,
-    -1.2,
+    -1.22,
     183.58,
     -285.98,
     24.08,
-    307.41
+    307.25
    ],
-   "tris": 10629,
+   "tris": 44920,
    "cullDist": 230
   },
   {
@@ -1418,7 +1995,7 @@
     27.77,
     409.22
    ],
-   "tris": 56100
+   "tris": 99746
   },
   {
    "url": "buildings/bldg_-4_3_win.glb",
@@ -1432,7 +2009,36 @@
     27.77,
     409.22
    ],
-   "tris": 11549,
+   "tris": 33929,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-4_4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -484.97,
+    -7.58,
+    387.79,
+    -314.46,
+    21.44,
+    499.58
+   ],
+   "tris": 33257
+  },
+  {
+   "url": "buildings/bldg_-4_4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -484.97,
+    -7.58,
+    387.79,
+    -314.46,
+    21.44,
+    499.58
+   ],
+   "tris": 12606,
    "cullDist": 230
   },
   {
@@ -1447,7 +2053,7 @@
     19.93,
     9.36
    ],
-   "tris": 54072
+   "tris": 51366
   },
   {
    "url": "buildings/bldg_-5_-1_win.glb",
@@ -1461,7 +2067,7 @@
     19.93,
     9.36
    ],
-   "tris": 10203,
+   "tris": 25635,
    "cullDist": 230
   },
   {
@@ -1473,10 +2079,10 @@
     -1.13,
     -199.98,
     -405.24,
-    20.01,
+    20.23,
     -91.15
    ],
-   "tris": 4386
+   "tris": 4745
   },
   {
    "url": "buildings/bldg_-5_-2_win.glb",
@@ -1487,10 +2093,10 @@
     -1.13,
     -199.98,
     -405.24,
-    20.01,
+    20.23,
     -91.15
    ],
-   "tris": 4476,
+   "tris": 6912,
    "cullDist": 230
   },
   {
@@ -1498,28 +2104,28 @@
    "kind": "visual",
    "group": "buildings",
    "bounds": [
-    -502.91,
+    -517.26,
     -1.15,
     -303.69,
     -402.25,
-    31.94,
+    33.17,
     -197.39
    ],
-   "tris": 11386
+   "tris": 16758
   },
   {
    "url": "buildings/bldg_-5_-3_win.glb",
    "kind": "visual",
    "group": "windows",
    "bounds": [
-    -502.91,
+    -517.26,
     -1.15,
     -303.69,
     -402.25,
-    31.94,
+    33.17,
     -197.39
    ],
-   "tris": 3288,
+   "tris": 17886,
    "cullDist": 230
   },
   {
@@ -1527,28 +2133,129 @@
    "kind": "visual",
    "group": "buildings",
    "bounds": [
-    -427.77,
-    -1.37,
-    -366.03,
+    -469.01,
+    -1.66,
+    -398.77,
     -386.38,
     27.37,
     -330.15
    ],
-   "tris": 6828
+   "tris": 12544
   },
   {
    "url": "buildings/bldg_-5_-4_win.glb",
    "kind": "visual",
    "group": "windows",
    "bounds": [
-    -427.77,
-    -1.37,
-    -366.03,
+    -469.01,
+    -1.66,
+    -398.77,
     -386.38,
     27.37,
     -330.15
    ],
-   "tris": 2198,
+   "tris": 7356,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-5_-5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -425.88,
+    -1.68,
+    -431.3,
+    -398.13,
+    26.36,
+    -397.01
+   ],
+   "tris": 4449
+  },
+  {
+   "url": "buildings/bldg_-5_-5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -425.88,
+    -1.68,
+    -431.3,
+    -398.13,
+    26.36,
+    -397.01
+   ],
+   "tris": 8284,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-5_-6.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -481.81,
+    -1.56,
+    -587.94,
+    -469.64,
+    3.84,
+    -575.77
+   ],
+   "tris": 930
+  },
+  {
+   "url": "buildings/bldg_-5_-7.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -511.05,
+    -2.04,
+    -722.72,
+    -424.98,
+    19.07,
+    -596.52
+   ],
+   "tris": 38071
+  },
+  {
+   "url": "buildings/bldg_-5_-7_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -511.05,
+    -2.04,
+    -722.72,
+    -424.98,
+    19.07,
+    -596.52
+   ],
+   "tris": 26693,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-5_-8.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -471.94,
+    -2.29,
+    -744.29,
+    -420.35,
+    24.59,
+    -693.71
+   ],
+   "tris": 15439
+  },
+  {
+   "url": "buildings/bldg_-5_-8_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -471.94,
+    -2.29,
+    -744.29,
+    -420.35,
+    24.59,
+    -693.71
+   ],
+   "tris": 5524,
    "cullDist": 230
   },
   {
@@ -1563,7 +2270,7 @@
     20.85,
     106.15
    ],
-   "tris": 30735
+   "tris": 35619
   },
   {
    "url": "buildings/bldg_-5_0_win.glb",
@@ -1577,7 +2284,7 @@
     20.85,
     106.15
    ],
-   "tris": 8125,
+   "tris": 24521,
    "cullDist": 230
   },
   {
@@ -1585,28 +2292,28 @@
    "kind": "visual",
    "group": "buildings",
    "bounds": [
-    -505.89,
-    -1.75,
+    -506.11,
+    -1.77,
     95.82,
-    -396.59,
+    -396.6,
     71.39,
-    208.36
+    208.41
    ],
-   "tris": 53200
+   "tris": 106300
   },
   {
    "url": "buildings/bldg_-5_1_win.glb",
    "kind": "visual",
    "group": "windows",
    "bounds": [
-    -505.89,
-    -1.75,
+    -506.11,
+    -1.77,
     95.82,
-    -396.59,
+    -396.6,
     71.39,
-    208.36
+    208.41
    ],
-   "tris": 16066,
+   "tris": 25850,
    "cullDist": 230
   },
   {
@@ -1614,28 +2321,28 @@
    "kind": "visual",
    "group": "buildings",
    "bounds": [
-    -520.47,
+    -520.31,
     -3.86,
-    198.82,
+    198.49,
     -371.01,
     20.5,
-    309.75
+    309.63
    ],
-   "tris": 44712
+   "tris": 71398
   },
   {
    "url": "buildings/bldg_-5_2_win.glb",
    "kind": "visual",
    "group": "windows",
    "bounds": [
-    -520.47,
+    -520.31,
     -3.86,
-    198.82,
+    198.49,
     -371.01,
     20.5,
-    309.75
+    309.63
    ],
-   "tris": 9928,
+   "tris": 25496,
    "cullDist": 230
   },
   {
@@ -1643,28 +2350,86 @@
    "kind": "visual",
    "group": "buildings",
    "bounds": [
-    -419.04,
-    -1.59,
-    293.7,
+    -501.88,
+    -2.91,
+    293.69,
     -394.55,
-    21.12,
-    349.54
+    24.18,
+    379.3
    ],
-   "tris": 8740
+   "tris": 75040
   },
   {
    "url": "buildings/bldg_-5_3_win.glb",
    "kind": "visual",
    "group": "windows",
    "bounds": [
-    -419.04,
-    -1.59,
-    293.7,
+    -501.88,
+    -2.91,
+    293.69,
     -394.55,
-    21.12,
-    349.54
+    24.18,
+    379.3
    ],
-   "tris": 4820,
+   "tris": 26612,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-5_6.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -496.92,
+    -3.54,
+    653.84,
+    -461.2,
+    0.64,
+    700.14
+   ],
+   "tris": 2138
+  },
+  {
+   "url": "buildings/bldg_-5_6_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -496.92,
+    -3.54,
+    653.84,
+    -461.2,
+    0.64,
+    700.14
+   ],
+   "tris": 278,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-5_7.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -468.58,
+    -3.83,
+    703.14,
+    -446.58,
+    0.97,
+    733.9
+   ],
+   "tris": 935
+  },
+  {
+   "url": "buildings/bldg_-5_7_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -468.58,
+    -3.83,
+    703.14,
+    -446.58,
+    0.97,
+    733.9
+   ],
+   "tris": 278,
    "cullDist": 230
   },
   {
@@ -1672,28 +2437,28 @@
    "kind": "visual",
    "group": "buildings",
    "bounds": [
-    -560.62,
-    -1.11,
-    -100.54,
+    -619.55,
+    -1.28,
+    -109.64,
     -491.63,
-    22.84,
-    7.3
+    33.21,
+    10.9
    ],
-   "tris": 28723
+   "tris": 53827
   },
   {
    "url": "buildings/bldg_-6_-1_win.glb",
    "kind": "visual",
    "group": "windows",
    "bounds": [
-    -560.62,
-    -1.11,
-    -100.54,
+    -619.55,
+    -1.28,
+    -109.64,
     -491.63,
-    22.84,
-    7.3
+    33.21,
+    10.9
    ],
-   "tris": 10309,
+   "tris": 26465,
    "cullDist": 230
   },
   {
@@ -1701,28 +2466,144 @@
    "kind": "visual",
    "group": "buildings",
    "bounds": [
-    -560.73,
-    -0.97,
+    -621.57,
+    -2.16,
     -197.73,
     -503.55,
-    22.46,
-    -90.85
+    23.33,
+    -85.06
    ],
-   "tris": 21638
+   "tris": 37284
   },
   {
    "url": "buildings/bldg_-6_-2_win.glb",
    "kind": "visual",
    "group": "windows",
    "bounds": [
-    -560.73,
-    -0.97,
+    -621.57,
+    -2.16,
     -197.73,
     -503.55,
-    22.46,
-    -90.85
+    23.33,
+    -85.06
    ],
-   "tris": 5082,
+   "tris": 36102,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-6_-3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -614.0,
+    -0.89,
+    -304.04,
+    -481.09,
+    31.98,
+    -186.85
+   ],
+   "tris": 42087
+  },
+  {
+   "url": "buildings/bldg_-6_-3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -614.0,
+    -0.89,
+    -304.04,
+    -481.09,
+    31.98,
+    -186.85
+   ],
+   "tris": 31396,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-6_-4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -610.93,
+    -1.21,
+    -400.3,
+    -498.49,
+    23.02,
+    -298.56
+   ],
+   "tris": 14192
+  },
+  {
+   "url": "buildings/bldg_-6_-4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -610.93,
+    -1.21,
+    -400.3,
+    -498.49,
+    23.02,
+    -298.56
+   ],
+   "tris": 16665,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-6_-5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -618.57,
+    -2.94,
+    -510.11,
+    -516.19,
+    32.32,
+    -393.01
+   ],
+   "tris": 17682
+  },
+  {
+   "url": "buildings/bldg_-6_-5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -618.57,
+    -2.94,
+    -510.11,
+    -516.19,
+    32.32,
+    -393.01
+   ],
+   "tris": 9086,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-6_-7.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -558.62,
+    -1.97,
+    -676.5,
+    -489.86,
+    18.44,
+    -610.32
+   ],
+   "tris": 17729
+  },
+  {
+   "url": "buildings/bldg_-6_-7_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -558.62,
+    -1.97,
+    -676.5,
+    -489.86,
+    18.44,
+    -610.32
+   ],
+   "tris": 20159,
    "cullDist": 230
   },
   {
@@ -1730,28 +2611,28 @@
    "kind": "visual",
    "group": "buildings",
    "bounds": [
-    -568.94,
-    -0.96,
+    -606.16,
+    -1.22,
     -1.87,
     -492.17,
     23.24,
-    102.95
+    123.68
    ],
-   "tris": 19256
+   "tris": 33173
   },
   {
    "url": "buildings/bldg_-6_0_win.glb",
    "kind": "visual",
    "group": "windows",
    "bounds": [
-    -568.94,
-    -0.96,
+    -606.16,
+    -1.22,
     -1.87,
     -492.17,
     23.24,
-    102.95
+    123.68
    ],
-   "tris": 9124,
+   "tris": 17798,
    "cullDist": 230
   },
   {
@@ -1759,28 +2640,825 @@
    "kind": "visual",
    "group": "buildings",
    "bounds": [
-    -559.65,
+    -583.47,
     -1.49,
-    97.47,
+    97.45,
     -491.31,
-    20.63,
-    226.87
+    21.86,
+    226.5
    ],
-   "tris": 27940
+   "tris": 63814
   },
   {
    "url": "buildings/bldg_-6_1_win.glb",
    "kind": "visual",
    "group": "windows",
    "bounds": [
-    -559.65,
+    -583.47,
     -1.49,
-    97.47,
+    97.45,
     -491.31,
-    20.63,
-    226.87
+    21.86,
+    226.5
    ],
-   "tris": 10034,
+   "tris": 22160,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-6_2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -538.86,
+    -1.39,
+    220.76,
+    -515.51,
+    20.51,
+    250.19
+   ],
+   "tris": 16671
+  },
+  {
+   "url": "buildings/bldg_-6_2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -538.86,
+    -1.39,
+    220.76,
+    -515.51,
+    20.51,
+    250.19
+   ],
+   "tris": 8238,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-6_3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -514.95,
+    -3.86,
+    297.8,
+    -505.26,
+    25.3,
+    308.67
+   ],
+   "tris": 2708
+  },
+  {
+   "url": "buildings/bldg_-6_4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -641.75,
+    -4.81,
+    425.98,
+    -531.8,
+    21.13,
+    527.08
+   ],
+   "tris": 30940
+  },
+  {
+   "url": "buildings/bldg_-6_4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -641.75,
+    -4.81,
+    425.98,
+    -531.8,
+    21.13,
+    527.08
+   ],
+   "tris": 3884,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-6_5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -601.93,
+    -4.75,
+    504.94,
+    -520.73,
+    20.47,
+    565.79
+   ],
+   "tris": 22523
+  },
+  {
+   "url": "buildings/bldg_-6_5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -601.93,
+    -4.75,
+    504.94,
+    -520.73,
+    20.47,
+    565.79
+   ],
+   "tris": 3452,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-7_-1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -691.78,
+    -4.29,
+    -105.95,
+    -602.86,
+    22.45,
+    -6.81
+   ],
+   "tris": 23919
+  },
+  {
+   "url": "buildings/bldg_-7_-1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -691.78,
+    -4.29,
+    -105.95,
+    -602.86,
+    22.45,
+    -6.81
+   ],
+   "tris": 18284,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-7_-2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -702.73,
+    -1.72,
+    -208.06,
+    -605.48,
+    20.6,
+    -100.24
+   ],
+   "tris": 30910
+  },
+  {
+   "url": "buildings/bldg_-7_-2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -702.73,
+    -1.72,
+    -208.06,
+    -605.48,
+    20.6,
+    -100.24
+   ],
+   "tris": 14441,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-7_-3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -699.55,
+    -2.8,
+    -311.09,
+    -604.67,
+    19.72,
+    -193.79
+   ],
+   "tris": 40318
+  },
+  {
+   "url": "buildings/bldg_-7_-3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -699.55,
+    -2.8,
+    -311.09,
+    -604.67,
+    19.72,
+    -193.79
+   ],
+   "tris": 34231,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-7_-4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -707.86,
+    -1.71,
+    -408.06,
+    -595.01,
+    20.21,
+    -291.7
+   ],
+   "tris": 21656
+  },
+  {
+   "url": "buildings/bldg_-7_-4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -707.86,
+    -1.71,
+    -408.06,
+    -595.01,
+    20.21,
+    -291.7
+   ],
+   "tris": 16412,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-7_-5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -722.27,
+    -3.43,
+    -504.89,
+    -609.4,
+    22.72,
+    -400.73
+   ],
+   "tris": 29806
+  },
+  {
+   "url": "buildings/bldg_-7_-5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -722.27,
+    -3.43,
+    -504.89,
+    -609.4,
+    22.72,
+    -400.73
+   ],
+   "tris": 13771,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-7_-6.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -681.31,
+    -2.01,
+    -562.59,
+    -597.31,
+    21.39,
+    -495.91
+   ],
+   "tris": 13811
+  },
+  {
+   "url": "buildings/bldg_-7_-6_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -681.31,
+    -2.01,
+    -562.59,
+    -597.31,
+    21.39,
+    -495.91
+   ],
+   "tris": 15741,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-7_0.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -649.39,
+    -1.54,
+    -3.86,
+    -592.06,
+    23.78,
+    75.81
+   ],
+   "tris": 10209
+  },
+  {
+   "url": "buildings/bldg_-7_0_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -649.39,
+    -1.54,
+    -3.86,
+    -592.06,
+    23.78,
+    75.81
+   ],
+   "tris": 1252,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-7_2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -719.27,
+    -4.51,
+    181.41,
+    -663.71,
+    30.14,
+    284.67
+   ],
+   "tris": 15459
+  },
+  {
+   "url": "buildings/bldg_-7_2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -719.27,
+    -4.51,
+    181.41,
+    -663.71,
+    30.14,
+    284.67
+   ],
+   "tris": 1252,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-7_3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -661.58,
+    -4.58,
+    320.64,
+    -598.23,
+    15.87,
+    422.31
+   ],
+   "tris": 13376
+  },
+  {
+   "url": "buildings/bldg_-7_3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -661.58,
+    -4.58,
+    320.64,
+    -598.23,
+    15.87,
+    422.31
+   ],
+   "tris": 1972,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-7_4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -704.58,
+    -5.26,
+    454.69,
+    -675.2,
+    15.59,
+    504.64
+   ],
+   "tris": 4975
+  },
+  {
+   "url": "buildings/bldg_-7_4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -704.58,
+    -5.26,
+    454.69,
+    -675.2,
+    15.59,
+    504.64
+   ],
+   "tris": 12611,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-7_5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -731.64,
+    -5.31,
+    445.95,
+    -617.18,
+    24.98,
+    585.57
+   ],
+   "tris": 16025
+  },
+  {
+   "url": "buildings/bldg_-7_5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -731.64,
+    -5.31,
+    445.95,
+    -617.18,
+    24.98,
+    585.57
+   ],
+   "tris": 7617,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-8_-2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -804.37,
+    -4.64,
+    -208.03,
+    -656.68,
+    25.26,
+    -39.06
+   ],
+   "tris": 29361
+  },
+  {
+   "url": "buildings/bldg_-8_-2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -804.37,
+    -4.64,
+    -208.03,
+    -656.68,
+    25.26,
+    -39.06
+   ],
+   "tris": 12984,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-8_-3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -808.16,
+    -3.1,
+    -306.4,
+    -694.77,
+    21.59,
+    -189.91
+   ],
+   "tris": 61916
+  },
+  {
+   "url": "buildings/bldg_-8_-3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -808.16,
+    -3.1,
+    -306.4,
+    -694.77,
+    21.59,
+    -189.91
+   ],
+   "tris": 36818,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-8_-4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -799.95,
+    -2.11,
+    -399.8,
+    -690.61,
+    21.22,
+    -296.79
+   ],
+   "tris": 50688
+  },
+  {
+   "url": "buildings/bldg_-8_-4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -799.95,
+    -2.11,
+    -399.8,
+    -690.61,
+    21.22,
+    -296.79
+   ],
+   "tris": 8694,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-8_-5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -760.7,
+    -2.14,
+    -479.99,
+    -697.46,
+    17.54,
+    -389.22
+   ],
+   "tris": 13706
+  },
+  {
+   "url": "buildings/bldg_-8_-5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -760.7,
+    -2.14,
+    -479.99,
+    -697.46,
+    17.54,
+    -389.22
+   ],
+   "tris": 8173,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-8_0.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -803.24,
+    -3.48,
+    -4.64,
+    -731.72,
+    24.6,
+    103.63
+   ],
+   "tris": 29794
+  },
+  {
+   "url": "buildings/bldg_-8_0_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -803.24,
+    -3.48,
+    -4.64,
+    -731.72,
+    24.6,
+    103.63
+   ],
+   "tris": 16078,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-8_1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -799.6,
+    -3.29,
+    85.76,
+    -718.65,
+    19.27,
+    182.48
+   ],
+   "tris": 16828
+  },
+  {
+   "url": "buildings/bldg_-8_1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -799.6,
+    -3.29,
+    85.76,
+    -718.65,
+    19.27,
+    182.48
+   ],
+   "tris": 10876,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-8_2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -807.81,
+    -6.04,
+    193.38,
+    -699.2,
+    15.89,
+    289.4
+   ],
+   "tris": 25300
+  },
+  {
+   "url": "buildings/bldg_-8_2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -807.81,
+    -6.04,
+    193.38,
+    -699.2,
+    15.89,
+    289.4
+   ],
+   "tris": 7735,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-8_3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -800.98,
+    -5.05,
+    277.18,
+    -657.4,
+    62.28,
+    400.24
+   ],
+   "tris": 46422
+  },
+  {
+   "url": "buildings/bldg_-8_3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -800.98,
+    -5.05,
+    277.18,
+    -657.4,
+    62.28,
+    400.24
+   ],
+   "tris": 17130,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-8_4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -752.35,
+    -4.58,
+    395.81,
+    -699.93,
+    16.18,
+    478.26
+   ],
+   "tris": 11776
+  },
+  {
+   "url": "buildings/bldg_-8_4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -752.35,
+    -4.58,
+    395.81,
+    -699.93,
+    16.18,
+    478.26
+   ],
+   "tris": 13114,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-9_-3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -812.88,
+    -0.9,
+    -252.05,
+    -792.24,
+    22.08,
+    -214.58
+   ],
+   "tris": 5603
+  },
+  {
+   "url": "buildings/bldg_-9_-3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -812.88,
+    -0.9,
+    -252.05,
+    -792.24,
+    22.08,
+    -214.58
+   ],
+   "tris": 2350,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-9_0.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -860.71,
+    -3.74,
+    16.18,
+    -787.35,
+    22.07,
+    110.46
+   ],
+   "tris": 23041
+  },
+  {
+   "url": "buildings/bldg_-9_0_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -860.71,
+    -3.74,
+    16.18,
+    -787.35,
+    22.07,
+    110.46
+   ],
+   "tris": 7908,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-9_1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -848.02,
+    -4.21,
+    98.59,
+    -796.06,
+    43.14,
+    205.01
+   ],
+   "tris": 22269
+  },
+  {
+   "url": "buildings/bldg_-9_1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -848.02,
+    -4.21,
+    98.59,
+    -796.06,
+    43.14,
+    205.01
+   ],
+   "tris": 7458,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_-9_2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -836.54,
+    -5.01,
+    204.33,
+    -806.16,
+    14.71,
+    224.52
+   ],
+   "tris": 5545
+  },
+  {
+   "url": "buildings/bldg_-9_2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -836.54,
+    -5.01,
+    204.33,
+    -806.16,
+    14.71,
+    224.52
+   ],
+   "tris": 5308,
    "cullDist": 230
   },
   {
@@ -1795,7 +3473,7 @@
     23.67,
     -8.91
    ],
-   "tris": 23133
+   "tris": 24915
   },
   {
    "url": "buildings/bldg_0_-1_win.glb",
@@ -1809,7 +3487,7 @@
     23.67,
     -8.91
    ],
-   "tris": 3684,
+   "tris": 26230,
    "cullDist": 230
   },
   {
@@ -1824,7 +3502,7 @@
     30.2,
     -80.1
    ],
-   "tris": 41448
+   "tris": 38768
   },
   {
    "url": "buildings/bldg_0_-2_win.glb",
@@ -1838,7 +3516,7 @@
     30.2,
     -80.1
    ],
-   "tris": 3438,
+   "tris": 12628,
    "cullDist": 230
   },
   {
@@ -1853,7 +3531,7 @@
     25.21,
     -193.7
    ],
-   "tris": 20346
+   "tris": 22024
   },
   {
    "url": "buildings/bldg_0_-3_win.glb",
@@ -1867,7 +3545,7 @@
     25.21,
     -193.7
    ],
-   "tris": 4380,
+   "tris": 16318,
    "cullDist": 230
   },
   {
@@ -1918,28 +3596,115 @@
    "kind": "visual",
    "group": "buildings",
    "bounds": [
-    40.09,
+    25.16,
     -1.48,
-    -596.29,
+    -600.3,
     115.49,
     27.56,
     -493.95
    ],
-   "tris": 19103
+   "tris": 16972
   },
   {
    "url": "buildings/bldg_0_-6_win.glb",
    "kind": "visual",
    "group": "windows",
    "bounds": [
-    40.09,
+    25.16,
     -1.48,
-    -596.29,
+    -600.3,
     115.49,
     27.56,
     -493.95
    ],
-   "tris": 2198,
+   "tris": 9172,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_0_-7.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    3.49,
+    -1.97,
+    -699.9,
+    133.2,
+    23.21,
+    -577.81
+   ],
+   "tris": 16312
+  },
+  {
+   "url": "buildings/bldg_0_-7_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    3.49,
+    -1.97,
+    -699.9,
+    133.2,
+    23.21,
+    -577.81
+   ],
+   "tris": 32774,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_0_-8.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    1.67,
+    -2.51,
+    -814.42,
+    102.73,
+    19.35,
+    -721.66
+   ],
+   "tris": 18311
+  },
+  {
+   "url": "buildings/bldg_0_-8_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    1.67,
+    -2.51,
+    -814.42,
+    102.73,
+    19.35,
+    -721.66
+   ],
+   "tris": 4582,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_0_-9.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -10.59,
+    -3.94,
+    -861.24,
+    104.98,
+    16.82,
+    -796.87
+   ],
+   "tris": 20824
+  },
+  {
+   "url": "buildings/bldg_0_-9_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -10.59,
+    -3.94,
+    -861.24,
+    104.98,
+    16.82,
+    -796.87
+   ],
+   "tris": 2932,
    "cullDist": 230
   },
   {
@@ -1983,7 +3748,7 @@
     22.61,
     419.16
    ],
-   "tris": 39770
+   "tris": 44254
   },
   {
    "url": "buildings/bldg_0_3_win.glb",
@@ -1997,7 +3762,7 @@
     22.61,
     419.16
    ],
-   "tris": 6358,
+   "tris": 37368,
    "cullDist": 230
   },
   {
@@ -2012,7 +3777,7 @@
     25.88,
     517.52
    ],
-   "tris": 22160
+   "tris": 29284
   },
   {
    "url": "buildings/bldg_0_4_win.glb",
@@ -2026,7 +3791,7 @@
     25.88,
     517.52
    ],
-   "tris": 8238,
+   "tris": 23524,
    "cullDist": 230
   },
   {
@@ -2037,11 +3802,11 @@
     -14.06,
     -2.67,
     492.16,
-    60.42,
+    121.88,
     56.71,
-    568.67
+    613.19
    ],
-   "tris": 18268
+   "tris": 37444
   },
   {
    "url": "buildings/bldg_0_5_win.glb",
@@ -2051,11 +3816,40 @@
     -14.06,
     -2.67,
     492.16,
-    60.42,
+    121.88,
     56.71,
-    568.67
+    613.19
    ],
-   "tris": 5177,
+   "tris": 30625,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_0_6.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    -8.26,
+    -1.86,
+    606.56,
+    82.7,
+    24.93,
+    681.5
+   ],
+   "tris": 42445
+  },
+  {
+   "url": "buildings/bldg_0_6_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    -8.26,
+    -1.86,
+    606.56,
+    82.7,
+    24.93,
+    681.5
+   ],
+   "tris": 25171,
    "cullDist": 230
   },
   {
@@ -2067,10 +3861,10 @@
     -2.96,
     -123.14,
     233.58,
-    25.37,
+    25.3,
     -8.47
    ],
-   "tris": 28600
+   "tris": 30430
   },
   {
    "url": "buildings/bldg_1_-1_win.glb",
@@ -2081,10 +3875,10 @@
     -2.96,
     -123.14,
     233.58,
-    25.37,
+    25.3,
     -8.47
    ],
-   "tris": 3684,
+   "tris": 28482,
    "cullDist": 230
   },
   {
@@ -2099,7 +3893,7 @@
     26.23,
     -84.88
    ],
-   "tris": 8648
+   "tris": 11411
   },
   {
    "url": "buildings/bldg_1_-2_win.glb",
@@ -2113,7 +3907,7 @@
     26.23,
     -84.88
    ],
-   "tris": 4402,
+   "tris": 16016,
    "cullDist": 230
   },
   {
@@ -2125,10 +3919,10 @@
     -2.47,
     -354.94,
     261.19,
-    25.45,
+    26.68,
     -171.23
    ],
-   "tris": 42363
+   "tris": 44263
   },
   {
    "url": "buildings/bldg_1_-3_win.glb",
@@ -2139,10 +3933,10 @@
     -2.47,
     -354.94,
     261.19,
-    25.45,
+    26.68,
     -171.23
    ],
-   "tris": 2398,
+   "tris": 11072,
    "cullDist": 230
   },
   {
@@ -2171,7 +3965,7 @@
     8.0,
     -395.87
    ],
-   "tris": 2542
+   "tris": 1622
   },
   {
    "url": "buildings/bldg_1_-5_win.glb",
@@ -2185,7 +3979,7 @@
     8.0,
     -395.87
    ],
-   "tris": 2380,
+   "tris": 8900,
    "cullDist": 230
   },
   {
@@ -2194,13 +3988,13 @@
    "group": "buildings",
    "bounds": [
     90.46,
-    -0.97,
-    -551.45,
-    122.18,
-    23.64,
-    -523.47
+    -2.68,
+    -595.85,
+    239.64,
+    34.68,
+    -497.52
    ],
-   "tris": 6921
+   "tris": 33267
   },
   {
    "url": "buildings/bldg_1_-6_win.glb",
@@ -2208,13 +4002,100 @@
    "group": "windows",
    "bounds": [
     90.46,
-    -0.97,
-    -551.45,
-    122.18,
-    23.64,
-    -523.47
+    -2.68,
+    -595.85,
+    239.64,
+    34.68,
+    -497.52
    ],
-   "tris": 2444,
+   "tris": 3018,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_1_-7.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    123.66,
+    -2.33,
+    -707.22,
+    202.66,
+    101.42,
+    -611.69
+   ],
+   "tris": 12504
+  },
+  {
+   "url": "buildings/bldg_1_-7_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    123.66,
+    -2.33,
+    -707.22,
+    202.66,
+    101.42,
+    -611.69
+   ],
+   "tris": 6364,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_1_-8.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    90.16,
+    -3.33,
+    -809.16,
+    208.03,
+    17.83,
+    -696.67
+   ],
+   "tris": 46113
+  },
+  {
+   "url": "buildings/bldg_1_-8_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    90.16,
+    -3.33,
+    -809.16,
+    208.03,
+    17.83,
+    -696.67
+   ],
+   "tris": 8886,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_1_-9.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    94.72,
+    -4.03,
+    -852.66,
+    203.13,
+    18.89,
+    -805.42
+   ],
+   "tris": 24522
+  },
+  {
+   "url": "buildings/bldg_1_-9_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    94.72,
+    -4.03,
+    -852.66,
+    203.13,
+    18.89,
+    -805.42
+   ],
+   "tris": 7272,
    "cullDist": 230
   },
   {
@@ -2229,7 +4110,7 @@
     29.8,
     399.88
    ],
-   "tris": 34963
+   "tris": 37085
   },
   {
    "url": "buildings/bldg_1_3_win.glb",
@@ -2243,7 +4124,7 @@
     29.8,
     399.88
    ],
-   "tris": 5462,
+   "tris": 28646,
    "cullDist": 230
   },
   {
@@ -2258,7 +4139,7 @@
     27.93,
     497.44
    ],
-   "tris": 33560
+   "tris": 33325
   },
   {
    "url": "buildings/bldg_1_4_win.glb",
@@ -2272,7 +4153,7 @@
     27.93,
     497.44
    ],
-   "tris": 2594,
+   "tris": 10204,
    "cullDist": 230
   },
   {
@@ -2281,13 +4162,13 @@
    "group": "buildings",
    "bounds": [
     95.7,
-    -2.22,
+    -2.32,
     504.52,
     192.94,
-    23.05,
-    560.79
+    25.23,
+    586.43
    ],
-   "tris": 18994
+   "tris": 29669
   },
   {
    "url": "buildings/bldg_1_5_win.glb",
@@ -2295,13 +4176,100 @@
    "group": "windows",
    "bounds": [
     95.7,
-    -2.22,
+    -2.32,
     504.52,
     192.94,
-    23.05,
-    560.79
+    25.23,
+    586.43
    ],
-   "tris": 4428,
+   "tris": 27182,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_1_6.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    95.73,
+    -2.49,
+    597.45,
+    147.88,
+    18.06,
+    663.67
+   ],
+   "tris": 18399
+  },
+  {
+   "url": "buildings/bldg_1_6_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    95.73,
+    -2.49,
+    597.45,
+    147.88,
+    18.06,
+    663.67
+   ],
+   "tris": 24098,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_1_7.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    94.22,
+    -2.87,
+    713.02,
+    260.05,
+    70.82,
+    825.6
+   ],
+   "tris": 37915
+  },
+  {
+   "url": "buildings/bldg_1_7_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    94.22,
+    -2.87,
+    713.02,
+    260.05,
+    70.82,
+    825.6
+   ],
+   "tris": 22674,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_1_8.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    91.68,
+    -2.62,
+    832.61,
+    119.54,
+    27.43,
+    868.38
+   ],
+   "tris": 8461
+  },
+  {
+   "url": "buildings/bldg_1_8_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    91.68,
+    -2.62,
+    832.61,
+    119.54,
+    27.43,
+    868.38
+   ],
+   "tris": 4265,
    "cullDist": 230
   },
   {
@@ -2316,7 +4284,7 @@
     27.0,
     12.44
    ],
-   "tris": 46957
+   "tris": 46552
   },
   {
    "url": "buildings/bldg_2_-1_win.glb",
@@ -2330,7 +4298,7 @@
     27.0,
     12.44
    ],
-   "tris": 2808,
+   "tris": 31858,
    "cullDist": 230
   },
   {
@@ -2345,7 +4313,7 @@
     18.42,
     -97.78
    ],
-   "tris": 19992
+   "tris": 19980
   },
   {
    "url": "buildings/bldg_2_-2_win.glb",
@@ -2359,7 +4327,7 @@
     18.42,
     -97.78
    ],
-   "tris": 3330,
+   "tris": 9764,
    "cullDist": 230
   },
   {
@@ -2388,7 +4356,7 @@
     22.79,
     -260.07
    ],
-   "tris": 15258
+   "tris": 13603
   },
   {
    "url": "buildings/bldg_2_-4_win.glb",
@@ -2402,7 +4370,7 @@
     22.79,
     -260.07
    ],
-   "tris": 2838,
+   "tris": 16858,
    "cullDist": 230
   },
   {
@@ -2410,14 +4378,116 @@
    "kind": "visual",
    "group": "buildings",
    "bounds": [
-    251.13,
+    218.25,
     -6.99,
-    -428.18,
-    289.89,
-    4.71,
+    -522.1,
+    319.63,
+    18.47,
     -392.64
    ],
-   "tris": 68
+   "tris": 13820
+  },
+  {
+   "url": "buildings/bldg_2_-5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    218.25,
+    -6.99,
+    -522.1,
+    319.63,
+    18.47,
+    -392.64
+   ],
+   "tris": 26408,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_2_-7.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    179.23,
+    -2.57,
+    -712.49,
+    319.3,
+    25.54,
+    -606.73
+   ],
+   "tris": 21797
+  },
+  {
+   "url": "buildings/bldg_2_-7_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    179.23,
+    -2.57,
+    -712.49,
+    319.3,
+    25.54,
+    -606.73
+   ],
+   "tris": 12130,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_2_-8.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    191.56,
+    -3.35,
+    -811.73,
+    300.1,
+    22.11,
+    -698.02
+   ],
+   "tris": 45555
+  },
+  {
+   "url": "buildings/bldg_2_-8_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    191.56,
+    -3.35,
+    -811.73,
+    300.1,
+    22.11,
+    -698.02
+   ],
+   "tris": 8756,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_2_-9.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    212.32,
+    -3.02,
+    -839.47,
+    306.38,
+    18.51,
+    -785.5
+   ],
+   "tris": 12590
+  },
+  {
+   "url": "buildings/bldg_2_-9_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    212.32,
+    -3.02,
+    -839.47,
+    306.38,
+    18.51,
+    -785.5
+   ],
+   "tris": 5564,
+   "cullDist": 230
   },
   {
    "url": "buildings/bldg_2_0.glb",
@@ -2431,7 +4501,7 @@
     25.5,
     122.03
    ],
-   "tris": 29770
+   "tris": 27837
   },
   {
    "url": "buildings/bldg_2_0_win.glb",
@@ -2445,7 +4515,7 @@
     25.5,
     122.03
    ],
-   "tris": 4730,
+   "tris": 21696,
    "cullDist": 230
   },
   {
@@ -2460,7 +4530,7 @@
     25.07,
     190.28
    ],
-   "tris": 31953
+   "tris": 32123
   },
   {
    "url": "buildings/bldg_2_1_win.glb",
@@ -2489,7 +4559,7 @@
     25.05,
     297.26
    ],
-   "tris": 28189
+   "tris": 28216
   },
   {
    "url": "buildings/bldg_2_2_win.glb",
@@ -2518,7 +4588,7 @@
     32.23,
     354.6
    ],
-   "tris": 28786
+   "tris": 27177
   },
   {
    "url": "buildings/bldg_2_3_win.glb",
@@ -2532,7 +4602,7 @@
     32.23,
     354.6
    ],
-   "tris": 2808,
+   "tris": 23472,
    "cullDist": 230
   },
   {
@@ -2540,28 +4610,115 @@
    "kind": "visual",
    "group": "buildings",
    "bounds": [
-    191.97,
+    186.59,
     -2.24,
     506.2,
-    228.47,
-    23.88,
-    535.14
+    289.88,
+    25.26,
+    592.76
    ],
-   "tris": 5825
+   "tris": 30724
   },
   {
    "url": "buildings/bldg_2_5_win.glb",
    "kind": "visual",
    "group": "windows",
    "bounds": [
-    191.97,
+    186.59,
     -2.24,
     506.2,
-    228.47,
-    23.88,
-    535.14
+    289.88,
+    25.26,
+    592.76
    ],
-   "tris": 3724,
+   "tris": 24072,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_2_6.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    167.54,
+    -2.25,
+    610.01,
+    254.53,
+    20.95,
+    665.4
+   ],
+   "tris": 32422
+  },
+  {
+   "url": "buildings/bldg_2_6_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    167.54,
+    -2.25,
+    610.01,
+    254.53,
+    20.95,
+    665.4
+   ],
+   "tris": 33664,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_2_7.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    215.54,
+    -1.74,
+    773.58,
+    310.46,
+    22.25,
+    801.06
+   ],
+   "tris": 5791
+  },
+  {
+   "url": "buildings/bldg_2_7_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    215.54,
+    -1.74,
+    773.58,
+    310.46,
+    22.25,
+    801.06
+   ],
+   "tris": 8504,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_2_8.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    204.23,
+    -1.83,
+    790.37,
+    291.24,
+    23.76,
+    827.63
+   ],
+   "tris": 10352
+  },
+  {
+   "url": "buildings/bldg_2_8_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    204.23,
+    -1.83,
+    790.37,
+    291.24,
+    23.76,
+    827.63
+   ],
+   "tris": 4432,
    "cullDist": 230
   },
   {
@@ -2576,7 +4733,7 @@
     31.1,
     -2.92
    ],
-   "tris": 26414
+   "tris": 27979
   },
   {
    "url": "buildings/bldg_3_-1_win.glb",
@@ -2590,7 +4747,7 @@
     31.1,
     -2.92
    ],
-   "tris": 4582,
+   "tris": 18896,
    "cullDist": 230
   },
   {
@@ -2605,7 +4762,7 @@
     18.88,
     -217.19
    ],
-   "tris": 17973
+   "tris": 17977
   },
   {
    "url": "buildings/bldg_3_-3_win.glb",
@@ -2634,7 +4791,7 @@
     15.78,
     -300.34
    ],
-   "tris": 4183
+   "tris": 4184
   },
   {
    "url": "buildings/bldg_3_-4_win.glb",
@@ -2657,13 +4814,13 @@
    "group": "buildings",
    "bounds": [
     292.85,
-    -6.8,
-    -444.84,
-    379.5,
-    72.58,
+    -7.37,
+    -506.08,
+    422.63,
+    72.62,
     -363.16
    ],
-   "tris": 23839
+   "tris": 43881
   },
   {
    "url": "buildings/bldg_3_-5_win.glb",
@@ -2671,13 +4828,71 @@
    "group": "windows",
    "bounds": [
     292.85,
-    -6.8,
-    -444.84,
-    379.5,
-    72.58,
+    -7.37,
+    -506.08,
+    422.63,
+    72.62,
     -363.16
    ],
-   "tris": 174,
+   "tris": 6534,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_3_-7.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    264.86,
+    -2.79,
+    -705.02,
+    372.66,
+    88.7,
+    -580.53
+   ],
+   "tris": 35561
+  },
+  {
+   "url": "buildings/bldg_3_-7_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    264.86,
+    -2.79,
+    -705.02,
+    372.66,
+    88.7,
+    -580.53
+   ],
+   "tris": 33444,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_3_-8.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    291.04,
+    -3.04,
+    -797.13,
+    395.64,
+    23.84,
+    -702.67
+   ],
+   "tris": 61404
+  },
+  {
+   "url": "buildings/bldg_3_-8_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    291.04,
+    -3.04,
+    -797.13,
+    395.64,
+    23.84,
+    -702.67
+   ],
+   "tris": 25024,
    "cullDist": 230
   },
   {
@@ -2692,7 +4907,7 @@
     27.34,
     110.85
    ],
-   "tris": 50183
+   "tris": 50440
   },
   {
    "url": "buildings/bldg_3_0_win.glb",
@@ -2706,7 +4921,7 @@
     27.34,
     110.85
    ],
-   "tris": 10203,
+   "tris": 25587,
    "cullDist": 230
   },
   {
@@ -2721,7 +4936,7 @@
     34.67,
     196.43
    ],
-   "tris": 47724
+   "tris": 47290
   },
   {
    "url": "buildings/bldg_3_1_win.glb",
@@ -2735,7 +4950,7 @@
     34.67,
     196.43
    ],
-   "tris": 9400,
+   "tris": 10068,
    "cullDist": 230
   },
   {
@@ -2750,7 +4965,7 @@
     26.35,
     298.96
    ],
-   "tris": 32344
+   "tris": 31809
   },
   {
    "url": "buildings/bldg_3_2_win.glb",
@@ -2764,7 +4979,7 @@
     26.35,
     298.96
    ],
-   "tris": 8708,
+   "tris": 13710,
    "cullDist": 230
   },
   {
@@ -2803,12 +5018,12 @@
    "bounds": [
     258.25,
     -3.33,
-    374.93,
-    336.72,
+    375.72,
+    335.9,
     37.07,
     531.58
    ],
-   "tris": 46740
+   "tris": 44068
   },
   {
    "url": "buildings/bldg_3_4_win.glb",
@@ -2817,12 +5032,99 @@
    "bounds": [
     258.25,
     -3.33,
-    374.93,
-    336.72,
+    375.72,
+    335.9,
     37.07,
     531.58
    ],
-   "tris": 1620,
+   "tris": 29342,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_3_5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    351.4,
+    -2.92,
+    529.25,
+    411.35,
+    29.27,
+    590.6
+   ],
+   "tris": 22513
+  },
+  {
+   "url": "buildings/bldg_3_5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    351.4,
+    -2.92,
+    529.25,
+    411.35,
+    29.27,
+    590.6
+   ],
+   "tris": 19130,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_3_6.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    335.37,
+    -4.51,
+    607.33,
+    409.57,
+    29.06,
+    703.5
+   ],
+   "tris": 35921
+  },
+  {
+   "url": "buildings/bldg_3_6_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    335.37,
+    -4.51,
+    607.33,
+    409.57,
+    29.06,
+    703.5
+   ],
+   "tris": 27991,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_3_7.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    278.42,
+    -2.34,
+    721.03,
+    388.9,
+    37.31,
+    808.3
+   ],
+   "tris": 28170
+  },
+  {
+   "url": "buildings/bldg_3_7_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    278.42,
+    -2.34,
+    721.03,
+    388.9,
+    37.31,
+    808.3
+   ],
+   "tris": 6422,
    "cullDist": 230
   },
   {
@@ -2837,7 +5139,7 @@
     21.18,
     9.09
    ],
-   "tris": 11418
+   "tris": 11339
   },
   {
    "url": "buildings/bldg_4_-1_win.glb",
@@ -2851,7 +5153,7 @@
     21.18,
     9.09
    ],
-   "tris": 6708,
+   "tris": 16348,
    "cullDist": 230
   },
   {
@@ -2866,7 +5168,7 @@
     20.5,
     -121.44
    ],
-   "tris": 20220
+   "tris": 19720
   },
   {
    "url": "buildings/bldg_4_-2_win.glb",
@@ -2880,7 +5182,7 @@
     20.5,
     -121.44
    ],
-   "tris": 9220,
+   "tris": 15570,
    "cullDist": 230
   },
   {
@@ -2895,7 +5197,7 @@
     33.29,
     -183.89
    ],
-   "tris": 76045
+   "tris": 76016
   },
   {
    "url": "buildings/bldg_4_-3_win.glb",
@@ -2909,7 +5211,123 @@
     33.29,
     -183.89
    ],
-   "tris": 6168,
+   "tris": 5848,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_4_-4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    385.29,
+    -2.95,
+    -405.23,
+    484.91,
+    26.39,
+    -338.16
+   ],
+   "tris": 26152
+  },
+  {
+   "url": "buildings/bldg_4_-4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    385.29,
+    -2.95,
+    -405.23,
+    484.91,
+    26.39,
+    -338.16
+   ],
+   "tris": 2854,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_4_-5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    408.32,
+    -3.99,
+    -468.66,
+    520.63,
+    30.48,
+    -375.5
+   ],
+   "tris": 22397
+  },
+  {
+   "url": "buildings/bldg_4_-5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    408.32,
+    -3.99,
+    -468.66,
+    520.63,
+    30.48,
+    -375.5
+   ],
+   "tris": 3920,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_4_-6.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    409.7,
+    -2.39,
+    -572.01,
+    447.91,
+    51.61,
+    -545.77
+   ],
+   "tris": 12173
+  },
+  {
+   "url": "buildings/bldg_4_-6_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    409.7,
+    -2.39,
+    -572.01,
+    447.91,
+    51.61,
+    -545.77
+   ],
+   "tris": 1252,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_4_-7.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    370.7,
+    -4.03,
+    -719.43,
+    513.44,
+    19.88,
+    -597.04
+   ],
+   "tris": 23157
+  },
+  {
+   "url": "buildings/bldg_4_-7_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    370.7,
+    -4.03,
+    -719.43,
+    513.44,
+    19.88,
+    -597.04
+   ],
+   "tris": 11818,
    "cullDist": 230
   },
   {
@@ -2924,7 +5342,7 @@
     24.13,
     115.82
    ],
-   "tris": 69900
+   "tris": 66784
   },
   {
    "url": "buildings/bldg_4_0_win.glb",
@@ -2938,7 +5356,7 @@
     24.13,
     115.82
    ],
-   "tris": 10827,
+   "tris": 30955,
    "cullDist": 230
   },
   {
@@ -2953,7 +5371,7 @@
     19.24,
     205.78
    ],
-   "tris": 33306
+   "tris": 33314
   },
   {
    "url": "buildings/bldg_4_1_win.glb",
@@ -2967,7 +5385,7 @@
     19.24,
     205.78
    ],
-   "tris": 7974,
+   "tris": 10016,
    "cullDist": 230
   },
   {
@@ -2982,7 +5400,7 @@
     20.59,
     318.01
    ],
-   "tris": 26032
+   "tris": 26065
   },
   {
    "url": "buildings/bldg_4_2_win.glb",
@@ -3005,13 +5423,13 @@
    "group": "buildings",
    "bounds": [
     382.16,
-    -2.92,
+    -4.74,
     256.1,
-    449.73,
-    24.94,
+    500.85,
+    26.07,
     386.58
    ],
-   "tris": 28253
+   "tris": 34903
   },
   {
    "url": "buildings/bldg_4_3_win.glb",
@@ -3019,13 +5437,129 @@
    "group": "windows",
    "bounds": [
     382.16,
-    -2.92,
+    -4.74,
     256.1,
-    449.73,
-    24.94,
+    500.85,
+    26.07,
     386.58
    ],
-   "tris": 2218,
+   "tris": 2486,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_4_4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    379.89,
+    -3.0,
+    393.34,
+    550.03,
+    41.75,
+    506.63
+   ],
+   "tris": 24558
+  },
+  {
+   "url": "buildings/bldg_4_4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    379.89,
+    -3.0,
+    393.34,
+    550.03,
+    41.75,
+    506.63
+   ],
+   "tris": 174,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_4_5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    394.85,
+    -2.89,
+    496.42,
+    508.55,
+    27.65,
+    586.4
+   ],
+   "tris": 53173
+  },
+  {
+   "url": "buildings/bldg_4_5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    394.85,
+    -2.89,
+    496.42,
+    508.55,
+    27.65,
+    586.4
+   ],
+   "tris": 23352,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_4_6.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    389.86,
+    -4.27,
+    601.12,
+    504.6,
+    24.97,
+    685.16
+   ],
+   "tris": 49916
+  },
+  {
+   "url": "buildings/bldg_4_6_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    389.86,
+    -4.27,
+    601.12,
+    504.6,
+    24.97,
+    685.16
+   ],
+   "tris": 21493,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_4_7.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    384.79,
+    -1.95,
+    698.25,
+    452.96,
+    20.02,
+    754.15
+   ],
+   "tris": 16131
+  },
+  {
+   "url": "buildings/bldg_4_7_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    384.79,
+    -1.95,
+    698.25,
+    452.96,
+    20.02,
+    754.15
+   ],
+   "tris": 17672,
    "cullDist": 230
   },
   {
@@ -3034,13 +5568,13 @@
    "group": "buildings",
    "bounds": [
     509.55,
-    -1.9,
-    -92.86,
-    563.69,
-    18.48,
-    -46.2
+    -2.01,
+    -110.99,
+    612.51,
+    20.54,
+    -35.06
    ],
-   "tris": 8833
+   "tris": 21165
   },
   {
    "url": "buildings/bldg_5_-1_win.glb",
@@ -3048,13 +5582,13 @@
    "group": "windows",
    "bounds": [
     509.55,
-    -1.9,
-    -92.86,
-    563.69,
-    18.48,
-    -46.2
+    -2.01,
+    -110.99,
+    612.51,
+    20.54,
+    -35.06
    ],
-   "tris": 4202,
+   "tris": 12384,
    "cullDist": 230
   },
   {
@@ -3063,13 +5597,13 @@
    "group": "buildings",
    "bounds": [
     493.17,
-    -2.08,
-    -190.24,
-    553.26,
+    -2.49,
+    -209.77,
+    604.39,
     22.72,
-    -105.87
+    -91.99
    ],
-   "tris": 29596
+   "tris": 59733
   },
   {
    "url": "buildings/bldg_5_-2_win.glb",
@@ -3077,13 +5611,158 @@
    "group": "windows",
    "bounds": [
     493.17,
-    -2.08,
-    -190.24,
-    553.26,
+    -2.49,
+    -209.77,
+    604.39,
     22.72,
-    -105.87
+    -91.99
    ],
-   "tris": 6766,
+   "tris": 27857,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_5_-3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    538.64,
+    -2.19,
+    -312.62,
+    610.6,
+    28.28,
+    -199.04
+   ],
+   "tris": 28101
+  },
+  {
+   "url": "buildings/bldg_5_-3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    538.64,
+    -2.19,
+    -312.62,
+    610.6,
+    28.28,
+    -199.04
+   ],
+   "tris": 35508,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_5_-4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    494.81,
+    -4.04,
+    -405.41,
+    606.7,
+    19.84,
+    -298.01
+   ],
+   "tris": 42952
+  },
+  {
+   "url": "buildings/bldg_5_-4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    494.81,
+    -4.04,
+    -405.41,
+    606.7,
+    19.84,
+    -298.01
+   ],
+   "tris": 21336,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_5_-5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    583.63,
+    -2.46,
+    -521.14,
+    611.26,
+    23.5,
+    -388.22
+   ],
+   "tris": 9148
+  },
+  {
+   "url": "buildings/bldg_5_-5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    583.63,
+    -2.46,
+    -521.14,
+    611.26,
+    23.5,
+    -388.22
+   ],
+   "tris": 12980,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_5_-6.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    458.12,
+    -2.66,
+    -593.57,
+    571.75,
+    22.97,
+    -503.47
+   ],
+   "tris": 21426
+  },
+  {
+   "url": "buildings/bldg_5_-6_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    458.12,
+    -2.66,
+    -593.57,
+    571.75,
+    22.97,
+    -503.47
+   ],
+   "tris": 174,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_5_-7.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    487.47,
+    -4.46,
+    -687.54,
+    572.08,
+    19.04,
+    -602.99
+   ],
+   "tris": 21617
+  },
+  {
+   "url": "buildings/bldg_5_-7_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    487.47,
+    -4.46,
+    -687.54,
+    572.08,
+    19.04,
+    -602.99
+   ],
+   "tris": 5830,
    "cullDist": 230
   },
   {
@@ -3094,11 +5773,11 @@
     477.31,
     -2.39,
     3.19,
-    563.59,
+    622.93,
     21.84,
-    100.97
+    120.68
    ],
-   "tris": 27596
+   "tris": 34480
   },
   {
    "url": "buildings/bldg_5_0_win.glb",
@@ -3108,11 +5787,11 @@
     477.31,
     -2.39,
     3.19,
-    563.59,
+    622.93,
     21.84,
-    100.97
+    120.68
    ],
-   "tris": 4994,
+   "tris": 11098,
    "cullDist": 230
   },
   {
@@ -3121,13 +5800,13 @@
    "group": "buildings",
    "bounds": [
     505.08,
-    -2.41,
+    -2.61,
     120.66,
-    544.3,
+    580.41,
     16.05,
-    182.4
+    197.5
    ],
-   "tris": 4747
+   "tris": 8425
   },
   {
    "url": "buildings/bldg_5_1_win.glb",
@@ -3135,13 +5814,13 @@
    "group": "windows",
    "bounds": [
     505.08,
-    -2.41,
+    -2.61,
     120.66,
-    544.3,
+    580.41,
     16.05,
-    182.4
+    197.5
    ],
-   "tris": 1252,
+   "tris": 3010,
    "cullDist": 230
   },
   {
@@ -3150,13 +5829,13 @@
    "group": "buildings",
    "bounds": [
     505.73,
-    -2.3,
-    196.4,
-    527.86,
-    11.76,
-    218.75
+    -3.01,
+    194.31,
+    607.96,
+    18.44,
+    313.77
    ],
-   "tris": 1871
+   "tris": 47261
   },
   {
    "url": "buildings/bldg_5_2_win.glb",
@@ -3164,13 +5843,564 @@
    "group": "windows",
    "bounds": [
     505.73,
-    -2.3,
-    196.4,
-    527.86,
-    11.76,
-    218.75
+    -3.01,
+    194.31,
+    607.96,
+    18.44,
+    313.77
    ],
-   "tris": 1252,
+   "tris": 8343,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_5_3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    495.19,
+    -2.34,
+    292.36,
+    598.75,
+    26.18,
+    379.63
+   ],
+   "tris": 17525
+  },
+  {
+   "url": "buildings/bldg_5_3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    495.19,
+    -2.34,
+    292.36,
+    598.75,
+    26.18,
+    379.63
+   ],
+   "tris": 6191,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_5_4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    508.92,
+    -2.58,
+    346.94,
+    627.97,
+    23.54,
+    473.46
+   ],
+   "tris": 49942
+  },
+  {
+   "url": "buildings/bldg_5_4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    508.92,
+    -2.58,
+    346.94,
+    627.97,
+    23.54,
+    473.46
+   ],
+   "tris": 5142,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_5_5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    497.15,
+    -2.56,
+    491.33,
+    621.66,
+    39.72,
+    568.71
+   ],
+   "tris": 18822
+  },
+  {
+   "url": "buildings/bldg_5_5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    497.15,
+    -2.56,
+    491.33,
+    621.66,
+    39.72,
+    568.71
+   ],
+   "tris": 11855,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_5_6.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    495.05,
+    -3.18,
+    592.25,
+    601.22,
+    23.33,
+    668.57
+   ],
+   "tris": 25743
+  },
+  {
+   "url": "buildings/bldg_5_6_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    495.05,
+    -3.18,
+    592.25,
+    601.22,
+    23.33,
+    668.57
+   ],
+   "tris": 19536,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_6_-1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    588.52,
+    -3.46,
+    -105.28,
+    708.49,
+    22.17,
+    -9.67
+   ],
+   "tris": 43245
+  },
+  {
+   "url": "buildings/bldg_6_-1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    588.52,
+    -3.46,
+    -105.28,
+    708.49,
+    22.17,
+    -9.67
+   ],
+   "tris": 8127,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_6_-2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    590.02,
+    -2.55,
+    -212.6,
+    710.28,
+    23.4,
+    -90.1
+   ],
+   "tris": 68399
+  },
+  {
+   "url": "buildings/bldg_6_-2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    590.02,
+    -2.55,
+    -212.6,
+    710.28,
+    23.4,
+    -90.1
+   ],
+   "tris": 16283,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_6_-3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    597.72,
+    -2.58,
+    -309.31,
+    707.24,
+    21.04,
+    -194.61
+   ],
+   "tris": 69895
+  },
+  {
+   "url": "buildings/bldg_6_-3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    597.72,
+    -2.58,
+    -309.31,
+    707.24,
+    21.04,
+    -194.61
+   ],
+   "tris": 7924,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_6_-4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    591.09,
+    -2.56,
+    -407.41,
+    685.51,
+    20.78,
+    -295.39
+   ],
+   "tris": 54477
+  },
+  {
+   "url": "buildings/bldg_6_-4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    591.09,
+    -2.56,
+    -407.41,
+    685.51,
+    20.78,
+    -295.39
+   ],
+   "tris": 8813,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_6_-5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    607.54,
+    -2.7,
+    -502.02,
+    707.98,
+    22.5,
+    -404.18
+   ],
+   "tris": 37726
+  },
+  {
+   "url": "buildings/bldg_6_-5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    607.54,
+    -2.7,
+    -502.02,
+    707.98,
+    22.5,
+    -404.18
+   ],
+   "tris": 7020,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_6_-6.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    610.42,
+    -3.14,
+    -579.32,
+    682.51,
+    18.21,
+    -479.0
+   ],
+   "tris": 19761
+  },
+  {
+   "url": "buildings/bldg_6_-6_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    610.42,
+    -3.14,
+    -579.32,
+    682.51,
+    18.21,
+    -479.0
+   ],
+   "tris": 4848,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_6_0.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    591.55,
+    -2.38,
+    47.86,
+    703.62,
+    22.58,
+    102.81
+   ],
+   "tris": 34419
+  },
+  {
+   "url": "buildings/bldg_6_0_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    591.55,
+    -2.38,
+    47.86,
+    703.62,
+    22.58,
+    102.81
+   ],
+   "tris": 8432,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_6_1.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    568.71,
+    -2.69,
+    93.69,
+    698.66,
+    35.13,
+    209.09
+   ],
+   "tris": 47979
+  },
+  {
+   "url": "buildings/bldg_6_1_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    568.71,
+    -2.69,
+    93.69,
+    698.66,
+    35.13,
+    209.09
+   ],
+   "tris": 8970,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_6_2.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    598.58,
+    -3.33,
+    192.23,
+    686.38,
+    18.84,
+    308.98
+   ],
+   "tris": 43619
+  },
+  {
+   "url": "buildings/bldg_6_2_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    598.58,
+    -3.33,
+    192.23,
+    686.38,
+    18.84,
+    308.98
+   ],
+   "tris": 8309,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_6_3.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    592.41,
+    -3.47,
+    287.76,
+    695.65,
+    22.09,
+    408.92
+   ],
+   "tris": 28124
+  },
+  {
+   "url": "buildings/bldg_6_3_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    592.41,
+    -3.47,
+    287.76,
+    695.65,
+    22.09,
+    408.92
+   ],
+   "tris": 8309,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_6_4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    611.69,
+    -3.29,
+    401.16,
+    703.08,
+    19.31,
+    499.77
+   ],
+   "tris": 23561
+  },
+  {
+   "url": "buildings/bldg_6_4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    611.69,
+    -3.29,
+    401.16,
+    703.08,
+    19.31,
+    499.77
+   ],
+   "tris": 7883,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_6_5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    620.0,
+    -2.27,
+    531.49,
+    646.02,
+    17.38,
+    558.69
+   ],
+   "tris": 8310
+  },
+  {
+   "url": "buildings/bldg_6_5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    620.0,
+    -2.27,
+    531.49,
+    646.02,
+    17.38,
+    558.69
+   ],
+   "tris": 3944,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_6_6.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    598.94,
+    -2.4,
+    591.28,
+    617.66,
+    22.97,
+    614.13
+   ],
+   "tris": 4966
+  },
+  {
+   "url": "buildings/bldg_6_6_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    598.94,
+    -2.4,
+    591.28,
+    617.66,
+    22.97,
+    614.13
+   ],
+   "tris": 7350,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_7_-5.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    683.23,
+    -2.29,
+    -427.75,
+    718.17,
+    11.0,
+    -402.32
+   ],
+   "tris": 2633
+  },
+  {
+   "url": "buildings/bldg_7_-5_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    683.23,
+    -2.29,
+    -427.75,
+    718.17,
+    11.0,
+    -402.32
+   ],
+   "tris": 1344,
+   "cullDist": 230
+  },
+  {
+   "url": "buildings/bldg_7_4.glb",
+   "kind": "visual",
+   "group": "buildings",
+   "bounds": [
+    684.06,
+    -2.92,
+    436.15,
+    713.53,
+    15.88,
+    454.71
+   ],
+   "tris": 7401
+  },
+  {
+   "url": "buildings/bldg_7_4_win.glb",
+   "kind": "visual",
+   "group": "windows",
+   "bounds": [
+    684.06,
+    -2.92,
+    436.15,
+    713.53,
+    15.88,
+    454.71
+   ],
+   "tris": 3104,
    "cullDist": 230
   },
   {
@@ -3178,133 +6408,833 @@
    "kind": "collision",
    "group": "buildings",
    "bounds": null,
-   "tris": 92145
+   "tris": 185676
+  },
+  {
+   "url": "ground/ground_-10_-3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -943.2,
+    -1.61,
+    -242.1,
+    -903.41,
+    -1.37,
+    -198.85
+   ],
+   "tris": 100
+  },
+  {
+   "url": "ground/ground_-10_-2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -908.02,
+    -1.65,
+    -201.05,
+    -900.12,
+    -1.61,
+    -189.98
+   ],
+   "tris": 20
+  },
+  {
+   "url": "ground/ground_-9_-4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -856.87,
+    -2.46,
+    -328.9,
+    -798.88,
+    -0.64,
+    -299.36
+   ],
+   "tris": 427
+  },
+  {
+   "url": "ground/ground_-9_-3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -836.4,
+    -2.42,
+    -300.6,
+    -797.59,
+    -0.38,
+    -198.9
+   ],
+   "tris": 2867
+  },
+  {
+   "url": "ground/ground_-9_-2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -899.59,
+    -3.7,
+    -201.22,
+    -798.63,
+    -0.82,
+    -98.73
+   ],
+   "tris": 5858
+  },
+  {
+   "url": "ground/ground_-9_-1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -859.88,
+    -9.12,
+    -100.92,
+    -798.98,
+    -1.5,
+    1.53
+   ],
+   "tris": 5341
+  },
+  {
+   "url": "ground/ground_-9_0.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -868.32,
+    -9.12,
+    -1.65,
+    -797.88,
+    4.28,
+    104.5
+   ],
+   "tris": 8566
+  },
+  {
+   "url": "ground/ground_-9_1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -882.16,
+    -5.79,
+    94.42,
+    -798.24,
+    3.7,
+    200.76
+   ],
+   "tris": 5711
+  },
+  {
+   "url": "ground/ground_-9_2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -842.96,
+    -6.0,
+    198.99,
+    -798.93,
+    -2.27,
+    301.01
+   ],
+   "tris": 3218
+  },
+  {
+   "url": "ground/ground_-9_3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -809.21,
+    -6.21,
+    298.82,
+    -799.18,
+    -4.37,
+    327.63
+   ],
+   "tris": 511
+  },
+  {
+   "url": "ground/ground_-8_-5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -768.93,
+    -3.12,
+    -498.28,
+    -697.59,
+    -1.03,
+    -399.05
+   ],
+   "tris": 3676
+  },
+  {
+   "url": "ground/ground_-8_-4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -801.26,
+    -3.07,
+    -401.1,
+    -694.63,
+    0.68,
+    -298.56
+   ],
+   "tris": 9898
+  },
+  {
+   "url": "ground/ground_-8_-3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -804.2,
+    -1.31,
+    -301.39,
+    -695.59,
+    -0.23,
+    -198.69
+   ],
+   "tris": 9360
+  },
+  {
+   "url": "ground/ground_-8_-2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -801.43,
+    -2.42,
+    -201.93,
+    -698.21,
+    -0.47,
+    -95.61
+   ],
+   "tris": 7736
+  },
+  {
+   "url": "ground/ground_-8_-1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -801.54,
+    -7.66,
+    -104.45,
+    -695.78,
+    -1.06,
+    4.05
+   ],
+   "tris": 21923
+  },
+  {
+   "url": "ground/ground_-8_0.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -803.67,
+    -7.65,
+    -1.86,
+    -698.14,
+    5.03,
+    103.3
+   ],
+   "tris": 16655
+  },
+  {
+   "url": "ground/ground_-8_1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -801.77,
+    -4.29,
+    96.9,
+    -698.49,
+    -1.08,
+    201.26
+   ],
+   "tris": 10973
+  },
+  {
+   "url": "ground/ground_-8_2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -801.14,
+    -5.04,
+    198.67,
+    -697.41,
+    -2.19,
+    304.52
+   ],
+   "tris": 12644
+  },
+  {
+   "url": "ground/ground_-8_3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -801.04,
+    -6.17,
+    295.89,
+    -698.7,
+    -2.87,
+    401.94
+   ],
+   "tris": 7211
+  },
+  {
+   "url": "ground/ground_-8_4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -761.41,
+    -6.46,
+    394.89,
+    -697.13,
+    -2.93,
+    499.99
+   ],
+   "tris": 2830
+  },
+  {
+   "url": "ground/ground_-8_5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -738.91,
+    -7.0,
+    499.32,
+    -697.9,
+    -4.52,
+    551.53
+   ],
+   "tris": 1915
+  },
+  {
+   "url": "ground/ground_-8_7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -748.63,
+    -5.2,
+    717.41,
+    -699.98,
+    -4.7,
+    798.63
+   ],
+   "tris": 279
+  },
+  {
+   "url": "ground/ground_-8_8.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -784.93,
+    -5.12,
+    801.64,
+    -745.2,
+    -4.77,
+    858.14
+   ],
+   "tris": 128
+  },
+  {
+   "url": "ground/ground_-7_-7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -616.23,
+    -2.77,
+    -615.87,
+    -599.27,
+    -1.18,
+    -598.96
+   ],
+   "tris": 66
+  },
+  {
+   "url": "ground/ground_-7_-6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -699.23,
+    -3.28,
+    -601.22,
+    -596.2,
+    -0.08,
+    -494.95
+   ],
+   "tris": 5557
+  },
+  {
+   "url": "ground/ground_-7_-5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -702.04,
+    -2.99,
+    -503.45,
+    -598.18,
+    -0.08,
+    -393.48
+   ],
+   "tris": 9551
+  },
+  {
+   "url": "ground/ground_-7_-4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -705.05,
+    -1.51,
+    -405.67,
+    -597.62,
+    0.55,
+    -291.87
+   ],
+   "tris": 6235
+  },
+  {
+   "url": "ground/ground_-7_-3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -706.26,
+    -0.97,
+    -306.74,
+    -595.52,
+    0.21,
+    -198.13
+   ],
+   "tris": 6806
+  },
+  {
+   "url": "ground/ground_-7_-2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -701.59,
+    -1.99,
+    -201.73,
+    -598.0,
+    -0.3,
+    -96.27
+   ],
+   "tris": 7868
+  },
+  {
+   "url": "ground/ground_-7_-1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -702.89,
+    -7.65,
+    -103.43,
+    -597.36,
+    5.89,
+    23.11
+   ],
+   "tris": 11369
+  },
+  {
+   "url": "ground/ground_-7_0.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -701.43,
+    -7.64,
+    -4.54,
+    -598.26,
+    5.29,
+    142.69
+   ],
+   "tris": 22200
+  },
+  {
+   "url": "ground/ground_-7_1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -701.7,
+    -7.6,
+    22.97,
+    -595.67,
+    -0.92,
+    201.54
+   ],
+   "tris": 14644
+  },
+  {
+   "url": "ground/ground_-7_2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -703.94,
+    -7.46,
+    198.48,
+    -598.5,
+    -2.05,
+    301.19
+   ],
+   "tris": 9732
+  },
+  {
+   "url": "ground/ground_-7_3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -701.32,
+    -4.83,
+    298.74,
+    -598.49,
+    -2.52,
+    403.49
+   ],
+   "tris": 9067
+  },
+  {
+   "url": "ground/ground_-7_4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -702.39,
+    -5.48,
+    396.81,
+    -598.65,
+    -3.02,
+    501.93
+   ],
+   "tris": 6768
+  },
+  {
+   "url": "ground/ground_-7_5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -702.11,
+    -6.99,
+    497.98,
+    -597.97,
+    -2.89,
+    601.42
+   ],
+   "tris": 6916
+  },
+  {
+   "url": "ground/ground_-7_6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -685.0,
+    -5.72,
+    598.73,
+    -599.33,
+    -4.01,
+    700.48
+   ],
+   "tris": 460
+  },
+  {
+   "url": "ground/ground_-7_7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -700.07,
+    -5.11,
+    699.45,
+    -657.75,
+    -4.63,
+    742.79
+   ],
+   "tris": 168
+  },
+  {
+   "url": "ground/ground_-6_-8.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -515.15,
+    -3.58,
+    -726.55,
+    -496.33,
+    -1.71,
+    -698.95
+   ],
+   "tris": 322
+  },
+  {
+   "url": "ground/ground_-6_-7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -600.32,
+    -3.36,
+    -701.67,
+    -498.64,
+    -0.16,
+    -598.1
+   ],
+   "tris": 7321
+  },
+  {
+   "url": "ground/ground_-6_-6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -604.25,
+    -2.06,
+    -601.85,
+    -498.66,
+    -0.3,
+    -495.49
+   ],
+   "tris": 4674
+  },
+  {
+   "url": "ground/ground_-6_-5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -601.71,
+    -1.82,
+    -504.58,
+    -498.7,
+    -0.1,
+    -396.73
+   ],
+   "tris": 9325
+  },
+  {
+   "url": "ground/ground_-6_-4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -603.57,
+    -1.42,
+    -405.75,
+    -496.41,
+    0.55,
+    -296.75
+   ],
+   "tris": 8002
   },
   {
    "url": "ground/ground_-6_-3.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -522.78,
-    -2.44,
-    -252.35,
-    -498.46,
-    -0.53,
-    -198.95
+    -605.77,
+    -0.94,
+    -303.14,
+    -494.36,
+    -0.18,
+    -196.38
    ],
-   "tris": 467
+   "tris": 6726
   },
   {
    "url": "ground/ground_-6_-2.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -568.04,
-    -5.0,
-    -201.28,
+    -602.65,
+    -5.84,
+    -205.66,
     -495.35,
-    2.56,
-    -94.49
+    6.28,
+    -62.53
    ],
-   "tris": 5999
+   "tris": 10160
   },
   {
    "url": "ground/ground_-6_-1.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -568.82,
-    -2.86,
-    -104.17,
-    -497.27,
-    -0.28,
-    1.24
+    -603.48,
+    -1.63,
+    -128.14,
+    -498.43,
+    6.24,
+    2.49
    ],
-   "tris": 8008
+   "tris": 13305
   },
   {
    "url": "ground/ground_-6_0.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -576.67,
-    -2.58,
-    -1.08,
-    -497.67,
+    -601.82,
+    -1.46,
+    -2.2,
+    -498.03,
     -0.16,
-    101.13
+    106.36
    ],
-   "tris": 5471
+   "tris": 11606
   },
   {
    "url": "ground/ground_-6_1.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -567.15,
-    -2.71,
-    98.94,
-    -498.51,
+    -605.34,
+    -7.56,
+    95.59,
+    -498.31,
     0.95,
-    202.33
+    214.29
    ],
-   "tris": 3724
+   "tris": 7883
   },
   {
    "url": "ground/ground_-6_2.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -559.19,
-    -2.94,
-    197.94,
-    -496.66,
-    0.08,
-    301.51
+    -601.32,
+    -7.56,
+    176.0,
+    -497.49,
+    0.07,
+    305.5
    ],
-   "tris": 1657
+   "tris": 11866
   },
   {
    "url": "ground/ground_-6_3.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -516.95,
-    -2.77,
-    298.92,
-    -499.51,
-    -0.65,
-    310.9
+    -601.77,
+    -7.56,
+    298.29,
+    -488.94,
+    -0.49,
+    401.76
    ],
-   "tris": 81
+   "tris": 16881
+  },
+  {
+   "url": "ground/ground_-6_4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -601.38,
+    -4.75,
+    398.59,
+    -497.59,
+    -3.0,
+    504.4
+   ],
+   "tris": 12051
+  },
+  {
+   "url": "ground/ground_-6_5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -603.38,
+    -5.16,
+    496.15,
+    -498.8,
+    -3.19,
+    601.7
+   ],
+   "tris": 8716
+  },
+  {
+   "url": "ground/ground_-6_6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -600.72,
+    -8.89,
+    597.94,
+    -498.0,
+    -0.71,
+    699.62
+   ],
+   "tris": 10724
+  },
+  {
+   "url": "ground/ground_-5_-8.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -500.86,
+    -4.05,
+    -761.63,
+    -398.93,
+    -0.7,
+    -697.78
+   ],
+   "tris": 2617
+  },
+  {
+   "url": "ground/ground_-5_-7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -502.05,
+    -2.46,
+    -702.07,
+    -395.44,
+    -0.53,
+    -598.67
+   ],
+   "tris": 6235
+  },
+  {
+   "url": "ground/ground_-5_-6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -501.56,
+    -2.31,
+    -601.85,
+    -398.15,
+    -0.16,
+    -498.35
+   ],
+   "tris": 9977
+  },
+  {
+   "url": "ground/ground_-5_-5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -501.07,
+    -2.09,
+    -502.64,
+    -398.52,
+    -0.2,
+    -390.44
+   ],
+   "tris": 7993
   },
   {
    "url": "ground/ground_-5_-4.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -481.36,
-    -3.18,
-    -399.56,
-    -397.77,
-    -0.65,
-    -298.72
+    -505.06,
+    -1.7,
+    -402.1,
+    -395.18,
+    0.35,
+    -298.32
    ],
-   "tris": 3220
+   "tris": 8423
   },
   {
    "url": "ground/ground_-5_-3.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -501.51,
-    -2.79,
-    -301.06,
-    -396.17,
-    -0.12,
-    -197.89
+    -504.15,
+    -1.3,
+    -301.9,
+    -390.7,
+    6.28,
+    -193.73
    ],
-   "tris": 13263
+   "tris": 14294
   },
   {
    "url": "ground/ground_-5_-2.glb",
@@ -3312,27 +7242,27 @@
    "group": "ground",
    "bounds": [
     -506.99,
-    -5.15,
-    -203.49,
-    -398.37,
-    0.42,
-    -98.5
+    -5.94,
+    -209.68,
+    -398.58,
+    6.41,
+    -98.44
    ],
-   "tris": 17998
+   "tris": 29162
   },
   {
    "url": "ground/ground_-5_-1.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -501.82,
+    -502.41,
     -1.45,
-    -101.27,
-    -397.75,
+    -101.39,
+    -397.13,
     0.66,
-    3.05
+    5.35
    ],
-   "tris": 8912
+   "tris": 9232
   },
   {
    "url": "ground/ground_-5_0.glb",
@@ -3341,110 +7271,222 @@
    "bounds": [
     -502.23,
     -1.27,
-    -4.29,
-    -398.72,
-    0.79,
+    -7.88,
+    -398.74,
+    0.8,
     102.63
    ],
-   "tris": 9047
+   "tris": 8994
   },
   {
    "url": "ground/ground_-5_1.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -501.29,
+    -501.76,
     -1.54,
-    97.59,
-    -397.63,
-    -0.24,
+    97.72,
+    -398.6,
+    -0.21,
     204.02
    ],
-   "tris": 10203
+   "tris": 10087
   },
   {
    "url": "ground/ground_-5_2.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -502.19,
+    -502.15,
     -1.62,
-    196.53,
-    -398.05,
-    -0.06,
+    195.69,
+    -397.73,
+    1.99,
     305.01
    ],
-   "tris": 6520
+   "tris": 6817
   },
   {
    "url": "ground/ground_-5_3.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -500.91,
-    -3.72,
+    -508.01,
+    -7.56,
     296.84,
-    -396.84,
-    -0.73,
-    391.96
+    -396.78,
+    7.61,
+    401.47
    ],
-   "tris": 4438
+   "tris": 19300
+  },
+  {
+   "url": "ground/ground_-5_4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -501.79,
+    -7.27,
+    398.17,
+    -392.68,
+    -2.07,
+    521.84
+   ],
+   "tris": 11549
+  },
+  {
+   "url": "ground/ground_-5_5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -501.58,
+    -7.27,
+    479.4,
+    -392.68,
+    -2.32,
+    601.39
+   ],
+   "tris": 15567
+  },
+  {
+   "url": "ground/ground_-5_6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -501.36,
+    -5.59,
+    598.73,
+    -398.23,
+    -1.9,
+    702.74
+   ],
+   "tris": 7114
+  },
+  {
+   "url": "ground/ground_-5_7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -500.08,
+    -5.53,
+    698.32,
+    -398.45,
+    -2.19,
+    761.73
+   ],
+   "tris": 2143
+  },
+  {
+   "url": "ground/ground_-4_-9.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -316.06,
+    0.66,
+    -805.7,
+    -299.21,
+    2.22,
+    -798.24
+   ],
+   "tris": 28
+  },
+  {
+   "url": "ground/ground_-4_-8.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -401.31,
+    -3.61,
+    -801.78,
+    -279.23,
+    2.45,
+    -681.11
+   ],
+   "tris": 6394
+  },
+  {
+   "url": "ground/ground_-4_-7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -405.12,
+    -3.43,
+    -705.84,
+    -298.12,
+    -0.48,
+    -598.33
+   ],
+   "tris": 9430
+  },
+  {
+   "url": "ground/ground_-4_-6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -401.49,
+    -2.79,
+    -601.32,
+    -298.62,
+    -1.26,
+    -498.52
+   ],
+   "tris": 8792
   },
   {
    "url": "ground/ground_-4_-5.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -397.03,
-    -4.03,
-    -472.43,
-    -298.64,
-    -1.36,
-    -398.76
+    -401.31,
+    -2.53,
+    -501.38,
+    -279.57,
+    -0.98,
+    -398.55
    ],
-   "tris": 3322
+   "tris": 8032
   },
   {
    "url": "ground/ground_-4_-4.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -402.07,
-    -3.03,
+    -403.11,
+    -2.08,
     -401.92,
     -296.72,
     -0.03,
     -297.62
    ],
-   "tris": 5637
+   "tris": 5610
   },
   {
    "url": "ground/ground_-4_-3.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -404.32,
+    -415.55,
     -1.68,
     -302.51,
     -294.44,
-    0.15,
+    6.21,
     -198.46
    ],
-   "tris": 11658
+   "tris": 12519
   },
   {
    "url": "ground/ground_-4_-2.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -401.54,
-    -5.16,
+    -401.02,
+    -5.98,
     -201.3,
-    -294.45,
-    2.37,
-    -94.84
+    -294.65,
+    2.36,
+    -94.83
    ],
-   "tris": 8524
+   "tris": 15074
   },
   {
    "url": "ground/ground_-4_-1.glb",
@@ -3456,51 +7498,51 @@
     -104.99,
     -294.69,
     0.14,
-    2.87
+    3.73
    ],
-   "tris": 7746
+   "tris": 7699
   },
   {
    "url": "ground/ground_-4_0.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -401.32,
+    -401.44,
     -1.56,
-    -2.2,
-    -298.14,
-    -0.54,
-    102.17
+    -3.88,
+    -298.03,
+    -0.53,
+    104.3
    ],
-   "tris": 10255
+   "tris": 10352
   },
   {
    "url": "ground/ground_-4_1.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -402.66,
+    -401.99,
     -1.37,
-    98.26,
-    -297.71,
+    95.69,
+    -298.03,
     -0.01,
     201.91
    ],
-   "tris": 10211
+   "tris": 9832
   },
   {
    "url": "ground/ground_-4_2.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -401.81,
+    -402.25,
     -1.18,
     197.23,
-    -297.24,
-    0.08,
+    -297.34,
+    0.25,
     302.64
    ],
-   "tris": 8379
+   "tris": 7960
   },
   {
    "url": "ground/ground_-4_3.glb",
@@ -3508,55 +7550,153 @@
    "group": "ground",
    "bounds": [
     -403.11,
-    -3.69,
+    -2.22,
     297.09,
-    -298.49,
+    -296.55,
     1.97,
-    401.36
+    403.49
    ],
-   "tris": 8144
+   "tris": 7917
   },
   {
    "url": "ground/ground_-4_4.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -391.08,
-    -3.45,
-    398.53,
+    -403.25,
+    -7.17,
+    395.4,
     -298.5,
-    -0.59,
-    472.3
+    -0.6,
+    501.58
    ],
-   "tris": 3768
+   "tris": 7180
+  },
+  {
+   "url": "ground/ground_-4_5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -401.65,
+    -8.22,
+    499.17,
+    -298.24,
+    -0.17,
+    601.44
+   ],
+   "tris": 18585
+  },
+  {
+   "url": "ground/ground_-4_6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -401.59,
+    -7.08,
+    598.8,
+    -298.08,
+    -0.45,
+    701.77
+   ],
+   "tris": 13092
+  },
+  {
+   "url": "ground/ground_-4_7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -401.87,
+    -8.58,
+    698.39,
+    -298.73,
+    -1.43,
+    800.78
+   ],
+   "tris": 7281
+  },
+  {
+   "url": "ground/ground_-4_8.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -317.36,
+    -8.58,
+    798.92,
+    -299.37,
+    -1.86,
+    811.02
+   ],
+   "tris": 1365
+  },
+  {
+   "url": "ground/ground_-3_-9.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -301.11,
+    -4.18,
+    -849.79,
+    -198.6,
+    2.27,
+    -798.69
+   ],
+   "tris": 1420
+  },
+  {
+   "url": "ground/ground_-3_-8.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -316.0,
+    -3.85,
+    -801.47,
+    -172.53,
+    2.75,
+    -681.11
+   ],
+   "tris": 6433
+  },
+  {
+   "url": "ground/ground_-3_-7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -301.57,
+    -3.9,
+    -701.72,
+    -198.18,
+    2.64,
+    -542.96
+   ],
+   "tris": 13315
   },
   {
    "url": "ground/ground_-3_-6.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -261.04,
-    -4.02,
-    -561.89,
-    -199.17,
-    1.5,
-    -498.46
+    -301.36,
+    -3.57,
+    -629.42,
+    -197.74,
+    2.72,
+    -498.2
    ],
-   "tris": 1000
+   "tris": 8782
   },
   {
    "url": "ground/ground_-3_-5.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -301.37,
-    -4.05,
-    -501.16,
+    -326.44,
+    -2.76,
+    -501.39,
     -197.23,
-    -1.11,
-    -394.92
+    -0.98,
+    -394.33
    ],
-   "tris": 6500
+   "tris": 6716
   },
   {
    "url": "ground/ground_-3_-4.glb",
@@ -3570,7 +7710,7 @@
     -0.65,
     -296.84
    ],
-   "tris": 6012
+   "tris": 5997
   },
   {
    "url": "ground/ground_-3_-3.glb",
@@ -3580,11 +7720,11 @@
     -304.77,
     -2.03,
     -304.34,
-    -196.65,
-    -0.9,
-    -197.98
+    -195.09,
+    6.07,
+    -198.31
    ],
-   "tris": 8321
+   "tris": 9143
   },
   {
    "url": "ground/ground_-3_-2.glb",
@@ -3592,13 +7732,13 @@
    "group": "ground",
    "bounds": [
     -304.77,
-    -1.8,
-    -201.72,
-    -193.92,
+    -1.81,
+    -202.21,
+    -193.96,
     -0.6,
     -96.69
    ],
-   "tris": 6298
+   "tris": 6239
   },
   {
    "url": "ground/ground_-3_-1.glb",
@@ -3607,110 +7747,194 @@
    "bounds": [
     -306.45,
     -1.13,
-    -103.84,
+    -103.78,
     -197.38,
     -0.26,
     2.35
    ],
-   "tris": 3813
+   "tris": 3808
   },
   {
    "url": "ground/ground_-3_0.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -301.81,
+    -302.12,
     -1.53,
     -2.21,
     -194.71,
     -0.43,
-    101.38
+    101.46
    ],
-   "tris": 5406
+   "tris": 5376
   },
   {
    "url": "ground/ground_-3_1.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -303.32,
+    -302.76,
     -1.06,
-    98.3,
-    -194.07,
-    -0.12,
-    204.12
+    98.48,
+    -196.01,
+    -0.1,
+    204.21
    ],
-   "tris": 8490
+   "tris": 8565
   },
   {
    "url": "ground/ground_-3_2.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -302.49,
+    -302.78,
     -0.49,
-    195.36,
-    -198.14,
+    194.78,
+    -196.59,
     1.66,
     305.11
    ],
-   "tris": 9702
+   "tris": 9407
   },
   {
    "url": "ground/ground_-3_3.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -301.77,
-    -4.1,
+    -305.05,
+    -1.09,
     292.82,
-    -194.79,
-    3.38,
+    -194.82,
+    1.89,
     403.5
    ],
-   "tris": 8285
+   "tris": 7729
   },
   {
    "url": "ground/ground_-3_4.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -301.14,
-    -4.82,
+    -301.38,
+    -5.62,
     396.29,
-    -195.43,
-    2.72,
-    501.37
+    -195.1,
+    2.73,
+    505.69
    ],
-   "tris": 10432
+   "tris": 14857
   },
   {
    "url": "ground/ground_-3_5.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -300.22,
-    -2.36,
-    496.91,
-    -198.75,
+    -301.42,
+    -2.35,
+    496.56,
+    -198.74,
     0.01,
-    534.26
+    601.87
    ],
-   "tris": 813
+   "tris": 7067
+  },
+  {
+   "url": "ground/ground_-3_6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -301.53,
+    -2.99,
+    598.56,
+    -198.12,
+    -1.33,
+    701.53
+   ],
+   "tris": 8253
+  },
+  {
+   "url": "ground/ground_-3_7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -301.56,
+    -7.08,
+    698.46,
+    -197.49,
+    -1.79,
+    801.42
+   ],
+   "tris": 7297
+  },
+  {
+   "url": "ground/ground_-3_8.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -300.63,
+    -8.58,
+    798.31,
+    -198.64,
+    -1.9,
+    836.36
+   ],
+   "tris": 2025
+  },
+  {
+   "url": "ground/ground_-2_-9.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -202.19,
+    -4.07,
+    -872.78,
+    -98.92,
+    -1.75,
+    -796.65
+   ],
+   "tris": 2764
+  },
+  {
+   "url": "ground/ground_-2_-8.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -214.4,
+    -3.34,
+    -804.6,
+    -97.72,
+    -1.57,
+    -688.05
+   ],
+   "tris": 7123
+  },
+  {
+   "url": "ground/ground_-2_-7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -203.05,
+    -2.54,
+    -703.87,
+    -96.19,
+    2.58,
+    -598.17
+   ],
+   "tris": 7373
   },
   {
    "url": "ground/ground_-2_-6.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -200.56,
+    -201.59,
     -2.5,
-    -550.83,
-    -98.55,
-    2.66,
-    -497.44
+    -602.55,
+    -97.72,
+    2.65,
+    -498.07
    ],
-   "tris": 3079
+   "tris": 4388
   },
   {
    "url": "ground/ground_-2_-5.glb",
@@ -3719,12 +7943,12 @@
    "bounds": [
     -205.08,
     -2.67,
-    -502.01,
-    -97.66,
+    -502.52,
+    -98.1,
     2.62,
-    -396.98
+    -396.57
    ],
-   "tris": 6654
+   "tris": 6641
   },
   {
    "url": "ground/ground_-2_-4.glb",
@@ -3733,40 +7957,40 @@
    "bounds": [
     -202.41,
     -2.4,
-    -403.03,
-    -96.33,
-    0.26,
-    -297.26
+    -404.68,
+    -95.41,
+    0.42,
+    -297.35
    ],
-   "tris": 6305
+   "tris": 6320
   },
   {
    "url": "ground/ground_-2_-3.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -202.01,
+    -201.92,
     -2.16,
-    -302.76,
-    -94.88,
-    -0.72,
-    -197.15
+    -302.5,
+    -91.04,
+    5.55,
+    -196.03
    ],
-   "tris": 12231
+   "tris": 12837
   },
   {
    "url": "ground/ground_-2_-2.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -204.7,
+    -204.72,
     -1.96,
-    -205.35,
-    -96.12,
-    -0.86,
+    -204.89,
+    -98.7,
+    -0.88,
     -95.26
    ],
-   "tris": 6816
+   "tris": 6798
   },
   {
    "url": "ground/ground_-2_-1.glb",
@@ -3780,7 +8004,7 @@
     0.18,
     2.68
    ],
-   "tris": 4490
+   "tris": 4483
   },
   {
    "url": "ground/ground_-2_0.glb",
@@ -3788,41 +8012,41 @@
    "group": "ground",
    "bounds": [
     -204.95,
-    -0.76,
+    -0.77,
     -4.61,
-    -94.09,
-    0.17,
+    -98.13,
+    0.18,
     104.5
    ],
-   "tris": 2994
+   "tris": 3024
   },
   {
    "url": "ground/ground_-2_1.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -204.33,
+    -205.57,
     -0.86,
     95.22,
     -98.26,
     -0.17,
     202.88
    ],
-   "tris": 2736
+   "tris": 2722
   },
   {
    "url": "ground/ground_-2_2.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -202.88,
-    -0.99,
+    -205.36,
+    -1.0,
     196.51,
-    -98.54,
+    -98.68,
     3.02,
-    301.96
+    302.96
    ],
-   "tris": 8653
+   "tris": 8540
   },
   {
    "url": "ground/ground_-2_3.glb",
@@ -3830,13 +8054,13 @@
    "group": "ground",
    "bounds": [
     -204.39,
-    -4.1,
+    -1.5,
     298.66,
-    -98.26,
+    -98.46,
     1.17,
     402.28
    ],
-   "tris": 9574
+   "tris": 8636
   },
   {
    "url": "ground/ground_-2_4.glb",
@@ -3846,81 +8070,165 @@
     -204.39,
     -0.92,
     397.14,
-    -98.22,
-    1.2,
+    -98.1,
+    1.19,
     502.19
    ],
-   "tris": 8231
+   "tris": 8156
   },
   {
    "url": "ground/ground_-2_5.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -202.87,
-    -2.72,
-    496.91,
+    -202.83,
+    -1.94,
+    497.02,
     -94.17,
     0.1,
-    567.91
+    605.27
    ],
-   "tris": 2943
+   "tris": 10027
+  },
+  {
+   "url": "ground/ground_-2_6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -201.59,
+    -2.71,
+    595.53,
+    -95.99,
+    -0.78,
+    702.95
+   ],
+   "tris": 10770
+  },
+  {
+   "url": "ground/ground_-2_7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -201.97,
+    -2.88,
+    696.49,
+    -96.48,
+    -1.23,
+    802.53
+   ],
+   "tris": 4598
+  },
+  {
+   "url": "ground/ground_-2_8.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -201.16,
+    -4.62,
+    796.27,
+    -95.07,
+    -1.12,
+    854.07
+   ],
+   "tris": 2825
+  },
+  {
+   "url": "ground/ground_-1_-9.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -101.18,
+    -3.81,
+    -875.66,
+    5.92,
+    -1.74,
+    -798.86
+   ],
+   "tris": 3043
+  },
+  {
+   "url": "ground/ground_-1_-8.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -102.04,
+    -2.64,
+    -801.11,
+    1.35,
+    -0.7,
+    -696.64
+   ],
+   "tris": 8294
+  },
+  {
+   "url": "ground/ground_-1_-7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -105.33,
+    -2.08,
+    -703.19,
+    1.54,
+    0.47,
+    -595.21
+   ],
+   "tris": 10819
   },
   {
    "url": "ground/ground_-1_-6.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -101.87,
-    -2.11,
-    -560.0,
-    1.49,
-    3.26,
-    -497.59
+    -102.17,
+    -1.73,
+    -606.59,
+    2.85,
+    3.25,
+    -498.36
    ],
-   "tris": 3066
+   "tris": 4902
   },
   {
    "url": "ground/ground_-1_-5.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -103.33,
-    0.5,
-    -502.45,
-    1.97,
-    3.32,
-    -394.95
+    -102.02,
+    0.2,
+    -502.2,
+    2.09,
+    3.34,
+    -395.22
    ],
-   "tris": 2939
+   "tris": 2966
   },
   {
    "url": "ground/ground_-1_-4.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -104.43,
+    -104.98,
     -2.19,
-    -406.69,
-    2.17,
-    2.55,
-    -297.41
+    -403.72,
+    2.06,
+    2.56,
+    -297.87
    ],
-   "tris": 1216
+   "tris": 1298
   },
   {
    "url": "ground/ground_-1_-3.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -104.08,
+    -105.9,
     -2.4,
-    -301.67,
+    -301.71,
     5.2,
-    -1.0,
-    -197.29
+    5.43,
+    -197.35
    ],
-   "tris": 10456
+   "tris": 10944
   },
   {
    "url": "ground/ground_-1_-2.glb",
@@ -3929,12 +8237,12 @@
    "bounds": [
     -102.25,
     -1.97,
-    -203.37,
-    3.46,
+    -203.11,
+    3.25,
     -0.76,
-    -98.03
+    -97.56
    ],
-   "tris": 6228
+   "tris": 6261
   },
   {
    "url": "ground/ground_-1_-1.glb",
@@ -3942,13 +8250,13 @@
    "group": "ground",
    "bounds": [
     -103.53,
-    -4.93,
-    -102.52,
-    8.13,
-    3.59,
+    -5.14,
+    -102.5,
+    3.28,
+    5.79,
     3.31
    ],
-   "tris": 9391
+   "tris": 29621
   },
   {
    "url": "ground/ground_-1_0.glb",
@@ -3956,13 +8264,13 @@
    "group": "ground",
    "bounds": [
     -103.36,
-    -0.99,
-    -1.12,
-    -64.38,
-    0.32,
+    -4.96,
+    -1.11,
+    -36.16,
+    3.39,
     103.73
    ],
-   "tris": 2890
+   "tris": 9597
   },
   {
    "url": "ground/ground_-1_1.glb",
@@ -3970,83 +8278,153 @@
    "group": "ground",
    "bounds": [
     -103.36,
-    -4.67,
+    -5.22,
     94.03,
-    -64.23,
-    2.88,
-    200.96
+    -54.77,
+    3.19,
+    201.33
    ],
-   "tris": 4570
+   "tris": 15210
   },
   {
    "url": "ground/ground_-1_2.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -101.68,
+    -101.61,
     -1.8,
-    198.95,
+    199.03,
     1.62,
     -0.2,
     301.6
    ],
-   "tris": 6920
+   "tris": 6943
   },
   {
    "url": "ground/ground_-1_3.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -101.38,
+    -102.47,
     -1.59,
     297.49,
     1.8,
     -0.04,
     406.86
    ],
-   "tris": 5803
+   "tris": 5807
   },
   {
    "url": "ground/ground_-1_4.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -101.59,
+    -101.76,
     -1.2,
     395.88,
     2.7,
     0.3,
-    503.05
+    501.62
    ],
-   "tris": 6203
+   "tris": 6191
   },
   {
    "url": "ground/ground_-1_5.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -103.21,
-    -2.77,
-    498.36,
-    2.18,
+    -103.79,
+    -1.47,
+    498.51,
+    1.67,
     0.39,
-    559.93
+    601.79
    ],
-   "tris": 7000
+   "tris": 11019
+  },
+  {
+   "url": "ground/ground_-1_6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -105.46,
+    -2.64,
+    597.56,
+    2.39,
+    1.69,
+    701.38
+   ],
+   "tris": 10200
+  },
+  {
+   "url": "ground/ground_-1_7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -102.95,
+    -2.96,
+    698.4,
+    1.62,
+    -0.71,
+    805.04
+   ],
+   "tris": 7936
+  },
+  {
+   "url": "ground/ground_-1_8.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -103.62,
+    -5.08,
+    796.53,
+    1.67,
+    -1.1,
+    859.88
+   ],
+   "tris": 2241
+  },
+  {
+   "url": "ground/ground_0_-9.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -4.52,
+    -4.14,
+    -867.12,
+    101.44,
+    -1.89,
+    -796.32
+   ],
+   "tris": 2755
+  },
+  {
+   "url": "ground/ground_0_-8.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -2.19,
+    -2.71,
+    -801.9,
+    104.19,
+    -0.92,
+    -698.75
+   ],
+   "tris": 7409
   },
   {
    "url": "ground/ground_0_-7.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    87.98,
-    -2.76,
-    -604.48,
-    98.67,
-    -1.14,
-    -599.17
+    -1.65,
+    -2.62,
+    -701.23,
+    104.48,
+    0.4,
+    -595.81
    ],
-   "tris": 25
+   "tris": 5159
   },
   {
    "url": "ground/ground_0_-6.glb",
@@ -4054,41 +8432,41 @@
    "group": "ground",
    "bounds": [
     -12.93,
-    -2.67,
-    -601.03,
-    103.91,
-    3.17,
-    -498.62
+    -1.42,
+    -605.4,
+    105.59,
+    3.16,
+    -498.59
    ],
-   "tris": 6447
+   "tris": 8313
   },
   {
    "url": "ground/ground_0_-5.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -1.84,
-    -1.57,
-    -501.57,
-    101.28,
+    -1.86,
+    -1.59,
+    -502.29,
+    101.21,
     3.38,
-    -397.8
+    -397.69
    ],
-   "tris": 8092
+   "tris": 8037
   },
   {
    "url": "ground/ground_0_-4.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -2.32,
+    -2.44,
     -2.91,
-    -402.01,
-    101.36,
-    3.35,
-    -298.08
+    -401.93,
+    101.68,
+    4.54,
+    -295.35
    ],
-   "tris": 7205
+   "tris": 7260
   },
   {
    "url": "ground/ground_0_-3.glb",
@@ -4097,40 +8475,68 @@
    "bounds": [
     -4.32,
     -2.91,
-    -302.19,
-    101.46,
-    3.1,
-    -198.06
+    -303.93,
+    104.59,
+    5.39,
+    -198.12
    ],
-   "tris": 12062
+   "tris": 12755
   },
   {
    "url": "ground/ground_0_-2.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -3.99,
-    -5.83,
-    -201.23,
-    105.1,
-    -0.08,
-    -85.89
+    -4.22,
+    -5.89,
+    -201.17,
+    105.03,
+    4.79,
+    -89.93
    ],
-   "tris": 10792
+   "tris": 31124
   },
   {
    "url": "ground/ground_0_-1.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -10.61,
-    -5.08,
-    -119.88,
-    102.02,
-    0.94,
+    -3.18,
+    -5.12,
+    -110.74,
+    106.62,
+    5.27,
     -6.79
    ],
-   "tris": 12493
+   "tris": 33805
+  },
+  {
+   "url": "ground/ground_0_0.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    2.59,
+    -5.07,
+    21.98,
+    22.15,
+    3.13,
+    47.71
+   ],
+   "tris": 7330
+  },
+  {
+   "url": "ground/ground_0_1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    78.33,
+    -5.65,
+    189.32,
+    97.69,
+    -2.23,
+    205.39
+   ],
+   "tris": 407
   },
   {
    "url": "ground/ground_0_2.glb",
@@ -4138,27 +8544,27 @@
    "group": "ground",
    "bounds": [
     -2.15,
-    -1.42,
-    290.21,
-    100.46,
-    0.68,
+    -5.72,
+    195.7,
+    103.23,
+    2.55,
     302.62
    ],
-   "tris": 2404
+   "tris": 10252
   },
   {
    "url": "ground/ground_0_3.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -1.62,
+    -1.57,
     -1.31,
-    298.58,
+    298.86,
     104.43,
-    0.66,
+    0.67,
     404.23
    ],
-   "tris": 3739
+   "tris": 3747
   },
   {
    "url": "ground/ground_0_4.glb",
@@ -4166,111 +8572,237 @@
    "group": "ground",
    "bounds": [
     -2.1,
-    -1.34,
+    -1.33,
     392.39,
     103.54,
     0.55,
-    501.73
+    501.82
    ],
-   "tris": 7253
+   "tris": 7288
   },
   {
    "url": "ground/ground_0_5.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    -2.32,
-    -3.22,
-    497.41,
-    101.7,
-    0.6,
-    576.68
+    -1.3,
+    -2.23,
+    497.4,
+    102.03,
+    0.59,
+    602.02
    ],
-   "tris": 5573
+   "tris": 9546
+  },
+  {
+   "url": "ground/ground_0_6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -1.8,
+    -2.16,
+    596.81,
+    105.35,
+    -0.15,
+    701.58
+   ],
+   "tris": 13398
+  },
+  {
+   "url": "ground/ground_0_7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -1.86,
+    -2.55,
+    698.39,
+    102.4,
+    -1.25,
+    801.44
+   ],
+   "tris": 9488
+  },
+  {
+   "url": "ground/ground_0_8.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    -1.3,
+    -4.85,
+    798.44,
+    105.23,
+    -1.79,
+    898.89
+   ],
+   "tris": 4548
+  },
+  {
+   "url": "ground/ground_0_9.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    66.85,
+    -3.07,
+    904.85,
+    75.68,
+    -2.79,
+    997.46
+   ],
+   "tris": 88
+  },
+  {
+   "url": "ground/ground_0_10.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    57.97,
+    -2.92,
+    1003.42,
+    66.44,
+    -2.88,
+    1096.06
+   ],
+   "tris": 88
+  },
+  {
+   "url": "ground/ground_0_11.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    56.36,
+    -2.9,
+    1102.02,
+    57.55,
+    -2.88,
+    1113.98
+   ],
+   "tris": 16
+  },
+  {
+   "url": "ground/ground_1_-9.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    98.59,
+    -4.59,
+    -858.53,
+    203.03,
+    -2.13,
+    -798.66
+   ],
+   "tris": 2820
+  },
+  {
+   "url": "ground/ground_1_-8.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    97.05,
+    -2.85,
+    -801.27,
+    204.55,
+    -1.84,
+    -697.63
+   ],
+   "tris": 7120
+  },
+  {
+   "url": "ground/ground_1_-7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    94.55,
+    -2.66,
+    -701.34,
+    203.52,
+    -1.02,
+    -598.44
+   ],
+   "tris": 9938
   },
   {
    "url": "ground/ground_1_-6.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    95.86,
-    -4.0,
-    -598.65,
-    201.18,
+    95.91,
+    -2.67,
+    -601.55,
+    202.8,
     -0.74,
-    -498.18
+    -498.63
    ],
-   "tris": 3416
+   "tris": 5352
   },
   {
    "url": "ground/ground_1_-5.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    98.75,
+    98.85,
     -2.97,
-    -502.16,
-    201.31,
-    3.24,
+    -501.88,
+    203.41,
+    6.99,
     -398.79
    ],
-   "tris": 15659
+   "tris": 19458
   },
   {
    "url": "ground/ground_1_-4.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    98.49,
+    98.66,
     -2.67,
     -401.56,
     202.84,
-    3.17,
-    -297.45
+    3.67,
+    -297.49
    ],
-   "tris": 6545
+   "tris": 7095
   },
   {
    "url": "ground/ground_1_-3.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    98.73,
-    -5.98,
-    -301.82,
-    203.17,
-    3.18,
-    -196.46
+    94.91,
+    -6.02,
+    -301.9,
+    203.07,
+    5.66,
+    -195.0
    ],
-   "tris": 6174
+   "tris": 11200
   },
   {
    "url": "ground/ground_1_-2.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    95.41,
-    -6.12,
-    -203.42,
-    202.44,
-    1.03,
-    -96.49
+    94.28,
+    -6.02,
+    -204.96,
+    203.08,
+    4.53,
+    -96.73
    ],
-   "tris": 12595
+   "tris": 17803
   },
   {
    "url": "ground/ground_1_-1.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    97.68,
+    94.29,
     -2.15,
-    -105.41,
-    205.59,
+    -103.53,
+    202.05,
     -0.63,
     -6.79
    ],
-   "tris": 5981
+   "tris": 6014
   },
   {
    "url": "ground/ground_1_0.glb",
@@ -4291,14 +8823,14 @@
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    99.7,
-    -2.29,
-    289.82,
+    97.74,
+    -5.65,
+    201.52,
     200.92,
-    0.39,
-    301.48
+    2.89,
+    301.43
    ],
-   "tris": 4402
+   "tris": 5573
   },
   {
    "url": "ground/ground_1_3.glb",
@@ -4308,11 +8840,11 @@
     95.99,
     -1.92,
     297.83,
-    201.44,
+    201.42,
     0.26,
-    401.81
+    401.66
    ],
-   "tris": 14690
+   "tris": 14607
   },
   {
    "url": "ground/ground_1_4.glb",
@@ -4320,55 +8852,139 @@
    "group": "ground",
    "bounds": [
     97.69,
-    -2.19,
+    -2.21,
     396.4,
     215.97,
     0.07,
-    501.6
+    501.87
    ],
-   "tris": 6596
+   "tris": 6689
   },
   {
    "url": "ground/ground_1_5.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    98.11,
-    -4.05,
+    97.0,
+    -2.77,
     498.56,
-    201.33,
+    201.54,
     1.9,
-    568.23
+    601.25
    ],
-   "tris": 4435
+   "tris": 8662
+  },
+  {
+   "url": "ground/ground_1_6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    96.77,
+    -2.79,
+    598.67,
+    202.53,
+    -1.01,
+    701.38
+   ],
+   "tris": 11360
+  },
+  {
+   "url": "ground/ground_1_7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    97.89,
+    -3.09,
+    698.45,
+    202.49,
+    -0.62,
+    802.29
+   ],
+   "tris": 5819
+  },
+  {
+   "url": "ground/ground_1_8.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    94.82,
+    -4.41,
+    797.96,
+    204.48,
+    -1.45,
+    876.3
+   ],
+   "tris": 3580
+  },
+  {
+   "url": "ground/ground_2_-9.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    198.32,
+    -4.62,
+    -848.96,
+    301.66,
+    -2.06,
+    -798.65
+   ],
+   "tris": 2039
+  },
+  {
+   "url": "ground/ground_2_-8.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    194.6,
+    -3.17,
+    -801.19,
+    302.39,
+    -1.83,
+    -694.69
+   ],
+   "tris": 6378
+  },
+  {
+   "url": "ground/ground_2_-7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    196.66,
+    -2.9,
+    -703.33,
+    303.75,
+    -2.08,
+    -597.91
+   ],
+   "tris": 6138
   },
   {
    "url": "ground/ground_2_-6.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    198.83,
-    -4.28,
-    -530.64,
-    253.35,
-    -2.41,
-    -498.5
+    197.84,
+    -2.81,
+    -602.56,
+    303.75,
+    4.74,
+    -495.6
    ],
-   "tris": 884
+   "tris": 21828
   },
   {
    "url": "ground/ground_2_-5.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    198.3,
-    -7.12,
-    -501.3,
-    301.36,
-    -2.17,
-    -394.36
+    196.14,
+    -7.25,
+    -504.77,
+    302.36,
+    4.72,
+    -394.51
    ],
-   "tris": 10517
+   "tris": 15399
   },
   {
    "url": "ground/ground_2_-4.glb",
@@ -4377,54 +8993,54 @@
    "bounds": [
     197.78,
     -2.71,
-    -403.04,
-    303.48,
-    3.29,
-    -297.08
+    -403.05,
+    304.26,
+    5.61,
+    -297.92
    ],
-   "tris": 8736
+   "tris": 9752
   },
   {
    "url": "ground/ground_2_-3.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    196.59,
-    1.03,
-    -301.46,
-    302.48,
-    3.32,
-    -198.56
+    197.89,
+    0.89,
+    -301.54,
+    301.4,
+    3.62,
+    -195.09
    ],
-   "tris": 6542
+   "tris": 6686
   },
   {
    "url": "ground/ground_2_-2.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    198.49,
+    195.41,
     -2.91,
-    -202.38,
-    302.49,
-    3.17,
-    -96.95
+    -204.78,
+    302.22,
+    3.18,
+    -98.78
    ],
-   "tris": 9591
+   "tris": 9585
   },
   {
    "url": "ground/ground_2_-1.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    196.94,
+    196.97,
     -2.32,
-    -103.99,
+    -101.97,
     302.76,
     -0.87,
-    3.6
+    3.31
    ],
-   "tris": 4566
+   "tris": 4530
   },
   {
    "url": "ground/ground_2_0.glb",
@@ -4433,12 +9049,12 @@
    "bounds": [
     210.61,
     -3.38,
-    -2.47,
+    -2.49,
     303.16,
     -1.23,
     104.0
    ],
-   "tris": 5548
+   "tris": 5513
   },
   {
    "url": "ground/ground_2_1.glb",
@@ -4452,7 +9068,7 @@
     -1.38,
     201.75
    ],
-   "tris": 5810
+   "tris": 5814
   },
   {
    "url": "ground/ground_2_2.glb",
@@ -4460,27 +9076,27 @@
    "group": "ground",
    "bounds": [
     198.87,
-    -2.29,
-    197.88,
+    -2.28,
+    198.43,
     302.67,
     -1.15,
     304.93
    ],
-   "tris": 5901
+   "tris": 5892
   },
   {
    "url": "ground/ground_2_3.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    198.64,
+    198.81,
     -2.55,
-    295.8,
+    297.21,
     305.22,
-    0.13,
-    402.25
+    0.12,
+    404.67
    ],
-   "tris": 8634
+   "tris": 8676
   },
   {
    "url": "ground/ground_2_4.glb",
@@ -4488,69 +9104,167 @@
    "group": "ground",
    "bounds": [
     184.95,
-    -3.67,
-    397.51,
-    305.28,
+    -2.17,
+    398.53,
+    302.68,
     -0.76,
-    501.44
+    501.1
    ],
-   "tris": 7091
+   "tris": 7214
   },
   {
    "url": "ground/ground_2_5.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    197.95,
-    -3.59,
-    498.9,
-    300.9,
-    -1.36,
-    574.62
+    197.81,
+    -2.52,
+    498.73,
+    301.52,
+    -0.51,
+    601.25
    ],
-   "tris": 1434
+   "tris": 7193
+  },
+  {
+   "url": "ground/ground_2_6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    198.47,
+    -2.48,
+    597.81,
+    301.46,
+    -0.55,
+    707.16
+   ],
+   "tris": 11275
+  },
+  {
+   "url": "ground/ground_2_7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    196.76,
+    -2.05,
+    693.17,
+    302.02,
+    -0.37,
+    801.35
+   ],
+   "tris": 7071
+  },
+  {
+   "url": "ground/ground_2_8.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    192.41,
+    -3.65,
+    798.66,
+    300.17,
+    -1.31,
+    836.05
+   ],
+   "tris": 2295
+  },
+  {
+   "url": "ground/ground_3_-9.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    298.9,
+    -4.71,
+    -829.17,
+    340.42,
+    -2.77,
+    -798.76
+   ],
+   "tris": 236
+  },
+  {
+   "url": "ground/ground_3_-8.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    298.34,
+    -4.54,
+    -801.2,
+    401.22,
+    -2.39,
+    -697.58
+   ],
+   "tris": 7113
+  },
+  {
+   "url": "ground/ground_3_-7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    297.25,
+    -3.02,
+    -702.03,
+    403.79,
+    0.63,
+    -594.89
+   ],
+   "tris": 7978
+  },
+  {
+   "url": "ground/ground_3_-6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    297.27,
+    -7.1,
+    -603.06,
+    401.29,
+    -0.95,
+    -497.88
+   ],
+   "tris": 11374
   },
   {
    "url": "ground/ground_3_-5.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    298.52,
-    -7.12,
-    -472.83,
-    397.11,
-    -2.08,
+    296.99,
+    -7.5,
+    -502.03,
+    404.12,
+    0.95,
     -394.99
    ],
-   "tris": 2156
+   "tris": 8202
   },
   {
    "url": "ground/ground_3_-4.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    294.63,
-    -3.97,
-    -405.99,
-    401.55,
-    2.4,
+    294.57,
+    -2.89,
+    -406.15,
+    402.04,
+    2.47,
     -297.12
    ],
-   "tris": 11867
+   "tris": 11855
   },
   {
    "url": "ground/ground_3_-3.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    297.94,
+    298.34,
     -2.72,
-    -301.68,
-    404.46,
+    -301.1,
+    403.98,
     3.32,
-    -198.2
+    -197.91
    ],
-   "tris": 7840
+   "tris": 7744
   },
   {
    "url": "ground/ground_3_-2.glb",
@@ -4558,41 +9272,41 @@
    "group": "ground",
    "bounds": [
     297.18,
-    -1.96,
-    -201.7,
-    402.23,
-    3.53,
+    -1.95,
+    -201.8,
+    401.99,
+    3.5,
     -94.97
    ],
-   "tris": 5763
+   "tris": 5740
   },
   {
    "url": "ground/ground_3_-1.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    294.6,
+    294.58,
     -2.37,
-    -105.84,
-    401.93,
+    -104.65,
+    401.61,
     2.76,
     3.57
    ],
-   "tris": 5791
+   "tris": 5715
   },
   {
    "url": "ground/ground_3_0.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    294.6,
+    294.58,
     -4.02,
-    -2.47,
-    401.24,
+    -2.49,
+    401.16,
     -1.65,
-    104.83
+    104.64
    ],
-   "tris": 5824
+   "tris": 5855
   },
   {
    "url": "ground/ground_3_1.glb",
@@ -4601,12 +9315,12 @@
    "bounds": [
     296.79,
     -2.49,
-    93.75,
+    93.52,
     402.61,
     -1.48,
     201.73
    ],
-   "tris": 5908
+   "tris": 5915
   },
   {
    "url": "ground/ground_3_2.glb",
@@ -4615,12 +9329,12 @@
    "bounds": [
     297.23,
     -2.63,
-    198.51,
-    404.59,
+    198.21,
+    404.65,
     -1.16,
-    301.51
+    302.49
    ],
-   "tris": 8860
+   "tris": 8861
   },
   {
    "url": "ground/ground_3_3.glb",
@@ -4628,55 +9342,139 @@
    "group": "ground",
    "bounds": [
     297.19,
-    -3.31,
-    298.13,
-    402.58,
+    -2.62,
+    298.25,
+    402.15,
     -0.07,
-    402.42
+    404.13
    ],
-   "tris": 8757
+   "tris": 8775
   },
   {
    "url": "ground/ground_3_4.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    294.93,
-    -3.84,
-    396.82,
-    391.61,
-    -1.51,
-    506.5
+    295.95,
+    -2.54,
+    395.71,
+    403.45,
+    -0.89,
+    503.75
    ],
-   "tris": 3233
+   "tris": 8659
   },
   {
    "url": "ground/ground_3_5.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    298.62,
-    -3.41,
-    495.68,
-    360.43,
-    -1.5,
-    582.35
+    297.66,
+    -6.76,
+    496.69,
+    402.37,
+    1.52,
+    602.84
    ],
-   "tris": 593
+   "tris": 15104
+  },
+  {
+   "url": "ground/ground_3_6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    298.61,
+    -2.37,
+    598.25,
+    402.48,
+    -0.5,
+    702.34
+   ],
+   "tris": 10941
+  },
+  {
+   "url": "ground/ground_3_7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    297.32,
+    -4.27,
+    698.17,
+    404.91,
+    -0.36,
+    803.92
+   ],
+   "tris": 6082
+  },
+  {
+   "url": "ground/ground_3_8.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    299.2,
+    -4.19,
+    795.34,
+    353.14,
+    -1.7,
+    815.75
+   ],
+   "tris": 492
+  },
+  {
+   "url": "ground/ground_4_-8.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    398.34,
+    -4.72,
+    -761.51,
+    498.85,
+    -1.98,
+    -697.98
+   ],
+   "tris": 3658
+  },
+  {
+   "url": "ground/ground_4_-7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    394.67,
+    -4.32,
+    -702.86,
+    501.38,
+    -1.05,
+    -598.66
+   ],
+   "tris": 5193
+  },
+  {
+   "url": "ground/ground_4_-6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    398.48,
+    -3.18,
+    -601.18,
+    501.6,
+    -1.68,
+    -496.75
+   ],
+   "tris": 9928
   },
   {
    "url": "ground/ground_4_-5.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    400.38,
-    -2.27,
-    -421.59,
-    402.16,
-    -2.26,
-    -419.04
+    395.59,
+    -2.94,
+    -504.94,
+    501.27,
+    -1.19,
+    -397.33
    ],
-   "tris": 8
+   "tris": 10635
   },
   {
    "url": "ground/ground_4_-4.glb",
@@ -4684,69 +9482,69 @@
    "group": "ground",
    "bounds": [
     398.44,
-    -4.46,
-    -392.16,
+    -3.5,
+    -402.74,
     502.05,
-    -1.54,
-    -295.29
+    -1.55,
+    -295.86
    ],
-   "tris": 3527
+   "tris": 7188
   },
   {
    "url": "ground/ground_4_-3.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    395.85,
-    -3.93,
-    -303.26,
+    395.82,
+    -3.61,
+    -305.21,
     504.38,
     -0.64,
-    -198.22
+    -198.8
    ],
-   "tris": 7349
+   "tris": 7417
   },
   {
    "url": "ground/ground_4_-2.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    397.72,
+    397.64,
     -2.34,
     -201.66,
     502.0,
     2.67,
-    -98.12
+    -98.41
    ],
-   "tris": 8476
+   "tris": 8338
   },
   {
    "url": "ground/ground_4_-1.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    398.06,
+    397.99,
     -2.63,
-    -101.57,
-    501.85,
+    -101.76,
+    502.61,
     3.12,
     2.35
    ],
-   "tris": 8200
+   "tris": 8309
   },
   {
    "url": "ground/ground_4_0.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    398.56,
+    398.91,
     -4.02,
     -1.72,
     502.63,
     2.82,
     103.68
    ],
-   "tris": 6882
+   "tris": 6991
   },
   {
    "url": "ground/ground_4_1.glb",
@@ -4754,13 +9552,13 @@
    "group": "ground",
    "bounds": [
     397.44,
-    -2.59,
+    -2.58,
     95.93,
     505.11,
     -1.45,
-    201.17
+    201.23
    ],
-   "tris": 6702
+   "tris": 6611
   },
   {
    "url": "ground/ground_4_2.glb",
@@ -4768,55 +9566,167 @@
    "group": "ground",
    "bounds": [
     394.79,
-    -3.83,
-    198.62,
+    -2.74,
+    198.7,
     504.26,
     -0.05,
-    301.55
+    301.59
    ],
-   "tris": 9397
+   "tris": 9850
   },
   {
    "url": "ground/ground_4_3.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    397.85,
-    -4.26,
-    297.82,
-    472.43,
+    397.82,
+    -2.79,
+    298.83,
+    503.27,
     0.01,
-    392.65
+    401.25
    ],
-   "tris": 4541
+   "tris": 8954
+  },
+  {
+   "url": "ground/ground_4_4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    396.24,
+    -2.38,
+    398.43,
+    504.06,
+    -0.45,
+    502.04
+   ],
+   "tris": 4776
+  },
+  {
+   "url": "ground/ground_4_5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    397.11,
+    -2.63,
+    498.36,
+    501.8,
+    -0.4,
+    602.16
+   ],
+   "tris": 9636
+  },
+  {
+   "url": "ground/ground_4_6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    397.25,
+    -2.99,
+    598.68,
+    501.89,
+    -1.41,
+    701.97
+   ],
+   "tris": 9468
+  },
+  {
+   "url": "ground/ground_4_7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    395.27,
+    -3.92,
+    698.34,
+    498.75,
+    -1.43,
+    799.96
+   ],
+   "tris": 3068
+  },
+  {
+   "url": "ground/ground_4_8.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    434.19,
+    -2.39,
+    802.56,
+    453.19,
+    -2.18,
+    829.75
+   ],
+   "tris": 64
+  },
+  {
+   "url": "ground/ground_5_-7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    498.57,
+    -4.85,
+    -699.21,
+    601.15,
+    -1.32,
+    -597.77
+   ],
+   "tris": 6821
+  },
+  {
+   "url": "ground/ground_5_-6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    498.49,
+    -3.0,
+    -601.5,
+    602.22,
+    -1.22,
+    -498.65
+   ],
+   "tris": 8929
+  },
+  {
+   "url": "ground/ground_5_-5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    498.22,
+    -2.65,
+    -501.34,
+    602.24,
+    -0.68,
+    -398.4
+   ],
+   "tris": 14266
   },
   {
    "url": "ground/ground_5_-4.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    499.38,
-    -3.92,
-    -326.86,
-    512.16,
-    -1.9,
-    -297.75
+    496.25,
+    -2.62,
+    -402.85,
+    601.58,
+    -0.12,
+    -298.53
    ],
-   "tris": 272
+   "tris": 11165
   },
   {
    "url": "ground/ground_5_-3.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    496.51,
-    -4.02,
-    -301.57,
-    560.16,
-    -1.69,
+    495.62,
+    -2.65,
+    -301.31,
+    601.78,
+    -0.65,
     -197.46
    ],
-   "tris": 2214
+   "tris": 7263
   },
   {
    "url": "ground/ground_5_-2.glb",
@@ -4824,27 +9734,27 @@
    "group": "ground",
    "bounds": [
     497.9,
-    -3.95,
-    -201.66,
-    589.83,
-    -1.36,
-    -98.85
+    -2.75,
+    -202.35,
+    604.08,
+    -1.2,
+    -96.56
    ],
-   "tris": 2778
+   "tris": 7843
   },
   {
    "url": "ground/ground_5_-1.glb",
    "kind": "visual",
    "group": "ground",
    "bounds": [
-    498.11,
-    -3.4,
-    -101.56,
-    571.55,
-    2.89,
-    1.19
+    498.08,
+    -2.47,
+    -103.22,
+    603.42,
+    2.96,
+    2.77
    ],
-   "tris": 3564
+   "tris": 6354
   },
   {
    "url": "ground/ground_5_0.glb",
@@ -4852,13 +9762,13 @@
    "group": "ground",
    "bounds": [
     496.01,
-    -4.21,
-    -1.22,
-    571.85,
-    2.89,
-    102.23
+    -2.71,
+    -3.0,
+    601.77,
+    3.02,
+    104.64
    ],
-   "tris": 6508
+   "tris": 10333
   },
   {
    "url": "ground/ground_5_1.glb",
@@ -4866,13 +9776,13 @@
    "group": "ground",
    "bounds": [
     495.11,
-    -4.15,
-    97.53,
-    550.85,
-    -1.82,
-    201.48
+    -2.77,
+    95.34,
+    602.35,
+    -1.7,
+    201.68
    ],
-   "tris": 3264
+   "tris": 7514
   },
   {
    "url": "ground/ground_5_2.glb",
@@ -4880,13 +9790,545 @@
    "group": "ground",
    "bounds": [
     495.52,
-    -4.12,
-    198.73,
-    535.89,
-    -2.15,
-    272.67
+    -2.8,
+    198.36,
+    601.64,
+    -1.03,
+    305.02
    ],
-   "tris": 1035
+   "tris": 7978
+  },
+  {
+   "url": "ground/ground_5_3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    496.98,
+    -2.61,
+    295.18,
+    601.46,
+    -1.22,
+    403.77
+   ],
+   "tris": 9985
+  },
+  {
+   "url": "ground/ground_5_4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    497.59,
+    -2.46,
+    395.82,
+    603.95,
+    -0.29,
+    502.44
+   ],
+   "tris": 8572
+  },
+  {
+   "url": "ground/ground_5_5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    498.93,
+    -2.79,
+    495.63,
+    602.18,
+    -0.75,
+    605.35
+   ],
+   "tris": 10723
+  },
+  {
+   "url": "ground/ground_5_6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    497.83,
+    -3.74,
+    596.56,
+    600.39,
+    -1.29,
+    699.22
+   ],
+   "tris": 4593
+  },
+  {
+   "url": "ground/ground_6_-7.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    598.78,
+    -4.45,
+    -615.82,
+    616.29,
+    -2.65,
+    -598.91
+   ],
+   "tris": 121
+  },
+  {
+   "url": "ground/ground_6_-6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    597.61,
+    -4.2,
+    -601.53,
+    699.8,
+    -0.7,
+    -498.21
+   ],
+   "tris": 5812
+  },
+  {
+   "url": "ground/ground_6_-5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    597.49,
+    -2.61,
+    -501.9,
+    703.5,
+    -1.77,
+    -398.36
+   ],
+   "tris": 6762
+  },
+  {
+   "url": "ground/ground_6_-4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    598.06,
+    -2.55,
+    -401.32,
+    701.56,
+    -1.63,
+    -297.41
+   ],
+   "tris": 10435
+  },
+  {
+   "url": "ground/ground_6_-3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    597.71,
+    -2.61,
+    -304.1,
+    702.83,
+    -0.65,
+    -197.85
+   ],
+   "tris": 6826
+  },
+  {
+   "url": "ground/ground_6_-2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    595.84,
+    -2.64,
+    -202.48,
+    703.73,
+    -0.81,
+    -97.36
+   ],
+   "tris": 6786
+  },
+  {
+   "url": "ground/ground_6_-1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    597.25,
+    -2.81,
+    -102.76,
+    701.16,
+    3.03,
+    1.23
+   ],
+   "tris": 8807
+  },
+  {
+   "url": "ground/ground_6_0.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    597.39,
+    -2.76,
+    -1.55,
+    701.84,
+    3.07,
+    105.0
+   ],
+   "tris": 11555
+  },
+  {
+   "url": "ground/ground_6_1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    597.7,
+    -2.84,
+    93.89,
+    701.3,
+    -1.75,
+    202.07
+   ],
+   "tris": 6565
+  },
+  {
+   "url": "ground/ground_6_2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    597.64,
+    -2.73,
+    197.42,
+    701.41,
+    -1.68,
+    304.39
+   ],
+   "tris": 6839
+  },
+  {
+   "url": "ground/ground_6_3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    598.18,
+    -2.81,
+    295.95,
+    701.4,
+    -1.39,
+    401.8
+   ],
+   "tris": 5825
+  },
+  {
+   "url": "ground/ground_6_4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    596.3,
+    -2.97,
+    398.36,
+    701.51,
+    -0.84,
+    500.97
+   ],
+   "tris": 7659
+  },
+  {
+   "url": "ground/ground_6_5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    597.81,
+    -4.28,
+    498.62,
+    700.74,
+    -0.73,
+    602.4
+   ],
+   "tris": 4741
+  },
+  {
+   "url": "ground/ground_6_6.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    598.6,
+    -4.13,
+    598.88,
+    625.25,
+    -2.1,
+    621.72
+   ],
+   "tris": 364
+  },
+  {
+   "url": "ground/ground_7_-5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    696.78,
+    -4.08,
+    -499.82,
+    761.31,
+    -1.83,
+    -398.43
+   ],
+   "tris": 1757
+  },
+  {
+   "url": "ground/ground_7_-4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    698.24,
+    -3.91,
+    -401.2,
+    800.94,
+    -2.06,
+    -297.24
+   ],
+   "tris": 4787
+  },
+  {
+   "url": "ground/ground_7_-3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    695.75,
+    -2.58,
+    -301.4,
+    801.23,
+    -1.94,
+    -198.54
+   ],
+   "tris": 6626
+  },
+  {
+   "url": "ground/ground_7_-2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    697.7,
+    -2.52,
+    -201.66,
+    801.75,
+    -2.01,
+    -98.62
+   ],
+   "tris": 5311
+  },
+  {
+   "url": "ground/ground_7_-1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    698.77,
+    -2.45,
+    -101.35,
+    801.56,
+    0.23,
+    1.4
+   ],
+   "tris": 5851
+  },
+  {
+   "url": "ground/ground_7_0.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    697.39,
+    -2.57,
+    -1.3,
+    801.62,
+    2.65,
+    101.51
+   ],
+   "tris": 8587
+  },
+  {
+   "url": "ground/ground_7_1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    698.73,
+    -2.82,
+    98.59,
+    801.46,
+    -2.27,
+    201.46
+   ],
+   "tris": 6175
+  },
+  {
+   "url": "ground/ground_7_2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    698.7,
+    -2.66,
+    198.71,
+    801.52,
+    -2.07,
+    301.5
+   ],
+   "tris": 5234
+  },
+  {
+   "url": "ground/ground_7_3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    698.69,
+    -4.12,
+    298.87,
+    801.67,
+    -2.02,
+    401.14
+   ],
+   "tris": 4590
+  },
+  {
+   "url": "ground/ground_7_4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    698.71,
+    -4.63,
+    398.85,
+    761.18,
+    -2.2,
+    499.62
+   ],
+   "tris": 2331
+  },
+  {
+   "url": "ground/ground_7_5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    699.26,
+    -2.54,
+    559.36,
+    800.48,
+    -2.35,
+    571.58
+   ],
+   "tris": 99
+  },
+  {
+   "url": "ground/ground_8_-4.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    799.29,
+    -3.92,
+    -316.23,
+    806.16,
+    -2.41,
+    -299.13
+   ],
+   "tris": 42
+  },
+  {
+   "url": "ground/ground_8_-3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    798.52,
+    -3.92,
+    -301.1,
+    836.62,
+    -2.18,
+    -198.67
+   ],
+   "tris": 1239
+  },
+  {
+   "url": "ground/ground_8_-2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    799.0,
+    -3.84,
+    -201.29,
+    853.85,
+    -2.23,
+    -98.84
+   ],
+   "tris": 2456
+  },
+  {
+   "url": "ground/ground_8_-1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    798.67,
+    -3.84,
+    -101.59,
+    860.0,
+    -2.11,
+    1.26
+   ],
+   "tris": 3089
+  },
+  {
+   "url": "ground/ground_8_0.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    797.89,
+    -3.93,
+    -1.53,
+    860.0,
+    2.65,
+    101.3
+   ],
+   "tris": 4046
+  },
+  {
+   "url": "ground/ground_8_1.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    798.29,
+    -4.2,
+    98.66,
+    854.1,
+    -2.32,
+    201.39
+   ],
+   "tris": 2488
+  },
+  {
+   "url": "ground/ground_8_2.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    798.73,
+    -3.85,
+    198.37,
+    836.36,
+    -2.08,
+    300.7
+   ],
+   "tris": 1251
+  },
+  {
+   "url": "ground/ground_8_3.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    798.86,
+    -3.61,
+    299.46,
+    805.76,
+    -2.02,
+    316.06
+   ],
+   "tris": 40
+  },
+  {
+   "url": "ground/ground_8_5.glb",
+   "kind": "visual",
+   "group": "ground",
+   "bounds": [
+    799.77,
+    -2.43,
+    557.35,
+    809.28,
+    -2.42,
+    559.65
+   ],
+   "tris": 9
   },
   {
    "url": "ground/furniture.glb",
@@ -4900,7 +10342,7 @@
    "kind": "collision",
    "group": "ground",
    "bounds": null,
-   "tris": 310378
+   "tris": 756840
   }
  ],
  "labels": [

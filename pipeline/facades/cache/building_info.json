@@ -34,23 +34,6 @@
 "instances": 232
 },
 {
-"id": "ID_03293bd2-37dd-37b6-8671-e2093c13152c",
-"kind": "shed",
-"street": null,
-"number": null,
-"storeys": 6,
-"storey_h": 3.06,
-"gf_h": 3.0,
-"height": 18.9,
-"retail_walls": 0,
-"openings": 0,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-4_2",
-"tris": 166,
-"instances": 0
-},
-{
 "id": "ID_0cab68a5-21bc-3390-a24b-33e24ec0df09",
 "kind": "shed",
 "street": null,
@@ -66,40 +49,6 @@
 "tile": "bldg_-5_7",
 "tris": 128,
 "instances": 0
-},
-{
-"id": "ID_414cac31-7648-3bc1-8fdd-57c4357de91a",
-"kind": "modern",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.62,
-"gf_h": 5.03,
-"height": 5.6,
-"retail_walls": 0,
-"openings": 2,
-"pitched": false,
-"wall_mat": "brick",
-"tile": "bldg_-4_2",
-"tris": 430,
-"instances": 6
-},
-{
-"id": "ID_e9a96a50-38ca-3afb-9a46-88d720f0fa66",
-"kind": "shed",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.0,
-"gf_h": 3.35,
-"height": 3.8,
-"retail_walls": 0,
-"openings": 6,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-5_3",
-"tris": 397,
-"instances": 18
 },
 {
 "id": "ID_659c213c-90a8-385f-82f3-3a0bd4d43658",
@@ -136,40 +85,6 @@
 "instances": 0
 },
 {
-"id": "ID_9cf613f6-8669-33ec-91ea-dc5603fb9af4",
-"kind": "shed",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.0,
-"gf_h": 2.6,
-"height": 2.6,
-"retail_walls": 0,
-"openings": 9,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-4_2",
-"tris": 452,
-"instances": 27
-},
-{
-"id": "ID_bb48c6bb-6d1f-3a74-974b-a7e2863d9820",
-"kind": "shed",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.0,
-"gf_h": 3.04,
-"height": 3.6,
-"retail_walls": 0,
-"openings": 4,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-5_3",
-"tris": 464,
-"instances": 12
-},
-{
 "id": "ID_0befba75-bc3c-3d77-b631-07ebf75bd903",
 "kind": "modern",
 "street": null,
@@ -202,23 +117,6 @@
 "tile": "bldg_-4_0",
 "tris": 376,
 "instances": 22
-},
-{
-"id": "ID_a37e6029-3da3-3564-990a-2694d0ed181b",
-"kind": "shed",
-"street": null,
-"number": null,
-"storeys": 2,
-"storey_h": 2.7,
-"gf_h": 3.0,
-"height": 5.4,
-"retail_walls": 0,
-"openings": 1,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-4_2",
-"tris": 158,
-"instances": 4
 },
 {
 "id": "ID_661a2aa2-d13a-33c5-b3b5-b0327e254c9a",
@@ -287,57 +185,6 @@
 "tile": "bldg_-6_-1",
 "tris": 240,
 "instances": 16
-},
-{
-"id": "ID_f7bd5104-dd60-308f-84fb-f8d45cc1d892",
-"kind": "shed",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.0,
-"gf_h": 2.66,
-"height": 3.1,
-"retail_walls": 0,
-"openings": 2,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-4_2",
-"tris": 257,
-"instances": 7
-},
-{
-"id": "ID_d2bd163f-48ac-33bf-80e6-a71dd3b499e8",
-"kind": "altbau",
-"street": null,
-"number": null,
-"storeys": 2,
-"storey_h": 2.91,
-"gf_h": 4.3,
-"height": 8.2,
-"retail_walls": 1,
-"openings": 5,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-4_2",
-"tris": 474,
-"instances": 18
-},
-{
-"id": "ID_2bee1064-1ed9-3467-a974-15ef0cc8cb80",
-"kind": "shed",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.0,
-"gf_h": 2.6,
-"height": 2.7,
-"retail_walls": 0,
-"openings": 18,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-5_2",
-"tris": 665,
-"instances": 54
 },
 {
 "id": "ID_1c805291-30db-334c-bc0a-25f49a287946",
@@ -459,23 +306,6 @@
 "instances": 9
 },
 {
-"id": "ID_91fa1678-3530-33a2-b54a-9a01d6130546",
-"kind": "shed",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.0,
-"gf_h": 3.2,
-"height": 3.8,
-"retail_walls": 0,
-"openings": 5,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-5_3",
-"tris": 316,
-"instances": 16
-},
-{
 "id": "ID_978956eb-9962-3ca9-b55d-f7e670a65ca4",
 "kind": "shed",
 "street": null,
@@ -524,40 +354,6 @@
 "wall_mat": "plaster",
 "tile": "bldg_-9_0",
 "tris": 226,
-"instances": 12
-},
-{
-"id": "ID_3c31f655-cbc4-3d10-b2c0-75c1e26459a5",
-"kind": "shed",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.0,
-"gf_h": 2.6,
-"height": 3.0,
-"retail_walls": 0,
-"openings": 6,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-4_2",
-"tris": 451,
-"instances": 18
-},
-{
-"id": "ID_8d814719-78c1-33cd-8ab6-c4dbf6e6804d",
-"kind": "shed",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.0,
-"gf_h": 2.6,
-"height": 2.4,
-"retail_walls": 0,
-"openings": 4,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-4_2",
-"tris": 245,
 "instances": 12
 },
 {
@@ -714,23 +510,6 @@
 "instances": 25
 },
 {
-"id": "ID_0ff4983d-940a-3ec0-b193-a5c568ca7192",
-"kind": "shed",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.0,
-"gf_h": 2.6,
-"height": 2.5,
-"retail_walls": 0,
-"openings": 7,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-4_2",
-"tris": 565,
-"instances": 21
-},
-{
 "id": "ID_ce83c6f1-0aa0-342f-81d4-ee3b2bdccc58",
 "kind": "shed",
 "street": null,
@@ -746,23 +525,6 @@
 "tile": "bldg_-5_7",
 "tris": 155,
 "instances": 0
-},
-{
-"id": "ID_8a6f1d18-fb92-399e-b835-e71f8217f78a",
-"kind": "altbau",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 4.0,
-"gf_h": 5.69,
-"height": 6.2,
-"retail_walls": 0,
-"openings": 1,
-"pitched": false,
-"wall_mat": "stone",
-"tile": "bldg_-4_2",
-"tris": 432,
-"instances": 3
 },
 {
 "id": "ID_1a455c43-ad9c-3a79-b9f4-c54792c19b7b",
@@ -782,23 +544,6 @@
 "instances": 0
 },
 {
-"id": "ID_a50f5efb-c483-34f9-8fb1-6afe4212b3d4",
-"kind": "shed",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.0,
-"gf_h": 3.61,
-"height": 4.2,
-"retail_walls": 0,
-"openings": 4,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-4_2",
-"tris": 366,
-"instances": 12
-},
-{
 "id": "ID_4b4e15ea-ae88-337e-a7c7-0218b75ca260",
 "kind": "shed",
 "street": null,
@@ -816,23 +561,6 @@
 "instances": 0
 },
 {
-"id": "ID_3add5682-1a51-3656-bfb8-4de3a1d02075",
-"kind": "altbau",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.68,
-"gf_h": 5.63,
-"height": 6.1,
-"retail_walls": 1,
-"openings": 18,
-"pitched": false,
-"wall_mat": "stone",
-"tile": "bldg_-4_2",
-"tris": 1391,
-"instances": 68
-},
-{
 "id": "ID_1450ca0f-7907-39eb-8c8e-8dac355a1e5b",
 "kind": "shed",
 "street": null,
@@ -848,23 +576,6 @@
 "tile": "bldg_-8_0",
 "tris": 627,
 "instances": 0
-},
-{
-"id": "ID_201bcac6-d1c9-3104-a29f-63aed2e0fec5",
-"kind": "shed",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.0,
-"gf_h": 2.6,
-"height": 3.1,
-"retail_walls": 0,
-"openings": 17,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-4_2",
-"tris": 681,
-"instances": 54
 },
 {
 "id": "ID_f02d76d4-83f5-3c5f-af92-834b917567c7",
@@ -1122,23 +833,6 @@
 "instances": 9
 },
 {
-"id": "ID_137ba617-4cbb-3e60-aee0-56343160ee58",
-"kind": "shed",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.0,
-"gf_h": 2.6,
-"height": 2.8,
-"retail_walls": 0,
-"openings": 6,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-4_2",
-"tris": 283,
-"instances": 17
-},
-{
 "id": "ID_29385a39-1e89-3f82-9ce1-bd47a501d56e",
 "kind": "shed",
 "street": null,
@@ -1154,23 +848,6 @@
 "tile": "bldg_-7_-1",
 "tris": 244,
 "instances": 15
-},
-{
-"id": "ID_6d735a28-51ad-3678-9724-4ca7451390d7",
-"kind": "shed",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.0,
-"gf_h": 4.2,
-"height": 4.7,
-"retail_walls": 0,
-"openings": 3,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-5_2",
-"tris": 236,
-"instances": 10
 },
 {
 "id": "ID_141a5ba8-4e84-38a6-b402-a0159b2d2e33",
@@ -1190,23 +867,6 @@
 "instances": 21
 },
 {
-"id": "ID_db90e7e2-a731-3925-b964-cbef39586c35",
-"kind": "shed",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.0,
-"gf_h": 3.64,
-"height": 4.2,
-"retail_walls": 0,
-"openings": 0,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-5_3",
-"tris": 85,
-"instances": 0
-},
-{
 "id": "ID_3dcc6412-216f-34cd-b7e9-c7975030f729",
 "kind": "nachkrieg",
 "street": null,
@@ -1222,57 +882,6 @@
 "tile": "bldg_-7_-1",
 "tris": 737,
 "instances": 46
-},
-{
-"id": "ID_1c39a2de-39b8-3f42-9d73-fcf923d26091",
-"kind": "altbau",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.77,
-"gf_h": 3.74,
-"height": 4.0,
-"retail_walls": 1,
-"openings": 5,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-4_2",
-"tris": 731,
-"instances": 21
-},
-{
-"id": "ID_aa6c299c-9b3d-3174-8de0-938a3f48fb87",
-"kind": "shed",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.0,
-"gf_h": 3.76,
-"height": 4.2,
-"retail_walls": 1,
-"openings": 1,
-"pitched": false,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n6720626840",
-"name": "Schankwirtschaft Barfuß",
-"kind": "cafe",
-"p": [
--401.3,
--0.8,
-337.17
-],
-"n": [
-0.302,
-0.953
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-5_3",
-"tris": 1236,
-"instances": 4
 },
 {
 "id": "ID_71c669b3-3e2e-3dcd-8b70-7fae1ab59f95",
@@ -1309,23 +918,6 @@
 "instances": 6
 },
 {
-"id": "ID_7bf3782c-bd5b-3e10-8b2c-c872158c3382",
-"kind": "shed",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.0,
-"gf_h": 2.6,
-"height": 3.0,
-"retail_walls": 0,
-"openings": 0,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-5_1",
-"tris": 124,
-"instances": 0
-},
-{
 "id": "ID_371f5e19-3bf0-3e23-bb18-6e78b9010512",
 "kind": "shed",
 "street": null,
@@ -1360,91 +952,6 @@
 "instances": 3
 },
 {
-"id": "ID_ab9a5a5b-05b5-3730-8d2e-4f007e9c2ad4",
-"kind": "nachkrieg",
-"street": null,
-"number": null,
-"storeys": 2,
-"storey_h": 3.07,
-"gf_h": 3.2,
-"height": 7.2,
-"retail_walls": 1,
-"openings": 14,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-4_2",
-"tris": 694,
-"instances": 59
-},
-{
-"id": "ID_ff0b0763-d722-3c5a-a2d1-a5543b1e6800",
-"kind": "nachkrieg",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.2,
-"gf_h": 2.78,
-"height": 3.3,
-"retail_walls": 2,
-"openings": 2,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-4_2",
-"tris": 903,
-"instances": 8
-},
-{
-"id": "ID_7718ce74-3b92-3e8c-98c1-34371f55d959",
-"kind": "shed",
-"street": null,
-"number": null,
-"storeys": 2,
-"storey_h": 3.0,
-"gf_h": 3.0,
-"height": 7.0,
-"retail_walls": 0,
-"openings": 2,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-4_2",
-"tris": 199,
-"instances": 6
-},
-{
-"id": "ID_c02210bb-9e47-34dc-a604-9219eca0c507",
-"kind": "shed",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.0,
-"gf_h": 3.62,
-"height": 4.2,
-"retail_walls": 0,
-"openings": 0,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-4_2",
-"tris": 142,
-"instances": 0
-},
-{
-"id": "ID_1311345d-6aa1-322c-a408-949dd71c3e41",
-"kind": "altbau",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.98,
-"gf_h": 4.37,
-"height": 4.8,
-"retail_walls": 0,
-"openings": 4,
-"pitched": false,
-"wall_mat": "stone",
-"tile": "bldg_-5_2",
-"tris": 519,
-"instances": 17
-},
-{
 "id": "ID_b7f4c22c-f3c8-326e-9853-4558bf8b2995",
 "kind": "shed",
 "street": null,
@@ -1460,23 +967,6 @@
 "tile": "bldg_-4_3",
 "tris": 148,
 "instances": 3
-},
-{
-"id": "ID_06afc290-050c-38db-8537-a14a29b4ca32",
-"kind": "shed",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.0,
-"gf_h": 3.49,
-"height": 4.0,
-"retail_walls": 0,
-"openings": 4,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-4_2",
-"tris": 295,
-"instances": 13
 },
 {
 "id": "ID_9b7b89a1-f618-35da-a413-bf7d819390db",
@@ -1513,40 +1003,6 @@
 "instances": 0
 },
 {
-"id": "ID_ffb17096-30d2-3858-8b35-91974a2cdd6a",
-"kind": "modern",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.81,
-"gf_h": 3.41,
-"height": 3.8,
-"retail_walls": 2,
-"openings": 8,
-"pitched": false,
-"wall_mat": "panel",
-"tile": "bldg_-4_2",
-"tris": 434,
-"instances": 29
-},
-{
-"id": "ID_4edde8db-78d8-3f7b-aeb9-df74a38fcc6e",
-"kind": "shed",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.0,
-"gf_h": 3.76,
-"height": 4.3,
-"retail_walls": 0,
-"openings": 3,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-4_2",
-"tris": 259,
-"instances": 9
-},
-{
 "id": "ID_a4df8d00-82f9-3600-bbec-9721ad171356",
 "kind": "shed",
 "street": null,
@@ -1562,40 +1018,6 @@
 "tile": "bldg_-4_3",
 "tris": 336,
 "instances": 19
-},
-{
-"id": "ID_98a9691d-b236-3bb4-91ec-55ec0f3fa9a0",
-"kind": "nachkrieg",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.14,
-"gf_h": 3.68,
-"height": 4.1,
-"retail_walls": 2,
-"openings": 33,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-5_2",
-"tris": 3369,
-"instances": 132
-},
-{
-"id": "ID_e1ac52ff-f994-3808-a6bf-cb5d715bdbd1",
-"kind": "nachkrieg",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.23,
-"gf_h": 2.6,
-"height": 2.7,
-"retail_walls": 0,
-"openings": 5,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-4_2",
-"tris": 544,
-"instances": 20
 },
 {
 "id": "ID_d7f81e59-3bcf-3e05-84fc-043fd0868049",
@@ -1656,23 +1078,6 @@
 "tile": "bldg_-4_3",
 "tris": 412,
 "instances": 6
-},
-{
-"id": "ID_bcc9a17d-17ac-3796-8109-95830183bbd7",
-"kind": "altbau",
-"street": null,
-"number": null,
-"storeys": 2,
-"storey_h": 3.79,
-"gf_h": 3.2,
-"height": 7.6,
-"retail_walls": 0,
-"openings": 25,
-"pitched": true,
-"wall_mat": "stone",
-"tile": "bldg_-4_2",
-"tris": 1931,
-"instances": 105
 },
 {
 "id": "ID_678d4d75-f1a5-37b8-a62b-59167473e847",
@@ -1775,23 +1180,6 @@
 "instances": 80
 },
 {
-"id": "ID_c1816ac4-69bc-391b-88d9-d415c2ab070f",
-"kind": "shed",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.0,
-"gf_h": 4.19,
-"height": 4.7,
-"retail_walls": 0,
-"openings": 0,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-5_2",
-"tris": 74,
-"instances": 0
-},
-{
 "id": "ID_c2f5b6d8-08bb-356a-be2e-1810b1b4154b",
 "kind": "nachkrieg",
 "street": "Knochenhauerstraße",
@@ -1826,40 +1214,6 @@
 "instances": 87
 },
 {
-"id": "ID_9bc17b19-56c4-3270-9fda-a0f254195867",
-"kind": "nachkrieg",
-"street": "Burgstraße",
-"number": "27A",
-"storeys": 4,
-"storey_h": 3.16,
-"gf_h": 3.89,
-"height": 14.0,
-"retail_walls": 2,
-"openings": 24,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n11954171136",
-"name": "Rahmenhandlung",
-"kind": "home",
-"p": [
--424.04,
--0.92,
-284.79
-],
-"n": [
--0.89,
-0.456
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-5_2",
-"tris": 4156,
-"instances": 128
-},
-{
 "id": "ID_3a56bd99-f60d-389c-afac-f0e486b67b08",
 "kind": "nachkrieg",
 "street": "Goethestraße",
@@ -1892,57 +1246,6 @@
 "tile": "bldg_-5_0",
 "tris": 3379,
 "instances": 221
-},
-{
-"id": "ID_d8ed0750-eb0f-34d8-a2e2-db5633214512",
-"kind": "fachwerk",
-"street": "Burgstraße",
-"number": "33",
-"storeys": 4,
-"storey_h": 3.86,
-"gf_h": 3.82,
-"height": 16.0,
-"retail_walls": 2,
-"openings": 39,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n11954171132",
-"name": "Neue Speisekammer",
-"kind": "cafe",
-"p": [
--417.92,
--1.03,
-302.44
-],
-"n": [
--0.978,
-0.207
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-5_3",
-"tris": 9062,
-"instances": 124
-},
-{
-"id": "ID_38477871-1b60-35e2-ac87-b4d002aa7e61",
-"kind": "shed",
-"street": null,
-"number": null,
-"storeys": 1,
-"storey_h": 3.0,
-"gf_h": 4.38,
-"height": 4.8,
-"retail_walls": 0,
-"openings": 1,
-"pitched": false,
-"wall_mat": "plaster",
-"tile": "bldg_-5_2",
-"tris": 265,
-"instances": 3
 },
 {
 "id": "ID_82031d3d-1949-3d17-bbd1-ccccd7a70f9e",
@@ -2047,23 +1350,6 @@
 "instances": 26
 },
 {
-"id": "ID_0b95ed53-9306-335c-9580-0a0b295cbca6",
-"kind": "altbau",
-"street": "Knochenhauerstraße",
-"number": "40",
-"storeys": 4,
-"storey_h": 2.99,
-"gf_h": 3.2,
-"height": 12.8,
-"retail_walls": 3,
-"openings": 59,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-4_2",
-"tris": 4053,
-"instances": 268
-},
-{
 "id": "ID_5cdc8671-8fd8-3c94-a065-a5bd04de65ed",
 "kind": "nachkrieg",
 "street": null,
@@ -2079,23 +1365,6 @@
 "tile": "bldg_-6_0",
 "tris": 1488,
 "instances": 84
-},
-{
-"id": "ID_9850fd33-58c8-3cc6-bffc-a396527794b2",
-"kind": "gothic",
-"street": null,
-"number": null,
-"storeys": 2,
-"storey_h": 3.07,
-"gf_h": 6.0,
-"height": 9.7,
-"retail_walls": 0,
-"openings": 14,
-"pitched": true,
-"wall_mat": "stone",
-"tile": "bldg_-5_1",
-"tris": 6280,
-"instances": 14
 },
 {
 "id": "ID_6b7dcd5f-f094-36b5-bd67-320dacabf18a",
@@ -2164,40 +1433,6 @@
 "tile": "bldg_-6_-1",
 "tris": 3297,
 "instances": 189
-},
-{
-"id": "ID_d489ed85-2df2-3542-985c-834f63b300ee",
-"kind": "altbau",
-"street": "Knochenhauerstraße",
-"number": "25",
-"storeys": 4,
-"storey_h": 3.26,
-"gf_h": 4.26,
-"height": 14.6,
-"retail_walls": 2,
-"openings": 14,
-"pitched": true,
-"wall_mat": "brick",
-"shops": [
-{
-"id": "osm-n6720640898",
-"name": "Altstadt-Treff",
-"kind": "cafe",
-"p": [
--352.05,
--0.19,
-208.96
-],
-"n": [
--0.937,
-0.351
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-4_2",
-"tris": 2325,
-"instances": 68
 },
 {
 "id": "ID_a8a983fa-57d7-3171-b6ab-196e22467446",
@@ -2383,40 +1618,6 @@
 "instances": 57
 },
 {
-"id": "ID_a01a755b-1acb-3627-9469-d0647ca79343",
-"kind": "altbau",
-"street": "Schuhstraße",
-"number": "11",
-"storeys": 3,
-"storey_h": 4.78,
-"gf_h": 4.52,
-"height": 14.7,
-"retail_walls": 2,
-"openings": 42,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n6720654176",
-"name": "Lindenblatt 800 °",
-"kind": "cafe",
-"p": [
--331.3,
-0.02,
-238.9
-],
-"n": [
-0.414,
-0.91
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-4_2",
-"tris": 8594,
-"instances": 185
-},
-{
 "id": "ID_ad6d04f6-6684-364d-ade4-a4cb35d8b1ac",
 "kind": "altbau",
 "street": "Knochenhauerstraße",
@@ -2485,23 +1686,6 @@
 "instances": 81
 },
 {
-"id": "ID_4c631123-cbc3-3f6d-9fea-6a77059e9a7d",
-"kind": "fachwerk",
-"street": "Burgstraße",
-"number": "31",
-"storeys": 4,
-"storey_h": 3.79,
-"gf_h": 3.76,
-"height": 15.7,
-"retail_walls": 1,
-"openings": 7,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-5_2",
-"tris": 2085,
-"instances": 17
-},
-{
 "id": "ID_693267a7-6332-3917-9e0e-9a1c2e1d4675",
 "kind": "nachkrieg",
 "street": "Am Marstall",
@@ -2517,40 +1701,6 @@
 "tile": "bldg_-5_-1",
 "tris": 3146,
 "instances": 330
-},
-{
-"id": "ID_0875e4bf-2b9c-3d2a-ae27-3bc0e500bbca",
-"kind": "fachwerk",
-"street": "Ballhofplatz",
-"number": "3",
-"storeys": 3,
-"storey_h": 3.77,
-"gf_h": 3.56,
-"height": 11.7,
-"retail_walls": 2,
-"openings": 82,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n11954192881",
-"name": "marie jo",
-"kind": "fashion",
-"p": [
--425.81,
--0.8,
-199.77
-],
-"n": [
-0.594,
-0.805
-],
-"sign": "channel_letters"
-}
-],
-"tile": "bldg_-5_1",
-"tris": 12706,
-"instances": 250
 },
 {
 "id": "ID_2a607dbf-ba4d-3b95-9c9d-13a4b453ca98",
@@ -2587,40 +1737,6 @@
 "instances": 242
 },
 {
-"id": "ID_e45dec65-efaa-3b83-9e32-39ea6e858fc8",
-"kind": "altbau",
-"street": "Knochenhauerstraße",
-"number": "42",
-"storeys": 4,
-"storey_h": 2.97,
-"gf_h": 3.2,
-"height": 12.7,
-"retail_walls": 3,
-"openings": 54,
-"pitched": true,
-"wall_mat": "brick",
-"shops": [
-{
-"id": "osm-n3410377179",
-"name": "Cafe & Bar Celona",
-"kind": "cafe",
-"p": [
--319.92,
-0.15,
-283.63
-],
-"n": [
-0.898,
--0.439
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-4_2",
-"tris": 5720,
-"instances": 243
-},
-{
 "id": "ID_907e5e44-7ff7-368a-ac32-9a1894be8235",
 "kind": "altbau",
 "street": "Am Marstall",
@@ -2638,57 +1754,6 @@
 "instances": 117
 },
 {
-"id": "ID_60cbc5d9-c564-3bf4-b251-2e89d4d44626",
-"kind": "fachwerk",
-"street": "Holzmarkt",
-"number": "3",
-"storeys": 4,
-"storey_h": 3.12,
-"gf_h": 3.85,
-"height": 13.8,
-"retail_walls": 3,
-"openings": 30,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n5055919143",
-"name": "Holz66",
-"kind": "home",
-"p": [
--413.57,
--1.14,
-322.14
-],
-"n": [
--0.202,
--0.979
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-5_3",
-"tris": 6379,
-"instances": 87
-},
-{
-"id": "ID_b5f87917-9f73-36d3-90a9-5e70c41c0dc0",
-"kind": "nachkrieg",
-"street": "Goldener Winkel",
-"number": "24",
-"storeys": 1,
-"storey_h": 3.23,
-"gf_h": 5.85,
-"height": 6.2,
-"retail_walls": 0,
-"openings": 6,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-5_1",
-"tris": 715,
-"instances": 24
-},
-{
 "id": "ID_71d24f88-6947-3987-97b8-52b25147baf9",
 "kind": "nachkrieg",
 "street": "Goldener Winkel",
@@ -2704,40 +1769,6 @@
 "tile": "bldg_-5_0",
 "tris": 579,
 "instances": 51
-},
-{
-"id": "ID_e81d227b-f318-3c4b-81e8-a3ffde95b2bb",
-"kind": "nachkrieg",
-"street": "Klostergang",
-"number": "2",
-"storeys": 5,
-"storey_h": 2.94,
-"gf_h": 4.04,
-"height": 16.4,
-"retail_walls": 2,
-"openings": 42,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n2314743450",
-"name": "Aresto",
-"kind": "cafe",
-"p": [
--490.69,
--2.13,
-356.86
-],
-"n": [
--0.901,
-0.434
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-5_3",
-"tris": 2332,
-"instances": 173
 },
 {
 "id": "ID_ceafc391-5472-371e-b01a-2d879eb79b5e",
@@ -2808,23 +1839,6 @@
 "instances": 96
 },
 {
-"id": "ID_26edb28c-2d86-328c-bcad-2440ffa5f4f0",
-"kind": "fachwerk",
-"street": "Kreuzstraße",
-"number": "8",
-"storeys": 3,
-"storey_h": 3.75,
-"gf_h": 3.64,
-"height": 11.7,
-"retail_walls": 0,
-"openings": 24,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-5_1",
-"tris": 3128,
-"instances": 74
-},
-{
 "id": "ID_5a28005b-0edf-3c30-b758-d42752b753db",
 "kind": "fachwerk",
 "street": "Kramerstraße",
@@ -2876,23 +1890,6 @@
 "instances": 167
 },
 {
-"id": "ID_379b0975-8f69-3e63-89aa-aa94ac451db8",
-"kind": "nachkrieg",
-"street": "Kreuzstraße",
-"number": "5",
-"storeys": 2,
-"storey_h": 2.7,
-"gf_h": 4.22,
-"height": 6.9,
-"retail_walls": 0,
-"openings": 7,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-5_1",
-"tris": 419,
-"instances": 30
-},
-{
 "id": "ID_f75be679-af2f-39a2-8146-e9a9ccef52bd",
 "kind": "altbau",
 "street": "Am Marstall",
@@ -2942,40 +1939,6 @@
 "tile": "bldg_-4_3",
 "tris": 6264,
 "instances": 944
-},
-{
-"id": "ID_6d256eb6-7861-3dbc-9b9f-0071be225ad6",
-"kind": "fachwerk",
-"street": "Kramerstraße",
-"number": "12",
-"storeys": 4,
-"storey_h": 2.82,
-"gf_h": 3.56,
-"height": 12.6,
-"retail_walls": 2,
-"openings": 12,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n6720649613",
-"name": "Barbers in the sky",
-"kind": "salon",
-"p": [
--404.75,
--0.92,
-320.32
-],
-"n": [
--0.201,
--0.979
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-5_3",
-"tris": 3153,
-"instances": 38
 },
 {
 "id": "ID_ab5fde3f-bc2a-3b30-a593-7bc9d55bdcdd",
@@ -3080,23 +2043,6 @@
 "instances": 125
 },
 {
-"id": "ID_e3f02994-48cd-3ea0-b0b6-0dc083f1e855",
-"kind": "altbau",
-"street": "Kreuzstraße",
-"number": "7",
-"storeys": 3,
-"storey_h": 3.21,
-"gf_h": 4.43,
-"height": 11.4,
-"retail_walls": 0,
-"openings": 12,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-5_1",
-"tris": 1204,
-"instances": 57
-},
-{
 "id": "ID_b1118e14-44ec-3267-9490-0ebdd3403062",
 "kind": "altbau",
 "street": "Leinstraße",
@@ -3129,23 +2075,6 @@
 "tile": "bldg_-6_0",
 "tris": 3102,
 "instances": 267
-},
-{
-"id": "ID_88246ce8-34fd-38d2-b81f-1ee43e2d52df",
-"kind": "nachkrieg",
-"street": "Goldener Winkel",
-"number": "22",
-"storeys": 1,
-"storey_h": 3.16,
-"gf_h": 5.83,
-"height": 6.1,
-"retail_walls": 0,
-"openings": 6,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-5_1",
-"tris": 719,
-"instances": 24
 },
 {
 "id": "ID_4e86178d-bce4-386a-897e-0a52f02d7803",
@@ -3250,57 +2179,6 @@
 "instances": 269
 },
 {
-"id": "ID_e4ad976f-b06e-3124-bf27-8794c4ffcd35",
-"kind": "nachkrieg",
-"street": "Schloßstraße",
-"number": "2",
-"storeys": 5,
-"storey_h": 3.04,
-"gf_h": 4.39,
-"height": 17.1,
-"retail_walls": 0,
-"openings": 60,
-"pitched": true,
-"wall_mat": "panel",
-"tile": "bldg_-5_3",
-"tris": 4146,
-"instances": 278
-},
-{
-"id": "ID_c654b357-c4f7-3567-9889-7f3cfbd672d0",
-"kind": "fachwerk",
-"street": "Kreuzkirchhof",
-"number": "5",
-"storeys": 3,
-"storey_h": 3.52,
-"gf_h": 3.36,
-"height": 11.0,
-"retail_walls": 2,
-"openings": 81,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n503562830",
-"name": "Kreuzklappe",
-"kind": "cafe",
-"p": [
--452.2,
--0.09,
-141.29
-],
-"n": [
--0.387,
--0.922
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-5_1",
-"tris": 11747,
-"instances": 248
-},
-{
 "id": "ID_047e69fb-908a-391b-88f8-2561f898658c",
 "kind": "altbau",
 "street": "Goldener Winkel",
@@ -3316,57 +2194,6 @@
 "tile": "bldg_-5_0",
 "tris": 978,
 "instances": 38
-},
-{
-"id": "ID_95083ca6-3af9-3f46-ba47-cf27dca6ad1b",
-"kind": "altbau",
-"street": "Knochenhauerstraße",
-"number": "32",
-"storeys": 4,
-"storey_h": 2.75,
-"gf_h": 3.2,
-"height": 12.1,
-"retail_walls": 1,
-"openings": 38,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n6720624928",
-"name": "Atelier Andreas T.",
-"kind": "jewellery",
-"p": [
--357.01,
--0.24,
-219.1
-],
-"n": [
-0.856,
--0.516
-],
-"sign": "channel_letters"
-}
-],
-"tile": "bldg_-4_2",
-"tris": 2752,
-"instances": 171
-},
-{
-"id": "ID_5cef9a44-af3f-3e29-bbf3-4a42658dc746",
-"kind": "fachwerk",
-"street": "Burgstraße",
-"number": "29",
-"storeys": 4,
-"storey_h": 3.0,
-"gf_h": 3.44,
-"height": 13.0,
-"retail_walls": 1,
-"openings": 23,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-5_2",
-"tris": 5049,
-"instances": 66
 },
 {
 "id": "ID_daa48988-f6b6-37bb-a0b0-ef7f184657f6",
@@ -3403,40 +2230,6 @@
 "instances": 468
 },
 {
-"id": "ID_0270cc38-c629-33d2-b909-7141b285932f",
-"kind": "fachwerk",
-"street": "Burgstraße",
-"number": "25",
-"storeys": 3,
-"storey_h": 3.54,
-"gf_h": 3.66,
-"height": 11.3,
-"retail_walls": 2,
-"openings": 28,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n11954171137",
-"name": "M&B Creativ-Team",
-"kind": "salon",
-"p": [
--432.26,
--0.88,
-268.75
-],
-"n": [
--0.89,
-0.456
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-5_2",
-"tris": 6827,
-"instances": 88
-},
-{
 "id": "ID_3fbbc0cb-b5a7-3016-b68a-a9ec53ac869a",
 "kind": "altbau",
 "street": "Goethestraße",
@@ -3452,72 +2245,6 @@
 "tile": "bldg_-6_-1",
 "tris": 1320,
 "instances": 59
-},
-{
-"id": "ID_4f69486f-cda3-355a-bee3-e29ac0847164",
-"kind": "fachwerk",
-"street": "Holzmarkt",
-"number": "2",
-"storeys": 4,
-"storey_h": 3.22,
-"gf_h": 3.77,
-"height": 14.0,
-"retail_walls": 1,
-"openings": 20,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-5_3",
-"tris": 3610,
-"instances": 55
-},
-{
-"id": "ID_c1473837-2050-3f41-a39a-be97ca61e551",
-"kind": "fachwerk",
-"street": "Kramerstraße",
-"number": "9",
-"storeys": 4,
-"storey_h": 3.04,
-"gf_h": 3.88,
-"height": 13.6,
-"retail_walls": 1,
-"openings": 39,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n6720665926",
-"name": "Steel",
-"kind": "home",
-"p": [
--385.64,
--0.57,
-306.41
-],
-"n": [
-0.256,
-0.967
-],
-"sign": "fascia_panel"
-},
-{
-"id": "osm-n368392191",
-"name": "La Ligné",
-"kind": "salon",
-"p": [
--379.78,
--0.47,
-304.86
-],
-"n": [
-0.256,
-0.967
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-4_2",
-"tris": 7227,
-"instances": 112
 },
 {
 "id": "ID_2aa725a7-5a75-3ed9-baef-44deeca184e9",
@@ -3673,55 +2400,6 @@
 "instances": 200
 },
 {
-"id": "ID_b715fdf3-9f3e-3b2e-b061-25febaef3d7d",
-"kind": "fachwerk",
-"street": "Kreuzstraße",
-"number": "1",
-"storeys": 3,
-"storey_h": 3.46,
-"gf_h": 3.61,
-"height": 11.1,
-"retail_walls": 2,
-"openings": 101,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n13895375289",
-"name": "Oldtimer Fahr Service",
-"kind": "office",
-"p": [
--420.78,
--0.73,
-180.37
-],
-"n": [
--0.887,
-0.462
-],
-"sign": "fascia_panel"
-},
-{
-"id": "osm-n10311381950",
-"name": "Next Generation Wine",
-"kind": "supermarket",
-"p": [
--418.71,
--0.75,
-184.34
-],
-"n": [
--0.887,
-0.462
-],
-"sign": "light_box"
-}
-],
-"tile": "bldg_-5_1",
-"tris": 17825,
-"instances": 312
-},
-{
 "id": "ID_ea912c9a-428a-325f-b2da-96d1bf4bdc0b",
 "kind": "modern",
 "street": "Am Hohen Ufer",
@@ -3737,70 +2415,6 @@
 "tile": "bldg_-6_1",
 "tris": 3405,
 "instances": 890
-},
-{
-"id": "ID_b269bef2-2a45-34fe-8c1f-4c7da45b1f71",
-"kind": "altbau",
-"street": "Knochenhauerstraße",
-"number": "27",
-"storeys": 3,
-"storey_h": 3.45,
-"gf_h": 4.29,
-"height": 11.8,
-"retail_walls": 1,
-"openings": 23,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n6720665064",
-"name": "Oji Long",
-"kind": "cafe",
-"p": [
--350.02,
--0.21,
-213.52
-],
-"n": [
--0.859,
-0.512
-],
-"sign": "fascia_panel"
-},
-{
-"id": "osm-n6720649614",
-"name": "Verlockung",
-"kind": "drugstore",
-"p": [
--347.35,
--0.2,
-218.02
-],
-"n": [
--0.859,
-0.512
-],
-"sign": "fascia_panel"
-},
-{
-"id": "osm-n6720665248",
-"name": "Alt Hannovera",
-"kind": "cafe",
-"p": [
--346.11,
--0.15,
-220.09
-],
-"n": [
--0.859,
-0.512
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-4_2",
-"tris": 5469,
-"instances": 110
 },
 {
 "id": "ID_cd874ae8-7e3e-3881-a3b8-9b027e52610a",
@@ -3835,40 +2449,6 @@
 "tile": "bldg_-6_-1",
 "tris": 855,
 "instances": 79
-},
-{
-"id": "ID_271031bc-2145-3109-9a2d-9bed131da416",
-"kind": "altbau",
-"street": "Schuhstraße",
-"number": "9",
-"storeys": 4,
-"storey_h": 2.81,
-"gf_h": 4.22,
-"height": 13.3,
-"retail_walls": 2,
-"openings": 8,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n14092926879",
-"name": "Zur guten Absicht",
-"kind": "cafe",
-"p": [
--319.21,
-0.17,
-233.13
-],
-"n": [
-0.373,
-0.928
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-4_2",
-"tris": 3606,
-"instances": 38
 },
 {
 "id": "ID_b4e653d7-dc57-3b98-9c46-59a7c97b63d4",
@@ -3988,23 +2568,6 @@
 "instances": 146
 },
 {
-"id": "ID_93528938-baef-395a-bfa8-df4f22156f68",
-"kind": "fachwerk",
-"street": "Burgstraße",
-"number": "23A",
-"storeys": 3,
-"storey_h": 4.49,
-"gf_h": 3.37,
-"height": 13.0,
-"retail_walls": 0,
-"openings": 30,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-5_2",
-"tris": 3934,
-"instances": 88
-},
-{
 "id": "ID_255f14e6-dfb5-3c4a-a674-20a8f1a69aee",
 "kind": "nachkrieg",
 "street": "Reitwallstraße",
@@ -4086,40 +2649,6 @@
 "tile": "bldg_-4_-1",
 "tris": 4291,
 "instances": 441
-},
-{
-"id": "ID_a5202bc2-ca01-30c4-83dd-63b18246de2e",
-"kind": "fachwerk",
-"street": "Kramerstraße",
-"number": "3",
-"storeys": 4,
-"storey_h": 2.7,
-"gf_h": 3.5,
-"height": 12.0,
-"retail_walls": 1,
-"openings": 76,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n12087775770",
-"name": "Weinbar gegenüber",
-"kind": "cafe",
-"p": [
--348.57,
--0.19,
-296.21
-],
-"n": [
-0.245,
-0.97
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-4_2",
-"tris": 11168,
-"instances": 208
 },
 {
 "id": "ID_493475a1-f9df-37aa-b74f-1a1a21ba7e74",
@@ -4239,40 +2768,6 @@
 "instances": 1994
 },
 {
-"id": "ID_84e270ab-c650-3efb-96cb-75d0449a9249",
-"kind": "nachkrieg",
-"street": "Burgstraße",
-"number": "21A",
-"storeys": 2,
-"storey_h": 4.7,
-"gf_h": 5.6,
-"height": 10.9,
-"retail_walls": 2,
-"openings": 45,
-"pitched": true,
-"wall_mat": "brick",
-"shops": [
-{
-"id": "osm-n2834864213",
-"name": "[hof:geflüster]",
-"kind": "cafe",
-"p": [
--461.97,
--0.58,
-226.3
-],
-"n": [
-0.595,
-0.804
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-5_2",
-"tris": 4236,
-"instances": 198
-},
-{
 "id": "ID_c2c97829-c292-32aa-b0ec-078f65f64fa2",
 "kind": "modern",
 "street": "Goethestraße",
@@ -4305,23 +2800,6 @@
 "tile": "bldg_-8_2",
 "tris": 2962,
 "instances": 200
-},
-{
-"id": "ID_2bcbfea4-1c8c-3ebf-80be-4077366124be",
-"kind": "nachkrieg",
-"street": "Roßmühle",
-"number": "2",
-"storeys": 3,
-"storey_h": 3.77,
-"gf_h": 3.87,
-"height": 12.0,
-"retail_walls": 0,
-"openings": 82,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-5_2",
-"tris": 2207,
-"instances": 365
 },
 {
 "id": "ID_41876813-7cee-37ef-b558-1f447a53a498",
@@ -4390,23 +2868,6 @@
 "instances": 216
 },
 {
-"id": "ID_1e223c17-842e-3f52-a54c-082809ef52fc",
-"kind": "modern",
-"street": "Pferdestraße",
-"number": "6",
-"storeys": 3,
-"storey_h": 5.17,
-"gf_h": 4.32,
-"height": 15.6,
-"retail_walls": 0,
-"openings": 292,
-"pitched": false,
-"wall_mat": "stone",
-"tile": "bldg_-5_2",
-"tris": 11628,
-"instances": 1057
-},
-{
 "id": "ID_1c76a872-2ad2-365d-8ee4-75f963dc3478",
 "kind": "modern",
 "street": "Am Markte",
@@ -4439,40 +2900,6 @@
 "tile": "bldg_-8_0",
 "tris": 3369,
 "instances": 271
-},
-{
-"id": "ID_7f103f76-2cb1-36a5-b1f5-e39a5d4db35d",
-"kind": "fachwerk",
-"street": "Holzmarkt",
-"number": "4",
-"storeys": 4,
-"storey_h": 3.67,
-"gf_h": 3.3,
-"height": 14.9,
-"retail_walls": 2,
-"openings": 95,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n11954171130",
-"name": "REBMANN",
-"kind": "fashion",
-"p": [
--443.38,
--1.12,
-327.55
-],
-"n": [
-0.974,
--0.227
-],
-"sign": "channel_letters"
-}
-],
-"tile": "bldg_-5_3",
-"tris": 18836,
-"instances": 277
 },
 {
 "id": "ID_4d40e64e-6d5a-31b5-a0fa-fb1e5dded61f",
@@ -4509,40 +2936,6 @@
 "instances": 66
 },
 {
-"id": "ID_b5973fae-14ec-3b9f-ab79-ef8c4bce13de",
-"kind": "fachwerk",
-"street": "Pferdestraße",
-"number": "11",
-"storeys": 5,
-"storey_h": 2.8,
-"gf_h": 3.53,
-"height": 15.3,
-"retail_walls": 1,
-"openings": 44,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n320902086",
-"name": "Buddha Bowl",
-"kind": "cafe",
-"p": [
--478.32,
--0.82,
-321.2
-],
-"n": [
-0.033,
--0.999
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-5_3",
-"tris": 6824,
-"instances": 133
-},
-{
 "id": "ID_64e458bf-eb1d-3745-b1a8-d7002f39f49f",
 "kind": "altbau",
 "street": "Knochenhauerstraße",
@@ -4558,40 +2951,6 @@
 "tile": "bldg_-4_0",
 "tris": 2866,
 "instances": 261
-},
-{
-"id": "ID_b150f6c8-2886-3ae9-b09f-044416be3d53",
-"kind": "fachwerk",
-"street": "Ballhofplatz",
-"number": "7",
-"storeys": 3,
-"storey_h": 4.32,
-"gf_h": 3.58,
-"height": 12.8,
-"retail_walls": 2,
-"openings": 55,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n3789361887",
-"name": "craft bier bar",
-"kind": "cafe",
-"p": [
--445.52,
--0.51,
-242.97
-],
-"n": [
--0.446,
--0.895
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-5_2",
-"tris": 7675,
-"instances": 163
 },
 {
 "id": "ID_88640e2f-e447-34fa-94c5-5d3fec1df896",
@@ -4762,23 +3121,6 @@
 "instances": 119
 },
 {
-"id": "ID_2ec17eee-ab39-3da5-a083-72883e638e51",
-"kind": "fachwerk",
-"street": "Kreuzkirchhof",
-"number": "7",
-"storeys": 2,
-"storey_h": 2.7,
-"gf_h": 3.51,
-"height": 6.3,
-"retail_walls": 0,
-"openings": 36,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-5_1",
-"tris": 2643,
-"instances": 115
-},
-{
 "id": "ID_49fdccef-bb52-3b8a-88d4-f55c16bd463c",
 "kind": "nachkrieg",
 "street": "Goethestraße",
@@ -4811,74 +3153,6 @@
 "tile": "bldg_-8_0",
 "tris": 2629,
 "instances": 230
-},
-{
-"id": "ID_6f787b36-e78c-3f3f-a83b-d401f4814d7a",
-"kind": "nachkrieg",
-"street": "Goldener Winkel",
-"number": "20",
-"storeys": 2,
-"storey_h": 2.7,
-"gf_h": 3.88,
-"height": 6.2,
-"retail_walls": 0,
-"openings": 14,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-5_1",
-"tris": 1417,
-"instances": 68
-},
-{
-"id": "ID_8399e9b2-dacc-3280-9267-b6030e0e7c61",
-"kind": "fachwerk",
-"street": "Holzmarkt",
-"number": "6",
-"storeys": 5,
-"storey_h": 3.09,
-"gf_h": 3.74,
-"height": 16.7,
-"retail_walls": 1,
-"openings": 64,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n8939589772",
-"name": "Gottfried's Feinkiosk im Leibnitzhaus",
-"kind": "kiosk",
-"p": [
--434.01,
--1.61,
-354.46
-],
-"n": [
-0.507,
-0.862
-],
-"sign": "light_box"
-}
-],
-"tile": "bldg_-5_3",
-"tris": 14923,
-"instances": 196
-},
-{
-"id": "ID_6b0044d1-7694-302c-833a-d9d7d5266d62",
-"kind": "altbau",
-"street": "Schuhstraße",
-"number": "5",
-"storeys": 4,
-"storey_h": 3.11,
-"gf_h": 3.2,
-"height": 13.1,
-"retail_walls": 1,
-"openings": 25,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-4_2",
-"tris": 2488,
-"instances": 118
 },
 {
 "id": "ID_711141b6-a8d6-3c57-b170-dd7634a9044e",
@@ -5051,40 +3325,6 @@
 "instances": 110
 },
 {
-"id": "ID_ac755613-d67c-32af-9334-bbde728fee69",
-"kind": "altbau",
-"street": "Schuhstraße",
-"number": "12",
-"storeys": 4,
-"storey_h": 3.06,
-"gf_h": 4.39,
-"height": 14.2,
-"retail_walls": 4,
-"openings": 94,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n316420108",
-"name": "Hanns-Lilje-Haus",
-"kind": "lobby",
-"p": [
--316.73,
-0.26,
-266.34
-],
-"n": [
--0.876,
-0.482
-],
-"sign": "channel_letters"
-}
-],
-"tile": "bldg_-4_2",
-"tris": 6464,
-"instances": 424
-},
-{
 "id": "ID_22489315-b2ce-34b7-9e9f-b0b59dc655df",
 "kind": "nachkrieg",
 "street": "Leibnizufer",
@@ -5134,23 +3374,6 @@
 "tile": "bldg_-5_0",
 "tris": 4006,
 "instances": 164
-},
-{
-"id": "ID_70893d5d-fc6b-3597-a5a4-e5a31729a355",
-"kind": "fachwerk",
-"street": "Kreuzstraße",
-"number": "10",
-"storeys": 3,
-"storey_h": 3.98,
-"gf_h": 3.4,
-"height": 12.0,
-"retail_walls": 0,
-"openings": 33,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-5_1",
-"tris": 3610,
-"instances": 112
 },
 {
 "id": "ID_2a15846f-ea4e-38f6-8924-cb92e3e592af",
@@ -5238,40 +3461,6 @@
 "instances": 140
 },
 {
-"id": "ID_edb66e78-4a7d-394b-9c1f-4faa2b931a11",
-"kind": "altbau",
-"street": "Klostergang",
-"number": "1",
-"storeys": 5,
-"storey_h": 2.83,
-"gf_h": 4.59,
-"height": 16.5,
-"retail_walls": 2,
-"openings": 72,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n12877282666",
-"name": "LeineEis",
-"kind": "cafe",
-"p": [
--494.8,
--0.82,
-320.72
-],
-"n": [
-0.027,
--1.0
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-5_3",
-"tris": 6871,
-"instances": 341
-},
-{
 "id": "ID_61aa087f-2fcc-30ab-9aca-c5b64859239d",
 "kind": "modern",
 "street": "Am Hohen Ufer",
@@ -5306,23 +3495,6 @@
 "instances": 110
 },
 {
-"id": "ID_5051cc6a-c86e-3179-b258-2228f15d551b",
-"kind": "nachkrieg",
-"street": "Pferdestraße",
-"number": "8",
-"storeys": 8,
-"storey_h": 3.06,
-"gf_h": 4.0,
-"height": 26.0,
-"retail_walls": 0,
-"openings": 28,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-6_3",
-"tris": 2910,
-"instances": 131
-},
-{
 "id": "ID_2599d69d-db00-340e-ba26-c89b9815543c",
 "kind": "altbau",
 "street": "Am Archiv",
@@ -5338,74 +3510,6 @@
 "tile": "bldg_-6_5",
 "tris": 22523,
 "instances": 992
-},
-{
-"id": "ID_68e1d53c-90c4-308c-9cf9-750a4dab7c07",
-"kind": "fachwerk",
-"street": "Ballhofstraße",
-"number": "6",
-"storeys": 3,
-"storey_h": 3.14,
-"gf_h": 3.49,
-"height": 10.4,
-"retail_walls": 0,
-"openings": 27,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-5_1",
-"tris": 3204,
-"instances": 88
-},
-{
-"id": "ID_78aa861d-e130-3c33-a4ec-96aa4fa1e5e6",
-"kind": "altbau",
-"street": "Knochenhauerstraße",
-"number": "30",
-"storeys": 4,
-"storey_h": 2.79,
-"gf_h": 3.2,
-"height": 12.2,
-"retail_walls": 1,
-"openings": 41,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n12567876305",
-"name": "My Way Altstadt Bar & Bistro",
-"kind": "cafe",
-"p": [
--363.56,
--0.35,
-206.67
-],
-"n": [
-0.936,
--0.351
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-4_2",
-"tris": 3097,
-"instances": 183
-},
-{
-"id": "ID_b1e08153-ebb6-3af8-8652-e6862bb48eee",
-"kind": "nachkrieg",
-"street": "Hannah-Arendt-Platz",
-"number": "1",
-"storeys": 7,
-"storey_h": 3.01,
-"gf_h": 3.82,
-"height": 22.5,
-"retail_walls": 2,
-"openings": 1393,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-4_4",
-"tris": 48635,
-"instances": 6728
 },
 {
 "id": "ID_0bdc9497-aae7-3ade-a935-29ccc55bc708",
@@ -5457,23 +3561,6 @@
 "tile": "bldg_-9_1",
 "tris": 8946,
 "instances": 17
-},
-{
-"id": "ID_0fe5f09f-3021-302a-9a19-9d345b0dd5ec",
-"kind": "altbau",
-"street": "Kreuzstraße",
-"number": "11",
-"storeys": 3,
-"storey_h": 3.42,
-"gf_h": 4.52,
-"height": 12.0,
-"retail_walls": 0,
-"openings": 12,
-"pitched": true,
-"wall_mat": "brick",
-"tile": "bldg_-5_1",
-"tris": 1228,
-"instances": 60
 },
 {
 "id": "ID_227c5e05-fa99-36d9-962d-c32ccfde753d",
@@ -5644,40 +3731,6 @@
 "instances": 937
 },
 {
-"id": "ID_f8b19745-b591-38a0-9be3-5ae7a95d2726",
-"kind": "fachwerk",
-"street": "Kramerstraße",
-"number": "11",
-"storeys": 5,
-"storey_h": 2.81,
-"gf_h": 3.8,
-"height": 15.6,
-"retail_walls": 1,
-"openings": 41,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n2071168295",
-"name": "Schateke",
-"kind": "cafe",
-"p": [
--407.36,
--0.76,
-309.0
-],
-"n": [
-0.081,
-0.997
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-5_3",
-"tris": 4837,
-"instances": 121
-},
-{
 "id": "ID_039a2e3c-35e9-3649-909b-850b651ceaba",
 "kind": "altbau",
 "street": "Rote Reihe",
@@ -5693,23 +3746,6 @@
 "tile": "bldg_-8_3",
 "tris": 3287,
 "instances": 161
-},
-{
-"id": "ID_c3ac93d1-1134-3011-a8a8-80a4158adc78",
-"kind": "fachwerk",
-"street": "Kreuzkirchhof",
-"number": "1",
-"storeys": 2,
-"storey_h": 2.7,
-"gf_h": 3.6,
-"height": 6.7,
-"retail_walls": 0,
-"openings": 84,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-5_1",
-"tris": 7409,
-"instances": 303
 },
 {
 "id": "ID_00c807ed-5e47-3af3-ba95-94df0e5a9c66",
@@ -5795,55 +3831,6 @@
 "tile": "bldg_-8_0",
 "tris": 3825,
 "instances": 203
-},
-{
-"id": "ID_1a4a4aa4-01e2-3f9d-8d35-387256f6bc34",
-"kind": "fachwerk",
-"street": "Ballhofplatz",
-"number": "2",
-"storeys": 3,
-"storey_h": 3.81,
-"gf_h": 3.63,
-"height": 11.8,
-"retail_walls": 1,
-"openings": 68,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n11954192880",
-"name": "Silver & Gold",
-"kind": "jewellery",
-"p": [
--447.46,
--0.67,
-216.02
-],
-"n": [
-0.606,
-0.796
-],
-"sign": "channel_letters"
-},
-{
-"id": "osm-n503560800",
-"name": "Teestübchen",
-"kind": "cafe",
-"p": [
--440.89,
--0.71,
-211.01
-],
-"n": [
-0.606,
-0.796
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-5_2",
-"tris": 9475,
-"instances": 208
 },
 {
 "id": "ID_295d9ac1-17eb-351b-8824-7701794a4c2f",
@@ -6063,74 +4050,6 @@
 "instances": 123
 },
 {
-"id": "ID_5220330c-71e7-3f91-9b8b-fd0f2f6f82d6",
-"kind": "nachkrieg",
-"street": "Schloßstraße",
-"number": "6",
-"storeys": 5,
-"storey_h": 3.08,
-"gf_h": 4.17,
-"height": 17.1,
-"retail_walls": 1,
-"openings": 75,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n613601588",
-"name": "A´Mura",
-"kind": "cafe",
-"p": [
--480.22,
--2.13,
-377.2
-],
-"n": [
--0.886,
-0.463
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-5_3",
-"tris": 3906,
-"instances": 296
-},
-{
-"id": "ID_ca694c1f-26e0-33cd-a35e-d115d293b4ea",
-"kind": "fachwerk",
-"street": "Holzmarkt",
-"number": "1",
-"storeys": 4,
-"storey_h": 3.19,
-"gf_h": 3.77,
-"height": 14.0,
-"retail_walls": 1,
-"openings": 32,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n8939607929",
-"name": "Trio",
-"kind": "salon",
-"p": [
--410.26,
--1.24,
-347.71
-],
-"n": [
--0.93,
-0.368
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-5_3",
-"tris": 6069,
-"instances": 98
-},
-{
 "id": "ID_9d703f3a-e30a-340d-a665-def7759dcd3c",
 "kind": "nachkrieg",
 "street": "Schmiedestraße",
@@ -6227,23 +4146,6 @@
 "tile": "bldg_-8_4",
 "tris": 1766,
 "instances": 78
-},
-{
-"id": "ID_1b1b6f71-2aec-3538-bf69-736e7ebe4045",
-"kind": "altbau",
-"street": "Kreuzstraße",
-"number": "9",
-"storeys": 3,
-"storey_h": 3.18,
-"gf_h": 4.54,
-"height": 11.5,
-"retail_walls": 0,
-"openings": 12,
-"pitched": true,
-"wall_mat": "stone",
-"tile": "bldg_-5_1",
-"tris": 1186,
-"instances": 64
 },
 {
 "id": "ID_ae3514fa-c314-3569-9f32-ca13d41882b2",
@@ -6535,23 +4437,6 @@
 "instances": 289
 },
 {
-"id": "ID_613dd3fc-6f22-3427-9491-794b802aff73",
-"kind": "fachwerk",
-"street": "Kreuzkirchhof",
-"number": "9",
-"storeys": 2,
-"storey_h": 2.7,
-"gf_h": 3.77,
-"height": 6.2,
-"retail_walls": 0,
-"openings": 16,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-5_1",
-"tris": 3040,
-"instances": 68
-},
-{
 "id": "ID_fd4a2d94-0ccc-3c6f-a554-94ff8a4b021b",
 "kind": "altbau",
 "street": "Kramerstraße",
@@ -6584,40 +4469,6 @@
 "tile": "bldg_-4_3",
 "tris": 2498,
 "instances": 62
-},
-{
-"id": "ID_c48b3643-2c73-3bca-98d8-5b26f0175d9b",
-"kind": "altbau",
-"street": "Ballhofplatz",
-"number": "5",
-"storeys": 2,
-"storey_h": 3.07,
-"gf_h": 4.58,
-"height": 8.2,
-"retail_walls": 0,
-"openings": 14,
-"pitched": true,
-"wall_mat": "brick",
-"tile": "bldg_-4_2",
-"tris": 1358,
-"instances": 70
-},
-{
-"id": "ID_ab2cb6d9-5519-3d6c-99e1-46a09ec8cdc7",
-"kind": "altbau",
-"street": "Kreuzstraße",
-"number": "3",
-"storeys": 3,
-"storey_h": 3.0,
-"gf_h": 4.07,
-"height": 10.7,
-"retail_walls": 0,
-"openings": 19,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-5_1",
-"tris": 2425,
-"instances": 92
 },
 {
 "id": "ID_b53d51e4-ced9-3e8f-87ab-19fe3e5073d2",
@@ -6771,40 +4622,6 @@
 "instances": 184
 },
 {
-"id": "ID_e6a82c2d-19e5-3e54-9d73-081a8a56e836",
-"kind": "altbau",
-"street": "Knochenhauerstraße",
-"number": "34",
-"storeys": 4,
-"storey_h": 3.46,
-"gf_h": 4.07,
-"height": 15.0,
-"retail_walls": 1,
-"openings": 21,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n696846378",
-"name": "Old Town Pub",
-"kind": "cafe",
-"p": [
--352.03,
--0.16,
-226.99
-],
-"n": [
-0.834,
--0.552
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-4_2",
-"tris": 3051,
-"instances": 97
-},
-{
 "id": "ID_31daaded-c5c8-3417-9973-db9593ce4c3f",
 "kind": "nachkrieg",
 "street": "Platz an der Basilika",
@@ -6820,23 +4637,6 @@
 "tile": "bldg_-9_1",
 "tris": 3566,
 "instances": 168
-},
-{
-"id": "ID_c494dba7-3b4a-3a44-9e3d-f038d58e0852",
-"kind": "altbau",
-"street": "Holzmarkt",
-"number": "5",
-"storeys": 5,
-"storey_h": 2.77,
-"gf_h": 3.2,
-"height": 14.9,
-"retail_walls": 2,
-"openings": 42,
-"pitched": true,
-"wall_mat": "stone",
-"tile": "bldg_-5_3",
-"tris": 4571,
-"instances": 184
 },
 {
 "id": "ID_2f207707-73dc-30ec-beb3-90ce972d9054",
@@ -7058,40 +4858,6 @@
 "instances": 213
 },
 {
-"id": "ID_e161a205-96bc-3735-b611-2dfe9109ad77",
-"kind": "fachwerk",
-"street": "Burgstraße",
-"number": "15",
-"storeys": 3,
-"storey_h": 2.85,
-"gf_h": 3.49,
-"height": 9.8,
-"retail_walls": 0,
-"openings": 45,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-5_1",
-"tris": 6864,
-"instances": 159
-},
-{
-"id": "ID_9249b16b-732a-302e-a508-f7ec9e8c11d2",
-"kind": "fachwerk",
-"street": "Burgstraße",
-"number": "13",
-"storeys": 3,
-"storey_h": 2.96,
-"gf_h": 3.2,
-"height": 9.7,
-"retail_walls": 1,
-"openings": 54,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-5_1",
-"tris": 6064,
-"instances": 165
-},
-{
 "id": "ID_d792df47-fc19-3b8e-a61a-cd858cb96955",
 "kind": "fachwerk",
 "street": "Kramerstraße",
@@ -7126,57 +4892,6 @@
 "instances": 62
 },
 {
-"id": "ID_a3f7a90c-8fc8-3183-932e-7059021212e4",
-"kind": "fachwerk",
-"street": "Burgstraße",
-"number": "19",
-"storeys": 3,
-"storey_h": 2.95,
-"gf_h": 3.4,
-"height": 9.9,
-"retail_walls": 0,
-"openings": 45,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-5_1",
-"tris": 5719,
-"instances": 157
-},
-{
-"id": "ID_170762c9-4cb1-34c0-b171-e7067f3bb0d4",
-"kind": "altbau",
-"street": "Knochenhauerstraße",
-"number": "36",
-"storeys": 4,
-"storey_h": 2.89,
-"gf_h": 3.2,
-"height": 12.5,
-"retail_walls": 2,
-"openings": 45,
-"pitched": true,
-"wall_mat": "brick",
-"shops": [
-{
-"id": "osm-n322834673",
-"name": "Enchilada",
-"kind": "cafe",
-"p": [
--343.68,
--0.07,
-242.54
-],
-"n": [
-0.877,
--0.481
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-4_2",
-"tris": 3606,
-"instances": 194
-},
-{
 "id": "ID_6ae2fbd7-a3b3-3707-8641-703cf7de37f8",
 "kind": "altbau",
 "street": "Am Marstall",
@@ -7192,55 +4907,6 @@
 "tile": "bldg_-6_1",
 "tris": 4638,
 "instances": 297
-},
-{
-"id": "ID_4f9f50d0-710a-3c9d-a78e-6218a4c0f243",
-"kind": "fachwerk",
-"street": "Kramerstraße",
-"number": "6",
-"storeys": 4,
-"storey_h": 3.46,
-"gf_h": 3.72,
-"height": 14.7,
-"retail_walls": 3,
-"openings": 62,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n5055947677",
-"name": "An Nam",
-"kind": "cafe",
-"p": [
--352.19,
--0.21,
-296.68
-],
-"n": [
-0.055,
-0.998
-],
-"sign": "fascia_panel"
-},
-{
-"id": "osm-n5055919149",
-"name": "Pils-Stube",
-"kind": "cafe",
-"p": [
--359.64,
--0.29,
-298.37
-],
-"n": [
-0.09,
-0.996
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-4_2",
-"tris": 15890,
-"instances": 193
 },
 {
 "id": "ID_f2a10068-4748-3e3d-8ba9-5f7884c291c1",
@@ -7309,57 +4975,6 @@
 "instances": 223
 },
 {
-"id": "ID_e70d5bb7-a2a8-3169-b9b9-f0ddb4d442a5",
-"kind": "fachwerk",
-"street": "Burgstraße",
-"number": "21",
-"storeys": 3,
-"storey_h": 2.76,
-"gf_h": 3.83,
-"height": 9.9,
-"retail_walls": 0,
-"openings": 60,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-5_1",
-"tris": 7778,
-"instances": 190
-},
-{
-"id": "ID_ad4d90bd-35e7-3610-b9d5-6b9fdbe561ef",
-"kind": "nachkrieg",
-"street": "Burgstraße",
-"number": "17",
-"storeys": 3,
-"storey_h": 2.77,
-"gf_h": 3.66,
-"height": 9.8,
-"retail_walls": 0,
-"openings": 24,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-5_1",
-"tris": 2188,
-"instances": 117
-},
-{
-"id": "ID_d5a59ecb-edad-3a71-bf9e-13112965b2d4",
-"kind": "altbau",
-"street": "Schuhstraße",
-"number": "7",
-"storeys": 4,
-"storey_h": 2.99,
-"gf_h": 4.14,
-"height": 13.7,
-"retail_walls": 1,
-"openings": 16,
-"pitched": true,
-"wall_mat": "plaster",
-"tile": "bldg_-4_2",
-"tris": 2899,
-"instances": 74
-},
-{
 "id": "ID_c5e4597d-9e39-3fd1-803f-2308a6696e8a",
 "kind": "altbau",
 "street": "Leinstraße",
@@ -7392,55 +5007,6 @@
 "tile": "bldg_-4_3",
 "tris": 3635,
 "instances": 204
-},
-{
-"id": "ID_1493499b-9e45-3968-bcce-1c0fa07ff9e4",
-"kind": "altbau",
-"street": "Kramerstraße",
-"number": "8",
-"storeys": 4,
-"storey_h": 3.01,
-"gf_h": 4.29,
-"height": 13.9,
-"retail_walls": 1,
-"openings": 19,
-"pitched": true,
-"wall_mat": "plaster",
-"shops": [
-{
-"id": "osm-n5055919148",
-"name": "Kramer Herrenausstatter",
-"kind": "fashion",
-"p": [
--376.21,
--0.43,
-303.9
-],
-"n": [
-0.265,
-0.964
-],
-"sign": "channel_letters"
-},
-{
-"id": "osm-n6720664034",
-"name": "Bab al Yemen",
-"kind": "cafe",
-"p": [
--369.95,
--0.4,
-302.18
-],
-"n": [
-0.265,
-0.964
-],
-"sign": "fascia_panel"
-}
-],
-"tile": "bldg_-4_2",
-"tris": 5241,
-"instances": 84
 },
 {
 "id": "ID_dee979e6-1139-3730-a10e-9aaaaf619440",
@@ -39611,5 +37177,2609 @@
 "tile": "bldg_0_-1",
 "tris": 1771,
 "instances": 517
+},
+{
+"id": "ID_03293bd2-37dd-37b6-8671-e2093c13152c",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": 0.38,
+"y_ref": 0.38,
+"storeys": 6,
+"storey_h": 3.06,
+"gf_h": 3.0,
+"height": 18.9,
+"retail_walls": 0,
+"openings": 0,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-4_2",
+"tris": 166,
+"instances": 0
+},
+{
+"id": "ID_414cac31-7648-3bc1-8fdd-57c4357de91a",
+"kind": "modern",
+"street": null,
+"number": null,
+"y_lod2": -0.17,
+"y_ref": -0.37,
+"storeys": 1,
+"storey_h": 3.62,
+"gf_h": 5.23,
+"height": 5.8,
+"retail_walls": 0,
+"openings": 2,
+"pitched": false,
+"wall_mat": "brick",
+"tile": "bldg_-4_2",
+"tris": 430,
+"instances": 6
+},
+{
+"id": "ID_e9a96a50-38ca-3afb-9a46-88d720f0fa66",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -1.8,
+"y_ref": -1.8,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 3.35,
+"height": 3.8,
+"retail_walls": 0,
+"openings": 6,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-5_3",
+"tris": 401,
+"instances": 18
+},
+{
+"id": "ID_9cf613f6-8669-33ec-91ea-dc5603fb9af4",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.34,
+"y_ref": -0.54,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 2.6,
+"height": 2.8,
+"retail_walls": 0,
+"openings": 9,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_2",
+"tris": 452,
+"instances": 27
+},
+{
+"id": "ID_bb48c6bb-6d1f-3a74-974b-a7e2863d9820",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -1.29,
+"y_ref": -1.59,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 3.35,
+"height": 3.9,
+"retail_walls": 0,
+"openings": 4,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-5_3",
+"tris": 464,
+"instances": 12
+},
+{
+"id": "ID_a37e6029-3da3-3564-990a-2694d0ed181b",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.38,
+"y_ref": -0.62,
+"storeys": 2,
+"storey_h": 2.7,
+"gf_h": 3.0,
+"height": 5.6,
+"retail_walls": 0,
+"openings": 1,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_2",
+"tris": 158,
+"instances": 4
+},
+{
+"id": "ID_f7bd5104-dd60-308f-84fb-f8d45cc1d892",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": 0.28,
+"y_ref": 0.06,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 2.88,
+"height": 3.3,
+"retail_walls": 0,
+"openings": 2,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_2",
+"tris": 257,
+"instances": 7
+},
+{
+"id": "ID_d2bd163f-48ac-33bf-80e6-a71dd3b499e8",
+"kind": "altbau",
+"street": null,
+"number": null,
+"y_lod2": 0.04,
+"y_ref": -0.18,
+"storeys": 2,
+"storey_h": 3.13,
+"gf_h": 4.3,
+"height": 8.5,
+"retail_walls": 1,
+"openings": 5,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_2",
+"tris": 474,
+"instances": 18
+},
+{
+"id": "ID_2bee1064-1ed9-3467-a974-15ef0cc8cb80",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.34,
+"y_ref": -0.61,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 2.6,
+"height": 2.9,
+"retail_walls": 0,
+"openings": 18,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-5_2",
+"tris": 665,
+"instances": 54
+},
+{
+"id": "ID_91fa1678-3530-33a2-b54a-9a01d6130546",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.95,
+"y_ref": -1.16,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 3.4,
+"height": 4.0,
+"retail_walls": 0,
+"openings": 5,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-5_3",
+"tris": 316,
+"instances": 16
+},
+{
+"id": "ID_3c31f655-cbc4-3d10-b2c0-75c1e26459a5",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": 0.1,
+"y_ref": -0.08,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 2.69,
+"height": 3.2,
+"retail_walls": 0,
+"openings": 6,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_2",
+"tris": 455,
+"instances": 18
+},
+{
+"id": "ID_8d814719-78c1-33cd-8ab6-c4dbf6e6804d",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.24,
+"y_ref": -0.44,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 2.6,
+"height": 2.6,
+"retail_walls": 0,
+"openings": 4,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_2",
+"tris": 245,
+"instances": 12
+},
+{
+"id": "ID_0ff4983d-940a-3ec0-b193-a5c568ca7192",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.29,
+"y_ref": -0.53,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 2.6,
+"height": 2.8,
+"retail_walls": 0,
+"openings": 7,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_2",
+"tris": 565,
+"instances": 21
+},
+{
+"id": "ID_8a6f1d18-fb92-399e-b835-e71f8217f78a",
+"kind": "altbau",
+"street": null,
+"number": null,
+"y_lod2": 0.25,
+"y_ref": 0.02,
+"storeys": 2,
+"storey_h": 2.7,
+"gf_h": 4.44,
+"height": 6.4,
+"retail_walls": 0,
+"openings": 1,
+"pitched": false,
+"wall_mat": "stone",
+"tile": "bldg_-4_2",
+"tris": 452,
+"instances": 4
+},
+{
+"id": "ID_a50f5efb-c483-34f9-8fb1-6afe4212b3d4",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.47,
+"y_ref": -0.67,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 3.81,
+"height": 4.4,
+"retail_walls": 0,
+"openings": 4,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_2",
+"tris": 366,
+"instances": 12
+},
+{
+"id": "ID_3add5682-1a51-3656-bfb8-4de3a1d02075",
+"kind": "altbau",
+"street": null,
+"number": null,
+"y_lod2": 0.17,
+"y_ref": -0.05,
+"storeys": 2,
+"storey_h": 2.7,
+"gf_h": 4.43,
+"height": 6.3,
+"retail_walls": 1,
+"openings": 18,
+"pitched": false,
+"wall_mat": "stone",
+"tile": "bldg_-4_2",
+"tris": 1429,
+"instances": 68
+},
+{
+"id": "ID_201bcac6-d1c9-3104-a29f-63aed2e0fec5",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.0,
+"y_ref": -0.0,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 2.6,
+"height": 3.1,
+"retail_walls": 0,
+"openings": 17,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_2",
+"tris": 681,
+"instances": 54
+},
+{
+"id": "ID_137ba617-4cbb-3e60-aee0-56343160ee58",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": 0.0,
+"y_ref": -0.21,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 2.6,
+"height": 3.0,
+"retail_walls": 0,
+"openings": 6,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_2",
+"tris": 283,
+"instances": 17
+},
+{
+"id": "ID_6d735a28-51ad-3678-9724-4ca7451390d7",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.74,
+"y_ref": -0.94,
+"storeys": 2,
+"storey_h": 2.7,
+"gf_h": 3.0,
+"height": 4.9,
+"retail_walls": 0,
+"openings": 3,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-5_2",
+"tris": 236,
+"instances": 10
+},
+{
+"id": "ID_db90e7e2-a731-3925-b964-cbef39586c35",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.93,
+"y_ref": -0.93,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 3.64,
+"height": 4.2,
+"retail_walls": 0,
+"openings": 0,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-5_3",
+"tris": 85,
+"instances": 0
+},
+{
+"id": "ID_1c39a2de-39b8-3f42-9d73-fcf923d26091",
+"kind": "altbau",
+"street": null,
+"number": null,
+"y_lod2": -0.15,
+"y_ref": -0.35,
+"storeys": 1,
+"storey_h": 3.77,
+"gf_h": 3.94,
+"height": 4.2,
+"retail_walls": 1,
+"openings": 5,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-4_2",
+"tris": 731,
+"instances": 21
+},
+{
+"id": "ID_aa6c299c-9b3d-3174-8de0-938a3f48fb87",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.92,
+"y_ref": -1.12,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 3.96,
+"height": 4.4,
+"retail_walls": 1,
+"openings": 1,
+"pitched": false,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n6720626840",
+"name": "Schankwirtschaft Barfuß",
+"kind": "cafe",
+"p": [
+-401.46,
+-1.17,
+337.22
+],
+"n": [
+0.302,
+0.953
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-5_3",
+"tris": 1236,
+"instances": 4
+},
+{
+"id": "ID_7bf3782c-bd5b-3e10-8b2c-c872158c3382",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.9,
+"y_ref": -0.9,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 2.6,
+"height": 3.0,
+"retail_walls": 0,
+"openings": 0,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-5_1",
+"tris": 124,
+"instances": 0
+},
+{
+"id": "ID_ab9a5a5b-05b5-3730-8d2e-4f007e9c2ad4",
+"kind": "nachkrieg",
+"street": null,
+"number": null,
+"y_lod2": 0.0,
+"y_ref": -0.27,
+"storeys": 2,
+"storey_h": 3.33,
+"gf_h": 3.22,
+"height": 7.5,
+"retail_walls": 1,
+"openings": 14,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_2",
+"tris": 694,
+"instances": 59
+},
+{
+"id": "ID_ff0b0763-d722-3c5a-a2d1-a5543b1e6800",
+"kind": "nachkrieg",
+"street": null,
+"number": null,
+"y_lod2": -0.69,
+"y_ref": -0.55,
+"storeys": 1,
+"storey_h": 3.2,
+"gf_h": 2.64,
+"height": 3.2,
+"retail_walls": 2,
+"openings": 6,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_2",
+"tris": 1007,
+"instances": 25
+},
+{
+"id": "ID_7718ce74-3b92-3e8c-98c1-34371f55d959",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": 0.1,
+"y_ref": -0.13,
+"storeys": 2,
+"storey_h": 3.23,
+"gf_h": 3.0,
+"height": 7.2,
+"retail_walls": 0,
+"openings": 2,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_2",
+"tris": 199,
+"instances": 6
+},
+{
+"id": "ID_c02210bb-9e47-34dc-a604-9219eca0c507",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.01,
+"y_ref": -0.01,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 3.62,
+"height": 4.2,
+"retail_walls": 0,
+"openings": 0,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_2",
+"tris": 142,
+"instances": 0
+},
+{
+"id": "ID_1311345d-6aa1-322c-a408-949dd71c3e41",
+"kind": "altbau",
+"street": null,
+"number": null,
+"y_lod2": -0.77,
+"y_ref": -1.03,
+"storeys": 1,
+"storey_h": 3.98,
+"gf_h": 4.63,
+"height": 5.0,
+"retail_walls": 0,
+"openings": 4,
+"pitched": false,
+"wall_mat": "stone",
+"tile": "bldg_-5_2",
+"tris": 519,
+"instances": 17
+},
+{
+"id": "ID_06afc290-050c-38db-8537-a14a29b4ca32",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.69,
+"y_ref": -0.69,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 3.49,
+"height": 4.0,
+"retail_walls": 0,
+"openings": 4,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_2",
+"tris": 295,
+"instances": 13
+},
+{
+"id": "ID_ffb17096-30d2-3858-8b35-91974a2cdd6a",
+"kind": "modern",
+"street": null,
+"number": null,
+"y_lod2": -0.07,
+"y_ref": -0.29,
+"storeys": 1,
+"storey_h": 3.81,
+"gf_h": 3.63,
+"height": 4.0,
+"retail_walls": 2,
+"openings": 12,
+"pitched": false,
+"wall_mat": "panel",
+"tile": "bldg_-4_2",
+"tris": 506,
+"instances": 43
+},
+{
+"id": "ID_4edde8db-78d8-3f7b-aeb9-df74a38fcc6e",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.12,
+"y_ref": -0.32,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 3.96,
+"height": 4.5,
+"retail_walls": 0,
+"openings": 3,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_2",
+"tris": 259,
+"instances": 9
+},
+{
+"id": "ID_98a9691d-b236-3bb4-91ec-55ec0f3fa9a0",
+"kind": "nachkrieg",
+"street": null,
+"number": null,
+"y_lod2": -0.75,
+"y_ref": -0.75,
+"storeys": 1,
+"storey_h": 3.14,
+"gf_h": 3.68,
+"height": 4.1,
+"retail_walls": 2,
+"openings": 35,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-5_2",
+"tris": 3437,
+"instances": 140
+},
+{
+"id": "ID_e1ac52ff-f994-3808-a6bf-cb5d715bdbd1",
+"kind": "nachkrieg",
+"street": null,
+"number": null,
+"y_lod2": -0.04,
+"y_ref": -0.24,
+"storeys": 1,
+"storey_h": 3.23,
+"gf_h": 2.6,
+"height": 2.9,
+"retail_walls": 0,
+"openings": 5,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-4_2",
+"tris": 544,
+"instances": 20
+},
+{
+"id": "ID_bcc9a17d-17ac-3796-8109-95830183bbd7",
+"kind": "altbau",
+"street": null,
+"number": null,
+"y_lod2": -0.9,
+"y_ref": -1.03,
+"storeys": 2,
+"storey_h": 3.92,
+"gf_h": 3.2,
+"height": 7.7,
+"retail_walls": 0,
+"openings": 25,
+"pitched": true,
+"wall_mat": "stone",
+"tile": "bldg_-4_2",
+"tris": 1941,
+"instances": 105
+},
+{
+"id": "ID_c1816ac4-69bc-391b-88d9-d415c2ab070f",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.65,
+"y_ref": -0.65,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 4.19,
+"height": 4.7,
+"retail_walls": 0,
+"openings": 0,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-5_2",
+"tris": 74,
+"instances": 0
+},
+{
+"id": "ID_9bc17b19-56c4-3270-9fda-a0f254195867",
+"kind": "fachwerk",
+"street": "Burgstraße",
+"number": "27A",
+"y_lod2": -1.14,
+"y_ref": -1.33,
+"storeys": 4,
+"storey_h": 3.34,
+"gf_h": 3.54,
+"height": 14.1,
+"retail_walls": 2,
+"openings": 48,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n11954171136",
+"name": "Rahmenhandlung",
+"kind": "home",
+"p": [
+-425.61,
+-1.34,
+281.74
+],
+"n": [
+-0.89,
+0.456
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-5_2",
+"tris": 10496,
+"instances": 165
+},
+{
+"id": "ID_d8ed0750-eb0f-34d8-a2e2-db5633214512",
+"kind": "fachwerk",
+"street": "Burgstraße",
+"number": "33",
+"y_lod2": -1.14,
+"y_ref": -1.34,
+"storeys": 4,
+"storey_h": 3.93,
+"gf_h": 3.82,
+"height": 16.2,
+"retail_walls": 2,
+"openings": 39,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n11954171132",
+"name": "Neue Speisekammer",
+"kind": "cafe",
+"p": [
+-417.92,
+-1.39,
+302.44
+],
+"n": [
+-0.978,
+0.207
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-5_3",
+"tris": 9860,
+"instances": 124
+},
+{
+"id": "ID_38477871-1b60-35e2-ac87-b4d002aa7e61",
+"kind": "shed",
+"street": null,
+"number": null,
+"y_lod2": -0.78,
+"y_ref": -0.78,
+"storeys": 1,
+"storey_h": 3.0,
+"gf_h": 4.38,
+"height": 4.8,
+"retail_walls": 0,
+"openings": 1,
+"pitched": false,
+"wall_mat": "plaster",
+"tile": "bldg_-5_2",
+"tris": 265,
+"instances": 3
+},
+{
+"id": "ID_0b95ed53-9306-335c-9580-0a0b295cbca6",
+"kind": "altbau",
+"street": "Knochenhauerstraße",
+"number": "40",
+"y_lod2": -0.05,
+"y_ref": -0.32,
+"storeys": 4,
+"storey_h": 3.08,
+"gf_h": 3.2,
+"height": 13.0,
+"retail_walls": 3,
+"openings": 59,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-4_2",
+"tris": 4093,
+"instances": 268
+},
+{
+"id": "ID_9850fd33-58c8-3cc6-bffc-a396527794b2",
+"kind": "gothic",
+"street": null,
+"number": null,
+"y_lod2": -0.41,
+"y_ref": -0.55,
+"storeys": 2,
+"storey_h": 3.21,
+"gf_h": 6.0,
+"height": 9.8,
+"retail_walls": 0,
+"openings": 14,
+"pitched": true,
+"wall_mat": "stone",
+"tile": "bldg_-5_1",
+"tris": 6280,
+"instances": 14
+},
+{
+"id": "ID_d489ed85-2df2-3542-985c-834f63b300ee",
+"kind": "altbau",
+"street": "Knochenhauerstraße",
+"number": "25",
+"y_lod2": -0.39,
+"y_ref": -0.61,
+"storeys": 4,
+"storey_h": 3.33,
+"gf_h": 4.26,
+"height": 14.9,
+"retail_walls": 2,
+"openings": 14,
+"pitched": true,
+"wall_mat": "brick",
+"shops": [
+{
+"id": "osm-n6720640898",
+"name": "Altstadt-Treff",
+"kind": "cafe",
+"p": [
+-352.04,
+-0.61,
+208.97
+],
+"n": [
+-0.937,
+0.351
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_2",
+"tris": 2329,
+"instances": 68
+},
+{
+"id": "ID_a01a755b-1acb-3627-9469-d0647ca79343",
+"kind": "altbau",
+"street": "Schuhstraße",
+"number": "11",
+"y_lod2": -0.09,
+"y_ref": -0.38,
+"storeys": 3,
+"storey_h": 4.92,
+"gf_h": 4.52,
+"height": 15.0,
+"retail_walls": 2,
+"openings": 42,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n6720654176",
+"name": "Lindenblatt 800 °",
+"kind": "cafe",
+"p": [
+-331.3,
+-0.38,
+238.9
+],
+"n": [
+0.414,
+0.91
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_2",
+"tris": 8620,
+"instances": 185
+},
+{
+"id": "ID_4c631123-cbc3-3f6d-9fea-6a77059e9a7d",
+"kind": "fachwerk",
+"street": "Burgstraße",
+"number": "31",
+"y_lod2": -1.14,
+"y_ref": -1.34,
+"storeys": 4,
+"storey_h": 3.86,
+"gf_h": 3.76,
+"height": 15.9,
+"retail_walls": 1,
+"openings": 7,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-5_2",
+"tris": 2113,
+"instances": 17
+},
+{
+"id": "ID_0875e4bf-2b9c-3d2a-ae27-3bc0e500bbca",
+"kind": "fachwerk",
+"street": "Ballhofplatz",
+"number": "3",
+"y_lod2": -0.84,
+"y_ref": -1.1,
+"storeys": 3,
+"storey_h": 3.9,
+"gf_h": 3.56,
+"height": 12.0,
+"retail_walls": 2,
+"openings": 82,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n11954192881",
+"name": "marie jo",
+"kind": "fashion",
+"p": [
+-425.86,
+-1.15,
+199.8
+],
+"n": [
+0.594,
+0.805
+],
+"sign": "channel_letters"
+}
+],
+"tile": "bldg_-5_1",
+"tris": 12926,
+"instances": 250
+},
+{
+"id": "ID_e45dec65-efaa-3b83-9e32-39ea6e858fc8",
+"kind": "altbau",
+"street": "Knochenhauerstraße",
+"number": "42",
+"y_lod2": -0.07,
+"y_ref": -0.27,
+"storeys": 4,
+"storey_h": 3.04,
+"gf_h": 3.2,
+"height": 12.9,
+"retail_walls": 3,
+"openings": 54,
+"pitched": true,
+"wall_mat": "brick",
+"shops": [
+{
+"id": "osm-n3410377179",
+"name": "Cafe & Bar Celona",
+"kind": "cafe",
+"p": [
+-320.97,
+-0.27,
+281.48
+],
+"n": [
+0.898,
+-0.439
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_2",
+"tris": 5764,
+"instances": 243
+},
+{
+"id": "ID_60cbc5d9-c564-3bf4-b251-2e89d4d44626",
+"kind": "fachwerk",
+"street": "Holzmarkt",
+"number": "3",
+"y_lod2": -1.21,
+"y_ref": -1.49,
+"storeys": 4,
+"storey_h": 3.21,
+"gf_h": 3.85,
+"height": 14.1,
+"retail_walls": 3,
+"openings": 30,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n5055919143",
+"name": "Holz66",
+"kind": "home",
+"p": [
+-413.57,
+-1.5,
+322.14
+],
+"n": [
+-0.202,
+-0.979
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-5_3",
+"tris": 6907,
+"instances": 87
+},
+{
+"id": "ID_b5f87917-9f73-36d3-90a9-5e70c41c0dc0",
+"kind": "nachkrieg",
+"street": "Goldener Winkel",
+"number": "24",
+"y_lod2": 0.04,
+"y_ref": -0.25,
+"storeys": 2,
+"storey_h": 2.7,
+"gf_h": 4.38,
+"height": 6.4,
+"retail_walls": 0,
+"openings": 8,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-5_1",
+"tris": 827,
+"instances": 31
+},
+{
+"id": "ID_e81d227b-f318-3c4b-81e8-a3ffde95b2bb",
+"kind": "nachkrieg",
+"street": "Klostergang",
+"number": "2",
+"y_lod2": -2.13,
+"y_ref": -2.39,
+"storeys": 5,
+"storey_h": 3.01,
+"gf_h": 4.04,
+"height": 16.7,
+"retail_walls": 2,
+"openings": 42,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n2314743450",
+"name": "Aresto",
+"kind": "cafe",
+"p": [
+-490.69,
+-2.44,
+356.86
+],
+"n": [
+-0.901,
+0.434
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-5_3",
+"tris": 2332,
+"instances": 173
+},
+{
+"id": "ID_26edb28c-2d86-328c-bcad-2440ffa5f4f0",
+"kind": "fachwerk",
+"street": "Kreuzstraße",
+"number": "8",
+"y_lod2": -1.23,
+"y_ref": -0.8,
+"storeys": 3,
+"storey_h": 3.54,
+"gf_h": 3.64,
+"height": 11.3,
+"retail_walls": 0,
+"openings": 24,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-5_1",
+"tris": 3162,
+"instances": 74
+},
+{
+"id": "ID_379b0975-8f69-3e63-89aa-aa94ac451db8",
+"kind": "nachkrieg",
+"street": "Kreuzstraße",
+"number": "5",
+"y_lod2": -0.33,
+"y_ref": -0.57,
+"storeys": 2,
+"storey_h": 2.7,
+"gf_h": 4.22,
+"height": 7.1,
+"retail_walls": 0,
+"openings": 7,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-5_1",
+"tris": 419,
+"instances": 30
+},
+{
+"id": "ID_6d256eb6-7861-3dbc-9b9f-0071be225ad6",
+"kind": "fachwerk",
+"street": "Kramerstraße",
+"number": "12",
+"y_lod2": -0.98,
+"y_ref": -1.21,
+"storeys": 4,
+"storey_h": 2.9,
+"gf_h": 3.56,
+"height": 12.9,
+"retail_walls": 2,
+"openings": 12,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n6720649613",
+"name": "Barbers in the sky",
+"kind": "salon",
+"p": [
+-404.75,
+-1.26,
+320.32
+],
+"n": [
+-0.201,
+-0.979
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-5_3",
+"tris": 4152,
+"instances": 38
+},
+{
+"id": "ID_e3f02994-48cd-3ea0-b0b6-0dc083f1e855",
+"kind": "altbau",
+"street": "Kreuzstraße",
+"number": "7",
+"y_lod2": -0.93,
+"y_ref": -0.71,
+"storeys": 3,
+"storey_h": 3.1,
+"gf_h": 4.43,
+"height": 11.2,
+"retail_walls": 0,
+"openings": 12,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-5_1",
+"tris": 1204,
+"instances": 57
+},
+{
+"id": "ID_88246ce8-34fd-38d2-b81f-1ee43e2d52df",
+"kind": "nachkrieg",
+"street": "Goldener Winkel",
+"number": "22",
+"y_lod2": 0.06,
+"y_ref": -0.2,
+"storeys": 2,
+"storey_h": 2.7,
+"gf_h": 4.37,
+"height": 6.4,
+"retail_walls": 0,
+"openings": 8,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-5_1",
+"tris": 765,
+"instances": 34
+},
+{
+"id": "ID_e4ad976f-b06e-3124-bf27-8794c4ffcd35",
+"kind": "nachkrieg",
+"street": "Schloßstraße",
+"number": "2",
+"y_lod2": -2.42,
+"y_ref": -2.62,
+"storeys": 5,
+"storey_h": 3.09,
+"gf_h": 4.39,
+"height": 17.4,
+"retail_walls": 0,
+"openings": 60,
+"pitched": true,
+"wall_mat": "panel",
+"tile": "bldg_-5_3",
+"tris": 4154,
+"instances": 278
+},
+{
+"id": "ID_c654b357-c4f7-3567-9889-7f3cfbd672d0",
+"kind": "altbau",
+"street": "Kreuzkirchhof",
+"number": "5",
+"y_lod2": -0.47,
+"y_ref": -0.47,
+"storeys": 3,
+"storey_h": 3.19,
+"gf_h": 4.02,
+"height": 11.0,
+"retail_walls": 2,
+"openings": 35,
+"pitched": true,
+"wall_mat": "brick",
+"shops": [
+{
+"id": "osm-n503562830",
+"name": "Kreuzklappe",
+"kind": "cafe",
+"p": [
+-452.2,
+-0.47,
+141.29
+],
+"n": [
+-0.387,
+-0.922
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-5_1",
+"tris": 4168,
+"instances": 158
+},
+{
+"id": "ID_95083ca6-3af9-3f46-ba47-cf27dca6ad1b",
+"kind": "altbau",
+"street": "Knochenhauerstraße",
+"number": "32",
+"y_lod2": -0.24,
+"y_ref": -0.53,
+"storeys": 4,
+"storey_h": 2.85,
+"gf_h": 3.2,
+"height": 12.3,
+"retail_walls": 1,
+"openings": 38,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n6720624928",
+"name": "Atelier Andreas T.",
+"kind": "jewellery",
+"p": [
+-357.01,
+-0.58,
+219.1
+],
+"n": [
+0.856,
+-0.516
+],
+"sign": "channel_letters"
+}
+],
+"tile": "bldg_-4_2",
+"tris": 2786,
+"instances": 171
+},
+{
+"id": "ID_5cef9a44-af3f-3e29-bbf3-4a42658dc746",
+"kind": "fachwerk",
+"street": "Burgstraße",
+"number": "29",
+"y_lod2": -1.14,
+"y_ref": -1.34,
+"storeys": 4,
+"storey_h": 3.07,
+"gf_h": 3.44,
+"height": 13.2,
+"retail_walls": 1,
+"openings": 23,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-5_2",
+"tris": 6719,
+"instances": 66
+},
+{
+"id": "ID_0270cc38-c629-33d2-b909-7141b285932f",
+"kind": "fachwerk",
+"street": "Burgstraße",
+"number": "25",
+"y_lod2": -1.05,
+"y_ref": -1.25,
+"storeys": 3,
+"storey_h": 3.64,
+"gf_h": 3.66,
+"height": 11.5,
+"retail_walls": 2,
+"openings": 42,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n11954171137",
+"name": "M&B Creativ-Team",
+"kind": "salon",
+"p": [
+-432.26,
+-1.29,
+268.75
+],
+"n": [
+-0.89,
+0.456
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-5_2",
+"tris": 6891,
+"instances": 129
+},
+{
+"id": "ID_4f69486f-cda3-355a-bee3-e29ac0847164",
+"kind": "fachwerk",
+"street": "Holzmarkt",
+"number": "2",
+"y_lod2": -1.22,
+"y_ref": -1.22,
+"storeys": 4,
+"storey_h": 3.22,
+"gf_h": 3.77,
+"height": 14.0,
+"retail_walls": 1,
+"openings": 20,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-5_3",
+"tris": 4138,
+"instances": 55
+},
+{
+"id": "ID_c1473837-2050-3f41-a39a-be97ca61e551",
+"kind": "fachwerk",
+"street": "Kramerstraße",
+"number": "9",
+"y_lod2": -0.6,
+"y_ref": -0.82,
+"storeys": 4,
+"storey_h": 3.11,
+"gf_h": 3.88,
+"height": 13.8,
+"retail_walls": 1,
+"openings": 39,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n6720665926",
+"name": "Steel",
+"kind": "home",
+"p": [
+-385.64,
+-0.87,
+306.41
+],
+"n": [
+0.256,
+0.967
+],
+"sign": "fascia_panel"
+},
+{
+"id": "osm-n368392191",
+"name": "La Ligné",
+"kind": "salon",
+"p": [
+-379.78,
+-0.87,
+304.86
+],
+"n": [
+0.256,
+0.967
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_2",
+"tris": 7685,
+"instances": 112
+},
+{
+"id": "ID_b715fdf3-9f3e-3b2e-b061-25febaef3d7d",
+"kind": "fachwerk",
+"street": "Kreuzstraße",
+"number": "1",
+"y_lod2": -0.84,
+"y_ref": -1.04,
+"storeys": 3,
+"storey_h": 3.56,
+"gf_h": 3.61,
+"height": 11.3,
+"retail_walls": 2,
+"openings": 101,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n13895375289",
+"name": "Oldtimer Fahr Service",
+"kind": "office",
+"p": [
+-420.78,
+-1.09,
+180.37
+],
+"n": [
+-0.887,
+0.462
+],
+"sign": "fascia_panel"
+},
+{
+"id": "osm-n10311381950",
+"name": "Next Generation Wine",
+"kind": "supermarket",
+"p": [
+-418.71,
+-1.09,
+184.34
+],
+"n": [
+-0.887,
+0.462
+],
+"sign": "light_box"
+}
+],
+"tile": "bldg_-5_1",
+"tris": 18209,
+"instances": 312
+},
+{
+"id": "ID_b269bef2-2a45-34fe-8c1f-4c7da45b1f71",
+"kind": "altbau",
+"street": "Knochenhauerstraße",
+"number": "27",
+"y_lod2": -0.21,
+"y_ref": -0.41,
+"storeys": 3,
+"storey_h": 3.55,
+"gf_h": 4.29,
+"height": 12.0,
+"retail_walls": 1,
+"openings": 23,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n6720665064",
+"name": "Oji Long",
+"kind": "cafe",
+"p": [
+-349.99,
+-0.46,
+213.58
+],
+"n": [
+-0.859,
+0.512
+],
+"sign": "fascia_panel"
+},
+{
+"id": "osm-n6720649614",
+"name": "Verlockung",
+"kind": "drugstore",
+"p": [
+-347.33,
+-0.46,
+218.05
+],
+"n": [
+-0.859,
+0.512
+],
+"sign": "fascia_panel"
+},
+{
+"id": "osm-n6720665248",
+"name": "Alt Hannovera",
+"kind": "cafe",
+"p": [
+-346.11,
+-0.46,
+220.09
+],
+"n": [
+-0.859,
+0.512
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_2",
+"tris": 5465,
+"instances": 110
+},
+{
+"id": "ID_271031bc-2145-3109-9a2d-9bed131da416",
+"kind": "altbau",
+"street": "Schuhstraße",
+"number": "9",
+"y_lod2": 0.1,
+"y_ref": -0.1,
+"storeys": 4,
+"storey_h": 2.88,
+"gf_h": 4.22,
+"height": 13.5,
+"retail_walls": 2,
+"openings": 8,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n14092926879",
+"name": "Zur guten Absicht",
+"kind": "cafe",
+"p": [
+-319.21,
+-0.15,
+233.13
+],
+"n": [
+0.373,
+0.928
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_2",
+"tris": 3606,
+"instances": 38
+},
+{
+"id": "ID_93528938-baef-395a-bfa8-df4f22156f68",
+"kind": "fachwerk",
+"street": "Burgstraße",
+"number": "23A",
+"y_lod2": -1.01,
+"y_ref": -1.21,
+"storeys": 3,
+"storey_h": 4.59,
+"gf_h": 3.37,
+"height": 13.2,
+"retail_walls": 0,
+"openings": 30,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-5_2",
+"tris": 3998,
+"instances": 88
+},
+{
+"id": "ID_a5202bc2-ca01-30c4-83dd-63b18246de2e",
+"kind": "fachwerk",
+"street": "Kramerstraße",
+"number": "3",
+"y_lod2": -0.19,
+"y_ref": -0.39,
+"storeys": 4,
+"storey_h": 2.8,
+"gf_h": 3.23,
+"height": 12.2,
+"retail_walls": 1,
+"openings": 76,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n12087775770",
+"name": "Weinbar gegenüber",
+"kind": "cafe",
+"p": [
+-348.57,
+-0.44,
+296.21
+],
+"n": [
+0.245,
+0.97
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_2",
+"tris": 11268,
+"instances": 208
+},
+{
+"id": "ID_84e270ab-c650-3efb-96cb-75d0449a9249",
+"kind": "nachkrieg",
+"street": "Burgstraße",
+"number": "21A",
+"y_lod2": -0.81,
+"y_ref": -0.97,
+"storeys": 2,
+"storey_h": 4.86,
+"gf_h": 5.6,
+"height": 11.1,
+"retail_walls": 2,
+"openings": 49,
+"pitched": true,
+"wall_mat": "brick",
+"shops": [
+{
+"id": "osm-n2834864213",
+"name": "[hof:geflüster]",
+"kind": "cafe",
+"p": [
+-461.97,
+-0.97,
+226.3
+],
+"n": [
+0.595,
+0.804
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-5_2",
+"tris": 4326,
+"instances": 211
+},
+{
+"id": "ID_2bcbfea4-1c8c-3ebf-80be-4077366124be",
+"kind": "nachkrieg",
+"street": "Roßmühle",
+"number": "2",
+"y_lod2": -0.5,
+"y_ref": -1.08,
+"storeys": 3,
+"storey_h": 4.06,
+"gf_h": 3.87,
+"height": 12.6,
+"retail_walls": 0,
+"openings": 82,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-5_2",
+"tris": 2223,
+"instances": 365
+},
+{
+"id": "ID_1e223c17-842e-3f52-a54c-082809ef52fc",
+"kind": "modern",
+"street": "Pferdestraße",
+"number": "6",
+"y_lod2": -3.45,
+"y_ref": -1.01,
+"storeys": 3,
+"storey_h": 3.95,
+"gf_h": 4.32,
+"height": 13.2,
+"retail_walls": 0,
+"openings": 294,
+"pitched": false,
+"wall_mat": "stone",
+"tile": "bldg_-5_2",
+"tris": 11852,
+"instances": 1064
+},
+{
+"id": "ID_7f103f76-2cb1-36a5-b1f5-e39a5d4db35d",
+"kind": "altbau",
+"street": "Holzmarkt",
+"number": "4",
+"y_lod2": -1.12,
+"y_ref": -1.31,
+"storeys": 4,
+"storey_h": 3.37,
+"gf_h": 4.41,
+"height": 15.1,
+"retail_walls": 2,
+"openings": 58,
+"pitched": true,
+"wall_mat": "brick_y",
+"shops": [
+{
+"id": "osm-n11954171130",
+"name": "REBMANN",
+"kind": "fashion",
+"p": [
+-443.52,
+-1.42,
+326.98
+],
+"n": [
+0.974,
+-0.227
+],
+"sign": "channel_letters"
+}
+],
+"tile": "bldg_-5_3",
+"tris": 5935,
+"instances": 249
+},
+{
+"id": "ID_b5973fae-14ec-3b9f-ab79-ef8c4bce13de",
+"kind": "fachwerk",
+"street": "Pferdestraße",
+"number": "11",
+"y_lod2": -0.88,
+"y_ref": -1.08,
+"storeys": 5,
+"storey_h": 2.85,
+"gf_h": 3.53,
+"height": 15.5,
+"retail_walls": 1,
+"openings": 44,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n320902086",
+"name": "Buddha Bowl",
+"kind": "cafe",
+"p": [
+-478.32,
+-1.13,
+321.2
+],
+"n": [
+0.033,
+-0.999
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-5_3",
+"tris": 6982,
+"instances": 133
+},
+{
+"id": "ID_b150f6c8-2886-3ae9-b09f-044416be3d53",
+"kind": "fachwerk",
+"street": "Ballhofplatz",
+"number": "7",
+"y_lod2": -0.99,
+"y_ref": -0.99,
+"storeys": 3,
+"storey_h": 4.32,
+"gf_h": 3.58,
+"height": 12.8,
+"retail_walls": 2,
+"openings": 55,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n3789361887",
+"name": "craft bier bar",
+"kind": "cafe",
+"p": [
+-445.52,
+-0.9,
+242.97
+],
+"n": [
+-0.446,
+-0.895
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-5_2",
+"tris": 7789,
+"instances": 163
+},
+{
+"id": "ID_2ec17eee-ab39-3da5-a083-72883e638e51",
+"kind": "fachwerk",
+"street": "Kreuzkirchhof",
+"number": "7",
+"y_lod2": -0.19,
+"y_ref": -0.39,
+"storeys": 2,
+"storey_h": 2.7,
+"gf_h": 3.51,
+"height": 6.5,
+"retail_walls": 0,
+"openings": 36,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-5_1",
+"tris": 2751,
+"instances": 115
+},
+{
+"id": "ID_6f787b36-e78c-3f3f-a83b-d401f4814d7a",
+"kind": "nachkrieg",
+"street": "Goldener Winkel",
+"number": "20",
+"y_lod2": 0.02,
+"y_ref": -0.18,
+"storeys": 2,
+"storey_h": 2.7,
+"gf_h": 3.88,
+"height": 6.4,
+"retail_walls": 0,
+"openings": 14,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-5_1",
+"tris": 1417,
+"instances": 68
+},
+{
+"id": "ID_6b0044d1-7694-302c-833a-d9d7d5266d62",
+"kind": "altbau",
+"street": "Schuhstraße",
+"number": "5",
+"y_lod2": 0.24,
+"y_ref": -0.03,
+"storeys": 4,
+"storey_h": 2.79,
+"gf_h": 4.43,
+"height": 13.4,
+"retail_walls": 1,
+"openings": 25,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-4_2",
+"tris": 2488,
+"instances": 118
+},
+{
+"id": "ID_ac755613-d67c-32af-9334-bbde728fee69",
+"kind": "altbau",
+"street": "Schuhstraße",
+"number": "12",
+"y_lod2": -0.01,
+"y_ref": -0.26,
+"storeys": 4,
+"storey_h": 3.15,
+"gf_h": 4.39,
+"height": 14.4,
+"retail_walls": 4,
+"openings": 94,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n316420108",
+"name": "Hanns-Lilje-Haus",
+"kind": "lobby",
+"p": [
+-316.73,
+-0.15,
+266.34
+],
+"n": [
+-0.876,
+0.482
+],
+"sign": "channel_letters"
+}
+],
+"tile": "bldg_-4_2",
+"tris": 6472,
+"instances": 424
+},
+{
+"id": "ID_70893d5d-fc6b-3597-a5a4-e5a31729a355",
+"kind": "fachwerk",
+"street": "Kreuzstraße",
+"number": "10",
+"y_lod2": -1.45,
+"y_ref": -1.01,
+"storeys": 3,
+"storey_h": 3.76,
+"gf_h": 3.4,
+"height": 11.5,
+"retail_walls": 0,
+"openings": 33,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-5_1",
+"tris": 3644,
+"instances": 112
+},
+{
+"id": "ID_edb66e78-4a7d-394b-9c1f-4faa2b931a11",
+"kind": "altbau",
+"street": "Klostergang",
+"number": "1",
+"y_lod2": -2.02,
+"y_ref": -1.16,
+"storeys": 5,
+"storey_h": 2.96,
+"gf_h": 3.2,
+"height": 15.6,
+"retail_walls": 2,
+"openings": 74,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n12877282666",
+"name": "LeineEis",
+"kind": "cafe",
+"p": [
+-494.8,
+-1.15,
+320.72
+],
+"n": [
+0.027,
+-1.0
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-5_3",
+"tris": 6813,
+"instances": 344
+},
+{
+"id": "ID_5051cc6a-c86e-3179-b258-2228f15d551b",
+"kind": "tower",
+"street": "Pferdestraße",
+"number": "8",
+"y_lod2": -3.56,
+"y_ref": -0.92,
+"storeys": 6,
+"storey_h": 3.76,
+"gf_h": 4.0,
+"height": 23.4,
+"retail_walls": 0,
+"openings": 2,
+"pitched": true,
+"wall_mat": "rubble",
+"tile": "bldg_-6_3",
+"tris": 2708,
+"instances": 0
+},
+{
+"id": "ID_68e1d53c-90c4-308c-9cf9-750a4dab7c07",
+"kind": "fachwerk",
+"street": "Ballhofstraße",
+"number": "6",
+"y_lod2": -0.85,
+"y_ref": -1.03,
+"storeys": 3,
+"storey_h": 3.23,
+"gf_h": 3.49,
+"height": 10.6,
+"retail_walls": 0,
+"openings": 27,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-5_1",
+"tris": 3236,
+"instances": 88
+},
+{
+"id": "ID_78aa861d-e130-3c33-a4ec-96aa4fa1e5e6",
+"kind": "altbau",
+"street": "Knochenhauerstraße",
+"number": "30",
+"y_lod2": -0.35,
+"y_ref": -0.55,
+"storeys": 4,
+"storey_h": 2.85,
+"gf_h": 3.2,
+"height": 12.4,
+"retail_walls": 1,
+"openings": 41,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n12567876305",
+"name": "My Way Altstadt Bar & Bistro",
+"kind": "cafe",
+"p": [
+-363.56,
+-0.6,
+206.67
+],
+"n": [
+0.936,
+-0.351
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_2",
+"tris": 3018,
+"instances": 183
+},
+{
+"id": "ID_b1e08153-ebb6-3af8-8652-e6862bb48eee",
+"kind": "nachkrieg",
+"street": "Hannah-Arendt-Platz",
+"number": "1",
+"y_lod2": -6.58,
+"y_ref": -2.21,
+"storeys": 4,
+"storey_h": 4.57,
+"gf_h": 3.82,
+"height": 18.1,
+"retail_walls": 2,
+"openings": 739,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-4_4",
+"tris": 33257,
+"instances": 3472
+},
+{
+"id": "ID_0fe5f09f-3021-302a-9a19-9d345b0dd5ec",
+"kind": "altbau",
+"street": "Kreuzstraße",
+"number": "11",
+"y_lod2": -1.45,
+"y_ref": -1.14,
+"storeys": 3,
+"storey_h": 3.27,
+"gf_h": 4.52,
+"height": 11.6,
+"retail_walls": 0,
+"openings": 12,
+"pitched": true,
+"wall_mat": "brick",
+"tile": "bldg_-5_1",
+"tris": 1206,
+"instances": 60
+},
+{
+"id": "ID_f8b19745-b591-38a0-9be3-5ae7a95d2726",
+"kind": "fachwerk",
+"street": "Kramerstraße",
+"number": "11",
+"y_lod2": -0.87,
+"y_ref": -1.1,
+"storeys": 5,
+"storey_h": 2.86,
+"gf_h": 3.8,
+"height": 15.9,
+"retail_walls": 1,
+"openings": 41,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n2071168295",
+"name": "Schateke",
+"kind": "cafe",
+"p": [
+-407.36,
+-1.15,
+309.0
+],
+"n": [
+0.081,
+0.997
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-5_3",
+"tris": 6227,
+"instances": 121
+},
+{
+"id": "ID_c3ac93d1-1134-3011-a8a8-80a4158adc78",
+"kind": "fachwerk",
+"street": "Kreuzkirchhof",
+"number": "1",
+"y_lod2": -0.33,
+"y_ref": -0.53,
+"storeys": 2,
+"storey_h": 2.72,
+"gf_h": 3.6,
+"height": 6.9,
+"retail_walls": 0,
+"openings": 84,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-5_1",
+"tris": 8099,
+"instances": 303
+},
+{
+"id": "ID_1a4a4aa4-01e2-3f9d-8d35-387256f6bc34",
+"kind": "fachwerk",
+"street": "Ballhofplatz",
+"number": "2",
+"y_lod2": -0.84,
+"y_ref": -1.08,
+"storeys": 3,
+"storey_h": 3.93,
+"gf_h": 3.63,
+"height": 12.1,
+"retail_walls": 1,
+"openings": 68,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n11954192880",
+"name": "Silver & Gold",
+"kind": "jewellery",
+"p": [
+-447.46,
+-1.07,
+216.02
+],
+"n": [
+0.606,
+0.796
+],
+"sign": "channel_letters"
+},
+{
+"id": "osm-n503560800",
+"name": "Teestübchen",
+"kind": "cafe",
+"p": [
+-440.89,
+-1.1,
+211.01
+],
+"n": [
+0.606,
+0.796
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-5_2",
+"tris": 9831,
+"instances": 205
+},
+{
+"id": "ID_5220330c-71e7-3f91-9b8b-fd0f2f6f82d6",
+"kind": "nachkrieg",
+"street": "Schloßstraße",
+"number": "6",
+"y_lod2": -2.51,
+"y_ref": -2.51,
+"storeys": 5,
+"storey_h": 3.08,
+"gf_h": 4.17,
+"height": 17.1,
+"retail_walls": 1,
+"openings": 75,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n613601588",
+"name": "A´Mura",
+"kind": "cafe",
+"p": [
+-480.22,
+-2.51,
+377.2
+],
+"n": [
+-0.886,
+0.463
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-5_3",
+"tris": 3918,
+"instances": 296
+},
+{
+"id": "ID_ca694c1f-26e0-33cd-a35e-d115d293b4ea",
+"kind": "fachwerk",
+"street": "Holzmarkt",
+"number": "1",
+"y_lod2": -1.24,
+"y_ref": -1.45,
+"storeys": 4,
+"storey_h": 3.26,
+"gf_h": 3.77,
+"height": 14.2,
+"retail_walls": 1,
+"openings": 32,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n8939607929",
+"name": "Trio",
+"kind": "salon",
+"p": [
+-410.26,
+-1.5,
+347.71
+],
+"n": [
+-0.93,
+0.368
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-5_3",
+"tris": 6313,
+"instances": 98
+},
+{
+"id": "ID_1b1b6f71-2aec-3538-bf69-736e7ebe4045",
+"kind": "altbau",
+"street": "Kreuzstraße",
+"number": "9",
+"y_lod2": -1.04,
+"y_ref": -0.9,
+"storeys": 3,
+"storey_h": 3.11,
+"gf_h": 4.54,
+"height": 11.4,
+"retail_walls": 0,
+"openings": 12,
+"pitched": true,
+"wall_mat": "stone",
+"tile": "bldg_-5_1",
+"tris": 1186,
+"instances": 64
+},
+{
+"id": "ID_613dd3fc-6f22-3427-9491-794b802aff73",
+"kind": "fachwerk",
+"street": "Kreuzkirchhof",
+"number": "9",
+"y_lod2": -0.13,
+"y_ref": -0.35,
+"storeys": 2,
+"storey_h": 2.7,
+"gf_h": 3.77,
+"height": 6.5,
+"retail_walls": 0,
+"openings": 31,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-5_1",
+"tris": 3483,
+"instances": 109
+},
+{
+"id": "ID_c48b3643-2c73-3bca-98d8-5b26f0175d9b",
+"kind": "altbau",
+"street": "Ballhofplatz",
+"number": "5",
+"y_lod2": -0.44,
+"y_ref": -0.68,
+"storeys": 2,
+"storey_h": 3.31,
+"gf_h": 4.58,
+"height": 8.5,
+"retail_walls": 0,
+"openings": 14,
+"pitched": true,
+"wall_mat": "brick",
+"tile": "bldg_-4_2",
+"tris": 1358,
+"instances": 70
+},
+{
+"id": "ID_ab2cb6d9-5519-3d6c-99e1-46a09ec8cdc7",
+"kind": "altbau",
+"street": "Kreuzstraße",
+"number": "3",
+"y_lod2": -0.65,
+"y_ref": -0.89,
+"storeys": 3,
+"storey_h": 3.12,
+"gf_h": 4.07,
+"height": 10.9,
+"retail_walls": 0,
+"openings": 19,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-5_1",
+"tris": 2427,
+"instances": 92
+},
+{
+"id": "ID_e6a82c2d-19e5-3e54-9d73-081a8a56e836",
+"kind": "altbau",
+"street": "Knochenhauerstraße",
+"number": "34",
+"y_lod2": -0.16,
+"y_ref": -0.37,
+"storeys": 4,
+"storey_h": 3.52,
+"gf_h": 4.07,
+"height": 15.2,
+"retail_walls": 1,
+"openings": 21,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n696846378",
+"name": "Old Town Pub",
+"kind": "cafe",
+"p": [
+-352.03,
+-0.42,
+226.99
+],
+"n": [
+0.834,
+-0.552
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_2",
+"tris": 3051,
+"instances": 97
+},
+{
+"id": "ID_c494dba7-3b4a-3a44-9e3d-f038d58e0852",
+"kind": "altbau",
+"street": "Holzmarkt",
+"number": "5",
+"y_lod2": -1.3,
+"y_ref": -1.5,
+"storeys": 5,
+"storey_h": 2.82,
+"gf_h": 3.2,
+"height": 15.1,
+"retail_walls": 2,
+"openings": 44,
+"pitched": true,
+"wall_mat": "stone",
+"tile": "bldg_-5_3",
+"tris": 4787,
+"instances": 195
+},
+{
+"id": "ID_e161a205-96bc-3735-b611-2dfe9109ad77",
+"kind": "fachwerk",
+"street": "Burgstraße",
+"number": "15",
+"y_lod2": -0.43,
+"y_ref": -0.63,
+"storeys": 3,
+"storey_h": 2.95,
+"gf_h": 3.49,
+"height": 10.0,
+"retail_walls": 0,
+"openings": 45,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-5_1",
+"tris": 7688,
+"instances": 159
+},
+{
+"id": "ID_9249b16b-732a-302e-a508-f7ec9e8c11d2",
+"kind": "fachwerk",
+"street": "Burgstraße",
+"number": "13",
+"y_lod2": -0.33,
+"y_ref": -0.55,
+"storeys": 3,
+"storey_h": 2.75,
+"gf_h": 3.83,
+"height": 9.9,
+"retail_walls": 1,
+"openings": 54,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-5_1",
+"tris": 6456,
+"instances": 165
+},
+{
+"id": "ID_a3f7a90c-8fc8-3183-932e-7059021212e4",
+"kind": "fachwerk",
+"street": "Burgstraße",
+"number": "19",
+"y_lod2": -0.52,
+"y_ref": -0.72,
+"storeys": 3,
+"storey_h": 3.05,
+"gf_h": 3.4,
+"height": 10.1,
+"retail_walls": 0,
+"openings": 45,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-5_1",
+"tris": 6351,
+"instances": 157
+},
+{
+"id": "ID_170762c9-4cb1-34c0-b171-e7067f3bb0d4",
+"kind": "altbau",
+"street": "Knochenhauerstraße",
+"number": "36",
+"y_lod2": -0.07,
+"y_ref": -0.32,
+"storeys": 4,
+"storey_h": 2.97,
+"gf_h": 3.2,
+"height": 12.7,
+"retail_walls": 2,
+"openings": 45,
+"pitched": true,
+"wall_mat": "brick",
+"shops": [
+{
+"id": "osm-n322834673",
+"name": "Enchilada",
+"kind": "cafe",
+"p": [
+-343.68,
+-0.37,
+242.54
+],
+"n": [
+0.877,
+-0.481
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_2",
+"tris": 3497,
+"instances": 194
+},
+{
+"id": "ID_4f9f50d0-710a-3c9d-a78e-6218a4c0f243",
+"kind": "fachwerk",
+"street": "Kramerstraße",
+"number": "6",
+"y_lod2": -0.31,
+"y_ref": -0.51,
+"storeys": 4,
+"storey_h": 3.52,
+"gf_h": 3.72,
+"height": 14.9,
+"retail_walls": 3,
+"openings": 62,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n5055947677",
+"name": "An Nam",
+"kind": "cafe",
+"p": [
+-352.19,
+-0.56,
+296.68
+],
+"n": [
+0.055,
+0.998
+],
+"sign": "fascia_panel"
+},
+{
+"id": "osm-n5055919149",
+"name": "Pils-Stube",
+"kind": "cafe",
+"p": [
+-359.64,
+-0.56,
+298.37
+],
+"n": [
+0.09,
+0.996
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_2",
+"tris": 17806,
+"instances": 193
+},
+{
+"id": "ID_e70d5bb7-a2a8-3169-b9b9-f0ddb4d442a5",
+"kind": "fachwerk",
+"street": "Burgstraße",
+"number": "21",
+"y_lod2": -0.55,
+"y_ref": -0.75,
+"storeys": 3,
+"storey_h": 2.86,
+"gf_h": 3.83,
+"height": 10.1,
+"retail_walls": 0,
+"openings": 60,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-5_1",
+"tris": 8114,
+"instances": 190
+},
+{
+"id": "ID_ad4d90bd-35e7-3610-b9d5-6b9fdbe561ef",
+"kind": "nachkrieg",
+"street": "Burgstraße",
+"number": "17",
+"y_lod2": -0.42,
+"y_ref": -0.62,
+"storeys": 3,
+"storey_h": 2.87,
+"gf_h": 3.66,
+"height": 10.0,
+"retail_walls": 0,
+"openings": 24,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-5_1",
+"tris": 2188,
+"instances": 117
+},
+{
+"id": "ID_d5a59ecb-edad-3a71-bf9e-13112965b2d4",
+"kind": "altbau",
+"street": "Schuhstraße",
+"number": "7",
+"y_lod2": 0.15,
+"y_ref": -0.05,
+"storeys": 4,
+"storey_h": 3.06,
+"gf_h": 4.14,
+"height": 13.9,
+"retail_walls": 1,
+"openings": 16,
+"pitched": true,
+"wall_mat": "plaster",
+"tile": "bldg_-4_2",
+"tris": 2899,
+"instances": 74
+},
+{
+"id": "ID_1493499b-9e45-3968-bcce-1c0fa07ff9e4",
+"kind": "altbau",
+"street": "Kramerstraße",
+"number": "8",
+"y_lod2": -0.44,
+"y_ref": -0.64,
+"storeys": 4,
+"storey_h": 3.08,
+"gf_h": 4.29,
+"height": 14.1,
+"retail_walls": 1,
+"openings": 19,
+"pitched": true,
+"wall_mat": "plaster",
+"shops": [
+{
+"id": "osm-n5055919148",
+"name": "Kramer Herrenausstatter",
+"kind": "fashion",
+"p": [
+-376.21,
+-0.69,
+303.9
+],
+"n": [
+0.265,
+0.964
+],
+"sign": "channel_letters"
+},
+{
+"id": "osm-n6720664034",
+"name": "Bab al Yemen",
+"kind": "cafe",
+"p": [
+-369.95,
+-0.69,
+302.18
+],
+"n": [
+0.265,
+0.964
+],
+"sign": "fascia_panel"
+}
+],
+"tile": "bldg_-4_2",
+"tris": 5239,
+"instances": 84
 }
 ]

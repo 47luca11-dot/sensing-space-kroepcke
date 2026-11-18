@@ -10,6 +10,7 @@ import { Hud } from './js/hud.js';
 import { Scan, scanUniforms } from './js/scan.js';
 import { Dust, Sfx } from './js/fx.js';
 import { loadScans } from './js/scans.js';
+import { PointCloud, makeOccluderMaterial, PC, SCAN_HOLD } from './js/pointcloud.js';
 
 const $ = (id) => document.getElementById(id);
 const params = new URLSearchParams(location.search);
@@ -26,7 +27,11 @@ renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFShadowMap;
 renderer.autoClear = false;
 const FOG = new THREE.Color(0xbfc6cc);
-renderer.setClearColor(FOG, 1);
+// Look: Stadt als Punktwolke in schwarzem Raum (?mesh = alte Mesh-Ansicht; Taste P schaltet um)
+let POINTS = !params.has('mesh');
+let hudNote = '';
+const VOID = new THREE.Color(0x030405);
+renderer.setClearColor(POINTS ? VOID : FOG, 1);
 
 const scene = new THREE.Scene();
 scene.fog = new THREE.FogExp2(FOG, 0.0032);
@@ -87,6 +92,9 @@ const world = new World(scene, renderer, camera);
 const input = new Input(canvas);
 const hud = new Hud();
 const scan = new Scan();
+const pc = new PointCloud(scene, renderer, camera);
+const occMat = makeOccluderMaterial();
+let OCCLUDE = !params.has('noocc');
 const dust = new Dust(scene);
 const sfx = new Sfx();
 let player = null, carlos = null, rig = null;
@@ -108,7 +116,14 @@ async function boot() {
   try {
     const carlosP = loadCarlos(scene);
     setStatus('Lade Stadt …');
-    await world.load(setStatus, { simplify: LOW_POWER, base: params.get('city') || 'assets/city/' });
+    // Punktwolke zuerst prüfen: fehlt sie (z. B. frischer Klon ohne erzeugte Kacheln), Mesh-Ansicht mit allen Sicht-Meshes laden
+    if (POINTS) {
+      try { setStatus('Lade Punktwolke …'); await pc.init(); }
+      catch (e) { console.warn(e); POINTS = false; hudNote = 'Punktwolke fehlt – Mesh-Ansicht (erzeugen: pipeline/pointcloud/run_headless.py)'; }
+    }
+    await world.load(setStatus, { simplify: LOW_POWER, base: params.get('city') || 'assets/city/', collisionOnly: POINTS });
+    if (POINTS) pc.setOccluders(world.colliders, occMat);
+    applyLook();
     world.updateStreaming(new THREE.Vector3(...(world.meta.spawn || [0, 0, 0])));
     const scansP = loadScans(scene, params.get('city') || 'assets/city/');   // eigene Splat-Scans aus dem Manifest
     setStatus('Lade Carlos …');
@@ -129,6 +144,7 @@ async function boot() {
     $('source').textContent = `${srcText} · ${Math.round(world.triCount / 1000)}k Kollisionsdreiecke · BVH ${Math.round(world.bvhMs)} ms` + (world.hf ? ' · Höhenraster' : '');
     $('attrib').textContent = world.attribution || '';
     $('go').disabled = false;
+    if (hudNote) setStatus(hudNote);
     if (params.has('debug')) hud.toggleDebug();
     if (params.has('autostart')) startTest();
   } catch (e) {
@@ -145,6 +161,62 @@ function respawn() {
   player.spawn(s[0], s[1] ?? 0, s[2], yaw);
   rig.snap(player.pos, player.yaw);
   carlos.setTransform(player.pos.x, player.visualY, player.pos.z, player.yaw);
+}
+
+// ---------------- Look umschalten ----------------
+function applyLook() {
+  renderer.setClearColor(POINTS ? VOID : FOG, 1);
+  sky.visible = !POINTS;
+  pc.group.visible = POINTS;
+  sun.castShadow = !POINTS;
+  dust.points.layers.set(0);
+}
+addEventListener('keydown', (e) => {
+  if (e.repeat || !state.ready) return;
+  if (e.code === 'KeyP') toggleMeshView();
+  if (e.code === 'KeyO' && POINTS) { OCCLUDE = !OCCLUDE; hud.toast(OCCLUDE ? 'VERDECKUNG AN' : 'VERDECKUNG AUS (DURCHSICHT)', 1.6); }
+  if (e.code === 'KeyB' && POINTS) { pc.u.uCull.value = 1 - pc.u.uCull.value; hud.toast(pc.u.uCull.value ? 'RÜCKSEITEN AUS' : 'RÜCKSEITEN AN', 1.6); }
+});
+
+// Mesh-Ansicht braucht die Sicht-Meshes, die im Punktmodus nicht geladen werden -> Seite mit/ohne ?mesh neu laden
+function toggleMeshView() {
+  const p = new URLSearchParams(location.search);
+  if (p.has('mesh')) p.delete('mesh'); else p.set('mesh', '1');
+  location.search = p.toString();
+}
+
+// ---------------- Escape-Menü (Optionen) ----------------
+const OPT_KEY = 'hannover.optionen';
+const OPTS = [
+  { id: 'opt-view', label: 'Sichtweite', min: 6, max: 20, step: 0.5, unit: ' m', def: PC.end,
+    apply: (v) => { pc.u.uEnd.value = v; pc.u.uFar.value = pc.u.uNear.value = v * 0.65; } },
+  { id: 'opt-dup', label: 'Punktdichte (Verdichtung)', min: 1, max: 4, step: 1, unit: '×', def: PC.dup, apply: (v) => { PC.dup = v; } },
+  { id: 'opt-size', label: 'Punktgröße', min: 1, max: 4, step: 0.5, unit: ' px', def: PC.maxPx, apply: (v) => { pc.u.uMaxPx.value = v; } },
+  { id: 'opt-expo', label: 'Belichtung', min: 0.8, max: 2.8, step: 0.1, unit: '', def: 1.7, apply: (v) => { pc.u.uExpo.value = v; } },
+  { id: 'opt-res', label: 'Auflösung', min: 50, max: 100, step: 5, unit: ' %', def: 100,
+    apply: (v) => { maxPR = Math.min(devicePixelRatio || 1, 1.5) * v / 100; layout(); } },
+];
+function loadOpts() { try { return JSON.parse(localStorage.getItem(OPT_KEY) || '{}'); } catch { return {}; } }
+function saveOpts(o) { try { localStorage.setItem(OPT_KEY, JSON.stringify(o)); } catch { /* ohne Speicher weiter */ } }
+function setupMenu() {
+  const box = $('opts'), saved = loadOpts();
+  for (const o of OPTS) {
+    const v = saved[o.id] ?? o.def;
+    const row = document.createElement('label'); row.className = 'opt';
+    const name = document.createElement('span'); name.textContent = o.label;
+    const inp = document.createElement('input'); Object.assign(inp, { type: 'range', id: o.id, min: o.min, max: o.max, step: o.step, value: v });
+    const out = document.createElement('output'); out.textContent = v + o.unit;
+    row.append(name, inp, out); box.appendChild(row);
+    inp.addEventListener('input', () => { const x = +inp.value; out.textContent = x + o.unit; o.apply(x); const s = loadOpts(); s[o.id] = x; saveOpts(s); });
+    o.apply(+v);
+  }
+  const hintBox = $('opt-hint');
+  hintBox.checked = !$('hint').classList.contains('off');
+  hintBox.addEventListener('change', () => { if (hintBox.checked === $('hint').classList.contains('off')) hud.toggleHint(); });
+  $('opt-mesh').textContent = params.has('mesh') ? 'Punktwolken-Ansicht (lädt neu)' : 'Mesh-Ansicht (lädt neu)';
+  $('opt-mesh').addEventListener('click', toggleMeshView);
+  $('opt-reset').addEventListener('click', () => { saveOpts({}); for (const o of OPTS) { const i = $(o.id); i.value = o.def; i.dispatchEvent(new Event('input')); } });
+  $('to-start').addEventListener('click', () => { location.href = 'startbildschirm/'; });
 }
 
 // ---------------- Start / Pause ----------------
@@ -166,7 +238,8 @@ addEventListener('keydown', (e) => {
   if (e.code === 'Escape' && input.free && state.playing && !state.test) { input.free = false; input.keys.clear(); $('pause').classList.remove('off'); }
 });
 $('go').addEventListener('click', enter);
-$('pause').addEventListener('click', enter);
+$('resume').addEventListener('click', enter);
+setupMenu();
 document.addEventListener('pointerlockchange', () => {
   const locked = document.pointerLockElement === canvas;
   if (locked) { input.free = false; state.playing = true; $('start').classList.add('off'); $('pause').classList.add('off'); hud.show(true); }
@@ -218,7 +291,10 @@ function tick(dt) {
   player.events.length = 0;
   if (!player.admin && inp.run && player.exhausted && !wasStumbling && T - (tick.lastExh || -9) > 4) { hud.toast('ERSCHÖPFT', 1.4); tick.lastExh = T; }
 
-  if (inp.scan && !scan.active) { scan.trigger(player.pos); hud.scanFlash(); sfx.scan(); }
+  if (inp.scan) {
+    if (POINTS && pc.ready) { if (!pc.scanning || pc.scanT > 1.5) { pc.scan(_v.set(player.pos.x, player.pos.y + 1.55, player.pos.z)); hud.scanFlash(); sfx.scan(); hud.toast('SCAN · ' + SCAN_HOLD + ' S IM GEDÄCHTNIS', 1.6); } }
+    else if (!scan.active) { scan.trigger(player.pos); hud.scanFlash(); sfx.scan(); }
+  }
 
   carlos.setTransform(player.pos.x, player.visualY, player.pos.z, player.yaw);
   carlos.update(dt, {
@@ -228,6 +304,7 @@ function tick(dt) {
   });
   rig.update(dt, look, player);
   scan.update(dt, camera);
+  if (POINTS) pc.update(dt, player.pos, camera, renderer);
   dust.update(dt, renderer, camera);
   sfx.setWind(player.actualSpeed);
   followShadow();
@@ -261,7 +338,22 @@ function followShadow() {
 // Schattenkarte nur jedes zweite Bild neu (statische Stadt; nur Carlos' Schatten hinkt max. ein Bild nach)
 let frameNo = 0;
 renderer.shadowMap.autoUpdate = false;
+function renderPoints() {
+  renderer.info.reset();
+  renderer.clear();
+  camera.updateMatrixWorld();
+  // 1) unsichtbare Stadt-Meshes nur als Tiefe (leicht nach hinten versetzt) -> Punkte hinter Wänden verdeckt
+  if (OCCLUDE) renderer.render(pc.occScene, camera);
+  // 2) Punktwolke
+  camera.layers.set(3); pc.render(renderer, scene, camera);
+  // 3) Figur (Füll-Mesh / Mesh-Figur), Staub – ohne Stadt-Meshes
+  world.root.visible = false; camera.layers.set(0); renderer.render(scene, camera); world.root.visible = true;
+  // 4) Splats
+  camera.layers.set(1); renderer.render(scene, camera);
+  camera.layers.set(0);
+}
 function render() {
+  if (POINTS) return renderPoints();
   if ((frameNo++ & 1) === 0 || params.has('shadow60')) renderer.shadowMap.needsUpdate = true;
   renderer.info.reset();
   renderer.clear();
@@ -287,6 +379,7 @@ function debugText() {
   const i = renderer.info, p = player;
   return `${perf.fps.toFixed(0)} fps  ${perf.ms.toFixed(1)} ms  q ${quality.toFixed(2)} pr ${renderer.getPixelRatio().toFixed(2)}\n`
     + `draw ${i.render.calls}  tris ${(i.render.triangles / 1000).toFixed(0)}k  splats ${carlos.numSplats}\n`
+    + (POINTS ? `punkte ${(pc.drawnPts / 1e6).toFixed(2)}M gez. / ${(pc.loadedPts / 1e6).toFixed(1)}M geladen  occ ${OCCLUDE ? 'an' : 'aus'}\n` : '')
     + `pos ${p.pos.x.toFixed(1)} ${p.pos.y.toFixed(2)} ${p.pos.z.toFixed(1)}  v ${p.actualSpeed.toFixed(2)}  ${p.mode}\n`
     + `bal ${p.bal.x.toFixed(2)} ${p.bal.y.toFixed(2)}  grade ${p.grade.toFixed(2)}  rough ${p.rough.toFixed(3)}`;
 }
@@ -361,5 +454,6 @@ window.__game = {
   setQuality(q) { quality = q; layout(); },
   perf: () => ({ fps: perf.fps, ms: perf.ms, quality, calls: renderer.info.render.calls, tris: renderer.info.render.triangles }),
   get player() { return player; }, get carlos() { return carlos; }, get rig() { return rig; },
-  world, scene, camera, renderer, spark, P, fillerPush, scanUniforms, hud, input,
+  world, scene, camera, renderer, spark, P, fillerPush, scanUniforms, hud, input, pc, PC,
+  setLook(p) { POINTS = !!p; applyLook(); }, setOcclude(o) { OCCLUDE = !!o; },
 };

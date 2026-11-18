@@ -2917,7 +2917,7 @@
    "bounds": {
     "min": [
      -414.93,
-     -1.2,
+     -1.22,
      183.58
     ],
     "max": [
@@ -2926,15 +2926,15 @@
      307.25
     ]
    },
-   "triangles": 107475,
-   "triangles_shell": 27115,
-   "triangles_detail": 80360,
-   "instances": 3377,
-   "instanced_triangles": 576486,
-   "prototype_triangles": 41290,
-   "bytes": 1000868,
-   "windows_bytes": 873648,
-   "raw_bytes": 3894080,
+   "triangles": 110187,
+   "triangles_shell": 27683,
+   "triangles_detail": 82504,
+   "instances": 3409,
+   "instanced_triangles": 585328,
+   "prototype_triangles": 44920,
+   "bytes": 1022796,
+   "windows_bytes": 939192,
+   "raw_bytes": 4064972,
    "buildings": [
     "ID_03293bd2-37dd-37b6-8671-e2093c13152c",
     "ID_414cac31-7648-3bc1-8fdd-57c4357de91a",
@@ -3061,24 +3061,24 @@
    "bounds": {
     "min": [
      -484.97,
-     -7.56,
+     -7.58,
      387.79
     ],
     "max": [
      -314.46,
-     21.2,
+     21.44,
      499.58
     ]
    },
-   "triangles": 48635,
-   "triangles_shell": 33929,
-   "triangles_detail": 14706,
-   "instances": 6728,
-   "instanced_triangles": 752616,
-   "prototype_triangles": 10406,
-   "bytes": 621656,
-   "windows_bytes": 283716,
-   "raw_bytes": 2046664,
+   "triangles": 33257,
+   "triangles_shell": 19385,
+   "triangles_detail": 13872,
+   "instances": 3472,
+   "instanced_triangles": 393984,
+   "prototype_triangles": 12606,
+   "bytes": 422836,
+   "windows_bytes": 281212,
+   "raw_bytes": 1475820,
    "buildings": [
     "ID_b1e08153-ebb6-3af8-8652-e6862bb48eee"
    ]
@@ -3450,7 +3450,7 @@
    "bounds": {
     "min": [
      -506.11,
-     -1.75,
+     -1.77,
      95.82
     ],
     "max": [
@@ -3459,15 +3459,15 @@
      208.41
     ]
    },
-   "triangles": 109638,
-   "triangles_shell": 26384,
-   "triangles_detail": 83254,
-   "instances": 2791,
-   "instanced_triangles": 507268,
-   "prototype_triangles": 25634,
-   "bytes": 882588,
-   "windows_bytes": 521572,
-   "raw_bytes": 3183724,
+   "triangles": 106300,
+   "triangles_shell": 26113,
+   "triangles_detail": 80187,
+   "instances": 2759,
+   "instanced_triangles": 495280,
+   "prototype_triangles": 25850,
+   "bytes": 885652,
+   "windows_bytes": 537324,
+   "raw_bytes": 3187020,
    "buildings": [
     "ID_7bf3782c-bd5b-3e10-8b2c-c872158c3382",
     "ID_9850fd33-58c8-3cc6-bffc-a396527794b2",
@@ -3515,15 +3515,15 @@
      309.63
     ]
    },
-   "triangles": 62400,
-   "triangles_shell": 20195,
-   "triangles_detail": 42205,
-   "instances": 2594,
-   "instanced_triangles": 308316,
-   "prototype_triangles": 20898,
-   "bytes": 573624,
-   "windows_bytes": 463928,
-   "raw_bytes": 2123960,
+   "triangles": 71398,
+   "triangles_shell": 21687,
+   "triangles_detail": 49711,
+   "instances": 2697,
+   "instanced_triangles": 336738,
+   "prototype_triangles": 25496,
+   "bytes": 633032,
+   "windows_bytes": 540444,
+   "raw_bytes": 2426444,
    "buildings": [
     "ID_2bee1064-1ed9-3467-a974-15ef0cc8cb80",
     "ID_6d735a28-51ad-3678-9724-4ca7451390d7",
@@ -3554,24 +3554,24 @@
    "bounds": {
     "min": [
      -501.88,
-     -2.89,
-     293.7
+     -2.91,
+     293.69
     ],
     "max": [
      -394.55,
-     24.79,
+     24.18,
      379.3
     ]
    },
-   "triangles": 98017,
-   "triangles_shell": 20490,
-   "triangles_detail": 77527,
-   "instances": 2451,
-   "instanced_triangles": 409540,
-   "prototype_triangles": 25810,
-   "bytes": 762316,
-   "windows_bytes": 557200,
-   "raw_bytes": 2890572,
+   "triangles": 75040,
+   "triangles_shell": 17891,
+   "triangles_detail": 57149,
+   "instances": 2241,
+   "instanced_triangles": 361694,
+   "prototype_triangles": 26612,
+   "bytes": 659296,
+   "windows_bytes": 571620,
+   "raw_bytes": 2524256,
    "buildings": [
     "ID_e9a96a50-38ca-3afb-9a46-88d720f0fa66",
     "ID_bb48c6bb-6d1f-3a74-974b-a7e2863d9820",
@@ -3586,7 +3586,6 @@
     "ID_4f69486f-cda3-355a-bee3-e29ac0847164",
     "ID_7f103f76-2cb1-36a5-b1f5-e39a5d4db35d",
     "ID_b5973fae-14ec-3b9f-ab79-ef8c4bce13de",
-    "ID_8399e9b2-dacc-3280-9267-b6030e0e7c61",
     "ID_edb66e78-4a7d-394b-9c1f-4faa2b931a11",
     "ID_f8b19745-b591-38a0-9be3-5ae7a95d2726",
     "ID_5220330c-71e7-3f91-9b8b-fd0f2f6f82d6",
@@ -4043,28 +4042,28 @@
     3
    ],
    "file": "bldg_-6_3.glb",
-   "windows": "bldg_-6_3_win.glb",
+   "windows": null,
    "bounds": {
     "min": [
      -514.95,
      -3.86,
-     297.74
+     297.8
     ],
     "max": [
-     -505.15,
+     -505.26,
      25.3,
-     308.79
+     308.67
     ]
    },
-   "triangles": 2910,
-   "triangles_shell": 920,
-   "triangles_detail": 1990,
-   "instances": 131,
-   "instanced_triangles": 14160,
-   "prototype_triangles": 1124,
-   "bytes": 44720,
-   "windows_bytes": 39508,
-   "raw_bytes": 129776,
+   "triangles": 2708,
+   "triangles_shell": 460,
+   "triangles_detail": 2248,
+   "instances": 0,
+   "instanced_triangles": 0,
+   "prototype_triangles": 0,
+   "bytes": 45228,
+   "windows_bytes": 0,
+   "raw_bytes": 86592,
    "buildings": [
     "ID_5051cc6a-c86e-3179-b258-2228f15d551b"
    ]
@@ -9191,36 +9190,38 @@
  ],
  "collision": {
   "file": "collision_buildings.glb",
-  "triangles": 185933,
-  "bytes": 3831688
+  "triangles": 185676,
+  "bytes": 3826348
  },
  "totals": {
-  "triangles": 6267817,
-  "triangles_shell": 2929034,
-  "triangles_detail": 3338783,
-  "instances": 504568,
-  "instanced_triangles": 56039364,
-  "prototype_triangles": 3399052,
-  "bytes": 77107672,
-  "windows_bytes": 74146104,
-  "raw_bytes": 296471140,
-  "collision_triangles": 185933,
-  "collision_bytes": 3831688
+  "triangles": 6237632,
+  "triangles_shell": 2913220,
+  "triangles_detail": 3324412,
+  "instances": 501074,
+  "instanced_triangles": 55644002,
+  "prototype_triangles": 3409374,
+  "bytes": 76890740,
+  "windows_bytes": 74276324,
+  "raw_bytes": 295967468,
+  "collision_triangles": 185676,
+  "collision_bytes": 3826348
  },
  "styles": {
   "shed": 335,
-  "nachkrieg": 584,
+  "nachkrieg": 582,
   "modern": 251,
-  "altbau": 561,
+  "altbau": 563,
   "gothic": 8,
   "canopy": 26,
-  "fachwerk": 49,
+  "fachwerk": 47,
   "curtain": 24,
   "parking": 19,
-  "kaufhaus": 16
+  "kaufhaus": 16,
+  "tower": 1
  },
- "buildings": 1873,
+ "buildings": 1872,
  "replaced_by_landmarks": {
+  "ID_8399e9b2-dacc-3280-9267-b6030e0e7c61": "gottfried",
   "ID_6388af31-4867-3e8b-b3dd-1f30ff2b3d7c": "anzeiger",
   "ID_5ea871fc-25a3-3730-b301-1be715d487a0": "anzeiger",
   "ID_0a25725c-24e1-3239-8d49-0b0bb20eb212": "kroepcke_center",
@@ -9228,7 +9229,7 @@
   "ID_f11763d1-f306-3636-91b8-8805e57702b9": "cafe_kroepcke",
   "ID_dedae90c-48f4-3b9e-9176-f04541ffbcb2": "altes_rathaus"
  },
- "shops_placed": 534,
+ "shops_placed": 533,
  "shops_placed_ids": [
   "man-kaufhof_seilwinder",
   "osm-n1003774463",
@@ -9712,7 +9713,6 @@
   "osm-n8774019233",
   "osm-n8939588097",
   "osm-n8939589067",
-  "osm-n8939589772",
   "osm-n8939607929",
   "osm-n902582891",
   "osm-n9346858817",

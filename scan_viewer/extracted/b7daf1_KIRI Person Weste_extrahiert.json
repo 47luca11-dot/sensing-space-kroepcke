@@ -1,0 +1,77 @@
+{
+ "total": 1331755,
+ "selected": 508449,
+ "clusters": 19,
+ "taken": 1,
+ "center": [
+  0.0,
+  -0.9,
+  0.0
+ ],
+ "up": [
+  0.0,
+  -1.0,
+  0.0
+ ],
+ "plane_d": 0.0,
+ "ground_inliers": 32500,
+ "eps": 0.0022,
+ "scale": 1.0,
+ "height": 1.799706220626831,
+ "params": {
+  "radius": null,
+  "group": false,
+  "min_opacity": null,
+  "ground_margin": null,
+  "keep_soft": null
+ },
+ "bbox_min": [
+  -0.3260486001789581,
+  -1.7996501672625649,
+  -0.19799111348419823
+ ],
+ "bbox_max": [
+  0.319591167358265,
+  0.0,
+  0.22260124619521549
+ ],
+ "extracted_raw": 508449,
+ "mesh": {
+  "voxel": null,
+  "faces": 439704,
+  "vertices": 219854,
+  "boundary_edges": 0,
+  "components": 1,
+  "watertight": true,
+  "removed_splats": 1331755,
+  "kept_splats": 508449,
+  "giant_or_needle": 0,
+  "nonmanifold_edges": 0,
+  "genus": 0,
+  "glb_vertices": 232458,
+  "despiked": 0
+ },
+ "cleaned": true,
+ "source": {
+  "type": "mesh",
+  "app": "KIRI Engine",
+  "file": "3DModel.obj",
+  "faces_total": 195138,
+  "faces_subject": 100861,
+  "components_above_ground": 19,
+  "scale_m_per_unit": 3.561361890939698,
+  "cut_height_m": 0.025094584861830502,
+  "ground_tilt_deg": 4.57978757181273,
+  "texture": "3DModel.jpg",
+  "glb": true,
+  "units": "m",
+  "leg_bridge": {
+   "h_sep": 0.1764000000000001,
+   "h_crotch": 0.7740000000000007,
+   "gap_m": 0.13937751948833466,
+   "removed_m3": 0.0024310051161632318,
+   "recolored_faces": 536
+  }
+ },
+ "seconds": 28.59
+}

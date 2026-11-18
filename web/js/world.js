@@ -74,8 +74,9 @@ export class World {
     return (this._loader = l);
   }
 
-  async load(status = () => {}, { simplify = false, base = 'assets/city/' } = {}) {
+  async load(status = () => {}, { simplify = false, base = 'assets/city/', collisionOnly = false } = {}) {
     this.simplify = simplify; this.base = base;
+    this.collisionOnly = collisionOnly;      // Punktwolken-Modus: Meshes werden nie gezeichnet -> nur Kollision laden
     const MAN = base + 'manifest.json', CITY = base + 'hannover.glb', COLL = base + 'collision.glb', META = base + 'city_meta.json';
     const ex = await exists([MAN, CITY, COLL, META]);
     const has = (f) => (ex ? !!ex[f] : true);
@@ -120,7 +121,7 @@ export class World {
     const files = (man.files || []).map((f) => {
       const b = f.bounds && f.bounds.length === 6 ? new THREE.Box3(new THREE.Vector3(f.bounds[0], f.bounds[1], f.bounds[2]), new THREE.Vector3(f.bounds[3], f.bounds[4], f.bounds[5])) : null;
       return { ...f, kind: f.kind || 'visual', box: b, dist: b ? boxDistXZ(b, sp[0], sp[2]) : 0 };
-    }).sort((a, b) => a.dist - b.dist);
+    }).sort((a, b) => a.dist - b.dist).filter((f) => !this.collisionOnly || f.kind !== 'visual');
     const anyCol = files.some((f) => f.kind === 'collision' || f.kind === 'both');
     this.visualCollision = !anyCol;            // keine Kollisionsdateien -> sichtbare Dateien dienen als Kollision
     const essential = files.filter((f) => f.kind !== 'visual' || f.dist < ESSENTIAL_DIST || (!anyCol && f.dist < ESSENTIAL_DIST + 140));
@@ -151,7 +152,7 @@ export class World {
     const gltf = await this.loader().loadAsync(this.base + f.url);
     const root = gltf.scene; root.name = f.url;
     root.updateMatrixWorld(true);
-    const vis = f.kind !== 'collision', col = f.kind !== 'visual' || this.visualCollision;
+    const vis = f.kind !== 'collision' && !this.collisionOnly, col = f.kind !== 'visual' || this.visualCollision;
     if (col) {
       const t0 = performance.now();
       // instanzierte Meshes nur aus reinen Kollisionsdateien (sonst z. B. Bäume/Poller als Hindernisse)

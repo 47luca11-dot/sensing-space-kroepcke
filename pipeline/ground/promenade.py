@@ -2,8 +2,9 @@
 Offene Trog-Abschnitte (Oeffnungen aus dem DGM, ground_cache/promenade.json) mit Betonfertigteil-Waenden, Bruestung + Stahlrohr-
 gelaender an den Laengsseiten, Glasbruestung an den Bruecken; Bruecken (Strassenquerungen) mit Stirnblende, Untersicht und
 Leuchten; ueberdeckte Abschnitte mit Lamellendecke + Lichtbaendern und Rundstuetzen; Ladenfronten auf Ebene -1 mit ECHTEN Namen
-(data/shops.json, Ebene -1) inkl. Schaufenster mit Auslagen, Glasvordaecher in den offenen Abschnitten; Treppen (OSM: 29 Stufen
-Kroepcke-Ende, 4 Brueckentreppen mit Stahlwangen), Nordende mit Treppe + Rolltreppe; Lichtmasten mit Bannern, Baenke, Pflanzkuebel,
+(data/shops.json, Ebene -1) inkl. Schaufenster mit Auslagen, Glasvordaecher in den offenen Abschnitten; Treppen: 8 freistehende
+Stahltreppen parallel zur Promenade etwa in Trogmitte (29 Stufen Kroepcke-Ende, je 2 Laeufe an den 3 Bruecken, Lichthof-Treppe mit
+Podest vor dem Hauptbahnhof; Korrektur 18.11.2026); Lichtmasten mit Bannern, Baenke, Pflanzkuebel,
 Wegweiser; Uebergang in die U-Bahn-Verteilerebene Kroepcke (Sueden) und Richtung Hauptbahnhof (Norden, geschlossene Glastueren).
 Ausgabe: data/ground_cache/promenade.pkl"""
 import json, time, pickle, math
@@ -85,32 +86,64 @@ for sct in secs:
         sct['hcov'] = float(np.clip(min(hh) - 0.04, 2.7, SF_H))
 log('sections', [(s_['name'], round(s_['s0'], 1), round(s_['s1'], 1), round(s_['t0'], 1), round(s_['t1'], 1)) for s_ in secs])
 
-# ---------------------------------------------------------------- Treppen / Rolltreppen (lokale Rahmen)
-STAIRS = []      # dicts: frame, g, y_top, y_floor, t0,t1 (lokal), side ('E'/'W'), s-Bereich global, top_s (global), glass side
-def add_stair(s_top, dir_sign, t_g0, t_g1, kind='stair', name=''):
-    """Treppe/Rolltreppe, oben bei s_top (Rim), absteigend in Richtung dir_sign*ax; t_g0..t_g1 globale Querlage"""
+# ---------------------------------------------------------------- Treppen (lokale Rahmen)
+# Stand 18.11.2026 (Korrektur Treppenlage): Alle Treppen zwischen Strassenebene und Ebene -1 sind FREISTEHENDE, gerade
+# Stahltreppen (offene Setzstufen, Stahlwangen, Glasbruestung beidseitig, Betonsockel am Fuss), PARALLEL zur Promenade und
+# etwa MITTIG im Trog, mit Gehweg auf beiden Seiten. An jeder der drei Bruecken (Strassenquerungen) kommt von Sueden und von
+# Norden je ein Lauf auf der Brueckenkante an; dazu die 29-Stufen-Treppe am Kroepcke-Ende (oestlich der Mitte, oben am
+# Suedrand) und die Treppe mit Zwischenpodest am Lichthof vor dem Hauptbahnhof (oben am Nordrand, Ernst-August-Platz).
+# Quellen: OSM-Treppen (Stufenzahlen, Laufrichtung, Laengslage; Querlage in OSM hier systematisch ~4.1 m nach Osten
+# verschoben, s. Bericht), Wikimedia-Commons-Fotos 2009-2026, LGLN-DOP20 (symmetrische Treppenschatten in Trogmitte).
+OSM_T_SHIFT = 4.15          # OSM-Querlage minus DGM-Troglage (Mittel aus 7 Treppen, Streuung 0.3 m)
+STAIRS = []      # dicts: f (lokaler Rahmen, s=0 am Rim, +s abwaerts), g, y_top, y_floor, t0,t1 (lokal), tg (global), s_lo/s_hi
+STR = 0.03       # Wangenstaerke
+def stair_geom2(n, tread=0.30, top_landing=0.35, n1=None, landing=0.0):
+    """Kennwerte wie kit.stair_geom, aber mit fester Stufenzahl (OSM step_count) und optionalem Zwischenpodest nach n1 Stufen"""
+    land = bool(n1) and landing > 0
+    s = [top_landing + (k - 1) * tread + ((landing - tread) if (land and k > n1) else 0.0) for k in range(1, n + 1)]
+    return {'type': 'stair', 'n': n, 'tread': tread, 'n1': n1 if land else n, 'landing': landing if land else 0.0, 's_riser': s, 's_end': s[-1]}
+def add_stair(s_top, dir_sign, t_c, width, n, name='', n1=None, landing=0.0, tread=0.30, src=''):
+    """Freistehende Treppe, oben bei s_top (Rim = Brueckenkante/Trogende), absteigend in Richtung dir_sign*ax;
+    t_c = globale Querlage der Laufmitte, width = Gesamtbreite inkl. Wangen, n = Stufenzahl (Steigungen)"""
     d = ax * dir_sign; f = Frame(fr.xz(s_top, 0.0), d)
-    # lokale t: right(d) = dir_sign * nr
-    tl = sorted([t_g0 * dir_sign, t_g1 * dir_sign])
-    tm = (t_g0 + t_g1) / 2
-    y_top = street(s_top - dir_sign * 0.05, tm)
-    D = y_top - yfl(s_top)
-    g = stair_geom(D, top_landing=0.35) if kind == 'stair' else esc_geom(D)
-    run = g['s_end'] if kind == 'stair' else g['s_end']
-    st = {'f': f, 'g': g, 'y_top': y_top, 'y_floor': y_top - D, 't0': tl[0], 't1': tl[1], 'kind': kind, 'dir': dir_sign, 's_top': s_top,
-          's_lo': min(s_top, s_top + dir_sign * (run + 0.6)), 's_hi': max(s_top, s_top + dir_sign * (run + 0.6)), 'tg': (min(t_g0, t_g1), max(t_g0, t_g1)), 'name': name}
+    t_g0, t_g1 = t_c - width / 2, t_c + width / 2
+    tl = sorted([t_g0 * dir_sign, t_g1 * dir_sign])            # lokale t: right(d) = dir_sign * nr
+    g = stair_geom2(n, tread=tread, n1=n1, landing=landing)
+    s_foot = s_top + dir_sign * g['s_end']
+    y_top = street(s_top - dir_sign * 0.05, t_c)
+    y_floor = yfl(s_foot); D = y_top - y_floor
+    g['rise'] = D / n
+    run = g['s_end'] + 0.6
+    st = {'f': f, 'g': g, 'y_top': y_top, 'y_floor': y_floor, 't0': tl[0], 't1': tl[1], 'kind': 'stair', 'dir': dir_sign, 's_top': s_top,
+          's_lo': min(s_top, s_top + dir_sign * run), 's_hi': max(s_top, s_top + dir_sign * run), 'tg': (t_g0, t_g1), 'name': name, 'src': src,
+          'width': width}
     STAIRS.append(st); return st
-# Kroepcke-Ende (OSM 31287201, 29 Stufen, Ostseite, abwaerts nach Norden)
-add_stair(ops[0]['s'][0], +1, ops[0]['t'][1] - 2.6, ops[0]['t'][1] - 0.02, name='sued_29')
-# Brueckentreppen (OSM 254129194/190/195/192): an der Ostwand hinauf zu den Bruecken
-add_stair(ops[1]['s'][1], -1, ops[1]['t'][1] - 1.9, ops[1]['t'][1] - 0.02, name='bruecke1_s')
-add_stair(ops[2]['s'][0], +1, ops[2]['t'][1] - 1.9, ops[2]['t'][1] - 0.02, name='bruecke1_n')
-add_stair(ops[2]['s'][1], -1, ops[2]['t'][1] - 1.9, ops[2]['t'][1] - 0.02, name='bruecke2_s')
-add_stair(ops[3]['s'][0], +1, ops[3]['t'][1] - 1.9, ops[3]['t'][1] - 0.02, name='bruecke2_n')
-# Nordende: Treppe (West) + Rolltreppe aufwaerts daneben
-add_stair(oN['s'][1], -1, oN['t'][0] + 0.02, oN['t'][0] + 2.62, name='nord_treppe')
-add_stair(oN['s'][1], -1, oN['t'][0] + 2.74, oN['t'][0] + 4.19, kind='esc', name='nord_rolltreppe')
-for st in STAIRS: log('stair', st['name'], st['kind'], 'D=%.2f' % (st['y_top'] - st['y_floor']), 's %.1f..%.1f' % (st['s_lo'], st['s_hi']), 't %.2f..%.2f' % st['tg'])
+def sec_named(nm): return next(sc for sc in secs if sc['name'] == nm)
+def tmid(sc): return (sc['t0'] + sc['t1']) / 2
+W_BR = 2.40      # Laufbreite Brueckentreppen (Foto-Schaetzung, ca. 2.3 m lichte Breite)
+# Kroepcke-Ende: OSM 31287201, 29 Stufen, oben am Suedrand, abwaerts nach Norden; oestlich der Trogmitte, frei stehend
+add_stair(ops[0]['s'][0], +1, 8.45 - OSM_T_SHIFT, 2.60, 29, name='kroepcke_29', src='OSM 31287201')
+# Bruecke 1 (s -66..-60): von Sueden 27 Stufen (OSM 409290611), von Norden 26 Stufen (OSM 436076598)
+B1, B2, B3 = sec_named('c01'), sec_named('c12'), sec_named('c23')
+add_stair(ops[0]['s'][1], -1, tmid(B1), W_BR, 27, name='bruecke1_sued', src='OSM 409290611')
+add_stair(ops[1]['s'][0], +1, tmid(B1), W_BR, 26, name='bruecke1_nord', src='OSM 436076598')
+# Bruecke 2 (s -17..-9): 25 Stufen (OSM 254129194) und 25 Stufen (OSM 254129190)
+add_stair(ops[1]['s'][1], -1, tmid(B2), W_BR, 25, name='bruecke2_sued', src='OSM 254129194')
+add_stair(ops[2]['s'][0], +1, tmid(B2), W_BR, 25, name='bruecke2_nord', src='OSM 254129190')
+# Bruecke 3 (s 34..41): 24 Stufen (OSM 254129195) und 25 Stufen (OSM 254129192)
+add_stair(ops[2]['s'][1], -1, tmid(B3), W_BR, 24, name='bruecke3_sued', src='OSM 254129195')
+add_stair(ops[3]['s'][0], +1, tmid(B3), W_BR, 25, name='bruecke3_nord', src='OSM 254129192')
+# Lichthof vor dem Hauptbahnhof: Treppe in Trogmitte, oben am Nordrand (Ernst-August-Platz), 12 Stufen + Podest 1.5 m + 15 Stufen,
+# Breite 1.6 m (OSM 394588388 / 394588385 / 31443543); keine Rolltreppe (bisheriges Modell: Treppe + Rolltreppe an der Westwand)
+# Querlage: OSM (korrigiert) t ~ +0.65 = Trogmitte; das Modell hat hier nur EINEN Durchgang nach Norden (Abschnitt 'nord',
+# t ab NORTH_PASS_T0) -> Lauf so weit nach Westen, dass er nicht vor dem Durchgang endet (Fotos 2012/2016: Durchgaenge
+# beidseits der Treppe; offene Stelle, s. Bericht)
+W_HBF = 1.60 + 2 * STR
+add_stair(oN['s'][1], -1, min((oN['t'][0] + oN['t'][1]) / 2, NORTH_PASS_T0 - 0.05 - W_HBF / 2), W_HBF, 27, name='hbf_lichthof', n1=12, landing=1.5,
+          src='OSM 394588388/394588385/31443543')
+for st in STAIRS:
+    log('stair', st['name'], 'n=%d rise=%.3f D=%.2f' % (st['g']['n'], st['g']['rise'], st['y_top'] - st['y_floor']),
+        's %.1f..%.1f' % (st['s_lo'], st['s_hi']), 't %.2f..%.2f' % st['tg'])
 
 def stair_at(s, t):
     for st in STAIRS:
@@ -158,10 +191,14 @@ for i, o in enumerate(ops):
     add(wall_from_edges(long_e, lambda x, z: yfl(fr.st(x, z)[0]) + CAN_Y, 'concrete_panel', cen, 5.0), True)
     add(wall_from_edges(end_full, lambda x, z: yfl(fr.st(x, z)[0]) - 0.05, 'concrete_panel', cen, 5.0), True)
     add(wall_from_edges(end_fas, lambda x, z: float(BG(x, z)) - DECK, 'concrete_panel', cen, 5.0), True)
-    # Treppenkopf: Podest vom Rim bis zur ersten Stufe
+    # Treppenkopf: Podest vom Rim bis zur ersten Stufe; darunter Stirnblende der Bruecke (bzw. Wand bis zum Boden) ohne Luecke
     for e, st in end_stair:
         f = st['f']; pu, pw, hu, hw, c = e
         su, tu = f.st(*pu); sw, tw = f.st(*pw)
+        m_ = (np.array(pu) + np.array(pw)) / 2; s_m, t_m = fr.st(*m_)
+        nb = [sc for sc in secs if sc['kind'] == 'cov' and (abs(sc['s1'] - s_m) < 0.06 or abs(sc['s0'] - s_m) < 0.06) and sc['t0'] - 0.01 <= t_m <= sc['t1'] + 0.01]
+        bot = (lambda x, z: float(BG(x, z)) - DECK) if nb else (lambda x, z: yfl(fr.st(x, z)[0]) - 0.05)
+        add(wall_from_edges([e], bot, 'concrete_panel', cen, 5.0), True)
         if st['kind'] == 'stair':
             dep = 0.35
             q = G2.quad('tactile', f.P(0, tu, hu), f.P(0, tw, hw), f.P(dep - 0.05, tw, st['y_top']), f.P(dep - 0.05, tu, st['y_top']), uv=np.array([[tu, 0], [tw, 0], [tw, dep], [tu, dep]]) / 0.6)
@@ -174,41 +211,106 @@ for i, o in enumerate(ops):
             add(f.vquad('stainless', (0, tu), (0, tw), lo_, hi_, (-1, (tu + tw) / 2))); add(f.vquad('stainless', (0, tu), (0, tw), lo_, hi_, (1, (tu + tw) / 2)))
     log('op', i, 'edges long', len(long_e), 'end full', len(end_full), 'fascia', len(end_fas), 'stair heads', len(end_stair))
 
-# ---------------------------------------------------------------- Treppen bauen
+# ---------------------------------------------------------------- Treppen bauen (freistehend)
+import triangle as _tr
+def prism_sy(f, mat, poly, ta, tb, uvscale=1.0):
+    """Geschlossener Koerper: Profil poly (k,2) in der lokalen s-y-Ebene, extrudiert von t=ta bis t=tb (Normalen aussen)"""
+    poly = np.asarray(poly, float)
+    keep = np.r_[True, np.linalg.norm(np.diff(poly, axis=0), axis=1) > 1e-4]; poly = poly[keep]
+    if np.linalg.norm(poly[0] - poly[-1]) < 1e-4: poly = poly[:-1]
+    A2 = 0.5 * np.sum(poly[:, 0] * np.roll(poly[:, 1], -1) - np.roll(poly[:, 0], -1) * poly[:, 1])
+    if A2 < 0: poly = poly[::-1]                                   # gegen den Uhrzeigersinn in (s, y)
+    k = len(poly); Q = []
+    for i in range(k):
+        a, b = poly[i], poly[(i + 1) % k]
+        q = np.array([f.P(a[0], ta, a[1]), f.P(b[0], ta, b[1]), f.P(b[0], tb, b[1]), f.P(a[0], tb, a[1])])
+        ds, dy = b - a; out = f.vec(dy, 0.0, -ds)                  # Aussennormale der Profilkante
+        if np.dot(np.cross(q[1] - q[0], q[3] - q[0]), out) < 0: q = q[::-1]
+        Q.append(q)
+    sides = G.flat_quads(mat, np.array(Q), uvscale)
+    r = _tr.triangulate({'vertices': poly, 'segments': np.c_[np.arange(k), (np.arange(k) + 1) % k]}, 'pQ')
+    V, T = r['vertices'], r['triangles']
+    caps = [sides]
+    for tt, sgn in ((ta, np.sign(ta - tb)), (tb, np.sign(tb - ta))):
+        P = np.array([f.P(v[0], tt, v[1]) for v in V]); I = T.copy()
+        nv = f.vec(0.0, sgn, 0.0); nv = nv / np.linalg.norm(nv)
+        fn = np.cross(P[I[:, 1]] - P[I[:, 0]], P[I[:, 2]] - P[I[:, 0]])
+        if (fn @ nv).sum() < 0: I = I[:, ::-1]
+        caps.append(G.part(mat, P, I, np.tile(nv, (len(P), 1)), V / uvscale))
+    return G.merge(caps)[0]
+
+def pitch_line(g, y_top):
+    """Vorderkanten-Linie (s, y) der Stufen inkl. Podest (flach) - fuer Wangen, Gelaender, Bruestung"""
+    sr, n, rise, tread, n1 = g['s_riser'], g['n'], g['rise'], g['tread'], g['n1']
+    pts = [(0.02, y_top)]
+    for k in range(1, n + 1):
+        pts.append((sr[k - 1], y_top - (k - 1) * rise))
+        if g['landing'] > 0 and k == n1:
+            pts.append((sr[k - 1] + tread, y_top - k * rise))          # Laufende auf Podesthoehe, dann flach bis zur naechsten Stufe
+    pts.append((sr[-1] + 0.30, y_top - n * rise))
+    return np.array(pts)
+
 for st in STAIRS:
     f, g = st['f'], st['g']; t0, t1 = st['t0'], st['t1']
-    if st['kind'] == 'stair':
-        add(build_stair(f, g, st['y_top'], st['y_floor'], t0, t1, None), True, True)
-        NL = stair_nose_line(g, st['y_top'])
-        s_last = g['s_riser'][-1]
-        add(f.hquad('tactile', s_last, s_last + 0.6, t0, t1, st['y_floor']), True, True)
-        # Wangen (Stahl) + Untersicht; offene Seite mit Glasbruestung, Wandseite Handlauf
-        for tw_, open_side in ((t0, True), (t1, False)) if st['dir'] > 0 else ((t0, False), (t1, True)):
-            pass
-        wall_t = max(t0, t1, key=lambda tt: abs(f.xz(0, tt) @ fr.r - (fr.o @ fr.r)))   # Wandseite = groesstes globales t (Ostwand) bzw. West
-        tg_wall = st['tg'][1] if st['name'] != 'nord_treppe' else st['tg'][0]
-        t_wall = tg_wall * st['dir']; t_open = (t0 + t1) - t_wall
-        sgn = 1 if t_open > t_wall else -1
-        # Stahlwange (offene Seite) entlang Nasenlinie, 0.35 m hoch, und Untersicht
-        S = NL[:, 0]; Y = NL[:, 1]
-        A = np.array([f.P(s_, t_open + sgn * 0.02, y - 0.38) for s_, y in zip(S, Y)]); B = np.array([f.P(s_, t_open + sgn * 0.02, y + 0.02) for s_, y in zip(S, Y)])
-        add(_strip('paint_grey', A, B, look=f.P(S.mean(), t_open + sgn * 3, Y.mean())), True)
-        A2 = np.array([f.P(s_, t_wall, y - 0.38) for s_, y in zip(S, Y)]); B2 = np.array([f.P(s_, t_open + sgn * 0.02, y - 0.38) for s_, y in zip(S, Y)])
-        add(_strip('paint_grey', A2, B2, look=f.P(S.mean(), (t0 + t1) / 2, Y.mean() - 3)))
-        # Glasbruestung + Edelstahlhandlauf (offene Seite), Wandhandlauf
-        Sg = S[1:-1]; Yg = Y[1:-1]
-        A = np.array([f.P(s_, t_open + sgn * 0.02, y + 0.05) for s_, y in zip(Sg, Yg)]); B = np.array([f.P(s_, t_open + sgn * 0.02, y + 0.95) for s_, y in zip(Sg, Yg)])
-        add(_strip('glass', A, B, look=f.P(Sg.mean(), (t0 + t1) / 2, Yg.mean())))
-        add(G.tube('stainless', np.array([f.P(s_, t_open + sgn * 0.02, y + 1.0) for s_, y in zip(S, Y)]), 0.024, 8))
-        for s_, y in NL[1:-1:4]: add(G2.cyl_between('stainless', f.P(s_, t_open + sgn * 0.02, y), f.P(s_, t_open + sgn * 0.02, y + 1.0), 0.018, 6))
-        add(G.tube('stainless', np.array([f.P(s_, t_wall - sgn * 0.08, y + 0.9) for s_, y in zip(S, Y)]), 0.022, 8))
-        for s_, y in NL[1:-1:5]: add(G2.cyl_between('stainless', f.P(s_, t_wall, y + 0.86), f.P(s_, t_wall - sgn * 0.08, y + 0.86), 0.012, 5))
-        # Kollision offene Seite (Gelaender)
-        A = np.array([f.P(s_, t_open + sgn * 0.02, y) for s_, y in zip(S, Y)]); B = np.array([f.P(s_, t_open + sgn * 0.02, y + 1.0) for s_, y in zip(S, Y)])
-        coll.append(_strip('collision', A, B, look=f.P(S.mean(), t_open + sgn * 3, Y.mean())))
-    else:
-        vis, col = build_escalator(f, dict(g, t0=t0, t1=t1), st['y_top'], st['y_floor'], t0, t1, edge_wall_l=False, edge_wall_r=False)
-        add(vis); add([c for c in col if c is not None], True); walk.extend([c for c in col if c is not None])
+    y_top, y_floor = st['y_top'], st['y_floor']
+    if st['kind'] != 'stair':
+        vis, col = build_escalator(f, dict(g, t0=t0, t1=t1), y_top, y_floor, t0, t1, edge_wall_l=False, edge_wall_r=False)
+        add(vis); add([c for c in col if c is not None], True); walk.extend([c for c in col if c is not None]); continue
+    n, rise, tread, sr = g['n'], g['rise'], g['tread'], g['s_riser']
+    ti0, ti1 = t0 + STR, t1 - STR                                    # zwischen den Wangen
+    # Trittstufen (offene Setzstufen): Stahl-Trittblech mit Natursteinbelag + dunkler Trittkante; Podest 12 cm stark
+    for k in range(1, n):
+        a_, b_ = sr[k - 1] - 0.03, sr[k]                             # 3 cm Unterschneidung
+        y = y_top - k * rise; th = 0.12 if (g['landing'] > 0 and k == g['n1']) else 0.06
+        add(f.box('paint_grey', a_, b_, ti0, ti1, y - th, y - 0.012), True)
+        add(f.hquad('granite_step', a_, b_ - 0.05, ti0, ti1, y, up=True, uvscale=1.0))
+        add(f.hquad('nosing', b_ - 0.05, b_, ti0, ti1, y, up=True, uvscale=1.0))
+        for (sa, sb, m_) in ((a_, b_ - 0.05, 'granite_step'), (b_ - 0.05, b_, 'nosing')):   # Belagkanten -> keine offenen Kanten
+            for tt, lk in ((ti0, ti0 - 1), (ti1, ti1 + 1)):
+                add(f.vquad(m_, (sa, tt), (sb, tt), y - 0.012, y, (0.5 * (sa + sb), lk)))
+        add(f.vquad('granite_step', (a_, ti0), (a_, ti1), y - 0.012, y, (a_ - 1, 0.5 * (ti0 + ti1))))
+        add(f.vquad('nosing', (b_, ti0), (b_, ti1), y - 0.012, y, (b_ + 1, 0.5 * (ti0 + ti1))))
+    # Kopftraeger unter dem oberen Antritt (schliesst an die Brueckenstirn an)
+    add(f.box('paint_grey', 0.004, sr[0] - 0.03, ti0, ti1, y_top - 0.30, y_top - 0.012), True)
+    # Antrittsfeld unten (Aufmerksamkeitsfeld 0.6 m, 4 mm ueber dem Boden)
+    s_last = sr[-1]
+    add(f.hquad('tactile', s_last, s_last + 0.6, t0, t1, y_floor + 0.004, up=True, uvscale=0.6), False, True)
+    # Kollision + Hoehenraster: geschlossenes Stufenprofil (Setz- und Trittflaechen)
+    for q in build_stair(f, g, y_top, y_floor, t0, t1, None):
+        if q is not None:
+            q = dict(q, mat='collision'); coll.append(q); walk.append(q)
+    PL = pitch_line(g, y_top); S, Y = PL[:, 0], PL[:, 1]
+    # Wangen beidseitig (Stahlblech 40 cm, geschlossene Koerper), unten auf dem Boden abgeschnitten
+    top_ = np.c_[S, Y + 0.06]; bot_ = np.c_[S, np.maximum(Y - 0.34, y_floor)]
+    prof = np.r_[top_, [[S[-1], y_floor]], bot_[::-1]]
+    keep = np.r_[True, np.linalg.norm(np.diff(prof, axis=0), axis=1) > 1e-4]; prof = prof[keep]
+    for ta, tb in ((t0, t0 + STR), (t1 - STR, t1)):
+        add(prism_sy(f, 'paint_grey', prof, ta, tb), True)
+    # Betonsockel unter den untersten Stufen (Keil bis ca. 1.0 m Hoehe; Oberkante unter den hinteren Blechkanten)
+    n_lo = n - 1                                                      # unterste Trittstufe (Index k)
+    def under(s_):
+        return (y_top - n_lo * rise - 0.06) - rise * (s_ - (sr[n_lo - 1] - 0.03)) / tread
+    s_e = (sr[n_lo - 1] - 0.03) + (y_top - n_lo * rise - 0.06 - (y_floor + 0.02)) * tread / rise
+    s_w = (sr[n_lo - 1] - 0.03) - (y_floor + 1.0 - (y_top - n_lo * rise - 0.06)) * tread / rise
+    if g['landing'] > 0: s_w = max(s_w, sr[g['n1']] + 0.05)            # nicht unter das Podest
+    if s_w < s_e - 0.2:
+        add(prism_sy(f, 'concrete', [(s_w, y_floor - 0.02), (s_e, y_floor - 0.02), (s_e, y_floor + 0.02), (s_w, under(s_w))],
+                     ti0 + 0.005, ti1 - 0.005, uvscale=1.0), True)
+    # Podest-Stuetzen (nur Treppe mit Zwischenpodest)
+    if g['landing'] > 0:
+        sm = sr[g['n1'] - 1] + 0.5 * g['landing']; yl = y_top - g['n1'] * rise - 0.12
+        for tt in (ti0 + 0.12, ti1 - 0.12):
+            add(G2.cyl_between('paint_grey', f.P(sm, tt, y_floor), f.P(sm, tt, yl), 0.07, 12), True)
+    # Glasbruestung + Edelstahlhandlauf auf beiden Wangen; Kollision je Seite
+    for tt, sg in ((t0 + STR / 2, -1), (t1 - STR / 2, 1)):
+        A = np.array([f.P(s_, tt, y + 0.07) for s_, y in zip(S[:-1], Y[:-1])]); B = np.array([f.P(s_, tt, y + 0.95) for s_, y in zip(S[:-1], Y[:-1])])
+        add(_strip('glass', A, B, look=f.P(S.mean(), tt + sg * 3, Y.mean())))
+        HR = np.array([f.P(s_, tt, y + 1.0) for s_, y in zip(S, Y)])
+        add(G.tube('stainless', HR, 0.024, 10))
+        for s_, y in PL[1:-1:4]: add(G2.cyl_between('stainless', f.P(s_, tt, y + 0.06), f.P(s_, tt, y + 1.0), 0.018, 8))
+        add(G2.cyl_between('stainless', f.P(S[-1], tt, y_floor), f.P(S[-1], tt, Y[-1] + 1.0), 0.02, 8))   # Endpfosten unten
+        A = np.array([f.P(s_, tt, y) for s_, y in zip(S, Y)]); B = np.array([f.P(s_, tt, y + 1.05) for s_, y in zip(S, Y)])
+        coll.append(_strip('collision', A, B, look=f.P(S.mean(), tt + sg * 3, Y.mean())))
 log('stairs built, tris', G.tri_count(parts))
 
 # ---------------------------------------------------------------- Boeden, Decken, Waende je Abschnitt
@@ -629,7 +731,8 @@ for sc in secs:
     # Lichtmasten mit Bannern (Mittellinie, nicht auf Treppen)
     tm = (sc['t0'] + sc['t1']) / 2
     for s_ in np.arange(sc['s0'] + 6.0, sc['s1'] - 3.0, 12.0):
-        if stair_at(s_, tm) is not None: continue
+        # nicht auf oder dicht neben einer Treppe (Mastfuss/Banner mind. 1 m vom Treppenlauf)
+        if any(st_['s_lo'] - 0.5 <= s_ <= st_['s_hi'] + 0.5 and st_['tg'][0] - 1.0 <= tm <= st_['tg'][1] + 1.0 for st_ in STAIRS): continue
         c = fr.xz(s_, tm); y0 = yfl(s_); ytop = street(s_, sc['t0'] - 0.5) + 6.0
         add(G.cylinder('paint_grey', (c[0], y0, c[1]), 0.10, 0.08, ytop - y0, 10, cap=True), True)
         add(G.cylinder('paint_grey', (c[0], y0, c[1]), 0.22, 0.22, 0.35, 12, cap=True), True)
@@ -653,7 +756,8 @@ for sc in secs:
     # Pflanzkuebel an den Enden
     for s_ in (sc['s0'] + 2.0, sc['s1'] - 2.0):
         for t_ in (sc['t0'] + 1.6, sc['t1'] - 1.6):
-            if stair_at(s_, t_) is not None: continue
+            # nicht neben freistehende Treppen (Gehwege beidseits der Treppe frei halten)
+            if any(st_['s_lo'] - 1.0 <= s_ <= st_['s_hi'] + 1.0 for st_ in STAIRS): continue
             c = fr.xz(s_, t_); y0 = yfl(s_)
             add(G.cylinder('concrete', (c[0], y0, c[1]), 0.55, 0.60, 0.55, 16, cap=True), True)
             add(G.cylinder('soil', (c[0], y0 + 0.55, c[1]), 0.50, 0.50, 0.01, 16, cap=True))
@@ -725,6 +829,9 @@ log('done parapets, tris', G.tri_count(parts))
 
 pickle.dump({'parts': parts, 'coll': coll, 'walk': walk, 'mats': MATS_EXTRA,
              'info_extra': {'sections': [{k: (round(v, 2) if isinstance(v, float) else v) for k, v in s_.items()} for s_ in secs],
-                            'stairs': [{'name': st['name'], 'kind': st['kind'], 's': [round(st['s_lo'], 2), round(st['s_hi'], 2)], 't': [round(x, 2) for x in st['tg']]} for st in STAIRS],
+                            'stairs': [{'name': st['name'], 'kind': st['kind'], 's': [round(st['s_lo'], 2), round(st['s_hi'], 2)], 't': [round(x, 2) for x in st['tg']],
+                                        'steps': st['g']['n'], 'rise': round(st['g']['rise'], 3), 'tread': st['g']['tread'], 'landing': st['g']['landing'],
+                                        'width': round(st['width'], 2), 'top': [round(float(v), 2) for v in fr.xz(st['s_top'], (st['tg'][0] + st['tg'][1]) / 2)],
+                                        'descends': 'north' if st['dir'] > 0 else 'south', 'source': st['src']} for st in STAIRS],
                             'shops_named': named_list, 'axis': AX}}, open(CACHE + 'promenade.pkl', 'wb'))
 log('done: tris', G.tri_count(parts), 'collision', G.tri_count(coll), 'named shops', n_named)

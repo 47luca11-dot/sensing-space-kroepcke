@@ -7,3 +7,5 @@ pymeshlab==2025.7.post1
 scipy==1.17.1
 scikit-image==0.26.0
 pillow==13.0.0
+triangle==20250106
+manifold3d==3.5.4

@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { PLYLoader } from 'three/addons/loaders/PLYLoader.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { SparkRenderer, SplatMesh } from '@sparkjsdev/spark';
 
 const $ = (id) => document.getElementById(id);
@@ -19,17 +20,31 @@ const grid = new THREE.GridHelper(4, 40, 0x2c3542, 0x1c232c); grid.material.tran
 const content = new THREE.Group(); content.rotation.x = Math.PI; scene.add(content);
 scene.add(new THREE.HemisphereLight(0xffffff, 0x404850, 2.2));
 const sun = new THREE.DirectionalLight(0xffffff, 1.4); sun.position.set(2, 4, 3); scene.add(sun);
-let meshObj = null;
-const plyLoader = new PLYLoader();
+let meshObj = null, wireObj = null;
+const plyLoader = new PLYLoader(), gltfLoader = new GLTFLoader();
+const wireMat = new THREE.LineBasicMaterial({ color: 0x5fd3c4, transparent: true, opacity: 0.35 });
+function disposeTree(o) {
+  o.traverse((c) => { c.geometry?.dispose(); if (c.material && c.material !== wireMat) { c.material.map?.dispose(); c.material.dispose(); } });
+}
 async function loadSurface() {
-  if (meshObj) { content.remove(meshObj); meshObj.geometry.dispose(); meshObj = null; }
+  if (meshObj) { content.remove(meshObj); disposeTree(meshObj); meshObj = wireObj = null; }
   if (!current?.mesh) return;
-  const g = await plyLoader.loadAsync(`/api/scan/${current.id}/mesh.ply?t=${Date.now()}`);
-  g.computeVertexNormals();
-  const mat = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.85, metalness: 0 });
-  meshObj = new THREE.Mesh(g, mat);
-  meshObj.add(new THREE.LineSegments(new THREE.WireframeGeometry(g), new THREE.LineBasicMaterial({ color: 0x5fd3c4, transparent: true, opacity: 0.35 })));
-  meshObj.children[0].visible = false;
+  if (current.glb) {
+    // texturiertes Mesh (Mesh-Scans, z. B. KIRI Engine): GLB ist y-oben -> die 180°-Drehung von `content` aufheben
+    const gltf = await gltfLoader.loadAsync(`/api/scan/${current.id}/glb.glb?t=${Date.now()}`);
+    meshObj = gltf.scene; meshObj.rotation.x = Math.PI;
+    const meshesIn = [];
+    meshObj.traverse((c) => { if (c.isMesh) meshesIn.push(c); });
+    wireObj = meshesIn.map((c) => { const w = new THREE.LineSegments(new THREE.WireframeGeometry(c.geometry), wireMat); c.add(w); return w; });
+  } else {
+    const g = await plyLoader.loadAsync(`/api/scan/${current.id}/mesh.ply?t=${Date.now()}`);
+    g.computeVertexNormals();
+    const mat = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.85, metalness: 0 });
+    meshObj = new THREE.Mesh(g, mat);
+    wireObj = [new THREE.LineSegments(new THREE.WireframeGeometry(g), wireMat)];
+    meshObj.add(wireObj[0]);
+  }
+  for (const w of wireObj) w.visible = false;
   content.add(meshObj);
 }
 
@@ -96,7 +111,7 @@ async function loadMesh(kind) {
 function applyView() {
   document.querySelectorAll('#seg button').forEach((b) => b.classList.toggle('on', b.dataset.v === view));
   const isMesh = view === 'mesh' || view === 'wire';
-  if (meshObj) { meshObj.visible = isMesh; meshObj.children[0].visible = view === 'wire'; }
+  if (meshObj) { meshObj.visible = isMesh; for (const w of wireObj) w.visible = view === 'wire'; }
   if (meshes.original) {
     meshes.original.visible = !isMesh && view !== 'extracted';
     meshes.original.opacity = view === 'both' ? 0.45 : 1;
@@ -135,6 +150,16 @@ function showInfo() {
   const i = current?.info;
   $('info').style.display = i ? 'block' : 'none';
   if (!i) return;
+  const src = i.source?.type === 'mesh' ? i.source : null;
+  if (src) {
+    $('info').innerHTML = `Mesh-Scan (${src.app}) · freigestellt mit import_mesh.py<br>
+      Person: <b>${src.faces_subject.toLocaleString('de')}</b> von ${src.faces_total.toLocaleString('de')} Dreiecken des Scans<br>
+      Höhe: <b>${i.height.toFixed(2)} m</b> · Boden ${src.ground_tilt_deg.toFixed(1)}° geneigt, ausgerichtet<br>
+      ${src.leg_bridge ? `Beinspalt geöffnet (Schritt bei ${src.leg_bridge.h_crotch.toFixed(2)} m)<br>` : ''}
+      Mesh: <b>${i.mesh.faces.toLocaleString('de')}</b> Dreiecke · ${i.mesh.watertight ? '<b>geschlossen</b>' : 'offen'} · ${i.mesh.boundary_edges} Randkanten · ${i.mesh.components} Teil${i.mesh.components > 1 ? 'e' : ''}<br>
+      Textur: ${src.texture}${current.glb ? ' (GLB)' : ''} · Splats: ${i.selected.toLocaleString('de')} (Person) / ${i.total.toLocaleString('de')} (Scan)`;
+    return;
+  }
   $('info').innerHTML = `<b>${i.selected.toLocaleString('de')}</b> von ${i.total.toLocaleString('de')} Splats (${(100 * i.selected / i.total).toFixed(1)} %)<br>
     Höhe: <b>${i.height.toFixed(2)}</b> Einheiten · ${i.taken} von ${i.clusters} Clustern<br>
     ${i.mode === 'surface' ? 'Flächenmodus (Wand/Boden-Scan)<br>' : ''}Boden: ${i.ground_inliers.toLocaleString('de')} Punkte${i.seconds ? ` · ${i.seconds} s` : ''}
@@ -146,9 +171,9 @@ async function open(id) {
   document.querySelectorAll('.item').forEach((el) => el.classList.toggle('active', el.dataset.id === id));
   $('empty').style.display = 'none';
   for (const k of ['original', 'extracted']) if (meshes[k]) { content.remove(meshes[k]); meshes[k].dispose?.(); meshes[k] = null; }
-  $('run').disabled = false; $('dl-or').disabled = false;
+  $('run').disabled = current.info?.source?.type === 'mesh'; $('dl-or').disabled = false;
   const hasEx = !!current.extracted;
-  $('dl-ex').disabled = !hasEx; $('dl-mesh').disabled = !current.mesh;
+  $('dl-ex').disabled = !hasEx; $('dl-mesh').disabled = !current.mesh; $('dl-glb').disabled = !current.glb;
   document.querySelectorAll('#seg button[data-v="extracted"], #seg button[data-v="both"]').forEach((b) => (b.disabled = !hasEx));
   document.querySelectorAll('#seg button[data-v="mesh"], #seg button[data-v="wire"]').forEach((b) => (b.disabled = !current.mesh));
   status(`Lade ${current.name} …`); bar(0.3);
@@ -182,9 +207,10 @@ $('run').addEventListener('click', extract);
 $('dl-ex').addEventListener('click', () => current && (location.href = `/api/scan/${current.id}/extracted.ply?download=1`));
 $('dl-mesh').addEventListener('click', () => current && (location.href = `/api/scan/${current.id}/mesh.ply?download=1`));
 $('dl-or').addEventListener('click', () => current && (location.href = `/api/scan/${current.id}/original.ply?download=1`));
+$('dl-glb').addEventListener('click', () => current?.glb && (location.href = `/api/scan/${current.id}/glb.glb?download=1`));
 for (const [id, d] of [['radius', 1], ['minop', 2]]) $(id).addEventListener('input', () => ($(id + '-o').textContent = (+$(id).value).toFixed(d)));
 
 // automatisch extrahieren nach dem Upload (Option im Upload-Feld)
 drop.insertAdjacentHTML('afterend', '<label style="display:flex;gap:8px;align-items:center;margin:-6px 18px 10px;color:var(--dim);font-size:12px"><input id="auto" type="checkbox" checked> nach dem Hochladen automatisch extrahieren</label>');
 refreshList().then(() => { if (scans.length) open(scans[0].id); });
-window.__viewer = { scene, camera, meshes, get current() { return current; }, open, extract };
+window.__viewer = { scene, camera, renderer, controls, meshes, get current() { return current; }, open, extract };

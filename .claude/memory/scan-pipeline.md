@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: b8a76d7d-27b8-490e-b6de-334a309ea42a
-  modified: 2026-11-05T17:06:49.158Z
+  modified: 2026-11-11T19:35:45.900Z
 ---
 
 Project (since 2026-11-05); since 2026-11-11 moved into `Documents/Sensing Space/Claude Code/output/hannover/`:
@@ -14,6 +14,9 @@ Project (since 2026-11-05); since 2026-11-11 moved into `Documents/Sensing Space
 - Character build scripts live in the session scratchpad `work/` (merge2.py, extract_generic.py, mesh_vox.py, shrink.py, fixhead.py, bl_rig.py + rigs.json, splats.py) — they are not in the project; if the scratchpad is gone they must be recreated.
 - Blender 5.0 is run headless (`blender.exe -b --factory-startup -P bl_rig.py`); the Blender MCP addon was not connected.
 - Character intermediates (glb/ply/blend) in `figuren/`. Characters: person1 = "Carlos" (Bothfeld body + Centre head), andis, (planned) luca from "Unbenannter Scan.ply".
+- Textured mesh scans (KIRI Engine OBJ+MTL+JPG) go in via `scan_viewer/import_mesh.py` (in the project, needs `triangle` + `manifold3d`). It writes the viewer format (uploads/<id>_<name>.ply = whole scan as surface splats, `<name>_quelle/` = original OBJ, extracted/…_extrahiert.ply|_mesh.ply|_mesh.glb|.json); the viewer shows the textured GLB in the Mesh view and blocks "Extrahieren" for these. Imported 2026-11-11: `f70f76_KIRI Person Daunenjacke`, `b7daf1_KIRI Person Weste`.
+- Non-obvious with KIRI: arbitrary scale → scaled to 1.80 m (cross-checked with ~30 cm shoes); photogrammetry often fills the hidden space between the legs from the front ("Beinbrücke") → import_mesh detects it by horizontal slices (legs separate low, back notch up to the crotch) and cuts a wedge by boolean. A real crotch (legs separate above 0.3 H) must not trigger it.
+- `server.py` honours a `PORT` env var (preview tool moves it when 5176 is taken by another session's older server); on Windows it no longer silently shares a busy port. In a hidden Browser pane `requestAnimationFrame` stops: capture via `window.__viewer.renderer.render(...)` + `toDataURL`.
 
 - Since 2026-11-12 the reusable pipeline is the project skill `.claude/skills/figur-einbauen/` (splat_werkzeug.py = crop/align splat scenes, figur_bauen.py = Blender build for splat or textured-mesh figures). First figure built with it: `trainingsjacke`. Pitfall found: splat skin indices must follow the GLB joint order.
 

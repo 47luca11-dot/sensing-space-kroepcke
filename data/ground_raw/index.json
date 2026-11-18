@@ -4201,7 +4201,7 @@
    "bounds": {
     "min": [
      -103.525,
-     -5.15,
+     -5.145,
      -102.5
     ],
     "max": [
@@ -4210,12 +4210,13 @@
      3.308
     ]
    },
-   "triangles": 25196,
-   "bytes": 1051496,
+   "triangles": 29621,
+   "bytes": 1277444,
    "materials": [
     "black_glass",
     "citylight",
     "cloth_a",
+    "cloth_b",
     "cloth_c",
     "cloth_d",
     "cloth_e",
@@ -4234,7 +4235,6 @@
     "granite_wall",
     "grate",
     "guidance",
-    "hedge",
     "kerb",
     "lamp_glow",
     "lightcove",
@@ -4254,6 +4254,7 @@
     "shopint_chemist",
     "shopint_fast_food",
     "shopint_generic",
+    "shopint_kiosk",
     "shopint_mobile_phone",
     "shopint_vacant",
     "shutter_steel",
@@ -4828,8 +4829,8 @@
      -89.929
     ]
    },
-   "triangles": 28113,
-   "bytes": 1412016,
+   "triangles": 31124,
+   "bytes": 1582788,
    "materials": [
     "asphalt",
     "black_glass",
@@ -4893,17 +4894,17 @@
    "bounds": {
     "min": [
      -3.177,
-     -5.352,
+     -5.121,
      -110.741
     ],
     "max": [
      106.618,
-     5.408,
+     5.271,
      -6.79
     ]
    },
-   "triangles": 27430,
-   "bytes": 1237660,
+   "triangles": 33805,
+   "bytes": 1562200,
    "materials": [
     "asphalt",
     "cloth_a",
@@ -4921,7 +4922,6 @@
     "granite_polished",
     "granite_step",
     "grate",
-    "hedge",
     "kerb",
     "lamp_glow",
     "lightline",
@@ -5543,7 +5543,7 @@
    "bounds": {
     "min": [
      94.914,
-     -6.266,
+     -6.016,
      -301.902
     ],
     "max": [
@@ -5552,12 +5552,13 @@
      -194.997
     ]
    },
-   "triangles": 11489,
-   "bytes": 464848,
+   "triangles": 11200,
+   "bytes": 461028,
    "materials": [
     "ballast",
     "citylight",
     "cloth_a",
+    "cloth_b",
     "cloth_c",
     "cloth_d",
     "cloth_e",
@@ -5565,8 +5566,6 @@
     "concrete",
     "concrete_panel",
     "downlight",
-    "esc_plate",
-    "esc_step",
     "glass",
     "granite",
     "granite_dark",
@@ -5583,10 +5582,9 @@
     "pavers",
     "prom_signs_1",
     "prom_signs_2",
-    "rubber",
     "shopglass",
+    "shopint_generic",
     "shopint_kiosk",
-    "shopint_vacant",
     "shutter_steel",
     "sign_guide",
     "sign_hbf",
@@ -5609,27 +5607,25 @@
    "bounds": {
     "min": [
      94.281,
-     -6.346,
+     -6.016,
      -204.958
     ],
     "max": [
      203.08,
-     4.541,
+     4.531,
      -96.728
     ]
    },
-   "triangles": 17487,
-   "bytes": 812472,
+   "triangles": 17803,
+   "bytes": 843424,
    "materials": [
     "asphalt",
     "asphalt2",
-    "cloth_b",
     "cloth_c",
     "cloth_e",
+    "cloth_f",
     "concrete",
     "concrete_panel",
-    "esc_plate",
-    "esc_step",
     "fence",
     "glass",
     "granite",
@@ -5648,7 +5644,6 @@
     "paint_grey",
     "pavers",
     "prom_signs_1",
-    "rubber",
     "setts_road",
     "setts_small",
     "shopglass",
@@ -5660,7 +5655,6 @@
     "soil",
     "stainless",
     "steel",
-    "steel_dark",
     "stone_light",
     "tactile",
     "tile_white",
@@ -9312,8 +9306,8 @@
  ],
  "collision": {
   "file": "collision_ground.glb",
-  "triangles": 750790,
-  "bytes": 13727892
+  "triangles": 756840,
+  "bytes": 13843260
  },
  "heightfield": {
   "file": "heightfield.bin",
@@ -9396,8 +9390,8 @@
   "instanced_triangles": 636315
  },
  "totals": {
-  "tile_triangles": 2114747,
-  "tile_bytes": 90714932
+  "tile_triangles": 2128585,
+  "tile_bytes": 91463324
  },
  "ubahn_entrances": [
   {
@@ -10063,94 +10057,195 @@
   ],
   "stairs": [
    {
-    "name": "sued_29",
+    "name": "kroepcke_29",
     "kind": "stair",
     "s": [
      -96.95,
-     -86.4
+     -87.6
     ],
     "t": [
-     5.95,
-     8.53
-    ]
+     3.0,
+     5.6
+    ],
+    "steps": 29,
+    "rise": 0.159,
+    "tread": 0.3,
+    "landing": 0.0,
+    "width": 2.6,
+    "top": [
+     -14.04,
+     -15.16
+    ],
+    "descends": "north",
+    "source": "OSM 31287201"
    },
    {
-    "name": "bruecke1_s",
+    "name": "bruecke1_sued",
     "kind": "stair",
     "s": [
-     -25.91,
+     -74.79,
+     -66.04
+    ],
+    "t": [
+     -1.78,
+     0.62
+    ],
+    "steps": 27,
+    "rise": 0.159,
+    "tread": 0.3,
+    "landing": 0.0,
+    "width": 2.4,
+    "top": [
+     0.62,
+     -42.8
+    ],
+    "descends": "south",
+    "source": "OSM 409290611"
+   },
+   {
+    "name": "bruecke1_nord",
+    "kind": "stair",
+    "s": [
+     -59.85,
+     -51.4
+    ],
+    "t": [
+     -1.78,
+     0.62
+    ],
+    "steps": 26,
+    "rise": 0.162,
+    "tread": 0.3,
+    "landing": 0.0,
+    "width": 2.4,
+    "top": [
+     4.34,
+     -47.76
+    ],
+    "descends": "north",
+    "source": "OSM 436076598"
+   },
+   {
+    "name": "bruecke2_sued",
+    "kind": "stair",
+    "s": [
+     -25.01,
      -16.86
     ],
     "t": [
-     1.61,
-     3.49
-    ]
+     -1.61,
+     0.79
+    ],
+    "steps": 25,
+    "rise": 0.155,
+    "tread": 0.3,
+    "landing": 0.0,
+    "width": 2.4,
+    "top": [
+     30.29,
+     -82.03
+    ],
+    "descends": "south",
+    "source": "OSM 254129194"
    },
    {
-    "name": "bruecke1_n",
+    "name": "bruecke2_nord",
     "kind": "stair",
     "s": [
      -8.55,
-     0.5
+     -0.4
     ],
     "t": [
-     1.98,
-     3.86
-    ]
+     -1.61,
+     0.79
+    ],
+    "steps": 25,
+    "rise": 0.156,
+    "tread": 0.3,
+    "landing": 0.0,
+    "width": 2.4,
+    "top": [
+     35.28,
+     -88.67
+    ],
+    "descends": "north",
+    "source": "OSM 254129190"
    },
    {
-    "name": "bruecke2_s",
+    "name": "bruecke3_sued",
     "kind": "stair",
     "s": [
-     24.6,
+     25.8,
      33.65
     ],
     "t": [
-     1.98,
-     3.86
-    ]
+     -1.32,
+     1.08
+    ],
+    "steps": 24,
+    "rise": 0.158,
+    "tread": 0.3,
+    "landing": 0.0,
+    "width": 2.4,
+    "top": [
+     60.85,
+     -122.25
+    ],
+    "descends": "south",
+    "source": "OSM 254129195"
    },
    {
-    "name": "bruecke2_n",
+    "name": "bruecke3_nord",
     "kind": "stair",
     "s": [
      41.27,
-     50.32
+     49.42
     ],
     "t": [
-     2.35,
-     4.23
-    ]
+     -1.32,
+     1.08
+    ],
+    "steps": 25,
+    "rise": 0.155,
+    "tread": 0.3,
+    "landing": 0.0,
+    "width": 2.4,
+    "top": [
+     65.43,
+     -128.34
+    ],
+    "descends": "north",
+    "source": "OSM 254129192"
    },
    {
-    "name": "nord_treppe",
+    "name": "hbf_lichthof",
     "kind": "stair",
     "s": [
-     121.6,
+     121.9,
      131.85
     ],
     "t": [
-     -4.17,
-     -1.57
-    ]
-   },
-   {
-    "name": "nord_rolltreppe",
-    "kind": "esc",
-    "s": [
-     120.11,
-     131.85
+     -1.56,
+     0.1
     ],
-    "t": [
-     -1.45,
-     0.0
-    ]
+    "steps": 27,
+    "rise": 0.165,
+    "tread": 0.3,
+    "landing": 1.5,
+    "width": 1.66,
+    "top": [
+     119.33,
+     -201.13
+    ],
+    "descends": "south",
+    "source": "OSM 394588388/394588385/31443543"
    }
   ],
   "shops_named": [
    "Vodafone",
    "FOTOFIX",
    "nail & spa",
+   "avec",
    "Dunkin'",
    "Espresso House",
    "Mac and Cheezy",
@@ -10161,12 +10256,15 @@
    "Trans-Asia",
    "Haus des D\u00f6ners",
    "Pommesgl\u00fcck",
+   "Hey Ferry",
    "Trans-Asia",
    "Hey Ferry",
    "Hannoversche Kaffee Manufaktur",
    "Tete",
+   "Hey Ferry",
    "Kr\u00e4uter Basar",
    "NEW YORKER",
+   "Profi Pflege Produkte",
    "Galeria Outlet",
    "Study Atelier",
    "o2",

@@ -25,6 +25,16 @@ Dann im Browser öffnen: <http://localhost:5177> – zuerst erscheint der Startb
 
 > Der kleine Server (`web/server.mjs`) ist nötig, weil das Spiel über `/__exists` prüft, welche Stadt-Dateien vorhanden sind. Ein reiner Static-Host (z. B. GitHub Pages) reicht ohne Anpassung nicht.
 
+### Punktwolke erzeugen (einmal nach dem Klonen)
+
+Das Spiel zeigt die Stadt als Punktwolke (Sichtweite ~10 m, dahinter schwarz – mit **F** scannen). Die Kacheln (`web/assets/city/pointcloud/`, ~3,3 GB) sind zu groß für Git LFS und deshalb nicht im Repo. Ohne sie startet das Spiel automatisch in der Mesh-Ansicht. Erzeugen mit Blender 5.x (dauert ~20 min, braucht ~12 GB Platz):
+
+```bash
+blender -b --factory-startup -P pipeline/pointcloud/run_headless.py
+```
+
+Schritte: `bl_sample.py` (alle Stadt-GLBs abtasten) → `bl_tile.py` (32-m-Kacheln, 8-m-Zellen) → `bl_light.py` (Sonne, Schatten, AO, Himmelssicht per Geometry-Nodes-Raycast in die Farben backen).
+
 ## Steuerung
 
 | Taste | Aktion |
@@ -33,9 +43,12 @@ Dann im Browser öffnen: <http://localhost:5177> – zuerst erscheint der Startb
 | Shift | laufen |
 | C | vorsichtig gehen |
 | Q / E | Gleichgewicht halten |
-| F | Gelände-Scan |
+| F | Scan: alles frei Sichtbare bis 150 m wird 10 s lang gezeigt |
 | Leertaste | Hopser |
 | Maus / ← → | Kamera drehen (Bild ↑/↓ neigen) |
+| Esc | Menü: Sichtweite, Punktdichte, Punktgröße, Belichtung, Auflösung, Mesh-Ansicht, zum Startbildschirm |
+| P / O / B | Mesh-Ansicht (lädt neu) / Verdeckung / Rückseiten |
+| M | Admin-Modus |
 
 ## Aufbau
 
@@ -46,7 +59,7 @@ Dann im Browser öffnen: <http://localhost:5177> – zuerst erscheint der Startb
 - `sources/` – Ausgangsmodelle: eigenes Rhino-Modell Opernplatz/Kiosk (+ Texturen), TIB-Modell, LoD2-Stadtmodell Hannover (CityGML).
 - `startbildschirm/` – Startbildschirm mit Figurenwahl (Carlos, Andis, Luca, Mohammad, Daunenjacke, Trainingsjacke). Spielbar: Carlos, Mohammad (Splats, Hände in den Taschen), Daunenjacke (texturiertes Mesh ohne Splats, `mesh: true`), Trainingsjacke (Original-Splats aus der Flur-Szene Bothfeld-Vahrenheide-3).
 - Neue Figuren aus Scans: Skill `.claude/skills/figur-einbauen/` (Anleitung `SKILL.md`, Skripte `scripts/`): ausschneiden → lückenlose Hülle → Skelett → Animationen → Export → eintragen.
-- `scan_viewer/` – Werkzeug zum Hochladen, Extrahieren, Bereinigen und Vernetzen von PLY-Scans; `uploads/` = Original-Scans, `extracted/` = Ergebnisse. Einrichten: `cd scan_viewer && uv venv --python 3.11 .venv && uv pip install -r requirements.txt`, starten: `.venv/Scripts/python server.py 5176`.
+- `scan_viewer/` – Werkzeug zum Hochladen, Extrahieren, Bereinigen und Vernetzen von PLY-Scans; `uploads/` = Original-Scans, `extracted/` = Ergebnisse. Einrichten: `cd scan_viewer && uv venv --python 3.11 .venv && uv pip install -r requirements.txt`, starten: `.venv/Scripts/python server.py 5176`. Textur-Mesh-Scans (KIRI Engine: OBJ + MTL + JPG) übernimmt `import_mesh.py <scan.obj> --name "…" [--height 1.80]`: freistellen, Löcher/Sohlen schließen, verdeckte Beinbrücken öffnen, ausrichten, skalieren; im Viewer dann mit texturiertem GLB in der Mesh-Ansicht.
 - `figuren/` – Figuren-Zwischenstände (Punktwolken, Meshes, GLBs, Blender-Datei der Startbildschirm-Figuren).
 - `.claude/` – Claude-Code-Konfiguration: `launch.json`, three.js-Skills, `memory/` (Projektnotizen).
 - `pipeline/build_artifact_demo.mjs` – baut eine statische Demo für ein claude.ai-Artifact.
