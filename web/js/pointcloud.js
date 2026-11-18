@@ -165,7 +165,7 @@ export class PointCloud {
       uScanMax: { value: SCAN_MAX }, uScanOn: { value: 0 }, uScanCube: { value: null },
     };
     // Scan-Cubemap
-    this.cubeRT = new THREE.WebGLCubeRenderTarget(512, { type: THREE.HalfFloatType, format: THREE.RGBAFormat, generateMipmaps: false, minFilter: THREE.NearestFilter, magFilter: THREE.NearestFilter });
+    this.cubeRT = new THREE.WebGLCubeRenderTarget(256, { type: THREE.HalfFloatType, format: THREE.RGBAFormat, generateMipmaps: false, minFilter: THREE.NearestFilter, magFilter: THREE.NearestFilter });
     this.cubeCam = new THREE.CubeCamera(0.3, SCAN_MAX + 20, this.cubeRT);
     this.cubeCam.layers.set(0);
     this.scanOrigin = new THREE.Vector3();
@@ -173,6 +173,9 @@ export class PointCloud {
     this.u.uScanCube.value = this.cubeRT.texture;
     this.scanT = -1;
     this.occScene = new THREE.Scene(); this.occScene.name = 'Verdecker';
+    // Vorwärmen: neue Kachel-Puffer gleich beim Laden (in kleinen Portionen) auf die GPU laden, nicht erst beim Scan
+    this.warmQ = []; this.warmRT = new THREE.WebGLRenderTarget(1, 1);
+    this.warmCam = new THREE.PerspectiveCamera(); this.warmCam.layers.enableAll();
   }
 
   // Kollisions-Geometrien (Weltkoordinaten, wenige große Meshes) als Verdecker und für die Scan-Sichtprüfung
@@ -223,33 +226,44 @@ export class PointCloud {
   // Zellen im Sichtradius verarbeitet statt ganzer 32-m-Kacheln.
   _makePart(tile, which, buf) {
     const n = which === 'a' ? tile.na : tile.n - tile.na;
-    const attrs = {
-      pos: new THREE.BufferAttribute(new Int16Array(buf, 0, n * 3), 3, false),
-      col: new THREE.BufferAttribute(new Uint8Array(buf, n * 6, n * 4), 4, true),
-      oct: new THREE.BufferAttribute(new Uint8Array(buf, n * 10, n * 2), 2, true),
-    };
+    const POS = new Int16Array(buf, 0, n * 3), COL = new Uint8Array(buf, n * 6, n * 4), OCT = new Uint8Array(buf, n * 10, n * 2);
+    const mat = (uOff, uN) => new THREE.ShaderMaterial({
+      vertexShader: VERT, fragmentShader: FRAG, toneMapped: false,
+      uniforms: { ...this.u, uOrigin: { value: tile.uOrigin }, uQuant: { value: this.quant }, uOff: { value: uOff }, uN: { value: uN }, uSpacing: { value: tile.spacing } },
+    });
+    const mk = (g, m, name) => { const o = new THREE.Points(g, m); o.layers.set(3); o.matrixAutoUpdate = false; o.visible = false; o.name = name; this.group.add(o); return o; };
+    // grobe Stufe (a, 12 %): EIN Puffer je Kachel (klein) -> Zell-Objekte per drawRange + ein Kachel-Objekt für den Scan in der Ferne
+    // feine Stufe (b): je Zelle eigener Puffer (Upload in ~1-2-MB-Stücken)
+    let shared = null;
+    if (which === 'a') shared = { pos: new THREE.BufferAttribute(POS, 3, false), col: new THREE.BufferAttribute(COL, 4, true), oct: new THREE.BufferAttribute(OCT, 2, true) };
     const objs = [];
     let start = 0;
     for (const c of tile.cellList) {
       const cnt = which === 'a' ? c.na : c.nb;
       if (cnt > 0) {
         const g = new THREE.BufferGeometry();
-        for (const k in attrs) g.setAttribute(k, attrs[k]);
-        g.setDrawRange(start, 0);
+        if (shared) { for (const k in shared) g.setAttribute(k, shared[k]); g.setDrawRange(start, 0); }
+        else {
+          g.setAttribute('pos', new THREE.BufferAttribute(POS.subarray(start * 3, (start + cnt) * 3), 3, false));
+          g.setAttribute('col', new THREE.BufferAttribute(COL.subarray(start * 4, (start + cnt) * 4), 4, true));
+          g.setAttribute('oct', new THREE.BufferAttribute(OCT.subarray(start * 2, (start + cnt) * 2), 2, true));
+          g.setDrawRange(0, 0);
+        }
         g.boundingBox = c.box; g.boundingSphere = c.sphere;
-        const m = new THREE.ShaderMaterial({
-          vertexShader: VERT, fragmentShader: FRAG, toneMapped: false,
-          uniforms: { ...this.u, uOrigin: { value: tile.uOrigin }, uQuant: { value: this.quant },
-            uOff: { value: (which === 'a' ? 0 : c.na) - start }, uN: { value: c.na + c.nb }, uSpacing: { value: tile.spacing } },
-        });
-        const p = new THREE.Points(g, m);
-        p.layers.set(3); p.matrixAutoUpdate = false; p.visible = false; p.name = `pc_${tile.i}_${tile.j}_${which}_${c.k}`;
-        this.group.add(p);
-        objs.push({ obj: p, cell: c, start, n: cnt });
+        const o = mk(g, mat(shared ? -start : c.na, c.na + c.nb), `pc_${tile.i}_${tile.j}_${which}_${c.k}`);
+        objs.push({ obj: o, cell: c, start, n: cnt });
       }
       start += cnt;
     }
-    tile.parts[which] = { objs, n };
+    let whole = null;
+    if (shared && n > 0) {
+      const g = new THREE.BufferGeometry();
+      for (const k in shared) g.setAttribute(k, shared[k]);
+      g.setDrawRange(0, n); g.boundingBox = tile.box; g.boundingSphere = tile.box.getBoundingSphere(new THREE.Sphere());
+      whole = mk(g, mat(0, 1e9), `pc_${tile.i}_${tile.j}_a_ganz`);       // Rang ~0: zeigt alles, was gescannt ist
+    }
+    tile.parts[which] = { objs, n, whole };
+    if (whole) this.warmQ.push(whole); else for (const o of objs) this.warmQ.push(o.obj);
     this.loadedPts += n;
   }
 
@@ -263,6 +277,7 @@ export class PointCloud {
   _unload(tile, which) {
     const p = tile.parts[which]; if (!p) return;
     for (const o of p.objs) { this.group.remove(o.obj); o.obj.geometry.dispose(); o.obj.material.dispose(); }
+    if (p.whole) { this.group.remove(p.whole); p.whole.geometry.dispose(); p.whole.material.dispose(); }
     this.loadedPts -= p.n; tile.parts[which] = null;
   }
 
@@ -290,6 +305,8 @@ export class PointCloud {
     const so = this.scanOrigin;
     const cand = [];
     let drawn = 0;
+    const view = u.uEnd.value;
+    this.farVis = [];                               // sichtbare Objekte außerhalb der Sichtweite (nur Scan) -> ohne Verdichtung
     for (const t of this.tiles) {
       const dx = Math.max(t.box.min.x - playerPos.x, 0, playerPos.x - t.box.max.x);
       const dz = Math.max(t.box.min.z - playerPos.z, 0, playerPos.z - t.box.max.z);
@@ -302,31 +319,42 @@ export class PointCloud {
         if (ds < SCAN_MAX) f = 1;
       }
       t.want.a = d < PC.coarseDist || ds < SCAN_MAX;
-      t.want.b = d < PC.fineDist || ds < 45;
+      t.want.b = d < PC.fineDist;              // Scan nutzt in der Ferne nur die grobe Stufe (kein Nachladen beim Scan)
       for (const w of ['a', 'b']) {
         if (t.want[w] && !t.parts[w]) cand.push([w === 'a' ? d : d * 0.8 - 20, t, w]);
         if (!t.want[w] && t.parts[w] && d > (w === 'a' ? PC.coarseDist + 60 : PC.fineDist + 40)) this._unload(t, w);
       }
       const pa = t.parts.a, pb = t.parts.b;
       if (!pa && !pb) continue;
-      if (f <= 0) {                                   // ganze Kachel außer Sicht
-        for (const p of [pa, pb]) if (p) for (const o of p.objs) o.obj.visible = false;
+      const hide = () => { for (const q of [pa, pb]) if (q) for (const o of q.objs) o.obj.visible = false; };
+      if (d > view + 1) {
+        // Kachel ganz außerhalb der Sichtweite: höchstens als Ganzes (grobe Stufe) für den Scan, keine Zell-Objekte
+        hide();
+        if (pa && pa.whole) {
+          const on = scanning && ds < SCAN_MAX;
+          pa.whole.visible = on;
+          if (on) { drawn += pa.n; this.farVis.push(pa.whole); }
+        }
         continue;
       }
+      if (pa && pa.whole) pa.whole.visible = false;
       // je Zelle: Anteil nach Zellabstand, a = die ersten na Punkte, b = Rest
-      for (const p of [pa, pb]) if (p) for (const o of p.objs) {
+      for (const q of [pa, pb]) if (q) for (const o of q.objs) {
         const c = o.cell, b = c.box;
-        let fc = this.frac(Math.hypot(Math.max(b.min.x - playerPos.x, 0, playerPos.x - b.max.x), Math.max(b.min.z - playerPos.z, 0, playerPos.z - b.max.z)));
+        const dc = Math.hypot(Math.max(b.min.x - playerPos.x, 0, playerPos.x - b.max.x), Math.max(b.min.z - playerPos.z, 0, playerPos.z - b.max.z));
+        let fc = this.frac(dc);
         if (scanning && fc < 1) {
-          const ds = Math.hypot(Math.max(b.min.x - so.x, 0, so.x - b.max.x), Math.max(b.min.z - so.z, 0, so.z - b.max.z));
-          if (ds < SCAN_MAX) fc = 1;
+          const dsc = Math.hypot(Math.max(b.min.x - so.x, 0, so.x - b.max.x), Math.max(b.min.z - so.z, 0, so.z - b.max.z));
+          if (dsc < SCAN_MAX) fc = 1;
         }
         const need = Math.ceil((c.na + c.nb) * Math.min(1, fc * 1.02));
-        const cnt = p === pa ? Math.min(c.na, need) : Math.max(0, Math.min(c.nb, need - c.na));
+        const cnt = q === pa ? Math.min(c.na, need) : Math.max(0, Math.min(c.nb, need - c.na));
         o.obj.geometry.drawRange.count = cnt; o.obj.visible = cnt > 0; drawn += cnt;
+        if (cnt > 0 && dc > view + 0.5) this.farVis.push(o.obj);
       }
     }
     this.drawnPts = drawn;
+    for (let k = 0; k < 4 && this.warmQ.length; k++) this._warm(this.warmQ.shift());
     if (cand.length && this.loading < this.maxLoads) {
       cand.sort((a, b) => a[0] - b[0]);
       for (const [, t, w] of cand) { if (this.loading >= this.maxLoads) break; this._load(t, w); }
@@ -334,6 +362,22 @@ export class PointCloud {
   }
 
   // Scan auslösen: Distanz-Cubemap der Stadt-Meshes vom Ursprung aus rendern
+  _warm(obj) {
+    if (!obj.parent) return;                         // inzwischen entladen
+    const r = this.renderer, prev = r.getRenderTarget(), dr = obj.geometry.drawRange;
+    const vis = obj.visible, cnt = dr.count, fc = obj.frustumCulled;
+    obj.visible = true; dr.count = 1; obj.frustumCulled = false;
+    r.setRenderTarget(this.warmRT); r.render(obj, this.warmCam); r.setRenderTarget(prev);
+    obj.visible = vis; dr.count = cnt; obj.frustumCulled = fc;
+  }
+
+  // einmal beim Laden: Scan-Shader kompilieren und Cubemap anlegen (sonst hängt der erste Scan)
+  prewarmScan(origin) {
+    const keep = this.scanT;
+    this.scan(origin);
+    this.scanT = keep; this.u.uScanOn.value = keep >= 0 ? 1 : 0;
+  }
+
   scan(origin) {
     this.scanOrigin.copy(origin);
     this.u.uScanO.value.copy(origin);
@@ -355,11 +399,14 @@ export class PointCloud {
 
   // Nahbereich mehrfach zeichnen (DUP Durchgänge, versetzt) -> dichte, winzige Punkte wie in der Referenz
   render(renderer, scene, camera, passes = PC.dup) {
+    const far = this.farVis || [];
     for (let k = 0; k < passes; k++) {
       this.u.uDup.value = k;
+      if (k === 1) for (const o of far) o.visible = false;      // Verdichtung nur im Nahbereich
       for (const o of this.group.children) if (o.visible) o.material.uniformsNeedUpdate = true;
       renderer.render(scene, camera);
     }
+    if (passes > 1) for (const o of far) o.visible = true;
     this.u.uDup.value = 0;
   }
 }

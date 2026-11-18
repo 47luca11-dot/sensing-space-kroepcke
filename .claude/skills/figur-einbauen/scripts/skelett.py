@@ -189,14 +189,25 @@ def anpassen(P, H, mensch, carlos, log=print, kanten=None):
     z_hip = zc + 0.065 * k; info["schritt_z"] = round(zc, 3)
 
     # ---------- Schultern: Oberkante bei |x| ~ 0.17 m, Gelenk 5,5 cm darunter, 5 cm innerhalb der Außenseite
-    sh = {}
+    sh = {}; info["arm_achse"] = {}
     for side, s in (("L", 1), ("R", -1)):
-        band = (s * x > 0.13 * k) & (s * x < 0.19 * k) & (z > 0.7 * H) & (np.abs(y) < 0.15 * k)
-        z_sh = float(z[band].max()) - 0.055 * k
-        sl = (np.abs(z - z_sh) < 0.012) & (s * x > 0)
-        xo = float((s * x[sl]).max())
-        yy = y[sl & (s * x > xo - 0.08 * k)]
-        sh[side] = Vector((s * (xo - 0.05 * k), float(np.median(yy)), z_sh))
+        # Schultergelenk aus dem Arm: Gerade durch den frei stehenden Oberarm (26-42 cm neben der Mitte), bis auf
+        # Schulterbreite (17,5 cm) nach innen verlängert. Robust gegen Haare/Kapuzen über der Schulter und flache Arme.
+        Aw = P[(s * x > 0.26 * k) & (s * x < 0.42 * k) & (z > 0.55 * H) & (z < 0.9 * H)]
+        z_sh = None
+        if len(Aw) > 50:
+            c_ = Aw.mean(0); _, _, vt = np.linalg.svd(Aw - c_, full_matrices=False); d_ = vt[0]
+            if d_[0] * s < 0: d_ = -d_
+            if abs(d_[0]) > 0.2:
+                t_ = (s * 0.175 * k - c_[0]) / d_[0]; pj = c_ + d_ * t_
+                if 0.74 * H < pj[2] < 0.88 * H: z_sh = float(pj[2])
+                info["arm_achse"][side] = dict(neigung_grad=round(float(np.degrees(np.arcsin(-d_[2]))), 1))
+        if z_sh is None:                                               # Arme hängen eng am Körper: alte Methode (Oberkante)
+            band = (s * x > 0.13 * k) & (s * x < 0.19 * k) & (z > 0.7 * H) & (z < 0.88 * H) & (np.abs(y) < 0.15 * k)
+            z_sh = float(z[band].max()) - 0.055 * k if band.any() else 0.82 * H
+        sl = (np.abs(z - z_sh) < 0.02 * k) & (s * x > 0.12 * k) & (s * x < 0.22 * k)
+        yy = y[sl] if sl.sum() > 5 else y[np.abs(z - z_sh) < 0.03 * k]
+        sh[side] = Vector((s * 0.175 * k, float(np.median(yy)), z_sh))
     z_sh = (sh["L"].z + sh["R"].z) / 2
     z_n0 = z_sh + 0.02 * k                                           # Halsansatz (C7)
     info["schulter_z"] = round(z_sh, 3)
@@ -236,13 +247,32 @@ def anpassen(P, H, mensch, carlos, log=print, kanten=None):
     for side, s in (("L", 1), ("R", -1)):
         sj = sh[side]
         path = [sj]
-        for zi in np.arange(sj.z - 0.05 * k, 0.3 * H, -0.008):
-            b = (s * x > 0.02) & (np.abs(z - zi) < 0.006)
-            if b.sum() < 5: continue
-            xm = float((s * x[b]).max())
-            if xm < 0.26 * k: continue                                 # Arm liegt nicht mehr frei neben dem Körper
-            c = P[b & (s * x > xm - 0.09 * k)].mean(0)
-            if (Vector(c) - path[-1]).length < 0.12 * k: path.append(Vector(c))
+        # Arm entlang seiner Richtung verfolgen (unabhängig von der Haltung: A-Pose, flache Arme, fast T-Pose):
+        # von der Schulter aus jeweils den Schwerpunkt der Oberfläche in einer Schale 3-7 cm voraus (Kegel um die Laufrichtung)
+        A_arm = P[s * x > sj.x * s + 0.01 * k]
+        dirv = np.array([s * 1.0, 0.0, -0.75]); dirv /= np.linalg.norm(dirv)
+        Aw = P[(s * x > 0.26 * k) & (s * x < 0.42 * k) & (z > 0.55 * H) & (z < 0.9 * H)]
+        if len(Aw) > 50:                                                   # Startrichtung = Achse des Oberarms
+            c_ = Aw.mean(0); _, _, vt = np.linalg.svd(Aw - c_, full_matrices=False); d_ = vt[0]
+            if d_[0] * s < 0: d_ = -d_
+            if abs(d_[0]) > 0.2: dirv = d_ / np.linalg.norm(d_)
+        cur = np.array(sj)
+        for _ in range(60):
+            Q = A_arm - cur; dist = np.linalg.norm(Q, axis=1)
+            m = None
+            for r_in, r_out in ((0.03, 0.07), (0.05, 0.10), (0.07, 0.14)):          # Scan-Lücken (fleckige Ärmel) überspringen
+                mm = (dist > r_in * k) & (dist < r_out * k) & ((Q @ dirv) > 0.6 * dist)
+                if mm.sum() >= 8: m = mm; break
+            if m is None: break
+            c = A_arm[m].mean(0)
+            nd = c - cur; nl = np.linalg.norm(nd)
+            if nl < 1e-4: break
+            dirv = 0.5 * dirv + 0.5 * nd / nl; dirv /= np.linalg.norm(dirv)
+            cur = cur + dirv * 0.04 * k
+            # auf die Querschnitt-Mitte ziehen (Schale um den neuen Punkt, senkrecht zur Laufrichtung)
+            Q2 = A_arm - cur; ring = (np.abs(Q2 @ dirv) < 0.008 * k) & (np.linalg.norm(Q2, axis=1) < 0.09 * k)
+            if ring.sum() > 8: cur = A_arm[ring].mean(0)
+            path.append(Vector(cur))
         seg = [(path[i + 1] - path[i]).length for i in range(len(path) - 1)]; L = sum(seg)
         def at(dist):
             acc = 0.0
@@ -350,8 +380,23 @@ def hand_gewichte(game, rig, info, k, log=print):
     def segd(p, a, b):
         ab = b - a; t = np.clip(((p - a) @ ab) / (ab @ ab), 0, 1); return np.linalg.norm(a + np.outer(t, ab) - p, axis=1) if p.ndim == 2 else np.linalg.norm(a + t * ab - p)
     B = {b.name: (np.array(b.head_local), np.array(b.tail_local)) for b in rig.data.bones}
+    FB = [f"{f}.0{i}" for f in ("thumb", "f_index", "f_middle", "f_ring", "f_pinky") for i in (1, 2, 3)]
     for side in ("L", "R"):
         lab = info.get("handlabels_" + side); hi_pts = info.get("hi_punkte")
+        if (not lab or hi_pts is None) and ("hand_" + side) in info:
+            # Ersatz ohne Finger-Erkennung (Finger im Scan verschmolzen): jeder Handpunkt -> nächste Glieder der Vorlage,
+            # weich über die drei nächsten Knochen, damit das Entspannen die Hand zusammenführt statt sie zu zerreißen
+            w = np.array(info["hand_" + side]["handgelenk"]); d = np.array(info["hand_" + side]["richtung"])
+            Q = GV - w; sel = np.where(((Q @ d) > 0.015 * k) & (np.linalg.norm(Q, axis=1) < 0.24 * k))[0]
+            kand_all = ["hand." + side] + [f"{n}.{side}" for n in FB]
+            for vi in sel:
+                p = GV[vi]; dd = np.array([segd(p, *B[n]) for n in kand_all]); top = np.argsort(dd)[:3]
+                ww = 1.0 / (dd[top] + 0.004) ** 3; ww /= ww.sum()
+                for g in list(game.data.vertices[vi].groups): g.weight = 0.0
+                for t_i, x_ in zip(top, ww):
+                    if x_ > 0.02: game.vertex_groups[kand_all[t_i]].add([int(vi)], float(x_), 'REPLACE')
+                geaendert += 1
+            continue
         if not lab or hi_pts is None: continue
         w = np.array(info["hand_" + side]["handgelenk"]); d = np.array(info["hand_" + side]["richtung"])
         idx = list(lab.keys()); kd = KDTree(len(idx))

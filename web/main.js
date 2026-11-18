@@ -11,6 +11,7 @@ import { Scan, scanUniforms } from './js/scan.js';
 import { Dust, Sfx } from './js/fx.js';
 import { loadScans } from './js/scans.js';
 import { PointCloud, makeOccluderMaterial, PC, SCAN_HOLD } from './js/pointcloud.js';
+import { PostFX } from './js/post.js';
 
 const $ = (id) => document.getElementById(id);
 const params = new URLSearchParams(location.search);
@@ -94,6 +95,7 @@ const hud = new Hud();
 const scan = new Scan();
 const pc = new PointCloud(scene, renderer, camera);
 const occMat = makeOccluderMaterial();
+const post = new PostFX(renderer);   // Glühen + digitales Rauschen (nur Punktwolken-Ansicht)
 let OCCLUDE = !params.has('noocc');
 const dust = new Dust(scene);
 const sfx = new Sfx();
@@ -122,7 +124,7 @@ async function boot() {
       catch (e) { console.warn(e); POINTS = false; hudNote = 'Punktwolke fehlt – Mesh-Ansicht (erzeugen: pipeline/pointcloud/run_headless.py)'; }
     }
     await world.load(setStatus, { simplify: LOW_POWER, base: params.get('city') || 'assets/city/', collisionOnly: POINTS });
-    if (POINTS) pc.setOccluders(world.colliders, occMat);
+    if (POINTS) { pc.setOccluders(world.colliders, occMat); const s = world.meta.spawn || [0, 0, 0]; pc.prewarmScan(new THREE.Vector3(s[0], (s[1] || 0) + 1.5, s[2])); }
     applyLook();
     world.updateStreaming(new THREE.Vector3(...(world.meta.spawn || [0, 0, 0])));
     const scansP = loadScans(scene, params.get('city') || 'assets/city/');   // eigene Splat-Scans aus dem Manifest
@@ -193,6 +195,9 @@ const OPTS = [
   { id: 'opt-dup', label: 'Punktdichte (Verdichtung)', min: 1, max: 4, step: 1, unit: '×', def: PC.dup, apply: (v) => { PC.dup = v; } },
   { id: 'opt-size', label: 'Punktgröße', min: 1, max: 4, step: 0.5, unit: ' px', def: PC.maxPx, apply: (v) => { pc.u.uMaxPx.value = v; } },
   { id: 'opt-expo', label: 'Belichtung', min: 0.8, max: 2.8, step: 0.1, unit: '', def: 1.7, apply: (v) => { pc.u.uExpo.value = v; } },
+  { id: 'opt-glow', label: 'Glühen', min: 0, max: 2.5, step: 0.1, unit: '', def: 1, apply: (v) => { post.comp.uniforms.uGlow.value = v; } },
+  { id: 'opt-noise', label: 'Digitales Rauschen', min: 0, max: 2.5, step: 0.1, unit: '', def: 1, apply: (v) => { post.comp.uniforms.uNoise.value = v; } },
+  { id: 'opt-streak', label: 'Lichtschlieren', min: 0, max: 2.5, step: 0.1, unit: '', def: 1, apply: (v) => { post.comp.uniforms.uStreak.value = v; } },
   { id: 'opt-res', label: 'Auflösung', min: 50, max: 100, step: 5, unit: ' %', def: 100,
     apply: (v) => { maxPR = Math.min(devicePixelRatio || 1, 1.5) * v / 100; layout(); } },
 ];
@@ -340,7 +345,7 @@ let frameNo = 0;
 renderer.shadowMap.autoUpdate = false;
 function renderPoints() {
   renderer.info.reset();
-  renderer.clear();
+  if (post.enabled) post.begin(); else renderer.clear();
   camera.updateMatrixWorld();
   // 1) unsichtbare Stadt-Meshes nur als Tiefe (leicht nach hinten versetzt) -> Punkte hinter Wänden verdeckt
   if (OCCLUDE) renderer.render(pc.occScene, camera);
@@ -351,6 +356,7 @@ function renderPoints() {
   // 4) Splats
   camera.layers.set(1); renderer.render(scene, camera);
   camera.layers.set(0);
+  if (post.enabled) post.end(performance.now() / 1000);
 }
 function render() {
   if (POINTS) return renderPoints();
@@ -454,6 +460,6 @@ window.__game = {
   setQuality(q) { quality = q; layout(); },
   perf: () => ({ fps: perf.fps, ms: perf.ms, quality, calls: renderer.info.render.calls, tris: renderer.info.render.triangles }),
   get player() { return player; }, get carlos() { return carlos; }, get rig() { return rig; },
-  world, scene, camera, renderer, spark, P, fillerPush, scanUniforms, hud, input, pc, PC,
+  world, scene, camera, renderer, spark, P, fillerPush, scanUniforms, hud, input, pc, PC, post,
   setLook(p) { POINTS = !!p; applyLook(); }, setOcclude(o) { OCCLUDE = !!o; },
 };

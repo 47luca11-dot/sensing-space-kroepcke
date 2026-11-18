@@ -8,12 +8,15 @@ import { SplatMesh, SplatSkinning } from '@sparkjsdev/spark';
 
 // Spielfigur aus ?figur= (vom Startbildschirm); Standard Carlos. handsInPockets: Arme bleiben ruhig (keine Balance-Arme).
 // mesh: texturiertes Mesh ohne Splats (nur <id>.glb)
-const FIGS = { person1: { base: 'assets/carlos/' }, mohammad: { base: 'assets/mohammad/', handsInPockets: true }, daunenjacke: { base: 'assets/daunenjacke/', mesh: true }, trainingsjacke: { base: 'assets/trainingsjacke/' }, jackemesh: { base: 'assets/jackemesh/', mesh: true } };
+const FIGS = { person1: { base: 'assets/carlos/' }, mohammad: { base: 'assets/mohammad/', handsInPockets: true }, daunenjacke: { base: 'assets/daunenjacke/', mesh: true }, trainingsjacke: { base: 'assets/trainingsjacke/' }, jackemesh: { base: 'assets/jackemesh/', mesh: true },
+  bv9: { base: 'assets/bv9/' }, bv10: { base: 'assets/bv10/' }, bv11: { base: 'assets/bv11/' } };   // Bothfeld-Vahrenheide 9-11: Skelett mit Fingern (figur_finger.py)
 const wanted = new URLSearchParams(location.search).get('figur');
 const ID = FIGS[wanted] ? wanted : 'person1', BASE = FIGS[ID].base;
 export const FIGURE = { id: ID, ...FIGS[ID] };
 export const fillerPush = { value: 0.03 };
-const BASE_TINT = new THREE.Color(1, 1, 1);
+// Figuren im Spiel etwas dunkler (passt zum dunklen Punktwolken-Raum)
+export const FIG_DARK = 0.66;
+const BASE_TINT = new THREE.Color(FIG_DARK, FIG_DARK, FIG_DARK);   // Splats (und Füll-Mesh-Grundfarbe) abgedunkelt
 
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 const smooth = (a, b, x) => { const t = clamp((x - a) / (b - a), 0, 1); return t * t * (3 - 2 * t); };
@@ -38,7 +41,7 @@ export async function loadCarlos(scene) {
   const [gltf, skinBuf, splat] = await Promise.all([
     loader.loadAsync(BASE + ID + '.glb'),
     FIGURE.mesh ? null : fetch(BASE + ID + '_skin.bin').then((r) => { if (!r.ok) throw new Error('skin.bin ' + r.status); return r.arrayBuffer(); }),
-    FIGURE.mesh ? null : (async () => { const s = new SplatMesh({ url: BASE + ID + '_splats.ply' }); await s.initialized; s.maxSh = 1; return s; })(),
+    FIGURE.mesh ? null : (async () => { const s = new SplatMesh({ url: BASE + ID + '_splats.ply' }); await s.initialized; s.maxSh = 1; if (s.recolor && s.recolor.setScalar) s.recolor.setScalar(FIG_DARK); else s.recolor = new THREE.Color(FIG_DARK, FIG_DARK, FIG_DARK); return s; })(),
   ]);
   return new Character(scene, gltf, skinBuf, splat);
 }
@@ -52,7 +55,7 @@ class Character {
     this.model.traverse((o) => {
       if (!o.isMesh) return;
       o.castShadow = true; o.receiveShadow = false; o.frustumCulled = false;
-      o.material = FIGURE.mesh ? new THREE.MeshBasicMaterial({ map: o.material.map, toneMapped: false }) : fillerMaterial();   // Mesh-Figur: Scan-Textur, Licht eingebacken
+      o.material = FIGURE.mesh ? new THREE.MeshBasicMaterial({ map: o.material.map, color: new THREE.Color(FIG_DARK, FIG_DARK, FIG_DARK), toneMapped: false }) : fillerMaterial();   // Mesh-Figur: Scan-Textur, Licht eingebacken
       if (o.isSkinnedMesh) skinned = o;
     });
     this.skinned = skinned; this.meshMat = skinned.material;

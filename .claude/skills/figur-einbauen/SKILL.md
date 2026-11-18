@@ -73,6 +73,22 @@ Blender -b --factory-startup --python scripts/figur_hybrid.py -- --id <id> --stl
 
 Stand 2026-11-12: läuft durch (Trainingsjacke: 61 Knochen, 5 Finger je Hand erkannt, 0 offene Kanten). **Noch nicht im Spiel getestet** – vor dem Eintragen Testbilder und Fingerhaltung prüfen. Skelett lässt sich live über Blender MCP (Port 9877) ansehen: Körper laden, `skelett.anpassen` + `rig_bauen` ausführen, Ansicht per `region_3d` setzen, Screenshot.
 
+## 2c. Splat-Scan mit Fingern (Standard seit 2026-11-18, im Live-Blender über das Blender-MCP)
+
+```bash
+python scripts/splat_werkzeug.py ausschneiden <szene.ply> figuren/<id>/<id>_person.ply --zentrum "x,y,z" --oben -y --groesse 1.80 --vorschau <png>
+```
+Dann im Live-Blender (MCP, `execute_blender_code`): `sys.argv = ["blender","--","--id",<id>,"--quelle",<person.ply>,"--out",<ordner>]` setzen,
+`sys.modules.pop("skelett")`, `scripts/figur_finger.py` per `exec` in einem `bpy.app.timers`-Callback ausführen (Log in eine Datei umleiten) –
+der Lauf dauert ~1,5 min und blockiert sonst den MCP-Aufruf. Headless geht auch: `Blender -b --factory-startup --python scripts/figur_finger.py -- …`.
+
+- Körper = geschlossene Hülle aus den Splats (`--voxel 0.006` Standard; bei verschmolzenen Fingern `--voxel 0.004 --schliessen 2`).
+- Skelett 61 Knochen (`mensch_skelett.json`), **Schulter aus der Oberarm-Achse** (robust gegen Haare/Kapuzen), **Arm-Verfolgung entlang des Arms**
+  (A-Pose, flache Arme, Scan-Lücken bis 14 cm), Finger per Oberflächen-Ästen; ohne Erkennung Vorlage + geometrische Gewichte zur nächsten Vorlage.
+- Finger werden entspannt und als Ruhepose übernommen → im Spiel nie gespreizt. Export nur aus der aktiven Szene (`use_active_scene`).
+- Scan-Viewer-Extraktion erkennt „oben“ bei diesen Flur-Szenen oft falsch (Wand als Boden) – Achse selbst prüfen (KIRI/COLMAP: `-y`).
+  `scripts/aus_viewer.py` nutzt die Viewer-Werte (Mitte/oben/Höhe) und skaliert die Szene vorab auf Meter.
+
 ## 3. Ins Spiel eintragen
 
 1. Dateien kopieren nach `web/assets/<id>/` **und** `startbildschirm/assets/`: `<id>.glb`, bei Splat-Figuren zusätzlich `<id>_splats.ply`, `<id>_skin.bin`, `<id>_skin.json`.
@@ -111,4 +127,7 @@ Große Dateien laufen über Git LFS (`.gitattributes` deckt .glb/.ply/.bin ab). 
 | trainingsjacke hybrid (in Arbeit) | `figuren/trainingsjacke/figuro_trainingsjacke.stl` + `figuren/trainingsjacke/jacke_splats_roh.ply` | `figur_hybrid.py --id trainingsjacke --stl … --farbe …` |
 | jackemesh (Test) | `figuro-19a5….stl` + Farbe aus `trainingsjacke`-Splats | `--art stl --farbe jacke_splats_roh.ply --modus mesh --arme a` – Abstand zum Scan nach Ausrichtung ~1 cm, ~20 % der Fläche > 3 cm daneben (KI-Proportionen) |
 | daunenjacke | `KIRI Person Daunenjacke_mesh.ply` | `--art scan --modus mesh --arme a` (ursprünglich mit eigenem Skript gebaut) |
+| bv9 „Lederjacke" | `Bothfeld-Vahrenheide (9).ply` | `ausschneiden … --zentrum "0.164,-0.2,0.02" --oben -y` → `figur_finger.py --id bv9 --voxel 0.004 --schliessen 2` (Finger verschmolzen → Vorlage + geometrische Gewichte) |
+| bv10 „Locken" | `Bothfeld-Vahrenheide (10).ply` | `--zentrum "0.349,0.0,-0.019" --oben -y`, danach 180° um z drehen (Blick war verkehrt), orange Bodenreflexe bis Knie entfernt → `figur_finger.py --id bv10 --voxel 0.004 --schliessen 2` (5+5 Finger) |
+| bv11 „Boots" | `Bothfeld-Vahrenheide (11).ply` | `--zentrum "-0.106,0.3,-0.129" --oben -y` → `figur_finger.py --id bv11` (5+5 Finger) |
 | mohammad | `KIRI Person Weste_mesh.ply` | `--art scan --modus splat --arme taschen` (ursprünglich mit eigenem Skript gebaut) |

@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: b8a76d7d-27b8-490e-b6de-334a309ea42a
-  modified: 2026-11-11T19:35:45.900Z
+  modified: 2026-11-18T16:46:34.710Z
 ---
 
 Project (since 2026-11-05); since 2026-11-11 moved into `Documents/Sensing Space/Claude Code/output/hannover/`:
@@ -18,6 +18,6 @@ Project (since 2026-11-05); since 2026-11-11 moved into `Documents/Sensing Space
 - Non-obvious with KIRI: arbitrary scale → scaled to 1.80 m (cross-checked with ~30 cm shoes); photogrammetry often fills the hidden space between the legs from the front ("Beinbrücke") → import_mesh detects it by horizontal slices (legs separate low, back notch up to the crotch) and cuts a wedge by boolean. A real crotch (legs separate above 0.3 H) must not trigger it.
 - `server.py` honours a `PORT` env var (preview tool moves it when 5176 is taken by another session's older server); on Windows it no longer silently shares a busy port. In a hidden Browser pane `requestAnimationFrame` stops: capture via `window.__viewer.renderer.render(...)` + `toDataURL`.
 
-- Since 2026-11-12 the reusable pipeline is the project skill `.claude/skills/figur-einbauen/` (splat_werkzeug.py = crop/align splat scenes, figur_bauen.py = Blender build for splat or textured-mesh figures). First figure built with it: `trainingsjacke`. Pitfall found: splat skin indices must follow the GLB joint order.
+- Since 2026-11-18: rigging with finger skeleton runs IN THE LIVE BLENDER via MCP (user explicitly wants Blender MCP used): `.claude/skills/figur-einbauen/scripts/figur_finger.py` (body hull from splats, 61 bones incl. fingers, relaxed fingers as rest pose) started from a `bpy.app.timers` callback with log file; pop `skelett` from sys.modules after edits. Characters bv9/bv10/bv11 (Bothfeld-Vahrenheide 9–11) built this way and registered (carlos.js FIGS, startbildschirm CHARACTERS/PLAYABLE). In-game figures are darkened (`FIG_DARK` in web/js/carlos.js).
 
 Related: [[meshes-always-gapfree-highres]]

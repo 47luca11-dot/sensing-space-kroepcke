@@ -1,0 +1,27 @@
+[     0s] 1 Körper aus den Splats
+[    28s] Körper {'punkte': 337818, 'dreiecke': 675844, 'offene_kanten': 0, 'nicht_mannigfaltig': 0, 'groesse_m': 1.808, 'voxel_mm': 6.0, 'schwebeteile': 244}
+[    28s] 2 Skelett
+[    29s]   Hand: kleiner Finger ergänzt (nicht frei im Mesh)
+[    29s]   Hand: 5 Finger, Daumen zweigt bei 0.122 m ab, Knöchel bei [0.217, 0.217, 0.157, 0.157]
+[    29s]   Hand: kleiner Finger ergänzt (nicht frei im Mesh)
+[    29s]   Hand: 5 Finger, Daumen zweigt bei 0.124 m ab, Knöchel bei [0.226, 0.226, 0.161, 0.161]
+[    29s] 3 Füll-Mesh + Gewichte
+[    45s]   Hand-Gewichte geometrisch gesetzt: 1291 Punkte
+Info: 55995 vertex weights limited
+[    45s] 4 Splats auf das Mesh legen
+[    55s] Splats {'gesamt': 151643, 'auf_mesh': 143391} {'haende': 47320, 'luecken': 76152}
+[    55s] 5 Finger entspannen
+[    55s] 6 Animationen
+17:38:27 | INFO: Data are loaded, start creating Blender stuff
+17:38:27 | INFO: Blender create Mesh node person1_mesh
+17:38:28 | INFO: glTF import finished in 1.23s
+[    58s] 7 Export
+Info: Saved copy as "bv11.blend"
+17:38:29 | INFO: Starting glTF 2.0 export
+17:38:29 | INFO: Extracting primitive: bv11_mesh
+17:38:30 | INFO: Primitives created: 1
+17:38:33 | INFO: Finished glTF 2.0 export in 4.159856557846069 s
+
+[    63s] 8 Testbilder
+REPORT {"id": "bv11", "art": "splats_finger", "koerper": {"punkte": 337818, "dreiecke": 675844, "offene_kanten": 0, "nicht_mannigfaltig": 0, "groesse_m": 1.808, "voxel_mm": 6.0, "schwebeteile": 244}, "skelett": {"knochen": 61, "schritt_z": 0.841, "arm_achse": {"L": {"neigung_grad": 67.5}, "R": {"neigung_grad": 51.2}}, "schulter_z": 1.427, "arm_L": {"laenge": 0.784, "handgelenk_bei": 0.597}, "arm_R": {"laenge": 0.66, "handgelenk_bei": 0.434}, "finger": {"L": true, "R": true}}, "hand_gewichte": 1291, "fuellmesh": {"punkte": 39896, "dreiecke": 80000, "offene_kanten": 0, "nicht_mannigfaltig": 0, "nachgetragen": 0, "jacke_entkoppelt": 8325}, "scan_splats": {"gesamt": 151643, "auf_mesh": 143391}, "neue_splats": {"haende": 47320, "luecken": 76152}, "finger_entspannt": true, "animationen": ["bv11_HeadTilt_L", "bv11_HeadTilt_R", "bv11_Idle_Breathing", "bv11_Pockets", "bv11_Run", "bv11_Stumble", "bv11_Walk"], "glb": {"mb": 3.0, "knochen": 61, "clips": 7}, "splats": {"anzahl": 266863, "teile": [143391, 47320, 76152], "mb": 27.8}}
+FERTIG

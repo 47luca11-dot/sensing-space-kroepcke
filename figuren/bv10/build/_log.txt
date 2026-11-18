@@ -1,0 +1,25 @@
+[     0s] 1 Körper aus den Splats
+[    32s] Körper {'punkte': 291496, 'dreiecke': 583500, 'offene_kanten': 0, 'nicht_mannigfaltig': 0, 'groesse_m': 1.812, 'voxel_mm': 4.0, 'schwebeteile': 1501}
+[    32s] 2 Skelett
+[    33s]   Hand: 5 Finger, Daumen zweigt bei 0.144 m ab, Knöchel bei [0.153, 0.156, 0.167, 0.167]
+[    34s]   Hand: 5 Finger, Daumen zweigt bei 0.188 m ab, Knöchel bei [0.281, 0.306, 0.312, 0.312]
+[    34s] 3 Füll-Mesh + Gewichte
+[    47s]   Hand-Gewichte geometrisch gesetzt: 1532 Punkte
+Info: 30391 vertex weights limited
+[    47s] 4 Splats auf das Mesh legen
+[    55s] Splats {'gesamt': 143366, 'auf_mesh': 125313} {'haende': 53470, 'luecken': 35025}
+[    55s] 5 Finger entspannen
+[    55s] 6 Animationen
+17:43:14 | INFO: Data are loaded, start creating Blender stuff
+17:43:14 | INFO: Blender create Mesh node person1_mesh
+17:43:15 | INFO: glTF import finished in 1.29s
+[    58s] 7 Export
+Info: Saved copy as "bv10.blend"
+17:43:17 | INFO: Starting glTF 2.0 export
+17:43:17 | INFO: Extracting primitive: bv10_mesh
+17:43:17 | INFO: Primitives created: 1
+17:43:21 | INFO: Finished glTF 2.0 export in 3.954526662826538 s
+
+[    63s] 8 Testbilder
+REPORT {"id": "bv10", "art": "splats_finger", "koerper": {"punkte": 291496, "dreiecke": 583500, "offene_kanten": 0, "nicht_mannigfaltig": 0, "groesse_m": 1.812, "voxel_mm": 4.0, "schwebeteile": 1501}, "skelett": {"knochen": 61, "schritt_z": 0.843, "arm_achse": {"L": {"neigung_grad": 54.8}, "R": {"neigung_grad": 62.6}}, "schulter_z": 1.45, "arm_L": {"laenge": 0.51, "handgelenk_bei": 0.343}, "arm_R": {"laenge": 0.785, "handgelenk_bei": 0.544}, "finger": {"L": true, "R": true}}, "hand_gewichte": 1532, "fuellmesh": {"punkte": 39746, "dreiecke": 80000, "offene_kanten": 0, "nicht_mannigfaltig": 0, "nachgetragen": 0, "jacke_entkoppelt": 7657}, "scan_splats": {"gesamt": 143366, "auf_mesh": 125313}, "neue_splats": {"haende": 53470, "luecken": 35025}, "finger_entspannt": true, "animationen": ["bv10_HeadTilt_L", "bv10_HeadTilt_R", "bv10_Idle_Breathing", "bv10_Pockets", "bv10_Run", "bv10_Stumble", "bv10_Walk"], "glb": {"mb": 3.0, "knochen": 61, "clips": 7}, "splats": {"anzahl": 213808, "teile": [125313, 53470, 35025], "mb": 22.2}}
+FERTIG
