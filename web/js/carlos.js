@@ -11,7 +11,7 @@ import { SplatMesh, SplatSkinning } from '@sparkjsdev/spark';
 const FIGS = { person1: { base: 'assets/carlos/' }, mohammad: { base: 'assets/mohammad/', handsInPockets: true }, daunenjacke: { base: 'assets/daunenjacke/', mesh: true }, trainingsjacke: { base: 'assets/trainingsjacke/' }, jackemesh: { base: 'assets/jackemesh/', mesh: true },
   bv9: { base: 'assets/bv9/', sh: 3 }, bv10: { base: 'assets/bv10/', sh: 3 }, bv11: { base: 'assets/bv11/', sh: 3 } };   // Bothfeld-Vahrenheide 9-11: Skelett mit Fingern (figur_finger.py)
 const wanted = new URLSearchParams(location.search).get('figur');
-const ID = FIGS[wanted] ? wanted : 'person1', BASE = FIGS[ID].base;
+const ID = FIGS[wanted] ? wanted : 'bv9', BASE = FIGS[ID].base;              // Standard: Luca 1
 export const FIGURE = { id: ID, ...FIGS[ID] };
 export const fillerPush = { value: 0.03 };
 // Figuren im Spiel etwas dunkler (passt zum dunklen Punktwolken-Raum)
@@ -222,6 +222,7 @@ class Character {
     L.pitch = damp(L.pitch, clamp(st.grade * 0.18 + st.longAccel * 0.012, -0.12, 0.16) * k, 5, dt);
     this.tilt.rotation.set(L.pitch, 0, L.bank);
     this.applyLean();
+    if (this.sitz > 0.001) this.applySitz(this.sitz, this.sitzWack || 0);
     this.updateSplatSkin();
   }
 
@@ -232,6 +233,25 @@ class Character {
     this._q.setFromAxisAngle(axis, angle);
     this._tq.copy(this._pq).invert().multiply(this._q).multiply(this._pq);
     bone.quaternion.premultiply(this._tq);
+  }
+
+  // Sitzen auf dem Handlauf (Geländer-Rutschen): Oberschenkel nach vorn, Unterschenkel hängen, Oberkörper leicht zurück,
+  // Arme seitlich nach unten ans Rohr. s = 0..1 (Überblendung beim Aufsitzen), w = kleines Wackeln
+  applySitz(s, w) {
+    const b = this.bones;
+    this.root.updateMatrixWorld(true);
+    this.tilt.getWorldQuaternion(this._qq);
+    const fwd = this._fwd.set(0, 0, 1).applyQuaternion(this._qq), left = this._left.set(1, 0, 0).applyQuaternion(this._qq);
+    this.root.updateMatrixWorld(true);
+    this.rotWorld(b.thighL, left, -1.35 * s); this.rotWorld(b.thighR, left, -1.35 * s);
+    this.root.updateMatrixWorld(true);
+    this.rotWorld(b.shinL, left, 1.2 * s); this.rotWorld(b.shinR, left, 1.25 * s);
+    this.rotWorld(b.thighL, fwd, -0.12 * s); this.rotWorld(b.thighR, fwd, 0.12 * s);   // Knie leicht auseinander
+    for (const n of ['spine001', 'spine002']) this.rotWorld(b[n], left, (-0.12 + w) * s);
+    this.rotWorld(b.spine003, fwd, w * 1.5 * s);
+    this.rotWorld(b.upper_armL, fwd, 0.45 * s); this.rotWorld(b.upper_armR, fwd, -0.45 * s);   // Hände seitlich ans Rohr
+    this.rotWorld(b.upper_armL, left, 0.25 * s); this.rotWorld(b.upper_armR, left, 0.25 * s);
+    this.root.updateMatrixWorld(true);
   }
 
   applyLean() {

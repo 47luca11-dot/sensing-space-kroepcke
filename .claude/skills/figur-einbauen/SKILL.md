@@ -127,6 +127,20 @@ im Umkreis von 2,5 cm). Nie Splats aufs Mesh ziehen oder Hände ersetzen – das
   `--ohne_mocap` nimmt die alten prozeduralen Zyklen (nicht empfohlen). Idle bleibt prozedural.
 - Kniekurve prüfen: Hilfsskript `knie.py` (Scratchpad-Muster): Knie-/Hüftwinkel je Bild gegen die Normkurve (Winter).
 
+**figuro-STL + Scan, sauber (`figur_stl.py`, Stand 2026-11-19, Ausgabe `figuren/<id>/stl/`)** – Alternative zu `build/` für Figuren mit STL:
+```
+sys.argv = ["blender","--","--id","bv10","--out","<figuren/bv10/stl>","--saum_hinterkopf"]   # STL/Scan aus figuren/<id>/
+exec(figur_stl.py) per bpy.app.timers (wie 2c), danach gang.py -- --id <id> --out <derselbe ordner>
+```
+- STL 2 mm gleichmäßig neu vernetzt (figuro ist vorn viel dichter vernetzt → Querschnitts-Mediane im Skelett verrutschen; 4 mm verschmilzt Finger).
+- ICP mit Maßstab ohne Arme, dann **gelenkweise**: Kopf starr (Drehung + Verschiebung, Hals halb), Ober-/Unterarm, Ober-/Unterschenkel
+  nur Schwenk um ihr Gelenk (Zuordnung Scan → STL, Ziele = Scan-Punkte mit demselben nächsten Knochen), weich gemischt wie LBS;
+  Beine unter der Hüfte gestreckt, bis die STL-Sohlen auf z = 0 stehen (figuro-Beine ~3–5 % zu kurz). Danach Scan-Abstand im Log.
+- Scan-Splats unverändert; weg: > 2,2 cm außerhalb STL, halbtransparente Fransen > 1 cm, tief innen, Hände distal vom Handgelenk,
+  gesättigtes Boden-Orange an Armen/Rumpf/Beinen (`--ohne_orange` schaltet ab), optional `--saum_hinterkopf` (heller Gegenlicht-Saum
+  unter den Haaren, bv10). Löcher (kein deckender Splat in 2 cm) → flache DC-Splats, Farbe = lokaler Median **derselben Körperregion**
+  (Regionen aus den Skin-Gewichten). Hände = dichte Splats aus der STL-Hand, Hautton = Median der Unterarm-Haut, Falten/Handfläche dunkler.
+
 **Gang prozedural (alt, nur Fallback)**: Doppelschritt ≈ 0,82·k/0,6 (≈ 1,3 m) – das Spiel spielt Walk bei 1,5 m/s; zu kurze Schritte = Trippeln/„Pferd“.
 Beckenhöhe aus der Beinreichweite (Pendel ~5 cm, nicht dauerhaft eingeknickt). Ferse löst sich ab ~35 % des Zyklus, Fuß rollt über den
 Ballen (Knöchel geht hoch UND nach vorn), Hüftstreckung hinten ~15°, Zehen im Schwung 2 cm über dem Boden. **Vorzeichen**: Blick −Y →
@@ -174,3 +188,14 @@ Große Dateien laufen über Git LFS (`.gitattributes` deckt .glb/.ply/.bin ab). 
 | bv10 „Locken" (jetzt figuro_bv10.stl + Scan, gang.py) | `Bothfeld-Vahrenheide (10).ply` | `--zentrum "0.349,0.0,-0.019" --oben -y`, danach 180° um z drehen (Blick war verkehrt), orange Bodenreflexe bis Knie entfernt → `figur_finger.py --id bv10 --voxel 0.004 --schliessen 2` (5+5 Finger) |
 | bv11 „Boots" (jetzt figuro_bv11.stl + Scan, gang.py) | `Bothfeld-Vahrenheide (11).ply` | `--zentrum "-0.106,0.3,-0.129" --oben -y` → `figur_finger.py --id bv11` (5+5 Finger) |
 | mohammad | `KIRI Person Weste_mesh.ply` | `--art scan --modus splat --arme taschen` (ursprünglich mit eigenem Skript gebaut) |
+
+**Stand 2026-11-19:**
+- bv10 (Luca 2) und bv11 (Mo) werden aus figuro-STL + Scan gebaut: `figur_stl.py -- --id <id> --out figuren/<id>/stl [--saum_hinterkopf]`
+  (STL als Hülle/Skelett/Hände, Scan-Splats unverändert, Schwebeteile >2,2 cm raus, Lücken-Splats nur mit Farbe derselben
+  Körperregion, Hände aus der STL mit Hautfarbe vom Unterarm). bv9 (Luca 1) weiter `figur_finger.py` (kein STL).
+- Danach `haende_proportion.py -- --id <id> --out <ordner>` (Hand höchstens 0,105 x Körperhöhe) und dann `gang.py`.
+- Schultergelenk höchstens 0,095 H neben der Mitte, ~5 cm innerhalb der Deltamuskel-Außenseite (skelett.py).
+- mocap.py: Schlüsselbein übernimmt nur die Schwingung um die mittlere Haltung (halb so stark) – sonst zog die T-Pose der
+  Aufnahmen die Schultern beim Gehen hoch.
+- Vor dem Export im Live-Blender keine Objekte der Figur ausblenden (sonst exportiert gang.py eine leere GLB: KeyError 'skins').
+- Startbildschirm-Auswahl vorerst nur LUCA 1 (bv9), LUCA 2 (bv10), MO (bv11); übrige Figuren in WEITERE_FIGUREN (startbildschirm/main.js).

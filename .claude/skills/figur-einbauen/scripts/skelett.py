@@ -258,9 +258,17 @@ def anpassen(P, H, mensch, carlos, log=print, kanten=None):
     x_sh = (xs["L"] + xs["R"]) / 2                                   # Schulterbreite symmetrisch
     mb = (np.abs(z - z_sh) < 0.015 * k) & (np.abs(x) < 0.15 * k)      # um die Körpermitte auf Schulterhöhe (nicht x = 0)
     cx_sh = float(np.clip(0.5 * (np.percentile(x[mb], 5) + np.percentile(x[mb], 95)), -0.03 * k, 0.03 * k)) if mb.sum() > 12 else 0.0
+    # Schultergelenk (Oberarmkopf) liegt ~5 cm innerhalb der Außenseite des Deltamuskels – an der Seite gemessen, an der der Arm
+    # am engsten anliegt; höchstens 0,095 H neben der Mitte (Schulterbreite zwischen den Gelenken ~0,19 H). Früher 0,10-0,113 H.
+    aussen = []
+    for s_ in (1, -1):
+        mo = (np.abs(z - z_sh) < 0.012 * k) & (np.abs(y - ymed) < 0.14 * k) & (s_ * (x - cx_sh) > 0)
+        if mo.sum() > 12: aussen.append(float(np.percentile(s_ * (x[mo] - cx_sh), 99.5)))
+    if aussen: x_sh = min(x_sh, min(aussen) - 0.05 * k)
+    x_sh = float(np.clip(x_sh, 0.082 * H, 0.095 * H)); info["schulter_aussen"] = [round(v, 3) for v in aussen]
     for side, s in (("L", 1), ("R", -1)):
         # 3) Tiefe: Mitte des Schulter-Querschnitts (Gelenk liegt mittig zwischen Brust- und Rückenseite)
-        sl = (np.abs(z - z_sh) < 0.015 * k) & (np.abs(x - (cx_sh + s * x_sh)) < 0.03 * k)
+        sl = (np.abs(z - z_sh) < 0.015 * k) & (np.abs(x - (cx_sh + s * x_sh)) < 0.025 * k) & (np.abs(y - ymed) < 0.14 * k)
         yy = y[sl] if sl.sum() > 8 else y[np.abs(z - z_sh) < 0.03 * k]
         sh[side] = Vector((cx_sh + s * x_sh, 0.5 * (float(np.percentile(yy, 5)) + float(np.percentile(yy, 95))), z_sh))
     z_n0 = float(np.clip(top + 0.025 * k, 0.82 * H, 0.86 * H))     # Halsansatz (C7) knapp über der Schulter

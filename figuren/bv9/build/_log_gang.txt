@@ -5,15 +5,15 @@
 	zero length node found: Spine1
 	zero length node found: LeftHand
 	zero length node found: RightHand
-0.0128
-	importing to blender...Done in 0.1804
+0.1184
+	importing to blender...Done in 0.1767
 
 	parsing bvh 'C:\\Users\\luca\\Documents\\Sensing Space\\Claude Code\\output\\hannover\\figuren\\_mocap\\07_01.bvh'...	zero length node found: Hips
 	zero length node found: Spine1
 	zero length node found: LeftHand
 	zero length node found: RightHand
-0.0109
-	importing to blender...Done in 0.1679
+0.0120
+	importing to blender...Done in 0.1702
 
 [gang] Mocap 07_01.bvh: Zyklus Bild 70-201 (1.09 s), Maßstab 0.0582, Tempo 1.42 m/s
 [gang] Mocap walk: upper_arm.L Achsdrehung +30° ausgeglichen
@@ -29,36 +29,36 @@
 	zero length node found: Spine1
 	zero length node found: LeftHand
 	zero length node found: RightHand
-0.0075
-	importing to blender...Done in 0.0930
+0.0080
+	importing to blender...Done in 0.0891
 
 	parsing bvh 'C:\\Users\\luca\\Documents\\Sensing Space\\Claude Code\\output\\hannover\\figuren\\_mocap\\35_18.bvh'...	zero length node found: Hips
 	zero length node found: Spine1
 	zero length node found: LeftHand
 	zero length node found: RightHand
-0.0081
-	importing to blender...Done in 0.0957
+0.0095
+	importing to blender...Done in 0.0976
 
 	parsing bvh 'C:\\Users\\luca\\Documents\\Sensing Space\\Claude Code\\output\\hannover\\figuren\\_mocap\\35_19.bvh'...	zero length node found: Hips
 	zero length node found: Spine1
 	zero length node found: LeftHand
 	zero length node found: RightHand
-0.0062
-	importing to blender...Done in 0.0820
+0.0069
+	importing to blender...Done in 0.0827
 
 	parsing bvh 'C:\\Users\\luca\\Documents\\Sensing Space\\Claude Code\\output\\hannover\\figuren\\_mocap\\35_20.bvh'...	zero length node found: Hips
 	zero length node found: Spine1
 	zero length node found: LeftHand
 	zero length node found: RightHand
-0.0062
-	importing to blender...Done in 0.0818
+0.0065
+	importing to blender...Done in 0.0915
 
 	parsing bvh 'C:\\Users\\luca\\Documents\\Sensing Space\\Claude Code\\output\\hannover\\figuren\\_mocap\\35_17.bvh'...	zero length node found: Hips
 	zero length node found: Spine1
 	zero length node found: LeftHand
 	zero length node found: RightHand
-0.0086
-	importing to blender...Done in 0.0837
+0.0072
+	importing to blender...Done in 0.0932
 
 [gang] Mocap 35_17.bvh: Zyklus Bild 34-125 (0.76 s), Maßstab 0.0544, Tempo 3.04 m/s
 [gang] Mocap run: upper_arm.L Achsdrehung +46° ausgeglichen
@@ -71,8 +71,8 @@
 	zero length node found: Spine1
 	zero length node found: LeftHand
 	zero length node found: RightHand
-0.0077
-	importing to blender...Done in 0.0955
+0.0063
+	importing to blender...Done in 0.0828
 
 [gang] Mocap 35_18.bvh: Zyklus Bild 30-123 (0.78 s), Maßstab 0.0544, Tempo 3.02 m/s
 [gang] Mocap run: upper_arm.L Achsdrehung +44° ausgeglichen
@@ -85,8 +85,8 @@
 	zero length node found: Spine1
 	zero length node found: LeftHand
 	zero length node found: RightHand
-0.0076
-	importing to blender...Done in 0.0913
+0.0107
+	importing to blender...Done in 0.0863
 
 [gang] Mocap 35_19.bvh: Zyklus Bild 33-122 (0.74 s), Maßstab 0.0544, Tempo 3.22 m/s
 [gang] Mocap run: upper_arm.L Achsdrehung +48° ausgeglichen
@@ -99,8 +99,8 @@
 	zero length node found: Spine1
 	zero length node found: LeftHand
 	zero length node found: RightHand
-0.0061
-	importing to blender...Done in 0.0953
+0.0067
+	importing to blender...Done in 0.0882
 
 [gang] Mocap 35_20.bvh: Zyklus Bild 36-124 (0.73 s), Maßstab 0.0544, Tempo 3.29 m/s
 [gang] Mocap run: upper_arm.L Achsdrehung +40° ausgeglichen
@@ -116,10 +116,10 @@
 [gang] bv9_Walk: 26 Bilder (1.08 s)
 [gang] bv9_Run: 18 Bilder (0.75 s)
 [gang] bv9_Idle_Breathing: 96 Bilder (4.00 s)
-20:19:54 | INFO: Starting glTF 2.0 export
-20:19:54 | INFO: Extracting primitive: bv9_mesh
-20:19:54 | INFO: Primitives created: 1
-20:19:58 | INFO: Finished glTF 2.0 export in 3.8683810234069824 s
+03:28:50 | INFO: Starting glTF 2.0 export
+03:28:50 | INFO: Extracting primitive: bv9_mesh
+03:28:50 | INFO: Primitives created: 1
+03:28:51 | INFO: Finished glTF 2.0 export in 1.549464464187622 s
 
-REPORT {"id": "bv9", "clips": ["bv9_HeadTilt_L", "bv9_HeadTilt_R", "bv9_Idle_Breathing", "bv9_Pockets", "bv9_Run", "bv9_Stumble", "bv9_Walk"], "gelenke_gleich": true, "mb": 3.0}
+REPORT {"id": "bv9", "clips": ["bv9_Idle_Breathing", "bv9_Run", "bv9_Walk"], "gelenke_gleich": true, "mb": 2.7}
 FERTIG

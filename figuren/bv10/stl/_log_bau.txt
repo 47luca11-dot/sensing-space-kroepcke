@@ -1,0 +1,30 @@
+[     0s] 1 STL ausrichten
+[    20s] ICP {'massstab': 0.9596, 'median_cm': 0.93}
+[    79s] Abstand Scan->STL nach_gelenken {'kopf': {'aussen_2cm': 5.0, 'innen_2cm': 2.5, 'median_cm': -0.13}, 'rumpf': {'aussen_2cm': 6.0, 'innen_2cm': 5.7, 'median_cm': 0.31}, 'arme': {'aussen_2cm': 8.6, 'innen_2cm': 4.5, 'median_cm': -0.0}, 'beine': {'aussen_2cm': 5.6, 'innen_2cm': 2.4, 'median_cm': 0.1}}
+[    80s] Körper {'punkte': 832994, 'dreiecke': 1666004, 'offene_kanten': 0, 'nicht_mannigfaltig': 0, 'groesse_m': 1.774} Boden -0.0 cm
+[    80s] 2 Skelett
+[    83s]   Hand: 5 Finger, Schwimmhäute bei [0.109, 0.199, 0.199, 0.198, 0.127] m, Längen [0.094, 0.085, 0.094, 0.087, 0.069]
+[    84s]   Hand: 5 Finger, Schwimmhäute bei [0.117, 0.195, 0.206, 0.206, 0.182] m, Längen [0.107, 0.093, 0.102, 0.095, 0.076]
+[    84s] 3 Füll-Mesh + Gewichte
+[   115s]   Hand-Gewichte geometrisch gesetzt: 2593 Punkte
+Info: 19787 vertex weights limited
+[   115s] 4 Splats
+[   119s] Scan-Splats {'gesamt': 143366, 'behalten': 120937, 'entfernt': 22429, 'unveraendert': True} {'schrott_durchsichtig': 0, 'haende_ersetzt': 11565, 'aussen_0.022': 7346, 'fransen_halbtransparent': 801, 'gross_aussen': 4, 'tief_innen': 144, 'bodenreflex_orange': 1258, 'saum_hinterkopf': 1311}
+[   129s] Hautton {'rgb': [0.688, 0.482, 0.423], 'aus_splats': 1305}
+[   133s] neue Splats {'luecken': 12348, 'luecken_ohne_regionsfarbe': 0, 'luecken_je_region': {'becken': 6, 'fuss.L': 918, 'fuss.R': 1283, 'hals': 296, 'hand.L': 1, 'kopf': 1370, 'oberarm.L': 1226, 'oberarm.R': 642, 'oberschenkel.L': 324, 'oberschenkel.R': 210, 'rumpf': 4020, 'unterarm.L': 588, 'unterarm.R': 119, 'unterschenkel.L': 332, 'unterschenkel.R': 1013}, 'haende': 19792, 'hand_falten_anteil': 0.161}
+[   142s] 5 Finger entspannen
+[   142s] 6 Animationen
+03:20:40 | INFO: Data are loaded, start creating Blender stuff
+03:20:40 | INFO: Blender create Mesh node person1_mesh
+03:20:41 | INFO: glTF import finished in 1.39s
+[   145s] 7 Export
+Info: Saved copy as "bv10.blend"
+03:20:43 | INFO: Starting glTF 2.0 export
+03:20:43 | WARNING: Mesh bv10_mesh is not valid, and may be exported wrongly
+03:20:43 | INFO: Extracting primitive: bv10_mesh
+03:20:44 | INFO: Primitives created: 1
+03:20:47 | INFO: Finished glTF 2.0 export in 3.9510371685028076 s
+
+[   150s] 8 Testbilder
+REPORT {"id": "bv10", "art": "stl_scan", "stl": {"inseln": 1, "entfernt": 0}, "icp": {"massstab": 0.9596, "median_cm": 0.93}, "gelenk_grad": {"kopf": 10.3, "oa.L": 20.3, "ua.L": 29.0, "os.L": 3.4, "us.L": 10.2, "oa.R": 10.7, "ua.R": 5.6, "os.R": 2.3, "us.R": 9.3}, "kopf_verschiebung_cm": 0.1, "bein_streckung": 1.047, "abstand_nach_gelenken": {"kopf": {"aussen_2cm": 5.0, "innen_2cm": 2.5, "median_cm": -0.13}, "rumpf": {"aussen_2cm": 6.0, "innen_2cm": 5.7, "median_cm": 0.31}, "arme": {"aussen_2cm": 8.6, "innen_2cm": 4.5, "median_cm": -0.0}, "beine": {"aussen_2cm": 5.6, "innen_2cm": 2.4, "median_cm": 0.1}}, "boden_korrektur_cm": -0.0, "koerper": {"punkte": 832994, "dreiecke": 1666004, "offene_kanten": 0, "nicht_mannigfaltig": 0, "groesse_m": 1.774}, "skelett": {"knochen": 61, "schritt_z": 0.825, "arm_achse": {"L": {"neigung_grad": 56.0}, "R": {"neigung_grad": 64.2}}, "schulter_aussen": [0.194, 0.271], "schulter_z": 1.381, "schulter_oben": 1.427, "schulter_x": 0.145, "arm_L": {"laenge": 0.697, "handgelenk_bei": 0.521}, "arm_R": {"laenge": 0.769, "handgelenk_bei": 0.567}, "finger": {"L": true, "R": true}, "verschmolzen": {"L": false, "R": false}}, "hand_gewichte": 2593, "fuellmesh": {"punkte": 39992, "dreiecke": 80000, "offene_kanten": 0, "nicht_mannigfaltig": 0, "nachgetragen": 0, "jacke_entkoppelt": 5511, "einrueckung_mm": {"median": 4.1, "max": 20.0}}, "scan_entfernt": {"schrott_durchsichtig": 0, "haende_ersetzt": 11565, "aussen_0.022": 7346, "fransen_halbtransparent": 801, "gross_aussen": 4, "tief_innen": 144, "bodenreflex_orange": 1258, "saum_hinterkopf": 1311}, "scan_splats": {"gesamt": 143366, "behalten": 120937, "entfernt": 22429, "unveraendert": true}, "farbquellen_je_region": {"becken": 12643, "fuss.L": 661, "fuss.R": 801, "hals": 311, "hand.L": 68, "hand.R": 35, "kopf": 11222, "oberarm.L": 727, "oberarm.R": 2912, "oberschenkel.L": 11798, "oberschenkel.R": 9880, "rumpf": 9529, "unterarm.L": 1295, "unterarm.R": 2429, "unterschenkel.L": 3196, "unterschenkel.R": 3104}, "neue_splats": {"luecken": 12348, "luecken_ohne_regionsfarbe": 0, "luecken_je_region": {"becken": 6, "fuss.L": 918, "fuss.R": 1283, "hals": 296, "hand.L": 1, "kopf": 1370, "oberarm.L": 1226, "oberarm.R": 642, "oberschenkel.L": 324, "oberschenkel.R": 210, "rumpf": 4020, "unterarm.L": 588, "unterarm.R": 119, "unterschenkel.L": 332, "unterschenkel.R": 1013}, "haende": 19792, "hand_falten_anteil": 0.161}, "hautton": {"rgb": [0.688, 0.482, 0.423], "aus_splats": 1305}, "finger_entspannt": {"L": true, "R": true}, "animationen": ["bv10_HeadTilt_L", "bv10_HeadTilt_R", "bv10_Idle_Breathing", "bv10_Pockets", "bv10_Run", "bv10_Stumble", "bv10_Walk"], "glb": {"mb": 3.0, "knochen": 61, "clips": 7}, "splats": {"anzahl": 153077, "teile_scan_hand_luecken": [120937, 19792, 12348], "mb": 38.0}}
+FERTIG

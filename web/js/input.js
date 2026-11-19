@@ -66,7 +66,8 @@ export class Input {
       scan: this.edges.has('KeyF') || !!s.scan,
       swap: this.edges.has('KeyV'),
       help: this.edges.has('KeyH'),
-      admin: this.edges.has('KeyM') || !!s.admin,
+      admin: !!s.admin,                                      // Admin-Modus nur noch über das Optionen-Menü
+      karte: this.edges.has('KeyM'),
       debug: this.edges.has('F3') || this.edges.has('Backquote'),
     };
     s.jump = false; s.scan = false; s.admin = false;     // Skript-Impulse nur einmal

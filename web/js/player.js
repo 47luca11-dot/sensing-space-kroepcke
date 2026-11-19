@@ -135,7 +135,7 @@ export class Player {
     // ---------- Tempo (träge) ----------
     const align = mag > 0 ? Math.max(0, Math.cos(delta)) : 0;
     const uphill = Math.max(0, this.grade), downhill = Math.max(0, -this.grade);
-    const slopeFactor = 1 / (1 + uphill * 1.7) * (1 + Math.min(0.12, downhill * 0.35));
+    const slopeFactor = 1 / (1 + uphill * 0.8) * (1 + Math.min(0.12, downhill * 0.35));   // Treppe (Steigung ~0,53): ~1,05 m/s bergauf
     const target = maxSpeed * mag * Math.pow(align, 1.5) * slopeFactor;
     const prevSpeed = this.speed;
     if (target > this.speed) this.speed = Math.min(target, this.speed + (this.running ? A.accelRun : A.accelWalk) * (1 - uphill * 0.5) * dt);

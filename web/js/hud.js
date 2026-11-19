@@ -38,6 +38,17 @@ export class Hud {
   show(on) { this.el.classList.toggle('off', !on); }
   toast(text, sec = 1.8) { this.toastEl.textContent = text; this.toastEl.classList.add('on'); this.toastT = sec; }
   scanFlash() { this.flashT = 1; }
+  // Hinweis unter dem Fadenkreuz (z. B. Geländer zum Runterrutschen)
+  setPrompt(t) {
+    if (!this.promptEl) {
+      const e = document.createElement('div'); e.id = 'prompt';
+      e.style.cssText = 'position:absolute;left:50%;top:58%;transform:translateX(-50%);font:600 12px/1 var(--mono,monospace);letter-spacing:.2em;color:#bfe8ff;text-shadow:0 0 12px #3fb0ff;padding:8px 14px;border:1px solid rgba(140,210,255,.45);background:rgba(4,12,20,.55);pointer-events:none;opacity:0;transition:opacity .15s';
+      this.el.appendChild(e); this.promptEl = e;
+    }
+    if (t === this._prompt) return; this._prompt = t;
+    if (t) this.promptEl.textContent = t;
+    this.promptEl.style.opacity = t ? 1 : 0;
+  }
   toggleHint() { this.hintT = this.hint.classList.contains('off') ? 1e9 : 0; }
 
   update(dt, s) {

@@ -9,5 +9,5 @@
  "order": "row-major, row = z (south-increasing), col = x",
  "value": "top walkable ground surface y (game frame, m); inside buildings = terrain under the building; in U-Bahn/Promenade pits = pit floor/stairs",
  "sources": "own ground mesh outside the detail square; Rhino detail ground (street/ground/green.glb) inside; fallback DGM1-based base surface",
- "filled_from_base": 942464
+ "filled_from_base": 942463
 }

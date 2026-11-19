@@ -45,7 +45,7 @@
       <li><kbd>Leertaste</kbd> kleiner Sprung</li>
       <li><kbd>F</kbd> Scan: alles frei Sichtbare wird erfasst und 10 s lang dicht gezeigt</li>
       <li><kbd>P</kbd> Punktwolke / Mesh-Ansicht · <kbd>O</kbd> Verdeckung an/aus · <kbd>B</kbd> Rückseiten an/aus</li>
-      <li><kbd>M</kbd> Admin-Modus an/aus: keine Ausdauer, kein Stolpern, laufen mit bis zu 50 km/h</li>
+      <li><kbd>M</kbd> Karte (zeigt, was du gescannt hast)</li>
       <li>Maus: Kamera drehen (ohne Mausfang: Maus an den Bildrand) · <kbd>←</kbd> / <kbd>→</kbd> Kamera drehen · <kbd>Bild↑</kbd> / <kbd>Bild↓</kbd> neigen · Mausrad: Zoom · <kbd>V</kbd> Schulter wechseln</li>
       <li><kbd>H</kbd> Hilfe · <kbd>Esc</kbd> Maus freigeben</li>
     </ul>
@@ -67,7 +67,7 @@
     <button id="go" disabled>KLICKEN ZUM STARTEN</button>
     <div class="keys">
       <span><kbd>WASD</kbd> gehen</span><span><kbd>Umschalt</kbd> laufen</span><span><kbd>C</kbd> vorsichtig</span>
-      <span><kbd>Q</kbd>/<kbd>E</kbd> Gleichgewicht</span><span><kbd>Maus</kbd>/<kbd>←</kbd><kbd>→</kbd> Kamera drehen</span><span><kbd>F</kbd> Scan</span><span><kbd>M</kbd> Admin-Modus</span><span><kbd>Esc</kbd> Pause</span>
+      <span><kbd>Q</kbd>/<kbd>E</kbd> Gleichgewicht</span><span><kbd>Maus</kbd>/<kbd>←</kbd><kbd>→</kbd> Kamera drehen</span><span><kbd>F</kbd> Scan</span><span><kbd>M</kbd> Karte</span><span><kbd>Esc</kbd> Pause</span>
     </div>
     <div id="source"></div>
   </div>
@@ -80,6 +80,7 @@
     <div class="menu-section">Optionen</div>
     <div id="opts"></div>
     <label class="opt check"><span>Steuerungshilfe anzeigen</span><input type="checkbox" id="opt-hint"></label>
+    <label class="opt check"><span>Admin-Modus (keine Ausdauer, kein Stolpern, sehr schnell)</span><input type="checkbox" id="opt-admin"></label>
     <div class="menu-row">
       <button id="opt-mesh" class="menu-btn small">Mesh-Ansicht</button>
       <button id="opt-reset" class="menu-btn small">Zurücksetzen</button>

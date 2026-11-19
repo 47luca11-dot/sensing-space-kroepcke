@@ -818,6 +818,9 @@ for i, o in enumerate(ops):
             ss = s_e + sg * 0.15
             T_ = np.linspace(x0, x1, max(2, int((x1 - x0) / 1.4)) + 1)
             gy = [street(ss, t_) for t_ in T_]
+            # nur auf echten Decks/Brücken (Straßenniveau deutlich über dem Trogboden). Läuft die Passage unter einer Decke
+            # weiter (Nordende, langer Deckel c34), stand die Brüstung sonst als 1,4-m-Wand quer im Gang (2026-11-19).
+            if min(gy) < yfl(s_e) + 2.4: continue
             add(fr.box('granite_polished', s_e, s_e + sg * 0.3, x0, x1, min(gy) - 0.06, max(gy) + 0.12) if sg > 0 else fr.box('granite_polished', s_e - 0.3, s_e, x0, x1, min(gy) - 0.06, max(gy) + 0.12), True)
             A = np.array([fr.P(ss, t_, max(gy) + 0.12) for t_ in T_]); B = np.array([fr.P(ss, t_, max(gy) + 1.05) for t_ in T_])
             add(_strip('glass', A, B, look=fr.P(ss + sg * 3, (x0 + x1) / 2, max(gy) + 0.5)))

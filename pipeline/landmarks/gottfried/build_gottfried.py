@@ -162,10 +162,11 @@ M = dict(
     paving="GF_Pflaster_Nische",
 )
 def make_materials():
-    ib = brick_image("GF_Klinker_sand", [0.80, 0.665, 0.47])
-    ibd = brick_image("GF_Klinker_Band", [0.80, 0.665, 0.47], dark=0.86, seed=11)
-    mat(M["brick"], "#ccaa78", img=ib, rough=0.85)
-    mat(M["band"], "#b0915f", img=ibd, rough=0.85)
+    # Klinker nach Google Earth: warmes Ocker-Braun (dunkler als vorher), Bänder etwas dunkler
+    ib = brick_image("GF_Klinker_sand", [0.72, 0.56, 0.37])
+    ibd = brick_image("GF_Klinker_Band", [0.72, 0.56, 0.37], dark=0.84, seed=11)
+    mat(M["brick"], "#b58c5c", img=ib, rough=0.85)
+    mat(M["band"], "#9a764c", img=ibd, rough=0.85)
     mat(M["bronze"], "#64503b", rough=0.55, metal=0.6)
     mat(M["rib"], "#7a634a", rough=0.5, metal=0.6)
     mat(M["frame"], "#4a3a2b", rough=0.5, metal=0.4)
@@ -373,15 +374,24 @@ def south_facade():
     wall_holes(M["brick"], S, 4.5, LS, B, 0.1, BASE, YB, gfw)
     for h in gfw: window(S, h[0], h[1], h[2], h[3], 0.1, lights=2, recess=0.14)
     fbox(M["band"], S, -0.35, LS, 0.08, 0.24, YB - 0.10, YB + 0.06)
-    # OG: Bronze-Erker (vorspringend) über dem Pfeiler, Ecke geschlossen, sonst Einzelfenster
-    bronze_bay(S, 0.9, 4.5, 0.45, (1.2, 4.2), 4)
-    fbox(M["brick"], S, 0.9, 4.5, 0.2, 0.45, YB - 0.12, YB)
-    fbox(M["brick"], S, -0.35, 0.9, B, 0.2, YB, TOP)
-    bands(S, -0.35, 0.9, 0.2, FLOORS[1:] + [TOP - PARA])
-    ogw = [(uu, uu + 1.25, fy + 0.85, fy + 2.35) for fy in FLOORS for uu in (5.9, 8.3, 10.7, 13.1)]
-    wall_holes(M["brick"], S, 4.5, LS, B, 0.1, YB, TOP, ogw)
-    for h in ogw: window(S, h[0], h[1], h[2], h[3], 0.1, lights=2, recess=0.14)
-    bands(S, 4.5, LS, 0.1, FLOORS[1:] + [TOP - PARA])
+    # OG nach Google Earth (2026-11-19): geschlossener Eckpfeiler, zwei vorspringende Bronze-Erker mit geschlossenem
+    # Klinker dazwischen, kein Raster aus Einzelfenstern. Oberstes Geschoss am Westende zurückgesetzt (Staffel).
+    fbox(M["brick"], S, -0.35, 3.4, B, 0.2, YB, TOP)
+    bands(S, -0.35, 3.4, 0.2, FLOORS[1:] + [TOP - PARA])
+    bronze_bay(S, 3.4, 6.1, 0.45, (3.7, 5.8), 3)
+    fbox(M["brick"], S, 3.4, 6.1, 0.2, 0.45, YB - 0.12, YB)
+    slit = [(7.15, 7.65, fy + 0.6, fy + 2.6) for fy in FLOORS]          # schmale Schlitzfenster im Mittelpfeiler (Treppenhaus)
+    wall_holes(M["brick"], S, 6.1, 8.7, B, 0.2, YB, TOP, slit)
+    bands(S, 6.1, 8.7, 0.2, FLOORS[1:] + [TOP - PARA])
+    for h in slit: window(S, h[0], h[1], h[2], h[3], 0.2, lights=1, recess=0.16)
+    bronze_bay(S, 8.7, 11.0, 0.45, (9.0, 10.7), 3)
+    fbox(M["brick"], S, 8.7, 11.0, 0.2, 0.45, YB - 0.12, YB)
+    fbox(M["brick"], S, 11.0, LS, B, 0.1, YB, TOP - FL_H)
+    bands(S, 11.0, LS, 0.1, FLOORS[1:-1])
+    fbox(M["brick"], S, 11.0, LS, B - 1.6, B - 1.5, TOP - FL_H, TOP)    # Staffelgeschoss zurückgesetzt
+    win_st = (11.6, LS - 0.6, FLOORS[-1] + 0.85, FLOORS[-1] + 2.35)
+    window(S, win_st[0], win_st[1], win_st[2], win_st[3], B - 1.5, lights=3, recess=0.08)
+    fbox(M["coping"], S, 11.0, LS, B - 1.6, 0.15, TOP - FL_H, TOP - FL_H + 0.06)
     fbox(M["coping"], S, -0.35, LS, -0.3, 0.25, TOP, TOP + 0.05)
     fbox(M["coping"], E, 0.0, LE, -0.3, 0.38, TOP, TOP + 0.05)
 
@@ -474,6 +484,6 @@ def check(objs):
 def export(objs):
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     for o in bpy.context.scene.objects: o.select_set(o in objs)
-    bpy.ops.export_scene.gltf(filepath=OUT, export_format="GLB", use_selection=True, export_apply=True, export_yup=True,
+    bpy.ops.export_scene.gltf(filepath=OUT, export_format="GLB", use_selection=True, use_active_scene=True, export_apply=True, export_yup=True,
                               export_materials="EXPORT", export_image_format="AUTO")
     return OUT

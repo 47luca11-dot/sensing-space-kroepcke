@@ -188,6 +188,15 @@ nwall = 0; nfence = 0; nskip_hole = 0
 # (QA 2026-11-10: OSM-Mauern 435784547/139432718/435784546 auf der Trogmitte schwebten 3.5 m ueber dem Boden; BEGEHUNGSLISTE QG-1)
 HOLES_ALL = unary_union([h['poly'] for h in L['holes'].values()]).buffer(0.35)
 REG_WALL = REG.difference(BLD).difference(HOLES_ALL)
+# Passerelle (Niki-de-Saint-Phalle-Promenade): promenade.py baut Brüstungen, Glasgeländer und Treppen selbst. Die OSM-Mauern
+# dort (Trogkanten, Treppenwangen) standen sonst als 1,1-m-Mauern quer über Brücken und mitten auf den Treppen (2026-11-19).
+try:
+    _AX = json.load(open(CACHE + 'promenade.json'))['axis']
+    _o, _a, _n = np.array(_AX['origin']), np.array(_AX['axis']), np.array(_AX['normal'])
+    _c = [_o + _a * s_ + _n * t_ for s_, t_ in ((-114, -9), (152, -9), (152, 12), (-114, 12))]
+    REG_WALL = REG_WALL.difference(Polygon([tuple(p) for p in _c]))
+except Exception as _e:
+    log('  Passerelle-Korridor nicht ausgespart:', _e)
 for w in osm['ways']:
     t = w['tags']; b = t.get('barrier')
     if b not in ('wall', 'fence', 'city_wall', 'retaining_wall') or len(w['pts']) < 2: continue

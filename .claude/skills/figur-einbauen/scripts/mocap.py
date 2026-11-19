@@ -24,7 +24,7 @@ ZUORDNUNG = {
     "thigh.R": "RightUpLeg", "shin.R": "RightLeg", "foot.R": "RightFoot", "toe.R": "RightToeBase",
 }
 # Knochen, deren Ruhe-Richtung an die T-Pose angeglichen wird (Arme/Beine); Wirbelsäule/Kopf stehen in beiden aufrecht
-ANGLEICHEN = {"shoulder", "upper_arm", "forearm", "thigh", "shin", "foot", "toe"}
+ANGLEICHEN = {"upper_arm", "forearm", "thigh", "shin", "foot", "toe"}   # Schlüsselbein bleibt in seiner Ruhelage (+ kleine Schwingung)
 REIHENFOLGE = ["spine", "spine.001", "spine.002", "spine.003", "spine.004", "spine.005", "spine.006",
                "shoulder.L", "upper_arm.L", "forearm.L", "hand.L", "shoulder.R", "upper_arm.R", "forearm.R", "hand.R",
                "thigh.L", "shin.L", "foot.L", "toe.L", "thigh.R", "shin.R", "foot.R", "toe.R"]
@@ -161,6 +161,14 @@ def zyklus(pfad, rig, REST, MW, frames, log=print, art="walk", symmetrisch=True,
             if q.dot(ref) < 0: q = -q
             acc = Quaternion((acc.w + q.w, acc.x + q.x, acc.y + q.y, acc.z + q.z))
         acc.normalize(); return acc
+    for side in "LR":
+        # Schlüsselbein: nur die Schwingung um die mittlere Haltung übernehmen (halb so stark), nicht den Versatz zur T-Pose –
+        # die T-Pose der Aufnahmen hat die Schultern tiefer als beim Gehen, das zog die Schultern sonst dauerhaft hoch
+        n_ = "shoulder." + side; mu_ = mittel(Dq[n_][:N]); inv_ = mu_.inverted()
+        for i in range(N + 1):
+            d_ = Dq[n_][i] @ inv_
+            if d_.w < 0: d_ = -d_
+            Dq[n_][i] = Quaternion().slerp(d_, 0.5)
     for side in "LR":
         sg = 1 if side == "L" else -1
         for i in range(N + 1):

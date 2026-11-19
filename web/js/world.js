@@ -451,7 +451,9 @@ export class World {
       if (hit && (!best || hit.distance < best.distance)) best = hit;
     }
     const hy = this.heightAt(x, z);
-    if (hy !== null && hy <= yFrom + 1e-4 && yFrom - hy <= maxDist && (!best || hy > best.point.y + 0.15)) {
+    // Höhenraster nur, wo die Kollision fehlt oder knapp darunter liegt (Bordstein): nicht mehr als 0,3 m (Stufenhöhe) über einem echten
+    // Boden (sonst ragen Geländewerte in unterirdische Räume, z. B. Grat am Nordende der Passerelle, 2026-11-19)
+    if (hy !== null && hy <= yFrom + 1e-4 && yFrom - hy <= maxDist && (!best || (hy > best.point.y + 0.15 && hy < best.point.y + 0.3))) {
       const e = this.hf.res, hx0 = this.heightAt(x - e, z) ?? hy, hx1 = this.heightAt(x + e, z) ?? hy, hz0 = this.heightAt(x, z - e) ?? hy, hz1 = this.heightAt(x, z + e) ?? hy;
       const nx = -(hx1 - hx0) / (2 * e), nz = -(hz1 - hz0) / (2 * e), l = Math.hypot(nx, 1, nz);
       out.y = hy; out.nx = nx / l; out.ny = 1 / l; out.nz = nz / l;

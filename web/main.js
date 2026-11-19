@@ -12,6 +12,8 @@ import { Dust, Sfx } from './js/fx.js';
 import { loadScans } from './js/scans.js';
 import { PointCloud, makeOccluderMaterial, PC, SCAN_HOLD } from './js/pointcloud.js';
 import { PostFX } from './js/post.js';
+import { Karte } from './js/karte.js';
+import { Gelaender } from './js/gelaender.js';
 
 const $ = (id) => document.getElementById(id);
 const params = new URLSearchParams(location.search);
@@ -99,8 +101,8 @@ const post = new PostFX(renderer);   // Glühen + digitales Rauschen (nur Punktw
 let OCCLUDE = !params.has('noocc');
 const dust = new Dust(scene);
 const sfx = new Sfx();
-let player = null, carlos = null, rig = null;
-const state = { ready: false, playing: false, test: false, simPaused: false };
+let player = null, carlos = null, rig = null, karte = null, gel = null;
+const state = { ready: false, playing: false, test: false, simPaused: false, ui: false };
 let quality = 1, maxPR = Math.min(devicePixelRatio || 1, 1.5);
 
 const statusEl = $('status'), statusText = statusEl.querySelector('span');
@@ -132,6 +134,11 @@ async function boot() {
     carlos = await carlosP;
     window.__scans = await scansP;
     player = new Player(world);
+    setStatus('Lade Karte …');
+    try { karte = new Karte({ world, hud, base: params.get('city') || 'assets/city/' }); await karte.load(); setupKarte(); }
+    catch (e) { console.warn('Karte fehlt', e); karte = null; }
+    try { gel = new Gelaender({ world, scene, camera, hud, base: params.get('city') || 'assets/city/' }); await gel.load(); setupGelaender(); }
+    catch (e) { console.warn('Geländer fehlen', e); gel = null; }
     initAdmin();
     rig = new CameraRig(camera, world);
     respawn();
@@ -215,6 +222,7 @@ function setupMenu() {
     inp.addEventListener('input', () => { const x = +inp.value; out.textContent = x + o.unit; o.apply(x); const s = loadOpts(); s[o.id] = x; saveOpts(s); });
     o.apply(+v);
   }
+  $('opt-admin').addEventListener('change', (e) => setAdmin(e.target.checked));
   const hintBox = $('opt-hint');
   hintBox.checked = !$('hint').classList.contains('off');
   hintBox.addEventListener('change', () => { if (hintBox.checked === $('hint').classList.contains('off')) hud.toggleHint(); });
@@ -222,6 +230,68 @@ function setupMenu() {
   $('opt-mesh').addEventListener('click', toggleMeshView);
   $('opt-reset').addEventListener('click', () => { saveOpts({}); for (const o of OPTS) { const i = $(o.id); i.value = o.def; i.dispatchEvent(new Event('input')); } });
   $('to-start').addEventListener('click', () => { location.href = 'startbildschirm/'; });
+}
+
+// ---------------- Karte (Tab), Reisen mit der Bahn ----------------
+function karteAuf(modus, zone) {
+  if (!karte || !karte.ready || karte.offen) return;
+  state.ui = true; karte.zoneBeimOeffnen = zone || null;
+  input.keys.clear(); if (document.pointerLockElement) document.exitPointerLock();
+  karte.oeffnen(modus, zone ? zone.station : null);
+}
+function reiseAn(x, z, yawDeg) {
+  const y = (world.groundAt(x, z, 500, 2000) || { y: 0 }).y;
+  player.spawn(x, y, z, THREE.MathUtils.degToRad(yawDeg));
+  rig.snap(player.pos, player.yaw); carlos.setTransform(player.pos.x, player.visualY, player.pos.z, player.yaw);
+  world.updateStreaming(player.pos);
+}
+function setupKarte() {
+  karte.onTravel = (st) => { const a = st.ankunft; reiseAn(a.x, a.z, a.yaw); karte.sperre = 4; hud.toast(st.name.toUpperCase(), 2.4); };
+  karte.onClose = (grund, modus) => {
+    state.ui = false; input.edges.clear();
+    const z = karte.zoneBeimOeffnen; karte.zoneBeimOeffnen = null;
+    if (grund !== 'reise' && modus === 'reise' && z) {          // abgebrochen: zurück nach oben bzw. ein Stück zurück
+      if (z.art === 'eingang') { const e = z.e; reiseAn(e.top[0] - e.dir[0] * 2.2, e.top[1] - e.dir[1] * 2.2, Math.atan2(-e.dir[0], -e.dir[1]) * 180 / Math.PI); }
+      else { const P = karte.stat.passerelle, s = P.s_ende - 15; reiseAn(P.origin[0] + P.axis[0] * s, P.origin[1] + P.axis[1] * s, Math.atan2(-P.axis[0], -P.axis[1]) * 180 / Math.PI); }
+      karte.sperre = 2;
+    }
+    if (state.playing && !state.test) enter();
+  };
+  addEventListener('keydown', (e) => {
+    if (!state.playing || !karte) return;
+    if (karte.offen && (e.code === 'Escape' || (e.code === 'KeyM' && karte.modus === 'karte'))) { e.preventDefault(); karte.schliessen(); return; }
+  });
+}
+
+// ---------------- Geländer-Rutschen (Passerelle-Treppen) ----------------
+let gelZiel = null, rutschVorher = false;
+function setupGelaender() {
+  canvas.addEventListener('mousedown', (e) => {
+    if (e.button !== 0 || !state.playing || state.ui || !gel || gel.aktiv) return;
+    if (gelZiel && gel.starten(gelZiel)) { hud.toast('GELÄNDER!', 1.0); sfx.thud(0.3); }
+  });
+}
+// Rückgabe true = Figur wird vom Rutschen gesteuert (normale Bewegung aussetzen)
+function rutschen(dt) {
+  if (!gel) return false;
+  const r = gel.update(dt, T);
+  if (!r) {
+    if (rutschVorher) { rutschVorher = false; carlos.sitz = 0; }
+    gelZiel = state.ui ? null : gel.zielen(player); gel.hervorheben(gelZiel);
+    hud.setPrompt && hud.setPrompt(gelZiel ? 'KLICK · GELÄNDER RUNTERRUTSCHEN' : '');
+    return false;
+  }
+  hud.setPrompt && hud.setPrompt('');
+  rutschVorher = true;
+  if (r.ende) {
+    const y = (world.groundAt(r.pos.x, r.pos.z, r.pos.y + 2, 10) || { y: r.pos.y }).y;
+    player.spawn(r.pos.x, y, r.pos.z, r.yaw); player.speed = Math.min(3, r.v * 0.5);
+    carlos.sitz = 0; rig.shake = Math.max(rig.shake, 0.35); sfx.thud(0.6); dust.emit(player.pos, 6, 1.0);
+    return false;
+  }
+  player.pos.copy(r.pos); player.prev.copy(r.pos); player.visualY = r.pos.y; player.yaw = r.yaw; player.speed = 0; player.vy = 0;
+  carlos.sitz = r.sitz; carlos.sitzWack = r.wack || 0;
+  return true;
 }
 
 // ---------------- Start / Pause ----------------
@@ -240,7 +310,7 @@ function startFree() {
 }
 document.addEventListener('pointerlockerror', () => { if (state.ready && !input.locked) startFree(); });
 addEventListener('keydown', (e) => {
-  if (e.code === 'Escape' && input.free && state.playing && !state.test) { input.free = false; input.keys.clear(); $('pause').classList.remove('off'); }
+  if (e.code === 'Escape' && input.free && state.playing && !state.test && !state.ui) { input.free = false; input.keys.clear(); $('pause').classList.remove('off'); }
 });
 $('go').addEventListener('click', enter);
 $('resume').addEventListener('click', enter);
@@ -248,7 +318,7 @@ setupMenu();
 document.addEventListener('pointerlockchange', () => {
   const locked = document.pointerLockElement === canvas;
   if (locked) { input.free = false; state.playing = true; $('start').classList.add('off'); $('pause').classList.add('off'); hud.show(true); }
-  else if (state.playing && !state.test) { $('pause').classList.remove('off'); }
+  else if (state.playing && !state.test && !state.ui) { $('pause').classList.remove('off'); }
 });
 function startTest() {                           // Testmodus: ohne Pointer Lock spielbar (Skript-Eingabe)
   state.test = true; state.playing = true; input.script.__enabled = true;
@@ -260,6 +330,7 @@ function setAdmin(on, quiet = false) {
   if (!player) return;
   player.admin = !!on;
   document.body.classList.toggle('admin', player.admin);
+  const ab = $('opt-admin'); if (ab) ab.checked = player.admin;
   try { localStorage.setItem('hannover.admin', player.admin ? '1' : '0'); } catch { /* ohne Speicher weiter */ }
   if (!quiet) hud.toast(player.admin ? 'ADMIN-MODUS AN' : 'ADMIN-MODUS AUS', 2.2);
 }
@@ -285,9 +356,11 @@ function tick(dt) {
   if (inp.debug) hud.toggleDebug();
   if (inp.swap) rig.side *= -1;
   if (inp.admin) setAdmin(!player.admin);
+  if (inp.karte && karte && !state.ui) karteAuf('karte');
 
   const wasStumbling = player.stumbling;
-  player.update(dt, inp, rig.yaw);
+  const gleitet = rutschen(dt);
+  if (!gleitet) player.update(dt, inp, rig.yaw);
   for (const e of player.events) {
     if (e.type === 'stumble') { hud.toast(e.reason === 'fall' ? 'HARTE LANDUNG' : 'GESTOLPERT'); rig.shake = 1; sfx.thud(1); dust.emit(player.pos, 10, 1.4); }
     if (e.type === 'land' && e.impact > 2.5) { rig.shake = Math.max(rig.shake, Math.min(1, e.impact / 8)); sfx.thud(e.impact / 8); dust.emit(player.pos, 6, Math.min(1.5, e.impact / 5)); }
@@ -297,10 +370,14 @@ function tick(dt) {
   if (!player.admin && inp.run && player.exhausted && !wasStumbling && T - (tick.lastExh || -9) > 4) { hud.toast('ERSCHÖPFT', 1.4); tick.lastExh = T; }
 
   if (inp.scan) {
-    if (POINTS && pc.ready) { if (!pc.scanning || pc.scanT > 1.5) { pc.scan(_v.set(player.pos.x, player.pos.y + 1.55, player.pos.z)); hud.scanFlash(); sfx.scan(); hud.toast('SCAN · ' + SCAN_HOLD + ' S IM GEDÄCHTNIS', 1.6); } }
+    if (POINTS && pc.ready) { if (!pc.scanning || pc.scanT > 1.5) { pc.scan(_v.set(player.pos.x, player.pos.y + 1.55, player.pos.z)); if (karte) karte.scan(_v); if (gel) gel.gescannt(_v.clone(), T); hud.scanFlash(); sfx.scan(); hud.toast('SCAN · ' + SCAN_HOLD + ' S IM GEDÄCHTNIS', 1.6); } }
     else if (!scan.active) { scan.trigger(player.pos); hud.scanFlash(); sfx.scan(); }
   }
 
+  if (karte && !state.ui) {
+    const z = karte.update(dt, player, rig.yaw);
+    if (z) { hud.toast(z.art === 'passerelle' ? 'HAUPTBAHNHOF' : z.station.toUpperCase(), 1.4); karteAuf('reise', z); }
+  }
   carlos.setTransform(player.pos.x, player.visualY, player.pos.z, player.yaw);
   carlos.update(dt, {
     speed: player.actualSpeed, careful: player.careful, running: player.running, stumbling: player.stumbling,
@@ -459,7 +536,8 @@ window.__game = {
   },
   setQuality(q) { quality = q; layout(); },
   perf: () => ({ fps: perf.fps, ms: perf.ms, quality, calls: renderer.info.render.calls, tris: renderer.info.render.triangles }),
-  get player() { return player; }, get carlos() { return carlos; }, get rig() { return rig; },
+  get player() { return player; }, get carlos() { return carlos; }, get rig() { return rig; }, get karte() { return karte; }, get gel() { return gel; },
+  karteAuf, reiseAn,
   world, scene, camera, renderer, spark, P, fillerPush, scanUniforms, hud, input, pc, PC, post,
   setLook(p) { POINTS = !!p; applyLook(); }, setOcclude(o) { OCCLUDE = !!o; },
 };

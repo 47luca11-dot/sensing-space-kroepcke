@@ -1373,8 +1373,8 @@
      -62.533
     ]
    },
-   "triangles": 10160,
-   "bytes": 444748,
+   "triangles": 10136,
+   "bytes": 443068,
    "materials": [
     "alu",
     "asphalt",
@@ -1923,8 +1923,8 @@
      -98.437
     ]
    },
-   "triangles": 29162,
-   "bytes": 1385752,
+   "triangles": 29139,
+   "bytes": 1384240,
    "materials": [
     "alu",
     "asphalt",
@@ -2521,8 +2521,8 @@
      -94.835
     ]
    },
-   "triangles": 15074,
-   "bytes": 633428,
+   "triangles": 15051,
+   "bytes": 632040,
    "materials": [
     "asphalt",
     "asphalt2",
@@ -3278,15 +3278,14 @@
      505.694
     ]
    },
-   "triangles": 14857,
-   "bytes": 669844,
+   "triangles": 14821,
+   "bytes": 666320,
    "materials": [
     "asphalt",
     "asphalt2",
     "citylight",
     "concrete",
     "downlight",
-    "fence",
     "granite",
     "granite_dark",
     "granite_polished",
@@ -4210,8 +4209,8 @@
      3.308
     ]
    },
-   "triangles": 29621,
-   "bytes": 1277444,
+   "triangles": 29619,
+   "bytes": 1277428,
    "materials": [
     "black_glass",
     "citylight",
@@ -4345,8 +4344,8 @@
      201.331
     ]
    },
-   "triangles": 15210,
-   "bytes": 617164,
+   "triangles": 15178,
+   "bytes": 615048,
    "materials": [
     "asphalt",
     "citylight",
@@ -4826,11 +4825,11 @@
     "max": [
      105.032,
      4.786,
-     -89.929
+     -95.345
     ]
    },
-   "triangles": 31124,
-   "bytes": 1582788,
+   "triangles": 31038,
+   "bytes": 1576468,
    "materials": [
     "asphalt",
     "black_glass",
@@ -4883,7 +4882,6 @@
     "stone_light",
     "tactile",
     "tile_white",
-    "wallstone",
     "wood"
    ]
   },
@@ -4895,7 +4893,7 @@
     "min": [
      -3.177,
      -5.121,
-     -110.741
+     -105.291
     ],
     "max": [
      106.618,
@@ -4903,8 +4901,8 @@
      -6.79
     ]
    },
-   "triangles": 33805,
-   "bytes": 1562200,
+   "triangles": 33691,
+   "bytes": 1554112,
    "materials": [
     "asphalt",
     "cloth_a",
@@ -4947,7 +4945,6 @@
     "stone_light",
     "tactile",
     "tile_white",
-    "wallstone",
     "wood"
    ]
   },
@@ -5616,8 +5613,8 @@
      -96.728
     ]
    },
-   "triangles": 17803,
-   "bytes": 843424,
+   "triangles": 17723,
+   "bytes": 836824,
    "materials": [
     "asphalt",
     "asphalt2",
@@ -5626,7 +5623,6 @@
     "cloth_f",
     "concrete",
     "concrete_panel",
-    "fence",
     "glass",
     "granite",
     "granite_dark",
@@ -7014,8 +7010,8 @@
      602.839
     ]
    },
-   "triangles": 15104,
-   "bytes": 731348,
+   "triangles": 15108,
+   "bytes": 731692,
    "materials": [
     "asphalt",
     "asphalt_red",
@@ -9306,8 +9302,8 @@
  ],
  "collision": {
   "file": "collision_ground.glb",
-  "triangles": 756840,
-  "bytes": 13843260
+  "triangles": 756424,
+  "bytes": 13834308
  },
  "heightfield": {
   "file": "heightfield.bin",
@@ -9390,8 +9386,8 @@
   "instanced_triangles": 636315
  },
  "totals": {
-  "tile_triangles": 2128585,
-  "tile_bytes": 91463324
+  "tile_triangles": 2128169,
+  "tile_bytes": 91432424
  },
  "ubahn_entrances": [
   {

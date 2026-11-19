@@ -1,0 +1,246 @@
+{
+ "quelle": "pipeline/karte/build_gelaender.py",
+ "handlauf_hoehe": 0.95,
+ "gelaender": [
+  {
+   "treppe": "kroepcke_29",
+   "seite": 0,
+   "oben": [
+    -15.191,
+    -15.649
+   ],
+   "unten": [
+    -9.606,
+    -23.085
+   ],
+   "stufen": 29,
+   "steigung": 0.159,
+   "hoehe": 4.61
+  },
+  {
+   "treppe": "kroepcke_29",
+   "seite": 1,
+   "oben": [
+    -13.24,
+    -14.184
+   ],
+   "unten": [
+    -7.655,
+    -21.62
+   ],
+   "stufen": 29,
+   "steigung": 0.159,
+   "hoehe": 4.61
+  },
+  {
+   "treppe": "bruecke1_sued",
+   "seite": 0,
+   "oben": [
+    -0.092,
+    -43.716
+   ],
+   "unten": [
+    -5.316,
+    -36.759
+   ],
+   "stufen": 27,
+   "steigung": 0.159,
+   "hoehe": 4.29
+  },
+  {
+   "treppe": "bruecke1_sued",
+   "seite": 1,
+   "oben": [
+    1.699,
+    -42.371
+   ],
+   "unten": [
+    -3.525,
+    -35.414
+   ],
+   "stufen": 27,
+   "steigung": 0.159,
+   "hoehe": 4.29
+  },
+  {
+   "treppe": "bruecke1_nord",
+   "seite": 0,
+   "oben": [
+    3.264,
+    -48.186
+   ],
+   "unten": [
+    8.308,
+    -54.903
+   ],
+   "stufen": 26,
+   "steigung": 0.162,
+   "hoehe": 4.21
+  },
+  {
+   "treppe": "bruecke1_nord",
+   "seite": 1,
+   "oben": [
+    5.056,
+    -46.841
+   ],
+   "unten": [
+    10.099,
+    -53.558
+   ],
+   "stufen": 26,
+   "steigung": 0.162,
+   "hoehe": 4.21
+  },
+  {
+   "treppe": "bruecke2_sued",
+   "seite": 0,
+   "oben": [
+    29.575,
+    -82.941
+   ],
+   "unten": [
+    24.711,
+    -76.463
+   ],
+   "stufen": 25,
+   "steigung": 0.155,
+   "hoehe": 3.88
+  },
+  {
+   "treppe": "bruecke2_sued",
+   "seite": 1,
+   "oben": [
+    31.366,
+    -81.596
+   ],
+   "unten": [
+    26.502,
+    -75.118
+   ],
+   "stufen": 25,
+   "steigung": 0.155,
+   "hoehe": 3.88
+  },
+  {
+   "treppe": "bruecke2_nord",
+   "seite": 0,
+   "oben": [
+    34.204,
+    -89.106
+   ],
+   "unten": [
+    39.068,
+    -95.583
+   ],
+   "stufen": 25,
+   "steigung": 0.156,
+   "hoehe": 3.9
+  },
+  {
+   "treppe": "bruecke2_nord",
+   "seite": 1,
+   "oben": [
+    35.995,
+    -87.761
+   ],
+   "unten": [
+    40.859,
+    -94.238
+   ],
+   "stufen": 25,
+   "steigung": 0.156,
+   "hoehe": 3.9
+  },
+  {
+   "treppe": "bruecke3_sued",
+   "seite": 0,
+   "oben": [
+    60.136,
+    -123.157
+   ],
+   "unten": [
+    55.452,
+    -116.919
+   ],
+   "stufen": 24,
+   "steigung": 0.158,
+   "hoehe": 3.79
+  },
+  {
+   "treppe": "bruecke3_sued",
+   "seite": 1,
+   "oben": [
+    61.927,
+    -121.812
+   ],
+   "unten": [
+    57.244,
+    -115.574
+   ],
+   "stufen": 24,
+   "steigung": 0.158,
+   "hoehe": 3.79
+  },
+  {
+   "treppe": "bruecke3_nord",
+   "seite": 0,
+   "oben": [
+    64.351,
+    -128.77
+   ],
+   "unten": [
+    69.215,
+    -135.247
+   ],
+   "stufen": 25,
+   "steigung": 0.155,
+   "hoehe": 3.88
+  },
+  {
+   "treppe": "bruecke3_nord",
+   "seite": 1,
+   "oben": [
+    66.143,
+    -127.425
+   ],
+   "unten": [
+    71.006,
+    -133.902
+   ],
+   "stufen": 25,
+   "steigung": 0.155,
+   "hoehe": 3.88
+  },
+  {
+   "treppe": "hbf_lichthof",
+   "seite": 0,
+   "oben": [
+    118.91,
+    -201.826
+   ],
+   "unten": [
+    112.785,
+    -193.67
+   ],
+   "stufen": 27,
+   "steigung": 0.165,
+   "hoehe": 4.46
+  },
+  {
+   "treppe": "hbf_lichthof",
+   "seite": 1,
+   "oben": [
+    120.11,
+    -200.926
+   ],
+   "unten": [
+    113.985,
+    -192.769
+   ],
+   "stufen": 27,
+   "steigung": 0.165,
+   "hoehe": 4.46
+  }
+ ]
+}

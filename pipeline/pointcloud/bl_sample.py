@@ -38,6 +38,8 @@ CUR = {"mult": 1.0}
 
 RX_TWO = re.compile(r"tree|baum|leaf|laub|krone|foliage|hedge|hecke|busch|bambus|bamboo|plant|green|gras|cable|kabel|seil|rope|net\b|netz|fence|zaun|gitter|grate|banner|flag|fahne|sign|schild|parasol|schirm|canopy|markise|glass|glas|scheibe|window|fenster|lichtwolke", re.I)
 RX_GLASS = re.compile(r"glass|glas\b|glas_|scheibe|window glass|fenster.?glas", re.I)
+RX_TREE = re.compile(r"^tree_[ab]|^tree_[ab].", re.I)        # Stadtmöbel-Bäume (Blattkarten)
+RX_LEAF = re.compile(r"^tree", re.I)                              # Blatt-Materialien tree_a/tree_b/tree_top (nicht Rinde)
 RX_SKIP = re.compile(r"(^col_|_collision$|^collision)", re.I)
 
 def lin2srgb(c):
@@ -144,6 +146,66 @@ def mesh_arrays(me):
 
 RNG = np.random.default_rng(1977)
 
+def kahler_baum(lo, hi, dens):
+    """Kahler Laubbaum (z. B. Linde/Ahorn im Winter) in die Hülle lo..hi (Spielkoordinaten, y oben).
+    Rekursive Verzweigung: Stamm bis ~35 % der Höhe, 3-5 Hauptäste, je Stufe 2-3 Seitenäste (Länge x0,68, Dicke x0,6),
+    leicht gekrümmt und nach außen/oben strebend, Zweigspitzen bis an die Hüllenoberfläche. Punkte auf den Astmänteln."""
+    seed = int(abs(lo[0] * 73.1 + lo[2] * 19.7)) % (2 ** 31); rng = np.random.default_rng(seed)
+    c = (lo + hi) / 2; H = hi[1] - lo[1]; R = max(0.6, 0.5 * max(hi[0] - lo[0], hi[2] - lo[2]))
+    base = np.array([c[0], lo[1], c[2]])
+    segs = []                                                         # (a, b, r)
+    def ast(p, d, L, r, tiefe):
+        n = max(2, int(L / 0.35)); q = p.copy(); dd = d.copy()
+        for i in range(n):
+            dd = dd + rng.normal(scale=0.08, size=3); dd[1] += 0.03; dd /= np.linalg.norm(dd)
+            q2 = q + dd * (L / n); rr = r * (1 - 0.35 * (i + 1) / n); segs.append((q, q2, rr)); q = q2
+            if tiefe < 5 and i >= n // 4 and rng.random() < 0.6:           # Seitenast unterwegs
+                side = np.cross(dd, rng.normal(size=3)); side /= np.linalg.norm(side) + 1e-9
+                nd = dd * 0.55 + side * 0.7 + np.array([0, 0.25, 0]); nd /= np.linalg.norm(nd)
+                ast(q, nd, L * rng.uniform(0.42, 0.62), rr * 0.6, tiefe + 1)
+        if tiefe >= 5:                                                   # feine Zweigspitzen (Reisig)
+            for _ in range(rng.integers(3, 6)):
+                nd = dd + rng.normal(scale=0.6, size=3); nd[1] += 0.3; nd /= np.linalg.norm(nd)
+                segs.append((q, q + nd * rng.uniform(0.25, 0.6), 0.006))
+        if tiefe < 5:                                                    # Gabelung am Ende
+            for _ in range(rng.integers(2, 4)):
+                side = rng.normal(size=3); side[1] = abs(side[1]) * 0.5; side /= np.linalg.norm(side)
+                nd = dd * 0.6 + side * 0.65; nd /= np.linalg.norm(nd)
+                # Hülle: Richtung zurück ins Ellipsoid lenken
+                rel = (q - np.array([c[0], lo[1] + 0.6 * H, c[2]])) / np.array([R, 0.45 * H, R])
+                if np.linalg.norm(rel) > 0.8: nd -= rel * 0.5; nd /= np.linalg.norm(nd)
+                ast(q, nd, L * rng.uniform(0.6, 0.75), r * 0.6, tiefe + 1)
+    stamm_h = H * rng.uniform(0.30, 0.40); r0 = float(np.clip(0.06 * H / 2.5, 0.12, 0.28))
+    top = base + np.array([rng.normal(scale=0.08), stamm_h, rng.normal(scale=0.08)])
+    segs.append((base, top, r0))
+    nh = int(rng.integers(4, 7))
+    for k in range(nh):
+        a = k / nh * 2 * np.pi + rng.uniform(0, 0.8)
+        d = np.array([np.cos(a) * 0.55, 0.85, np.sin(a) * 0.55]); d /= np.linalg.norm(d)
+        ast(top, d, H * rng.uniform(0.28, 0.36), r0 * 0.62, 1)
+    # Punkte auf den Mänteln (Dichte wie Umgebung, dünne Zweige mindestens ein paar Punkte)
+    A = np.array([s[0] for s in segs]); B = np.array([s[1] for s in segs]); r = np.array([s[2] for s in segs])
+    Lg = np.linalg.norm(B - A, axis=1); area = 2 * np.pi * np.maximum(r, 0.01) * Lg
+    # Stamm/Äste: Mantel dicht (gut lesbare Form), Zweige: Punkte entlang der Linie; Budget nur über die Zweige
+    duenn = r < 0.02
+    cnt = np.where(duenn, Lg / 0.045, np.maximum(area * max(dens, 60.0) * 3.0, Lg / 0.02))
+    BUDGET = 50000                                                    # Punkte je Baum (Tausende Bäume in der Stadt)
+    dick_n = cnt[~duenn].sum()
+    if dick_n > BUDGET * 0.6: cnt[~duenn] *= BUDGET * 0.6 / dick_n; dick_n = BUDGET * 0.6
+    duenn_n = cnt[duenn].sum()
+    if duenn_n > BUDGET - dick_n: cnt[duenn] *= (BUDGET - dick_n) / duenn_n
+    cnt = np.floor(cnt + rng.random(len(cnt))).astype(int)
+    idx = np.repeat(np.arange(len(segs)), cnt); n = len(idx)
+    t = rng.random(n); ax = (B - A)[idx] / np.maximum(Lg[idx, None], 1e-6)
+    u = np.cross(ax, np.array([0.31, 0.95, 0.07])); u /= np.linalg.norm(u, axis=1, keepdims=True) + 1e-9
+    v = np.cross(ax, u); ang = rng.random(n) * 2 * np.pi
+    nrm = u * np.cos(ang)[:, None] + v * np.sin(ang)[:, None]
+    Pp = A[idx] + (B - A)[idx] * t[:, None] + nrm * r[idx, None]
+    hell = 0.85 + 0.3 * rng.random(n) + 0.15 * np.clip(nrm[:, 1], 0, 1)          # Oberseiten etwas heller (Licht, Flechten)
+    col = np.array([92, 84, 76]) * hell[:, None]
+    jung = r[idx] < 0.03; col[jung] = col[jung] * 0.85 + np.array([12, 8, 4])     # junge Zweige rötlich-braun
+    return Pp, nrm, np.clip(col, 0, 255).astype(np.uint8)
+
 def sample_object(ob, out, stats):
     if ob.type != "MESH" or RX_SKIP.search(ob.name): return
     A = mesh_arrays(ob.data)
@@ -221,12 +283,26 @@ def sample_object(ob, out, stats):
             cc = np.maximum(cc, lin2srgb(np.clip(inf["emis"], 0, 1)))
         col[sel] = cc
     keep = alpha_keep
+    nrm_pt = nrm[ti]
+    # Bäume aus gekreuzten Blattkarten (tree_a/tree_b) -> realistische KAHLE Bäume (Winter, 2026-11-19): Stamm, Hauptäste,
+    # Zweige rekursiv verzweigt, Punkte auf den Ast-Oberflächen in Rindenfarbe. Die Karten (Blätter + Rindenebene) entfallen;
+    # als flache Punkt-Ebenen standen sie wie Mauern quer über Straße und Passage.
+    if RX_TREE.search(ob.name) or RX_TREE.search(ob.data.name):
+        L = P[keep]
+        if len(L) > 20:
+            lo, hi = np.percentile(L, 2, axis=0), np.percentile(L, 98, axis=0)
+            lo[1] = float(L[:, 1].min())                                         # Stammfuß auf dem Boden
+            Pb, Nb, Cb = kahler_baum(lo, hi, float(np.median(dens)) * CUR["mult"])
+            out["P"].append(Pb.astype(np.float32)); out["N"].append(oct_encode(Nb))
+            Cc = np.empty((len(Pb), 4), np.uint8); Cc[:, :3] = Cb; Cc[:, 3] = 1          # zweiseitig
+            out["C"].append(Cc); stats["pts"] += len(Pb); stats["baeume"] = stats.get("baeume", 0) + 1
+            return
     out["P"].append(P[keep].astype(np.float32))
     C = np.empty((int(keep.sum()), 4), np.uint8)
     C[:, :3] = np.clip(np.round(col[keep] * 255), 0, 255).astype(np.uint8)
     C[:, 3] = flags_t[ti][keep]
     out["C"].append(C)
-    out["N"].append(oct_encode(nrm[ti][keep]))
+    out["N"].append(oct_encode(nrm_pt[keep]))
     stats["pts"] += int(keep.sum())
 
 WORK_SCENE = "PC_Import"          # eigene Import-Szene: andere Szenen (z. B. Gottfried_Holzmarkt6) bleiben unberührt

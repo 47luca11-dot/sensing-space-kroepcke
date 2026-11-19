@@ -1,0 +1,413 @@
+{
+ "quelle": "pipeline/karte/build_stations.mjs (OSM + pipeline/ground/ubahn.py)",
+ "stationen": [
+  {
+   "name": "Kröpcke",
+   "punkt": [
+    -34.1,
+    62.27
+   ],
+   "linien": "U1 U2 U3 U4 U5 U6 U7 U8 U9 U10 U11 U17",
+   "ankunft": {
+    "x": 2,
+    "z": 6,
+    "yaw": 180
+   },
+   "eingaenge": [
+    "kroepcke_A",
+    "kroepcke_B",
+    "kroepcke_C",
+    "kroepcke_D",
+    "kroepcke_E",
+    "kroepcke_F",
+    "kroepcke_G",
+    "kroepcke_H",
+    "kroepcke_I"
+   ]
+  },
+  {
+   "name": "Hauptbahnhof",
+   "punkt": [
+    186.91,
+    -283.15
+   ],
+   "linien": "U1 U2 U8 U10 U17 · S-Bahn · Fernverkehr",
+   "ankunft": {
+    "x": 162.4,
+    "z": -181.2,
+    "yaw": 143
+   },
+   "eingaenge": [
+    "ub_2747495414",
+    "ub_4048984722",
+    "ub_4048984735"
+   ]
+  },
+  {
+   "name": "Steintor",
+   "punkt": [
+    -422.04,
+    -149.41
+   ],
+   "linien": "U4 U5 U6 U10 U11 U17",
+   "ankunft": {
+    "x": -504.2,
+    "z": -138.42,
+    "yaw": -25.5
+   },
+   "eingaenge": [
+    "ub_1274066800",
+    "ub_1274066802",
+    "ub_1396666085",
+    "ub_1396666113"
+   ]
+  },
+  {
+   "name": "Markthalle/Landtag",
+   "punkt": [
+    -174.92,
+    398.21
+   ],
+   "linien": "U3 U7 U9",
+   "ankunft": {
+    "x": -231.71,
+    "z": 469.03,
+    "yaw": -44.6
+   },
+   "eingaenge": [
+    "ub_4373301942",
+    "ub_4373301943"
+   ]
+  },
+  {
+   "name": "Aegidientorplatz",
+   "punkt": [
+    301.39,
+    611.19
+   ],
+   "linien": "U1 U2 U4 U5 U6 U8 U11",
+   "ankunft": {
+    "x": 347.82,
+    "z": 566.63,
+    "yaw": 166.7
+   },
+   "eingaenge": [
+    "ub_324517470"
+   ]
+  },
+  {
+   "name": "Waterlooplatz",
+   "punkt": [
+    -617.02,
+    715.37
+   ],
+   "linien": "U3 U7 U9",
+   "ankunft": {
+    "x": -534.72,
+    "z": 635.11,
+    "yaw": -63.2
+   },
+   "eingaenge": [
+    "ub_299064939"
+   ]
+  }
+ ],
+ "eingaenge": [
+  {
+   "key": "kroepcke_A",
+   "station": "Kröpcke",
+   "ref": "A",
+   "top": [
+    -46.63,
+    51.65
+   ],
+   "dir": [
+    0.27,
+    -0.96
+   ],
+   "y_top": 0.14
+  },
+  {
+   "key": "kroepcke_B",
+   "station": "Kröpcke",
+   "ref": "B",
+   "top": [
+    -52.49,
+    -12.88
+   ],
+   "dir": [
+    0.95,
+    0.3
+   ],
+   "y_top": 0.24
+  },
+  {
+   "key": "kroepcke_C",
+   "station": "Kröpcke",
+   "ref": "C",
+   "top": [
+    -48.11,
+    -28.12
+   ],
+   "dir": [
+    0.96,
+    0.29
+   ],
+   "y_top": -0.04
+  },
+  {
+   "key": "kroepcke_D",
+   "station": "Kröpcke",
+   "ref": "D",
+   "top": [
+    18.19,
+    44.97
+   ],
+   "dir": [
+    -0.48,
+    -0.88
+   ],
+   "y_top": 0.03
+  },
+  {
+   "key": "kroepcke_E",
+   "station": "Kröpcke",
+   "ref": "E",
+   "top": [
+    101.68,
+    211.79
+   ],
+   "dir": [
+    -0.51,
+    -0.86
+   ],
+   "y_top": -0.45
+  },
+  {
+   "key": "kroepcke_F",
+   "station": "Kröpcke",
+   "ref": "F",
+   "top": [
+    93.38,
+    218.35
+   ],
+   "dir": [
+    -0.49,
+    -0.87
+   ],
+   "y_top": -0.52
+  },
+  {
+   "key": "kroepcke_G",
+   "station": "Kröpcke",
+   "ref": "G",
+   "top": [
+    -64.52,
+    162.38
+   ],
+   "dir": [
+    0.26,
+    -0.97
+   ],
+   "y_top": -0.42
+  },
+  {
+   "key": "kroepcke_H",
+   "station": "Kröpcke",
+   "ref": "H",
+   "top": [
+    -78.22,
+    158.76
+   ],
+   "dir": [
+    0.25,
+    -0.97
+   ],
+   "y_top": -0.52
+  },
+  {
+   "key": "kroepcke_I",
+   "station": "Kröpcke",
+   "ref": "I",
+   "top": [
+    -67.64,
+    117.84
+   ],
+   "dir": [
+    -0.25,
+    0.97
+   ],
+   "y_top": -0.22
+  },
+  {
+   "key": "ub_299064939",
+   "station": "Waterlooplatz",
+   "ref": "",
+   "top": [
+    -531.6,
+    633.53
+   ],
+   "dir": [
+    0.89,
+    -0.45
+   ],
+   "y_top": -3.99
+  },
+  {
+   "key": "ub_324517470",
+   "station": "Aegidientorplatz",
+   "ref": "",
+   "top": [
+    347.02,
+    570.03
+   ],
+   "dir": [
+    -0.23,
+    0.97
+   ],
+   "y_top": -1.86
+  },
+  {
+   "key": "ub_1274066800",
+   "station": "Steintor",
+   "ref": "",
+   "top": [
+    -502.7,
+    -141.57
+   ],
+   "dir": [
+    0.43,
+    -0.9
+   ],
+   "y_top": -0.94
+  },
+  {
+   "key": "ub_1274066802",
+   "station": "Steintor",
+   "ref": "",
+   "top": [
+    -390.8,
+    -123.25
+   ],
+   "dir": [
+    -0.95,
+    -0.31
+   ],
+   "y_top": -1.04
+  },
+  {
+   "key": "ub_1396666085",
+   "station": "Steintor",
+   "ref": "",
+   "top": [
+    -357.06,
+    -135.33
+   ],
+   "dir": [
+    -0.99,
+    -0.1
+   ],
+   "y_top": -1.08
+  },
+  {
+   "key": "ub_1396666113",
+   "station": "Steintor",
+   "ref": "",
+   "top": [
+    -377.41,
+    -150.75
+   ],
+   "dir": [
+    -0.95,
+    -0.31
+   ],
+   "y_top": -1.06
+  },
+  {
+   "key": "ub_2747495414",
+   "station": "Hauptbahnhof",
+   "ref": "",
+   "top": [
+    306.9,
+    -477.11
+   ],
+   "dir": [
+    -0.44,
+    0.9
+   ],
+   "y_top": -2.6
+  },
+  {
+   "key": "ub_4048984722",
+   "station": "Hauptbahnhof",
+   "ref": "",
+   "top": [
+    182.79,
+    -278.21
+   ],
+   "dir": [
+    0.61,
+    -0.79
+   ],
+   "y_top": 2.28
+  },
+  {
+   "key": "ub_4048984735",
+   "station": "Hauptbahnhof",
+   "ref": "",
+   "top": [
+    202.65,
+    -305.05
+   ],
+   "dir": [
+    -0.6,
+    0.8
+   ],
+   "y_top": 2.22
+  },
+  {
+   "key": "ub_4373301942",
+   "station": "Markthalle/Landtag",
+   "ref": "",
+   "top": [
+    -229.26,
+    466.54
+   ],
+   "dir": [
+    0.7,
+    -0.71
+   ],
+   "y_top": -0.7
+  },
+  {
+   "key": "ub_4373301943",
+   "station": "Markthalle/Landtag",
+   "ref": "",
+   "top": [
+    -237.85,
+    457.6
+   ],
+   "dir": [
+    0.72,
+    -0.69
+   ],
+   "y_top": -0.72
+  }
+ ],
+ "passerelle": {
+  "origin": [
+   40.74179176990315,
+   -95.26408315696847
+  ],
+  "axis": [
+   0.6004671445204948,
+   -0.7996494284068507
+  ],
+  "normal": [
+   0.7996494284068507,
+   0.6004671445204948
+  ],
+  "s_ende": 143.9,
+  "breite": 9
+ }
+}

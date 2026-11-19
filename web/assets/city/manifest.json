@@ -287,7 +287,21 @@
     18.87,
     361.34
    ],
-   "tris": 34436
+   "tris": 33680
+  },
+  {
+   "url": "landmarks/hbf_front.glb",
+   "kind": "both",
+   "group": "landmark",
+   "bounds": [
+    141.13,
+    -2.3,
+    -218.74,
+    204.21,
+    25.2,
+    -171.0
+   ],
+   "tris": 6896
   },
   {
    "url": "landmarks/kroepcke_center.glb",
@@ -7038,7 +7052,7 @@
     6.28,
     -62.53
    ],
-   "tris": 10160
+   "tris": 10136
   },
   {
    "url": "ground/ground_-6_-1.glb",
@@ -7248,7 +7262,7 @@
     6.41,
     -98.44
    ],
-   "tris": 29162
+   "tris": 29139
   },
   {
    "url": "ground/ground_-5_-1.glb",
@@ -7486,7 +7500,7 @@
     2.36,
     -94.83
    ],
-   "tris": 15074
+   "tris": 15051
   },
   {
    "url": "ground/ground_-4_-1.glb",
@@ -7822,7 +7836,7 @@
     2.73,
     505.69
    ],
-   "tris": 14857
+   "tris": 14821
   },
   {
    "url": "ground/ground_-3_5.glb",
@@ -8256,7 +8270,7 @@
     5.79,
     3.31
    ],
-   "tris": 29621
+   "tris": 29619
   },
   {
    "url": "ground/ground_-1_0.glb",
@@ -8284,7 +8298,7 @@
     3.19,
     201.33
    ],
-   "tris": 15210
+   "tris": 15178
   },
   {
    "url": "ground/ground_-1_2.glb",
@@ -8492,9 +8506,9 @@
     -201.17,
     105.03,
     4.79,
-    -89.93
+    -95.34
    ],
-   "tris": 31124
+   "tris": 31038
   },
   {
    "url": "ground/ground_0_-1.glb",
@@ -8503,12 +8517,12 @@
    "bounds": [
     -3.18,
     -5.12,
-    -110.74,
+    -105.29,
     106.62,
     5.27,
     -6.79
    ],
-   "tris": 33805
+   "tris": 33691
   },
   {
    "url": "ground/ground_0_0.glb",
@@ -8788,7 +8802,7 @@
     4.53,
     -96.73
    ],
-   "tris": 17803
+   "tris": 17723
   },
   {
    "url": "ground/ground_1_-1.glb",
@@ -9376,7 +9390,7 @@
     1.52,
     602.84
    ],
-   "tris": 15104
+   "tris": 15108
   },
   {
    "url": "ground/ground_3_6.glb",
@@ -10342,7 +10356,7 @@
    "kind": "collision",
    "group": "ground",
    "bounds": null,
-   "tris": 756840
+   "tris": 756424
   }
  ],
  "labels": [

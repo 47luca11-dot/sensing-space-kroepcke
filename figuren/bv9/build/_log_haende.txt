@@ -1,0 +1,6 @@
+[haende] Hand L: Länge 0.208 m = 0.117 H -> Faktor 0.896
+[haende] Hand R: Länge 0.181 m = 0.102 H -> Faktor 1.000
+[haende] Splats Hand L: 3737
+[haende] Splats Hand R: 3712
+[haende] fertig {'L': 0.896, 'R': 1.0}
+FERTIG

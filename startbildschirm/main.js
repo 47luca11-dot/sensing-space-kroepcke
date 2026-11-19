@@ -20,7 +20,21 @@ function imgToFrame(ix, iy) {
 }
 
 // ---------------- Charaktere (Texte/Stats hier anpassen) ----------------
+// Auswahl vorerst nur die drei neuen Scan-Figuren (Stand 2026-11-19). Die übrigen stehen unten in WEITERE_FIGUREN
+// und lassen sich durch Zurückverschieben wieder aufnehmen.
 const CHARACTERS = [
+  { id: 'bv9', sh: 3, name: 'LUCA 1', role: 'SPÄHER', x: 0.10, timeOffset: 0.3,
+    stats: { AUSDAUER: 7, GESUNDHEIT: 6, GESCHWINDIGKEIT: 7, WILLE: 8 },
+    bio: 'Lange Locken, braune Lederjacke, Blick nach vorn. Geht leise und merkt sich jeden Weg.' },
+  { id: 'bv10', sh: 3, name: 'LUCA 2', role: 'FUNKER', x: 0.90, timeOffset: 1.5,
+    stats: { AUSDAUER: 6, GESUNDHEIT: 7, GESCHWINDIGKEIT: 7, WILLE: 7 },
+    bio: 'Schwarzes Shirt, Kabel im Ohr. Hört mehr, als er sagt.' },
+  { id: 'bv11', sh: 3, name: 'MO', role: 'TRÄGER', x: 1.70, timeOffset: 0.8,
+    stats: { AUSDAUER: 9, GESUNDHEIT: 8, GESCHWINDIGKEIT: 6, WILLE: 7 },
+    bio: 'Feste Stiefel, schwarzes Shirt. Trägt, was andere stehen lassen.' },
+];
+/* eslint-disable no-unused-vars */
+const WEITERE_FIGUREN = [   // vorerst aus der Auswahl gestrichen
   { id: 'person1', name: 'CARLOS', role: 'PLÜNDERER', x: -0.70, timeOffset: 0.0,
     stats: { AUSDAUER: 6, GESUNDHEIT: 7, GESCHWINDIGKEIT: 4, WILLE: 9 },
     bio: 'Kennt jeden Keller zwischen Bothfeld und Vahrenheide. Bleibt ruhig, wenn alles brennt, und hört selten auf Befehle.' },
@@ -42,16 +56,6 @@ const CHARACTERS = [
   { id: 'jackemesh', name: 'JACKE MESH', role: 'TESTFIGUR', x: 4.10, timeOffset: 0.6, mesh: true,     // Vergleich: KI-Mesh (figuro) + Farben aus dem Splat-Scan
     stats: { AUSDAUER: 6, GESUNDHEIT: 6, GESCHWINDIGKEIT: 8, WILLE: 7 },
     bio: 'Derselbe Läufer – diesmal als geschlossenes Mesh mit Textur statt Punktwolke. Zum Vergleichen.' },
-  // Bothfeld-Vahrenheide (9)-(11): Skelett mit Fingern, Finger entspannt (Skill figur-einbauen, figur_finger.py im Live-Blender) – Namen vorläufig
-  { id: 'bv9', sh: 3, name: 'LEDERJACKE', role: 'SPÄHER', x: 4.90, timeOffset: 0.3,
-    stats: { AUSDAUER: 7, GESUNDHEIT: 6, GESCHWINDIGKEIT: 7, WILLE: 8 },
-    bio: 'Lange Locken, braune Jacke, Blick nach vorn. Geht leise und merkt sich jeden Weg.' },
-  { id: 'bv10', sh: 3, name: 'LOCKEN', role: 'FUNKER', x: 5.70, timeOffset: 1.5,
-    stats: { AUSDAUER: 6, GESUNDHEIT: 7, GESCHWINDIGKEIT: 7, WILLE: 7 },
-    bio: 'Schwarzes Shirt, Kabel im Ohr. Hört mehr, als er sagt.' },
-  { id: 'bv11', sh: 3, name: 'BOOTS', role: 'TRÄGER', x: 6.50, timeOffset: 0.8,
-    stats: { AUSDAUER: 9, GESUNDHEIT: 8, GESCHWINDIGKEIT: 6, WILLE: 7 },
-    bio: 'Feste Stiefel, kurze Locken. Trägt, was andere stehen lassen.' },
 ];
 const SEGMENTS = 10;
 
@@ -222,7 +226,7 @@ function updateSplatSkin(f) {
 }
 
 // ---------------- Auswahl / UI ----------------
-let selected = 1;                                   // Start: Andis
+let selected = 0;                                   // Start: Luca 1
 const panel = $('panel');
 function renderPanel() {
   const c = CHARACTERS[selected];
@@ -579,7 +583,7 @@ $('btn-ready').addEventListener('click', startGame);
 
 // Spiel starten: spielbar sind Figuren mit Geh-/Lauf-Animationen (Carlos, Mohammad, Daunenjacke).
 // Läuft der Startbildschirm über den Spiel-Server (/startbildschirm/), geht es relativ zurück, sonst zum Spiel-Port 5177.
-const PLAYABLE = ['person1', 'mohammad', 'daunenjacke', 'trainingsjacke', 'jackemesh', 'bv9', 'bv10', 'bv11'];
+const PLAYABLE = ['bv9', 'bv10', 'bv11'];
 const GAME_URL = location.pathname.startsWith('/startbildschirm') ? '/' : `${location.protocol}//${location.hostname}:5177/`;
 function startGame() {
   const c = CHARACTERS[selected];
