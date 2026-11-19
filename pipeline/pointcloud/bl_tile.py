@@ -16,7 +16,13 @@ QXZ, QY = 1 / 1000.0, 1 / 250.0
 LO_FRAC = 0.12
 # Zieldichte (Punkte/m²) – gleiche Kernbereiche wie in bl_sample.py, aber niedriger
 CORE_T, BASE_T = 110.0, 9.0       # = Abtastdichte (bl_sample): keine Ausdünnung, maximale Dichte
-KEEP_FULL = ("landmarks__gottfried_holzmarkt6",)   # Handmodelle: volle Abtastdichte behalten
+KEEP_FULL = ("landmarks__gottfried_holzmarkt6", "scan__")   # Handmodelle: volle Abtastdichte behalten
+# Eigene Scans (data/pointcloud/stage/scan__*.npz, z. B. pipeline/scans/steintor_eingang.py) ersetzen die Modellpunkte dort,
+# wo der Scan etwas zeigt: Modellpunkte in 0,5-m-Voxeln mit Scan-Punkten fallen weg (tiefer liegende, nicht gescannte Teile bleiben).
+SCAN_VOX = 0.5
+def _vox(P):
+    q = np.floor(P / SCAN_VOX).astype(np.int64)
+    return ((q[:, 0] + 8192) * 1024 + (q[:, 1] + 512)) * 16384 + (q[:, 2] + 8192)
 
 def build(sample_ns):
     dens_src = sample_ns["density"]
@@ -26,10 +32,21 @@ def build(sample_ns):
     for f in glob.glob(os.path.join(OUT, "t_*.bin")): os.remove(f)
     buckets = {}
     t0 = time.time(); total_in = total_out = 0
+    scan_files = sorted(glob.glob(os.path.join(STAGE, "scan__*.npz")))
+    scan_keys = scan_lo = scan_hi = None; ersetzt = 0
+    if scan_files:
+        Ps = np.concatenate([np.load(f)["P"] for f in scan_files]).astype(np.float64)
+        scan_keys = np.unique(_vox(Ps)); scan_lo = Ps.min(0) - SCAN_VOX; scan_hi = Ps.max(0) + SCAN_VOX
     for fn in sorted(glob.glob(os.path.join(STAGE, "*.npz"))):
         d = np.load(fn)
         P, C, N = d["P"], d["C"], d["N"]
         if len(P) == 0: continue
+        if scan_keys is not None and not os.path.basename(fn).startswith("scan__"):
+            inb = np.all((P >= scan_lo) & (P <= scan_hi), 1)
+            if inb.any():
+                ii = np.where(inb)[0]; weg = ii[np.isin(_vox(P[ii].astype(np.float64)), scan_keys)]
+                if len(weg):
+                    m = np.ones(len(P), bool); m[weg] = False; P, C, N = P[m], C[m], N[m]; ersetzt += len(weg)
         total_in += len(P)
         x, z = P[:, 0].astype(np.float64), P[:, 2].astype(np.float64)
         src = dens_src(x, z)
@@ -76,6 +93,7 @@ def build(sample_ns):
                flags={"twoSided": 1, "emissive": 2, "glass": 4, "fine": 8},
                total=int(sum(t["n"] for t in tiles)), tiles=tiles,
                source="pipeline/pointcloud/bl_sample.py + bl_tile.py (Blender %s über MCP)" % sample_ns.get("BL_VERSION", ""))
+    if scan_files: idx["scans"] = dict(dateien=[os.path.basename(f) for f in scan_files], modellpunkte_ersetzt=int(ersetzt))
     json.dump(idx, open(os.path.join(OUT, "index.json"), "w"), separators=(",", ":"))
     cellify()
     return dict(tiles=len(tiles), pts_in=total_in, pts_out=total_out, sec=round(time.time() - t0, 1))

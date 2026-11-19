@@ -250,6 +250,7 @@ def pitch_line(g, y_top):
     pts.append((sr[-1] + 0.30, y_top - n * rise))
     return np.array(pts)
 
+HANDLAEUFE = []                                                       # echte Handlauf-Polylinien (Spiel: Leuchtgeländer)
 for st in STAIRS:
     f, g = st['f'], st['g']; t0, t1 = st['t0'], st['t1']
     y_top, y_floor = st['y_top'], st['y_floor']
@@ -307,6 +308,7 @@ for st in STAIRS:
         add(_strip('glass', A, B, look=f.P(S.mean(), tt + sg * 3, Y.mean())))
         HR = np.array([f.P(s_, tt, y + 1.0) for s_, y in zip(S, Y)])
         add(G.tube('stainless', HR, 0.024, 10))
+        HANDLAEUFE.append({'treppe': st['name'], 'seite': 0 if sg < 0 else 1, 'pts': np.round(HR, 3).tolist()})
         for s_, y in PL[1:-1:4]: add(G2.cyl_between('stainless', f.P(s_, tt, y + 0.06), f.P(s_, tt, y + 1.0), 0.018, 8))
         add(G2.cyl_between('stainless', f.P(S[-1], tt, y_floor), f.P(S[-1], tt, Y[-1] + 1.0), 0.02, 8))   # Endpfosten unten
         A = np.array([f.P(s_, tt, y) for s_, y in zip(S, Y)]); B = np.array([f.P(s_, tt, y + 1.05) for s_, y in zip(S, Y)])
@@ -836,5 +838,5 @@ pickle.dump({'parts': parts, 'coll': coll, 'walk': walk, 'mats': MATS_EXTRA,
                                         'steps': st['g']['n'], 'rise': round(st['g']['rise'], 3), 'tread': st['g']['tread'], 'landing': st['g']['landing'],
                                         'width': round(st['width'], 2), 'top': [round(float(v), 2) for v in fr.xz(st['s_top'], (st['tg'][0] + st['tg'][1]) / 2)],
                                         'descends': 'north' if st['dir'] > 0 else 'south', 'source': st['src']} for st in STAIRS],
-                            'shops_named': named_list, 'axis': AX}}, open(CACHE + 'promenade.pkl', 'wb'))
+                            'shops_named': named_list, 'axis': AX, 'handlaeufe': HANDLAEUFE}}, open(CACHE + 'promenade.pkl', 'wb'))
 log('done: tris', G.tri_count(parts), 'collision', G.tri_count(coll), 'named shops', n_named)

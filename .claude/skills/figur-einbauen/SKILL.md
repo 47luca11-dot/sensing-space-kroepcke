@@ -199,3 +199,35 @@ Große Dateien laufen über Git LFS (`.gitattributes` deckt .glb/.ply/.bin ab). 
   Aufnahmen die Schultern beim Gehen hoch.
 - Vor dem Export im Live-Blender keine Objekte der Figur ausblenden (sonst exportiert gang.py eine leere GLB: KeyError 'skins').
 - Startbildschirm-Auswahl vorerst nur LUCA 1 (bv9), LUCA 2 (bv10), MO (bv11); übrige Figuren in WEITERE_FIGUREN (startbildschirm/main.js).
+
+**Stand 2026-11-19 nachmittags – maßgeblich (ersetzt die STL-Variante):**
+- Nutzer: STL-Variante von LUCA 2/MO sah schlechter aus (Schultern zu eng, Hautfarbe der STL-Hände/Lücken wie rosa Fell). Alle drei
+  Figuren wieder **nur aus dem Scan** (`figur_finger.py --voxel 0.004 --schliessen 2`), Ausgabe bv9 → `build/`, bv10/bv11 → `scan/`.
+  `figur_stl.py`/`stl/` nicht mehr ins Spiel übernehmen.
+- Hülle: zusätzlich **grob geschlossen** (doppelte Voxel, 3 Voxel weiten+schrumpfen, Splats mit Deckkraft > 0,1, nur über 9 cm Höhe)
+  – dünn belegte nackte Unterarme (bv10 links) und schwarze T-Shirts (bv10 Brust, Tunnel durch den Rumpf -> Wirbelsäule zickzack)
+  reißen sonst auf. Unter 9 cm nicht, sonst wird der orange Bodenreflex zwischen den Füßen Teil des Körpers (Streifen beim Gehen).
+- Schultergelenk 0,098–0,11 H neben der Mitte (wie LUCA 1, ~18 cm); 0,082–0,095 H war sichtbar zu eng.
+- Arm-Verfolgung überbrückt Lücken bis 26 cm und läuft am Ende im 7-cm-Zylinder bis zur Fingerspitze weiter.
+- Ablauf headless (Live-Blender des Nutzers nicht anfassen): Bau + `haende_proportion.py` + Blend speichern, dann `gang.py` auf der
+  gespeicherten Blend + Blend speichern. `haende_proportion.py` nie zweimal auf dieselben Splats (skaliert sonst doppelt) – Blend und
+  Splats müssen zusammenpassen (bv9: Splats aus c3f7693 + Blend vom 18.11. neu durchgerechnet).
+- gang.py: **Hände ausrichten** (Handfläche zum Oberschenkel, 60 % Unterarm-Drehung + Rest Handgelenk, max. 45°) im Mocap-Gehen/Laufen
+  und im Stand; Finger locker gekrümmt, gescannte verschmolzene Finger mit 55 %. **Idle = Kontrapost** (Gewicht links, rechtes Bein
+  locker vor/außen, Becken verschoben und auf der Spielbeinseite gesenkt, Arme hängen neben dem Oberschenkel). HeadTilt_L/R werden als
+  eigene Idle-Varianten aufgenommen, Carlos' `Pockets` wird gelöscht (passte nicht zu freien Armen).
+- Prüfbild headless: Aktion auf das Rig, Workbench vorn/seitlich (Skript-Muster im Scratchpad `render_frames.py`), Skelett über Hülle plotten.
+
+**Stand 2026-11-19 abends – gilt (ersetzt den Nachmittags-Absatz für bv10/bv11):**
+- Nutzer: Scan-Hülle verwächst die Arme mit dem Rumpf und lässt Schwebepunkte stehen -> **LUCA 2 (bv10) und MO (bv11) wieder auf
+  dem figuro-STL** (`figur_stl.py`, Ausgabe `figuren/<id>/stl/`, bv10 mit `--saum_hinterkopf`): STL = Hülle, Skelett, Gewichte
+  (Arme frei vom Rumpf), Scan-Splats > 2,2 cm außerhalb weg.
+- **Scan-Hände bleiben** (neu Standard). Die alten hautfarbenen STL-Hand-Splats wirkten wie rosa Fell -> nur noch mit `--stl_haende`.
+  Löcher (auch an den Händen) = Median der nächsten deckenden Scan-Splats derselben Körperregion.
+- Schultern über skelett.py 0,098–0,11 H (bv10 0,177 m, bv11 0,18 m). Danach `haende_proportion.py` + `gang.py` (Hände zum Oberschenkel,
+  Kontrapost-Idle). LUCA 1 (bv9) bleibt `build/` (figur_finger, kein STL).
+- Headless-Lauf: Scratchpad-Muster `bau_stl.py` (figur_stl -> haende_proportion -> Blend speichern -> gang -> Blend speichern).
+- **Anschmiegen (figur_stl.py, Standard):** nach dem gelenkweisen Ausrichten wird die STL-Fläche entlang der Normalen an den Scan
+  gezogen (Median der Normalabstände naher Scan-Punkte derselben Körpergruppe, -2..+5 cm, geglättet; Hände bleiben wie im STL).
+  figuro schätzt Proportionen – bei MO lagen vorher 12 % der Rumpf-Splats > 2 cm außerhalb und wurden mit den Schultern
+  weggeschnitten (Schultern zu eng, Körperbau komisch); danach 1,2 %. Abschalten: `--ohne_anschmiegen`.

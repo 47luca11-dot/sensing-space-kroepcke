@@ -264,8 +264,8 @@ def anpassen(P, H, mensch, carlos, log=print, kanten=None):
     for s_ in (1, -1):
         mo = (np.abs(z - z_sh) < 0.012 * k) & (np.abs(y - ymed) < 0.14 * k) & (s_ * (x - cx_sh) > 0)
         if mo.sum() > 12: aussen.append(float(np.percentile(s_ * (x[mo] - cx_sh), 99.5)))
-    if aussen: x_sh = min(x_sh, min(aussen) - 0.05 * k)
-    x_sh = float(np.clip(x_sh, 0.082 * H, 0.095 * H)); info["schulter_aussen"] = [round(v, 3) for v in aussen]
+    if aussen: x_sh = min(x_sh, max(min(aussen), 0.22 * k) - 0.04 * k)
+    x_sh = float(np.clip(x_sh, 0.098 * H, 0.11 * H))               # wie LUCA 1 (~18-20 cm); 0,082-0,095 H war sichtbar zu eng; info["schulter_aussen"] = [round(v, 3) for v in aussen]
     for side, s in (("L", 1), ("R", -1)):
         # 3) Tiefe: Mitte des Schulter-Querschnitts (Gelenk liegt mittig zwischen Brust- und Rückenseite)
         sl = (np.abs(z - z_sh) < 0.015 * k) & (np.abs(x - (cx_sh + s * x_sh)) < 0.025 * k) & (np.abs(y - ymed) < 0.14 * k)
@@ -361,8 +361,8 @@ def anpassen(P, H, mensch, carlos, log=print, kanten=None):
         for _ in range(60):
             Q = A_arm - cur; dist = np.linalg.norm(Q, axis=1)
             m = None
-            for r_in, r_out in ((0.03, 0.07), (0.05, 0.10), (0.07, 0.14)):          # Scan-Lücken (fleckige Ärmel) überspringen
-                mm = (dist > r_in * k) & (dist < r_out * k) & ((Q @ dirv) > 0.6 * dist)
+            for r_in, r_out, kegel in ((0.03, 0.07, 0.6), (0.05, 0.10, 0.6), (0.07, 0.14, 0.6), (0.10, 0.20, 0.8), (0.14, 0.26, 0.85)):   # Scan-Lücken (fleckige nackte Unterarme) überspringen
+                mm = (dist > r_in * k) & (dist < r_out * k) & ((Q @ dirv) > kegel * dist)
                 if mm.sum() >= 8: m = mm; break
             if m is None: break
             c = A_arm[m].mean(0)
@@ -374,6 +374,12 @@ def anpassen(P, H, mensch, carlos, log=print, kanten=None):
             Q2 = A_arm - cur; ring = (np.abs(Q2 @ dirv) < 0.008 * k) & (np.linalg.norm(Q2, axis=1) < 0.09 * k)
             if ring.sum() > 8: cur = A_arm[ring].mean(0)
             path.append(Vector(cur))
+        # Rest des Arms in Laufrichtung (Zylinder 7 cm) bis zur Fingerspitze: was hinter einer großen Lücke liegt, gehört noch dazu
+        Q = A_arm - cur; t_ = Q @ dirv; rq = np.linalg.norm(Q - np.outer(t_, dirv), axis=1)
+        rest = t_[(t_ > 0) & (rq < 0.07 * k)]
+        if len(rest) > 8:
+            t_max = float(np.percentile(rest, 99.5)); n_ = int(t_max / (0.04 * k))
+            for i_ in range(1, n_ + 1): path.append(Vector(cur + dirv * min(t_max, i_ * 0.04 * k)))
         seg = [(path[i + 1] - path[i]).length for i in range(len(path) - 1)]; L = sum(seg)
         def at(dist):
             acc = 0.0
@@ -452,7 +458,7 @@ def finger_entspannen(rig, info):
     """Finger in eine natürliche Ruhehaltung drehen: nebeneinander (kaum gespreizt), leicht zur Handfläche gekrümmt.
     Ziel-Richtungen je Glied aus Handrichtung d, Daumenseite e und Handflächen-Normale n – unabhängig davon, wie der Scan sie hält."""
     import bpy
-    ziele = {"f_index": (3, (18, 28, 16)), "f_middle": (0, (20, 32, 18)), "f_ring": (-3, (22, 34, 19)), "f_pinky": (-6, (24, 36, 20))}   # eng zusammen
+    ziele = {"f_index": (3, (8, 14, 8)), "f_middle": (0, (10, 16, 9)), "f_ring": (-3, (12, 18, 10)), "f_pinky": (-6, (14, 20, 11))}   # leicht; Bewegung kommt aus gang.finger_locker   # eng zusammen
     def drehe(pb, R):
         h = np.array(pb.head)
         M = Matrix.Translation(Vector(h)) @ Matrix(R.tolist()).to_4x4() @ Matrix.Translation(Vector(-h))

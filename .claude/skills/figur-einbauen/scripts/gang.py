@@ -204,15 +204,52 @@ for s_ in "LR":
 def min_kontakt():
     return min(((MW @ rig.pose.bones[b].matrix) @ loc).z for s_ in "LR" for b, loc in KONTAKT[s_])
 ALLE_C = [c for pb in rig.pose.bones for c in pb.constraints]
-def finger_locker():
-    # Finger locker gekrümmt (lokale Z-Achse zeigt zum Handrücken -> negative Drehung um X beugt zur Handfläche)
+# Finger sind bei Scan-/STL-Figuren in der Ruhepose schon entspannt (figur_finger/figur_stl) -> nur leicht nachkrümmen
+FINGER_K = float(arg("--finger", 0.55))
+def finger_locker(staerke=1.0):
+    # Finger locker gekrümmt (lokale Z-Achse zeigt zum Handrücken -> negative Drehung um X beugt zur Handfläche).
+    # Gescannte, verschmolzene Finger (haende_wie_gescannt) nur etwa halb so stark – sonst knicken die Splat-Finger.
     for s in "LR":
-        if s in rig.get("haende_wie_gescannt", ""): continue          # verschmolzene Scan-Finger nicht zusätzlich krümmen
-        for f, krumm in (("f_index", (14, 24, 16)), ("f_middle", (16, 27, 18)), ("f_ring", (18, 29, 19)), ("f_pinky", (20, 30, 20)), ("thumb", (0, 10, 14))):
+        f_ = staerke * (0.55 if s in rig.get("haende_wie_gescannt", "") else 1.0)
+        for f, krumm in (("f_index", (14, 24, 16)), ("f_middle", (16, 27, 18)), ("f_ring", (18, 29, 19)), ("f_pinky", (20, 30, 20)), ("thumb", (0, 0, 0))):                                  # Daumen: X ist keine Beugeachse (knickte seitlich weg)
             for i, c in enumerate(krumm, 1):
                 pb = rig.pose.bones.get(f"{f}.0{i}.{s}")
-                if pb is not None and c: pb.rotation_quaternion = Quaternion((1, 0, 0), -math.radians(c))
+                if pb is not None and c: pb.rotation_quaternion = Quaternion((1, 0, 0), -math.radians(c * f_))
     bpy.context.view_layer.update()
+
+def _ww(n, end="head"):
+    pb = rig.pose.bones[n]; return MW @ (pb.head if end == "head" else pb.tail)
+def handflaeche(s):
+    """Normale der Handfläche (Welt) im aktuellen Bild: Handrichtung x (Kleinfinger -> Zeigefinger), Chiralität je Seite."""
+    sg = 1 if s == "L" else -1
+    w = _ww("hand." + s); m = _ww("f_middle.01." + s); i_ = _ww("f_index.01." + s); p_ = _ww("f_pinky.01." + s)
+    d = (m - w).normalized(); q = (i_ - p_); n = d.cross(q) * sg
+    return n.normalized() if n.length > 1e-6 else None
+ARM_IK = []
+def hand_ausrichten(s, staerke=1.0, rueck=0.3, vor=0.0):
+    """Handfläche zum Oberschenkel drehen (Daumen nach vorn), wie bei locker hängenden Armen.
+    60 % der Drehung übernimmt der Unterarm (Pro-/Supination um seine Achse), den Rest das Handgelenk.
+    rueck/vor kippen das Ziel etwas nach hinten (Handfläche leicht nach hinten, wie beim Gehen) bzw. vorn."""
+    sg = 1 if s == "L" else -1
+    ziel = Vector((-sg, rueck - vor, 0.0))
+    for bone, anteil in (("forearm." + s, 0.6), ("hand." + s, 1.0)):
+        n = handflaeche(s)
+        if n is None: return
+        a = (_ww(bone, "tail") - _ww(bone)).normalized() if bone.startswith("forearm") else (_ww("f_middle.01." + s) - _ww("hand." + s)).normalized()
+        n_p = (n - a * n.dot(a)); t_p = (ziel - a * ziel.dot(a))
+        if n_p.length < 1e-4 or t_p.length < 1e-4: continue
+        n_p.normalize(); t_p.normalize()
+        ang = math.atan2(a.dot(n_p.cross(t_p)), max(-1.0, min(1.0, n_p.dot(t_p))))
+        if bone.startswith("hand"): ang = max(-math.radians(45), min(math.radians(45), ang))
+        rot_um_gelenk(bone, Matrix.Rotation(ang * anteil * staerke, 3, a))
+def arm_ik_backen():
+    """Ergebnis der Arm-IK als feste Pose übernehmen und die IK stummschalten (damit Unterarm/Hand danach gedreht werden können)."""
+    bpy.context.view_layer.update()
+    for s in "LR":
+        Ms = {n: rig.pose.bones[n].matrix.copy() for n in ("upper_arm." + s, "forearm." + s)}
+        IK["arm" + s].mute = True
+        for n in ("upper_arm." + s, "forearm." + s):
+            rig.pose.bones[n].matrix = Ms[n]; bpy.context.view_layer.update()
 MOCAP = {}
 if "--ohne_mocap" not in argv:
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -261,7 +298,8 @@ def pose_bild(art, p):
         for c in ALLE_C: c.mute = True
         MC.pose_setzen(rig, MW, MWi, tab, i, pelvis0)
         rot_um_gelenk("spine", Matrix.Identity(3), Vector((0, 0, tab["dz"][i])))
-        finger_locker()
+        for s_ in "LR": hand_ausrichten(s_, 0.85, rueck=0.35)
+        finger_locker(FINGER_K)
         return
     for c in ALLE_C: c.mute = False
     if art == "walk":
@@ -275,16 +313,19 @@ def pose_bild(art, p):
         sway = 0.012 * k * math.sin(sg2); yaw = 8.0 * math.cos(sg2); roll = 4.0 * math.sin(sg2); lean = 9.0
         rumpf_yaw = -15.0 * math.cos(sg2); arm_amp, beuge0, beuge_amp = 38.0, 82.0, 12.0
         fn = laufen
-    else:  # idle
-        breath = math.sin(sg2 * 4)                                # 4 Atemzüge pro 4 s
-        shift = math.sin(sg2)                                     # langsame Gewichtsverlagerung
-        bob = -0.006 * k + 0.002 * k * breath; sway = 0.012 * k * shift; yaw = 1.5 * shift; roll = -1.2 * shift; lean = 0.5
-        rumpf_yaw = -1.0 * shift
+    else:  # idle (+ Kopfneigen tiltL/tiltR): natürlicher Stand – Gewicht auf dem linken Bein (Kontrapost), rechtes Knie locker,
+        # Becken zur Standseite verschoben und auf der Spielbeinseite gesenkt, Schultern gegengleich, Arme hängen locker
+        breath = math.sin(sg2 * 4) if art == "idle" else math.sin(sg2 * 1.5)
+        shift = 0.75 + 0.25 * math.sin(sg2) if art == "idle" else 0.75   # Gewicht bleibt links, pendelt nur leicht
+        bob = -0.012 * k + 0.002 * k * breath; sway = 0.03 * k * shift; yaw = 3.0 * shift; roll = -3.0 * shift; lean = 0.5
+        rumpf_yaw = -2.0 * shift
     # Becken (spine = Wurzel)
     rot_um_gelenk("spine", E(pitch=lean * 0.4, roll=roll, yaw=yaw), Vector((sway, 0, bob)))
     # Wirbelsäule: Gegenrotation, Vorlage, Atmung; Hals/Kopf stabilisieren den Blick nach vorn
-    if art == "idle":
-        rot_um_gelenk("spine.002", E(pitch=0.6 * breath, yaw=rumpf_yaw * 0.5)); rot_um_gelenk("spine.003", E(pitch=0.5 * breath))
+    IDLE = art in ("idle", "tiltL", "tiltR")
+    if IDLE:
+        rot_um_gelenk("spine.001", E(roll=-roll * 0.45))                                     # Rumpf richtet sich über dem Standbein auf
+        rot_um_gelenk("spine.002", E(pitch=0.6 * breath, yaw=rumpf_yaw * 0.5, roll=-roll * 0.35)); rot_um_gelenk("spine.003", E(pitch=0.5 * breath, roll=-roll * 0.2))
     else:
         rot_um_gelenk("spine.001", E(pitch=lean * 0.25, roll=-roll * 0.5)); rot_um_gelenk("spine.002", E(pitch=lean * 0.2, yaw=(rumpf_yaw - yaw) * 0.45))
         rot_um_gelenk("spine.003", E(pitch=lean * 0.15, yaw=(rumpf_yaw - yaw) * 0.55, roll=-roll * 0.3))
@@ -292,12 +333,15 @@ def pose_bild(art, p):
     for n, anteil in (("spine.004", 0.35), ("spine.005", 0.35), ("spine.006", 0.3)):
         Mcur = (MW @ rig.pose.bones[n].matrix).to_3x3().normalized(); Mrest = REST[n].to_3x3().normalized()
         Rfix = (Mrest @ Mcur.inverted()).to_quaternion(); Rpart = Quaternion().slerp(Rfix, anteil)
-        rot_um_gelenk(n, Rpart.to_matrix() @ (E(pitch=-0.8 * breath) if art == "idle" and n == "spine.006" else Matrix.Identity(3)))
+        rot_um_gelenk(n, Rpart.to_matrix() @ (E(pitch=-0.8 * breath, roll=1.5) if IDLE and n == "spine.006" else Matrix.Identity(3)))
+    if art in ("tiltL", "tiltR"):                                    # Kopf zur Seite neigen und etwas drehen, dann zurück
+        env = math.sin(math.pi * p) ** 2; sgn = 1 if art == "tiltL" else -1
+        rot_um_gelenk("spine.005", E(roll=sgn * 4 * env, yaw=sgn * 6 * env)); rot_um_gelenk("spine.006", E(roll=sgn * 7 * env, yaw=sgn * 10 * env, pitch=3 * env))
     # Beine
     for s in "LR":
         sg = 1 if s == "L" else -1
-        if art == "idle":
-            loc, R = bein(s, 0.02 * k, 0, 0, 0.11 * k)
+        if IDLE:                                                    # Standbein links unter der Hüfte, Spielbein etwas vor und außen
+            loc, R = bein(s, 0.01 * k, 0, 0, 0.095 * k) if s == "L" else bein(s, 0.07 * k, 0, 0, 0.125 * k)
         else:
             pos, h, kipp, seit = fn(p, s); loc, R = bein(s, pos, h, kipp, seit)
             # reicht das Bein bei dieser Beckenhöhe nicht bis zum Knöchel, hebt sich die Ferse weiter (Abrollen über den Ballen)
@@ -314,8 +358,8 @@ def pose_bild(art, p):
     # Arme (nach dem Rumpf, Schulter ist dann richtig gesetzt)
     for s in "LR":
         sg = 1 if s == "L" else -1
-        if art == "idle":
-            tgt, pole = arm_ziel(s, 4.0 + 1.0 * math.sin(sg2 + (0 if s == "L" else 1.3)), 14.0, abd=9.0)
+        if IDLE:                                                    # Arme hängen locker neben dem Oberschenkel, Ellbogen leicht gebeugt
+            tgt, pole = arm_ziel(s, 3.0 + 1.0 * math.sin(sg2 + (0 if s == "L" else 1.3)), 15.0, abd=9.0 if s == "L" else 10.0)   # Arme frei neben dem Rumpf
         else:
             phase = math.cos(sg2) * (-1 if s == "L" else 1)       # linkes Bein vorn (p=0) -> rechter Arm vorn
             if art == "walk":                                     # nach hinten weiter als nach vorn (+15° / -25°), Ellbogen vorn 37°
@@ -326,14 +370,10 @@ def pose_bild(art, p):
                 beuge = beuge0 + beuge_amp * max(0.0, phase)
             tgt, pole = arm_ziel(s, schwung, beuge, abd=1.5 if art == "walk" else 3.0, innen=(0.06 * k * max(0.0, phase) if art == "run" else 0.0))
         set_empty(T_hand[s], tgt); set_empty(P_elb[s], pole)
-    # Finger locker gekrümmt (lokale Z-Achse zeigt zum Handrücken -> negative Drehung um X beugt zur Handfläche)
-    for s in "LR":
-        if s in rig.get("haende_wie_gescannt", ""): continue
-        for f, krumm in (("f_index", (14, 24, 16)), ("f_middle", (16, 27, 18)), ("f_ring", (18, 29, 19)), ("f_pinky", (20, 30, 20)), ("thumb", (0, 10, 14))):
-            for i, c in enumerate(krumm, 1):
-                pb = rig.pose.bones.get(f"{f}.0{i}.{s}")
-                if pb is not None and c: pb.rotation_quaternion = Quaternion((1, 0, 0), -math.radians(c))
-    bpy.context.view_layer.update()
+    if art in ("idle", "tiltL", "tiltR"):
+        arm_ik_backen()
+        for s in "LR": hand_ausrichten(s, 1.0, rueck=0.15)
+    finger_locker(FINGER_K * (1.15 if art in ("idle", "tiltL", "tiltR") else 1.0))
 
 # Pole-Winkel einmal bestimmen (mit den IK-Zyklen, Mocap kurz beiseite)
 _mc = dict(MOCAP); MOCAP.clear()
@@ -343,11 +383,146 @@ for s in "LR":
     log(f"Pole {s}: Bein {a_}°, Arm {b_}°")
 MOCAP.update(_mc)
 
+# ------------------------------------------------------------------ Stoff: Mantel und Schal (Knochen aus stoff.py)
+# Vorbilder: lange Wollmäntel in Gang-Referenzen/Mocap-Kleidung (Saum schwingt mit den Beinen, das vorschwingende Knie schiebt die
+# Vorderbahn nach vorn, hinten schleppt der Saum etwas nach, beim Laufen flattert er nach hinten auf) und hängende Schalenden
+# (federn bei jedem Schritt mit dem Becken-/Brust-Hub, schwingen seitlich, wehen beim Laufen nach hinten).
+# Simulation je Clip: Verlet-Punkte an den Knochen-Enden, Federn zur angehängten Ruheform, Längen fest, Schwerkraft, Dämpfung,
+# Fahrtwind (Zyklen laufen auf der Stelle -> Luft strömt mit Gehtempo von vorn), Kollision mit Ober-/Unterschenkeln bzw. Brust.
+# 4 Zyklen vorlaufen, der letzte wird gebacken (nahtlos).
+STOFF = sorted(b.name for b in rig.data.bones if b.name.startswith(("mantel.", "schal.")))
+KETTEN = {}
+for n_ in STOFF: KETTEN.setdefault(n_.rsplit(".", 1)[0], []).append(n_)
+for k_ in KETTEN: KETTEN[k_].sort(key=lambda n_: int(n_.rsplit(".", 1)[1]))
+TEMPO = {"walk": 1.5, "run": 4.2}
+# Federn außerhalb der Doppelschritt-Frequenz (~1 Hz): Mantel ~1,3 Hz, zeta ~0,45; Schal ~0,9 Hz
+STOFF_P = {"mantel": dict(k=70.0, d=7.0, wind=0.9, g=0.5, coll="beine"), "schal": dict(k=30.0, d=3.0, wind=1.6, g=0.5, coll="brust")}
+WIND_RUN = 2.5
+if STOFF: log("Stoff-Ketten:", {k_: len(v) for k_, v in KETTEN.items()})
+def _w(n, end="head"):
+    pb = rig.pose.bones[n]; return np.array(MW @ (pb.head if end == "head" else pb.tail))
+def _kapsel(x, a, b, r):
+    ab = b - a; t = np.clip(np.dot(x - a, ab) / max(np.dot(ab, ab), 1e-9), 0, 1); c = a + t * ab; d = x - c; l = np.linalg.norm(d)
+    return x if l >= r or l < 1e-9 else c + d / l * r
+# Mantel-Ring: Nachbarbahnen gleicher Ebene gekoppelt; vorn unten (Knopfleiste offen) und hinten (Gehschlitz) dürfen klaffen
+_MRING = [kn for kn in KETTEN if kn.startswith("mantel.")]
+_MORD = ["V1L", "V2L", "H2L", "H1L", "H1R", "H2R", "V2R", "V1R"]
+_MRING = [f"mantel.{n_}" for n_ in _MORD if f"mantel.{n_}" in KETTEN]
+def stoff_sim(art, frames):
+    """Pass 1: Körperpose je Bild -> Zielpunkte (Stoff in Ruhehaltung angehängt) + Kollisionskörper; dann Simulation."""
+    def aufnahme():
+        rec = {"k": {}, "kap": []}
+        for kn, bones in KETTEN.items():
+            rec["k"][kn] = [_w(bones[0])] + [_w(b, "tail") for b in bones]
+        for s_ in "LR":
+            rec["kap"].append(("beine", _w("thigh." + s_), _w("thigh." + s_, "tail"), 0.085 * k))
+            rec["kap"].append(("beine", _w("shin." + s_), _w("shin." + s_, "tail"), 0.065 * k))
+        mL = 0.5 * (_w("thigh.L") + _w("thigh.L", "tail")); mR = 0.5 * (_w("thigh.R") + _w("thigh.R", "tail"))
+        rec["kap"].append(("beine", mL, mR, 0.08 * k)); rec["kap"].append(("beine", _w("shin.L"), _w("shin.R"), 0.065 * k))
+        rec["kap"].append(("brust", _w("spine.001"), _w("spine.003", "tail"), 0.105 * k))
+        return rec
+    for c in ALLE_C: c.mute = True                                     # Ruhelage (Bindpose) für die Kollisions-Abstände
+    for pb in rig.pose.bones: pb.rotation_quaternion = (1, 0, 0, 0); pb.location = (0, 0, 0)
+    bpy.context.view_layer.update(); RUHE = aufnahme()
+    ziel = []
+    for f in range(frames):
+        pose_bild(art, f / frames)
+        rec = {"k": {}, "kap": []}
+        for kn, bones in KETTEN.items():
+            rec["k"][kn] = [_w(bones[0])] + [_w(b, "tail") for b in bones]
+        for s_ in "LR":
+            rec["kap"].append(("beine", _w("thigh." + s_), _w("thigh." + s_, "tail"), 0.085 * k))
+            rec["kap"].append(("beine", _w("shin." + s_), _w("shin." + s_, "tail"), 0.065 * k))
+        # Brücken zwischen den Beinen (Oberschenkelmitte L-R, Knie L-R): kein Stoff fällt zwischen die Beine -> keine "Mantelbeine"
+        mL = 0.5 * (_w("thigh.L") + _w("thigh.L", "tail")); mR = 0.5 * (_w("thigh.R") + _w("thigh.R", "tail"))
+        rec["kap"].append(("beine", mL, mR, 0.08 * k)); rec["kap"].append(("beine", _w("shin.L"), _w("shin.R"), 0.065 * k))
+        rec["kap"].append(("brust", _w("spine.001"), _w("spine.003", "tail"), 0.105 * k))
+        ziel.append(rec)
+    # Brustkapsel nie größer als der Ruheabstand des Schals (sonst drückt sie ihn dauerhaft nach vorn)
+    r_brust = 0.105 * k
+    for kn in KETTEN:
+        if not kn.startswith("schal"): continue
+        a0, a1 = ziel[0]["kap"][-1][1], ziel[0]["kap"][-1][2]
+        for p_ in ziel[0]["k"][kn][1:]:
+            ab = a1 - a0; t_ = np.clip(np.dot(p_ - a0, ab) / max(ab @ ab, 1e-9), 0, 1)
+            r_brust = min(r_brust, float(np.linalg.norm(p_ - (a0 + t_ * ab))) - 0.005)
+    # Kollisionsradius je Stoff-Punkt und Körper: höchstens der Abstand in der Ausgangslage (sonst startet der Mantel "im Bein"
+    # und wird nach oben geschleudert); ab dort darf er nur nicht tiefer eindringen
+    def _abst(x, a, b):
+        ab = b - a; t = np.clip(np.dot(x - a, ab) / max(np.dot(ab, ab), 1e-9), 0, 1); return float(np.linalg.norm(x - (a + t * ab)))
+    KR = {kn: [[min(r + 0.012, _abst(RUHE["k"][kn][i], a0, a1) - 0.004) for (nm_, a0, a1, r) in RUHE["kap"]] for i in range(len(RUHE["k"][kn]))] for kn in KETTEN}
+    V = TEMPO.get(art, 0.0); n_sub = 8; dt = 1.0 / FPS / n_sub
+    zust = {kn: dict(x=[p.copy() for p in ziel[0]["k"][kn]], v=[np.zeros(3) for _ in ziel[0]["k"][kn]],
+                     L=[np.linalg.norm(ziel[0]["k"][kn][i + 1] - ziel[0]["k"][kn][i]) for i in range(len(KETTEN[kn]))]) for kn in KETTEN}
+    ring0 = {}                                                           # Ruheabstände Nachbarbahnen je Ebene
+    for j in range(len(_MRING)):
+        a_, b_ = _MRING[j], _MRING[(j + 1) % len(_MRING)]
+        for e in range(1, len(KETTEN[a_]) + 1):
+            ring0[(a_, b_, e)] = float(np.linalg.norm(ziel[0]["k"][a_][e] - ziel[0]["k"][b_][e]))
+    def offen(a_, b_, e):                                                # vorn unten (Knopfleiste) / hinten Schlitz
+        par = {a_.split(".")[1], b_.split(".")[1]}
+        return (par == {"V1L", "V1R"} and e >= 2) or (par == {"H1L", "H1R"} and e >= 2)
+    out = [dict() for _ in range(frames)]
+    for runde in range(4):
+        for f in range(frames):
+            z0, z1 = ziel[f], ziel[(f + 1) % frames]
+            for ss in range(n_sub):
+                u = (ss + 1) / n_sub
+                kap = [(nm_, a0 * (1 - u) + b0 * u, a1 * (1 - u) + b1 * u, (r_brust if nm_ == "brust" else r))
+                       for (nm_, a0, a1, r), (_, b0, b1, _) in zip(z0["kap"], z1["kap"])]
+                alt = {}
+                for kn in KETTEN:
+                    P = STOFF_P["mantel" if kn.startswith("mantel") else "schal"]; st_ = zust[kn]
+                    T = [z0["k"][kn][i] * (1 - u) + z1["k"][kn][i] * u for i in range(len(z0["k"][kn]))]
+                    st_["T"] = T; st_["x"][0] = T[0]; alt[kn] = [x.copy() for x in st_["x"]]
+                    w_ = (WIND_RUN if art == "run" and kn.startswith("mantel") else P["wind"])
+                    for i in range(1, len(T)):
+                        x, v = st_["x"][i], st_["v"][i]
+                        rel = np.array([0.0, V, 0.0]) - v                              # Fahrtwind von vorn (Blick -Y), quadratisch
+                        a_ = P["k"] * (T[i] - x) - P["d"] * v + w_ * 0.35 * rel * min(3.0, np.linalg.norm(rel)) + np.array([0, 0, -9.81 * P["g"]])
+                        st_["v"][i] = v + a_ * dt; st_["x"][i] = x + st_["v"][i] * dt
+                for it in range(4):
+                    for kn in KETTEN:                                                   # Längen von der Wurzel aus
+                        st_ = zust[kn]
+                        for i in range(1, len(st_["x"])):
+                            d = st_["x"][i] - st_["x"][i - 1]; l = np.linalg.norm(d)
+                            if l > 1e-9: st_["x"][i] = st_["x"][i - 1] + d / l * st_["L"][i - 1]
+                    for j in range(len(_MRING)):                                        # Mantel-Ring
+                        a_, b_ = _MRING[j], _MRING[(j + 1) % len(_MRING)]
+                        for e in range(1, len(KETTEN[a_]) + 1):
+                            L0 = ring0[(a_, b_, e)]; xa, xb = zust[a_]["x"][e], zust[b_]["x"][e]; d = xb - xa; l = np.linalg.norm(d)
+                            lo, hi_ = (0.85 * L0, 1.6 * L0) if offen(a_, b_, e) else (0.85 * L0, 1.03 * L0)
+                            if l < 1e-9 or lo <= l <= hi_: continue
+                            korr = (l - np.clip(l, lo, hi_)) * 0.5 * d / l
+                            zust[a_]["x"][e] = xa + korr; zust[b_]["x"][e] = xb - korr
+                    for kn in KETTEN:
+                        P = STOFF_P["mantel" if kn.startswith("mantel") else "schal"]; st_ = zust[kn]
+                        for j_, (nm_, a0, a1, r) in enumerate(kap):
+                            if nm_ != P["coll"]: continue
+                            for i in range(1, len(st_["x"])):
+                                rr = min(r + 0.012, KR[kn][i][j_]) if nm_ != "brust" else r + 0.012
+                                if rr > 0.01: st_["x"][i] = _kapsel(st_["x"][i], a0, a1, rr)
+                for kn in KETTEN:                                                       # Geschwindigkeit aus der echten Bewegung
+                    st_ = zust[kn]
+                    for i in range(1, len(st_["x"])): st_["v"][i] = (st_["x"][i] - alt[kn][i]) / dt
+            if runde == 3:
+                for kn in KETTEN: out[f][kn] = [x.copy() for x in zust[kn]["x"]]
+    return out
+def stoff_anwenden(sim_f):
+    for kn, bones in KETTEN.items():
+        X = sim_f[kn]
+        for i, b in enumerate(bones):
+            h, t = _w(b), _w(b, "tail"); a_ = Vector(t - h); z_ = Vector(X[i + 1] - h)
+            if a_.length < 1e-6 or z_.length < 1e-6: continue
+            rot_um_gelenk(b, a_.rotation_difference(z_).to_matrix())
+
 # ------------------------------------------------------------------ Aufnehmen -> Aktionen
 def aufnehmen(art, name, frames):
     rows = []
+    sim = stoff_sim(art, frames) if STOFF else None
     for f in range(frames + 1):
         pose_bild(art, (f % frames) / frames)
+        if sim is not None: stoff_anwenden(sim[f % frames])
         rows.append({pb.name: (rig.convert_space(pose_bone=pb, matrix=pb.matrix, from_space='POSE', to_space='LOCAL')) for pb in rig.pose.bones})
     old = bpy.data.actions.get(name)
     if old: bpy.data.actions.remove(old)
@@ -370,7 +545,10 @@ def aufnehmen(art, name, frames):
 
 acts = [aufnehmen("walk", ID + "_Walk", MOCAP["walk"]["frames"] if "walk" in MOCAP else 24),
         aufnehmen("run", ID + "_Run", MOCAP["run"]["frames"] if "run" in MOCAP else 17),
-        aufnehmen("idle", ID + "_Idle_Breathing", 96)]
+        aufnehmen("idle", ID + "_Idle_Breathing", 96),
+        aufnehmen("tiltL", ID + "_HeadTilt_L", int(2.6 * FPS)), aufnehmen("tiltR", ID + "_HeadTilt_R", int(2.6 * FPS))]
+_tasche = bpy.data.actions.get(ID + "_Pockets")                      # Carlos' Hände-in-die-Taschen passt nicht zu freien Scan-Armen
+if _tasche: bpy.data.actions.remove(_tasche)
 
 # IK aufräumen, Ruhepose
 for pb in rig.pose.bones:

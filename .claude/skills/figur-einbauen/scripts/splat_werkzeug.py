@@ -151,7 +151,7 @@ def _boden(P, oben, zentrum, rng):
         if inl.sum() > best[0]: best = (inl.sum(), (n, s[0]))
     n, p0 = best[1]
     inl = kand[np.abs((kand - p0) @ n) < 0.012]                        # verfeinern: Ebene durch alle Treffer
-    m = inl.mean(0); _, _, vt = np.linalg.svd(inl - m); n = vt[2] if vt[2] @ oben > 0 else -vt[2]
+    m = inl.mean(0); _, _, vt = np.linalg.svd(inl - m, full_matrices=False); n = vt[2] if vt[2] @ oben > 0 else -vt[2]
     return n, m
 
 def _groesste_komponente(V):

@@ -10,13 +10,14 @@ from mathutils import Vector
 argv = sys.argv[sys.argv.index("--") + 1:]
 def arg(n, std=None): return argv[argv.index(n) + 1] if n in argv else std
 ID, OUT = arg("--id"), arg("--out")
-MAXK = float(arg("--max", 0.105)); FEIN = float(arg("--fein", 0.85))
+MAXK = float(arg("--max", 0.105)); MINK = float(arg("--min", 0.099)); FEIN = float(arg("--fein", 0.85))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import splat_werkzeug as SW
 def log(*a): print("[haende]", *a, flush=True)
 
-scene = bpy.data.scenes["Figur_" + ID]; bpy.context.window.scene = scene
-rig = scene.objects[ID + "_rig"]; game = scene.objects[ID + "_mesh"]
+scene = bpy.data.scenes.get("Figur_" + ID) or bpy.context.scene
+if bpy.context.window: bpy.context.window.scene = scene
+rig = bpy.data.objects[ID + "_rig"]; game = bpy.data.objects[ID + "_mesh"]
 M = rig.matrix_world; H = max((M @ b.tail_local).z for b in rig.data.bones)
 GV = np.array([v.co[:] for v in game.data.vertices]); MG = np.array(game.matrix_world)
 GW = GV @ MG[:3, :3].T + MG[:3, 3]
@@ -34,14 +35,17 @@ for s in "LR":
         ws[v.index] = sum(g.weight for g in v.groups if g.group in gi)
     Q = GW - w; along = Q @ d
     m = ws > 0.5
-    L = float(along[m].max()) if m.any() else float(np.linalg.norm(tip - w))
-    f = min(1.0, MAXK * H / max(L, 1e-6))
+    # Länge entlang der Knochen (Handgelenk -> Mittelfinger-Grundgelenk -> 3 Glieder), unabhängig von der Fingerkrümmung
+    b_ = rig.data.bones
+    L = float(np.linalg.norm(np.array(M @ b_["f_middle.01." + s].head_local) - w) + sum(b_[f"f_middle.0{i}." + s].length for i in (1, 2, 3)) * M.to_scale()[0])
+    ziel = 0.108 * H
+    f = 1.0 if 0.104 * H <= L <= 0.110 * H else float(np.clip(ziel / max(L, 1e-6), 0.8, 1.25))
     faktoren[s] = dict(f=f, w=w, ws=ws, L=L)
     log(f"Hand {s}: Länge {L:.3f} m = {L / H:.3f} H -> Faktor {f:.3f}")
 
 # 1) Füll-Mesh (Ruhepose), weich nach Handgewicht
 for s, F in faktoren.items():
-    if F["f"] >= 0.999: continue
+    if abs(F["f"] - 1) < 0.001: continue
     k = 1 - (1 - F["f"]) * np.clip(F["ws"], 0, 1)
     GW = F["w"] + (GW - F["w"]) * k[:, None]
 GL = (GW - MG[:3, 3]) @ np.linalg.inv(MG[:3, :3]).T
@@ -53,7 +57,7 @@ bpy.ops.object.select_all(action='DESELECT'); rig.select_set(True); bpy.context.
 bpy.ops.object.mode_set(mode='EDIT')
 Mi = M.inverted()
 for s, F in faktoren.items():
-    if F["f"] >= 0.999: continue
+    if abs(F["f"] - 1) < 0.001: continue
     wl = Mi @ Vector(F["w"])
     for n in kette(s):
         eb = rig.data.edit_bones[n]; roll = eb.roll

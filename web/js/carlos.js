@@ -9,7 +9,7 @@ import { SplatMesh, SplatSkinning } from '@sparkjsdev/spark';
 // Spielfigur aus ?figur= (vom Startbildschirm); Standard Carlos. handsInPockets: Arme bleiben ruhig (keine Balance-Arme).
 // mesh: texturiertes Mesh ohne Splats (nur <id>.glb)
 const FIGS = { person1: { base: 'assets/carlos/' }, mohammad: { base: 'assets/mohammad/', handsInPockets: true }, daunenjacke: { base: 'assets/daunenjacke/', mesh: true }, trainingsjacke: { base: 'assets/trainingsjacke/' }, jackemesh: { base: 'assets/jackemesh/', mesh: true },
-  bv9: { base: 'assets/bv9/', sh: 3 }, bv10: { base: 'assets/bv10/', sh: 3 }, bv11: { base: 'assets/bv11/', sh: 3 } };   // Bothfeld-Vahrenheide 9-11: Skelett mit Fingern (figur_finger.py)
+  bv9: { base: 'assets/bv9/', sh: 3 }, bv10: { base: 'assets/bv10/', sh: 3 }, bv11: { base: 'assets/bv11/', sh: 3 }, bv12: { base: 'assets/bv12/', sh: 3 } };   // bv12 = Carlos (Mantel + Schal mit Stoff-Knochen)   // Bothfeld-Vahrenheide 9-11: Skelett mit Fingern (figur_finger.py)
 const wanted = new URLSearchParams(location.search).get('figur');
 const ID = FIGS[wanted] ? wanted : 'bv9', BASE = FIGS[ID].base;              // Standard: Luca 1
 export const FIGURE = { id: ID, ...FIGS[ID] };

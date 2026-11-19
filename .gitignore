@@ -22,3 +22,4 @@ dist-artifact/
 # veraltete figuro-STL-Hybrid-Builds (ersetzt durch scan-treue build/) und Blender-Warteschlange
 figuren/*/hybrid/
 figuren/_warteschlange.txt
+*.blend1

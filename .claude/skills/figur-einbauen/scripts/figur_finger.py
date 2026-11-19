@@ -90,6 +90,19 @@ def weiten(g, k_):
         for s_ in range(1, k_ + 1): h_ |= np.roll(g, s_, ax) | np.roll(g, -s_, ax)
         g = h_
     return g
+# Arme: nackte Unterarme sind im Scan oft nur dünn mit Splats belegt (bv10 links ~500 Splats auf 10 cm) -> die feine Hülle reißt am
+# Unterarm ab und die Hand fällt als Schwebeteil weg. Dort zusätzlich grob schließen (doppelte Voxelgröße, 3 Voxel = 2,4 cm) –
+# nur seitlich neben dem Rumpf (|x| > 22 cm), damit Rumpf/Gesicht fein bleiben.
+_Qa = FP[(FOP > 0.1) & (FG < 0.04) & (FP[:, 2] > 0.09)]                 # über dem Knöchel: Boden-Reflexe nicht mit einschließen
+if len(_Qa):
+    _ij = np.floor((_Qa - lo) / (2 * VOX)).astype(np.int64); _ok = np.all((_ij >= 0) & (_ij < (dims + 1) // 2), 1); _ij = _ij[_ok]
+    _g = np.zeros((dims + 1) // 2, bool); _g[_ij[:, 0], _ij[:, 1], _ij[:, 2]] = True
+    _g = ~weiten(~weiten(_g, 3), 3)                                  # schließen (weiten + schrumpfen)
+    _f = np.repeat(np.repeat(np.repeat(_g, 2, 0), 2, 1), 2, 2)[:dims[0], :dims[1], :dims[2]]
+    _xs = (np.arange(dims[0]) + 0.5) * VOX + lo[0]
+    pass                                                              # ganzer Körper (auch dünn belegte schwarze T-Shirts, bv10 Brust)
+    log(f"  grob geschlossen (Arme, dünne Stellen): +{int((_f & ~occ).sum())} Voxel")
+    occ |= _f
 dick = weiten(occ, K)
 aussen = np.zeros(dims, bool)
 aussen[0, :, :] = aussen[-1, :, :] = aussen[:, 0, :] = aussen[:, -1, :] = aussen[:, :, 0] = aussen[:, :, -1] = True

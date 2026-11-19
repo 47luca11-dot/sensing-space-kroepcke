@@ -36,8 +36,11 @@ ID = arg("--id")
 STL = arg("--stl", os.path.join(REPO, "figuren", ID, f"figuro_{ID}.stl"))
 FARBE = arg("--quelle", arg("--farbe", os.path.join(REPO, "figuren", ID, f"{ID}_person.ply")))
 OUT = arg("--out", os.path.join(REPO, "figuren", ID, "stl"))
-AUSSEN = float(arg("--aussen", 0.022))       # Scan-Splats weiter außerhalb der STL-Fläche = Schwebeteile/Fransen
-LUECKE = float(arg("--luecke", 0.02))        # kein deckender Scan-Splat in diesem Umkreis = Loch
+AUSSEN = float(arg("--aussen", 0.012))       # Scan-Splats weiter außerhalb der STL-Fläche = Schwebeteile/Fransen
+# STL-Körper (Standard seit Nutzer-Vorgabe 2026-11-19): Geometrie ganz aus dem STL, Scan nur als Farbe/Oberfläche, wo er auf dem STL liegt;
+# alles daneben ist Fremdpunkt, jede nicht gedeckte STL-Stelle wird gefüllt. --scan_koerper = alte, lockere Regeln.
+STRENG = "--scan_koerper" not in argv
+LUECKE = float(arg("--luecke", 0.006 if STRENG else 0.02))        # kein deckender Scan-Splat in diesem Umkreis = Loch
 DECKEND = 0.45
 NUR_AUSRICHTEN = "--nur_ausrichten" in argv
 CARLOS = arg("--carlos", os.path.join(REPO, "startbildschirm", "assets", "person1.glb"))
@@ -214,10 +217,12 @@ def gelenkweise(V, runden=3):
         for s in "LR":
             piv.update({"oa." + s: J[("upper_arm." + s, "head")], "ua." + s: J[("forearm." + s, "head")], "hd." + s: J[("hand." + s, "head")],
                         "os." + s: J[("thigh." + s, "head")], "us." + s: J[("shin." + s, "head")], "fu." + s: J[("foot." + s, "head")]})
-            plan += [("oa." + s, ["ua." + s, "hd." + s], "ua." + s, 35), ("ua." + s, ["hd." + s], "hd." + s, 45),
+            plan += [("oa." + s, ["ua." + s, "hd." + s], "ua." + s, 75), ("ua." + s, ["hd." + s], "hd." + s, 60),   # figuro hat teils T-Pose, Scan A-Pose
                      ("os." + s, ["us." + s, "fu." + s], "us." + s, 15), ("us." + s, ["fu." + s], "fu." + s, 15)]
         piv = {g_: np.array(p, float) for g_, p in piv.items()}
         for g, kinder, ende, maxw in plan:
+            if g[:3] in ("oa.", "ua.", "hd.") and g[-1] in VORAB and math.degrees(VORAB[g[-1]][2]) > 20:
+                continue                                                 # Arm schon per Hand-Ziel gedreht; ICP fände hier Mantel statt Arm
             if g[:3] in ("oa.", "ua."):                                  # Arm-Erkennung plausibel? (Arm steht seitlich ab)
                 s_ = 1 if g.endswith("L") else -1
                 if not (s_ * piv["ua." + g[-1]][0] > s_ * piv["oa." + g[-1]][0] + 0.04 and s_ * piv["hd." + g[-1]][0] > s_ * piv["ua." + g[-1]][0] + 0.03):
@@ -274,8 +279,111 @@ def gelenkweise(V, runden=3):
     rep["bein_streckung"] = round(f, 3)
     return cur
 
+VORAB = {}
+def rodrigues(p, sh, ax, ang):
+    X = np.asarray(p) - sh; c_, s2_ = math.cos(ang), math.sin(ang)
+    return sh + X * c_ + np.cross(ax, X) * s2_ + ax * (X @ ax) * (1 - c_)
+def arme_vorab(V):
+    """Grobe Arm-Haltung vorab angleichen (figuro hat teils T-Pose, der Scan A-Pose): ganzer Arm um das Schultergelenk auf die
+    Richtung des Scan-Arms drehen, an der Schulter weich überblendet. Sonst bekommt der STL-Oberarm keine Scan-Punkte zugeordnet."""
+    hi.data.vertices.foreach_set("co", V.ravel().astype(np.float32)); hi.data.update(); E_ = kanten(hi)
+    zmin = V[:, 2].min(); Vz = V - [0, 0, zmin]
+    Jt, _, _ = SK.anpassen(Vz, float(Vz[:, 2].max()), MENSCH, CT, lambda *a: None, kanten=None)
+    J_ = {key: np.array(v) + [0, 0, zmin] for key, v in Jt.items()}
+    _, lab = gruppen_labels(V, J_); Hs = float(ZIEL[:, 2].max())
+    for s_, sg in (("L", 1), ("R", -1)):
+        sh = J_[("upper_arm." + s_, "head")]
+        arm = np.isin(lab, [GI["oa." + s_], GI["ua." + s_], GI["hd." + s_]])
+        # Ziel = Hand: STL-Hand (Gruppe hd) gegen die äußerste Punktgruppe des Scans auf Hand-/Hüfthöhe (bei weiten Mänteln liegt
+        # zwischen Schulter und Hand fast nur Mantel - Punkte "weit weg vom Körper" wären Mantel, nicht Arm)
+        hand_v = lab == GI["hd." + s_]
+        if hand_v.sum() < 30: continue
+        d_v = V[hand_v].mean(0) - sh
+        L_arm = float(np.linalg.norm(d_v))
+        zone = (np.abs(np.linalg.norm(ZIEL - sh, axis=1) - L_arm) < 0.08) & (sg * ZIEL[:, 0] > 0.05) & (ZIEL[:, 2] < sh[2] - 0.15)
+        if zone.sum() < 30: continue
+        q_ = sg * ZIEL[zone, 0]; aus = ZIEL[zone][q_ >= np.percentile(q_, 85)]
+        d_z = aus.mean(0) - sh
+        q_ = Vector(d_v).rotation_difference(Vector(d_z)); ax_, ang_ = q_.to_axis_angle(); w_ = math.degrees(ang_)
+        rep.setdefault("arm_vorab_grad", {})[s_] = round(w_, 1)
+        if w_ < 8: continue
+        # Gewicht entlang der STL-Armachse (wie ein Gelenk): medial der Schulter 0, ab 7 cm außerhalb 1; nur nahe am Arm
+        ad = d_v / np.linalg.norm(d_v); tt = (V - sh) @ ad
+        radial = np.linalg.norm((V - sh) - np.outer(tt, ad), axis=1)
+        wt = np.clip((tt + 0.01) / 0.08, 0, 1); wt = wt * wt * (3 - 2 * wt)
+        wt *= np.clip((0.16 * H0 / 1.8 - radial) / (0.04 * H0 / 1.8), 0, 1)   # Rumpf/Hals nicht mitdrehen
+        wt = glaetten(wt[:, None], E_, 6, 0.5)[:, 0]
+        ax_ = np.array(ax_); X = V - sh                                      # Rodrigues mit Teilwinkel je Punkt (keine Quetschung)
+        VORAB[s_] = (sh.copy(), ax_.copy(), float(ang_))
+        th = ang_ * wt; c_, s2_ = np.cos(th)[:, None], np.sin(th)[:, None]
+        V = sh + X * c_ + np.cross(ax_, X) * s2_ + np.outer(X @ ax_, ax_) * (1 - c_)
+    log("Arme vorab", rep.get("arm_vorab_grad"))
+    return V
+# Arm-Einbettung: Arm-/Hand-/Fingergelenke im Original-STL bestimmen (figuro-T-Pose: Arme frei, sauber erkennbar) und an die
+# umgebenden STL-Punkte hängen; nach Vorab-Drehung + Gelenk-Ausrichtung mit denselben Punkten wieder ablesen. Für Figuren, deren
+# Arme eng an weiter Kleidung hängen (Carlos: Mantel), findet die Arm-Verfolgung sonst Rumpf statt Arm.
+V_T = V.copy()
+hi.data.vertices.foreach_set("co", V_T.ravel().astype(np.float32)); hi.data.update()
+_zm = V_T[:, 2].min(); _VT = V_T - [0, 0, _zm]
+J_T, ROT_T, info_T = SK.anpassen(_VT, float(_VT[:, 2].max()), MENSCH, CT, lambda *a: None, kanten=kanten(hi))
+J_T = {key: np.array(v) + [0, 0, _zm] for key, v in J_T.items()}
+_kdT = kd_bau(V_T); ARM_KETTE = {}
+for (bn, en), pv in J_T.items():
+    if not bn.endswith((".L", ".R")) or bn.split(".")[0] in ("thigh", "shin", "foot", "toe", "shoulder"): continue
+    if (bn, en) == ("upper_arm." + bn[-1], "head"): continue
+    nb = _kdT.find_n(pv, 24); ARM_KETTE[(bn, en)] = np.array([q[1] for q in nb])
+V = arme_vorab(V)
+V_V = V.copy()                                                         # nach der Vorab-Drehung (für die Arm-Einbettung)
+J_V = {}
+for kk, pv in J_T.items():
+    s_ = kk[0][-1]
+    if kk[0].endswith((".L", ".R")) and s_ in VORAB and kk[0].split(".")[0] not in ("thigh", "shin", "foot", "toe", "shoulder") and kk != ("upper_arm." + s_, "head"):
+        J_V[kk] = rodrigues(pv, *VORAB[s_])                              # Gelenke liegen auf der Armachse -> volle Drehung
+    else: J_V[kk] = pv
 V = gelenkweise(V)
-bvh0 = BVHTree.FromPolygons(V.tolist(), [p.vertices[:] for p in hi.data.polygons])
+
+def anschmiegen(V, max_aus=0.05, max_ein=0.02, n_glatt=60):
+    """STL-Fläche entlang der Normalen an den Scan schmiegen: figuro schätzt Proportionen (bv11: Schultern/Rumpf schmaler als der
+    echte Körper -> 12 % der Rumpf-Splats lagen > 2 cm außerhalb und wurden weggeschnitten = zu enge Schultern). Ziele nur aus
+    derselben Körpergruppe (Rumpf zieht nie zum Arm -> Arme bleiben frei), Hände/Finger bleiben wie im STL. Verschiebung an jedem
+    6. Punkt gemessen (Median der Normalabstände der nahen Scan-Punkte), über die Kanten gewichtet verteilt und geglättet."""
+    hi.data.vertices.foreach_set("co", V.ravel().astype(np.float32)); hi.data.update()
+    Nv = np.zeros(len(V) * 3); hi.data.vertices.foreach_get("normal", Nv); Nv = Nv.reshape(-1, 3)
+    zmin = V[:, 2].min(); Vz = V - [0, 0, zmin]
+    Jt, _, _ = SK.anpassen(Vz, float(Vz[:, 2].max()), MENSCH, CT, lambda *a: None, kanten=None)
+    J = {key: np.array(v) + [0, 0, zmin] for key, v in Jt.items()}
+    _, lab_v = gruppen_labels(V, J); _, lab_z = gruppen_labels(ZIEL, J)
+    val = np.zeros((len(V), 2)); stich = np.arange(len(V)) % 6 == 0
+    for g in GNAMEN:
+        if g.startswith("hd."): continue
+        mz = np.where(lab_z == GI[g])[0]
+        if len(mz) < 30: continue
+        kd_g = kd_bau(ZIEL[mz])
+        for i in np.where(stich & (lab_v == GI[g]))[0]:
+            nb = kd_g.find_range(V[i], 0.06)
+            if len(nb) < 3: continue
+            Q = np.array([t[0] for t in nb]) - V[i]; dn = Q @ Nv[i]; lat = np.linalg.norm(Q - np.outer(dn, Nv[i]), axis=1)
+            m = lat < 0.015
+            if m.sum() < 3: continue
+            val[i] = (float(np.clip(np.median(dn[m]), -max_ein, max_aus)), 1.0)
+    hand = np.isin(lab_v, [GI["hd.L"], GI["hd.R"]])
+    val[:, 0] *= val[:, 1]
+    sm = glaetten(val, EK0, n_glatt, 0.6)
+    disp = np.where(sm[:, 1] > 1e-4, sm[:, 0] / np.maximum(sm[:, 1], 1e-4), 0.0)
+    disp *= np.clip(sm[:, 1] / 0.05, 0, 1)                             # weit weg von jeder Messung: auslaufen lassen
+    disp[hand] = 0.0
+    arm = np.isin(lab_v, [GI[g_] for g_ in GNAMEN if g_.startswith(("oa.", "ua."))])
+    disp[arm] = np.clip(disp[arm], -0.01, 0.025)                        # Arme: STL-Form behalten (Scan dort fleckig -> Beulen)
+    disp = glaetten(disp[:, None], EK0, 30, 0.5)[:, 0]                 # weich, keine Beulen (Arm wirkte wie Perlenkette)
+    disp[hand] *= 0.0
+    rep["anschmiegen_cm"] = dict(median=round(float(np.median(disp)) * 100, 2), p95=round(float(np.percentile(disp, 95)) * 100, 2),
+                                 p5=round(float(np.percentile(disp, 5)) * 100, 2))
+    log("Anschmiegen an den Scan", rep["anschmiegen_cm"])
+    return V + Nv * disp[:, None]
+if "--ohne_anschmiegen" not in argv and not STRENG:
+    EK0 = kanten(hi)
+    V = anschmiegen(V)
+bvh0 =BVHTree.FromPolygons(V.tolist(), [p.vertices[:] for p in hi.data.polygons])
 def statistik(tag):
     P = FP[FOP > DECKEND]; sd, _ = signed_dist(bvh0, P); x, z = P[:, 0], P[:, 2]; Hh = H0; r = {}
     for name, m in (("kopf", z > 0.88 * Hh), ("rumpf", (z > 0.5 * Hh) & (z < 0.85 * Hh) & (np.abs(x) < 0.2)), ("arme", (np.abs(x) > 0.25) & (z > 0.5 * Hh)),
@@ -297,6 +405,43 @@ if NUR_AUSRICHTEN:
 log("2 Skelett")
 EK = kanten(hi)
 J, ROT, info = SK.anpassen(V, H, MENSCH, CT, log, kanten=EK); info["hi_punkte"] = V
+if max(rep.get("arm_vorab_grad", {}).values() or [0]) > 20 and "--ohne_einbettung" not in argv:
+    # starre Abbildung je Arm-Segment (Oberarm/Unterarm/Hand): dieselben STL-Punkte in T-Pose und jetzt -> Kabsch
+    _, lab_T = gruppen_labels(V_T, J_T)
+    def kabsch(ix):
+        A_, B_ = V_V[ix], V[ix]; ca, cb = A_.mean(0), B_.mean(0)
+        U_, _, Vt_ = np.linalg.svd((B_ - cb).T @ (A_ - ca)); Dm = np.eye(3); Dm[2, 2] = np.sign(np.linalg.det(U_ @ Vt_))
+        R_ = U_ @ Dm @ Vt_; return lambda p: R_ @ (np.asarray(p) - ca) + cb, R_
+    for s_ in "LR":
+        T_ = {}
+        SEG = {"oa": ("upper_arm." + s_, "head", "upper_arm." + s_, "tail"), "ua": ("forearm." + s_, "head", "forearm." + s_, "tail"),
+               "hd": ("hand." + s_, "head", "f_middle.03." + s_, "tail")}
+        for g, (b0, e0, b1, e1) in SEG.items():
+            a0, a1 = J_T[(b0, e0)], J_T[(b1, e1)]; ab = a1 - a0; tt = ((V_T - a0) @ ab) / max(ab @ ab, 1e-9)
+            rad = np.linalg.norm(V_T - (a0 + np.outer(tt, ab)), axis=1)
+            ix = np.where((lab_T == GI[f"{g}.{s_}"]) & (tt > 0.15) & (tt < 0.95) & (rad < 0.08))[0]   # nur echter Arm (kein Mantel an der Schulter)
+            if len(ix) > 50: T_[g] = kabsch(ix)
+        rep.setdefault("arm_segment_punkte", {})[s_] = {g: int(((lab_T == GI[f"{g}.{s_}"])).sum()) for g in SEG}
+        if len(T_) < 3: continue
+        mit = lambda p, a, b: 0.5 * (T_[a][0](p) + T_[b][0](p))
+        J[("upper_arm." + s_, "tail")] = J[("forearm." + s_, "head")] = Vector(mit(J_V[("upper_arm." + s_, "tail")], "oa", "ua"))
+        J[("forearm." + s_, "tail")] = J[("hand." + s_, "head")] = Vector(mit(J_V[("forearm." + s_, "tail")], "ua", "hd"))
+        Rh = T_["hd"][1] @ (np.array(Matrix.Rotation(VORAB[s_][2], 3, Vector(VORAB[s_][1]))) if s_ in VORAB else np.eye(3))   # T-Pose -> Vorab -> jetzt
+        for kk in list(J_T.keys()):
+            bn = kk[0]
+            if bn.endswith("." + s_) and bn.split(".")[0] in ("palm", "f_index", "f_middle", "f_ring", "f_pinky", "thumb") or kk == ("hand." + s_, "tail"):
+                J[kk] = Vector(T_["hd"][0](J_V[kk]))
+        for bn_ in [b for b in ROT_T if b.endswith("." + s_)]:
+            r_ = ROT_T[bn_]
+            if isinstance(r_, tuple) and len(r_) == 2 and np.ndim(r_[1]) == 1: ROT[bn_] = (r_[0], (Rh @ np.array(r_[1])).tolist())
+        if ("hand_" + s_) in info_T:
+            hT = info_T["hand_" + s_]
+            info["hand_" + s_] = dict(hT, handgelenk=list(J[("hand." + s_, "head")]), richtung=(Rh @ np.array(hT["richtung"])).tolist())
+            for nm_ in ("handflaeche_", "daumenseite_"):
+                if nm_ + s_ in info_T: info[nm_ + s_] = (Rh @ np.array(info_T[nm_ + s_])).tolist()
+        rep.setdefault("arm_einbettung_handgelenk", {})[s_] = [round(v, 3) for v in J[("hand." + s_, "head")]]
+    log("Arm-Einbettung (starr je Segment):", rep.get("arm_einbettung_handgelenk"))
+    rep["arm_einbettung"] = True
 rig = SK.rig_bauen(scene, ID + "_rig", J, ROT, MENSCH, CT)
 rep["skelett"] = dict(knochen=len(rig.data.bones), **{k_: v for k_, v in info.items() if k_.startswith(("schritt", "schulter", "arm_"))},
                       finger={s: info["hand_" + s]["finger"] for s in ("L", "R")}, verschmolzen={s: info["hand_" + s]["verschmolzen"] for s in ("L", "R")})
@@ -336,6 +481,23 @@ bpy.ops.object.vertex_group_limit_total(group_select_mode='ALL', limit=4)
 bpy.ops.object.vertex_group_normalize_all(lock_active=False)
 bpy.ops.object.mode_set(mode='OBJECT')
 rep["fuellmesh"] = dict(zahlen(game.data), nachgetragen=fb, jacke_entkoppelt=geaendert)
+if rep.get("arm_einbettung") and "lab_T" in globals():                 # Füll-Mesh: Arm/Rumpf ebenfalls aus der freien T-Pose trennen
+    _kdV = kd_bau(V); _gv = verts(game); _gl = np.array([lab_T[_kdV.find(p_)[1]] for p_ in _gv])
+    _vg = {g.name: g.index for g in game.vertex_groups}; _korr = 0
+    for s_ in "LR":
+        _arm_n = {n_ for n_ in MENSCH if n_.endswith("." + s_) and not n_.startswith(("thigh", "shin", "foot", "toe", "shoulder"))}
+        _rumpf_n = {n_ for n_ in MENSCH if n_.startswith("spine")} | {"shoulder." + s_}
+        h_, t_ = np.array(J[("upper_arm." + s_, "head")]), np.array(J[("upper_arm." + s_, "tail")]); ab_ = t_ - h_
+        armv = np.isin(_gl, [GI["oa." + s_], GI["ua." + s_], GI["hd." + s_]]) & ((((_gv - h_) @ ab_) / (ab_ @ ab_)) > 0.15)
+        rumpfv = ~np.isin(_gl, [GI[g_] for g_ in GNAMEN if g_.startswith(("oa.", "ua.", "hd."))]) & (_gv[:, 2] < h_[2] - 0.04)
+        for v in game.data.vertices:
+            weg_ = _rumpf_n if armv[v.index] else (_arm_n if rumpfv[v.index] else None)
+            if not weg_: continue
+            rest_ = sum(g.weight for g in v.groups if game.vertex_groups[g.group].name not in weg_ and game.vertex_groups[g.group].name in MENSCH)
+            if rest_ < 0.05: game.vertex_groups["upper_arm." + s_ if armv[v.index] else "spine.002"].add([v.index], 1.0, 'REPLACE')
+            for g in v.groups:
+                if game.vertex_groups[g.group].name in weg_ and g.weight > 0: g.weight = 0.0; _korr += 1
+    rep["fuellmesh"]["arm_rumpf_tpose"] = _korr
 
 joints = list(MENSCH.keys()); jpos = {n: i for i, n in enumerate(joints)}
 def gewichte(PTS):
@@ -377,12 +539,17 @@ sd, fl = signed_dist(bvh, FP)
 PN = np.zeros(len(hi.data.polygons) * 3); hi.data.polygons.foreach_get("normal", PN); PN = PN.reshape(-1, 3)[np.maximum(fl, 0)]
 Ws = gewichte(FP); reg_s = regionen(Ws)
 haende = np.zeros(len(FP), bool)
-for s in "LR": haende |= distal(FP, s) & np.isin(reg_s, [RI["hand." + s], RI["unterarm." + s]])
+STL_HAENDE = "--stl_haende" in argv          # alt: Scan-Hände durch hautfarbene STL-Hand-Splats ersetzen (wirkte wie rosa Fell)
+if STL_HAENDE:
+    for s in "LR": haende |= distal(FP, s) & np.isin(reg_s, [RI["hand." + s], RI["unterarm." + s]])
 # Bodenreflexe (oranger Flurboden) an Armen, Rumpf, Beinen: stark gesättigtes Orange (Haut ~0,4 Sättigung, Boden > 0,6)
 mx_, mn_ = FC.max(1), FC.min(1); sat = (mx_ - mn_) / np.maximum(mx_, 1e-6)
 orange = ((FC[:, 0] >= FC[:, 1]) & (FC[:, 1] >= FC[:, 2]) & (sat > 0.6) & (FC[:, 0] > 0.5)
           & ((FC[:, 1] - FC[:, 2]) / np.maximum(FC[:, 0] - FC[:, 2], 1e-6) > 0.15)
           & ~np.isin(reg_s, [RI["kopf"], RI["hals"], RI["fuss.L"], RI["fuss.R"]]))
+_gr = FC[:, 1] / np.maximum(FC[:, 0], 1e-6)                         # Boden ist roter als Haut/Stiefel (g/r klein)
+orange |= (np.isin(reg_s, [RI["fuss.L"], RI["fuss.R"]]) & (FP[:, 2] < 0.05) & (sat > 0.45) & (FC[:, 0] > 0.3) & (_gr < 0.6))   # Sohlen-Halo
+orange |= (np.isin(reg_s, [RI["unterschenkel.L"], RI["unterschenkel.R"]]) & (sat > 0.45) & (FC[:, 0] > 0.35) & (_gr < 0.6))     # Flecken auf der Jeans
 if "--ohne_orange" in argv: orange[:] = False
 # heller Saum unter den Haaren am Hinterkopf (Gegenlicht-Halo, z. B. bv10): hinter dem Kopfgelenk (Atlas), zwischen C7 und
 # Ohrhöhe, hell und warm – die Lücke wird danach mit Haar-/Halsfarbe derselben Region gefüllt
@@ -391,13 +558,71 @@ if "--saum_hinterkopf" in argv:
     at_, c7_ = J[("spine.005", "tail")], J[("spine.004", "head")]
     saum = ((FP[:, 1] > at_.y - 0.01 * k) & (FP[:, 2] > c7_.z - 0.02 * k) & (FP[:, 2] < at_.z + 0.06 * k) & (np.abs(FP[:, 0] - at_.x) < 0.15 * k)
             & (FC.mean(1) > 0.38) & ((FC[:, 0] - FC[:, 2]) > 0.2))
-gruende = [("schrott_durchsichtig", FOP < 0.04), ("haende_ersetzt", haende), ("aussen_" + str(AUSSEN), sd > AUSSEN),
-           ("fransen_halbtransparent", (sd > 0.01) & (FOP < 0.15)), ("gross_aussen", (FG > 0.02) & (sd > 0.012)), ("tief_innen", sd < -0.08),
+# Haut (Unterarme + Hände): im Scan dünn, fransig, Hände als Klumpen -> Fläche kommt ganz aus dem STL, Farbe von den Scan-Splats
+HAUT_NEU = "--scan_haut" not in argv
+_lum = FC.mean(1)
+haut_farbe = (_lum > 0.16) & (FC[:, 0] - FC[:, 2] > 0.1) & (FC[:, 0] >= FC[:, 1]) & (FC[:, 1] >= FC[:, 2] - 0.02)
+# Unterarm nur dann als Haut neu bauen, wenn er im Scan überwiegend hautfarben ist (Mantel-/Jackenärmel bleiben Scan);
+# Hände immer aus dem STL, Handschuhe (nicht hautfarben) behalten aber ihre Scan-Farbe
+HAUT_REG, HANDSCHUH = [], set()
+for r_ in ("unterarm.L", "unterarm.R", "hand.L", "hand.R"):
+    if r_ not in RI: continue
+    m_ = (reg_s == RI[r_]) & (FOP > 0.3); fr_ = float(haut_farbe[m_].mean()) if m_.sum() > 30 else 0.0
+    rep.setdefault("hautanteil", {})[r_] = round(fr_, 2)
+    if r_.startswith("hand"):
+        HAUT_REG.append(RI[r_])
+        if fr_ < 0.4: HANDSCHUH.add(RI[r_])
+    elif fr_ > 0.5: HAUT_REG.append(RI[r_])
+haut_s = np.isin(reg_s, HAUT_REG) if HAUT_NEU else np.zeros(len(FP), bool)
+# nackte Oberarme unter kurzen Ärmeln (T-Shirt): hautfarbene Splats der Oberarm-Region gehören auch zur STL-Haut
+OA_REG = [RI[r] for r in ("oberarm.L", "oberarm.R") if r in RI]
+if HAUT_NEU: haut_s |= np.isin(reg_s, OA_REG) & haut_farbe
+haut_quelle = np.where(haut_s & (FOP > 0.3) & ~orange & (np.abs(sd) < 0.025) & (FG < 0.02))[0]
+if len(haut_quelle) > 50:                                              # dunkle Sprenkel (Schatten, Lücken, Armhaare) nicht als Hautfarbe
+    _lq = FC[haut_quelle].mean(1); haut_quelle = haut_quelle[_lq >= np.percentile(_lq, 35)]
+# Achsel-Lappen: Scan-Splats unter der Schulter, halb Arm halb Rumpf gewichtet und außerhalb der STL-Fläche -> dehnen sich bei
+# jeder Armbewegung zu Stofflappen zwischen Arm und Rumpf
+_armw = np.zeros(len(FP))
+for s_ in "LR":
+    _cols = [jpos[n_] for n_ in joints if n_.endswith("." + s_) and not n_.startswith(("thigh", "shin", "foot", "toe", "shoulder"))]
+    _armw = np.maximum(_armw, Ws[:, _cols].sum(1))
+ACHSEL = (_armw > 0.15) & (_armw < 0.85) & (FP[:, 2] < J[("upper_arm.L", "head")].z - 0.05 * k) & ~haut_farbe & (sd > 0.004)
+# Hose unter einem Mantel liegt "tief im STL" (das STL ist die Mantelfläche) -> nahe an den Beinen unter der Hüfte nicht löschen
+_db = np.full(len(FP), 9.0)
+for s_ in "LR":
+    for bn in ("thigh." + s_, "shin." + s_):
+        a0, a1 = np.array(J[(bn, "head")]), np.array(J[(bn, "tail")]); ab = a1 - a0; t_ = np.clip(((FP - a0) @ ab) / max(ab @ ab, 1e-9), 0, 1)
+        _db = np.minimum(_db, np.linalg.norm(FP - (a0 + t_[:, None] * ab), axis=1))
+HOSE_INNEN = (_db < 0.11) & (FP[:, 2] < J[("thigh.L", "head")].z + 0.02)
+# vereinzelte Splats (Schwebepunkte): weniger als 4 Nachbarn im Umkreis von 1,5 cm
+# Außen-Grenze je Körperregion, mit Splat-Ausdehnung (1,5 sigma): Haar 3 cm, Stoff 2,2 cm, Beine 1,5 cm, neu gebaute Haut 0,8 cm
+GRENZE = {"kopf": 0.03, "hals": 0.02, "rumpf": 0.022, "becken": 0.022, "oberarm": 0.022, "unterarm": 0.022, "hand": 0.02,
+          "oberschenkel": 0.015, "unterschenkel": 0.015, "fuss": 0.015}
+grenz = np.array([GRENZE.get(RNAMEN[r].split(".")[0], 0.02) for r in range(len(RNAMEN))])[reg_s]
+grenz[haut_s] = 0.008
+if STRENG:                                                             # nur was auf der STL-Fläche liegt (Haar darf Volumen haben)
+    grenz = np.minimum(grenz, np.where(np.isin(reg_s, [RI["kopf"]]), 0.025, np.where(np.isin(reg_s, [RI["hals"]]), 0.012, 0.009)))
+if "--aussen" in argv: grenz = np.maximum(grenz, AUSSEN)
+aussen_m = sd + 1.5 * FG > grenz
+_sc3 = np.exp(fa[:, SW.spalten(fprops, "scale_0", "scale_1", "scale_2")])
+nadel = (_sc3.max(1) / np.maximum(_sc3.min(1), 1e-6) > 12) & (_sc3.max(1) > 0.008)
+einzeln = np.zeros(len(FP), bool)                                      # Dichte-Filter läuft unten iterativ auf den Behaltenen
+gruende = [("schrott_durchsichtig", FOP < 0.04), ("haende_ersetzt", haende), ("haut_aus_stl", haut_s), ("aussen_regional", aussen_m), ("nadeln", nadel),
+           ("fransen_halbtransparent", (sd > 0.005) & (FOP < 0.3)), ("gross_aussen", (FG > 0.012) & (sd > 0.006)), ("tief_innen", (sd < -0.08) | ((sd < -0.02) & STRENG & ~HOSE_INNEN)),
+           ("vereinzelt", einzeln),
+           ("geisterarm_flanke", np.isin(reg_s, [RI["rumpf"], RI["becken"]]) & haut_farbe & (FP[:, 2] < J[("upper_arm.L", "head")].z - 0.06 * k)),
+           ("achsel_lappen", ACHSEL),
+           ("kopf_blobs", np.isin(reg_s, [RI["kopf"]]) & ((FG > (0.008 if STRENG else 0.015)) | ((FG > 0.009) & (FOP < 0.6)))),   # STL füllt das Haar   # Hinterkopf: große halbdurchsichtige Kleckse
            ("bodenreflex_orange", orange), ("saum_hinterkopf", saum)]
 weg = np.zeros(len(FP), bool); rep["scan_entfernt"] = {}
 for name, m in gruende:
     rep["scan_entfernt"][name] = int((m & ~weg).sum()); weg |= m
 behalten = ~weg
+for _rd in range(2):                                                   # Schwebepunkte: deckungsgewichtete Dichte nur unter Behaltenen
+    _idx = np.where(behalten & (FOP > 0.04))[0]; _kd = kd_bau(FP[_idx]); _arm = np.zeros(len(_idx), bool)
+    for _j, _i in enumerate(_idx):
+        _arm[_j] = sum(FOP[_idx[q[1]]] for q in _kd.find_range(FP[_i], 0.015)) < 2.5
+    behalten[_idx[_arm]] = False; rep["scan_entfernt"]["duenn_" + str(_rd)] = int(_arm.sum())
 rep["scan_splats"] = dict(gesamt=int(len(FP)), behalten=int(behalten.sum()), entfernt=int(weg.sum()), unveraendert=True)
 log("Scan-Splats", rep["scan_splats"], rep["scan_entfernt"])
 QUELLE = behalten & (FOP > DECKEND)                                     # deckende Scan-Splats: Abdeckung + Farbquelle
@@ -412,6 +637,7 @@ def lokal_median(Pq, rq):
     out = np.zeros((len(Pq), 3)); fehlt = 0
     for r in np.unique(rq):
         sel = np.where(rq == r)[0]; name = RNAMEN[r]
+        if name == "hals" and "kopf" in kd_reg: name = "kopf"            # Hals hat zu wenig eigene Haut-Splats (Kragen mischt dunkel)
         if name not in kd_reg:                                       # Region ohne Scan-Farbe: Nachbarregion entlang der Kette
             fehlt += len(sel); src, kd_ = None, None
             for alt in (name.replace("unterarm", "oberarm"), name.replace("hand", "unterarm"), name.replace("fuss", "unterschenkel"), "rumpf"):
@@ -421,7 +647,9 @@ def lokal_median(Pq, rq):
             nb = kd_.find_n(Pq[i], 16); dd = np.array([t[2] for t in nb]); jj = np.array([t[1] for t in nb])
             nah = dd < dd.min() + 0.015
             if nah.sum() >= 5: jj = jj[nah]
-            out[i] = np.median(FC[src[jj]], 0)
+            cl = haut_farbe[src[jj]]; maj = cl.mean() > 0.5                # nur aus der Mehrheitsklasse (Haut ODER Stoff)
+            if (cl == maj).sum() >= 3: jj = jj[cl == maj]
+            out[i] = 0.5 * np.median(FC[src[jj]], 0) + 0.5 * FC[src[jj[rng.integers(len(jj))]]]   # Textur statt Flachfarbe
     return out, fehlt
 
 # Dreiecke des STL, Region je Dreieck
@@ -431,8 +659,40 @@ A = V[tv]; area = 0.5 * np.linalg.norm(np.cross(A[:, 1] - A[:, 0], A[:, 2] - A[:
 Wv = gewichte(V); reg_v = regionen(Wv)
 reg_t = reg_v[tv[:, 0]]; cent = A.mean(1)
 hand_t = np.zeros(nt, bool); hand_seite = np.full(nt, "", object)
-for s in "LR":
+for s in ("LR" if STL_HAENDE else ""):
     m = distal(cent, s) & np.isin(reg_t, [RI["hand." + s], RI["unterarm." + s]]); hand_t |= m; hand_seite[m] = s
+haut_t = np.isin(reg_t, HAUT_REG) if HAUT_NEU else np.zeros(nt, bool)
+if HAUT_NEU:                                                           # Oberarm-Dreiecke, deren Scan-Umgebung hautfarben ist
+    _oa = np.where(np.isin(reg_s, OA_REG) & (FOP > 0.3) & (np.abs(sd) < 0.03))[0]
+    if len(_oa) > 50:
+        _kd = kd_bau(FP[_oa]); _hf = haut_farbe[_oa]
+        for t_ in np.where(np.isin(reg_t, OA_REG))[0]:
+            nb = _kd.find_n(cent[t_], 10); nb = [q for q in nb if q[2] < 0.03]
+            if len(nb) >= 4 and np.mean(_hf[[q[1] for q in nb]]) > 0.5: haut_t[t_] = True
+    rep["haut_oberarm_dreiecke"] = int((haut_t & np.isin(reg_t, OA_REG)).sum())
+    # Ärmelsaum entlang des Oberarms: Hautanteil der Scan-Splats je 4%-Abschnitt (Schulter -> Ellbogen); unterhalb des Saums ist
+    # der ganze Oberarm Haut (sonst bleiben dunkle Schatten-/Ärmelreste als Streifen auf dem Arm)
+    rep["aermelsaum_t"] = {}
+    for s_ in "LR":
+        h_, t_ = np.array(J[("upper_arm." + s_, "head")]), np.array(J[("upper_arm." + s_, "tail")]); ab_ = t_ - h_
+        m_ = (reg_s == RI["oberarm." + s_]) & (FOP > 0.3)
+        if m_.sum() < 100: continue
+        tt_ = ((FP[m_] - h_) @ ab_) / (ab_ @ ab_); hf_ = haut_farbe[m_]
+        bins = np.arange(0.0, 1.0, 0.04); frac = np.array([hf_[(tt_ >= b) & (tt_ < b + 0.08)].mean() if ((tt_ >= b) & (tt_ < b + 0.08)).sum() > 15 else np.nan for b in bins])
+        ok_ = np.where(frac > 0.5)[0]
+        if not len(ok_): continue
+        t_saum = None
+        for i_ in ok_:                                                     # erster Abschnitt, ab dem es Haut bleibt
+            rest_ = frac[i_:]; rest_ = rest_[~np.isnan(rest_)]
+            if len(rest_) and (rest_ > 0.4).mean() > 0.8: t_saum = float(bins[i_]); break
+        if t_saum is None or t_saum > 0.9: continue
+        rep["aermelsaum_t"][s_] = round(t_saum, 2)
+        tc = ((cent - h_) @ ab_) / (ab_ @ ab_)
+        haut_t |= (reg_t == RI["oberarm." + s_]) & (tc > t_saum + 0.04)
+        tf = ((FP - h_) @ ab_) / (ab_ @ ab_)
+        haut_s_extra = (reg_s == RI["oberarm." + s_]) & (tf > t_saum + 0.04)
+        haut_s |= haut_s_extra
+haut_seite = np.where(np.isin(reg_t, [RI.get("unterarm.L", -1), RI.get("hand.L", -1), RI.get("oberarm.L", -1)]), "L", "R").astype(object)
 def abtasten(sel, dichte):
     cnt = np.floor(area[sel] * dichte + rng.random(len(sel))).astype(np.int64)
     pick = np.repeat(sel, cnt); u, w2 = rng.random(len(pick)), rng.random(len(pick)); fl = u + w2 > 1; u[fl], w2[fl] = 1 - u[fl], 1 - w2[fl]
@@ -440,7 +700,7 @@ def abtasten(sel, dichte):
     nrm = np.cross(A[pick, 1] - A[pick, 0], A[pick, 2] - A[pick, 0]); nrm /= np.linalg.norm(nrm, axis=1, keepdims=True) + 1e-12
     return pts, nrm, pick
 # --- Löcher (ohne Hände)
-gP, gN, gT = abtasten(np.where(~hand_t)[0], 1 / 25e-6)
+gP, gN, gT = abtasten(np.where(~hand_t & ~haut_t)[0], 1 / (10e-6 if STRENG else 25e-6))
 _, dcov = kd_nn(kd_deck, gP); frei = dcov > LUECKE
 gP, gN, gT = gP[frei], gN[frei], gT[frei]
 gC, fehlt = lokal_median(gP, reg_t[gT])
@@ -451,15 +711,23 @@ haut = []
 for s in "LR":
     e_, w_ = np.array(J[("forearm." + s, "head")]), np.array(J[("forearm." + s, "tail")]); ax = w_ - e_
     t_ = ((FP - e_) @ ax) / (ax @ ax)
-    haut.append(np.where(QUELLE & (reg_s == RI["unterarm." + s]) & (t_ > 0.3) & (t_ < 0.95))[0])
+    haut.append(np.where((QUELLE | (haut_s & (FOP > 0.3) & ~orange & (np.abs(sd) < 0.025))) & (reg_s == RI["unterarm." + s]) & (t_ > 0.3) & (t_ < 0.95))[0])
 haut = np.concatenate(haut); HC = FC[haut]; m0 = np.median(HC, 0)
-HC = HC[np.linalg.norm(HC - m0, axis=1) < 0.15]; HAUT = np.median(HC, 0) if len(HC) > 20 else m0
+HC = HC[np.linalg.norm(HC - m0, axis=1) < 0.15]
+if len(HC) > 40: HC = HC[HC.mean(1) >= np.percentile(HC.mean(1), 40)]   # beschattete/dunkle Scan-Haut nicht mitteln
+HAUT = np.median(HC, 0) if len(HC) > 20 else m0
+if not np.all(np.isfinite(HAUT)): HAUT = np.array([0.62, 0.45, 0.38])        # keine Armhaut im Scan (Mantel, Handschuhe)
+# Gesichtshaut als Anker (Arme sind im Scan anders beleuchtet/fleckig): Hautton halb aus dem Gesicht
+_ges = np.where(np.isin(reg_s, [RI["kopf"]]) & haut_farbe & (FOP > 0.5) & (FG < 0.01))[0]
+if len(_ges) > 50:
+    _gc = FC[_ges]; _gc = _gc[_gc.mean(1) >= np.percentile(_gc.mean(1), 30)]
+    HAUT = 0.5 * HAUT + 0.5 * np.median(_gc, 0); rep["hautton_gesicht"] = [round(float(c), 3) for c in np.median(_gc, 0)]
 rep["hautton"] = dict(rgb=[round(float(c), 3) for c in HAUT], aus_splats=int(len(HC)))
 log("Hautton", rep["hautton"])
 hand_vi = np.where(np.isin(reg_v, [RI["hand.L"], RI["hand.R"], RI["unterarm.L"], RI["unterarm.R"]]))[0]
 kd_hv = kd_bau(V[hand_vi])
 wellen = [(rng.normal(size=3) * (2 * math.pi / rng.uniform(0.025, 0.06)), rng.uniform(0, 2 * math.pi), rng.uniform(0.01, 0.025)) for _ in range(6)]
-def hautfarbe(Pq, Nq, seiten):
+def hautfarbe(Pq, Nq, seiten, basis=None):
     var = np.zeros(len(Pq))
     for kv, ph, amp in wellen: var += amp * np.sin(Pq @ kv + ph)
     var += rng.normal(0, 0.012, len(Pq))
@@ -469,6 +737,11 @@ def hautfarbe(Pq, Nq, seiten):
         if len(nb) < 4: continue
         Q = np.array([t[0] for t in nb]) - p; hoehle[i] = np.mean((Q @ n) > 0.0015 * k)
     hoehle = np.clip((hoehle - 0.05) / 0.35, 0, 1)
+    _nh = np.ones(len(Pq), bool)                                       # Faltenschatten nur an den Händen (am Arm: Streifen)
+    if "hand.L" in RI:
+        _kdh = kd_bau(V[np.where(np.isin(reg_v, [RI["hand.L"], RI["hand.R"]]))[0]])
+        _nh = np.array([_kdh.find(p_)[2] < 0.01 for p_ in Pq])
+    hoehle *= _nh
     if len(Pq) > 10:                                                   # Falten weich auslaufen lassen (Nachbarmittel 6 mm)
         kq = kd_bau(Pq); h2 = hoehle.copy()
         for i, p in enumerate(Pq):
@@ -479,11 +752,35 @@ def hautfarbe(Pq, Nq, seiten):
     for s in "LR":
         m = seiten == s
         if m.any(): palm[m] = np.clip(Nq[m] @ np.array(info["handflaeche_" + s]), 0, 1)
-    fac = (1 + var) * (1 - 0.26 * hoehle) * (1 - 0.07 * palm)
-    return np.clip(HAUT[None, :] * fac[:, None], 0, 1), hoehle
+    # gebackene Schattierung wie im Scan-Licht: Oberseiten heller, Unterseiten und zum Körper gewandte Seiten dunkler
+    up_ = 0.5 + 0.5 * Nq[:, 2]; med_ = np.clip(-np.sign(Pq[:, 0]) * Nq[:, 0], 0, 1)
+    schatt = (0.80 + 0.24 * up_) * (1 - 0.14 * med_)
+    fac = (1 + var) * (1 - 0.30 * hoehle) * (1 - 0.07 * palm) * schatt
+    b_ = HAUT[None, :] if basis is None else basis
+    return np.clip(b_ * fac[:, None], 0, 1), hoehle
 hP, hN, hT = abtasten(np.where(hand_t)[0], 1 / 5e-6)
-hC, hoehle = hautfarbe(hP, hN, hand_seite[hT])
+hC, hoehle = hautfarbe(hP, hN, hand_seite[hT]) if len(hP) else (np.zeros((0, 3)), np.zeros(0))
 rep["neue_splats"]["haende"] = int(len(hP)); rep["neue_splats"]["hand_falten_anteil"] = round(float((hoehle > 0.3).mean()), 3)
+# --- Haut aus dem STL: dichte, flache Splats; Farbe = Median der nächsten Scan-Haut-Splats (echte Hautfarbe/Flecken), geglättet,
+#     Falten der Hand dunkler. Wellen-Variation aus hautfarbe() bleibt klein.
+sP, sN, sT = abtasten(np.where(haut_t)[0], 1 / 7e-6)
+if len(sP):
+    kd_hq = kd_bau(FP[haut_quelle]) if len(haut_quelle) > 20 else None
+    sB = np.tile(HAUT, (len(sP), 1)); treffer = 0
+    if kd_hq is not None:
+        for i_, p_ in enumerate(sP):
+            nb = kd_hq.find_n(p_, 12); nb = [t for t in nb if t[2] < 0.025]
+            if len(nb) >= 4: sB[i_] = np.median(FC[haut_quelle[[t[1] for t in nb]]], 0); treffer += 1
+    kq_ = kd_bau(sP); sB2 = sB.copy()
+    for i_, p_ in enumerate(sP):                                           # 7 mm weich mitteln (keine Splat-Sprenkel)
+        nb = kq_.find_range(p_, 0.022)
+        if nb: sB2[i_] = sB[[t[1] for t in nb]].mean(0)
+    _hs = np.isin(reg_t[sT], list(HANDSCHUH))                          # Handschuh: nur Scan-Farbe, kein Hautton
+    sB2 = np.where(_hs[:, None], sB2, 0.4 * sB2 + 0.6 * HAUT[None, :])                            # Scan-Haut ist fleckig (dünn, Schatten): ruhiger Grundton
+    sC, _ = hautfarbe(sP, sN, haut_seite[sT], basis=sB2)
+else:
+    sC = np.zeros((0, 3)); treffer = 0
+rep["neue_splats"]["haut_aus_stl"] = int(len(sP)); rep["neue_splats"]["haut_mit_scanfarbe"] = int(treffer)
 log("neue Splats", rep["neue_splats"])
 
 def neue(pts, nrm, farbe, gr, dick, deck=0.95):
@@ -496,19 +793,92 @@ def neue(pts, nrm, farbe, gr, dick, deck=0.95):
     ang = np.arctan2(sn, nrm[:, 2]); ax = np.where(sn[:, None] > 1e-8, ax / (sn[:, None] + 1e-12), np.array([1.0, 0, 0]))
     b[:, SW.spalten(fprops, "rot_0", "rot_1", "rot_2", "rot_3")] = np.concatenate([np.cos(ang / 2)[:, None], ax * np.sin(ang / 2)[:, None]], 1)
     return b
+# alte Scan-Splats, die auf der neuen STL-Haut liegen, aber nicht hautfarben sind (Ärmelfetzen, Schatten, Shirt-Reste am Arm)
+pv0 = np.array([p_.vertices[0] for p_ in hi.data.polygons]); vhaut = np.zeros(len(V), bool); vhaut[tv[haut_t].ravel()] = True
+auf_haut = behalten & (fl >= 0) & vhaut[pv0[np.maximum(fl, 0)]] & (np.abs(sd) < 0.03) & ~haut_farbe
+behalten &= ~auf_haut; rep["scan_entfernt"]["auf_neuer_haut"] = int(auf_haut.sum())
 sa = fa[behalten].copy()
-a = np.concatenate([sa, neue(hP, hN, hC, 0.0019, 0.0005, 0.97), neue(gP, gN, gC, 0.0035, 0.001)], 0)
-parts = [int(len(sa)), int(len(hP)), int(len(gP))]
+# grünstichige Shirt-/Haar-Splats (Farbsaum im Scan) entsättigen
+_dc = SW.spalten(fprops, "f_dc_0", "f_dc_1", "f_dc_2"); _c = np.clip(0.5 + SW.SH0 * sa[:, _dc], 0, 1)
+_gruen = (_c[:, 1] > _c[:, 0] + 0.02) & (_c[:, 1] > _c[:, 2] - 0.02) & np.isin(reg_s[behalten], [RI["rumpf"], RI["kopf"], RI["hals"], RI["becken"]] + OA_REG)
+_l = _c[_gruen].mean(1, keepdims=True); sa[np.where(_gruen)[0][:, None], np.array(_dc)[None, :]] = (np.repeat(_l, 3, 1) * np.array([1.0, 0.97, 1.0]) - 0.5) / SW.SH0
+rep["gruenstich_entsaettigt"] = int(_gruen.sum())
+# Kleidung beruhigen: helle Glanz-/Reflexsprenkel auf dunkler Kleidung (Marmor-/Wolkenmuster im Scan) zur Stofffarbe ziehen;
+# sehr helle, kleine Splats (Kabel, Schmuck) bleiben
+_c = np.clip(0.5 + SW.SH0 * sa[:, _dc], 0, 1); _lu = _c.mean(1); _rg = reg_s[behalten]; _fg = FG[behalten]; beruhigt = 0
+for r_ in [RI["rumpf"], RI["becken"]] + OA_REG:
+    m_ = (_rg == r_) & ~haut_farbe[behalten]
+    if m_.sum() < 200: continue
+    med = np.median(_c[m_], 0); ml = float(med.mean())
+    if ml > 0.3: continue                                              # nur dunkle Stoffe
+    hell = m_ & (_lu > ml + 0.035) & ~((_lu > 0.55) & (_fg < 0.004))
+    k_ = np.clip((_lu[hell] - ml - 0.035) / 0.1, 0.5, 0.92)[:, None]
+    neu_ = _c[hell] * (1 - k_) + med[None, :] * k_
+    sa[np.where(hell)[0][:, None], np.array(_dc)[None, :]] = (neu_ - 0.5) / SW.SH0; beruhigt += int(hell.sum())
+rep["kleidung_beruhigt"] = beruhigt
+# Chroma-Tiefpass auf Stoff (Rumpf, Becken, Ärmel, Beine, Schuhe): Farbton zur Umgebung, Helligkeit nur +-5 % (Falten bleiben,
+# Adern/Marmor/Regenbogen weg); blickabhängige SH auf 30 % (sonst kehren die Adern im Spiel zurück)
+_c = np.clip(0.5 + SW.SH0 * sa[:, _dc], 0, 1); _Pb = FP[behalten]; _hf = haut_farbe[behalten]; _rest = [i for i, n_ in enumerate(fprops) if n_.startswith("f_rest")]
+_STOFF = [RI[r] for r in RNAMEN if r.split(".")[0] in ("rumpf", "becken", "oberarm", "oberschenkel", "unterschenkel", "fuss")]
+beruhigt2 = 0
+for r_ in _STOFF:
+    sel = np.where((_rg == r_) & ~_hf)[0]
+    if len(sel) < 100: continue
+    kd_ = kd_bau(_Pb[sel]); C_ = _c[sel]
+    M_ = np.array([np.median(C_[[q[1] for q in kd_.find_n(p_, 24)]], 0) for p_ in _Pb[sel]])
+    Lc, Lm = C_.mean(1, keepdims=True), M_.mean(1, keepdims=True)
+    neu_ = np.clip(Lm + np.clip(Lc - Lm, -0.05, 0.05) + (C_ - Lc) * 0.3 + (M_ - Lm) * 0.7, 0, 1)
+    sa[sel[:, None], np.array(_dc)[None, :]] = (neu_ - 0.5) / SW.SH0
+    if _rest: sa[sel[:, None], np.array(_rest)[None, :]] *= 0.3
+    beruhigt2 += len(sel)
+rep["stoff_tiefpass"] = beruhigt2
+# Füllfarben aus den beruhigten Stofffarben neu bestimmen (sonst übernehmen Füll-Splats Glanzflecken als große graue Flächen)
+FC[np.where(behalten)[0]] = np.clip(0.5 + SW.SH0 * sa[:, _dc], 0, 1)
+gC, _ = lokal_median(gP, reg_t[gT])
+_gg = (gC[:, 1] > gC[:, 0] + 0.02) & (gC[:, 1] > gC[:, 2] - 0.02) & ~np.isin(reg_t[gT], [RI["oberschenkel.L"], RI["oberschenkel.R"], RI["unterschenkel.L"], RI["unterschenkel.R"]])
+gC[_gg] = gC[_gg].mean(1, keepdims=True) * np.array([1.0, 0.97, 1.0])     # Füll-Splats ohne Grünstich
+a = np.concatenate([sa, neue(hP, hN, hC, 0.0019, 0.0005, 0.97), neue(gP, gN, gC, 0.003 if STRENG else 0.0035, 0.0008 if STRENG else 0.001), neue(sP, sN, sC, 0.0024, 0.0006, 0.98)], 0)
+parts = [int(len(sa)), int(len(hP)), int(len(gP)), int(len(sP))]
+_ok = np.isfinite(a).all(1); rep["splats_ungueltig_entfernt"] = int((~_ok).sum()); a = a[_ok]
 W = gewichte(SW.pos(fprops, a))
+# Arm und Rumpf nie über den Luftspalt mischen (Achsel-Lappen): Kapsel-Label je Splat; Arm-Splats ab 25 % des Oberarms ohne
+# Rumpf-Gewichte, Rumpf-Splats unter Schulter - 5 cm ohne Arm-Gewichte
+_PA = SW.pos(fprops, a); _getrennt = 0
+# Region der nächsten STL-Fläche je Splat (in der A-Pose trennt das STL Arm und Flanke sauber; Kapsel-Abstände ordneten
+# T-Shirt-Splats unter der Achsel dem Oberarm zu -> dunkle Streifen auf dem Arm im Idle)
+_pv0 = np.array([p_.vertices[0] for p_ in hi.data.polygons]); _regp = np.full(len(_PA), -1); _labp = np.full(len(_PA), -1)
+_TPOSE = bool(rep.get("arm_einbettung")) and "lab_T" in globals()
+for _i, _p in enumerate(_PA):
+    _loc, _n, _fi, _d = bvh.find_nearest(Vector(_p), 0.2)
+    if _fi is not None:
+        _regp[_i] = reg_v[_pv0[_fi]]
+        if _TPOSE: _labp[_i] = lab_T[_pv0[_fi]]
+for s_ in ("LR" if _TPOSE else ""):                                  # nur bei eng am Mantel hängenden Armen (Carlos); bei T-Shirts riss
+    # die harte Trennung den Ärmel vom Arm (Ärmel blieb als Lappen an der Schulter stehen)
+    _armc = [jpos[n_] for n_ in joints if n_.endswith("." + s_) and not n_.startswith(("thigh", "shin", "foot", "toe", "shoulder"))]
+    _rumpfc = [jpos[n_] for n_ in joints if n_.startswith("spine")] + [jpos["shoulder." + s_]]
+    h_, t_ = np.array(J[("upper_arm." + s_, "head")]), np.array(J[("upper_arm." + s_, "tail")]); ab_ = t_ - h_
+    tt_ = ((_PA - h_) @ ab_) / max(ab_ @ ab_, 1e-9)
+    armm = np.isin(_regp, [RI[r] for r in ("oberarm." + s_, "unterarm." + s_, "hand." + s_) if r in RI]) & (tt_ > 0.2)
+    if _TPOSE:                                                         # Arme eng am Mantel: Arm/Rumpf aus der freien T-Pose des STL
+        armm = np.isin(_labp, [GI["oa." + s_], GI["ua." + s_], GI["hd." + s_]]) & (tt_ > 0.15)
+    W[np.ix_(armm, _rumpfc)] = 0.0
+    rumpfm = np.isin(_regp, [RI[r] for r in ("rumpf", "becken") if r in RI]) & (_PA[:, 2] < h_[2] - 0.04)
+    if _TPOSE: rumpfm = ~np.isin(_labp, [GI[g_] for g_ in GNAMEN if g_.startswith(("oa.", "ua.", "hd."))]) & (_labp >= 0) & (_PA[:, 2] < h_[2] - 0.04)
+    W[np.ix_(rumpfm, _armc)] = 0.0; _getrennt += int(armm.sum() + rumpfm.sum())
+    _leer = W.sum(1) < 1e-4                                                # nichts übrig: ganz an den passenden Knochen
+    W[_leer & armm, jpos["upper_arm." + s_]] = 1.0; W[_leer & rumpfm, jpos["spine.002"]] = 1.0
+W /= np.maximum(W.sum(1, keepdims=True), 1e-6); rep["arm_rumpf_getrennt"] = _getrennt
 
 # Füll-Mesh: Farben regionsweise + Hautton an den Händen, dann nach innen rücken (unter die Scan-Splats)
 GV = verts(game); GN = np.zeros(len(GV) * 3); game.data.vertices.foreach_get("normal", GN); GN = GN.reshape(-1, 3)
 reg_g = regionen(gewichte(GV))
 g_hand = np.zeros(len(GV), bool); g_seite = np.full(len(GV), "", object)
-for s in "LR":
+for s in ("LR" if STL_HAENDE else ""):
     m = distal(GV, s) & np.isin(reg_g, [RI["hand." + s], RI["unterarm." + s]]); g_hand |= m; g_seite[m] = s
 GC, _ = lokal_median(GV, reg_g)
 if g_hand.any(): GC[g_hand] = hautfarbe(GV[g_hand], GN[g_hand], g_seite[g_hand])[0]
+if HAUT_NEU: GC[np.isin(reg_g, HAUT_REG)] = HAUT                       # Füll-Mesh unter der STL-Haut: Hautton
 VC = np.ones((len(GV), 4), np.float32); VC[:, :3] = GC
 game.data.color_attributes.new("Col", 'FLOAT_COLOR', 'POINT').data.foreach_set("color_srgb", VC.ravel())
 game.data.color_attributes.active_color = game.data.color_attributes["Col"]

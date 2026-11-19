@@ -32,10 +32,13 @@ const CHARACTERS = [
   { id: 'bv11', sh: 3, name: 'MO', role: 'TRÄGER', x: 1.70, timeOffset: 0.8,
     stats: { AUSDAUER: 9, GESUNDHEIT: 8, GESCHWINDIGKEIT: 6, WILLE: 7 },
     bio: 'Feste Stiefel, schwarzes Shirt. Trägt, was andere stehen lassen.' },
+  { id: 'bv12', sh: 3, name: 'CARLOS', role: 'PLÜNDERER', x: 2.50, timeOffset: 1.1,
+    stats: { AUSDAUER: 6, GESUNDHEIT: 7, GESCHWINDIGKEIT: 5, WILLE: 9 },
+    bio: 'Langer Mantel, grauer Schal, Handschuhe. Kennt jeden Keller zwischen Bothfeld und Vahrenheide und bleibt ruhig, wenn alles brennt.' },
 ];
 /* eslint-disable no-unused-vars */
 const WEITERE_FIGUREN = [   // vorerst aus der Auswahl gestrichen
-  { id: 'person1', name: 'CARLOS', role: 'PLÜNDERER', x: -0.70, timeOffset: 0.0,
+  { id: 'person1', name: 'CARLOS (ALT)', role: 'PLÜNDERER', x: -0.70, timeOffset: 0.0,
     stats: { AUSDAUER: 6, GESUNDHEIT: 7, GESCHWINDIGKEIT: 4, WILLE: 9 },
     bio: 'Kennt jeden Keller zwischen Bothfeld und Vahrenheide. Bleibt ruhig, wenn alles brennt, und hört selten auf Befehle.' },
   { id: 'andis', name: 'ANDIS', role: 'ÜBERLEBENDER', x: 0.10, timeOffset: 1.7,
@@ -583,7 +586,7 @@ $('btn-ready').addEventListener('click', startGame);
 
 // Spiel starten: spielbar sind Figuren mit Geh-/Lauf-Animationen (Carlos, Mohammad, Daunenjacke).
 // Läuft der Startbildschirm über den Spiel-Server (/startbildschirm/), geht es relativ zurück, sonst zum Spiel-Port 5177.
-const PLAYABLE = ['bv9', 'bv10', 'bv11'];
+const PLAYABLE = ['bv9', 'bv10', 'bv11', 'bv12'];
 const GAME_URL = location.pathname.startsWith('/startbildschirm') ? '/' : `${location.protocol}//${location.hostname}:5177/`;
 function startGame() {
   const c = CHARACTERS[selected];
