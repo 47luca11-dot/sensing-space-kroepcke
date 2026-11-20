@@ -316,8 +316,8 @@ def pose_bild(art, p):
     else:  # idle (+ Kopfneigen tiltL/tiltR): natürlicher Stand – Gewicht auf dem linken Bein (Kontrapost), rechtes Knie locker,
         # Becken zur Standseite verschoben und auf der Spielbeinseite gesenkt, Schultern gegengleich, Arme hängen locker
         breath = math.sin(sg2 * 4) if art == "idle" else math.sin(sg2 * 1.5)
-        shift = 0.75 + 0.25 * math.sin(sg2) if art == "idle" else 0.75   # Gewicht bleibt links, pendelt nur leicht
-        bob = -0.012 * k + 0.002 * k * breath; sway = 0.03 * k * shift; yaw = 3.0 * shift; roll = -3.0 * shift; lean = 0.5
+        shift = 0.35 * math.sin(sg2) if art == "idle" else 0.0            # nur ganz leichte Gewichtsverlagerung
+        bob = -0.006 * k + 0.002 * k * breath; sway = 0.008 * k * shift; yaw = 1.0 * shift; roll = -0.8 * shift; lean = 0.5
         rumpf_yaw = -2.0 * shift
     # Becken (spine = Wurzel)
     rot_um_gelenk("spine", E(pitch=lean * 0.4, roll=roll, yaw=yaw), Vector((sway, 0, bob)))
@@ -341,7 +341,7 @@ def pose_bild(art, p):
     for s in "LR":
         sg = 1 if s == "L" else -1
         if IDLE:                                                    # Standbein links unter der Hüfte, Spielbein etwas vor und außen
-            loc, R = bein(s, 0.01 * k, 0, 0, 0.095 * k) if s == "L" else bein(s, 0.07 * k, 0, 0, 0.125 * k)
+            loc, R = bein(s, 0.015 * k, 0, 0, 0.10 * k)                 # beide Füße unter der Hüfte (Kontrapost-Knick wirkte falsch)
         else:
             pos, h, kipp, seit = fn(p, s); loc, R = bein(s, pos, h, kipp, seit)
             # reicht das Bein bei dieser Beckenhöhe nicht bis zum Knöchel, hebt sich die Ferse weiter (Abrollen über den Ballen)

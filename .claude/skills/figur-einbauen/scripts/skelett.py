@@ -206,7 +206,9 @@ def hand_vorlage(mensch, side, w, d, s, k):
     return dict(richtung=d, gelenke=gel, basis=basis, handflaeche=n_palm, daumenseite=e_t, erkannt=False)
 
 
-def anpassen(P, H, mensch, carlos, log=print, kanten=None):
+def anpassen(P, H, mensch, carlos, log=print, kanten=None, vorlage=None):
+    # vorlage (optional): Proportionen einer Referenzfigur relativ zur Körperhöhe (LUCA 1): schulter_x, oa, ua, hand_tip –
+    # Schulterbreite und Armgliederung kommen dann von dort, Lage/Richtung weiterhin aus dem Scan
     k = H / 1.8
     x, y, z = P[:, 0], P[:, 1], P[:, 2]
     J, ROT, info = {}, {}, {}
@@ -266,6 +268,7 @@ def anpassen(P, H, mensch, carlos, log=print, kanten=None):
         if mo.sum() > 12: aussen.append(float(np.percentile(s_ * (x[mo] - cx_sh), 99.5)))
     if aussen: x_sh = min(x_sh, max(min(aussen), 0.22 * k) - 0.04 * k)
     x_sh = float(np.clip(x_sh, 0.098 * H, 0.11 * H))               # wie LUCA 1 (~18-20 cm); 0,082-0,095 H war sichtbar zu eng; info["schulter_aussen"] = [round(v, 3) for v in aussen]
+    if vorlage: x_sh = float(vorlage["schulter_x"] * H)
     for side, s in (("L", 1), ("R", -1)):
         # 3) Tiefe: Mitte des Schulter-Querschnitts (Gelenk liegt mittig zwischen Brust- und Rückenseite)
         sl = (np.abs(z - z_sh) < 0.015 * k) & (np.abs(x - (cx_sh + s * x_sh)) < 0.025 * k) & (np.abs(y - ymed) < 0.14 * k)
@@ -380,6 +383,20 @@ def anpassen(P, H, mensch, carlos, log=print, kanten=None):
         if len(rest) > 8:
             t_max = float(np.percentile(rest, 99.5)); n_ = int(t_max / (0.04 * k))
             for i_ in range(1, n_ + 1): path.append(Vector(cur + dirv * min(t_max, i_ * 0.04 * k)))
+        if vorlage:
+            # Armende robust: Fingerspitze = weitester Punkt entlang Schulter->Pfadende in einem Zylinder um diese Achse
+            # (die Verfolgung bricht an Lücken im dünn belegten Unterarm/zwischen den Fingern zu früh ab: Arme 0,65 statt 0,78 m)
+            L_ref = (vorlage["oa"] + vorlage["ua"] + vorlage["hand_tip"]) * H
+            u_ = np.array(path[-1] - sj); u_ = u_ / max(np.linalg.norm(u_), 1e-9) if np.linalg.norm(u_) > 0.2 * k else dirv
+            Q = A_arm - np.array(sj); t_ = Q @ u_; rq = np.linalg.norm(Q - np.outer(t_, u_), axis=1)
+            sel_ = (t_ > 0) & (rq < 0.10 * k) & (t_ < 1.15 * L_ref)
+            L_tip = float(np.percentile(t_[sel_], 99.7)) if sel_.sum() > 30 else L_ref
+            if abs(L_tip - L_ref) > 0.08 * L_ref: L_tip = L_ref
+            # Pfad bis zur Spitze gerade verlängern (letzte Richtung)
+            seg0 = sum((path[i + 1] - path[i]).length for i in range(len(path) - 1))
+            if seg0 < L_tip:
+                d_end = (path[-1] - path[-2]).normalized() if len(path) > 1 else Vector(u_)
+                path.append(path[-1] + d_end * (L_tip - seg0 + 0.01))
         seg = [(path[i + 1] - path[i]).length for i in range(len(path) - 1)]; L = sum(seg)
         def at(dist):
             acc = 0.0
@@ -387,7 +404,7 @@ def anpassen(P, H, mensch, carlos, log=print, kanten=None):
                 if acc + l >= dist: return path[i].lerp(path[i + 1], (dist - acc) / max(l, 1e-6))
                 acc += l
             return path[-1].copy()
-        L = min(L, 0.78 * k)
+        L = min(L, 0.78 * k) if not vorlage else min(L, L_tip)
         # Handgelenk = schmalste Stelle zwischen 0.13 und 0.25 m vor dem Armende (hinter dem Ärmelbund)
         best = None
         for dd in np.arange(L - 0.25 * k, L - 0.12 * k, 0.005):
@@ -398,11 +415,14 @@ def anpassen(P, H, mensch, carlos, log=print, kanten=None):
             w_ = float(np.linalg.norm(ring - ring.mean(0), axis=1).mean())
             if best is None or w_ < best[0]: best = (w_, dd)
         d_w = best[1] if best else L - 0.19 * k
+        if vorlage:                                                    # Gliederung wie die Referenz, auf die gemessene Armlänge skaliert
+            f_ = L / L_ref; d_w = (vorlage["oa"] + vorlage["ua"]) * H * f_
         def mitte(dd, r=0.07):                                         # Querschnitt-Mitte senkrecht zum Arm
             c = at(dd); dv = (at(dd + 0.02) - at(dd - 0.02)).normalized(); Q = P - np.array(c)
             ring = Q[(np.abs(Q @ np.array(dv)) < 0.005)]; ring = ring[np.linalg.norm(ring, axis=1) < r * k]
             return Vector(np.array(c) + ring.mean(0)) if len(ring) > 8 else c
-        wrist = mitte(d_w, 0.05); elbow = mitte(d_w * 0.56, 0.08)        # Oberarm : Unterarm = 0,186 H : 0,146 H
+        r_ell = vorlage["oa"] / (vorlage["oa"] + vorlage["ua"]) if vorlage else 0.56
+        wrist = mitte(d_w, 0.05); elbow = mitte(d_w * r_ell, 0.08)        # Oberarm : Unterarm = 0,186 H : 0,146 H
         d_hand = np.array((at(L) - wrist).normalized())
         info["arm_" + side] = dict(laenge=round(L, 3), handgelenk_bei=round(d_w, 3))
         qs = quer(z_sh + 0.025 * k, 0.12 * k)                          # Schlüsselbein beginnt vorn am Brustbein (Sternoklavikulargelenk)
@@ -413,6 +433,11 @@ def anpassen(P, H, mensch, carlos, log=print, kanten=None):
         # --- Hand + Finger aus der Mesh-Oberfläche (Äste vom Handgelenk aus, funktioniert auch bei gekrümmten Fingern)
         w = np.array(wrist)
         hd = hand_analyse(P, kanten, w, d_hand, s, k, log) if kanten is not None else None
+        if hd is not None and vorlage:                                 # unplausible Finger (13 cm, Schwimmhaut 20 cm vor dem Gelenk) -> Vorlage
+            fl_ = {f: float(np.linalg.norm(np.array(hd["gelenke"][f][3]) - np.array(hd["gelenke"][f][0]))) for f in FINGER}
+            sw_ = float(np.linalg.norm(np.array(hd["basis"]["f_middle"]) - w))
+            if not (0.055 * k < fl_["f_middle"] < 0.105 * k and max(fl_.values()) < 0.12 * k and 0.06 * k < sw_ < 0.13 * k):
+                log(f"  Hand {side}: Finger unplausibel {[round(v, 3) for v in fl_.values()]}, Ansatz {sw_:.3f} -> Vorlage"); hd = None
         if hd is None:
             log(f"  Hand {side}: Finger nicht erkannt -> Vorlage")
             hd = hand_vorlage(mensch, side, w, d_hand, s, k)
